@@ -1,0 +1,19 @@
+{
+  "table_name": "Heridas",
+  "source": "10_postgame.md",
+  "columns": ["2d6", "Result", "Effect"],
+  "align": ["center", "left", "left"],
+  "display_columns": ["2d6", "Resultado", "Efecto"],
+  "items": [
+    {"roll": "3 o menos", "result": "Baja Definitiva", "effect": "Retira de la banda"},
+    {"roll": "4", "result": "Degradado", "effect": "-1 `Salud` máx"},
+    {"roll": "5", "result": "Confundido", "effect": "`-1 ND` `Astucia`"},
+    {"roll": "6", "result": "Expuesto", "effect": "`-1 ND` `Defensa`"},
+    {"roll": "7", "result": "Cicatrizado", "effect": "Sin efecto"},
+    {"roll": "8", "result": "Mermado", "effect": "`-1 ND` `Combate`"},
+    {"roll": "9", "result": "Lisiado", "effect": "-1\" `Mov`"},
+    {"roll": "10", "result": "En Reserva", "effect": "Pierde próxima partida"},
+    {"roll": "11", "result": "Fallo Técnico", "effect": "+1 Mérito"},
+    {"roll": "12", "result": "Revisado", "effect": "Tirada de Ascenso gratis"}
+  ]
+}

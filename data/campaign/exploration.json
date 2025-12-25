@@ -1,0 +1,15 @@
+{
+  "table_name": "Exploration",
+  "source": "10_postgame.md",
+  "columns": ["Total", "Result", "Subs"],
+  "align": ["center", "left", "right"],
+  "items": [
+    {"total": "1-5", "result": "Marginal Returns", "subs": "0"},
+    {"total": "6-10", "result": "Standard Haul", "subs": "+5"},
+    {"total": "11-15", "result": "Fair Extraction", "subs": "+10"},
+    {"total": "16-25", "result": "Acceptable Yield", "subs": "+15"},
+    {"total": "26-40", "result": "Above Quota", "subs": "+20"},
+    {"total": "41-60", "result": "Surplus Discovery", "subs": "+25"},
+    {"total": "61+", "result": "Windfall Dividend", "subs": "+30"}
+  ]
+}

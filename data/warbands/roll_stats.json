@@ -1,0 +1,11 @@
+{
+  "table_name": "Attributes",
+  "source": "02_warbands.md",
+  "columns": ["Attribute", "Use"],
+  "align": ["left", "left"],
+  "items": [
+    {"attribute": "`Combat`", "use": "Attack rolls"},
+    {"attribute": "`Defense`", "use": "Resist attacks"},
+    {"attribute": "`Wits`", "use": "**Search**, **Interrogate**, tech-related rolls"}
+  ]
+}

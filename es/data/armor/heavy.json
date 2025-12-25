@@ -1,0 +1,15 @@
+{
+  "table_name": "Armadura Pesada",
+  "source": "03_equipment.md",
+  "columns": ["d6", "Armor", "Special", "Cost"],
+  "align": ["center", "left", "left", "right"],
+  "display_columns": ["d6", "Armadura", "Especial", "Coste"],
+  "items": [
+    {"roll": 1, "name": "Coraza Pesada", "special": "-", "cost": 18},
+    {"roll": 2, "name": "Armazón Industrial", "special": "-1\" `Mov`, Repite 1s en `Defensa`", "cost": 20},
+    {"roll": 3, "name": "Blindaje de Combate", "special": "Repite 1s en `Defensa`", "cost": 23},
+    {"roll": 4, "name": "Traje Búnker", "special": "-2\" `Mov`, Repite 1s y 2s en `Defensa`", "cost": 24},
+    {"roll": 5, "name": "Exoesqueleto de Asalto", "special": "Repite 1s y 2s en `Defensa`", "cost": 27},
+    {"roll": 6, "name": "Blindaje Fortaleza", "special": "Repite 1s, 2s y 3s en `Defensa`", "cost": 30}
+  ]
+}

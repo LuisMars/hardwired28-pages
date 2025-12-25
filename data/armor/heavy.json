@@ -1,0 +1,14 @@
+{
+  "table_name": "Heavy Armor",
+  "source": "03_equipment.md",
+  "columns": ["d6", "Armor", "Special", "Cost"],
+  "align": ["center", "left", "left", "right"],
+  "items": [
+    {"roll": 1, "name": "Heavy Cuirass", "special": "-", "cost": 18},
+    {"roll": 2, "name": "Industrial Frame", "special": "-1\" `Move`, Re-roll 1s on `Defense`", "cost": 20},
+    {"roll": 3, "name": "Combat Plating", "special": "Re-roll 1s on `Defense`", "cost": 23},
+    {"roll": 4, "name": "Bunker Suit", "special": "-2\" `Move`, Re-roll 1s and 2s on `Defense`", "cost": 24},
+    {"roll": 5, "name": "Assault Exoskeleton", "special": "Re-roll 1s and 2s on `Defense`", "cost": 27},
+    {"roll": 6, "name": "Fortress Plating", "special": "Re-roll 1s, 2s, and 3s on `Defense`", "cost": 30}
+  ]
+}

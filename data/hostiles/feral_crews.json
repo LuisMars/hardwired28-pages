@@ -1,0 +1,28 @@
+{
+  "table_name": "Feral Crews",
+  "source": "07_hostiles.md",
+  "special_rule": "**Mob Up**: All Feral Crews within 6\" get `+1 DT` `Combat` this activation",
+  "units": {
+    "columns": ["d6", "Name", "Spawn", "Combat", "Defense", "Wits", "Health", "Move", "Weapon"],
+    "align": ["center", "left", "center", "center", "center", "center", "center", "center", "left"],
+    "display_columns": ["d6", "Name", "#", "COM", "DEF", "WIT", "HP", "MOV", "Weapon"],
+    "items": [
+      {"roll": 1, "name": "Runt", "spawn": "5", "combat": "2d4", "defense": "2d4", "wits": "2d4", "health": 4, "move": "5\"", "weapon": "Shiv (`Bladed`, d4, Melee)"},
+      {"roll": 2, "name": "Bruiser", "spawn": "4", "combat": "2d8", "defense": "2d6", "wits": "2d4", "health": 8, "move": "5\"", "weapon": "Cleaver (`Bladed`, d6, Melee)"},
+      {"roll": 3, "name": "Gunner", "spawn": "3", "combat": "2d6", "defense": "2d6", "wits": "2d4", "health": 10, "move": "5\"", "weapon": "Slug Gun (`Projectile`, d6, Ranged)"},
+      {"roll": 4, "name": "Torch", "spawn": "2", "combat": "2d6", "defense": "2d6", "wits": "2d4", "health": 12, "move": "5\"", "weapon": "Flame Rig (`Energy`, d6, Ranged)"},
+      {"roll": 5, "name": "Heavy", "spawn": "1", "combat": "2d10", "defense": "2d8", "wits": "2d4", "health": 16, "move": "5\"", "weapon": "Heavy Cleaver (`Bladed`, d8, Melee)"},
+      {"roll": 6, "name": "Boss", "spawn": "1", "combat": "2d10", "defense": "2d8", "wits": "2d6", "health": 20, "move": "5\"", "weapon": "Crush Fist (`Blunt`, d10, Melee)"}
+    ]
+  },
+  "behavior": {
+    "columns": ["d6", "No LoS", "Has LoS", "Engaged"],
+    "align": ["center", "center", "center", "center"],
+    "items": [
+      {"roll": "1-2", "no_los": "Patrol", "has_los": "Charge", "engaged": "Attack"},
+      {"roll": "3-4", "no_los": "Regroup", "has_los": "Charge", "engaged": "Attack"},
+      {"roll": "5", "no_los": "Patrol", "has_los": "Charge", "engaged": "Frenzy"},
+      {"roll": "6", "no_los": "Mob Up", "has_los": "Mob Up", "engaged": "Frenzy"}
+    ]
+  }
+}

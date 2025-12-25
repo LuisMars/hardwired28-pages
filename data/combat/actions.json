@@ -1,0 +1,17 @@
+{
+  "table_name": "Actions",
+  "source": "04_combat.md",
+  "columns": ["Action", "Effect"],
+  "align": ["left", "left"],
+  "items": [
+    {"action": "`Attack`", "effect": "`Combat` vs `Defense`, deal weapon damage"},
+    {"action": "`Move Again`", "effect": "Take a second move"},
+    {"action": "`Disengage`", "effect": "Leave melee safely."},
+    {"action": "`Aim`", "effect": "Declare target. Target has `-1 DT` `Defense` vs your next shot (lost if moved or damaged)"},
+    {"action": "`Interact`", "effect": "Within 1\". Grab objective or pick up dropped weapon"},
+    {"action": "`Search`", "effect": "Within 1\" of `Loot Marker`. `Wits` vs 2d6"},
+    {"action": "`Interrogate`", "effect": "Within 1\" of Coworker. `Wits` vs `Wits` (`+1 DT` if wounded)"},
+    {"action": "`Loot`", "effect": "Within 1\". Take one item from `Out of Action` enemy"},
+    {"action": "`Cast`", "effect": "`Wits` vs target `Wits` or 2d6 (Broadcasters only)"}
+  ]
+}

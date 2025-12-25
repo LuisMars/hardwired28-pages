@@ -1,0 +1,15 @@
+{
+  "table_name": "Poderes de Emisión",
+  "source": "04a_broadcast_powers.md",
+  "columns": ["d6", "Power", "Effect"],
+  "align": ["center", "left", "left"],
+  "display_columns": ["d6", "Poder", "Efecto"],
+  "items": [
+    {"roll": 1, "power": "Estallido Estático", "effect": "d8 daño `Emisión`, ignora armadura"},
+    {"roll": 2, "power": "Empuje Resonante", "effect": "Empuja al objetivo d6\" en cualquier dirección"},
+    {"roll": 3, "power": "Bloqueo de Señal", "effect": "`-1 ND` a todas las tiradas hasta la siguiente activación"},
+    {"roll": 4, "power": "Trampa Neural", "effect": "El objetivo recibe d6 de daño si se mueve en su siguiente activación"},
+    {"roll": 5, "power": "Bloqueo de Arma", "effect": "El objetivo suelta un arma"},
+    {"roll": 6, "power": "Latigazo Mental", "effect": "El objetivo ataca a la miniatura más cercana (aliada o enemiga)"}
+  ]
+}

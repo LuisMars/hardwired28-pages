@@ -1,0 +1,29 @@
+{
+  "table_name": "Invocadores de Onda",
+  "source": "07_hostiles.md",
+  "special_rule": "**Emitir**: Cuenta aliados a 3\". Despliega 1 Espectro de Estática de ese tipo (1 aliado = Parpadeo, 2 = Deriva, etc.). Una vez por ronda, vuelve a tirar si ya se usó.",
+  "units": {
+    "columns": ["d6", "Name", "Spawn", "Combat", "Defense", "Wits", "Health", "Move", "Weapon"],
+    "align": ["center", "left", "center", "center", "center", "center", "center", "center", "left"],
+    "display_columns": ["d6", "Nombre", "#", "COM", "DEF", "AST", "PV", "MOV", "Arma"],
+    "items": [
+      {"roll": 1, "name": "Iniciado", "spawn": "6", "combat": "2d4", "defense": "2d4", "wits": "2d4", "health": 4, "move": "6\"", "weapon": "Cable Cortado (`Cortante`, d4, CC)"},
+      {"roll": 2, "name": "Injertado de Antena", "spawn": "5", "combat": "2d6", "defense": "2d4", "wits": "2d4", "health": 8, "move": "5\"", "weapon": "Garras de Señal (`Estático`, d4, CC)"},
+      {"roll": 3, "name": "Converso", "spawn": "3", "combat": "2d6", "defense": "2d6", "wits": "2d6", "health": 10, "move": "6\"", "weapon": "Pistola de Arco (`Energía`, d4, Disparo)"},
+      {"roll": 4, "name": "Sacerdote de Frecuencia", "spawn": "2", "combat": "2d6", "defense": "2d4", "wits": "2d8", "health": 12, "move": "6\"", "weapon": "Rayo de Onda (`Emisión`, d6, Poder)"},
+      {"roll": 5, "name": "Campeón de Señal", "spawn": "1", "combat": "2d8", "defense": "2d6", "wits": "2d6", "health": 16, "move": "6\"", "weapon": "Hoja de Resonancia (`Emisión`, d6, CC)"},
+      {"roll": 6, "name": "Receptáculo", "spawn": "1", "combat": "2d10", "defense": "2d8", "wits": "2d4", "health": 20, "move": "6\"", "weapon": "Extremidades Estáticas (`Estático`, d8, CC)"}
+    ]
+  },
+  "behavior": {
+    "columns": ["d6", "No LoS", "Has LoS", "Engaged"],
+    "align": ["center", "center", "center", "center"],
+    "display_columns": ["d6", "Sin LdV", "Con LdV", "Trabado"],
+    "items": [
+      {"roll": "1-2", "no_los": "Patrullar", "has_los": "Atacar", "engaged": "Atacar"},
+      {"roll": "3-4", "no_los": "Reagrupar", "has_los": "Cargar", "engaged": "Atacar"},
+      {"roll": "5", "no_los": "Reagrupar", "has_los": "Atacar", "engaged": "Frenesí"},
+      {"roll": "6", "no_los": "Emitir", "has_los": "Emitir", "engaged": "Frenesí"}
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "table_name": "Tipo de Hostil",
+  "source": "09_campaign.md",
+  "columns": ["d6", "Faction"],
+  "align": ["center", "left"],
+  "display_columns": ["d6", "Facción"],
+  "items": [
+    {"roll": 1, "faction": "Carroñeros"},
+    {"roll": 2, "faction": "Bandas Salvajes"},
+    {"roll": 3, "faction": "Invocadores de Onda"},
+    {"roll": 4, "faction": "Espectros de Estática"},
+    {"roll": 5, "faction": "Autómatas Salvajes"},
+    {"roll": 6, "faction": "Parásitos de Cable"}
+  ]
+}

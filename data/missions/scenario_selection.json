@@ -1,0 +1,11 @@
+{
+  "table_name": "Scenario Selection",
+  "source": "09_campaign.md",
+  "columns": ["Gap", "d3: 1", "d3: 2", "d3: 3"],
+  "align": ["center", "left", "left", "left"],
+  "items": [
+    {"gap": "**0-1**", "d3_1": "The Condemned Block", "d3_2": "Smuggler's Run", "d3_3": "The Wave Shrine"},
+    {"gap": "**2-3**", "d3_1": "The Encryption Keys", "d3_2": "The Barricade", "d3_3": "The Ambush"},
+    {"gap": "**4+**", "d3_1": "No Quarter", "d3_2": "The Vault", "d3_3": "Debt Leverage"}
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "table_name": "Armadura Ligera",
+  "source": "03_equipment.md",
+  "columns": ["d8", "Armor", "Special", "Cost"],
+  "align": ["center", "left", "left", "right"],
+  "display_columns": ["d8", "Armadura", "Especial", "Coste"],
+  "items": [
+    {"roll": 1, "name": "Malla Simple", "special": "-1\" `Mov`", "cost": 2},
+    {"roll": 2, "name": "Blindaje Ligero", "special": "-", "cost": 4},
+    {"roll": 3, "name": "Forro Protector", "special": "-1 a las tiradas de Crítico contra ti", "cost": 6},
+    {"roll": 4, "name": "Chaleco Acolchado", "special": "Reduce `Empuje` en 1\"", "cost": 7},
+    {"roll": 5, "name": "Chaleco Ligero", "special": "+1\" `Mov`", "cost": 9},
+    {"roll": 6, "name": "Malla Defensiva", "special": "Repite 1s en `Defensa`", "cost": 12},
+    {"roll": 7, "name": "Arnés de Corredor", "special": "+2\" `Mov`", "cost": 14},
+    {"roll": 8, "name": "Traje de Explorador", "special": "Repite 1s en `Defensa`, +1\" `Mov`", "cost": 16}
+  ]
+}

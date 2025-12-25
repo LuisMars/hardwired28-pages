@@ -1,0 +1,18 @@
+{
+  "table_name": "Evidence Discovery",
+  "source": "3_02_evidence.md",
+  "columns": ["d10", "Evidence"],
+  "align": ["center", "left"],
+  "items": [
+    {"roll": 1, "evidence": "Corrupted Signal Fragment"},
+    {"roll": 2, "evidence": "Witness Deposition"},
+    {"roll": 3, "evidence": "Unmarked Coordinates"},
+    {"roll": 4, "evidence": "Monk's Confession"},
+    {"roll": 5, "evidence": "Pre-Tethering Blueprint"},
+    {"roll": 6, "evidence": "Suppression Order"},
+    {"roll": 7, "evidence": "Founders' Correspondence"},
+    {"roll": 8, "evidence": "Frequency Analysis"},
+    {"roll": 9, "evidence": "Tethering Protocol Zero"},
+    {"roll": 10, "evidence": "The Source Recording"}
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "prefix": [
+    "El", "Aquel", "Nuestro", "Este", "Un",
+    "El Sagrado", "El Antiguo", "El Nuevo", "El Último", "El Primer",
+    "El Gran", "El Viejo", "El Santo", "El Honorable", "El Glorioso"
+  ],
+  "core": [
+    "Sindicato", "Pacto", "Gremio", "Colectivo", "Cártel",
+    "Consorcio", "Culto", "Cuerpo", "Clan", "Círculo",
+    "Concilio", "Cónclave", "Enclave", "Núcleo", "Conducto"
+  ],
+  "suffix": [
+    "del Hierro", "del Cable", "del Óxido", "de la Deuda", "del Voltaje",
+    "de la Estática", "del Contrato", "del Conducto", "de la Señal", "del Peaje",
+    "Oxidado", "Silente", "Quemado", "Negro", "Caído",
+    "Marcado", "Perdido", "Roto", "Anclado", "Exiliado",
+    "Maldito", "Enterrado", "Olvidado", "Sellado", "Deudor"
+  ]
+}

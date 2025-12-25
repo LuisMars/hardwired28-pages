@@ -1,0 +1,14 @@
+{
+  "table_name": "`Toxic` Critical",
+  "source": "05_criticals.md",
+  "columns": ["d6", "Result", "Effect"],
+  "align": ["center", "left", "left"],
+  "items": [
+    {"roll": 1, "result": "Burned", "effect": "+d4 damage"},
+    {"roll": 2, "result": "Corroding", "effect": "2 damage per activation (doesn't stack)"},
+    {"roll": 3, "result": "Weakened", "effect": "`-1 DT` `Combat` permanently"},
+    {"roll": 4, "result": "Delirium", "effect": "`-1 DT` `Wits` permanently, move toward nearest enemy"},
+    {"roll": 5, "result": "Systemic", "effect": "`-1 DT` all attributes permanently"},
+    {"roll": "6+", "result": "Dissolved", "effect": "`OoA` end of next round, -2 Injury roll"}
+  ]
+}

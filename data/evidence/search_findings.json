@@ -1,0 +1,28 @@
+{
+  "table_name": "Search Findings",
+  "source": "08_evidence.md",
+  "columns": ["d20", "Finding"],
+  "align": ["center", "left"],
+  "items": [
+    {"roll": 1, "finding": "2 subs"},
+    {"roll": 2, "finding": "Random Light Armor"},
+    {"roll": 3, "finding": "4 subs"},
+    {"roll": 4, "finding": "Random Melee Weapon"},
+    {"roll": 5, "finding": "6 subs"},
+    {"roll": 6, "finding": "**Evidence**"},
+    {"roll": 7, "finding": "Random Consumable"},
+    {"roll": 8, "finding": "8 subs"},
+    {"roll": 9, "finding": "Random Ranged Weapon"},
+    {"roll": 10, "finding": "2 **Evidence**"},
+    {"roll": 11, "finding": "Random Medium Armor"},
+    {"roll": 12, "finding": "**Evidence**"},
+    {"roll": 13, "finding": "Random Gear"},
+    {"roll": 14, "finding": "12 subs"},
+    {"roll": 15, "finding": "Random Heavy Armor"},
+    {"roll": 16, "finding": "15 subs"},
+    {"roll": 17, "finding": "**Evidence**"},
+    {"roll": 18, "finding": "20 subs"},
+    {"roll": 19, "finding": "**Evidence**"},
+    {"roll": 20, "finding": "Roll twice (ignore 20s)"}
+  ]
+}
