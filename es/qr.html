@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hardwired 28 - Referencia Rápida 0.6.3-beta</title>
-    <meta property="og:title" content="Hardwired 28 - Referencia Rápida 0.6.3-beta">
+    <title>Hardwired 28 - Referencia Rápida 0.6.4-beta</title>
+    <meta property="og:title" content="Hardwired 28 - Referencia Rápida 0.6.4-beta">
     <meta property="og:description" content="Juego de escaramuzas cablepunk corporativo">
     <meta property="og:image" content="http://hardwired28.luismars.com/img/social.png">
     <meta property="og:url" content="http://hardwired28.luismars.com/es/">
@@ -21,24 +21,13 @@
     <nav class="app-menu" data-theme="light" data-open="false" aria-label="Navigation">
         <div class="app-menu__inner">
             <a class="app-menu__brand" href="./">Hardwired 28</a>
-            <button class="app-menu__toggle" type="button" onclick="toggleMenu()">Menú</button>
+            <button class="app-menu__toggle" type="button" onclick="toggleMenu()" aria-label="Menú"></button>
             <div class="app-menu__links">
-                <div class="app-menu__dropdown">
-                    <button class="app-menu__dropdown-toggle">Reglas</button>
-                    <div class="app-menu__submenu">
-                        <a href="merged">Todas</a>
-                        <a href="manual">Manual</a>
-                        <a href="core">Básicas</a>
-                        <a href="hostiles">Hostiles</a>
-                        <a href="campaign">Campaña</a>
-                        <a href="qr">Referencia</a>
-                    </div>
-                </div>
-                <a href="./">Constructor</a>
-                <a href="../qr">English</a>
-            </div>
-            <div class="app-menu__actions">
-                
+                <a href="rulebook">Reglamento</a>
+                <a href="print">Imprimir</a>
+                <a href="quick-reference" class="current">Referencia Rápida</a>
+                <a href="builder/">Creador de Plantillas</a>
+                <a href="../quick-reference">English</a>
             </div>
         </div>
     </nav>
@@ -48,7 +37,7 @@
         <div class="three-column">
             <div class="column">
 <div><h1>Hardwired 28 - Referencia Rápida</h1>
-<p><em>0.6.3-beta</em></p>
+<p><em>0.6.4-beta</em></p>
 </div>
 <div><h2>Niveles de Dado (ND)</h2>
 <p class="dice-tier">2d4 → 2d6 → 2d8 → 2d10 → 2d12</p>
@@ -124,10 +113,11 @@
 <div><h2>Cada Ronda</h2>
 <ol>
 <li>Tira <strong>Bendiciones Corporativas</strong> (d8 tres veces)</li>
-<li>Añade una ficha por cada miniatura que no esté <code>FdC</code> a la bolsa (colores distintos por facción)</li>
-<li>Saca una ficha: esa facción activa una miniatura (Hostiles/Compañeros siguen tabla de IA)</li>
+<li>Añade una ficha por cada miniatura que no esté <code>FdC</code> a la bolsa</li>
+<li>Saca una ficha: esa facción activa una miniatura (Hostiles/Compañeros: tabla IA)</li>
+<li>Todas <code>FdC</code>: descarta la ficha</li>
 <li>Cada activación: <strong>Movimiento + Acción</strong> O <strong>Acción + Movimiento</strong></li>
-<li>Repite desde el 3 hasta que todas hayan activado</li>
+<li>Repite desde el 3 hasta vaciar la bolsa</li>
 </ol>
 </div>
 <div><h2>Acciones</h2>
@@ -141,7 +131,7 @@
 <tbody>
 <tr>
 <td>Atacar</td>
-<td>Tira <code>Combate</code> vs <code>Defensa</code></td>
+<td>Tira <code>Combate</code> vs. <code>Defensa</code></td>
 </tr>
 <tr>
 <td>Moverse de Nuevo</td>
@@ -153,7 +143,7 @@
 </tr>
 <tr>
 <td>Apuntar</td>
-<td>Declara objetivo. <code>-1 ND</code> <code>Defensa</code> contra tu próximo disparo (se pierde si te mueves o recibes daño)</td>
+<td>Declara objetivo. <code>+1 ND</code> <code>Combate</code> en tu próximo disparo (se pierde si te mueves o recibes daño)</td>
 </tr>
 <tr>
 <td>Interactuar</td>
@@ -161,11 +151,11 @@
 </tr>
 <tr>
 <td>Buscar</td>
-<td><code>Astucia</code> vs 2d6 para <code>Botín</code></td>
+<td><code>Astucia</code> vs. 2d6 para <code>Botín</code>. Éxito: retira el marcador</td>
 </tr>
 <tr>
 <td>Interrogar</td>
-<td><code>Astucia</code> vs <code>Astucia</code> para <code>Pruebas</code> (+1 <strong>ND</strong> si el objetivo está herido)</td>
+<td><code>Astucia</code> vs. <code>Astucia</code> para <code>Pruebas</code> (+1 <strong>ND</strong> si herido). Éxito: retira el Compañero</td>
 </tr>
 <tr>
 <td>Saquear</td>
@@ -173,7 +163,7 @@
 </tr>
 <tr>
 <td>Canalizar</td>
-<td><code>Astucia</code> vs <code>Astucia</code> (solo <code>Emisores</code>)</td>
+<td><code>Astucia</code> vs. <code>Astucia</code> (solo <code>Emisores</code>)</td>
 </tr>
 </tbody>
 </table>
@@ -200,7 +190,7 @@
 </tr>
 <tr>
 <td>Saltar hueco</td>
-<td>1" por 1" saltado (máx 2")</td>
+<td>1" por 1" saltado (máx. 2")</td>
 </tr>
 <tr>
 <td>Dejarse caer (hasta 3")</td>
@@ -213,7 +203,7 @@
 <div><h2>Canalización</h2>
 <ul>
 <li>Acción, LdV, sin límite de alcance</li>
-<li><code>Astucia</code> vs <code>Astucia</code>, daño directo</li>
+<li><code>Astucia</code> vs. <code>Astucia</code>, daño directo</li>
 <li><strong>Interferencia:</strong> <code>-1</code> acumulativo por fallo, reinicia tras pifia</li>
 <li><strong>Sobreemisión:</strong> <code>-1 ND</code>, +d4 o dobla el efecto</li>
 </ul></div>
@@ -224,7 +214,7 @@
 <ol>
 <li>Declara objetivo y arma</li>
 <li>CC: el defensor elige <code>Defensa</code> o <strong>Respuesta</strong></li>
-<li>Ambos tiran: <strong>Combate ND</strong> vs <strong>Defensa ND</strong> (Si <strong>Respuesta</strong>: tira <code>Combate</code> a -1 <strong>ND</strong>)</li>
+<li>Ambos tiran: <strong>Combate ND</strong> vs. <strong>Defensa ND</strong> (Si <strong>Respuesta</strong>: tira <code>Combate</code> a -1 <strong>ND</strong>)</li>
 <li>El más alto gana (<strong>ND</strong> inferior gana empates). Impacto: tira el daño. Si <strong>Respuesta</strong> gana: el defensor también inflige daño</li>
 </ol>
 </div>
@@ -246,16 +236,22 @@
 <div><h2>Cobertura y Disparo</h2>
 <ul>
 <li><strong>Cobertura</strong> (cuerpo oculto): -1 <strong>ND Combate</strong></li>
-<li><strong>Hacia CC:</strong> -1 <strong>ND</strong>, un fallo impacta a una miniatura aleatoria a 1", la pifia es un Crítico contra ella</li>
+<li><strong>Atacante se movió:</strong> -1 <strong>ND Combate</strong></li>
+<li><strong>Objetivo usó Mover de Nuevo:</strong> -1 <strong>ND Combate</strong></li>
+<li><strong>Hacia CC:</strong> -1 <strong>ND</strong>, fallo impacta miniatura aleatoria a 1" (no al objetivo), pifia es Crítico contra ella</li>
 <li><strong>Disparo:</strong> Sin límite de alcance, sin <strong>Respuesta</strong></li>
 </ul>
 </div>
-<div><h2>Explosión</h2>
-<p><strong>Todas</strong> las miniaturas en el radio son impactadas automáticamente (aliadas y enemigas). Tira daño por separado.</p>
+<div><h2>Granadas</h2>
+<ul>
+<li>Lanza a punto a 6" (acción). Un uso.</li>
+<li>Tira <code>Combate</code> vs 2d6. Fallo: dispersa d6". Doble: a tus pies.</li>
+<li>Radio 3" impacta a todos. Tira daño por separado.</li>
+</ul>
 </div>
 <div><h2>Moral</h2>
-<p>Cuando el <code>Jefe</code> queda <code>Fuera de Combate</code>: todos los aliados tiran <code>Astucia</code> vs 2d6 inmediatamente. Fallo: <code>Huida</code>. Repite cada activación.</p>
-<p><code>Huida</code>: Muévete hacia el borde más cercano. No puede actuar. Si sale del tablero: suelta objetos, sin Méritos. Evaluación de Rendimiento: d6 de daño tras recuperar <code>Salud</code>.</p>
+<p>Cuando el <code>Jefe</code> queda <code>Fuera de Combate</code>: todos los aliados tiran <code>Astucia</code> vs. 2d6 inmediatamente. Fallo: <code>Huida</code>. Repite cada activación.</p>
+<p><code>Huida</code>: Muévete hacia el borde más cercano (se detiene en el borde). No puede actuar. Si sale del tablero: suelta objetos, sin Méritos. Evaluación de Rendimiento: d6 de daño tras recuperar <code>Salud</code>.</p>
 <blockquote>
 <p>"Tu suscripción es tu libertad."</p>
 <p><strong>Soberano Ejecutivo</strong></p>
@@ -278,22 +274,22 @@
 <tbody>
 <tr>
 <td style="text-align: center;">1</td>
-<td style="text-align: left;">Gracia Denegada</td>
+<td style="text-align: left;">Denegada</td>
 <td style="text-align: left;">Sin bendición</td>
 </tr>
 <tr>
 <td style="text-align: center;">2</td>
-<td style="text-align: left;">Absolución</td>
+<td style="text-align: left;">Repetición</td>
 <td style="text-align: left;">Repite cualquier dado</td>
 </tr>
 <tr>
 <td style="text-align: center;">3</td>
-<td style="text-align: left;">Bendición Trimestral</td>
+<td style="text-align: left;">Impulso</td>
 <td style="text-align: left;"><code>+1 ND</code> a una tirada</td>
 </tr>
 <tr>
 <td style="text-align: center;">4</td>
-<td style="text-align: left;">Sanción de Horas Extra</td>
+<td style="text-align: left;">Extra</td>
 <td style="text-align: left;">Una miniatura tiene dos acciones</td>
 </tr>
 <tr>
@@ -303,17 +299,17 @@
 </tr>
 <tr>
 <td style="text-align: center;">6</td>
-<td style="text-align: left;">Bendición de Sinergia</td>
+<td style="text-align: left;">Sinergia</td>
 <td style="text-align: left;">Tras activar una miniatura, activa otra miniatura sin activar a 6" de ella</td>
 </tr>
 <tr>
 <td style="text-align: center;">7</td>
-<td style="text-align: left;">Dispensa de Bienestar</td>
+<td style="text-align: left;">Bienestar</td>
 <td style="text-align: left;">Restaura d6 <code>Salud</code>, elimina efectos de daño continuo</td>
 </tr>
 <tr>
 <td style="text-align: center;">8</td>
-<td style="text-align: left;">Goteo</td>
+<td style="text-align: left;">Excedente</td>
 <td style="text-align: left;">Tira dos veces, ignora 8s</td>
 </tr>
 </tbody>
@@ -330,7 +326,7 @@
 <tbody>
 <tr>
 <td style="text-align: center;">1</td>
-<td style="text-align: left;">2 subs</td>
+<td style="text-align: left;">Granada Aleatoria</td>
 </tr>
 <tr>
 <td style="text-align: center;">2</td>
@@ -350,7 +346,7 @@
 </tr>
 <tr>
 <td style="text-align: center;">6</td>
-<td style="text-align: left;"><strong>Prueba</strong></td>
+<td style="text-align: left;">1 <code>Prueba</code></td>
 </tr>
 <tr>
 <td style="text-align: center;">7</td>
@@ -366,7 +362,7 @@
 </tr>
 <tr>
 <td style="text-align: center;">10</td>
-<td style="text-align: left;">2 <strong>Pruebas</strong></td>
+<td style="text-align: left;">1 <code>Prueba</code>, +1 <code>Pista</code></td>
 </tr>
 <tr>
 <td style="text-align: center;">11</td>
@@ -374,7 +370,7 @@
 </tr>
 <tr>
 <td style="text-align: center;">12</td>
-<td style="text-align: left;"><strong>Prueba</strong></td>
+<td style="text-align: left;">1 <code>Prueba</code></td>
 </tr>
 <tr>
 <td style="text-align: center;">13</td>
@@ -394,7 +390,7 @@
 </tr>
 <tr>
 <td style="text-align: center;">17</td>
-<td style="text-align: left;"><strong>Prueba</strong></td>
+<td style="text-align: left;">1 <code>Prueba</code></td>
 </tr>
 <tr>
 <td style="text-align: center;">18</td>
@@ -402,7 +398,7 @@
 </tr>
 <tr>
 <td style="text-align: center;">19</td>
-<td style="text-align: left;"><strong>Prueba</strong></td>
+<td style="text-align: left;">1 <code>Prueba</code></td>
 </tr>
 <tr>
 <td style="text-align: center;">20</td>
@@ -456,7 +452,7 @@
 <tr>
 <td style="text-align: center;">8</td>
 <td style="text-align: left;">Revelación</td>
-<td style="text-align: left;">2 <code>Prueba</code></td>
+<td style="text-align: left;">1 <code>Prueba</code>, +2 <code>Pistas</code></td>
 </tr>
 </tbody>
 </table>

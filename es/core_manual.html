@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hardwired 28 - Reglas Básicas 0.6.3-beta</title>
-    <meta property="og:title" content="Hardwired 28 - Reglas Básicas 0.6.3-beta">
+    <title>Hardwired 28 - Reglas Básicas 0.6.4-beta</title>
+    <meta property="og:title" content="Hardwired 28 - Reglas Básicas 0.6.4-beta">
     <meta property="og:description" content="Juego de escaramuzas cablepunk corporativo">
     <meta property="og:image" content="http://hardwired28.luismars.com/img/social.png">
     <meta property="og:url" content="http://hardwired28.luismars.com/es/">
@@ -21,29 +21,119 @@
     <nav class="app-menu" data-theme="light" data-open="false" aria-label="Navigation">
         <div class="app-menu__inner">
             <a class="app-menu__brand" href="./">Hardwired 28</a>
-            <button class="app-menu__toggle" type="button" onclick="toggleMenu()">Menú</button>
+            <button class="app-menu__toggle" type="button" onclick="toggleMenu()" aria-label="Menú"></button>
             <div class="app-menu__links">
+                <a href="manual">Reglamento</a>
                 <div class="app-menu__dropdown">
-                    <button class="app-menu__dropdown-toggle">Reglas</button>
+                    <button class="app-menu__dropdown-toggle current">Imprimir</button>
                     <div class="app-menu__submenu">
-                        <a href="merged">Todas</a>
-                        <a href="manual">Manual</a>
-                        <a href="core">Básicas</a>
-                        <a href="hostiles">Hostiles</a>
+                        <a href="merged">Todas las Reglas</a>
+                        <a href="core">Reglas Básicas</a>
+                        <a href="hostiles">Recursos Inhumanos</a>
                         <a href="campaign">Campaña</a>
-                        <a href="qr">Referencia</a>
                     </div>
                 </div>
-                <a href="./">Constructor</a>
+                <a href="qr">Referencia Rápida</a>
+                <a href="./">Creador de Plantillas</a>
                 <a href="../core">English</a>
-            </div>
-            <div class="app-menu__actions">
-                
             </div>
         </div>
     </nav>
 
     
+    <div class="manual-layout">
+    <nav class="sidebar">
+        <ul class="sidebar-nav">
+            <li class="toc-h1"><a href="#hardwired-28">Reglas Básicas</a></li>
+            <li class="toc-h2"><a href="#el-gran-complejo">El Gran Complejo</a></li>
+            <li class="toc-h2"><a href="#los-poderes">Los Poderes</a></li>
+            <li class="toc-h2"><a href="#contratistas">Contratistas</a></li>
+            <li class="toc-h2"><a href="#subs">Subs</a></li>
+            <li class="toc-h2"><a href="#los-niveles">Los Niveles</a></li>
+            <li class="toc-h2"><a href="#los-siete-pilares">Los Siete Pilares</a></li>
+            <li class="toc-h2"><a href="#miniaturas">Miniaturas</a></li>
+            <li class="toc-h2"><a href="#qué-necesitas">Qué Necesitas</a></li>
+            <li class="toc-h2"><a href="#mecánicas-básicas">Mecánicas Básicas</a></li>
+            <li class="toc-h3"><a href="#tiradas-enfrentadas">Tiradas enfrentadas</a></li>
+            <li class="toc-h3"><a href="#niveles-de-dado-nd">Niveles de Dado (ND)</a></li>
+            <li class="toc-h3"><a href="#límites">Límites</a></li>
+            <li class="toc-h3"><a href="#opcional-desbordamiento-de-nd">Opcional: Desbordamiento de ND</a></li>
+            <li class="toc-h1"><a href="#asignación-de-personal">Asignación de Personal</a></li>
+            <li class="toc-h2"><a href="#atributos">Atributos</a></li>
+            <li class="toc-h3"><a href="#técnico">Técnico</a></li>
+            <li class="toc-h3"><a href="#operario">Operario</a></li>
+            <li class="toc-h2"><a href="#valores">Valores</a></li>
+            <li class="toc-h2"><a href="#equipamiento">Equipamiento</a></li>
+            <li class="toc-h2"><a href="#tipos-de-contrato">Tipos de Contrato</a></li>
+            <li class="toc-h1"><a href="#armas-y-armadura">Armas y Armadura</a></li>
+            <li class="toc-h2"><a href="#combate-improvisado">Combate Improvisado</a></li>
+            <li class="toc-h2"><a href="#armas-cuerpo-a-cuerpo">Armas Cuerpo a Cuerpo</a></li>
+            <li class="toc-h2"><a href="#armas-de-disparo">Armas de Disparo</a></li>
+            <li class="toc-h2"><a href="#granadas">Granadas</a></li>
+            <li class="toc-h2"><a href="#armadura">Armadura</a></li>
+            <li class="toc-h2"><a href="#armadura-ligera">Armadura Ligera</a></li>
+            <li class="toc-h2"><a href="#armadura-media">Armadura Media</a></li>
+            <li class="toc-h2"><a href="#armadura-pesada">Armadura Pesada</a></li>
+            <li class="toc-h2"><a href="#consumibles">Consumibles</a></li>
+            <li class="toc-h2"><a href="#equipo">Equipo</a></li>
+            <li class="toc-h2"><a href="#cibernética">Cibernética</a></li>
+            <li class="toc-h1"><a href="#combate">Combate</a></li>
+            <li class="toc-h2"><a href="#ronda">Ronda</a></li>
+            <li class="toc-h2"><a href="#bendiciones-corporativas">Bendiciones Corporativas</a></li>
+            <li class="toc-h2"><a href="#acciones">Acciones</a></li>
+            <li class="toc-h2"><a href="#movimiento">Movimiento</a></li>
+            <li class="toc-h2"><a href="#combate-cuerpo-a-cuerpo">Combate Cuerpo a Cuerpo</a></li>
+            <li class="toc-h2"><a href="#movimiento-vertical">Movimiento Vertical</a></li>
+            <li class="toc-h2"><a href="#resolución-de-ataques">Resolución de Ataques</a></li>
+            <li class="toc-h2"><a href="#defensa-de-disparo">Defensa de Disparo</a></li>
+            <li class="toc-h2"><a href="#disparo-al-cuerpo-a-cuerpo">Disparo al Cuerpo a Cuerpo</a></li>
+            <li class="toc-h2"><a href="#línea-de-visión-ldv">Línea de Visión (LdV)</a></li>
+            <li class="toc-h2"><a href="#cobertura">Cobertura</a></li>
+            <li class="toc-h2"><a href="#alcance">Alcance</a></li>
+            <li class="toc-h2"><a href="#modificadores-de-movimiento">Modificadores de Movimiento</a></li>
+            <li class="toc-h2"><a href="#granadas_1">Granadas</a></li>
+            <li class="toc-h2"><a href="#críticos">Críticos</a></li>
+            <li class="toc-h2"><a href="#pifias">Pifias</a></li>
+            <li class="toc-h2"><a href="#daño">Daño</a></li>
+            <li class="toc-h2"><a href="#moral">Moral</a></li>
+            <li class="toc-h2"><a href="#abandonar-el-tablero">Abandonar el Tablero</a></li>
+            <li class="toc-h1"><a href="#poderes-de-emisión">Poderes de Emisión</a></li>
+            <li class="toc-h2"><a href="#canalización">Canalización</a></li>
+            <li class="toc-h2"><a href="#poderes-ofensivos">Poderes Ofensivos</a></li>
+            <li class="toc-h2"><a href="#poderes-de-apoyo">Poderes de Apoyo</a></li>
+            <li class="toc-h1"><a href="#tablas-de-críticos">Tablas de Críticos</a></li>
+            <li class="toc-h2"><a href="#crítico-cortante">Crítico Cortante</a></li>
+            <li class="toc-h2"><a href="#crítico-contundente">Crítico Contundente</a></li>
+            <li class="toc-h2"><a href="#crítico-proyectil">Crítico Proyectil</a></li>
+            <li class="toc-h2"><a href="#crítico-energía">Crítico Energía</a></li>
+            <li class="toc-h2"><a href="#crítico-explosivo">Crítico Explosivo</a></li>
+            <li class="toc-h2"><a href="#crítico-tóxico">Crítico Tóxico</a></li>
+            <li class="toc-h2"><a href="#crítico-estático">Crítico Estático</a></li>
+            <li class="toc-h1"><a href="#tablas-de-pifias">Tablas de Pifias</a></li>
+            <li class="toc-h2"><a href="#pifia-cc">Pifia CC</a></li>
+            <li class="toc-h2"><a href="#pifia-disparo">Pifia Disparo</a></li>
+            <li class="toc-h2"><a href="#pifia-emisión">Pifia Emisión</a></li>
+            <li class="toc-h1"><a href="#recursos-de-ejemplo">Recursos de Ejemplo</a></li>
+            <li class="toc-h2"><a href="#jefe-12">Jefe [12]</a></li>
+            <li class="toc-h3"><a href="#20-pv-6-mov">20 PV, 6" MOV</a></li>
+            <li class="toc-h2"><a href="#bruto-12">Bruto [12]</a></li>
+            <li class="toc-h3"><a href="#20-pv-5-mov">20 PV, 5" MOV</a></li>
+            <li class="toc-h2"><a href="#veterano-12">Veterano [12]</a></li>
+            <li class="toc-h3"><a href="#14-pv-5-mov">14 PV, 5" MOV</a></li>
+            <li class="toc-h2"><a href="#tirador-12">Tirador [12]</a></li>
+            <li class="toc-h3"><a href="#16-pv-6-mov">16 PV, 6" MOV</a></li>
+            <li class="toc-h2"><a href="#explorador-12">Explorador [12]</a></li>
+            <li class="toc-h3"><a href="#12-pv-8-mov">12 PV, 8" MOV</a></li>
+            <li class="toc-h2"><a href="#zelote-12">Zelote [12]</a></li>
+            <li class="toc-h3"><a href="#12-pv-6-mov">12 PV, 6" MOV</a></li>
+            <li class="toc-h2"><a href="#agente-12">Agente [12]</a></li>
+            <li class="toc-h3"><a href="#16-pv-6-mov_1">16 PV, 6" MOV</a></li>
+            <li class="toc-h2"><a href="#emisor-12">Emisor [12]</a></li>
+            <li class="toc-h3"><a href="#16-pv-6-mov_2">16 PV, 6" MOV</a></li>
+        </ul>
+    </nav>
+    <div class="sidebar-overlay" onclick="toggleSidebar()"></div>
+    <button class="mobile-toc-btn" onclick="toggleSidebar()" aria-label="Índice"></button>
     <div class="content">
 
 
@@ -55,7 +145,7 @@
 
 
 <h1 id="hardwired-28_1">Hardwired 28</h1>
-<p><em>0.6.3-beta</em> por LuisMars</p>
+<p><em>0.6.4-beta</em> por LuisMars</p>
 <h2 id="el-gran-complejo">El Gran Complejo</h2>
 <p>Una megaestructura vertical de tres kilómetros de altura. Los cables cuelgan de cada superficie. Se agrupan en troncos más gruesos que cuerpos, serpentean por las paredes, se enrollan bajo los pies. El Complejo iba a ser el paraíso. Ahora se pudre.</p>
 <p>La conexión por cable es sagrada. Lo inalámbrico es herejía. Desde el Anclaje, lo inalámbrico significa excomunión. Las deudas se heredan. Los hijos nacen suscritos.</p>
@@ -80,7 +170,7 @@
 
 
 <h2 id="miniaturas">Miniaturas</h2>
-<p>Este juego está pensado para miniaturas de 28mm. Cualquier miniatura entre 28mm y 32mm sirve. Las peanas entre 25mm y 32mm son compatibles.</p>
+<p>Este juego está pensado para miniaturas de 28 mm. Cualquier miniatura entre 28 mm y 32 mm sirve. Las peanas entre 25 mm y 32 mm son compatibles.</p>
 <p>Usa las miniaturas que tengas. Conviértelas. Construye ejecutores corporativos con kits de ciencia ficción. Monta cultistas envueltos en cables con piezas de fantasía. Usa miniaturas alternativas sin problema. La miniatura representa lo que tú digas. No hay respuestas incorrectas.</p>
 <h2 id="qué-necesitas">Qué Necesitas</h2>
 <p><strong>Requerido</strong><br />
@@ -90,7 +180,7 @@
 - Dados: 2d4, 2d6, 2d8, 2d10, 2d12<br />
 - Bolsa con Fichas de Activación (fichas, dados u otros marcadores - una por miniatura, colores distintos por facción)<br />
 - Cinta métrica (pulgadas)<br />
-- Tablero de 2'x2' con terreno denso<br />
+- Tablero de 2' × 2' con terreno denso<br />
 - <code>Marcadores de Botín</code> (5-6)</p>
 <p><strong>Opcional</strong><br />
 - Marcadores de estado (Activado, Bendecido, <code>FdC</code>, <code>Huir</code>, <code>Trabado</code>, <code>Sangrado</code>, etc.)<br />
@@ -246,7 +336,7 @@
 <tr>
 <td style="text-align: left;"><code>Jefe</code></td>
 <td style="text-align: center;">20</td>
-<td style="text-align: center;">6"</td>
+<td style="text-align: center;">4"</td>
 <td style="text-align: center;">Ambas</td>
 <td style="text-align: center;">Pesada</td>
 <td style="text-align: left;"><code>+1 ND</code> a un atributo</td>
@@ -255,7 +345,7 @@
 <tr>
 <td style="text-align: left;"><code>Bruto</code></td>
 <td style="text-align: center;">20</td>
-<td style="text-align: center;">5"</td>
+<td style="text-align: center;">3"</td>
 <td style="text-align: center;">CC</td>
 <td style="text-align: center;">Pesada</td>
 <td style="text-align: left;">-</td>
@@ -264,7 +354,7 @@
 <tr>
 <td style="text-align: left;"><code>Veterano</code></td>
 <td style="text-align: center;">14</td>
-<td style="text-align: center;">5"</td>
+<td style="text-align: center;">4"</td>
 <td style="text-align: center;">Ambas</td>
 <td style="text-align: center;">Media</td>
 <td style="text-align: left;">Inmune a <code>Huida</code></td>
@@ -273,16 +363,16 @@
 <tr>
 <td style="text-align: left;"><code>Tirador</code></td>
 <td style="text-align: center;">16</td>
-<td style="text-align: center;">6"</td>
+<td style="text-align: center;">4"</td>
 <td style="text-align: center;">Disparo</td>
 <td style="text-align: center;">Media</td>
-<td style="text-align: left;">Impacto: <code>-1 ND</code> <code>Defensa</code> (no acumulable)</td>
+<td style="text-align: left;"><code>Apuntar</code> es acción gratuita</td>
 <td style="text-align: center;">2</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>Explorador</code></td>
 <td style="text-align: center;">12</td>
-<td style="text-align: center;">8"</td>
+<td style="text-align: center;">6"</td>
 <td style="text-align: center;">Disparo</td>
 <td style="text-align: center;">Ligera</td>
 <td style="text-align: left;">Avanza 3" tras desplegar</td>
@@ -291,7 +381,7 @@
 <tr>
 <td style="text-align: left;"><code>Zelote</code></td>
 <td style="text-align: center;">12</td>
-<td style="text-align: center;">7"</td>
+<td style="text-align: center;">5"</td>
 <td style="text-align: center;">CC</td>
 <td style="text-align: center;">Ligera</td>
 <td style="text-align: left;">+2" Mov si acaba <code>Trabado</code></td>
@@ -300,7 +390,7 @@
 <tr>
 <td style="text-align: left;"><code>Agente</code></td>
 <td style="text-align: center;">16</td>
-<td style="text-align: center;">6"</td>
+<td style="text-align: center;">4"</td>
 <td style="text-align: center;">Ambas</td>
 <td style="text-align: center;">Ligera</td>
 <td style="text-align: left;">Repite <code>Buscar</code> e <code>Interrogar</code> fallidos</td>
@@ -309,7 +399,7 @@
 <tr>
 <td style="text-align: left;"><code>Emisor</code></td>
 <td style="text-align: center;">16</td>
-<td style="text-align: center;">6"</td>
+<td style="text-align: center;">4"</td>
 <td style="text-align: center;">CC</td>
 <td style="text-align: center;">Ligera</td>
 <td style="text-align: left;">Puede <code>Canalizar</code></td>
@@ -317,7 +407,7 @@
 </tr>
 </tbody>
 </table>
-<p><em>* Único (no reemplazable). Máx: límite por banda.</em></p>
+<p><em>* Único (no reemplazable). Máx.: límite por banda.</em></p>
 
 
 
@@ -384,7 +474,7 @@
 <td style="text-align: left;">Punzón</td>
 <td style="text-align: center;"><code>Tóxico</code></td>
 <td style="text-align: center;">d4</td>
-<td style="text-align: left;">+1 daño vs herido</td>
+<td style="text-align: left;">+1 daño vs. herido</td>
 <td style="text-align: right;">4</td>
 </tr>
 <tr>
@@ -397,22 +487,6 @@
 </tr>
 <tr>
 <td style="text-align: center;">5</td>
-<td style="text-align: left;">Maza</td>
-<td style="text-align: center;"><code>Contundente</code></td>
-<td style="text-align: center;">d6</td>
-<td style="text-align: left;">Empuje 1"</td>
-<td style="text-align: right;">7</td>
-</tr>
-<tr>
-<td style="text-align: center;">6</td>
-<td style="text-align: left;">Espada</td>
-<td style="text-align: center;"><code>Cortante</code></td>
-<td style="text-align: center;">d6</td>
-<td style="text-align: left;"><code>+1 ND</code> en <code>Respuesta</code></td>
-<td style="text-align: right;">8</td>
-</tr>
-<tr>
-<td style="text-align: center;">7</td>
 <td style="text-align: left;">Inyector</td>
 <td style="text-align: center;"><code>Tóxico</code></td>
 <td style="text-align: center;">d6</td>
@@ -420,60 +494,76 @@
 <td style="text-align: right;">9</td>
 </tr>
 <tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: left;">Maza</td>
+<td style="text-align: center;"><code>Contundente</code></td>
+<td style="text-align: center;">d6</td>
+<td style="text-align: left;">Empuje 1"</td>
+<td style="text-align: right;">9</td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td style="text-align: left;">Espada</td>
+<td style="text-align: center;"><code>Cortante</code></td>
+<td style="text-align: center;">d6</td>
+<td style="text-align: left;"><code>+1 ND</code> en <code>Respuesta</code></td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr>
 <td style="text-align: center;">8</td>
 <td style="text-align: left;">Látigo de Cable</td>
 <td style="text-align: center;"><code>Estático</code></td>
 <td style="text-align: center;">d6</td>
 <td style="text-align: left;">Alcance 2"</td>
-<td style="text-align: right;">10</td>
+<td style="text-align: right;">11</td>
 </tr>
 <tr>
 <td style="text-align: center;">9</td>
+<td style="text-align: left;">Aturdidor</td>
+<td style="text-align: center;"><code>Energía</code></td>
+<td style="text-align: center;">d8</td>
+<td style="text-align: left;"><code>-1 ND</code> en la siguiente activación</td>
+<td style="text-align: right;">13</td>
+</tr>
+<tr>
+<td style="text-align: center;">10</td>
 <td style="text-align: left;">Machete</td>
 <td style="text-align: center;"><code>Cortante</code></td>
 <td style="text-align: center;">d8</td>
 <td style="text-align: left;">Repite 1s</td>
-<td style="text-align: right;">12</td>
-</tr>
-<tr>
-<td style="text-align: center;">10</td>
-<td style="text-align: left;">Martillo</td>
-<td style="text-align: center;"><code>Contundente</code></td>
-<td style="text-align: center;">d8</td>
-<td style="text-align: left;">Repite 1s, Empuje 1"</td>
-<td style="text-align: right;">14</td>
+<td style="text-align: right;">13</td>
 </tr>
 <tr>
 <td style="text-align: center;">11</td>
 <td style="text-align: left;">Estática</td>
 <td style="text-align: center;"><code>Estático</code></td>
 <td style="text-align: center;">d8</td>
-<td style="text-align: left;"><code>+1 ND</code> vs herido</td>
+<td style="text-align: left;"><code>+1 ND</code> vs. herido</td>
 <td style="text-align: right;">15</td>
 </tr>
 <tr>
 <td style="text-align: center;">12</td>
-<td style="text-align: left;">Aturdidor</td>
-<td style="text-align: center;"><code>Energía</code></td>
+<td style="text-align: left;">Martillo</td>
+<td style="text-align: center;"><code>Contundente</code></td>
 <td style="text-align: center;">d8</td>
-<td style="text-align: left;"><code>-1 ND</code> en la siguiente activación</td>
-<td style="text-align: right;">16</td>
+<td style="text-align: left;">Repite 1s, Empuje 1"</td>
+<td style="text-align: right;">15</td>
 </tr>
 <tr>
 <td style="text-align: center;">13</td>
-<td style="text-align: left;">Sable</td>
-<td style="text-align: center;"><code>Cortante</code></td>
-<td style="text-align: center;">d10</td>
-<td style="text-align: left;">Repite 1s y 2s, +1 vs blindado</td>
-<td style="text-align: right;">22</td>
-</tr>
-<tr>
-<td style="text-align: center;">14</td>
 <td style="text-align: left;">Hoja Ácida</td>
 <td style="text-align: center;"><code>Tóxico</code></td>
 <td style="text-align: center;">d10</td>
-<td style="text-align: left;">+1 vs blindado</td>
-<td style="text-align: right;">24</td>
+<td style="text-align: left;">+1 vs. blindado</td>
+<td style="text-align: right;">17</td>
+</tr>
+<tr>
+<td style="text-align: center;">14</td>
+<td style="text-align: left;">Garra de Arco</td>
+<td style="text-align: center;"><code>Estático</code></td>
+<td style="text-align: center;">d10</td>
+<td style="text-align: left;">Repite 1s, +1 a la tirada de Crítico</td>
+<td style="text-align: right;">19</td>
 </tr>
 <tr>
 <td style="text-align: center;">15</td>
@@ -481,39 +571,39 @@
 <td style="text-align: center;"><code>Contundente</code></td>
 <td style="text-align: center;">d10</td>
 <td style="text-align: left;">Repite 1s y 2s, Empuje 1"</td>
-<td style="text-align: right;">26</td>
+<td style="text-align: right;">21</td>
 </tr>
 <tr>
 <td style="text-align: center;">16</td>
-<td style="text-align: left;">Garra de Arco</td>
-<td style="text-align: center;"><code>Estático</code></td>
-<td style="text-align: center;">d10</td>
-<td style="text-align: left;">Repite 1s, +1 a la tirada de Crítico</td>
-<td style="text-align: right;">28</td>
-</tr>
-<tr>
-<td style="text-align: center;">17</td>
-<td style="text-align: left;">Motosierra</td>
-<td style="text-align: center;"><code>Cortante</code></td>
-<td style="text-align: center;">d12</td>
-<td style="text-align: left;">Repite 1s y 2s, +2 vs blindado</td>
-<td style="text-align: right;">32</td>
-</tr>
-<tr>
-<td style="text-align: center;">18</td>
 <td style="text-align: left;">Puño Plaga</td>
 <td style="text-align: center;"><code>Tóxico</code></td>
 <td style="text-align: center;">d12</td>
-<td style="text-align: left;">Repite 1s, +1 daño vs herido</td>
-<td style="text-align: right;">34</td>
+<td style="text-align: left;">Repite 1s, +1 daño vs. herido</td>
+<td style="text-align: right;">22</td>
 </tr>
 <tr>
-<td style="text-align: center;">19</td>
+<td style="text-align: center;">17</td>
+<td style="text-align: left;">Sable</td>
+<td style="text-align: center;"><code>Cortante</code></td>
+<td style="text-align: center;">d10</td>
+<td style="text-align: left;">Repite 1s y 2s, <code>+1 ND</code> en <code>Respuesta</code></td>
+<td style="text-align: right;">22</td>
+</tr>
+<tr>
+<td style="text-align: center;">18</td>
 <td style="text-align: left;">Mazo de Choque</td>
 <td style="text-align: center;"><code>Estático</code></td>
 <td style="text-align: center;">d12</td>
-<td style="text-align: left;">Repite 1s, Empuje 2", aturde en 6</td>
-<td style="text-align: right;">36</td>
+<td style="text-align: left;">Repite 1s, Empuje 2"</td>
+<td style="text-align: right;">25</td>
+</tr>
+<tr>
+<td style="text-align: center;">19</td>
+<td style="text-align: left;">Motosierra</td>
+<td style="text-align: center;"><code>Cortante</code></td>
+<td style="text-align: center;">d12</td>
+<td style="text-align: left;">Repite 1s y 2s, +2 vs. blindado</td>
+<td style="text-align: right;">27</td>
 </tr>
 <tr>
 <td style="text-align: center;">20</td>
@@ -521,7 +611,7 @@
 <td style="text-align: center;"><code>Energía</code></td>
 <td style="text-align: center;">d12</td>
 <td style="text-align: left;">Repite 1s y 2s, Empuje 2"</td>
-<td style="text-align: right;">38</td>
+<td style="text-align: right;">27</td>
 </tr>
 </tbody>
 </table>
@@ -547,8 +637,8 @@
 <td style="text-align: left;">Grapadora</td>
 <td style="text-align: center;"><code>Proyectil</code></td>
 <td style="text-align: center;">2</td>
-<td style="text-align: left;">Alcance máx 6"</td>
-<td style="text-align: right;">2</td>
+<td style="text-align: left;">Alcance máx. 6"</td>
+<td style="text-align: right;">1</td>
 </tr>
 <tr>
 <td style="text-align: center;">2</td>
@@ -556,15 +646,15 @@
 <td style="text-align: center;"><code>Proyectil</code></td>
 <td style="text-align: center;">d4</td>
 <td style="text-align: left;"><code>-1 ND</code> más allá de 6"</td>
-<td style="text-align: right;">4</td>
+<td style="text-align: right;">2</td>
 </tr>
 <tr>
 <td style="text-align: center;">3</td>
 <td style="text-align: left;">Aguja</td>
 <td style="text-align: center;"><code>Tóxico</code></td>
 <td style="text-align: center;">d4</td>
-<td style="text-align: left;">+1 daño vs herido</td>
-<td style="text-align: right;">5</td>
+<td style="text-align: left;">+1 daño vs. herido</td>
+<td style="text-align: right;">4</td>
 </tr>
 <tr>
 <td style="text-align: center;">4</td>
@@ -572,7 +662,7 @@
 <td style="text-align: center;"><code>Estático</code></td>
 <td style="text-align: center;">d4</td>
 <td style="text-align: left;">Sin pifias</td>
-<td style="text-align: right;">6</td>
+<td style="text-align: right;">5</td>
 </tr>
 <tr>
 <td style="text-align: center;">5</td>
@@ -580,7 +670,7 @@
 <td style="text-align: center;"><code>Tóxico</code></td>
 <td style="text-align: center;">d6</td>
 <td style="text-align: left;"><code>-1 ND</code> en la siguiente activación</td>
-<td style="text-align: right;">7</td>
+<td style="text-align: right;">9</td>
 </tr>
 <tr>
 <td style="text-align: center;">6</td>
@@ -588,23 +678,23 @@
 <td style="text-align: center;"><code>Energía</code></td>
 <td style="text-align: center;">d6</td>
 <td style="text-align: left;"><code>+1 ND</code> si no se movió</td>
-<td style="text-align: right;">8</td>
+<td style="text-align: right;">9</td>
 </tr>
 <tr>
 <td style="text-align: center;">7</td>
-<td style="text-align: left;">Aullador</td>
-<td style="text-align: center;"><code>Emisión</code></td>
+<td style="text-align: left;">Pistola Frag</td>
+<td style="text-align: center;"><code>Explosivo</code></td>
 <td style="text-align: center;">d6</td>
-<td style="text-align: left;">Ignora cobertura</td>
+<td style="text-align: left;">+1 vs. blindado</td>
 <td style="text-align: right;">9</td>
 </tr>
 <tr>
 <td style="text-align: center;">8</td>
-<td style="text-align: left;">Pistola Frag</td>
-<td style="text-align: center;"><code>Explosivo</code></td>
+<td style="text-align: left;">Aullador</td>
+<td style="text-align: center;"><code>Emisión</code></td>
 <td style="text-align: center;">d6</td>
-<td style="text-align: left;">+1 vs blindado</td>
-<td style="text-align: right;">10</td>
+<td style="text-align: left;">Ignora cobertura</td>
+<td style="text-align: right;">11</td>
 </tr>
 <tr>
 <td style="text-align: center;">9</td>
@@ -612,18 +702,26 @@
 <td style="text-align: center;"><code>Proyectil</code></td>
 <td style="text-align: center;">d8</td>
 <td style="text-align: left;">Repite 1s</td>
-<td style="text-align: right;">12</td>
+<td style="text-align: right;">13</td>
 </tr>
 <tr>
 <td style="text-align: center;">10</td>
-<td style="text-align: left;">Sónica</td>
-<td style="text-align: center;"><code>Emisión</code></td>
+<td style="text-align: left;">Lanzallamas</td>
+<td style="text-align: center;"><code>Energía</code></td>
 <td style="text-align: center;">d8</td>
-<td style="text-align: left;"><code>+1 ND</code> vs herido</td>
-<td style="text-align: right;">14</td>
+<td style="text-align: left;">Ignora cobertura</td>
+<td style="text-align: right;">15</td>
 </tr>
 <tr>
 <td style="text-align: center;">11</td>
+<td style="text-align: left;">Sónica</td>
+<td style="text-align: center;"><code>Emisión</code></td>
+<td style="text-align: center;">d8</td>
+<td style="text-align: left;"><code>+1 ND</code> vs. herido</td>
+<td style="text-align: right;">15</td>
+</tr>
+<tr>
+<td style="text-align: center;">12</td>
 <td style="text-align: left;">Tesla</td>
 <td style="text-align: center;"><code>Estático</code></td>
 <td style="text-align: center;">d8</td>
@@ -631,36 +729,28 @@
 <td style="text-align: right;">15</td>
 </tr>
 <tr>
-<td style="text-align: center;">12</td>
-<td style="text-align: left;">Lanzallamas</td>
-<td style="text-align: center;"><code>Energía</code></td>
-<td style="text-align: center;">d8</td>
-<td style="text-align: left;">Ignora cobertura</td>
-<td style="text-align: right;">16</td>
-</tr>
-<tr>
 <td style="text-align: center;">13</td>
-<td style="text-align: left;">Escopeta</td>
-<td style="text-align: center;"><code>Proyectil</code></td>
-<td style="text-align: center;">d10</td>
-<td style="text-align: left;">Repite 1s, Empuje 1"</td>
-<td style="text-align: right;">20</td>
-</tr>
-<tr>
-<td style="text-align: center;">14</td>
 <td style="text-align: left;">Criofusor</td>
 <td style="text-align: center;"><code>Tóxico</code></td>
 <td style="text-align: center;">d10</td>
 <td style="text-align: left;">Ignora cobertura</td>
-<td style="text-align: right;">22</td>
+<td style="text-align: right;">19</td>
+</tr>
+<tr>
+<td style="text-align: center;">14</td>
+<td style="text-align: left;">Escopeta</td>
+<td style="text-align: center;"><code>Proyectil</code></td>
+<td style="text-align: center;">d10</td>
+<td style="text-align: left;">Repite 1s, Empuje 1"</td>
+<td style="text-align: right;">19</td>
 </tr>
 <tr>
 <td style="text-align: center;">15</td>
 <td style="text-align: left;">Lanzagranadas</td>
 <td style="text-align: center;"><code>Explosivo</code></td>
 <td style="text-align: center;">d10</td>
-<td style="text-align: left;">Repite 1s, +1 vs blindado</td>
-<td style="text-align: right;">24</td>
+<td style="text-align: left;">Repite 1s, +1 vs. blindado</td>
+<td style="text-align: right;">19</td>
 </tr>
 <tr>
 <td style="text-align: center;">16</td>
@@ -668,44 +758,43 @@
 <td style="text-align: center;"><code>Estático</code></td>
 <td style="text-align: center;">d10</td>
 <td style="text-align: left;">Repite 1s, también impacta a las 2 miniaturas más cercanas a 2" del objetivo</td>
-<td style="text-align: right;">26</td>
+<td style="text-align: right;">21</td>
 </tr>
 <tr>
 <td style="text-align: center;">17</td>
-<td style="text-align: left;">Rifle</td>
-<td style="text-align: center;"><code>Energía</code></td>
-<td style="text-align: center;">d12</td>
-<td style="text-align: left;">Repite 1s y 2s, Sobrecarga: <code>-1 ND</code> por daño máx</td>
-<td style="text-align: right;">30</td>
-</tr>
-<tr>
-<td style="text-align: center;">18</td>
 <td style="text-align: left;">Cañón de Lamento</td>
 <td style="text-align: center;"><code>Emisión</code></td>
 <td style="text-align: center;">d12</td>
 <td style="text-align: left;">Repite 1s, Empuje 2"</td>
-<td style="text-align: right;">32</td>
+<td style="text-align: right;">25</td>
 </tr>
 <tr>
-<td style="text-align: center;">19</td>
-<td style="text-align: left;">Lanzamisiles</td>
-<td style="text-align: center;"><code>Explosivo</code></td>
-<td style="text-align: center;">d12</td>
-<td style="text-align: left;">Repite 1s y 2s, +2 vs blindado</td>
-<td style="text-align: right;">34</td>
-</tr>
-<tr>
-<td style="text-align: center;">20</td>
+<td style="text-align: center;">18</td>
 <td style="text-align: left;">Proyector de Plasma</td>
 <td style="text-align: center;"><code>Energía</code></td>
 <td style="text-align: center;">d12</td>
-<td style="text-align: left;">Ignora cobertura, +1 vs blindado</td>
-<td style="text-align: right;">38</td>
+<td style="text-align: left;">Ignora cobertura, +1 vs. blindado</td>
+<td style="text-align: right;">25</td>
+</tr>
+<tr>
+<td style="text-align: center;">19</td>
+<td style="text-align: left;">Rifle</td>
+<td style="text-align: center;"><code>Energía</code></td>
+<td style="text-align: center;">d12</td>
+<td style="text-align: left;">Repite 1s y 2s, Sobrecarga: <code>-1 ND</code> por daño máx.</td>
+<td style="text-align: right;">25</td>
+</tr>
+<tr>
+<td style="text-align: center;">20</td>
+<td style="text-align: left;">Lanzamisiles</td>
+<td style="text-align: center;"><code>Explosivo</code></td>
+<td style="text-align: center;">d12</td>
+<td style="text-align: left;">Repite 1s y 2s, +2 vs. blindado</td>
+<td style="text-align: right;">27</td>
 </tr>
 </tbody>
 </table>
 <h2 id="granadas">Granadas</h2>
-<p>Explosión 3", alcance 6". Acción para lanzar.</p>
 <table>
 <thead>
 <tr>
@@ -719,13 +808,13 @@
 <tr>
 <td style="text-align: center;">1</td>
 <td style="text-align: left;">Humo</td>
-<td style="text-align: left;">Bloquea LdV hasta la siguiente ronda</td>
+<td style="text-align: left;">1 daño, deja columna de humo bloqueando LdV hasta la siguiente ronda</td>
 <td style="text-align: right;">8</td>
 </tr>
 <tr>
 <td style="text-align: center;">2</td>
 <td style="text-align: left;">Flash</td>
-<td style="text-align: left;"><code>-1 ND</code> siguiente activación</td>
+<td style="text-align: left;">1 daño, <code>-1 ND</code> siguiente activación</td>
 <td style="text-align: right;">10</td>
 </tr>
 <tr>
@@ -736,20 +825,20 @@
 </tr>
 <tr>
 <td style="text-align: center;">4</td>
-<td style="text-align: left;">Incendiaria</td>
-<td style="text-align: left;">d6 daño <code>Energía</code>, ignora cobertura</td>
-<td style="text-align: right;">12</td>
-</tr>
-<tr>
-<td style="text-align: center;">5</td>
 <td style="text-align: left;">PEM</td>
 <td style="text-align: left;">d6 daño <code>Estático</code>, <code>-1 ND</code> siguiente activación</td>
 <td style="text-align: right;">12</td>
 </tr>
 <tr>
-<td style="text-align: center;">6</td>
+<td style="text-align: center;">5</td>
 <td style="text-align: left;">Frag</td>
 <td style="text-align: left;">d8 daño <code>Explosivo</code></td>
+<td style="text-align: right;">14</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: left;">Incendiaria</td>
+<td style="text-align: left;">d6 daño <code>Energía</code>, ignora cobertura</td>
 <td style="text-align: right;">14</td>
 </tr>
 </tbody>
@@ -800,25 +889,25 @@
 <td style="text-align: center;">5</td>
 <td style="text-align: left;">Chaleco Ligero</td>
 <td style="text-align: left;">+1" <code>Mov</code></td>
-<td style="text-align: right;">9</td>
+<td style="text-align: right;">7</td>
 </tr>
 <tr>
 <td style="text-align: center;">6</td>
 <td style="text-align: left;">Malla Defensiva</td>
 <td style="text-align: left;">Repite 1s en <code>Defensa</code></td>
-<td style="text-align: right;">12</td>
+<td style="text-align: right;">8</td>
 </tr>
 <tr>
 <td style="text-align: center;">7</td>
 <td style="text-align: left;">Arnés de Corredor</td>
 <td style="text-align: left;">+2" <code>Mov</code></td>
-<td style="text-align: right;">14</td>
+<td style="text-align: right;">10</td>
 </tr>
 <tr>
 <td style="text-align: center;">8</td>
 <td style="text-align: left;">Traje de Explorador</td>
 <td style="text-align: left;">Repite 1s en <code>Defensa</code>, +1" <code>Mov</code></td>
-<td style="text-align: right;">16</td>
+<td style="text-align: right;">11</td>
 </tr>
 </tbody>
 </table>
@@ -838,37 +927,37 @@
 <td style="text-align: center;">1</td>
 <td style="text-align: left;">Coraza Estándar</td>
 <td style="text-align: left;">-</td>
-<td style="text-align: right;">12</td>
+<td style="text-align: right;">8</td>
 </tr>
 <tr>
 <td style="text-align: center;">2</td>
 <td style="text-align: left;">Peto Táctico</td>
 <td style="text-align: left;">+1" <code>Mov</code></td>
-<td style="text-align: right;">15</td>
+<td style="text-align: right;">11</td>
 </tr>
 <tr>
 <td style="text-align: center;">3</td>
 <td style="text-align: left;">Arnés de Patrulla</td>
 <td style="text-align: left;">Repite 1s en <code>Defensa</code></td>
-<td style="text-align: right;">18</td>
+<td style="text-align: right;">12</td>
 </tr>
 <tr>
 <td style="text-align: center;">4</td>
-<td style="text-align: left;">Equipo de Asalto</td>
-<td style="text-align: left;">+2" <code>Mov</code></td>
-<td style="text-align: right;">20</td>
+<td style="text-align: left;">Blindaje Reforzado</td>
+<td style="text-align: left;">Repite 1s y 2s en <code>Defensa</code></td>
+<td style="text-align: right;">14</td>
 </tr>
 <tr>
 <td style="text-align: center;">5</td>
-<td style="text-align: left;">Traje de Operaciones</td>
-<td style="text-align: left;">Repite 1s en <code>Defensa</code>, +1" <code>Mov</code></td>
-<td style="text-align: right;">22</td>
+<td style="text-align: left;">Equipo de Asalto</td>
+<td style="text-align: left;">+2" <code>Mov</code></td>
+<td style="text-align: right;">14</td>
 </tr>
 <tr>
 <td style="text-align: center;">6</td>
-<td style="text-align: left;">Blindaje Reforzado</td>
-<td style="text-align: left;">Repite 1s y 2s en <code>Defensa</code></td>
-<td style="text-align: right;">25</td>
+<td style="text-align: left;">Traje de Operaciones</td>
+<td style="text-align: left;">Repite 1s en <code>Defensa</code>, +1" <code>Mov</code></td>
+<td style="text-align: right;">15</td>
 </tr>
 </tbody>
 </table>
@@ -888,37 +977,37 @@
 <td style="text-align: center;">1</td>
 <td style="text-align: left;">Coraza Pesada</td>
 <td style="text-align: left;">-</td>
-<td style="text-align: right;">18</td>
+<td style="text-align: right;">12</td>
 </tr>
 <tr>
 <td style="text-align: center;">2</td>
 <td style="text-align: left;">Armazón Industrial</td>
 <td style="text-align: left;">-1" <code>Mov</code>, Repite 1s en <code>Defensa</code></td>
-<td style="text-align: right;">20</td>
+<td style="text-align: right;">14</td>
 </tr>
 <tr>
 <td style="text-align: center;">3</td>
-<td style="text-align: left;">Blindaje de Combate</td>
-<td style="text-align: left;">Repite 1s en <code>Defensa</code></td>
-<td style="text-align: right;">23</td>
+<td style="text-align: left;">Traje Búnker</td>
+<td style="text-align: left;">-2" <code>Mov</code>, Repite 1s y 2s en <code>Defensa</code></td>
+<td style="text-align: right;">14</td>
 </tr>
 <tr>
 <td style="text-align: center;">4</td>
-<td style="text-align: left;">Traje Búnker</td>
-<td style="text-align: left;">-2" <code>Mov</code>, Repite 1s y 2s en <code>Defensa</code></td>
-<td style="text-align: right;">24</td>
+<td style="text-align: left;">Blindaje de Combate</td>
+<td style="text-align: left;">Repite 1s en <code>Defensa</code></td>
+<td style="text-align: right;">16</td>
 </tr>
 <tr>
 <td style="text-align: center;">5</td>
 <td style="text-align: left;">Exoesqueleto de Asalto</td>
 <td style="text-align: left;">Repite 1s y 2s en <code>Defensa</code></td>
-<td style="text-align: right;">27</td>
+<td style="text-align: right;">18</td>
 </tr>
 <tr>
 <td style="text-align: center;">6</td>
 <td style="text-align: left;">Blindaje Fortaleza</td>
 <td style="text-align: left;">Repite 1s, 2s y 3s en <code>Defensa</code></td>
-<td style="text-align: right;">30</td>
+<td style="text-align: right;">20</td>
 </tr>
 </tbody>
 </table>
@@ -1003,7 +1092,7 @@
 <tr>
 <td style="text-align: center;">1</td>
 <td style="text-align: left;">Máscara</td>
-<td style="text-align: left;"><code>+1 ND</code> <code>Defensa</code> vs Tóxico</td>
+<td style="text-align: left;"><code>+1 ND</code> <code>Defensa</code> vs. Tóxico</td>
 <td style="text-align: right;">6</td>
 </tr>
 <tr>
@@ -1107,13 +1196,14 @@
 <h2 id="ronda">Ronda</h2>
 <ol>
 <li>Cada jugador tira <strong>Bendiciones Corporativas</strong> (d8 tres veces)</li>
-<li>Añade Fichas de Activación a una bolsa común: una por miniatura de jugador que no esté <code>FdC</code>, una por grupo de hostiles desplegado (colores distintos por facción)</li>
+<li>Añade Fichas de Activación a una bolsa común: una por miniatura de jugador que no esté <code>FdC</code>, una por grupo de hostiles desplegado</li>
 <li>Saca una ficha: esa facción activa una miniatura (Hostiles y Compañeros siguen su tabla de IA)</li>
+<li>Todas las miniaturas <code>FdC</code>: descarta la ficha</li>
 <li>Cada activación: <strong>Movimiento + Acción</strong> O <strong>Acción + Movimiento</strong></li>
-<li>Repite desde el 3 hasta que todas las miniaturas hayan activado</li>
+<li>Repite desde el 3 hasta vaciar la bolsa</li>
 </ol>
 <h2 id="bendiciones-corporativas">Bendiciones Corporativas</h2>
-<p>Al inicio de cada ronda, tira d8 tres veces. Cada una da una bendición. Úsalas esta ronda o se pierden. Una bendición por miniatura y ronda.</p>
+<p>Una bendición por miniatura y ronda.</p>
 <table>
 <thead>
 <tr>
@@ -1125,22 +1215,22 @@
 <tbody>
 <tr>
 <td style="text-align: center;">1</td>
-<td style="text-align: left;">Gracia Denegada</td>
+<td style="text-align: left;">Denegada</td>
 <td style="text-align: left;">Sin bendición</td>
 </tr>
 <tr>
 <td style="text-align: center;">2</td>
-<td style="text-align: left;">Absolución</td>
+<td style="text-align: left;">Repetición</td>
 <td style="text-align: left;">Repite cualquier dado</td>
 </tr>
 <tr>
 <td style="text-align: center;">3</td>
-<td style="text-align: left;">Bendición Trimestral</td>
+<td style="text-align: left;">Impulso</td>
 <td style="text-align: left;"><code>+1 ND</code> a una tirada</td>
 </tr>
 <tr>
 <td style="text-align: center;">4</td>
-<td style="text-align: left;">Sanción de Horas Extra</td>
+<td style="text-align: left;">Extra</td>
 <td style="text-align: left;">Una miniatura tiene dos acciones</td>
 </tr>
 <tr>
@@ -1150,17 +1240,17 @@
 </tr>
 <tr>
 <td style="text-align: center;">6</td>
-<td style="text-align: left;">Bendición de Sinergia</td>
+<td style="text-align: left;">Sinergia</td>
 <td style="text-align: left;">Tras activar una miniatura, activa otra miniatura sin activar a 6" de ella</td>
 </tr>
 <tr>
 <td style="text-align: center;">7</td>
-<td style="text-align: left;">Dispensa de Bienestar</td>
+<td style="text-align: left;">Bienestar</td>
 <td style="text-align: left;">Restaura d6 <code>Salud</code>, elimina efectos de daño continuo</td>
 </tr>
 <tr>
 <td style="text-align: center;">8</td>
-<td style="text-align: left;">Goteo</td>
+<td style="text-align: left;">Excedente</td>
 <td style="text-align: left;">Tira dos veces, ignora 8s</td>
 </tr>
 </tbody>
@@ -1178,7 +1268,7 @@
 <tbody>
 <tr>
 <td style="text-align: left;"><code>Atacar</code></td>
-<td style="text-align: left;"><code>Combate</code> vs <code>Defensa</code>, inflige daño del arma</td>
+<td style="text-align: left;"><code>Combate</code> vs. <code>Defensa</code>, inflige daño del arma</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>Moverse de Nuevo</code></td>
@@ -1198,11 +1288,11 @@
 </tr>
 <tr>
 <td style="text-align: left;"><code>Buscar</code></td>
-<td style="text-align: left;">A 1" de un <code>Marcador de Botín</code>. <code>Astucia</code> vs 2d6</td>
+<td style="text-align: left;">A 1" de un <code>Marcador de Botín</code>. <code>Astucia</code> vs. 2d6</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>Interrogar</code></td>
-<td style="text-align: left;">A 1" de un Compañero. <code>Astucia</code> vs <code>Astucia</code> (<code>+1 ND</code> si el Compañero está herido)</td>
+<td style="text-align: left;">A 1" de un Compañero. <code>Astucia</code> vs. <code>Astucia</code> (<code>+1 ND</code> si el Compañero está herido)</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>Saquear</code></td>
@@ -1210,7 +1300,7 @@
 </tr>
 <tr>
 <td style="text-align: left;"><code>Canalizar</code></td>
-<td style="text-align: left;"><code>Astucia</code> vs <code>Astucia</code> o 2d6 (solo <code>Emisores</code>)</td>
+<td style="text-align: left;"><code>Astucia</code> vs. <code>Astucia</code> o 2d6 (solo <code>Emisores</code>)</td>
 </tr>
 </tbody>
 </table>
@@ -1242,7 +1332,7 @@
 <tr>
 <td style="text-align: left;">Saltar hueco</td>
 <td style="text-align: center;">1" por 1" horiz.</td>
-<td style="text-align: left;">Máx 2"</td>
+<td style="text-align: left;">Máx. 2"</td>
 </tr>
 <tr>
 <td style="text-align: left;">Saltar abajo</td>
@@ -1267,7 +1357,6 @@
 <li>Compara resultados:</li>
 <li><strong>Atacante gana:</strong> Impacto</li>
 <li><strong>Defensor gana:</strong> Ataque evitado (<code>Respuesta</code>: también inflige el daño del arma al atacante)</li>
-<li><strong>Empate:</strong> Atacante gana</li>
 </ol>
 
 
@@ -1282,7 +1371,7 @@
 <h2 id="disparo-al-cuerpo-a-cuerpo">Disparo al Cuerpo a Cuerpo</h2>
 <ul>
 <li><code>-1 ND</code> <code>Combate</code></li>
-<li>Un fallo impacta a una miniatura aleatoria a 1" del objetivo</li>
+<li>Un fallo impacta a una miniatura aleatoria a 1" del objetivo (excluyendo al objetivo)</li>
 <li>La pifia es un Crítico contra esa miniatura</li>
 </ul>
 <blockquote>
@@ -1303,21 +1392,24 @@
 <li>Cualquier parte del cuerpo oculta por el terreno: <strong>Cobertura</strong></li>
 <li><strong>Cobertura:</strong> <code>-1 ND</code> <code>Combate</code> del atacante</li>
 </ul>
-
-
 <h2 id="alcance">Alcance</h2>
 <ul>
 <li>Sin límites, excepto granadas (6")</li>
 </ul>
-<h3 id="explosión">Explosión</h3>
+
+
+<h2 id="modificadores-de-movimiento">Modificadores de Movimiento</h2>
 <ul>
-<li>Todas las miniaturas en el radio reciben un impacto automático (aliadas y enemigas)</li>
-<li>Tira daño por separado para cada una</li>
+<li>El atacante se movió esta activación: <code>-1 ND</code> <code>Combate</code></li>
+<li>El objetivo usó <code>Mover de Nuevo</code> esta ronda: <code>-1 ND</code> <code>Combate</code></li>
 </ul>
-<blockquote>
-<p>"El radio de explosión asume densidad de cables estándar. El personal son errores de redondeo."<br />
-<strong>Manual de Demoliciones</strong></p>
-</blockquote>
+<p>Se acumulan con Cobertura y Disparo al Cuerpo a Cuerpo.</p>
+<h2 id="granadas_1">Granadas</h2>
+<ul>
+<li>Lanza a un punto a 6" o menos (acción). Un uso.</li>
+<li>Tira <code>Combate</code> vs 2d6. Fallo: dispersa d6". 2d6 te dobla: cae a tus pies.</li>
+<li>Radio 3" impacta a todas las miniaturas (aliadas y enemigas). Tira daño por separado.</li>
+</ul>
 <h2 id="críticos">Críticos</h2>
 <ul>
 <li><strong>Doble:</strong> Daño máximo del arma</li>
@@ -1353,7 +1445,7 @@
 </blockquote>
 <h2 id="moral">Moral</h2>
 <ul>
-<li>Si el <code>Jefe</code> queda <code>Fuera de Combate</code>: los aliados tiran inmediatamente <code>Astucia</code> vs 2d6</li>
+<li>Si el <code>Jefe</code> queda <code>Fuera de Combate</code>: los aliados tiran inmediatamente <code>Astucia</code> vs. 2d6</li>
 <li>Fallo: <code>Huida</code> (muévete hacia el borde más cercano, no puedes actuar; sales si lo alcanzas)</li>
 <li>Repite al inicio de cada activación hasta pasar</li>
 </ul>
@@ -1377,8 +1469,8 @@
 <ul>
 <li>Acción para canalizar (una vez por activación)</li>
 <li>Sin límite de alcance (requiere LdV)</li>
-<li>Poderes ofensivos: tira <code>Astucia</code> vs <code>Astucia</code> del objetivo</li>
-<li>Poderes de apoyo: tira <code>Astucia</code> vs 2d6 (el objetivo debe ser aliado)</li>
+<li>Poderes ofensivos: tira <code>Astucia</code> vs. <code>Astucia</code> del objetivo</li>
+<li>Poderes de apoyo: tira <code>Astucia</code> vs. 2d6 (el objetivo debe ser aliado)</li>
 <li>Triple+: el efecto se aplica a todos los objetivos válidos a 3"</li>
 <li>Defensor triplica o más: tira en la tabla de Pifias <code>Emisión</code></li>
 </ul>
@@ -1433,7 +1525,7 @@
 <tr>
 <td style="text-align: center;">1</td>
 <td style="text-align: left;">Campo de Fuerza</td>
-<td style="text-align: left;"><code>+2 ND</code> <code>Defensa</code> vs a distancia hasta la siguiente activación</td>
+<td style="text-align: left;"><code>+2 ND</code> <code>Defensa</code> vs. a distancia hasta la siguiente activación</td>
 </tr>
 <tr>
 <td style="text-align: center;">2</td>
@@ -1932,32 +2024,33 @@
 <h3 id="20-pv-6-mov">20 PV, 6" MOV</h3>
 <ul>
 <li>COM 2d8, DEF 2d6, AST 2d6</li>
-<li>Aguja (5): d4 <code>Tóxico</code>, +1 daño vs herido</li>
-<li>Cuchillo (3): d4 <code>Cortante</code></li>
+<li>Aguja (4): d4 <code>Tóxico</code>, +1 daño vs. herido</li>
+<li>Punzón (4): d4 <code>Tóxico</code>, +1 daño vs. herido</li>
 <li>Blindaje Ligero (4): 1 reducción</li>
 </ul>
 <h2 id="bruto-12">Bruto [12]</h2>
 <h3 id="20-pv-5-mov">20 PV, 5" MOV</h3>
 <ul>
 <li>COM 2d8, DEF 2d6, AST 2d4</li>
-<li>Espada (8): d6 <code>Cortante</code>, <code>+1 ND</code> en <code>Respuesta</code></li>
-<li>Blindaje Ligero (4): 1 reducción</li>
+<li>Espada (10): d6 <code>Cortante</code>, <code>+1 ND</code> en <code>Respuesta</code></li>
+<li>Malla Simple (2): 1 reducción, -1" <code>Mov</code></li>
 <li><em>Solo <code>CC</code>, puede llevar armadura <code>Pesada</code></em></li>
 </ul>
 <h2 id="veterano-12">Veterano [12]</h2>
 <h3 id="14-pv-5-mov">14 PV, 5" MOV</h3>
 <ul>
 <li>COM 2d6, DEF 2d6, AST 2d6</li>
-<li>Pistola (4): d4 <code>Proyectil</code>, <code>-1 ND</code> más allá de 6"</li>
-<li>Punzón (4): d4 <code>Tóxico</code>, +1 daño vs herido</li>
-<li>Blindaje Ligero (4): 1 reducción</li>
+<li>Pistola (2): d4 <code>Proyectil</code>, <code>-1 ND</code> más allá de 6"</li>
+<li>Punzón (4): d4 <code>Tóxico</code>, +1 daño vs. herido</li>
+<li>Forro Protector (6): 1 reducción, -1 a las tiradas de Crítico contra ti</li>
 <li><em>Inmune a <code>Huida</code></em></li>
 </ul>
 <h2 id="tirador-12">Tirador [12]</h2>
 <h3 id="16-pv-6-mov">16 PV, 6" MOV</h3>
 <ul>
 <li>COM 2d8, DEF 2d6, AST 2d4</li>
-<li>Carabina (12): d8 <code>Proyectil</code>, repite 1s</li>
+<li>Láser (9): d6 <code>Energía</code>, <code>+1 ND</code> si no se movió</li>
+<li>Cuchillo (3): d4 <code>Cortante</code></li>
 <li><em>Impacto: <code>-1 ND</code> <code>Defensa</code> en la próxima activación; puede llevar armadura <code>Media</code></em></li>
 </ul>
 
@@ -1966,24 +2059,24 @@
 <h3 id="12-pv-8-mov">12 PV, 8" MOV</h3>
 <ul>
 <li>COM 2d6, DEF 2d4, AST 2d8</li>
-<li>Pistola de Arco (6): d4 <code>Estático</code>, sin pifias</li>
-<li>Forro Protector (6): 1 reducción, -1 a las tiradas de Crítico contra ti</li>
+<li>Pistola de Arco (5): d4 <code>Estático</code>, sin pifias</li>
+<li>Chaleco Ligero (7): 1 reducción, +1" <code>Mov</code></li>
 <li><em><code>Mov</code> 3" tras desplegar, solo <code>Disparo</code></em></li>
 </ul>
 <h2 id="zelote-12">Zelote [12]</h2>
 <h3 id="12-pv-6-mov">12 PV, 6" MOV</h3>
 <ul>
 <li>COM 2d8, DEF 2d4, AST 2d6</li>
-<li>Látigo de Cable (10): d6 <code>Estático</code>, alcance 2"</li>
-<li>Malla Simple (2): 1 reducción</li>
+<li>Inyector (9): d6 <code>Tóxico</code>, repite 1s</li>
+<li>Cuchillo (3): d4 <code>Cortante</code></li>
 <li><em>+2" <code>Mov</code> si acaba <code>Trabado</code>, solo <code>CC</code></em></li>
 </ul>
 <h2 id="agente-12">Agente [12]</h2>
 <h3 id="16-pv-6-mov_1">16 PV, 6" MOV</h3>
 <ul>
 <li>COM 2d4, DEF 2d6, AST 2d8</li>
-<li>Aguja (5): d4 <code>Tóxico</code>, +1 daño vs herido</li>
-<li>Maza (7): d6 <code>Contundente</code>, Empuje 1"</li>
+<li>Pistola (2): d4 <code>Proyectil</code>, <code>-1 ND</code> más allá de 6"</li>
+<li>Espada (10): d6 <code>Cortante</code>, <code>+1 ND</code> en <code>Respuesta</code></li>
 <li><em>Repite <code>Buscar</code>/<code>Interrogar</code> fallidos</em></li>
 </ul>
 <h2 id="emisor-12">Emisor [12]</h2>
@@ -1996,6 +2089,7 @@
 </ul>
 
     </div>
+</div>
     <script>
         function toggleMenu() {
             const nav = document.querySelector('.app-menu');
@@ -2024,6 +2118,55 @@
         }
         window.addEventListener('resize', updatePageScale);
         document.addEventListener('DOMContentLoaded', updatePageScale);
+    </script>
+    <script>
+        // Scroll spy: highlight current section in sidebar
+        function updateActiveLink() {
+            const headers = document.querySelectorAll('h1[id], h2[id], h3[id]');
+            const links = document.querySelectorAll('.sidebar-nav a');
+            const sidebar = document.querySelector('.sidebar');
+            const offset = 100; // Account for sticky header
+
+            let current = '';
+            headers.forEach(header => {
+                const top = header.getBoundingClientRect().top;
+                if (top < offset) {
+                    current = header.id;
+                }
+            });
+
+            links.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                    // Auto-scroll sidebar to keep active item in view
+                    if (sidebar) {
+                        const linkRect = link.getBoundingClientRect();
+                        const sidebarRect = sidebar.getBoundingClientRect();
+                        const linkTop = linkRect.top - sidebarRect.top;
+                        const linkBottom = linkRect.bottom - sidebarRect.top;
+                        const visibleHeight = sidebar.clientHeight;
+                        // Scroll if link is outside visible area (with padding)
+                        if (linkTop < 50 || linkBottom > visibleHeight - 50) {
+                            link.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        }
+                    }
+                }
+            });
+        }
+
+        // Mobile sidebar toggle
+        function toggleSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            const overlay = document.querySelector('.sidebar-overlay');
+            if (sidebar) {
+                sidebar.classList.toggle('mobile-open');
+                if (overlay) overlay.classList.toggle('active');
+            }
+        }
+
+        window.addEventListener('scroll', updateActiveLink);
+        document.addEventListener('DOMContentLoaded', updateActiveLink);
     </script>
 </body>
 </html>

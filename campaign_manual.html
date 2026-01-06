@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hardwired 28 - Campaign 0.6.3-beta</title>
-    <meta property="og:title" content="Hardwired 28 - Campaign 0.6.3-beta">
+    <title>Hardwired 28 - Campaign 0.6.4-beta</title>
+    <meta property="og:title" content="Hardwired 28 - Campaign 0.6.4-beta">
     <meta property="og:description" content="Corporate cablepunk skirmish wargame">
     <meta property="og:image" content="http://hardwired28.luismars.com/img/social.png">
     <meta property="og:url" content="http://hardwired28.luismars.com/">
@@ -18,32 +18,74 @@
 </head>
 <body class="has-app-menu">
     
-    <nav class="app-menu" data-theme="light" data-open="false" aria-label="Navigation">
+    <nav class="app-menu" data-theme="corporate" data-open="false" aria-label="Navigation">
         <div class="app-menu__inner">
             <a class="app-menu__brand" href="./">Hardwired 28</a>
-            <button class="app-menu__toggle" type="button" onclick="toggleMenu()">Menu</button>
+            <button class="app-menu__toggle" type="button" onclick="toggleMenu()" aria-label="Menu"></button>
             <div class="app-menu__links">
+                <a href="rulebook">Rulebook</a>
                 <div class="app-menu__dropdown">
-                    <button class="app-menu__dropdown-toggle">Rules</button>
+                    <button class="app-menu__dropdown-toggle current">Print</button>
                     <div class="app-menu__submenu">
-                        <a href="merged">All Rules</a>
-                        <a href="manual">Manual</a>
-                        <a href="core">Core</a>
-                        <a href="hostiles">Hostiles</a>
+                        <a href="print">All Rules</a>
+                        <a href="core-rules">Core Rules</a>
+                        <a href="inhuman-resources">Inhuman Resources</a>
                         <a href="campaign">Campaign</a>
-                        <a href="qr">Reference</a>
                     </div>
                 </div>
-                <a href="./">Builder</a>
-                <a href="es/campaign">Español</a>
-            </div>
-            <div class="app-menu__actions">
-                
+                <a href="quick-reference">Quick Reference</a>
+                <a href="builder/index">Squad Builder</a>
+                <a href="es/campaign">Castellano</a>
             </div>
         </div>
     </nav>
 
     
+    <div class="manual-layout">
+    <nav class="sidebar">
+        <ul class="sidebar-nav">
+            <li class="toc-h1"><a href="#hardwired-28">Campaign</a></li>
+            <li class="toc-h1"><a href="#campaign_1">Campaign</a></li>
+            <li class="toc-h2"><a href="#board">Board</a></li>
+            <li class="toc-h2"><a href="#setup">Setup</a></li>
+            <li class="toc-h2"><a href="#scenario-selection">Scenario Selection</a></li>
+            <li class="toc-h3"><a href="#calculate-evidence-gap">Calculate Evidence Gap</a></li>
+            <li class="toc-h3"><a href="#roll-d3-on-gap-row">Roll d3 on Gap row</a></li>
+            <li class="toc-h2"><a href="#hostile-type">Hostile Type</a></li>
+            <li class="toc-h3"><a href="#roll-objective-modifiers">Roll Objective Modifiers</a></li>
+            <li class="toc-h1"><a href="#gathering-evidence">Gathering Evidence</a></li>
+            <li class="toc-h2"><a href="#search">Search</a></li>
+            <li class="toc-h2"><a href="#interrogate">Interrogate</a></li>
+            <li class="toc-h2"><a href="#recording-evidence">Recording Evidence</a></li>
+            <li class="toc-h1"><a href="#matched-missions">Matched Missions</a></li>
+            <li class="toc-h2"><a href="#the-condemned-block">The Condemned Block</a></li>
+            <li class="toc-h2"><a href="#smugglers-run">Smuggler's Run</a></li>
+            <li class="toc-h2"><a href="#the-wave-shrine">The Wave Shrine</a></li>
+            <li class="toc-h1"><a href="#advantage-missions">Advantage Missions</a></li>
+            <li class="toc-h2"><a href="#the-encryption-keys">The Encryption Keys</a></li>
+            <li class="toc-h2"><a href="#the-barricade">The Barricade</a></li>
+            <li class="toc-h2"><a href="#the-ambush">The Ambush</a></li>
+            <li class="toc-h1"><a href="#overwhelming-missions">Overwhelming Missions</a></li>
+            <li class="toc-h2"><a href="#no-quarter">No Quarter</a></li>
+            <li class="toc-h2"><a href="#the-vault">The Vault</a></li>
+            <li class="toc-h2"><a href="#debt-leverage">Debt Leverage</a></li>
+            <li class="toc-h1"><a href="#post-game-sequence">Post-Game Sequence</a></li>
+            <li class="toc-h2"><a href="#merit-sources">Merit Sources</a></li>
+            <li class="toc-h2"><a href="#exploration">Exploration</a></li>
+            <li class="toc-h2"><a href="#injuries">Injuries</a></li>
+            <li class="toc-h2"><a href="#promotion-thresholds">Promotion Thresholds</a></li>
+            <li class="toc-h2"><a href="#attribute-limits">Attribute Limits</a></li>
+            <li class="toc-h2"><a href="#promotion">Promotion</a></li>
+            <li class="toc-h2"><a href="#recruitment">Recruitment</a></li>
+            <li class="toc-h2"><a href="#dismiss">Dismiss</a></li>
+            <li class="toc-h2"><a href="#boss-succession">Boss Succession</a></li>
+            <li class="toc-h2"><a href="#trading-post">Trading Post</a></li>
+            <li class="toc-h2"><a href="#locker-room">Locker Room</a></li>
+            <li class="toc-h2"><a href="#campaign-victory">Campaign Victory</a></li>
+        </ul>
+    </nav>
+    <div class="sidebar-overlay" onclick="toggleSidebar()"></div>
+    <button class="mobile-toc-btn" onclick="toggleSidebar()" aria-label="Contents"></button>
     <div class="content">
 
 
@@ -69,15 +111,16 @@
 
 
 <h2 id="board">Board</h2>
-<p>2'x2' with dense terrain. Avoid long corridors and open lanes: ranged models dominate sight lines longer than 12". Scatter cover to create multiple approach paths. Hostiles act as third-party threats.</p>
+<p>2' × 2' with dense terrain. No model should have clear LoS across the entire board. At least half of all firing lanes should offer Cover. Avoid open lanes longer than 12". Scatter cover to create multiple approach paths. Hostiles act as third-party threats.</p>
 <h2 id="setup">Setup</h2>
-<p><strong>Standard Deployment:</strong> Deployment zones extend 3" from each table edge.</p>
+<p><strong>Standard Deployment:</strong> Deploy on the table edge.</p>
 <ol>
-<li><strong>Pick Side:</strong> Roll your <code>Boss</code>'s <code>Wits</code> vs opponent's <code>Boss</code>'s <code>Wits</code>. Winner chooses a table edge. The other player takes the opposite edge.</li>
-<li><strong>Deploy First:</strong> Roll <code>Boss</code> <code>Wits</code> vs <code>Wits</code>. Winner chooses who deploys first. Players alternate placing one model at a time within their deployment zone until all models are deployed.</li>
+<li><strong>Pick Side:</strong> Roll your <code>Boss</code>'s <code>Wits</code> vs. opponent's <code>Boss</code>'s <code>Wits</code>. Winner chooses a table edge. The other player takes the opposite edge.</li>
+<li><strong>Deploy First:</strong> Roll <code>Boss</code> <code>Wits</code> vs. <code>Wits</code>. Winner chooses who deploys first. Players alternate placing one model at a time on their table edge until all models are deployed.</li>
 <li><strong>Loot &amp; Coworkers:</strong> Players alternate placing <code>Loot Markers</code> and Coworkers in the areas specified by the scenario.</li>
 </ol>
 <p>Unless a scenario specifies otherwise, use Standard Deployment.</p>
+<p><strong>Corner:</strong> A 3" × 3" L-shaped zone along both edges meeting at a corner.</p>
 <p><strong>Game Length:</strong> Games last a minimum of 5 rounds. At the end of Round 5, roll d6: on 3+ the game ends. At the end of Round 6, roll d6: on 2+ the game ends. The game automatically ends after Round 7.</p>
 <p><strong>Relic:</strong> A special <code>Loot Marker</code> placed by some scenarios. <code>Interact</code> to pick up. Carrier moves at half speed. Drops if carrier goes <code>Out of Action</code> (<code>Interact</code> to pick up again).</p>
 
@@ -257,7 +300,8 @@
 <h2 id="search">Search</h2>
 <ul>
 <li>Within 1" of <code>Loot Marker</code></li>
-<li>Roll <code>Wits</code> vs 2d6</li>
+<li>Roll <code>Wits</code> vs. 2d6</li>
+<li>Success: remove the marker</li>
 </ul>
 <table>
 <thead>
@@ -269,7 +313,7 @@
 <tbody>
 <tr>
 <td style="text-align: center;">1</td>
-<td style="text-align: left;">2 subs</td>
+<td style="text-align: left;">Random Grenade</td>
 </tr>
 <tr>
 <td style="text-align: center;">2</td>
@@ -289,7 +333,7 @@
 </tr>
 <tr>
 <td style="text-align: center;">6</td>
-<td style="text-align: left;"><strong>Evidence</strong></td>
+<td style="text-align: left;">1 <code>Evidence</code></td>
 </tr>
 <tr>
 <td style="text-align: center;">7</td>
@@ -305,7 +349,7 @@
 </tr>
 <tr>
 <td style="text-align: center;">10</td>
-<td style="text-align: left;">2 <strong>Evidence</strong></td>
+<td style="text-align: left;">1 <code>Evidence</code>, +1 <code>Lead</code></td>
 </tr>
 <tr>
 <td style="text-align: center;">11</td>
@@ -313,7 +357,7 @@
 </tr>
 <tr>
 <td style="text-align: center;">12</td>
-<td style="text-align: left;"><strong>Evidence</strong></td>
+<td style="text-align: left;">1 <code>Evidence</code></td>
 </tr>
 <tr>
 <td style="text-align: center;">13</td>
@@ -333,7 +377,7 @@
 </tr>
 <tr>
 <td style="text-align: center;">17</td>
-<td style="text-align: left;"><strong>Evidence</strong></td>
+<td style="text-align: left;">1 <code>Evidence</code></td>
 </tr>
 <tr>
 <td style="text-align: center;">18</td>
@@ -341,7 +385,7 @@
 </tr>
 <tr>
 <td style="text-align: center;">19</td>
-<td style="text-align: left;"><strong>Evidence</strong></td>
+<td style="text-align: left;">1 <code>Evidence</code></td>
 </tr>
 <tr>
 <td style="text-align: center;">20</td>
@@ -354,9 +398,9 @@
 <h2 id="interrogate">Interrogate</h2>
 <ul>
 <li>Within 1" of target</li>
-<li><code>Wits</code> vs <code>Wits</code> (opposed)</li>
+<li><code>Wits</code> vs. <code>Wits</code> (opposed)</li>
 <li><code>+1 DT</code> if target wounded</li>
-<li>Success: target cannot be interrogated again</li>
+<li>Success: remove the Coworker</li>
 </ul>
 <table>
 <thead>
@@ -400,7 +444,7 @@
 <tr>
 <td style="text-align: center;">8</td>
 <td style="text-align: left;">Full Disclosure</td>
-<td style="text-align: left;">2 <code>Evidence</code></td>
+<td style="text-align: left;">1 <code>Evidence</code>, +2 <code>Leads</code></td>
 </tr>
 </tbody>
 </table>
@@ -425,13 +469,13 @@
 <h4 id="terrain">Terrain</h4>
 <p>Sector 7-Receivable. Ruined hab-block. Collapsed coolant pipes, exposed wiring, plenty of maintenance alcoves to search.</p>
 <h4 id="loot">Loot</h4>
-<p>Players alternate placing 1 <code>Loot Marker</code> each (6"+ from deployment zones).</p>
+<p>Players alternate placing 1 <code>Loot Marker</code> each (6"+ from edges, 3"+ apart).</p>
 <h4 id="coworkers">Coworkers</h4>
-<p>Roll Coworkers (<code>Swarm</code> tier). Place within 6" of center, must touch terrain.</p>
+<p>Roll Coworkers (<code>Swarm</code> tier). Players alternate placing within 6" of center, must touch terrain (3"+ apart).</p>
 <h4 id="deployment">Deployment</h4>
 <p>Standard.</p>
 <h4 id="threats">Threats</h4>
-<p><strong>Round 3:</strong> Roll Hostile faction table (<code>Swarm</code> tier). Spawn on random edge.</p>
+<p><strong>Round 3:</strong> Roll Hostile faction table (<code>Swarm</code> tier). They spawn on a random edge.</p>
 <blockquote>
 <p>"Sector 7 defaulted before I was born. My parents defaulted here. Their debt is mine now."<br />
 <strong>Receivable Resident</strong></p>
@@ -446,13 +490,13 @@
 <h4 id="terrain_1">Terrain</h4>
 <p>Solder Market edges. Cargo depot. Stacked containers, loading cables, toll-booths with sealed doors.</p>
 <h4 id="loot_1">Loot</h4>
-<p>1 <code>Loot Marker</code> (the dossier) in center. Players alternate placing 1 <code>Loot Marker</code> each (6"+ from center).</p>
+<p>1 <code>Loot Marker</code> (the dossier) in center. Players alternate placing 1 <code>Loot Marker</code> each (6"+ from center, 3"+ apart).</p>
 <h4 id="coworkers_1">Coworkers</h4>
-<p>Roll Coworkers (<code>Elite</code> tier). Place 6"+ from center.</p>
+<p>Roll Coworkers (<code>Elite</code> tier). Players alternate placing 6"+ from center (3"+ apart).</p>
 <h4 id="deployment_1">Deployment</h4>
 <p>Standard.</p>
 <h4 id="threats_1">Threats</h4>
-<p><strong>Rounds 3, 5:</strong> Roll Hostile faction table (<code>Normal</code> tier). Spawn on random edge.</p>
+<p><strong>Rounds 3, 5:</strong> Roll Hostile faction table (<code>Normal</code> tier). They spawn on a random edge.</p>
 <blockquote>
 <p>"Resistance will add to your balance."<br />
 <strong>Toll Collector final notice</strong></p>
@@ -463,17 +507,17 @@
 
 <h2 id="the-wave-shrine">The Wave Shrine</h2>
 <p>Conduit Junction Null. The Monks call it cursed: no cable reaches here, no signal flows clean. Light comes from indicator LEDs and the occasional work lamp. Centuries ago, a cascade failure severed this junction from the Holy Network. The Monks sealed it and moved on. The Untethered found it.</p>
-<p>They've been using this place for months. Open Channel broadcasts originate here, some say. The wave corruption is thick enough to taste: metal and ozone, the flavor of forbidden frequencies. Something rests on that altar. Something from before the Tethering. Something that still works.</p>
+<p>They've been using this place for months. Open Channel broadcasts originate here, some say. The wave corruption is thick enough to taste: metal and ozone, the flavor of forbidden frequencies. Something rests on that altar: an artifact from before the Tethering, something that still works.</p>
 <h4 id="terrain_2">Terrain</h4>
 <p>Conduit Junction Null. Corrupted shrine. Central data-terminal, scattered prayer-mats, diagnostic candles, hidden alcoves.</p>
 <h4 id="loot_2">Loot</h4>
-<p>1 Relic in center. Players alternate placing 2 <code>Loot Markers</code> each within 6" of Relic.</p>
+<p>1 Relic in center. Players alternate placing 2 <code>Loot Markers</code> each within 6" of Relic (3"+ apart).</p>
 <h4 id="coworkers_2">Coworkers</h4>
-<p>Roll Coworkers (<code>Normal</code> tier). Place within 6" of center.</p>
+<p>Roll Coworkers (<code>Normal</code> tier). Players alternate placing 6"+ from center (3"+ apart).</p>
 <h4 id="deployment_2">Deployment</h4>
 <p>Standard.</p>
 <h4 id="threats_2">Threats</h4>
-<p><strong>Rounds 2, 4, 6:</strong> Roll Hostile faction table (<code>Elite</code> tier). Spawn from center.</p>
+<p><strong>Rounds 2, 4, 6:</strong> Roll Hostile faction table (<code>Elite</code> tier). They spawn from center.</p>
 <h4 id="special">Special</h4>
 <p>At game end, Relic holder gains +1 <code>Evidence</code> + 2 <code>Leads</code>.</p>
 <blockquote>
@@ -492,13 +536,13 @@
 <h4 id="terrain_3">Terrain</h4>
 <p>The Comptroller's District. Authority annex. Cramped offices, data-stacks, locked subscription vaults.</p>
 <h4 id="loot_3">Loot</h4>
-<p>Players alternate placing 2 <code>Loot Markers</code> each (9"+ from center).</p>
+<p>Players alternate placing 2 <code>Loot Markers</code> each (9"+ from center, 3"+ apart).</p>
 <h4 id="coworkers_3">Coworkers</h4>
-<p>Roll Coworkers (<code>Normal</code> tier). Place within 6" of center.</p>
+<p>Roll Coworkers (<code>Normal</code> tier). Defender places within 6" of center (3"+ apart).</p>
 <h4 id="deployment_3">Deployment</h4>
-<p>Aggressor picks edge, deploys first. Defender opposite edge, 3" deep.</p>
+<p>Aggressor picks an edge and deploys first. Defender deploys on the opposite edge.</p>
 <h4 id="threats_3">Threats</h4>
-<p><strong>Round 2:</strong> Roll Hostile faction table (<code>Swarm</code> tier). Spawn on random edge.</p>
+<p><strong>Round 2:</strong> Roll Hostile faction table (<code>Swarm</code> tier). They spawn on a random edge.</p>
 <h4 id="special_1">Special</h4>
 <p>Hostiles ignore Defender until Defender uses <code>Search</code> or <code>Interrogate</code>, or until Round 3.</p>
 <blockquote>
@@ -511,17 +555,17 @@
 
 <h2 id="the-barricade">The Barricade</h2>
 <p>The Cooperative formed when Sector 7 defaulted. No leaders, no records, no subscriptions. Just the understanding that today's giver may be tomorrow's receiver. The Authority calls them criminals. The Houses call them lost revenue. They call themselves free.</p>
-<p>They've been trading with the Scrapers, buying information about routes to the Roots. They helped the Defender fortify this junction. Weeks of work. Barricades from scrap. Now a stronger force approaches. The Defender has prepared the ground, but the ground may not be enough.</p>
+<p>The Cooperative has been trading with the Scrapers, buying information about routes to the Roots. They helped the Defender fortify this junction. Weeks of work. Barricades from scrap. Now a stronger force approaches. The Defender has prepared the ground, but the ground may not be enough.</p>
 <h4 id="terrain_4">Terrain</h4>
 <p>Sector 7-Receivable. Fortified junction. Barricades, jury-rigged turrets, supply crates.</p>
 <h4 id="loot_4">Loot</h4>
 <p>Defender places 4 <code>Loot Markers</code> within 6" of center (3" apart).</p>
 <h4 id="coworkers_4">Coworkers</h4>
-<p>Roll Coworkers (<code>Elite</code> tier). Place within 6" of center.</p>
+<p>Roll Coworkers (<code>Elite</code> tier). Defender places within 6" of center (3"+ apart).</p>
 <h4 id="deployment_4">Deployment</h4>
-<p>Defender within 9" of center. Aggressor on any edge, 6" deep.</p>
+<p>Defender within 6" of center. Aggressor picks an edge and deploys on that edge.</p>
 <h4 id="threats_4">Threats</h4>
-<p><strong>Rounds 3, 5:</strong> Roll Hostile faction table (<code>Normal</code> tier). Spawn on random edge.</p>
+<p><strong>Rounds 3, 5:</strong> Roll Hostile faction table (<code>Normal</code> tier). They spawn on a random edge.</p>
 <h4 id="special_2">Special</h4>
 <p>Defender places 3 terrain pieces before deployment.</p>
 <blockquote>
@@ -537,13 +581,13 @@
 <h4 id="terrain_5">Terrain</h4>
 <p>Mid-Complex transit corridor. Open ground with scattered cover. Vendor stalls, abandoned cargo-sleds.</p>
 <h4 id="loot_5">Loot</h4>
-<p>After Defender deployment, Defender places 2 <code>Loot Markers</code> within 3" of friendly models.</p>
+<p>After Defender deployment, Defender places 2 <code>Loot Markers</code> within 3" of Defender's models (3"+ apart).</p>
 <h4 id="coworkers_5">Coworkers</h4>
-<p>Roll Coworkers (<code>Swarm</code> tier). Place within 3" of friendly models.</p>
+<p>Roll Coworkers (<code>Swarm</code> tier). Defender places within 3" of any board edge (3"+ apart).</p>
 <h4 id="deployment_5">Deployment</h4>
-<p>Defender deploys all models within 12" of center. Then Aggressor deploys within 3" of any edge.</p>
+<p>Defender deploys all models within 6" of center. Aggressor deploys on opposite corners.</p>
 <h4 id="threats_5">Threats</h4>
-<p><strong>Rounds 2, 4, 6:</strong> Roll Hostile faction table (<code>Elite</code> tier). Spawn on random edge.</p>
+<p><strong>Rounds 2, 4, 6:</strong> Roll Hostile faction table (<code>Elite</code> tier). They spawn on a random edge.</p>
 <h4 id="special_3">Special</h4>
 <p>Hostiles target Aggressor models until Round 3.</p>
 <blockquote>
@@ -563,13 +607,13 @@
 <h4 id="terrain_6">Terrain</h4>
 <p>Lower Complex. Burned-out safehouse. Collapsed conduits, desperate cover, one clear path to escape.</p>
 <h4 id="loot_6">Loot</h4>
-<p>Defender places 4 <code>Loot Markers</code> within 6" of center (the safehouse).</p>
+<p>Defender places 4 <code>Loot Markers</code> within 6" of center (3"+ apart).</p>
 <h4 id="coworkers_6">Coworkers</h4>
-<p>Roll Coworkers (<code>Elite</code> tier). Place within 6" of center.</p>
+<p>Roll Coworkers (<code>Elite</code> tier). Players alternate placing 6"+ from center (3"+ apart).</p>
 <h4 id="deployment_6">Deployment</h4>
-<p>Defender places 2 barricades within 6" of center. Aggressor picks edge and deploys. Then Defender deploys within 12" of center. Aggressor may then redeploy d3 models.</p>
+<p>Defender places 2 barricades within 6" of center. Aggressor picks an edge and deploys on that edge. Then Defender deploys within 6" of center. Aggressor may then redeploy d3 models.</p>
 <h4 id="threats_6">Threats</h4>
-<p><strong>Round 4:</strong> Roll Hostile faction table (<code>Swarm</code> tier). Spawn on random edge.</p>
+<p><strong>Round 4:</strong> Roll Hostile faction table (<code>Swarm</code> tier). They spawn on a random edge.</p>
 <blockquote>
 <p>"Dying in public space incurs a cleanup fee charged to your estate."<br />
 <strong>Public Safety Notice</strong></p>
@@ -584,15 +628,15 @@
 <h4 id="terrain_7">Terrain</h4>
 <p>The Roots. Ancient vault. Central pedestal, radiating corridors, wave-corrupted growths.</p>
 <h4 id="loot_7">Loot</h4>
-<p>1 Relic in center. Players alternate placing 1 <code>Loot Marker</code> each (12"+ from center).</p>
+<p>1 Relic in center. Players alternate placing 1 <code>Loot Marker</code> each (9"+ from center, 3"+ apart).</p>
 <h4 id="coworkers_7">Coworkers</h4>
-<p>Roll Coworkers (<code>Swarm</code> tier). Place within 3" of any <code>Loot Marker</code>.</p>
+<p>Roll Coworkers (<code>Swarm</code> tier). Defender places within 3" of any <code>Loot Marker</code> (3"+ apart).</p>
 <h4 id="deployment_7">Deployment</h4>
-<p>Defender within 9" of center. Aggressor on any edge, 6" deep.</p>
+<p>Defender within 6" of center. Aggressor picks an edge and deploys on that edge.</p>
 <h4 id="threats_7">Threats</h4>
-<p><strong>Rounds 3, 5:</strong> Roll Hostile faction table (<code>Normal</code> tier). Spawn on random edge.</p>
+<p><strong>Rounds 3, 5:</strong> Roll Hostile faction table (<code>Normal</code> tier). They spawn on a random edge.</p>
 <h4 id="special_4">Special</h4>
-<p>Hostiles ignore Defender unless Defender has the Relic or until Round 4. At game end, Relic holder gains +1 <code>Evidence</code> + 2 <code>Leads</code>.</p>
+<p>Hostiles ignore Defender unless Defender has the Relic or until Round 4. At game end, Relic holder gains +1 <code>Evidence</code> + 2 <code>Leads</code>. Leaving the board with the Relic does not trigger Performance Review.</p>
 <blockquote>
 <p>"Cable Spirit, accept this offering of flux and current."<br />
 <strong>Maintenance Rite</strong></p>
@@ -607,13 +651,13 @@
 <h4 id="terrain_8">Terrain</h4>
 <p>The Substrate. Industrial warren. Multiple levels, tight corridors, nowhere to truly hide.</p>
 <h4 id="loot_8">Loot</h4>
-<p>Aggressor places 4 <code>Loot Markers</code> anywhere (3"+ from board edges).</p>
+<p>Aggressor places 4 <code>Loot Markers</code> anywhere (3"+ from edges, 3"+ apart).</p>
 <h4 id="coworkers_8">Coworkers</h4>
-<p>Roll Coworkers (<code>Normal</code> tier). Place anywhere (3"+ from board edges).</p>
+<p>Roll Coworkers (<code>Normal</code> tier). Players alternate placing 6"+ from center (3"+ apart).</p>
 <h4 id="deployment_8">Deployment</h4>
-<p>Defender within 18" of center. Aggressor on any edge, 6" deep.</p>
+<p>Defender within 6" of center. Aggressor deploys on any edge.</p>
 <h4 id="threats_8">Threats</h4>
-<p><strong>Rounds 2, 4, 6:</strong> Roll Hostile faction table (<code>Elite</code> tier). Spawn on random edge.</p>
+<p><strong>Rounds 2, 4, 6:</strong> Roll Hostile faction table (<code>Elite</code> tier). They spawn on a random edge.</p>
 <h4 id="special_5">Special</h4>
 <p>Defender's <code>Boss</code> gets <code>+1 DT</code> <code>Defense</code>. Hostiles target Aggressor models. If <code>Boss</code> survives to game end, Defender gains +1 <code>Evidence</code>.</p>
 <blockquote>
@@ -798,7 +842,7 @@
 <tr>
 <td style="text-align: center;">2</td>
 <td style="text-align: left;">Demotion</td>
-<td style="text-align: left;"><code>-1 DT</code> to lowest attribute</td>
+<td style="text-align: left;"><code>-1 DT</code> to the lowest attribute</td>
 </tr>
 <tr>
 <td style="text-align: center;">3</td>
@@ -876,6 +920,7 @@
 </blockquote>
 
     </div>
+</div>
     <script>
         function toggleMenu() {
             const nav = document.querySelector('.app-menu');
@@ -904,6 +949,55 @@
         }
         window.addEventListener('resize', updatePageScale);
         document.addEventListener('DOMContentLoaded', updatePageScale);
+    </script>
+    <script>
+        // Scroll spy: highlight current section in sidebar
+        function updateActiveLink() {
+            const headers = document.querySelectorAll('h1[id], h2[id], h3[id]');
+            const links = document.querySelectorAll('.sidebar-nav a');
+            const sidebar = document.querySelector('.sidebar');
+            const offset = 100; // Account for sticky header
+
+            let current = '';
+            headers.forEach(header => {
+                const top = header.getBoundingClientRect().top;
+                if (top < offset) {
+                    current = header.id;
+                }
+            });
+
+            links.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                    // Auto-scroll sidebar to keep active item in view
+                    if (sidebar) {
+                        const linkRect = link.getBoundingClientRect();
+                        const sidebarRect = sidebar.getBoundingClientRect();
+                        const linkTop = linkRect.top - sidebarRect.top;
+                        const linkBottom = linkRect.bottom - sidebarRect.top;
+                        const visibleHeight = sidebar.clientHeight;
+                        // Scroll if link is outside visible area (with padding)
+                        if (linkTop < 50 || linkBottom > visibleHeight - 50) {
+                            link.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        }
+                    }
+                }
+            });
+        }
+
+        // Mobile sidebar toggle
+        function toggleSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            const overlay = document.querySelector('.sidebar-overlay');
+            if (sidebar) {
+                sidebar.classList.toggle('mobile-open');
+                if (overlay) overlay.classList.toggle('active');
+            }
+        }
+
+        window.addEventListener('scroll', updateActiveLink);
+        document.addEventListener('DOMContentLoaded', updateActiveLink);
     </script>
 </body>
 </html>

@@ -6,6 +6,6 @@
   "display_columns": ["Estado", "Efecto"],
   "items": [
     {"status": "`Fuera de Combate`", "effect": "`Salud` a 0 o menos. No puede actuar. Tira en Heridas tras partida"},
-    {"status": "**Huida**", "effect": "Mueve al máximo hacia borde más cercano. No puede actuar. Sale si llega al borde. Repite `Astucia` vs 2d6 cada activación para recuperar."}
+    {"status": "**Huida**", "effect": "Mueve al máximo hacia borde más cercano. No puede actuar. Sale si llega al borde. Repite `Astucia` vs. 2d6 cada activación para recuperar."}
   ]
 }

@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="corporate">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hardwired 28 - Squad Builder</title>
+    <script>document.documentElement.dataset.theme = localStorage.getItem('wb-theme') || 'corporate';</script>
     <meta property="og:title" content="Hardwired 28 - Squad Builder">
     <meta property="og:description" content="Corporate cablepunk skirmish wargame">
     <meta property="og:image" content="http://hardwired28.luismars.com/img/social.png">
@@ -19,24 +20,64 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { margin: 0; }
-        code { font-family: var(--font-mono); font-weight: bold; }
-        .loading { display: flex; justify-content: center; align-items: center; height: 100vh; background: #1a1a2e; color: #fff; font-size: 1.5rem; }
+        code {
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            background-color: #f0f0f0;
+            padding: 1px 3px;
+            border-radius: 2px;
+        }
+        /* Code in cards - simpler style for printing */
+        .reference-card code,
+        .evidence-leads-card code,
+        .item-card code,
+        .archetype-card code,
+        .enemy-card code,
+        .faction-card code,
+        .blessing-card code {
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            background-color: transparent;
+            padding: 0;
+        }
+        .loading { display: flex; justify-content: center; align-items: center; height: 100vh; background: #F1F5F9; color: #1E293B; font-size: 1.5rem; }
+        [data-theme="zorn"] .loading { background: #1a1a2e; color: #fff; }
+        [data-theme="hallucination"] .loading { background: #212121; color: #fff; }
         @media print {
             @page {
                 margin: 15mm 10mm;
+            }
+            /* Remove all card margins/gaps when printing */
+            .reference-card,
+            .evidence-leads-card,
+            .item-card,
+            .archetype-card,
+            .enemy-card,
+            .faction-card,
+            .blessing-card,
+            .blessings-card,
+            .blank-model-card,
+            .blank-card,
+            .blank-card-back {
+                margin: 0 !important;
+            }
+            /* Remove container padding and gaps */
+            .flex.flex-wrap {
+                gap: 0 !important;
+                padding: 0 !important;
             }
         }
     </style>
 </head>
 <body class="has-app-menu">
-    <nav class="app-menu" data-theme="dark" data-open="false" aria-label="Navigation">
+    <nav class="app-menu" data-theme="corporate" data-open="false" aria-label="Navigation">
         <div class="app-menu__inner">
             <a class="app-menu__brand" href="../">Hardwired 28</a>
             <button class="app-menu__toggle" type="button" onclick="toggleMenu()" aria-label="Menu"></button>
             <div class="app-menu__links">
                 <a href="../rulebook">Rulebook</a>
                 <a href="../quick-reference">Quick Reference</a>
-                <a href="../es/builder/">Español</a>
+                <a href="../es/builder/">Castellano</a>
             </div>
         </div>
     </nav>
@@ -120,6 +161,7 @@
             fetchJson('../data/evidence/search_findings.json'),
             fetchJson('../data/evidence/interrogate_results.json'),
             fetchJson('../data/evidence/evidence_discoveries.json'),
+            fetchJson('../data/evidence/leads_tracker.json'),
             // Names
             fetchJson('../data/names/warband.json'),
             fetchJson('../data/names/models.json'),
@@ -135,7 +177,7 @@
                 fumbleMelee, fumbleRanged, fumbleBroadcast,
                 hostCoworkers, hostScrapers, hostFeralCrews, hostWaveCallers, hostStaticWraiths, hostFeralAutomata, hostCableFeeders,
                 injuries, promotions,
-                search, interrogate, evidenceDiscoveries,
+                search, interrogate, evidenceDiscoveries, leadsTracker,
                 namesWarband, namesModels,
                 blessings,
             ]) => {
@@ -189,6 +231,7 @@
                     SEARCH: search,
                     INTERROGATE: interrogate,
                     EVIDENCE_DISCOVERIES: evidenceDiscoveries,
+                    LEADS_TRACKER: leadsTracker,
                     // Names
                     NAMES_WARBAND: namesWarband || {},
                     NAMES_MODELS: namesModels || {},
@@ -196,12 +239,13 @@
                     BLESSINGS: blessings || {},
                 };
                 // Load utils first (plain JS)
-                return loadScript('../warband-ui/utils.js', false);
+                const cacheBust = '?v=' + Date.now();
+                return loadScript('../warband-ui/utils.js' + cacheBust, false);
             })
-            .then(() => loadScript('../warband-ui/primitives.jsx', true))
-            .then(() => loadScript('../warband-ui/model-card.jsx', true))
-            .then(() => loadScript('../warband-ui/panels.jsx', true))
-            .then(() => loadScript('../warband-builder.jsx', true))
+            .then(() => loadScript('../warband-ui/primitives.jsx?v=' + Date.now(), true))
+            .then(() => loadScript('../warband-ui/model-card.jsx?v=' + Date.now(), true))
+            .then(() => loadScript('../warband-ui/panels.jsx?v=' + Date.now(), true))
+            .then(() => loadScript('../warband-builder.jsx?v=' + Date.now(), true))
             .then(() => {
                 // Transform all Babel scripts
                 Babel.transformScriptTags();

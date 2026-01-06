@@ -6,7 +6,7 @@
   "display_columns": ["Acción", "Coste", "Notas"],
   "items": [
     {"action": "Escalar", "cost": "2\" por 1\" vertical", "notes": "Superficie escalable"},
-    {"action": "Saltar hueco", "cost": "1\" por 1\" horiz.", "notes": "Máx 2\""},
+    {"action": "Saltar hueco", "cost": "1\" por 1\" horiz.", "notes": "Máx. 2\""},
     {"action": "Saltar abajo", "cost": "Gratis", "notes": "Daño caída si > 3\""}
   ]
 }

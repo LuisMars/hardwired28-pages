@@ -1,21 +1,32 @@
 /* Hardwired 28 - Landing Page Stylesheet */
+/* Modern corporate - professional, clean, institutional content */
 @import url('style-base.css');
 
 html, body {
     overflow-x: hidden;
 }
 
-/* Landing page variables */
+/* Institutional color palette - cold corporate dystopia */
 :root {
     --landing-max-width: 900px;
-    --landing-padding: 2rem;
+    --landing-padding: 1.5rem;
+    --corp-slate: #334155;      /* Primary - institutional gray */
+    --corp-red: #dc2626;        /* Accent - warning/resistance */
+    --corp-blue: #2563eb;       /* Corporate blue - matches navbar */
+    --corp-amber: #b45309;      /* Secondary accent - corporate caution */
+    --corp-accent: #334155;     /* Links and highlights */
+    --corp-dark: #1e293b;       /* Body text - slate dark */
+    --corp-gray: #64748b;       /* Secondary text - cold, impersonal */
+    --corp-light: #f1f5f9;      /* Form background - clinical */
+    --corp-border: #94a3b8;     /* Borders - more visible */
+    --corp-paper: #f8fafc;      /* Document background - slight off-white */
 }
 
 body {
     font-size: 12pt;
     line-height: 1.7;
-    background: var(--color-bg-light);
-    color: var(--color-text);
+    background: var(--corp-light);
+    color: var(--corp-dark);
     padding: 0;
     margin: 0;
 }
@@ -24,65 +35,51 @@ body.has-app-menu {
     padding-top: var(--app-menu-height);
 }
 
-/* Corporate theme for landing page nav */
-body.landing-page .app-menu {
-    background: rgba(37, 99, 235, 0.98);
-    border-bottom-color: #1D4ED8;
+/* Anchor link offset for fixed nav */
+[id] {
+    scroll-margin-top: calc(var(--app-menu-height) + 1rem);
 }
 
-body.landing-page .app-menu .app-menu__brand {
-    color: #fff;
+/* Modern rounded corners */
+.landing-content {
+    border-radius: 0; /* Main container stays sharp for paper effect */
 }
 
-body.landing-page .app-menu .app-menu__links a {
-    color: #fff;
+/* Horizontal rules */
+.landing-content hr {
+    border: none;
 }
 
-body.landing-page .app-menu .app-menu__links a:hover {
-    background: rgba(255, 255, 255, 0.15);
-}
-
-body.landing-page .app-menu .app-menu__toggle {
-    background: rgba(255, 255, 255, 0.15);
-    border-color: rgba(255, 255, 255, 0.3);
-    color: #fff;
-}
-
-body.landing-page .app-menu .app-menu__toggle:hover {
-    background: rgba(255, 255, 255, 0.25);
-}
-
-/* Main content container */
+/* Main content container - institutional paper */
 .landing-content {
     max-width: var(--landing-max-width);
     margin: 0 auto;
     padding: var(--landing-padding);
-    padding-top: 3rem;
-    padding-bottom: 4rem;
-    /* Subtle circuit grid pattern */
-    background-image:
-        linear-gradient(90deg, rgba(37,99,235,0.03) 1px, transparent 1px),
-        linear-gradient(rgba(37,99,235,0.03) 1px, transparent 1px);
-    background-size: 40px 40px;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    background: var(--corp-paper);
+    min-height: 100vh;
+    box-shadow: 0 0 40px rgba(0,0,0,0.08);
 }
 
 /* Hero section - the H1 */
 .landing-content > h1:first-of-type {
-    font-size: 3.5rem;
-    font-weight: 900;
-    letter-spacing: 0.08em;
-    color: var(--color-corporate);
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--corp-dark);
     text-align: center;
-    margin-bottom: 0.25em;
-    padding-top: 1rem;
+    margin-bottom: 0.3em;
+    padding-top: 0.5rem;
     border: none;
 }
 
 /* Tagline - first paragraph after h1 */
 .landing-content > h1:first-of-type + p {
-    font-size: 1.4rem;
+    font-size: 1rem;
     text-align: center;
-    color: var(--color-text-muted);
+    color: var(--corp-gray);
     margin-bottom: 0.5rem;
     font-style: italic;
 }
@@ -90,53 +87,187 @@ body.landing-page .app-menu .app-menu__toggle:hover {
 /* Stats line - second paragraph after h1 */
 .landing-content > h1:first-of-type + p + p {
     text-align: center;
-    font-size: 1rem;
-    color: var(--color-text);
+    font-size: 0.9rem;
+    color: var(--corp-gray);
     margin-bottom: 1.5rem;
 }
 
-/* Trust bar - department names between hr tags */
-.landing-content > hr:first-of-type + p {
+/* Hero section - full width image banner */
+.landing-content .hero {
+    position: relative;
+    margin: -2rem calc(-1 * var(--landing-padding)) 4rem;
+    padding: 4rem var(--landing-padding);
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Dark overlay for text readability */
+.landing-content .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(30, 41, 59, 0.93) 0%,
+        rgba(30, 41, 59, 0.88) 50%,
+        rgba(30, 41, 59, 0.98) 100%
+    );
+}
+
+/* Hero content sits above overlay */
+.landing-content .hero > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Hero title styling */
+.landing-content .hero h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    margin-bottom: 0.3em;
+    padding-top: 0;
+    border: none;
+}
+
+.landing-content .hero p {
+    color: rgba(255,255,255,0.9);
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 0.3rem auto;
+}
+
+.landing-content .hero p em {
+    font-style: italic;
+}
+
+/* Trust banner in hero */
+.landing-content .hero p strong {
+    display: inline-block;
+    background: var(--corp-slate);
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
     font-family: var(--font-heading);
     font-weight: 700;
     font-size: 0.8rem;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--color-text-muted);
-    margin: 0;
-    padding: 0;
+    margin-top: 0.75rem;
 }
 
-.landing-content > hr:first-of-type,
-.landing-content > hr:first-of-type + p + hr {
-    margin: 1.5rem 0;
+/* Hero CTA button - primary action */
+.landing-content .hero .hero-cta {
+    display: inline-block;
+    background: var(--corp-red);
+    color: #fff;
+    padding: 0.75rem 2rem;
+    border-radius: 4px;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-top: 1.25rem;
+    transition: background 0.2s, transform 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
+
+.landing-content .hero .hero-cta:hover {
+    background: #b91c1c;
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+/* Responsive hero */
+@media (max-width: 768px) {
+    .landing-content .hero {
+        min-height: 280px;
+        padding: 3rem var(--landing-padding);
+    }
+
+    .landing-content .hero h1 {
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .landing-content .hero {
+        min-height: 240px;
+        padding: 2.5rem var(--landing-padding);
+    }
+
+    .landing-content .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .landing-content .hero p strong {
+        font-size: 0.55rem;
+        padding: 0.4rem 1rem;
+    }
+}
+
+/* CTA section - prominent button-style cards */
+/* Higher specificity to override .landing-content .grid .link-card */
+.landing-content .cta-section .grid {
+    background: transparent;
+    box-shadow: none;
+    gap: 1rem;
+    border-radius: 0;
+}
+
+.landing-content .cta-section .grid .link-card {
+    background: var(--corp-slate);
+    color: #fff;
+    text-align: center;
+    padding: 1.25rem;
+    border-radius: 6px;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.landing-content .cta-section .grid .link-card:hover {
+    background: #1e293b;
+    transform: translateY(-2px);
+}
+
+.landing-content .cta-section .grid .link-card a {
+    color: #fff;
+}
+
+.landing-content .cta-section .grid .link-card strong {
+    font-size: 1rem;
+    color: #fff;
+}
+
+.landing-content .cta-section .grid .link-card p {
+    color: rgba(255,255,255,0.85);
+    font-size: 0.8rem;
+}
+
+/* Trust bar is now styled in hero section via .hero p strong */
 
 /* Section headings */
 .landing-content h2 {
-    font-size: 1.5rem;
-    color: var(--color-corporate);
-    border-bottom: 2px solid var(--color-row-border);
-    padding-bottom: 0.5em;
-    margin-top: 3rem;
-    margin-bottom: 1rem;
-    letter-spacing: 0.08em;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--corp-dark);
+    margin-top: 4.5rem;
+    margin-bottom: 1.5rem;
 }
 
-/* Circuit trace accent before h2 */
-.landing-content h2::before {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 3px;
-    background: linear-gradient(90deg, var(--color-corporate), transparent);
-    margin-bottom: 0.5rem;
-}
 
 .landing-content h3 {
-    font-size: 1.1rem;
-    color: var(--color-text);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--corp-gray);
     margin-top: 2rem;
     margin-bottom: 0.5rem;
 }
@@ -144,20 +275,17 @@ body.landing-page .app-menu .app-menu__toggle:hover {
 /* Paragraphs */
 .landing-content p {
     margin: 1em 0;
-    color: var(--color-text);
+    color: var(--corp-dark);
 }
 
-/* Links */
+/* Links - understated but visible */
 .landing-content a {
-    color: var(--color-corporate);
+    color: var(--corp-accent);
     text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: border-color 0.2s, color 0.2s;
 }
 
 .landing-content a:hover {
-    color: #1D4ED8;
-    border-bottom-color: var(--color-corporate);
+    text-decoration: underline;
 }
 
 /* Strong links (primary CTAs) */
@@ -165,55 +293,76 @@ body.landing-page .app-menu .app-menu__toggle:hover {
     font-weight: 700;
 }
 
-/* Play Now and Print sections - card style links */
-.landing-content h2#play-now + p,
-.landing-content h2#play-now + p + p,
-.landing-content h2#play-now + p + p + p,
-.landing-content h2#jugar-ahora + p,
-.landing-content h2#jugar-ahora + p + p,
-.landing-content h2#jugar-ahora + p + p + p,
-.landing-content h2#print-and-play + p,
-.landing-content h2#print-and-play + p + p,
-.landing-content h2#print-and-play + p + p + p,
-.landing-content h2#print-and-play + p + p + p + p,
-.landing-content h2#print-and-play + p + p + p + p + p,
-.landing-content h2#imprime-y-juega + p,
-.landing-content h2#imprime-y-juega + p + p,
-.landing-content h2#imprime-y-juega + p + p + p,
-.landing-content h2#imprime-y-juega + p + p + p + p,
-.landing-content h2#imprime-y-juega + p + p + p + p + p {
-    background: var(--color-row-alt);
-    border: 1px solid var(--color-row-border);
-    border-left: 4px solid var(--color-corporate);
-    border-radius: 4px;
+/* Card sections - use /cards directive in markdown */
+.landing-content .cards > p {
+    background: var(--corp-light);
+    border-radius: 6px;
     padding: 1rem 1.5rem;
     margin: 0.75rem 0;
 }
 
-.landing-content h2#play-now ~ p a,
-.landing-content h2#jugar-ahora ~ p a,
-.landing-content h2#print-and-play ~ p a,
-.landing-content h2#imprime-y-juega ~ p a {
-    font-size: 1.1rem;
+.landing-content .cards > p a {
+    font-size: 1rem;
 }
 
-/* Print section tip */
-.landing-content h2#print-and-play ~ blockquote,
-.landing-content h2#imprime-y-juega ~ blockquote {
+/* Card section tips (blockquotes inside /cards) */
+.landing-content .cards > blockquote {
     background: transparent;
     border: none;
-    border-left: none;
     padding: 0.5rem 0;
     margin: 0.5rem 0;
     text-align: center;
-    font-size: 0.9rem;
-    color: var(--color-text-muted);
+    font-size: 0.8rem;
+    color: var(--corp-gray);
 }
 
-.landing-content h2#print-and-play ~ blockquote p,
-.landing-content h2#imprime-y-juega ~ blockquote p {
+.landing-content .cards > blockquote p {
     margin: 0;
-    color: var(--color-text-muted);
+    color: var(--corp-gray);
+}
+
+/* Tables - regulation/article format */
+.landing-content table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 1em 0;
+    font-size: 0.85rem;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.landing-content table thead {
+    display: none;
+}
+
+.landing-content table td {
+    padding: 0.65em 0.6em;
+    text-align: left;
+    vertical-align: baseline;
+    background: #fff;
+}
+
+.landing-content table td:first-child {
+    font-family: 'Courier New', monospace;
+    font-weight: 600;
+    color: var(--corp-gray);
+    width: 2.5em;
+    text-align: right;
+    padding-right: 0.75em;
+    font-size: 0.75em;
+    background: var(--corp-light);
+}
+
+.landing-content table td:nth-child(2) {
+    font-weight: 600;
+    color: var(--corp-dark);
+    width: 8em;
+}
+
+.landing-content table td:nth-child(3) {
+    color: var(--corp-gray);
 }
 
 /* Lists */
@@ -227,93 +376,176 @@ body.landing-page .app-menu .app-menu__toggle:hover {
     position: relative;
     padding-left: 1.5em;
     margin: 0.75em 0;
-    color: var(--color-text);
+    color: var(--corp-dark);
 }
 
 .landing-content ul li::before {
-    content: '▸';
+    content: '—';
     position: absolute;
     left: 0;
-    color: var(--color-corporate);
+    color: var(--corp-gray);
 }
 
-/* Feature cards grid - "What You Get" section */
-.landing-content h2#what-you-get + ul,
-.landing-content h2#qué-incluye + ul {
+/* Feature cards grid - modern grid */
+.landing-content .grid > ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1rem;
+    gap: 1px;
     padding: 0;
     list-style: none;
+    margin: 0;
+    background: #e2e8f0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
 }
 
-.landing-content h2#what-you-get + ul li,
-.landing-content h2#qué-incluye + ul li {
+.landing-content .grid > ul li {
     background: #fff;
-    border: 1px solid var(--color-row-border);
-    border-left: 4px solid var(--color-corporate);
-    border-radius: 4px;
     padding: 1.25rem;
     margin: 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.landing-content h2#what-you-get + ul li:hover,
-.landing-content h2#qué-incluye + ul li:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(37,99,235,0.15);
-}
-
-.landing-content h2#what-you-get + ul li::before,
-.landing-content h2#qué-incluye + ul li::before {
+.landing-content .grid > ul li::before {
     display: none;
 }
 
-.landing-content h2#what-you-get + ul li strong,
-.landing-content h2#qué-incluye + ul li strong {
-    display: block;
-    color: var(--color-corporate);
-    font-size: 1.1rem;
-    margin-bottom: 0.25rem;
+.landing-content .grid > ul li strong {
+    color: var(--corp-blue);
 }
 
-/* Testimonial blockquotes */
+/* Link cards - modern card style */
+.landing-content .link-card {
+    position: relative;
+    display: block;
+    background: #fff;
+    border-radius: 6px;
+    padding: 0.5rem 0.75rem;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    transition: background 0.15s, box-shadow 0.15s, transform 0.15s;
+}
+
+.landing-content .link-card:hover {
+    background: var(--corp-light);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transform: translateY(-1px);
+}
+
+/* Link cards in grid - individual card styling */
+.landing-content .grid .link-card {
+    padding: 1.25rem;
+    margin-bottom: 0;
+    border: none;
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.landing-content .grid .link-card:hover {
+    background: var(--corp-light);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.landing-content .link-card a {
+    color: var(--corp-accent);
+    text-decoration: none;
+}
+
+.landing-content .link-card a:hover {
+    text-decoration: underline;
+}
+
+/* Stretch link to cover entire card */
+.landing-content .link-card a::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+}
+
+.landing-content .link-card strong {
+    display: block;
+    font-size: 0.85rem;
+    margin-bottom: 0.1em;
+    color: var(--corp-blue);
+}
+
+.landing-content .link-card p {
+    margin: 0.25rem 0 0 0;
+    font-size: 0.8rem;
+    color: var(--corp-gray);
+    line-height: 1.4;
+}
+
+/* Link cards in grid layout - modern grid */
+.landing-content .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+    background: transparent;
+    border-radius: 8px;
+    overflow: visible;
+    margin-bottom: 1rem;
+}
+
+/* Fixed column counts: /grid 2, /grid 3, etc. */
+.landing-content .grid.grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+.landing-content .grid.grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+.landing-content .grid.grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+
+@media (max-width: 768px) {
+    .landing-content .grid.grid-cols-2,
+    .landing-content .grid.grid-cols-3,
+    .landing-content .grid.grid-cols-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .landing-content .grid.grid-cols-2,
+    .landing-content .grid.grid-cols-3,
+    .landing-content .grid.grid-cols-4 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Blockquotes after grids (tips) should not be in the grid */
+.landing-content .grid + blockquote {
+    margin-top: 1rem;
+}
+
+/* Tip blockquotes - simple centered text */
 .landing-content blockquote {
-    background: var(--color-row-alt);
-    border-left: 4px solid var(--color-corporate);
-    border-radius: 0 4px 4px 0;
-    padding: 1.5rem 1.5rem 1rem 1.5rem;
-    margin: 1.5rem 0;
-    font-style: normal;
+    background: transparent;
+    border: none;
+    padding: 0.5rem 0;
+    margin: 1.5rem 0 2rem 0;
+    text-align: center;
 }
 
 .landing-content blockquote p {
     margin: 0;
-    color: var(--color-text);
-}
-
-.landing-content blockquote p:last-child {
-    font-size: 0.85rem;
-    color: var(--color-text-muted);
-    margin-top: 1rem;
-    font-style: normal;
+    font-size: 0.8rem;
+    color: var(--corp-gray);
 }
 
 /* Horizontal rule */
 .landing-content hr {
     border: none;
-    border-top: 1px solid var(--color-row-border);
+    height: 1px;
+    background: linear-gradient(to right, transparent, #cbd5e1, transparent);
     margin: 3rem 0;
 }
 
-/* Legal footer - tiny disclaimers after final hr */
+/* Legal footer - classification stamp */
 .landing-content > hr:last-of-type ~ p {
     text-align: center;
-    font-size: 0.75rem;
-    color: var(--color-text-muted);
+    font-size: 0.65rem;
+    color: var(--corp-gray);
     line-height: 1.7;
     margin: 0.75rem 0;
+    letter-spacing: 0.02em;
 }
 
 .landing-content > hr:last-of-type ~ p em {
@@ -321,71 +553,33 @@ body.landing-page .app-menu .app-menu__toggle:hover {
 }
 
 .landing-content > hr:last-of-type {
-    margin-top: 4rem;
+    margin-top: 5rem;
     margin-bottom: 1.5rem;
 }
 
 /* Changelog section */
 .landing-content h3:has(+ ul) {
-    color: var(--color-text-muted);
-    font-size: 0.95rem;
+    color: var(--corp-gray);
+    font-size: 0.8rem;
     margin-top: 1rem;
 }
 
-.landing-content h2#changelog + p + h3 + ul,
-.landing-content h2#current-version + h3 + ul,
 .landing-content h3 + ul {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     margin: 0.5em 0 1.5em 0;
 }
 
 .landing-content h3 + ul li {
     padding-left: 1.2em;
     margin: 0.3em 0;
-    color: var(--color-text-muted);
+    color: var(--corp-gray);
 }
 
 .landing-content h3 + ul li::before {
     content: '•';
-    color: var(--color-text-muted);
+    color: var(--corp-gray);
 }
 
-/* Play Online / Download sections - card style */
-.landing-content h2#play-online + p,
-.landing-content h2#download + p,
-.landing-content h2#jugar-online + p,
-.landing-content h2#descargar + p {
-    background: var(--color-row-alt);
-    border: 1px solid var(--color-row-border);
-    border-left: 4px solid var(--color-corporate);
-    border-radius: 4px;
-    padding: 1.25rem 1.5rem;
-    margin: 1rem 0;
-}
-
-.landing-content h2#play-online + p a,
-.landing-content h2#download + p a,
-.landing-content h2#jugar-online + p a,
-.landing-content h2#descargar + p a {
-    font-size: 1.1rem;
-}
-
-/* Individual booklets link line */
-.landing-content h2#download + p + p,
-.landing-content h2#descargar + p + p {
-    text-align: center;
-    font-size: 0.9rem;
-    color: var(--color-text-muted);
-}
-
-/* Version badge */
-.landing-content h2#current-version + p,
-.landing-content h2#versión-actual + p {
-    font-family: var(--font-mono);
-    font-size: 1.5rem;
-    color: var(--color-corporate);
-    margin: 0.5em 0 1.5em 0;
-}
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -394,22 +588,22 @@ body.landing-page .app-menu .app-menu__toggle:hover {
     }
 
     .landing-content > h1:first-of-type {
-        font-size: 2.5rem;
+        font-size: 1.75rem;
     }
 
     .landing-content > h1:first-of-type + p {
-        font-size: 1.1rem;
+        font-size: 0.9rem;
     }
 
     .landing-content h2 {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
     }
 }
 
 @media (max-width: 480px) {
     .landing-content > h1:first-of-type {
-        font-size: 2rem;
-        letter-spacing: 0.05em;
+        font-size: 1.5rem;
+        letter-spacing: 0.08em;
     }
 }
 
@@ -421,6 +615,7 @@ body.landing-page .app-menu .app-menu__toggle:hover {
 
     .landing-content {
         max-width: 100%;
+        border: none;
     }
 
     .landing-content a {

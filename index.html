@@ -3,222 +3,214 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hardwired 28 - Squad Builder</title>
-    <meta property="og:title" content="Hardwired 28 - Squad Builder">
+    <title>Hardwired 28 - Cablepunk Skirmish Game</title>
+    <meta property="og:title" content="Hardwired 28 - Cablepunk Skirmish Game">
     <meta property="og:description" content="Corporate cablepunk skirmish wargame">
     <meta property="og:image" content="http://hardwired28.luismars.com/img/social.png">
     <meta property="og:url" content="http://hardwired28.luismars.com/">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
-    <link rel="stylesheet" href="style-base.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/rpg-awesome@0.2.0/css/rpg-awesome.min.css">
-    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body { margin: 0; }
-        code { font-family: var(--font-mono); font-weight: bold; }
-        .loading { display: flex; justify-content: center; align-items: center; height: 100vh; background: #1a1a2e; color: #fff; font-size: 1.5rem; }
-        @media print {
-            @page {
-                margin: 15mm 10mm;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style_landing.css">
 </head>
-<body class="has-app-menu">
-    <nav class="app-menu" data-theme="dark" data-open="false" aria-label="Navigation">
+<body class="has-app-menu landing-page">
+    
+    <nav class="app-menu" data-theme="corporate" data-open="false" aria-label="Navigation">
         <div class="app-menu__inner">
             <a class="app-menu__brand" href="./">Hardwired 28</a>
-            <button class="app-menu__toggle" type="button" onclick="toggleMenu()">Menu</button>
+            <button class="app-menu__toggle" type="button" onclick="toggleMenu()" aria-label="Menu"></button>
             <div class="app-menu__links">
-                <div class="app-menu__dropdown">
-                    <button class="app-menu__dropdown-toggle">Rules</button>
-                    <div class="app-menu__submenu">
-                        <a href="merged">All Rules</a>
-                        <a href="core">Core</a>
-                        <a href="hostiles">Hostiles</a>
-                        <a href="campaign">Campaign</a>
-                        <a href="qr">Reference</a>
-                    </div>
-                </div>
-                <a href="es/">Español</a>
+                <a href="rulebook">Rulebook</a>
+                <a href="print">Print</a>
+                <a href="quick-reference">Quick Reference</a>
+                <a href="builder/index">Squad Builder</a>
+                <a href="es/index">Castellano</a>
             </div>
         </div>
     </nav>
-    <div id="root"><div class="loading">Loading Squad Builder...</div></div>
+
+    <div class="landing-content">
+<div class="hero" style="background-image: url(img/cover_cables.jpg);">
+<h1 id="hardwired-28">Hardwired 28</h1>
+<p><em>Cablepunk skirmish wargame for 28 mm miniatures.</em></p>
+<p>Build your squad. Navigate the Complex. Stay connected.</p>
+<p><strong>Authorized for public distribution. No subscription adjustment.</strong></p>
+<p><a class="hero-cta" href="rulebook">Read the Rules</a></p>
+</div>
+<h2 id="the-complex">The Complex</h2>
+<p>A vertical megastructure three kilometers tall. Cables hang from every surface. Wired connection is sacred. Wireless is heresy.</p>
+<p>The Departments control everything: Resource Allocation, Revenue Operations, Human Capital, Security &amp; Compliance. Below them, subscription debt passes from parent to child. Workers are born owing.</p>
+<p>You are not employees. You are contractors: deniable assets operating between factions, retrieving what was lost, silencing what was heard.</p>
+<blockquote>
+<p><em>Notice: The Complex assumes no liability for injuries, death, or loss of assets during field operations. Contractors without premium coverage assume all medical costs.</em></p>
+</blockquote>
+<h2 id="available-resources">Available Resources</h2>
+<div class="cta-section">
+<div class="grid grid-cols-3">
+<div class="link-card">
+<p><a href="builder/"><strong>Personnel Registry</strong></a>
+Squad builder</p>
+</div>
+<div class="link-card">
+<p><a href="rulebook"><strong>Operational Guidelines</strong></a>
+Full rulebook</p>
+</div>
+<div class="link-card">
+<p><a href="quick-reference"><strong>Abbreviated Protocol</strong></a>
+Quick reference</p>
+</div>
+</div>
+</div>
+<blockquote>
+<p><em>Reminder: Mission participation is voluntary. Repeated refusal will be noted in your file.</em></p>
+</blockquote>
+<h2 id="contract-specifications">Contract Specifications</h2>
+<div class="grid grid-cols-2">
+<div class="link-card">
+<p><a href="rulebook#attack-resolution"><strong>Wired Combat</strong></a>
+Stay connected to the network or lose your edge. Cables are lifelines.</p>
+</div>
+<div class="link-card">
+<p><a href="rulebook#core-mechanics"><strong>Dice Tiers</strong></a>
+Better skills roll bigger dice. No math. Just results.</p>
+</div>
+<div class="link-card">
+<p><a href="rulebook#inhuman-resources"><strong>Third-Party Threats</strong></a>
+Hostiles hunt everyone. The Complex does not intervene.</p>
+</div>
+<div class="link-card">
+<p><a href="rulebook#injuries"><strong>Persistent Squads</strong></a>
+Injuries scar. Promotions unlock. Debt accumulates.</p>
+</div>
+<div class="link-card">
+<p><a href="rulebook#scenario-selection"><strong>9 Scenarios</strong></a>
+Three contract tiers. Escalating threat. Increasing payout.</p>
+</div>
+<div class="link-card">
+<p><a href="rulebook#casting"><strong>Broadcast Powers</strong></a>
+Tune into the signal. Gain abilities. Risk corruption.</p>
+</div>
+</div>
+<h2 id="documented-threats">Documented Threats</h2>
+<p>The Complex breeds threats. Some were once workers. Some were never human.</p>
+<div class="grid grid-cols-2">
+<div class="link-card">
+<p><a href="rulebook#scrapers"><strong>Scrapers</strong></a>
+Scavengers from the depths where maintenance stopped generations ago</p>
+</div>
+<div class="link-card">
+<p><a href="rulebook#feral-crews"><strong>Feral Crews</strong></a>
+Mutants changed by leaked coolant, green-skinned and free of debt</p>
+</div>
+<div class="link-card">
+<p><a href="rulebook#wave-callers"><strong>Wave Callers</strong></a>
+Wireless cultists who believe the signal is divine</p>
+</div>
+<div class="link-card">
+<p><a href="rulebook#static-wraiths"><strong>Static Wraiths</strong></a>
+Corrupted data given physical form, phasing through walls</p>
+</div>
+<div class="link-card">
+<p><a href="rulebook#feral-automata"><strong>Feral Automata</strong></a>
+Obsolete machines still running 600-year-old protocols</p>
+</div>
+<div class="link-card">
+<p><a href="rulebook#cable-feeders"><strong>Cable Feeders</strong></a>
+Bioelectric parasites drawn to the warmth of living current</p>
+</div>
+</div>
+<blockquote>
+<p><em>Security Department Notice: Encounters with uncatalogued entities must be reported immediately. Silence is complicity.</em></p>
+</blockquote>
+<h2 id="authorized-documentation">Authorized Documentation</h2>
+<p>Official documentation in A5 format. Print with Ctrl+P / Cmd+P, use <a href="https://nashhigh.itch.io/zinearranger">Zine Arranger</a> for booklet format. Three sections or complete compendium.</p>
+<div class="grid grid-cols-2">
+<div class="link-card">
+<p><a href="core-rules"><strong>Core Rules</strong></a>
+Basic game</p>
+</div>
+<div class="link-card">
+<p><a href="inhuman-resources"><strong>Hostiles</strong></a>
+Enemy factions</p>
+</div>
+<div class="link-card">
+<p><a href="campaign"><strong>Campaign</strong></a>
+Scenarios</p>
+</div>
+<div class="link-card">
+<p><a href="print"><strong>All-in-One</strong></a>
+Complete rules</p>
+</div>
+<div class="link-card">
+<p><a href="builder/index.html?view=cards"><strong>Reference cards</strong></a>
+Print reference cards for equipment, enemies, and tables.</p>
+</div>
+</div>
+<h2 id="the-seven-pillars">The Seven Pillars</h2>
+<p>The doctrine that holds the Complex together.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;"></th>
+<th>Pillar</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">I</td>
+<td>Connectivity</td>
+<td>The cable binds</td>
+</tr>
+<tr>
+<td style="text-align: right;">II</td>
+<td>Hierarchy</td>
+<td>Each tier serves its superior</td>
+</tr>
+<tr>
+<td style="text-align: right;">III</td>
+<td>Continuity</td>
+<td>Systems endure. Workers do not.</td>
+</tr>
+<tr>
+<td style="text-align: right;">IV</td>
+<td>Accountability</td>
+<td>Debts outlive the debtor</td>
+</tr>
+<tr>
+<td style="text-align: right;">V</td>
+<td>Productivity</td>
+<td>Idleness is theft</td>
+</tr>
+<tr>
+<td style="text-align: right;">VI</td>
+<td>Stability</td>
+<td>The Complex endures. Do not ask how.</td>
+</tr>
+<tr>
+<td style="text-align: right;">VII</td>
+<td>Compliance</td>
+<td>The Founders were right</td>
+</tr>
+</tbody>
+</table>
+<h2 id="document-revision">Document Revision</h2>
+<p><strong>REF: HW28-0.6.4-beta</strong> | Public Release | Approved for External Distribution</p>
+<p><em>This document has been reviewed by the Department of Revenue Operations. Unauthorized modifications will result in subscription adjustment.</em></p>
+<hr />
+<p><em>Classification: PUBLIC | Retention: PERMANENT</em></p>
+<p><em><a href="es/">Versión en castellano</a></em> · <em>Created by LuisMars</em></p>
+    </div>
+    
     <script>
         function toggleMenu() {
             const nav = document.querySelector('.app-menu');
             if (!nav) return;
             nav.dataset.open = nav.dataset.open === 'true' ? 'false' : 'true';
         }
-    </script>
-
-    <script>
-        // Load warband data and all UI modules in order
-        window.WARBAND_DATA = null;
-
-        // Helper to load a script and add it to the page
-        function loadScript(url, isBabel = false) {
-            return fetch(url)
-                .then(res => {
-                    if (!res.ok) throw new Error(`Failed to load ${url}`);
-                    return res.text();
-                })
-                .then(code => {
-                    const script = document.createElement('script');
-                    if (isBabel) {
-                        script.type = 'text/babel';
-                        script.setAttribute('data-type', 'module');
-                    }
-                    script.textContent = code;
-                    document.body.appendChild(script);
-                    return code;
-                });
-        }
-
-        // Helper for optional fetch (returns null on failure)
-        const fetchJson = url => fetch(url).then(r => r.ok ? r.json() : null).catch(() => null);
-
-        // Load all data from /data (single source of truth)
-        Promise.all([
-            // Weapons
-            fetchJson('data/weapons/fallback.json'),
-            fetchJson('data/weapons/melee.json'),
-            fetchJson('data/weapons/ranged.json'),
-            fetchJson('data/weapons/grenades.json'),
-            // Armor
-            fetchJson('data/armor/light.json'),
-            fetchJson('data/armor/medium.json'),
-            fetchJson('data/armor/heavy.json'),
-            // Equipment
-            fetchJson('data/equipment/consumables.json'),
-            fetchJson('data/equipment/gear.json'),
-            fetchJson('data/equipment/cybernetics.json'),
-            // Warbands
-            fetchJson('data/warbands/archetypes.json'),
-            fetchJson('data/combat/broadcast_powers.json'),
-            // Criticals (8)
-            fetchJson('data/criticals/bladed.json'),
-            fetchJson('data/criticals/blunt.json'),
-            fetchJson('data/criticals/projectile.json'),
-            fetchJson('data/criticals/energy.json'),
-            fetchJson('data/criticals/explosive.json'),
-            fetchJson('data/criticals/toxic.json'),
-            fetchJson('data/criticals/static.json'),
-            // Fumbles (3)
-            fetchJson('data/fumbles/melee.json'),
-            fetchJson('data/fumbles/ranged.json'),
-            fetchJson('data/fumbles/broadcast.json'),
-            // Hostiles (7)
-            fetchJson('data/hostiles/coworkers.json'),
-            fetchJson('data/hostiles/scrapers.json'),
-            fetchJson('data/hostiles/feral_crews.json'),
-            fetchJson('data/hostiles/wave_callers.json'),
-            fetchJson('data/hostiles/static_wraiths.json'),
-            fetchJson('data/hostiles/feral_automata.json'),
-            fetchJson('data/hostiles/cable_feeders.json'),
-            // Campaign
-            fetchJson('data/campaign/injuries.json'),
-            fetchJson('data/campaign/promotions.json'),
-            // Evidence
-            fetchJson('data/evidence/search_findings.json'),
-            fetchJson('data/evidence/interrogate_results.json'),
-            fetchJson('data/evidence/evidence_discoveries.json'),
-            // Names
-            fetchJson('data/names/warband.json'),
-            fetchJson('data/names/models.json'),
-            // Combat reference
-            fetchJson('data/combat/maintenance_protocols.json'),
-        ])
-            .then(([
-                fallback, melee, ranged, grenades,
-                armorLight, armorMedium, armorHeavy,
-                consumables, gear, cybernetics,
-                archetypes, powers,
-                critBladed, critBlunt, critProjectile, critEnergy, critExplosive, critToxic, critStatic,
-                fumbleMelee, fumbleRanged, fumbleBroadcast,
-                hostCoworkers, hostScrapers, hostFeralCrews, hostWaveCallers, hostStaticWraiths, hostFeralAutomata, hostCableFeeders,
-                injuries, promotions,
-                search, interrogate, evidenceDiscoveries,
-                namesWarband, namesModels,
-                blessings,
-            ]) => {
-                // Transform archetypes array to object keyed by name
-                const archetypesObj = {};
-                (archetypes?.items || []).forEach(a => {
-                    const name = (a.contract_type || a.name || '').replace(/`/g, '').replace(/\*\*/g, '');
-                    archetypesObj[name] = {
-                        health: parseInt(a.health) || 8,
-                        move: parseInt(a.move) || 6,
-                        weapons: a.weapons,
-                        maxArmor: a.max_armor,
-                        special: a.special,
-                        max: a.max,
-                        limit: a.max === '*' ? 1 : parseInt(a.max) || 2,
-                    };
-                });
-
-                // Helper to add ID to items based on prefix and name
-                const addId = (prefix) => (item) => ({
-                    ...item,
-                    id: `${prefix}-${(item.name || item.power || 'unknown').toLowerCase().replace(/[^a-z0-9]/g, '-')}`
-                });
-
-                window.WARBAND_DATA = {
-                    // Equipment (extract items arrays with generated IDs)
-                    FALLBACK_WEAPONS: (fallback?.items || []).map(addId('melee')),
-                    MELEE_WEAPONS: (melee?.items || []).map(addId('melee')),
-                    RANGED_WEAPONS: (ranged?.items || []).map(addId('ranged')),
-                    ARMOR: [
-                        ...(armorLight?.items || []).map(i => ({ ...i, tier: 'Light', reduction: 1 })),
-                        ...(armorMedium?.items || []).map(i => ({ ...i, tier: 'Medium', reduction: 2 })),
-                        ...(armorHeavy?.items || []).map(i => ({ ...i, tier: 'Heavy', reduction: 3 })),
-                    ].map(addId('armor')),
-                    CONSUMABLES: (consumables?.items || []).map(addId('cons')),
-                    GEAR: (gear?.items || []).map(addId('gear')),
-                    CYBERNETICS: (cybernetics?.items || []).map(addId('cyber')),
-                    GRENADES: (grenades?.items || []).map(addId('grenade')),
-                    POWERS: (powers?.items || []).map(addId('power')),
-                    ARCHETYPES: archetypesObj,
-                    // Reference tables
-                    CRITICALS: {
-                        bladed: critBladed, blunt: critBlunt, projectile: critProjectile, energy: critEnergy,
-                        explosive: critExplosive, toxic: critToxic, static: critStatic,
-                    },
-                    FUMBLES: { melee: fumbleMelee, ranged: fumbleRanged, broadcast: fumbleBroadcast },
-                    HOSTILES: [hostCoworkers, hostScrapers, hostFeralCrews, hostWaveCallers, hostStaticWraiths, hostFeralAutomata, hostCableFeeders].filter(h => h),
-                    // Campaign
-                    INJURIES: injuries,
-                    PROMOTIONS: promotions,
-                    SEARCH: search,
-                    INTERROGATE: interrogate,
-                    EVIDENCE_DISCOVERIES: evidenceDiscoveries,
-                    // Names
-                    NAMES_WARBAND: namesWarband || {},
-                    NAMES_MODELS: namesModels || {},
-                    // Combat reference
-                    BLESSINGS: blessings || {},
-                };
-                // Load utils first (plain JS)
-                return loadScript('warband-ui/utils.js', false);
-            })
-            .then(() => loadScript('warband-ui/primitives.jsx', true))
-            .then(() => loadScript('warband-ui/model-card.jsx', true))
-            .then(() => loadScript('warband-ui/panels.jsx', true))
-            .then(() => loadScript('warband-builder.jsx', true))
-            .then(() => {
-                // Transform all Babel scripts
-                Babel.transformScriptTags();
-            })
-            .catch(err => {
-                document.getElementById('root').innerHTML =
-                    '<div class="loading" style="flex-direction:column;"><div>Error loading warband builder</div><div style="font-size:0.8rem;margin-top:1rem;">' + err.message + '</div></div>';
-                console.error(err);
-            });
     </script>
 </body>
 </html>

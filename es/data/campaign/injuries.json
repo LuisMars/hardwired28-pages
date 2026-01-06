@@ -6,7 +6,7 @@
   "display_columns": ["2d6", "Resultado", "Efecto"],
   "items": [
     {"roll": "3 o menos", "result": "Baja Definitiva", "effect": "Retira de la banda"},
-    {"roll": "4", "result": "Degradado", "effect": "-1 `Salud` máx"},
+    {"roll": "4", "result": "Degradado", "effect": "-1 `Salud` máx."},
     {"roll": "5", "result": "Confundido", "effect": "`-1 ND` `Astucia`"},
     {"roll": "6", "result": "Expuesto", "effect": "`-1 ND` `Defensa`"},
     {"roll": "7", "result": "Cicatrizado", "effect": "Sin efecto"},

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hardwired 28 - Recursos Inhumanos 0.6.3-beta</title>
-    <meta property="og:title" content="Hardwired 28 - Recursos Inhumanos 0.6.3-beta">
+    <title>Hardwired 28 - Recursos Inhumanos 0.6.4-beta</title>
+    <meta property="og:title" content="Hardwired 28 - Recursos Inhumanos 0.6.4-beta">
     <meta property="og:description" content="Juego de escaramuzas cablepunk corporativo">
     <meta property="og:image" content="http://hardwired28.luismars.com/img/social.png">
     <meta property="og:url" content="http://hardwired28.luismars.com/es/">
@@ -21,29 +21,48 @@
     <nav class="app-menu" data-theme="light" data-open="false" aria-label="Navigation">
         <div class="app-menu__inner">
             <a class="app-menu__brand" href="./">Hardwired 28</a>
-            <button class="app-menu__toggle" type="button" onclick="toggleMenu()">Menú</button>
+            <button class="app-menu__toggle" type="button" onclick="toggleMenu()" aria-label="Menú"></button>
             <div class="app-menu__links">
+                <a href="manual">Reglamento</a>
                 <div class="app-menu__dropdown">
-                    <button class="app-menu__dropdown-toggle">Reglas</button>
+                    <button class="app-menu__dropdown-toggle current">Imprimir</button>
                     <div class="app-menu__submenu">
-                        <a href="merged">Todas</a>
-                        <a href="manual">Manual</a>
-                        <a href="core">Básicas</a>
-                        <a href="hostiles">Hostiles</a>
+                        <a href="merged">Todas las Reglas</a>
+                        <a href="core">Reglas Básicas</a>
+                        <a href="hostiles">Recursos Inhumanos</a>
                         <a href="campaign">Campaña</a>
-                        <a href="qr">Referencia</a>
                     </div>
                 </div>
-                <a href="./">Constructor</a>
+                <a href="qr">Referencia Rápida</a>
+                <a href="./">Creador de Plantillas</a>
                 <a href="../hostiles">English</a>
-            </div>
-            <div class="app-menu__actions">
-                
             </div>
         </div>
     </nav>
 
     
+    <div class="manual-layout">
+    <nav class="sidebar">
+        <ul class="sidebar-nav">
+            <li class="toc-h1"><a href="#hardwired-28">Recursos Inhumanos</a></li>
+            <li class="toc-h1"><a href="#recursos-inhumanos_1">Recursos Inhumanos</a></li>
+            <li class="toc-h2"><a href="#activación">Activación</a></li>
+            <li class="toc-h2"><a href="#situación">Situación</a></li>
+            <li class="toc-h2"><a href="#acciones">Acciones</a></li>
+            <li class="toc-h2"><a href="#dirección-aleatoria">Dirección Aleatoria</a></li>
+            <li class="toc-h2"><a href="#desplegar-hostiles">Desplegar Hostiles</a></li>
+            <li class="toc-h2"><a href="#niveles-de-unidad">Niveles de Unidad</a></li>
+            <li class="toc-h2"><a href="#carroñeros">Carroñeros</a></li>
+            <li class="toc-h2"><a href="#bandas-salvajes">Bandas Salvajes</a></li>
+            <li class="toc-h2"><a href="#invocadores-de-onda">Invocadores de Onda</a></li>
+            <li class="toc-h2"><a href="#espectros-de-estática">Espectros de Estática</a></li>
+            <li class="toc-h2"><a href="#autómatas-salvajes">Autómatas Salvajes</a></li>
+            <li class="toc-h2"><a href="#parásitos-de-cable">Parásitos de Cable</a></li>
+            <li class="toc-h2"><a href="#compañeros">Compañeros</a></li>
+        </ul>
+    </nav>
+    <div class="sidebar-overlay" onclick="toggleSidebar()"></div>
+    <button class="mobile-toc-btn" onclick="toggleSidebar()" aria-label="Índice"></button>
     <div class="content">
 
 
@@ -69,7 +88,7 @@
 
 
 <h2 id="activación">Activación</h2>
-<p>Cada grupo desplegado tiene una ficha en la bolsa. Al sacarla, tira comportamiento una vez para todo el grupo. Activa las miniaturas una a una (primero la más cercana a cualquier miniatura de jugador), todas realizando la misma acción. Ignoran las miniaturas <code>Fuera de Combate</code>.</p>
+<p>Cada grupo desplegado tiene una ficha en la bolsa. Al sacarla, tira comportamiento una vez para todo el grupo. Activa las miniaturas una a una (primero la más cercana a cualquier miniatura de jugador), todas realizando la misma acción. Ignoran las miniaturas <code>Fuera de Combate</code>. Retira los hostiles que queden <code>Fuera de Combate</code>.</p>
 <h2 id="situación">Situación</h2>
 <ul>
 <li><strong>Sin LdV</strong>: No ve a ningún enemigo</li>
@@ -82,7 +101,7 @@
 <li><strong>Atacar</strong>: Usa arma. Carga si no puede.</li>
 <li><strong>Cobertura</strong>: Busca cobertura frente al enemigo más cercano</li>
 <li><strong>Reagrupar</strong>: Mueve hacia el aliado más cercano</li>
-<li><strong>Huir</strong>: Mueve hacia el borde más cercano</li>
+<li><strong>Huir</strong>: Mueve hacia el borde más cercano (se detiene en el borde)</li>
 <li><strong>Esperar</strong>: No hace nada</li>
 <li><strong>Frenesí</strong>: Ataca al mismo objetivo dos veces</li>
 <li><strong>Patrullar</strong>: Mueve hacia el <strong>Marcador de Botín</strong> más cercano. Si no hay ninguno visible, mueve en dirección aleatoria.</li>
@@ -106,21 +125,21 @@
 <thead>
 <tr>
 <th>Tirada d6</th>
-<th>Nivel</th>
+<th style="text-align: center;">Nivel</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>1-2</td>
-<td><code>Enjambre</code></td>
+<td style="text-align: center;"><code>Enjambre</code></td>
 </tr>
 <tr>
 <td>3-4</td>
-<td><code>Normal</code></td>
+<td style="text-align: center;"><code>Normal</code></td>
 </tr>
 <tr>
 <td>5-6</td>
-<td><code>Élite</code></td>
+<td style="text-align: center;"><code>Élite</code></td>
 </tr>
 </tbody>
 </table>
@@ -160,23 +179,23 @@
 <tr>
 <td style="text-align: center;">1</td>
 <td style="text-align: left;">Corredor de Alcantarilla</td>
-<td style="text-align: center;">5</td>
+<td style="text-align: center;">8</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d4</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">6"</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">5"</td>
 <td style="text-align: left;">Pistola Casera (<code>Proyectil</code>, d4, Disparo)</td>
 </tr>
 <tr>
 <td style="text-align: center;">2</td>
 <td style="text-align: left;">Rata de Cable</td>
-<td style="text-align: center;">4</td>
+<td style="text-align: center;">6</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">8</td>
-<td style="text-align: center;">5"</td>
+<td style="text-align: center;">4"</td>
 <td style="text-align: left;">Cable Afilado (<code>Cortante</code>, d4, CC)</td>
 </tr>
 <tr>
@@ -187,7 +206,7 @@
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">10</td>
-<td style="text-align: center;">6"</td>
+<td style="text-align: center;">5"</td>
 <td style="text-align: left;">Porra de Tubo (<code>Contundente</code>, d4, CC)</td>
 </tr>
 <tr>
@@ -198,7 +217,7 @@
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">12</td>
-<td style="text-align: center;">6"</td>
+<td style="text-align: center;">5"</td>
 <td style="text-align: left;">Cadena Motorizada (<code>Contundente</code>, d6, CC)</td>
 </tr>
 <tr>
@@ -208,8 +227,8 @@
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d8</td>
-<td style="text-align: center;">16</td>
-<td style="text-align: center;">6"</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">5"</td>
 <td style="text-align: left;">Estallido Estático (<code>Emisión</code>, d6, Poder)</td>
 </tr>
 <tr>
@@ -219,8 +238,8 @@
 <td style="text-align: center;">2d8</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d8</td>
-<td style="text-align: center;">20</td>
-<td style="text-align: center;">6"</td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">5"</td>
 <td style="text-align: left;">Lanzador de Embargo (<code>Explosivo</code>, d6, Disparo)</td>
 </tr>
 </tbody>
@@ -297,23 +316,23 @@
 <tr>
 <td style="text-align: center;">1</td>
 <td style="text-align: left;">Cría</td>
-<td style="text-align: center;">5</td>
+<td style="text-align: center;">8</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d4</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">5"</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">4"</td>
 <td style="text-align: left;">Daga (<code>Cortante</code>, d4, CC)</td>
 </tr>
 <tr>
 <td style="text-align: center;">2</td>
 <td style="text-align: left;">Matón</td>
-<td style="text-align: center;">4</td>
+<td style="text-align: center;">6</td>
 <td style="text-align: center;">2d8</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">8</td>
-<td style="text-align: center;">5"</td>
+<td style="text-align: center;">4"</td>
 <td style="text-align: left;">Machete (<code>Cortante</code>, d6, CC)</td>
 </tr>
 <tr>
@@ -324,7 +343,7 @@
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">10</td>
-<td style="text-align: center;">5"</td>
+<td style="text-align: center;">4"</td>
 <td style="text-align: left;">Escopeta (<code>Proyectil</code>, d6, Disparo)</td>
 </tr>
 <tr>
@@ -335,7 +354,7 @@
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">12</td>
-<td style="text-align: center;">5"</td>
+<td style="text-align: center;">4"</td>
 <td style="text-align: left;">Lanzallamas (<code>Energía</code>, d6, Disparo)</td>
 </tr>
 <tr>
@@ -343,10 +362,10 @@
 <td style="text-align: left;">Pesado</td>
 <td style="text-align: center;">1</td>
 <td style="text-align: center;">2d10</td>
-<td style="text-align: center;">2d8</td>
+<td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d4</td>
-<td style="text-align: center;">16</td>
-<td style="text-align: center;">5"</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">4"</td>
 <td style="text-align: left;">Machete Pesado (<code>Cortante</code>, d8, CC)</td>
 </tr>
 <tr>
@@ -354,10 +373,10 @@
 <td style="text-align: left;">Jefe</td>
 <td style="text-align: center;">1</td>
 <td style="text-align: center;">2d10</td>
-<td style="text-align: center;">2d8</td>
 <td style="text-align: center;">2d6</td>
-<td style="text-align: center;">20</td>
-<td style="text-align: center;">5"</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">4"</td>
 <td style="text-align: left;">Puño Demoledor (<code>Contundente</code>, d10, CC)</td>
 </tr>
 </tbody>
@@ -434,23 +453,23 @@
 <tr>
 <td style="text-align: center;">1</td>
 <td style="text-align: left;">Iniciado</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">2d4</td>
+<td style="text-align: center;">2d4</td>
+<td style="text-align: center;">2d4</td>
 <td style="text-align: center;">6</td>
-<td style="text-align: center;">2d4</td>
-<td style="text-align: center;">2d4</td>
-<td style="text-align: center;">2d4</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">6"</td>
+<td style="text-align: center;">5"</td>
 <td style="text-align: left;">Cable Cortado (<code>Cortante</code>, d4, CC)</td>
 </tr>
 <tr>
 <td style="text-align: center;">2</td>
 <td style="text-align: left;">Injertado de Antena</td>
-<td style="text-align: center;">5</td>
+<td style="text-align: center;">7</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">8</td>
-<td style="text-align: center;">5"</td>
+<td style="text-align: center;">4"</td>
 <td style="text-align: left;">Garras de Señal (<code>Estático</code>, d4, CC)</td>
 </tr>
 <tr>
@@ -461,7 +480,7 @@
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">10</td>
-<td style="text-align: center;">6"</td>
+<td style="text-align: center;">5"</td>
 <td style="text-align: left;">Pistola de Arco (<code>Energía</code>, d4, Disparo)</td>
 </tr>
 <tr>
@@ -472,7 +491,7 @@
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d8</td>
 <td style="text-align: center;">12</td>
-<td style="text-align: center;">6"</td>
+<td style="text-align: center;">5"</td>
 <td style="text-align: left;">Rayo de Onda (<code>Emisión</code>, d6, Poder)</td>
 </tr>
 <tr>
@@ -482,8 +501,8 @@
 <td style="text-align: center;">2d8</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d6</td>
-<td style="text-align: center;">16</td>
-<td style="text-align: center;">6"</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">5"</td>
 <td style="text-align: left;">Hoja de Resonancia (<code>Emisión</code>, d6, CC)</td>
 </tr>
 <tr>
@@ -491,10 +510,10 @@
 <td style="text-align: left;">Receptáculo</td>
 <td style="text-align: center;">1</td>
 <td style="text-align: center;">2d10</td>
-<td style="text-align: center;">2d8</td>
+<td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d4</td>
-<td style="text-align: center;">20</td>
-<td style="text-align: center;">6"</td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">5"</td>
 <td style="text-align: left;">Extremidades Estáticas (<code>Estático</code>, d8, CC)</td>
 </tr>
 </tbody>
@@ -571,23 +590,23 @@
 <tr>
 <td style="text-align: center;">1</td>
 <td style="text-align: left;">Parpadeo</td>
-<td style="text-align: center;">5</td>
+<td style="text-align: center;">8</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d4</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">8"</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">6"</td>
 <td style="text-align: left;">Garras de Estática (<code>Estático</code>, d4, CC)</td>
 </tr>
 <tr>
 <td style="text-align: center;">2</td>
 <td style="text-align: left;">Deriva</td>
-<td style="text-align: center;">4</td>
+<td style="text-align: center;">6</td>
 <td style="text-align: center;">2d8</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">8</td>
-<td style="text-align: center;">8"</td>
+<td style="text-align: center;">6"</td>
 <td style="text-align: left;">Garras de Fase (<code>Estático</code>, d6, CC)</td>
 </tr>
 <tr>
@@ -598,7 +617,7 @@
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d8</td>
 <td style="text-align: center;">10</td>
-<td style="text-align: center;">5"</td>
+<td style="text-align: center;">4"</td>
 <td style="text-align: left;">Llama de Señal (<code>Estático</code>, d6, Poder)</td>
 </tr>
 <tr>
@@ -609,7 +628,7 @@
 <td style="text-align: center;">2d8</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">12</td>
-<td style="text-align: center;">4"</td>
+<td style="text-align: center;">3"</td>
 <td style="text-align: left;">Puños de Distorsión (<code>Estático</code>, d6, CC)</td>
 </tr>
 <tr>
@@ -619,8 +638,8 @@
 <td style="text-align: center;">2d10</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d4</td>
-<td style="text-align: center;">16</td>
-<td style="text-align: center;">6"</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">5"</td>
 <td style="text-align: left;">Hoja de Frecuencia (<code>Estático</code>, d8, CC)</td>
 </tr>
 <tr>
@@ -628,10 +647,10 @@
 <td style="text-align: left;">Emisor</td>
 <td style="text-align: center;">1</td>
 <td style="text-align: center;">2d8</td>
-<td style="text-align: center;">2d8</td>
+<td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d4</td>
-<td style="text-align: center;">20</td>
-<td style="text-align: center;">5"</td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">4"</td>
 <td style="text-align: left;">Garras de Onda (<code>Estático</code>, d8, CC)</td>
 </tr>
 </tbody>
@@ -708,23 +727,23 @@
 <tr>
 <td style="text-align: center;">1</td>
 <td style="text-align: left;">Enjambre de Mantenimiento</td>
-<td style="text-align: center;">5</td>
+<td style="text-align: center;">8</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d4</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">8"</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">6"</td>
 <td style="text-align: left;">Mandíbulas Cortantes (<code>Cortante</code>, d4, CC)</td>
 </tr>
 <tr>
 <td style="text-align: center;">2</td>
 <td style="text-align: left;">Dron de Seguridad</td>
-<td style="text-align: center;">4</td>
+<td style="text-align: center;">6</td>
 <td style="text-align: center;">2d6</td>
-<td style="text-align: center;">2d8</td>
+<td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">8</td>
-<td style="text-align: center;">5"</td>
+<td style="text-align: center;">4"</td>
 <td style="text-align: left;">Carabina de Pulso (<code>Energía</code>, d6, Disparo)</td>
 </tr>
 <tr>
@@ -735,7 +754,7 @@
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d8</td>
 <td style="text-align: center;">10</td>
-<td style="text-align: center;">5"</td>
+<td style="text-align: center;">4"</td>
 <td style="text-align: left;">Lanza Neural (<code>Energía</code>, d8, Disparo)</td>
 </tr>
 <tr>
@@ -746,7 +765,7 @@
 <td style="text-align: center;">2d8</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">12</td>
-<td style="text-align: center;">5"</td>
+<td style="text-align: center;">3"</td>
 <td style="text-align: left;">Bláster Montado (<code>Energía</code>, d8, Disparo)</td>
 </tr>
 <tr>
@@ -756,8 +775,8 @@
 <td style="text-align: center;">2d8</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d6</td>
-<td style="text-align: center;">16</td>
-<td style="text-align: center;">8"</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">6"</td>
 <td style="text-align: left;">Hojas Trituradoras (<code>Cortante</code>, d6, CC)</td>
 </tr>
 <tr>
@@ -765,10 +784,10 @@
 <td style="text-align: left;">Plataforma de Defensa</td>
 <td style="text-align: center;">1</td>
 <td style="text-align: center;">2d10</td>
-<td style="text-align: center;">2d10</td>
+<td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d4</td>
-<td style="text-align: center;">20</td>
-<td style="text-align: center;">5"</td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">3"</td>
 <td style="text-align: left;">Guadaña de Arco (<code>Energía</code>, d10, CC)</td>
 </tr>
 </tbody>
@@ -845,23 +864,23 @@
 <tr>
 <td style="text-align: center;">1</td>
 <td style="text-align: left;">Segador</td>
-<td style="text-align: center;">5</td>
+<td style="text-align: center;">8</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d4</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">7"</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">6"</td>
 <td style="text-align: left;">Garras (<code>Cortante</code>, d4, CC)</td>
 </tr>
 <tr>
 <td style="text-align: center;">2</td>
 <td style="text-align: left;">Larva</td>
-<td style="text-align: center;">4</td>
+<td style="text-align: center;">6</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">8</td>
-<td style="text-align: center;">5"</td>
+<td style="text-align: center;">4"</td>
 <td style="text-align: left;">Zarcillos de Succión (<code>Tóxico</code>, d6, CC)</td>
 </tr>
 <tr>
@@ -872,7 +891,7 @@
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">10</td>
-<td style="text-align: center;">5"</td>
+<td style="text-align: center;">4"</td>
 <td style="text-align: left;">Zarpas (<code>Cortante</code>, d6, CC)</td>
 </tr>
 <tr>
@@ -883,7 +902,7 @@
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d10</td>
 <td style="text-align: center;">12</td>
-<td style="text-align: center;">5"</td>
+<td style="text-align: center;">4"</td>
 <td style="text-align: left;">Púa Mental (<code>Estático</code>, d6, Poder)</td>
 </tr>
 <tr>
@@ -893,8 +912,8 @@
 <td style="text-align: center;">2d10</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d4</td>
-<td style="text-align: center;">16</td>
-<td style="text-align: center;">6"</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">5"</td>
 <td style="text-align: left;">Tubos de Drenaje (<code>Tóxico</code>, d8, CC)</td>
 </tr>
 <tr>
@@ -902,10 +921,10 @@
 <td style="text-align: left;">Agonista</td>
 <td style="text-align: center;">1</td>
 <td style="text-align: center;">2d10</td>
-<td style="text-align: center;">2d8</td>
 <td style="text-align: center;">2d6</td>
-<td style="text-align: center;">20</td>
-<td style="text-align: center;">6"</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">5"</td>
 <td style="text-align: left;">Lengüetazo (<code>Tóxico</code>, d8, CC)</td>
 </tr>
 </tbody>
@@ -978,23 +997,23 @@
 <tr>
 <td style="text-align: center;">1</td>
 <td style="text-align: left;">Currante</td>
-<td style="text-align: center;">6</td>
+<td style="text-align: center;">10</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d10</td>
-<td style="text-align: center;">6</td>
-<td style="text-align: center;">5"</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">4"</td>
 <td style="text-align: left;">Puños Cansados (<code>Contundente</code>, d4, CC)</td>
 </tr>
 <tr>
 <td style="text-align: center;">2</td>
 <td style="text-align: left;">Eventual</td>
-<td style="text-align: center;">5</td>
+<td style="text-align: center;">7</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d10</td>
 <td style="text-align: center;">8</td>
-<td style="text-align: center;">6"</td>
+<td style="text-align: center;">5"</td>
 <td style="text-align: left;">Cúter (<code>Cortante</code>, d4, CC)</td>
 </tr>
 <tr>
@@ -1026,7 +1045,7 @@
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d6</td>
-<td style="text-align: center;">12</td>
+<td style="text-align: center;">10</td>
 <td style="text-align: center;">5"</td>
 <td style="text-align: left;">Porra Eléctrica (<code>Estático</code>, d6, CC)</td>
 </tr>
@@ -1035,9 +1054,9 @@
 <td style="text-align: left;">Asistente del Gerente Regional</td>
 <td style="text-align: center;">1</td>
 <td style="text-align: center;">2d6</td>
-<td style="text-align: center;">2d8</td>
 <td style="text-align: center;">2d6</td>
-<td style="text-align: center;">10</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">8</td>
 <td style="text-align: center;">6"</td>
 <td style="text-align: left;">Pistola Oculta (<code>Proyectil</code>, d4, Disparo)</td>
 </tr>
@@ -1121,6 +1140,7 @@
 </table>
 
     </div>
+</div>
     <script>
         function toggleMenu() {
             const nav = document.querySelector('.app-menu');
@@ -1149,6 +1169,55 @@
         }
         window.addEventListener('resize', updatePageScale);
         document.addEventListener('DOMContentLoaded', updatePageScale);
+    </script>
+    <script>
+        // Scroll spy: highlight current section in sidebar
+        function updateActiveLink() {
+            const headers = document.querySelectorAll('h1[id], h2[id], h3[id]');
+            const links = document.querySelectorAll('.sidebar-nav a');
+            const sidebar = document.querySelector('.sidebar');
+            const offset = 100; // Account for sticky header
+
+            let current = '';
+            headers.forEach(header => {
+                const top = header.getBoundingClientRect().top;
+                if (top < offset) {
+                    current = header.id;
+                }
+            });
+
+            links.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                    // Auto-scroll sidebar to keep active item in view
+                    if (sidebar) {
+                        const linkRect = link.getBoundingClientRect();
+                        const sidebarRect = sidebar.getBoundingClientRect();
+                        const linkTop = linkRect.top - sidebarRect.top;
+                        const linkBottom = linkRect.bottom - sidebarRect.top;
+                        const visibleHeight = sidebar.clientHeight;
+                        // Scroll if link is outside visible area (with padding)
+                        if (linkTop < 50 || linkBottom > visibleHeight - 50) {
+                            link.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        }
+                    }
+                }
+            });
+        }
+
+        // Mobile sidebar toggle
+        function toggleSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            const overlay = document.querySelector('.sidebar-overlay');
+            if (sidebar) {
+                sidebar.classList.toggle('mobile-open');
+                if (overlay) overlay.classList.toggle('active');
+            }
+        }
+
+        window.addEventListener('scroll', updateActiveLink);
+        document.addEventListener('DOMContentLoaded', updateActiveLink);
     </script>
 </body>
 </html>

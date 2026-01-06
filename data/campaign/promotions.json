@@ -4,7 +4,7 @@
   "columns": ["2d6", "Result", "Effect"],
   "align": ["center", "left", "left"],
   "items": [
-    {"roll": "2", "result": "Demotion", "effect": "`-1 DT` to lowest attribute"},
+    {"roll": "2", "result": "Demotion", "effect": "`-1 DT` to the lowest attribute"},
     {"roll": "3", "result": "Bonus", "effect": "+1 max `Health`"},
     {"roll": "4", "result": "Transfer", "effect": "+1\" `Move`"},
     {"roll": "5", "result": "Clearance", "effect": "`+1 DT` `Combat` (or new Power for `Broadcaster`)"},

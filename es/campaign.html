@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hardwired 28 - Campaña 0.6.3-beta</title>
-    <meta property="og:title" content="Hardwired 28 - Campaña 0.6.3-beta">
+    <title>Hardwired 28 - Campaña 0.6.4-beta</title>
+    <meta property="og:title" content="Hardwired 28 - Campaña 0.6.4-beta">
     <meta property="og:description" content="Juego de escaramuzas cablepunk corporativo">
     <meta property="og:image" content="http://hardwired28.luismars.com/img/social.png">
     <meta property="og:url" content="http://hardwired28.luismars.com/es/">
@@ -18,27 +18,24 @@
 </head>
 <body class="booklet-mode has-app-menu">
     
-    <nav class="app-menu" data-theme="light" data-open="false" aria-label="Navigation">
+    <nav class="app-menu" data-theme="corporate" data-open="false" aria-label="Navigation">
         <div class="app-menu__inner">
             <a class="app-menu__brand" href="./">Hardwired 28</a>
-            <button class="app-menu__toggle" type="button" onclick="toggleMenu()">Menú</button>
+            <button class="app-menu__toggle" type="button" onclick="toggleMenu()" aria-label="Menú"></button>
             <div class="app-menu__links">
+                <a href="rulebook">Reglamento</a>
                 <div class="app-menu__dropdown">
-                    <button class="app-menu__dropdown-toggle">Reglas</button>
+                    <button class="app-menu__dropdown-toggle current">Imprimir</button>
                     <div class="app-menu__submenu">
-                        <a href="merged">Todas</a>
-                        <a href="manual">Manual</a>
-                        <a href="core">Básicas</a>
-                        <a href="hostiles">Hostiles</a>
+                        <a href="print">Todas las Reglas</a>
+                        <a href="core-rules">Reglas Básicas</a>
+                        <a href="inhuman-resources">Recursos Inhumanos</a>
                         <a href="campaign">Campaña</a>
-                        <a href="qr">Referencia</a>
                     </div>
                 </div>
-                <a href="./">Constructor</a>
+                <a href="quick-reference">Referencia Rápida</a>
+                <a href="builder/index">Creador de Plantillas</a>
                 <a href="../campaign">English</a>
-            </div>
-            <div class="app-menu__actions">
-                <button class="app-menu__action" type="button" onclick="toggleView()">Vista</button>
             </div>
         </div>
     </nav>
@@ -81,15 +78,16 @@
 
 
 <h2 id="tablero">Tablero</h2>
-<p>2'x2' con terreno denso. Evita pasillos largos y carriles abiertos: las armas de disparo dominan las líneas de visión de más de 12". Distribuye cobertura para crear varias rutas. Los hostiles actúan como tercera amenaza.</p>
+<p>2' × 2' con terreno denso. Ninguna miniatura debería tener LdV despejada a través de todo el tablero. Al menos la mitad de los carriles de fuego deberían ofrecer Cobertura. Evita carriles abiertos de más de 12". Distribuye cobertura para crear varias rutas. Los hostiles actúan como tercera amenaza.</p>
 <h2 id="preparación">Preparación</h2>
-<p><strong>Despliegue Estándar:</strong> Las zonas de despliegue se extienden 3" desde cada borde de la mesa.</p>
+<p><strong>Despliegue Estándar:</strong> Despliega en el borde de la mesa.</p>
 <ol>
-<li><strong>Elegir Lado:</strong> Tira la <code>Astucia</code> de tu <code>Jefe</code> vs la <code>Astucia</code> del <code>Jefe</code> rival. El ganador elige un borde de mesa. El otro jugador toma el borde opuesto.</li>
-<li><strong>Desplegar Primero:</strong> Tira <code>Astucia</code> de <code>Jefe</code> vs <code>Astucia</code>. El ganador elige quién despliega primero. Los jugadores alternan colocando una miniatura a la vez en su zona de despliegue hasta que todas las miniaturas estén desplegadas.</li>
+<li><strong>Elegir Lado:</strong> Tira la <code>Astucia</code> de tu <code>Jefe</code> vs. la <code>Astucia</code> del <code>Jefe</code> rival. El ganador elige un borde de mesa. El otro jugador toma el borde opuesto.</li>
+<li><strong>Desplegar Primero:</strong> Tira <code>Astucia</code> de <code>Jefe</code> vs. <code>Astucia</code>. El ganador elige quién despliega primero. Los jugadores alternan colocando una miniatura a la vez en su borde de mesa hasta que todas las miniaturas estén desplegadas.</li>
 <li><strong>Botín y Compañeros:</strong> Los jugadores alternan colocando <code>Marcadores de Botín</code> y Compañeros en las áreas indicadas por el escenario.</li>
 </ol>
 <p>Salvo que un escenario indique lo contrario, usa Despliegue Estándar.</p>
+<p><strong>Esquina:</strong> Una zona en L de 3" × 3" a lo largo de ambos bordes que se encuentran en una esquina.</p>
 <p><strong>Duración:</strong> Las partidas duran como mínimo 5 rondas. Al final de la Ronda 5, tira d6: con 3+ termina la partida. Al final de la Ronda 6, tira d6: con 2+ termina. La partida termina automáticamente tras la Ronda 7.</p>
 <p><strong>Reliquia:</strong> Un <code>Marcador de Botín</code> especial en algunos escenarios. <code>Interactuar</code> para recogerla. El portador se mueve a la mitad de velocidad. La suelta si queda <code>Fuera de Combate</code> (<code>Interactuar</code> para recogerla).</p>
 </div>
@@ -279,7 +277,8 @@
 <h2 id="buscar">Buscar</h2>
 <ul>
 <li>A 1" de un <code>Marcador de Botín</code></li>
-<li>Tira <code>Astucia</code> vs 2d6</li>
+<li>Tira <code>Astucia</code> vs. 2d6</li>
+<li>Éxito: retira el marcador</li>
 </ul>
 <table>
 <thead>
@@ -291,7 +290,7 @@
 <tbody>
 <tr>
 <td style="text-align: center;">1</td>
-<td style="text-align: left;">2 subs</td>
+<td style="text-align: left;">Granada Aleatoria</td>
 </tr>
 <tr>
 <td style="text-align: center;">2</td>
@@ -311,7 +310,7 @@
 </tr>
 <tr>
 <td style="text-align: center;">6</td>
-<td style="text-align: left;"><strong>Prueba</strong></td>
+<td style="text-align: left;">1 <code>Prueba</code></td>
 </tr>
 <tr>
 <td style="text-align: center;">7</td>
@@ -327,7 +326,7 @@
 </tr>
 <tr>
 <td style="text-align: center;">10</td>
-<td style="text-align: left;">2 <strong>Pruebas</strong></td>
+<td style="text-align: left;">1 <code>Prueba</code>, +1 <code>Pista</code></td>
 </tr>
 <tr>
 <td style="text-align: center;">11</td>
@@ -335,7 +334,7 @@
 </tr>
 <tr>
 <td style="text-align: center;">12</td>
-<td style="text-align: left;"><strong>Prueba</strong></td>
+<td style="text-align: left;">1 <code>Prueba</code></td>
 </tr>
 <tr>
 <td style="text-align: center;">13</td>
@@ -355,7 +354,7 @@
 </tr>
 <tr>
 <td style="text-align: center;">17</td>
-<td style="text-align: left;"><strong>Prueba</strong></td>
+<td style="text-align: left;">1 <code>Prueba</code></td>
 </tr>
 <tr>
 <td style="text-align: center;">18</td>
@@ -363,7 +362,7 @@
 </tr>
 <tr>
 <td style="text-align: center;">19</td>
-<td style="text-align: left;"><strong>Prueba</strong></td>
+<td style="text-align: left;">1 <code>Prueba</code></td>
 </tr>
 <tr>
 <td style="text-align: center;">20</td>
@@ -376,9 +375,9 @@
 <h2 id="interrogar">Interrogar</h2>
 <ul>
 <li>A 1" del objetivo</li>
-<li><code>Astucia</code> vs <code>Astucia</code> (opuesto)</li>
+<li><code>Astucia</code> vs. <code>Astucia</code> (opuesto)</li>
 <li><code>+1 ND</code> si el objetivo está herido</li>
-<li>Éxito: el objetivo no puede ser interrogado de nuevo</li>
+<li>Éxito: retira al Compañero</li>
 </ul>
 <table>
 <thead>
@@ -422,7 +421,7 @@
 <tr>
 <td style="text-align: center;">8</td>
 <td style="text-align: left;">Revelación</td>
-<td style="text-align: left;">2 <code>Prueba</code></td>
+<td style="text-align: left;">1 <code>Prueba</code>, +2 <code>Pistas</code></td>
 </tr>
 </tbody>
 </table>
@@ -454,9 +453,9 @@
 <h4 id="terreno">Terreno</h4>
 <p>Sector 7-Moroso. Bloque en ruinas. Tuberías colapsadas, cableado expuesto, muchos huecos de mantenimiento para buscar.</p>
 <h4 id="botín">Botín</h4>
-<p>Los jugadores alternan colocando 1 <code>Marcador de Botín</code> cada uno (6"+ de las zonas de despliegue).</p>
+<p>Los jugadores alternan colocando 1 <code>Marcador de Botín</code> cada uno (6"+ de los bordes, 3"+ entre sí).</p>
 <h4 id="compañeros">Compañeros</h4>
-<p>Tira Compañeros (nivel <code>Enjambre</code>). Coloca a 6" del centro, deben tocar terreno.</p>
+<p>Tira Compañeros (nivel <code>Enjambre</code>). Los jugadores alternan colocando a 6" del centro, deben tocar terreno (3"+ entre sí).</p>
 <h4 id="despliegue">Despliegue</h4>
 <p>Estándar.</p>
 <h4 id="amenazas">Amenazas</h4>
@@ -478,9 +477,9 @@
 <h4 id="terreno_1">Terreno</h4>
 <p>Bordes del Mercado de Estaño. Depósito de carga. Contenedores apilados, cables de carga, cabinas de peaje selladas.</p>
 <h4 id="botín_1">Botín</h4>
-<p>1 <code>Marcador de Botín</code> (el expediente) en el centro. Los jugadores alternan colocando 1 <code>Marcador de Botín</code> cada uno (6"+ del centro).</p>
+<p>1 <code>Marcador de Botín</code> (el expediente) en el centro. Los jugadores alternan colocando 1 <code>Marcador de Botín</code> cada uno (6"+ del centro, 3"+ entre sí).</p>
 <h4 id="compañeros_1">Compañeros</h4>
-<p>Tira Compañeros (nivel <code>Élite</code>). Coloca a 6"+ del centro.</p>
+<p>Tira Compañeros (nivel <code>Élite</code>). Los jugadores alternan colocando a 6"+ del centro (3"+ entre sí).</p>
 <h4 id="despliegue_1">Despliegue</h4>
 <p>Estándar.</p>
 <h4 id="amenazas_1">Amenazas</h4>
@@ -497,14 +496,14 @@
 
 
 <h2 id="el-altar-de-la-onda">El Altar de la Onda</h2>
-<p>Unión de Conductos Nula. Los Monjes la llaman maldita: ningún cable llega aquí, ninguna señal fluye limpia. La luz viene de LEDs y alguna lámpara ocasional. Hace siglos, un fallo en cascada cortó esta unión de la Red Sagrada. Los Monjes la sellaron. Los Desanclados la encontraron.</p>
+<p>Unión de Conductos Nula. Los Monjes la llaman maldita: ningún cable llega aquí, ninguna señal fluye limpia. La luz viene de LED y alguna lámpara ocasional. Hace siglos, un fallo en cascada cortó esta unión de la Red Sagrada. Los Monjes la sellaron. Los Desanclados la encontraron.</p>
 <p>Han usado este lugar durante meses. Las emisiones de Canal Abierto se originan aquí, dicen algunos. La corrupción de onda es tan densa que se saborea: metal y ozono, el sabor de frecuencias prohibidas. Algo descansa en ese altar. Algo de antes del Anclaje. Algo que aún funciona.</p>
 <h4 id="terreno_2">Terreno</h4>
 <p>Unión de Conductos Nula. Altar corrupto. Terminal central, alfombrillas de oración, velas de diagnóstico, huecos ocultos.</p>
 <h4 id="botín_2">Botín</h4>
-<p>1 Reliquia en el centro. Los jugadores alternan colocando 2 <code>Marcadores de Botín</code> cada uno a 6" de la Reliquia.</p>
+<p>1 Reliquia en el centro. Los jugadores alternan colocando 2 <code>Marcadores de Botín</code> cada uno a 6" de la Reliquia (3"+ entre sí).</p>
 <h4 id="compañeros_2">Compañeros</h4>
-<p>Tira Compañeros (nivel <code>Normal</code>). Coloca a 6" del centro.</p>
+<p>Tira Compañeros (nivel <code>Normal</code>). Los jugadores alternan colocando a 6"+ del centro (3"+ entre sí).</p>
 <h4 id="despliegue_2">Despliegue</h4>
 <p>Estándar.</p>
 <h4 id="amenazas_2">Amenazas</h4>
@@ -534,11 +533,11 @@
 <h4 id="terreno_3">Terreno</h4>
 <p>Distrito del Interventor. Anexo de la Autoridad. Oficinas estrechas, pilas de datos, bóvedas de suscripción cerradas.</p>
 <h4 id="botín_3">Botín</h4>
-<p>Los jugadores alternan colocando 2 <code>Marcadores de Botín</code> cada uno (9"+ del centro).</p>
+<p>Los jugadores alternan colocando 2 <code>Marcadores de Botín</code> cada uno (9"+ del centro, 3"+ entre sí).</p>
 <h4 id="compañeros_3">Compañeros</h4>
-<p>Tira Compañeros (nivel <code>Normal</code>). Coloca a 6" del centro.</p>
+<p>Tira Compañeros (nivel <code>Normal</code>). El Defensor los coloca a 6" del centro (3"+ entre sí).</p>
 <h4 id="despliegue_3">Despliegue</h4>
-<p>El Agresor elige un borde y despliega primero. El Defensor despliega en el borde opuesto, a 3".</p>
+<p>El Agresor elige un borde y despliega primero. El Defensor despliega en el borde opuesto.</p>
 <h4 id="amenazas_3">Amenazas</h4>
 <p><strong>Ronda 2:</strong> Tira en la tabla de Hostiles (nivel <code>Enjambre</code>). Aparecen en un borde aleatorio.</p>
 <h4 id="especial_1">Especial</h4>
@@ -560,11 +559,11 @@
 <h4 id="terreno_4">Terreno</h4>
 <p>Sector 7-Moroso. Cruce fortificado. Barricadas, torretas improvisadas, cajas de suministros.</p>
 <h4 id="botín_4">Botín</h4>
-<p>El Defensor coloca 4 <code>Marcadores de Botín</code> a 6" del centro (3" entre sí).</p>
+<p>El Defensor coloca 4 <code>Marcadores de Botín</code> a 6" del centro (3"+ entre sí).</p>
 <h4 id="compañeros_4">Compañeros</h4>
-<p>Tira Compañeros (nivel <code>Élite</code>). Colócalos a 6" del centro.</p>
+<p>Tira Compañeros (nivel <code>Élite</code>). El Defensor los coloca a 6" del centro (3"+ entre sí).</p>
 <h4 id="despliegue_4">Despliegue</h4>
-<p>El Defensor a 9" del centro. El Agresor en cualquier borde, a 6".</p>
+<p>El Defensor a 6" del centro. El Agresor elige un borde y despliega en ese borde.</p>
 <h4 id="amenazas_4">Amenazas</h4>
 <p><strong>Rondas 3, 5:</strong> Tira en la tabla de Hostiles (nivel <code>Normal</code>). Aparecen en un borde aleatorio.</p>
 <h4 id="especial_2">Especial</h4>
@@ -585,11 +584,11 @@
 <h4 id="terreno_5">Terreno</h4>
 <p>Corredor de tránsito del Complejo medio. Terreno abierto con cobertura dispersa. Puestos de vendedores, trineos de carga abandonados.</p>
 <h4 id="botín_5">Botín</h4>
-<p>Tras el despliegue del Defensor, este coloca 2 <code>Marcadores de Botín</code> a 3" de miniaturas aliadas.</p>
+<p>Tras el despliegue del Defensor, este coloca 2 <code>Marcadores de Botín</code> a 3" de sus miniaturas (3"+ entre sí).</p>
 <h4 id="compañeros_5">Compañeros</h4>
-<p>Tira Compañeros (nivel <code>Enjambre</code>). Colócalos a 3" de miniaturas aliadas.</p>
+<p>Tira Compañeros (nivel <code>Enjambre</code>). El Defensor los coloca a 3" de cualquier borde (3"+ entre sí).</p>
 <h4 id="despliegue_5">Despliegue</h4>
-<p>El Defensor despliega todas sus miniaturas a 12" del centro. Luego el Agresor despliega a 3" de cualquier borde.</p>
+<p>El Defensor despliega todas sus miniaturas a 6" del centro. El Agresor despliega en esquinas opuestas.</p>
 <h4 id="amenazas_5">Amenazas</h4>
 <p><strong>Rondas 2, 4, 6:</strong> Tira en la tabla de Hostiles (nivel <code>Élite</code>). Aparecen en un borde aleatorio.</p>
 <h4 id="especial_3">Especial</h4>
@@ -618,11 +617,11 @@
 <h4 id="terreno_6">Terreno</h4>
 <p>Complejo Bajo. Refugio calcinado. Conductos colapsados, cobertura desesperada, un camino claro de escape.</p>
 <h4 id="botín_6">Botín</h4>
-<p>El Defensor coloca 4 <code>Marcadores de Botín</code> a 6" del centro (el refugio).</p>
+<p>El Defensor coloca 4 <code>Marcadores de Botín</code> a 6" del centro (3"+ entre sí).</p>
 <h4 id="compañeros_6">Compañeros</h4>
-<p>Tira Compañeros (nivel <code>Élite</code>). Colócalos a 6" del centro.</p>
+<p>Tira Compañeros (nivel <code>Élite</code>). Los jugadores alternan colocando a 6"+ del centro (3"+ entre sí).</p>
 <h4 id="despliegue_6">Despliegue</h4>
-<p>El Defensor coloca 2 barricadas a 6" del centro. El Agresor elige un borde y despliega. Luego el Defensor despliega a 12" del centro. El Agresor puede entonces redesplegar d3 miniaturas.</p>
+<p>El Defensor coloca 2 barricadas a 6" del centro. El Agresor elige un borde y despliega en ese borde. Luego el Defensor despliega a 6" del centro. El Agresor puede entonces redesplegar d3 miniaturas.</p>
 <h4 id="amenazas_6">Amenazas</h4>
 <p><strong>Ronda 4:</strong> Tira en la tabla de Hostiles (nivel <code>Enjambre</code>). Aparecen en un borde aleatorio.</p>
 <blockquote>
@@ -642,15 +641,15 @@
 <h4 id="terreno_7">Terreno</h4>
 <p>Las Raíces. Bóveda antigua. Pedestal central, corredores radiales, crecimientos corruptos por ondas.</p>
 <h4 id="botín_7">Botín</h4>
-<p>1 Reliquia en el centro. Los jugadores alternan colocando 1 <code>Marcador de Botín</code> cada uno (12"+ del centro).</p>
+<p>1 Reliquia en el centro. Los jugadores alternan colocando 1 <code>Marcador de Botín</code> cada uno (9"+ del centro, 3"+ entre sí).</p>
 <h4 id="compañeros_7">Compañeros</h4>
-<p>Tira Compañeros (nivel <code>Enjambre</code>). Colócalos a 3" de cualquier <code>Marcador de Botín</code>.</p>
+<p>Tira Compañeros (nivel <code>Enjambre</code>). El Defensor los coloca a 3" de cualquier <code>Marcador de Botín</code> (3"+ entre sí).</p>
 <h4 id="despliegue_7">Despliegue</h4>
-<p>El Defensor a 9" del centro. El Agresor en cualquier borde, a 6".</p>
+<p>El Defensor a 6" del centro. El Agresor elige un borde y despliega en ese borde.</p>
 <h4 id="amenazas_7">Amenazas</h4>
 <p><strong>Rondas 3, 5:</strong> Tira en la tabla de Hostiles (nivel <code>Normal</code>). Aparecen en un borde aleatorio.</p>
 <h4 id="especial_4">Especial</h4>
-<p>Los hostiles ignoran al Defensor salvo que tenga la Reliquia, o hasta la Ronda 4. Al final, el portador de la Reliquia gana +1 <code>Prueba</code> + 2 <code>Pistas</code>.</p>
+<p>Los hostiles ignoran al Defensor salvo que tenga la Reliquia, o hasta la Ronda 4. Al final, el portador de la Reliquia gana +1 <code>Prueba</code> + 2 <code>Pistas</code>. Abandonar el tablero con la Reliquia no activa la Evaluación de Rendimiento.</p>
 <blockquote>
 <p>"Espíritu del Cable, acepta esta ofrenda de estaño y corriente."<br />
 <strong>Rito de Mantenimiento</strong></p>
@@ -668,11 +667,11 @@
 <h4 id="terreno_8">Terreno</h4>
 <p>El Sustrato. Laberinto industrial. Múltiples niveles, corredores estrechos, ningún lugar donde esconderse de verdad.</p>
 <h4 id="botín_8">Botín</h4>
-<p>El Agresor coloca 4 <code>Marcadores de Botín</code> en cualquier lugar (3"+ de los bordes).</p>
+<p>El Agresor coloca 4 <code>Marcadores de Botín</code> en cualquier lugar (3"+ de los bordes, 3"+ entre sí).</p>
 <h4 id="compañeros_8">Compañeros</h4>
-<p>Tira Compañeros (nivel <code>Normal</code>). Colócalos en cualquier lugar (3"+ de los bordes).</p>
+<p>Tira Compañeros (nivel <code>Normal</code>). Los jugadores alternan colocando a 6"+ del centro (3"+ entre sí).</p>
 <h4 id="despliegue_8">Despliegue</h4>
-<p>El Defensor a 18" del centro. El Agresor en cualquier borde, a 6".</p>
+<p>El Defensor a 6" del centro. El Agresor despliega en cualquier borde.</p>
 <h4 id="amenazas_8">Amenazas</h4>
 <p><strong>Rondas 2, 4, 6:</strong> Tira en la tabla de Hostiles (nivel <code>Élite</code>). Aparecen en un borde aleatorio.</p>
 <h4 id="especial_5">Especial</h4>
@@ -797,7 +796,7 @@
 <tr>
 <td style="text-align: center;">4</td>
 <td style="text-align: left;">Degradado</td>
-<td style="text-align: left;">-1 <code>Salud</code> máx</td>
+<td style="text-align: left;">-1 <code>Salud</code> máx.</td>
 </tr>
 <tr>
 <td style="text-align: center;">5</td>
@@ -874,7 +873,7 @@
 <tr>
 <td style="text-align: center;">3</td>
 <td style="text-align: left;">Prima</td>
-<td style="text-align: left;">+1 <code>Salud</code> máx</td>
+<td style="text-align: left;">+1 <code>Salud</code> máx.</td>
 </tr>
 <tr>
 <td style="text-align: center;">4</td>
@@ -909,7 +908,7 @@
 <tr>
 <td style="text-align: center;">10</td>
 <td style="text-align: left;">Beneficios</td>
-<td style="text-align: left;">+2 <code>Salud</code> máx</td>
+<td style="text-align: left;">+2 <code>Salud</code> máx.</td>
 </tr>
 <tr>
 <td style="text-align: center;">11</td>
@@ -930,10 +929,10 @@
 <div class="column-break"></div>
 
 <h2 id="sucesión-de-jefe">Sucesión de Jefe</h2>
-<p>Si el <code>Jefe</code> muere, asciende un <code>Recurso</code>. Mantiene su tipo de contrato pero se convierte en <code>Jefe</code> a efectos de moral. Elige uno:</p>
+<p>Si el <code>Jefe</code> muere, asciende un <code>Recurso</code>. Mantiene su tipo de contrato, pero se convierte en <code>Jefe</code> a efectos de moral. Elige uno:</p>
 <ul>
 <li>Gana acceso a <strong>Ambas</strong> armas</li>
-<li>Gana +1 armadura máx (Ligera → Media → Pesada)</li>
+<li>Gana +1 armadura máx. (Ligera → Media → Pesada)</li>
 </ul>
 <h2 id="puesto-de-comercio">Puesto de Comercio</h2>
 <p>Compra equipo al precio listado. Vende a la mitad.</p>
