@@ -88,10 +88,10 @@ const EvidenceTracker = ({ evidence, onChange }) => (
       <button
         key={n}
         onClick={() => onChange(evidence.includes(n) ? evidence.filter(e => e !== n) : [...evidence, n])}
-        className={`w-8 h-8 rounded font-bold transition-all ${
+        className={`w-8 h-8 rounded font-bold transition-all border-2 ${
           evidence.includes(n)
-            ? 'wb-bg-accent wb-text-accent shadow-md'
-            : 'wb-bg-medium text-gray-700 hover:wb-bg-medium-hover'
+            ? 'wb-bg-primary wb-text-on-primary wb-border-primary'
+            : 'wb-bg-light wb-text-disabled wb-border hover:wb-bg-medium'
         }`}
       >
         {n}
@@ -614,7 +614,7 @@ const CardPrintView = ({ onClose, weaponData, archetypes, warband }) => {
     }
   }, [options]);
 
-  const { FALLBACK_WEAPONS, MELEE_WEAPONS, RANGED_WEAPONS, ARMOR, GEAR, CONSUMABLES, GRENADES, CYBERNETICS, POWERS } = weaponData;
+  const { FALLBACK_WEAPONS, MELEE_WEAPONS, RANGED_WEAPONS, ARMOR, GEAR, CONSUMABLES, GRENADES, CYBERNETICS, OFFENSIVE_POWERS, SUPPORT_POWERS } = weaponData;
   const size = CARD_SIZES[options.cardSize];
 
   // Build equipment items based on category flags
@@ -627,7 +627,7 @@ const CardPrintView = ({ onClose, weaponData, archetypes, warband }) => {
     ...(options.printConsumables ? CONSUMABLES.map(i => ({ ...i, category: 'consumable' })) : []),
     ...(options.printGrenades && GRENADES ? GRENADES.map(i => ({ ...i, category: 'grenade' })) : []),
     ...(options.printCybernetics ? CYBERNETICS.map(i => ({ ...i, category: 'cybernetic' })) : []),
-    ...(options.printPowers ? POWERS.map(i => ({ ...i, name: i.power, category: 'power' })) : []),
+    ...(options.printPowers ? [...(OFFENSIVE_POWERS || []), ...(SUPPORT_POWERS || [])].map(i => ({ ...i, category: 'power' })) : []),
   ];
 
   // Filter to only warband items if enabled
@@ -734,7 +734,7 @@ const CardPrintView = ({ onClose, weaponData, archetypes, warband }) => {
 
   // Generate critical cards
   const criticalCards = [];
-  const critTypeKey = { bladed: 'critBladed', blunt: 'critBlunt', projectile: 'critProjectile', energy: 'critEnergy', explosive: 'critExplosive', toxic: 'critToxic', static: 'critStatic', broadcast: 'critBroadcast' };
+  const critTypeKey = { bladed: 'critBladed', blunt: 'critBlunt', projectile: 'critProjectile', energy: 'critEnergy', explosive: 'critExplosive', toxic: 'critToxic', static: 'critStatic' };
   if (options.printCriticals && Object.keys(CRITICALS).length > 0) {
     Object.entries(CRITICALS).forEach(([type, data]) => {
       criticalCards.push({

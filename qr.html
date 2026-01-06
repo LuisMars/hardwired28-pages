@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hardwired 28 - Quick Reference 0.6.2-beta</title>
+    <title>Hardwired 28 - Quick Reference 0.6.3-beta</title>
+    <meta property="og:title" content="Hardwired 28 - Quick Reference 0.6.3-beta">
+    <meta property="og:description" content="Corporate cablepunk skirmish wargame">
+    <meta property="og:image" content="http://hardwired28.luismars.com/img/social.png">
+    <meta property="og:url" content="http://hardwired28.luismars.com/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,7 +48,7 @@
         <div class="three-column">
             <div class="column">
 <div><h1>Hardwired 28 - Quick Reference</h1>
-<p><em>0.6.2-beta</em></p>
+<p><em>0.6.3-beta</em></p>
 </div>
 <div><h2>Dice Tiers (DT)</h2>
 <p class="dice-tier">2d4 → 2d6 → 2d8 → 2d10 → 2d12</p>
@@ -258,7 +264,7 @@
         </div>
     </div>
     <div class="page compact">
-        <div class="five-column">
+        <div class="four-column">
             <div class="column">
 <div><h2>Corporate Blessings</h2>
 <table>
@@ -539,10 +545,8 @@
 <td style="text-align: left;"><code>OoA</code>, -2 Injury roll</td>
 </tr>
 </tbody>
-</table></div>
-            </div>
-
-            <div class="column">
+</table>
+</div>
 <div><h2>Criticals: Projectile</h2>
 <table>
 <thead>
@@ -584,8 +588,10 @@
 <td style="text-align: left;"><code>OoA</code>, -2 Injury roll</td>
 </tr>
 </tbody>
-</table>
-</div>
+</table></div>
+            </div>
+
+            <div class="column">
 <div><h2>Criticals: Energy</h2>
 <table>
 <thead>
@@ -670,10 +676,8 @@
 <td style="text-align: left;"><code>OoA</code>, -2 Injury roll</td>
 </tr>
 </tbody>
-</table></div>
-            </div>
-
-            <div class="column">
+</table>
+</div>
 <div><h2>Criticals: Toxic</h2>
 <table>
 <thead>
@@ -755,49 +759,6 @@
 <tr>
 <td style="text-align: center;">6+</td>
 <td style="text-align: left;">Total Corruption</td>
-<td style="text-align: left;"><code>OoA</code>, -2 Injury roll</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div><h2>Criticals: Broadcast</h2>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">d6</th>
-<th style="text-align: left;">Result</th>
-<th style="text-align: left;">Effect</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">1</td>
-<td style="text-align: left;">Overload</td>
-<td style="text-align: left;">+d6 damage</td>
-</tr>
-<tr>
-<td style="text-align: center;">2</td>
-<td style="text-align: left;">Cascade</td>
-<td style="text-align: left;">Hit one additional target within 3"</td>
-</tr>
-<tr>
-<td style="text-align: center;">3</td>
-<td style="text-align: left;">Bandwidth Drain</td>
-<td style="text-align: left;">Target <code>-1 DT</code> <code>Wits</code> permanently</td>
-</tr>
-<tr>
-<td style="text-align: center;">4</td>
-<td style="text-align: left;">Amplify</td>
-<td style="text-align: left;">+d8 damage</td>
-</tr>
-<tr>
-<td style="text-align: center;">5</td>
-<td style="text-align: left;">Firewall Breach</td>
-<td style="text-align: left;">Ignore armor</td>
-</tr>
-<tr>
-<td style="text-align: center;">6+</td>
-<td style="text-align: left;">System Wipe</td>
 <td style="text-align: left;"><code>OoA</code>, -2 Injury roll</td>
 </tr>
 </tbody>
@@ -950,13 +911,16 @@
             const content = document.querySelector('.content');
             if (!content) return;
             const pageWidth = 1122; // 297mm in px at 96dpi
-            const pageHeight = 793; // 210mm in px at 96dpi
             const viewportWidth = window.innerWidth;
-            if (viewportWidth < 980) {
-                const scale = Math.min(1, viewportWidth / pageWidth);
+            // Scale whenever viewport is smaller than page width
+            if (viewportWidth < pageWidth) {
+                const scale = viewportWidth / pageWidth;
                 content.style.setProperty('--page-scale-landscape', scale.toFixed(3));
+                // No centering offset needed when scaling to full width
+                content.style.setProperty('--page-offset', '0px');
             } else {
                 content.style.removeProperty('--page-scale-landscape');
+                content.style.removeProperty('--page-offset');
             }
         }
         window.addEventListener('resize', updatePageScale);

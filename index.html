@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hardwired 28 - Warband Builder</title>
+    <title>Hardwired 28 - Squad Builder</title>
+    <meta property="og:title" content="Hardwired 28 - Squad Builder">
+    <meta property="og:description" content="Corporate cablepunk skirmish wargame">
+    <meta property="og:image" content="http://hardwired28.luismars.com/img/social.png">
+    <meta property="og:url" content="http://hardwired28.luismars.com/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="stylesheet" href="style-base.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/rpg-awesome@0.2.0/css/rpg-awesome.min.css">
@@ -42,7 +48,7 @@
             </div>
         </div>
     </nav>
-    <div id="root"><div class="loading">Loading Warband Builder...</div></div>
+    <div id="root"><div class="loading">Loading Squad Builder...</div></div>
     <script>
         function toggleMenu() {
             const nav = document.querySelector('.app-menu');
@@ -103,7 +109,6 @@
             fetchJson('data/criticals/explosive.json'),
             fetchJson('data/criticals/toxic.json'),
             fetchJson('data/criticals/static.json'),
-            fetchJson('data/criticals/broadcast.json'),
             // Fumbles (3)
             fetchJson('data/fumbles/melee.json'),
             fetchJson('data/fumbles/ranged.json'),
@@ -134,7 +139,7 @@
                 armorLight, armorMedium, armorHeavy,
                 consumables, gear, cybernetics,
                 archetypes, powers,
-                critBladed, critBlunt, critProjectile, critEnergy, critExplosive, critToxic, critStatic, critBroadcast,
+                critBladed, critBlunt, critProjectile, critEnergy, critExplosive, critToxic, critStatic,
                 fumbleMelee, fumbleRanged, fumbleBroadcast,
                 hostCoworkers, hostScrapers, hostFeralCrews, hostWaveCallers, hostStaticWraiths, hostFeralAutomata, hostCableFeeders,
                 injuries, promotions,
@@ -182,7 +187,7 @@
                     // Reference tables
                     CRITICALS: {
                         bladed: critBladed, blunt: critBlunt, projectile: critProjectile, energy: critEnergy,
-                        explosive: critExplosive, toxic: critToxic, static: critStatic, broadcast: critBroadcast,
+                        explosive: critExplosive, toxic: critToxic, static: critStatic,
                     },
                     FUMBLES: { melee: fumbleMelee, ranged: fumbleRanged, broadcast: fumbleBroadcast },
                     HOSTILES: [hostCoworkers, hostScrapers, hostFeralCrews, hostWaveCallers, hostStaticWraiths, hostFeralAutomata, hostCableFeeders].filter(h => h),

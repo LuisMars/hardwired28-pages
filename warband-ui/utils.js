@@ -9,10 +9,10 @@ const LOCALE = window.LOCALE || 'en';
 const TRANSLATIONS = {
   en: {
     // General
-    title: 'HARDWIRED 28', warbandName: 'Warband Name', loading: 'Loading Warband Builder...', spent: 'spent',
+    title: 'HARDWIRED 28', warbandName: 'Squad Name', loading: 'Loading Squad Builder...', spent: 'spent',
     // Modes
     build: 'BUILD', edit: 'EDIT', play: 'PLAY',
-    buildDesc: 'BUILD MODE: Set contract types, stat arrays, and initial equipment. Use this when creating a new warband.',
+    buildDesc: 'BUILD MODE: Set contract types, stat arrays, and initial equipment. Use this when creating a new squad.',
     editDesc: 'EDIT MODE: Modify stats, add effects (injuries/promotions/criticals), manage equipment between games.',
     playDesc: 'PLAY MODE: Track health, use consumables. Contract type and base stats are locked.',
     // Stats
@@ -32,25 +32,25 @@ const TRANSLATIONS = {
     modifiers: 'MODIFIERS', negative: 'Negative', positive: 'Positive', noModifiers: 'No permanent modifiers',
     dead: 'Dead', outOfAction: 'Out of action',
     // Merits
-    merits: 'Merits', next: 'Next',
+    merits: 'Merits', next: 'Next', promotions: 'Promotions', unused: 'Unused', usePromotion: 'Use Promotion',
     // Stash
     stash: 'LOCKER ROOM', stashEmpty: 'Empty - use locker button on items to move here',
     giveTo: 'Give to...', discard: 'Discard', model: 'Model', toStash: 'To Locker',
     // Leader
     leaderDead: 'Leader dead - promote a henchman in Edit mode', leaderSuccessor: 'Leader dead - successor has ascended',
-    makeLeader: 'Make Warband Leader', ascensionBonus: 'Choose ascension bonus:',
+    makeLeader: 'Make Squad Leader', ascensionBonus: 'Choose ascension bonus:',
     bothWeapons: 'Both Weapons', armorTier: '+1 Armor Tier', cancel: 'Cancel',
     // Model card
     emptySlot: 'Empty Slot', addMember: '+ Add Member...', archetype: 'Contract Type...', noArchetype: 'No Contract Type',
-    switchToBuild: 'Switch to Build mode to add members', modelName: 'Model Name', removeFromWarband: 'Remove from warband',
-    choosePower: 'Choose a Power...', max: 'max', base: 'base',
-    randomName: 'Random', randomWarbandName: 'Random Name',
+    switchToBuild: 'Switch to Build mode to add members', modelName: 'Model Name', removeFromWarband: 'Remove from squad', confirmFireMember: 'Remove {name} from squad?', askReimburse: 'Reimburse {cost} subs?',
+    choosePower: 'Choose a Power...', offensivePowers: 'Offensive (vs Wits)', supportPowers: 'Support (vs 2d6)', max: 'max', base: 'base',
+    randomName: 'Random', randomSquadName: 'Random Name',
     // Buttons
-    export: 'Export', import: 'Import', cards: 'Cards', print: 'Print', reset: 'Reset',
-    resetConfirm: 'Reset warband? This cannot be undone.', back: 'Back', backToBuilder: 'Back to Builder',
-    // Multi-warband
-    warband: 'warband', newWarband: 'New', switchWarband: 'Switch', unnamedWarband: 'Unnamed Warband',
-    deleteWarband: 'Delete warband', deleteWarbandConfirm: 'Delete this warband? This cannot be undone.',
+    export: 'Export', import: 'Import', cards: 'Cards', print: 'Print', reset: 'Reset', quickView: 'Quick View',
+    resetConfirm: 'Reset squad? This cannot be undone.', back: 'Back', backToBuilder: 'Back to Builder',
+    // Multi-squad
+    warband: 'squad', newWarband: 'New', switchWarband: 'Switch', unnamedWarband: 'Unnamed Squad',
+    deleteWarband: 'Delete squad', deleteWarbandConfirm: 'Delete this squad? This cannot be undone.',
     preview: 'Preview', options: 'Options',
     // Print modal
     printCards: 'Print Cards', cardSize: 'Card Size', equipmentCards: 'Equipment Cards',
@@ -65,7 +65,7 @@ const TRANSLATIONS = {
     fallback: 'Improvised', powers: 'Powers',
     // Quick reference
     dice: 'Dice', turn: 'Turn', crit: 'Crit', fumble: 'Fumble',
-    turnDesc: 'Move+Action or Action+Move', critDesc: '2x or more = Crit (roll type table)', fumbleDesc: 'Half or less = Fumble',
+    turnDesc: 'Move+Action or Action+Move', critDesc: '2x = max dmg, 3x+ = Crit table', fumbleDesc: 'Defender 3x+ = Fumble',
     // Card labels
     damage: 'DAMAGE', dmg: 'DMG', arm: 'ARM', type: 'TYPE', tier: 'TIER', spawn: 'Spawn', weapon: 'Weapon',
     maxArmor: 'MAX ARMOR', name: 'NAME', vs: 'VS', maxLimit: 'MAX',
@@ -80,7 +80,7 @@ const TRANSLATIONS = {
     // Critical/Fumble card titles
     criticalWord: 'CRITICAL', fumbleWord: 'FUMBLE',
     critBladed: 'BLADED', critBlunt: 'BLUNT', critProjectile: 'PROJECTILE', critEnergy: 'ENERGY',
-    critExplosive: 'EXPLOSIVE', critToxic: 'TOXIC', critStatic: 'STATIC', critBroadcast: 'BROADCAST',
+    critExplosive: 'EXPLOSIVE', critToxic: 'TOXIC', critStatic: 'STATIC',
     fumbleMelee: 'MELEE', fumbleRanged: 'RANGED', fumbleBroadcast: 'BROADCAST',
     // Campaign card titles
     cardSearch: 'Search', cardInterrogate: 'Interrogate', cardInjuries: 'Injuries', cardPromotions: 'Promotions', cardEvidence: 'Evidence',
@@ -88,16 +88,16 @@ const TRANSLATIONS = {
     blessings: 'Blessings', inventory: 'INVENTORY', xp: 'XP',
     // Faction cards
     hostile: 'HOSTILE',
-    // Warband-specific printing
-    warbandOnly: 'Only Warband Items',
+    // Squad-specific printing
+    warbandOnly: 'Only Squad Items',
     excludeCards: 'Exclude cards (comma-separated):',
   },
   es: {
     // General
-    title: 'HARDWIRED 28', warbandName: 'Nombre de Banda', loading: 'Cargando Constructor de Bandas...', spent: 'gastados',
+    title: 'HARDWIRED 28', warbandName: 'Nombre de Plantilla', loading: 'Cargando Constructor de Plantillas...', spent: 'gastados',
     // Modes
     build: 'CREAR', edit: 'EDITAR', play: 'JUGAR',
-    buildDesc: 'MODO CREAR: Define tipos de contrato, matrices de atributos y equipo inicial. Usa esto al crear una nueva banda.',
+    buildDesc: 'MODO CREAR: Define tipos de contrato, matrices de atributos y equipo inicial. Usa esto al crear una nueva plantilla.',
     editDesc: 'MODO EDITAR: Modifica atributos, añade efectos (heridas/ascensos/críticos), gestiona equipo entre partidas.',
     playDesc: 'MODO JUGAR: Rastrea salud, usa consumibles. Tipo de contrato y atributos base bloqueados.',
     // Stats
@@ -117,25 +117,25 @@ const TRANSLATIONS = {
     modifiers: 'MODIFICADORES', negative: 'Negativo', positive: 'Positivo', noModifiers: 'Sin modificadores permanentes',
     dead: 'Muerto', outOfAction: 'Fuera de combate',
     // Merits
-    merits: 'Méritos', next: 'Siguiente',
+    merits: 'Méritos', next: 'Siguiente', promotions: 'Ascensos', unused: 'Sin usar', usePromotion: 'Usar Ascenso',
     // Stash
     stash: 'TAQUILLAS', stashEmpty: 'Vacío - usa el botón de taquilla en objetos para moverlos aquí',
     giveTo: 'Dar a...', discard: 'Descartar', model: 'Modelo', toStash: 'A la Taquilla',
     // Leader
     leaderDead: 'Líder muerto - asciende un secuaz en modo Editar', leaderSuccessor: 'Líder muerto - sucesor ha ascendido',
-    makeLeader: 'Convertir en Líder de Banda', ascensionBonus: 'Elige bonificación de ascenso:',
+    makeLeader: 'Convertir en Líder de Plantilla', ascensionBonus: 'Elige bonificación de ascenso:',
     bothWeapons: 'Ambas Armas', armorTier: '+1 Tier Armadura', cancel: 'Cancelar',
     // Model card
     emptySlot: 'Casilla Vacía', addMember: '+ Añadir Miembro...', archetype: 'Tipo de Contrato...', noArchetype: 'Sin Tipo de Contrato',
-    switchToBuild: 'Cambia a modo Crear para añadir miembros', modelName: 'Nombre del Modelo', removeFromWarband: 'Quitar de la banda',
-    choosePower: 'Elige un Poder...', max: 'máx', base: 'base',
-    randomName: 'Aleatorio', randomWarbandName: 'Nombre Aleatorio',
+    switchToBuild: 'Cambia a modo Crear para añadir miembros', modelName: 'Nombre del Modelo', removeFromWarband: 'Quitar de la plantilla', confirmFireMember: '¿Quitar a {name} de la plantilla?', askReimburse: '¿Reembolsar {cost} subs?',
+    choosePower: 'Elige un Poder...', offensivePowers: 'Ofensivo (vs Astucia)', supportPowers: 'Apoyo (vs 2d6)', max: 'máx', base: 'base',
+    randomName: 'Aleatorio', randomSquadName: 'Nombre Aleatorio',
     // Buttons
-    export: 'Exportar', import: 'Importar', cards: 'Cartas', print: 'Imprimir', reset: 'Reiniciar',
-    resetConfirm: '¿Reiniciar banda? No se puede deshacer.', back: 'Volver', backToBuilder: 'Volver al Constructor',
-    // Multi-warband
-    warband: 'banda', newWarband: 'Nueva', switchWarband: 'Cambiar', unnamedWarband: 'Banda sin nombre',
-    deleteWarband: 'Eliminar banda', deleteWarbandConfirm: '¿Eliminar esta banda? No se puede deshacer.',
+    export: 'Exportar', import: 'Importar', cards: 'Cartas', print: 'Imprimir', reset: 'Reiniciar', quickView: 'Vista Rápida',
+    resetConfirm: '¿Reiniciar plantilla? No se puede deshacer.', back: 'Volver', backToBuilder: 'Volver al Constructor',
+    // Multi-squad
+    warband: 'plantilla', newWarband: 'Nueva', switchWarband: 'Cambiar', unnamedWarband: 'Plantilla sin nombre',
+    deleteWarband: 'Eliminar plantilla', deleteWarbandConfirm: '¿Eliminar esta plantilla? No se puede deshacer.',
     preview: 'Vista Previa', options: 'Opciones',
     // Print modal
     printCards: 'Imprimir Cartas', cardSize: 'Tamaño de Carta', equipmentCards: 'Cartas de Equipo',
@@ -150,7 +150,7 @@ const TRANSLATIONS = {
     fallback: 'Improvisado', powers: 'Poderes',
     // Quick reference
     dice: 'Dados', turn: 'Turno', crit: 'Crítico', fumble: 'Pifia',
-    turnDesc: 'Movimiento+Acción o Acción+Movimiento', critDesc: '2x o más = Crítico (tira tabla de tipo)', fumbleDesc: 'Mitad o menos = Pifia',
+    turnDesc: 'Movimiento+Acción o Acción+Movimiento', critDesc: '2x = daño máx, 3x+ = tabla Crítico', fumbleDesc: 'Defensor 3x+ = Pifia',
     // Card labels
     damage: 'DAÑO', dmg: 'DAÑO', arm: 'ARM', type: 'TIPO', tier: 'NIVEL', spawn: 'Generar', weapon: 'Arma',
     maxArmor: 'ARM. MÁX', name: 'NOMBRE', vs: 'VS', maxLimit: 'MÁX',
@@ -165,7 +165,7 @@ const TRANSLATIONS = {
     // Critical/Fumble card titles
     criticalWord: 'CRÍTICO', fumbleWord: 'PIFIA',
     critBladed: 'CORTANTE', critBlunt: 'CONTUNDENTE', critProjectile: 'PROYECTIL', critEnergy: 'ENERGÍA',
-    critExplosive: 'EXPLOSIVO', critToxic: 'TÓXICO', critStatic: 'ESTÁTICO', critBroadcast: 'EMISIÓN',
+    critExplosive: 'EXPLOSIVO', critToxic: 'TÓXICO', critStatic: 'ESTÁTICO',
     fumbleMelee: 'MELÉ', fumbleRanged: 'DISTANCIA', fumbleBroadcast: 'EMISIÓN',
     // Campaign card titles
     cardSearch: 'Búsqueda', cardInterrogate: 'Interrogar', cardInjuries: 'Heridas', cardPromotions: 'Ascensos', cardEvidence: 'Pruebas',
@@ -173,14 +173,20 @@ const TRANSLATIONS = {
     blessings: 'Bendiciones', inventory: 'INVENTARIO', xp: 'XP',
     // Faction cards
     hostile: 'HOSTIL',
-    // Warband-specific printing
-    warbandOnly: 'Solo Items de la Banda',
+    // Squad-specific printing
+    warbandOnly: 'Solo Items de la Plantilla',
     excludeCards: 'Excluir cartas (separadas por coma):',
   }
 };
 
 // Translation function
-const t = (key) => TRANSLATIONS[LOCALE]?.[key] ?? TRANSLATIONS.en[key] ?? key;
+const t = (key, params = {}) => {
+  let text = TRANSLATIONS[LOCALE]?.[key] ?? TRANSLATIONS.en[key] ?? key;
+  Object.entries(params).forEach(([k, v]) => {
+    text = text.replace(new RegExp(`\\{${k}\\}`, 'g'), v);
+  });
+  return text;
+};
 
 // Get current locale
 const getLocale = () => LOCALE;
@@ -205,6 +211,7 @@ const ICONS = {
   melee: 'ra ra-sword',
   armor: 'ra ra-helmet',
   xp: 'ra ra-trophy',
+  level: 'fa fa-arrow-up',
   save: 'fa fa-floppy-disk',
   load: 'fa fa-folder-open',
   print: 'fa fa-print',

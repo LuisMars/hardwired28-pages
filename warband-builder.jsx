@@ -27,7 +27,8 @@ const WEAPON_DATA = {
   CONSUMABLES: DATA.CONSUMABLES || [],
   GRENADES: DATA.GRENADES || [],
   CYBERNETICS: DATA.CYBERNETICS || [],
-  POWERS: DATA.POWERS || [],
+  OFFENSIVE_POWERS: DATA.OFFENSIVE_POWERS || [],
+  SUPPORT_POWERS: DATA.SUPPORT_POWERS || [],
 };
 
 // Main warband sheet component
@@ -48,6 +49,7 @@ function WarbandSheet() {
     modifiers: [],
     power: null,
     xp: 0,
+    levelUpsSpent: 0,
     ascended: false,
     ascendedBonus: null,
   });
@@ -146,6 +148,7 @@ function WarbandSheet() {
   const urlParams = new URLSearchParams(window.location.search);
   const initialView = urlParams.get('view') === 'cards' ? 'cards' : 'warband';
   const [viewMode, setViewMode] = useState(initialView);
+  const [showQuickView, setShowQuickView] = useState(false);
 
   const updateModel = (i, m) => {
     setWarband(prev => {
@@ -156,6 +159,10 @@ function WarbandSheet() {
   };
 
   const fireModel = (i) => {
+    const model = warband.models[i];
+    const modelName = model.name || `${t('model')} ${i + 1}`;
+    if (!confirm(t('confirmFireMember', { name: modelName }))) return;
+
     setWarband(prev => {
       const model = prev.models[i];
       const equipment = model.equipment || [];
@@ -292,32 +299,32 @@ function WarbandSheet() {
           --wb-play-text: #FFFFFF;
           --wb-text-danger: #B12704;
         }
-        /* Hallucination - ChatGPT pure monochrome */
+        /* Hallucination - ChatGPT with teal accents */
         [data-theme="hallucination"] {
-          --wb-primary: #2F2F2F;
-          --wb-primary-hover: #3A3A3A;
-          --wb-danger: #3A3A3A;
-          --wb-danger-hover: #4A4A4A;
-          --wb-accent: #2F2F2F;
+          --wb-primary: #10A37F;
+          --wb-primary-hover: #0D8A6A;
+          --wb-danger: #EF4444;
+          --wb-danger-hover: #DC2626;
+          --wb-accent: #10A37F;
           --wb-accent-text: #FFFFFF;
           --wb-bg-dark: #212121;
           --wb-bg-darker: #171717;
           --wb-bg-medium: #2A2A2A;
           --wb-bg-medium-hover: #333333;
-          --wb-bg-light: #2A2A2A;
-          --wb-border: transparent;
-          --wb-border-hover: transparent;
-          --wb-border-light: transparent;
+          --wb-bg-light: #343541;
+          --wb-border: #4A4A4A;
+          --wb-border-hover: #5A5A5A;
+          --wb-border-light: #3A3A3A;
           --wb-text-light: #FFFFFF;
           --wb-text-muted: #B8B8B8;
-          --wb-text-secondary: #B8B8B8;
-          --wb-text-disabled: #888888;
+          --wb-text-secondary: #10A37F;
+          --wb-text-disabled: #666666;
           --wb-text-on-light: #FFFFFF;
           --wb-text-on-primary: #FFFFFF;
           --wb-play: #2A2A2A;
           --wb-play-text: #FFFFFF;
           --wb-text-dark: #FFFFFF;
-          --wb-text-danger: #FFFFFF;
+          --wb-text-danger: #EF4444;
         }
         /* Utility classes */
         .wb-bg-dark { background-color: var(--wb-bg-dark); }
@@ -367,6 +374,7 @@ function WarbandSheet() {
         .wb-bg-accent { background-color: var(--wb-accent); }
         .wb-text-accent { color: var(--wb-accent-text); }
         .wb-border-accent { border-color: var(--wb-accent); }
+        .wb-border-primary { border-color: var(--wb-primary); }
         /* Hallucination theme overrides - force dark backgrounds */
         [data-theme="hallucination"] .bg-white {
           background-color: #212121 !important;
@@ -564,7 +572,7 @@ function WarbandSheet() {
             <button
               onClick={() => setWarband({ ...warband, name: generateWarbandName() })}
               className="wb-bg-medium-hover hover:wb-bg-medium-hover wb-text-light px-2 py-1 rounded border wb-border-hover text-sm"
-              title={t('randomWarbandName')}
+              title={t('randomSquadName')}
             >
               <i className="fa fa-dice" />
             </button>
@@ -661,6 +669,35 @@ function WarbandSheet() {
           {mode === 'play' && t('playDesc')}
         </div>
 
+        {/* Play Mode Summary */}
+        {mode === 'play' && (() => {
+          // Triangular number thresholds: 1, 3, 6, 10, 15, 21, 28, 36, 45, 55...
+          const countPromotions = (xp) => {
+            let count = 0, threshold = 1, step = 2;
+            while (xp >= threshold) { count++; threshold += step; step++; }
+            return count;
+          };
+          const totalMerits = warband.models.reduce((sum, m) => sum + (m.xp || 0), 0);
+          const totalPromotions = warband.models.reduce((sum, m) => sum + countPromotions(m.xp || 0), 0);
+          const spentPromotions = warband.models.reduce((sum, m) => sum + (m.levelUpsSpent || 0), 0);
+          const unusedPromotions = Math.max(0, totalPromotions - spentPromotions);
+          return (
+            <div className="rounded-lg p-3 text-sm border wb-border wb-bg-light flex items-center gap-4 flex-wrap">
+              <span className="font-bold flex items-center gap-1">
+                <Icon name="xp" /> {t('merits')}: {totalMerits}
+              </span>
+              <span className="font-bold wb-text-primary flex items-center gap-1">
+                <Icon name="level" /> {t('promotions')}: {totalPromotions}
+              </span>
+              {unusedPromotions > 0 && (
+                <span className="font-bold wb-text-danger flex items-center gap-1">
+                  <Icon name="level" /> {t('unused')}: {unusedPromotions}
+                </span>
+              )}
+            </div>
+          );
+        })()}
+
         {/* Models */}
         <div className={`grid gap-3 sm:gap-4 ${mode === 'play' ? 'grid-cols-1 lg:grid-cols-2 xl:grid-cols-3' : 'grid-cols-1 md:grid-cols-2 xl:grid-cols-3'}`}>
           {warband.models.map((model, i) => (
@@ -679,7 +716,8 @@ function WarbandSheet() {
               hasAscendedLeader={hasAscendedLeader}
               archetypes={ARCHETYPES}
               weaponData={WEAPON_DATA}
-              powers={WEAPON_DATA.POWERS}
+              offensivePowers={WEAPON_DATA.OFFENSIVE_POWERS}
+              supportPowers={WEAPON_DATA.SUPPORT_POWERS}
             />
           ))}
           <StashPanel
@@ -771,6 +809,81 @@ function WarbandSheet() {
         </div>
       </div>
     </div>
+
+    {/* Quick View FAB - only in play mode */}
+    {mode === 'play' && (
+      <>
+        <button
+          onClick={() => setShowQuickView(!showQuickView)}
+          className="fixed bottom-4 right-4 w-14 h-14 rounded-full wb-bg-primary wb-text-on-primary shadow-lg hover:wb-bg-primary-hover flex items-center justify-center text-xl font-bold z-50 print:hidden"
+          title={t('quickView')}
+        >
+          <i className="fa fa-users" />
+        </button>
+
+        {/* Quick View Panel */}
+        {showQuickView && (
+          <div className="fixed bottom-20 right-4 w-80 max-h-[70vh] overflow-y-auto rounded-lg shadow-xl border-2 wb-border-primary wb-bg-light z-50 print:hidden">
+            <div className="wb-bg-primary wb-text-on-primary p-2 flex items-center justify-between sticky top-0">
+              <span className="font-bold">{t('quickView')}</span>
+              <button onClick={() => setShowQuickView(false)} className="hover:opacity-70">
+                <Icon name="remove" />
+              </button>
+            </div>
+            <div className="p-2 space-y-2">
+              {warband.models.filter(m => m.archetype).map((model, i) => {
+                const arch = ARCHETYPES[model.archetype];
+                const baseHealth = model.baseHealth || 8;
+                const healthMod = arch?.healthMod || 0;
+                const maxHealth = baseHealth + healthMod;
+                const baseMove = model.baseMove || 6;
+                const armor = (model.equipment || []).find(e => e.id?.includes('armor') || e.name?.toLowerCase().includes('armor'));
+                const weapons = (model.equipment || []).filter(e =>
+                  e.id?.includes('melee') || e.id?.includes('ranged') ||
+                  e.damage || e.name?.toLowerCase().includes('weapon')
+                );
+                const statArray = model.statArray === 'Specialist' || model.statArray === 'Technician';
+                const getCom = () => statArray ? (model.technicianStat === 'combat' ? '2d8' : model.technicianWeakStat === 'combat' ? '2d4' : '2d6') : '2d6';
+                const getDef = () => statArray ? (model.technicianStat === 'defense' ? '2d8' : model.technicianWeakStat === 'defense' ? '2d4' : '2d6') : '2d6';
+                const getWit = () => statArray ? (model.technicianStat === 'wits' ? '2d8' : model.technicianWeakStat === 'wits' ? '2d4' : '2d6') : '2d6';
+
+                return (
+                  <div
+                    key={i}
+                    className={`p-2 rounded border wb-border text-xs ${
+                      model.outOfAction ? 'opacity-50 wb-bg-medium' : 'bg-white'
+                    }`}
+                  >
+                    <div className="flex items-center gap-2 mb-1">
+                      <span className="font-bold truncate flex-1">
+                        {model.name || `${t('model')} ${i + 1}`}
+                      </span>
+                      <span className={`font-bold ${(model.currentHealth ?? maxHealth) <= maxHealth / 2 ? 'wb-text-danger' : ''}`}>
+                        <Icon name="health" className="mr-0.5" />
+                        {model.currentHealth ?? maxHealth}/{maxHealth}
+                      </span>
+                      {model.outOfAction && <Icon name="dead" className="wb-text-danger" />}
+                    </div>
+                    <div className="flex gap-2 text-[10px] wb-text-muted">
+                      <span title="Combat">C:{getCom()}</span>
+                      <span title="Defense">D:{getDef()}</span>
+                      <span title="Wits">W:{getWit()}</span>
+                      <span title="Move"><Icon name="move" className="mr-0.5" />{baseMove}"</span>
+                      {armor && <span title="Armor"><Icon name="armor" className="mr-0.5" />{armor.name?.split(' ')[0]}</span>}
+                    </div>
+                    {weapons.length > 0 && (
+                      <div className="text-[10px] wb-text-muted mt-1 truncate">
+                        {weapons.map(w => w.name?.split(' ')[0] || w.name).join(', ')}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        )}
+      </>
+    )}
     </>
   );
 }

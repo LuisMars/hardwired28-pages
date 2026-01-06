@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hardwired 28 - Reglas Básicas 0.6.2-beta</title>
+    <title>Hardwired 28 - Reglas Básicas 0.6.3-beta</title>
+    <meta property="og:title" content="Hardwired 28 - Reglas Básicas 0.6.3-beta">
+    <meta property="og:description" content="Juego de escaramuzas cablepunk corporativo">
+    <meta property="og:image" content="http://hardwired28.luismars.com/img/social.png">
+    <meta property="og:url" content="http://hardwired28.luismars.com/es/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -49,7 +55,7 @@
 
 
 <h1 id="hardwired-28_1">Hardwired 28</h1>
-<p><em>0.6.2-beta</em> por LuisMars</p>
+<p><em>0.6.3-beta</em> por LuisMars</p>
 <h2 id="el-gran-complejo">El Gran Complejo</h2>
 <p>Una megaestructura vertical de tres kilómetros de altura. Los cables cuelgan de cada superficie. Se agrupan en troncos más gruesos que cuerpos, serpentean por las paredes, se enrollan bajo los pies. El Complejo iba a ser el paraíso. Ahora se pudre.</p>
 <p>La conexión por cable es sagrada. Lo inalámbrico es herejía. Desde el Anclaje, lo inalámbrico significa excomunión. Las deudas se heredan. Los hijos nacen suscritos.</p>
@@ -1101,7 +1107,7 @@
 <h2 id="ronda">Ronda</h2>
 <ol>
 <li>Cada jugador tira <strong>Bendiciones Corporativas</strong> (d8 tres veces)</li>
-<li>Añade una Ficha de Activación por cada miniatura que no esté <code>FdC</code> a una bolsa común (colores distintos por facción)</li>
+<li>Añade Fichas de Activación a una bolsa común: una por miniatura de jugador que no esté <code>FdC</code>, una por grupo de hostiles desplegado (colores distintos por facción)</li>
 <li>Saca una ficha: esa facción activa una miniatura (Hostiles y Compañeros siguen su tabla de IA)</li>
 <li>Cada activación: <strong>Movimiento + Acción</strong> O <strong>Acción + Movimiento</strong></li>
 <li>Repite desde el 3 hasta que todas las miniaturas hayan activado</li>
@@ -1371,20 +1377,10 @@
 <ul>
 <li>Acción para canalizar (una vez por activación)</li>
 <li>Sin límite de alcance (requiere LdV)</li>
-<li>Tira <code>Astucia</code> vs <code>Astucia</code> del objetivo</li>
-<li>Éxito con daño: inflige daño directo (sin tirada de <code>Combate</code>)</li>
-</ul>
-
-
-<h2 id="interferencia">Interferencia</h2>
-<p>Por cada fallo: <code>-1</code> acumulativo a la siguiente canalización. Se reinicia tras pifia.</p>
-<h2 id="sobreemisión">Sobreemisión</h2>
-<p>Declara antes de tirar. Canaliza a <code>-1 ND</code> (se acumula con Interferencia). Con éxito: +d4 a efectos numéricos o dobla efectos no numéricos.</p>
-<h2 id="críticos-y-pifias">Críticos y Pifias</h2>
-<p>Doble activa crítico/pifia; triple o más añade modificadores.</p>
-<ul>
-<li><strong>Crítico:</strong> tira en la tabla de Críticos <code>Emisión</code></li>
-<li><strong>Pifia:</strong> tira en la tabla de Pifias <code>Emisión</code></li>
+<li>Poderes ofensivos: tira <code>Astucia</code> vs <code>Astucia</code> del objetivo</li>
+<li>Poderes de apoyo: tira <code>Astucia</code> vs 2d6 (el objetivo debe ser aliado)</li>
+<li>Triple+: el efecto se aplica a todos los objetivos válidos a 3"</li>
+<li>Defensor triplica o más: tira en la tabla de Pifias <code>Emisión</code></li>
 </ul>
 <blockquote>
 <p>"Cada cable es una correa. Cada peaje, un collar. Los cortaremos todos."<br />
@@ -1392,11 +1388,11 @@
 </blockquote>
 
 
-<h2 id="poderes">Poderes</h2>
+<h2 id="poderes-ofensivos">Poderes Ofensivos</h2>
 <table>
 <thead>
 <tr>
-<th style="text-align: center;">d6</th>
+<th style="text-align: center;">d4</th>
 <th style="text-align: left;">Poder</th>
 <th style="text-align: left;">Efecto</th>
 </tr>
@@ -1404,33 +1400,55 @@
 <tbody>
 <tr>
 <td style="text-align: center;">1</td>
-<td style="text-align: left;">Estallido Estático</td>
-<td style="text-align: left;">d8 daño <code>Emisión</code>, ignora armadura</td>
+<td style="text-align: left;">Interferencia</td>
+<td style="text-align: left;"><code>-1 ND</code> todas las tiradas hasta la siguiente activación</td>
 </tr>
 <tr>
 <td style="text-align: center;">2</td>
-<td style="text-align: left;">Empuje Resonante</td>
-<td style="text-align: left;">Empuja al objetivo d6" en cualquier dirección</td>
-</tr>
-<tr>
-<td style="text-align: center;">3</td>
-<td style="text-align: left;">Bloqueo de Señal</td>
-<td style="text-align: left;"><code>-1 ND</code> a todas las tiradas hasta la siguiente activación</td>
-</tr>
-<tr>
-<td style="text-align: center;">4</td>
-<td style="text-align: left;">Trampa Neural</td>
-<td style="text-align: left;">El objetivo recibe d6 de daño si se mueve en su siguiente activación</td>
-</tr>
-<tr>
-<td style="text-align: center;">5</td>
 <td style="text-align: left;">Bloqueo de Arma</td>
 <td style="text-align: left;">El objetivo suelta un arma</td>
 </tr>
 <tr>
-<td style="text-align: center;">6</td>
-<td style="text-align: left;">Latigazo Mental</td>
-<td style="text-align: left;">El objetivo ataca a la miniatura más cercana (aliada o enemiga)</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Trampa Neural</td>
+<td style="text-align: left;">d6 daño (ignora armadura) si el objetivo se mueve en su siguiente activación</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Empuje Resonante</td>
+<td style="text-align: left;">Empuja al objetivo d6" en cualquier dirección</td>
+</tr>
+</tbody>
+</table>
+<h2 id="poderes-de-apoyo">Poderes de Apoyo</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">d4</th>
+<th style="text-align: left;">Poder</th>
+<th style="text-align: left;">Efecto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Campo de Fuerza</td>
+<td style="text-align: left;"><code>+2 ND</code> <code>Defensa</code> vs a distancia hasta la siguiente activación</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Enfoque</td>
+<td style="text-align: left;">Añade 2 Fichas de Activación del objetivo a la bolsa</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Intercambio</td>
+<td style="text-align: left;">Intercambia posiciones con el objetivo (el canalizador ve a ambos, a 12" o menos)</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Ping</td>
+<td style="text-align: left;">El objetivo ignora cobertura y ve a través de paredes hasta la siguiente activación</td>
 </tr>
 </tbody>
 </table>
@@ -1758,52 +1776,6 @@
 <p>"La contaminación de señal comienza en el sitio de la herida. No existe procedimiento de descontaminación."<br />
 <strong>Advertencia de Buscaondas</strong></p>
 </blockquote>
-<h2 id="crítico-emisión">Crítico Emisión</h2>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">d6</th>
-<th style="text-align: left;">Resultado</th>
-<th style="text-align: left;">Efecto</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">1</td>
-<td style="text-align: left;">Sobrecarga</td>
-<td style="text-align: left;">+d6 de daño</td>
-</tr>
-<tr>
-<td style="text-align: center;">2</td>
-<td style="text-align: left;">Cascada</td>
-<td style="text-align: left;">Impacta un objetivo adicional a 3"</td>
-</tr>
-<tr>
-<td style="text-align: center;">3</td>
-<td style="text-align: left;">Drenaje de Banda</td>
-<td style="text-align: left;"><code>-1 ND</code> <code>Astucia</code> permanente</td>
-</tr>
-<tr>
-<td style="text-align: center;">4</td>
-<td style="text-align: left;">Amplificar</td>
-<td style="text-align: left;">+d8 de daño</td>
-</tr>
-<tr>
-<td style="text-align: center;">5</td>
-<td style="text-align: left;">Cortafuegos Roto</td>
-<td style="text-align: left;">Ignora armadura</td>
-</tr>
-<tr>
-<td style="text-align: center;">6+</td>
-<td style="text-align: left;">Borrado de Sistema</td>
-<td style="text-align: left;"><code>FdC</code>, -2 a la tirada de Heridas</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>"La señal habla. La carne escucha. La mente se quiebra."<br />
-<strong>Fragmento de Transmisión Desanclada</strong></p>
-</blockquote>
 
 
 
@@ -2020,7 +1992,7 @@
 <li>COM 2d4, DEF 2d6, AST 2d8</li>
 <li>Aguijón (5): d4 <code>Energía</code>, <code>-1 ND</code> en la siguiente activación</li>
 <li>Chaleco Acolchado (7): 1 reducción, reduce <code>Empuje</code> en 1"</li>
-<li><em>Solo <code>CC</code>, puede <code>Emitir</code></em></li>
+<li><em>Solo <code>CC</code>, puede <code>Canalizar</code></em></li>
 </ul>
 
     </div>
@@ -2036,28 +2008,18 @@
             const content = document.querySelector('.content');
             if (!content) return;
             const pageWidth = 559; // 148mm in px at 96dpi
-            const pageHeight = 793; // 210mm in px at 96dpi
             const viewportWidth = window.innerWidth;
-            if (viewportWidth < 768) {
+            // Match CSS breakpoint: max-width: 980px means <= 980
+            if (viewportWidth <= 980) {
                 const scale = Math.min(1, viewportWidth / pageWidth);
                 content.style.setProperty('--page-scale', scale.toFixed(3));
-                // Adjust layout since transform doesn't affect document flow
+                // Calculate centering offset
                 const scaledWidth = pageWidth * scale;
-                const scaledHeight = pageHeight * scale;
-                document.querySelectorAll('.page').forEach(page => {
-                    page.style.width = pageWidth + 'px';
-                    page.style.height = pageHeight + 'px';
-                    page.style.marginRight = -(pageWidth - scaledWidth) + 'px';
-                    page.style.marginBottom = -(pageHeight - scaledHeight) + 16 + 'px';
-                });
+                const leftOffset = (viewportWidth - scaledWidth) / 2;
+                content.style.setProperty('--page-offset', leftOffset + 'px');
             } else {
                 content.style.removeProperty('--page-scale');
-                document.querySelectorAll('.page').forEach(page => {
-                    page.style.width = '';
-                    page.style.height = '';
-                    page.style.marginRight = '';
-                    page.style.marginBottom = '';
-                });
+                content.style.removeProperty('--page-offset');
             }
         }
         window.addEventListener('resize', updatePageScale);
