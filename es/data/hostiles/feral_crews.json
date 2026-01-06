@@ -1,16 +1,16 @@
 {
   "table_name": "Bandas Salvajes",
   "source": "07_hostiles.md",
-  "special_rule": "**Jauría**: Carga o Ataca con `+1 DT` `Combate`",
+  "special_rule": "**Jauría**: Ataca con `+1 DT` `Combate`",
   "units": {
     "columns": ["d6", "Name", "Spawn", "Combat", "Defense", "Wits", "Health", "Move", "Weapon"],
     "align": ["center", "left", "center", "center", "center", "center", "center", "center", "left"],
     "display_columns": ["d6", "Nombre", "#", "COM", "DEF", "AST", "PV", "MOV", "Arma"],
     "items": [
-      {"roll": 1, "name": "Cría", "spawn": "8", "combat": "2d4", "defense": "2d4", "wits": "2d4", "health": 6, "move": "4\"", "weapon": "Daga (`Cortante`, d4, CC)"},
+      {"roll": 1, "name": "Cría", "spawn": "8", "combat": "2d4", "defense": "2d4", "wits": "2d4", "health": 6, "move": "4\"", "weapon": "Pistola Casera (`Proyectil`, d4, Disparo)"},
       {"roll": 2, "name": "Matón", "spawn": "6", "combat": "2d8", "defense": "2d6", "wits": "2d4", "health": 8, "move": "4\"", "weapon": "Machete (`Cortante`, d6, CC)"},
       {"roll": 3, "name": "Tirador", "spawn": "3", "combat": "2d6", "defense": "2d6", "wits": "2d4", "health": 10, "move": "4\"", "weapon": "Escopeta (`Proyectil`, d6, Disparo)"},
-      {"roll": 4, "name": "Antorcha", "spawn": "2", "combat": "2d6", "defense": "2d6", "wits": "2d4", "health": 12, "move": "4\"", "weapon": "Lanzallamas (`Energía`, d6, Disparo)"},
+      {"roll": 4, "name": "Antorcha", "spawn": "2", "combat": "2d6", "defense": "2d6", "wits": "2d4", "health": 12, "move": "4\"", "weapon": "Puño de Fuego (`Energía`, d6, CC)"},
       {"roll": 5, "name": "Pesado", "spawn": "1", "combat": "2d10", "defense": "2d6", "wits": "2d4", "health": 12, "move": "4\"", "weapon": "Machete Pesado (`Cortante`, d8, CC)"},
       {"roll": 6, "name": "Jefe", "spawn": "1", "combat": "2d10", "defense": "2d6", "wits": "2d6", "health": 14, "move": "4\"", "weapon": "Puño Demoledor (`Contundente`, d10, CC)"}
     ]
@@ -20,10 +20,9 @@
     "align": ["center", "center", "center", "center"],
     "display_columns": ["d6", "Sin LdV", "Con LdV", "Trabado"],
     "items": [
-      {"roll": "1-2", "no_los": "Patrullar", "has_los": "Cargar", "engaged": "Atacar"},
-      {"roll": "3-4", "no_los": "Reagrupar", "has_los": "Cargar", "engaged": "Atacar"},
-      {"roll": "5", "no_los": "Patrullar", "has_los": "Cargar", "engaged": "Frenesí"},
-      {"roll": "6", "no_los": "Jauría", "has_los": "Jauría", "engaged": "Frenesí"}
+      {"roll": "1-4", "no_los": "Patrullar", "has_los": "Atacar", "engaged": "Atacar"},
+      {"roll": "5", "no_los": "Patrullar", "has_los": "Jauría", "engaged": "Jauría"},
+      {"roll": "6", "no_los": "Reagrupar", "has_los": "Atacar", "engaged": "Frenesí"}
     ]
   }
 }

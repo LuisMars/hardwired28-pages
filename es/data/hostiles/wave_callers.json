@@ -7,7 +7,7 @@
     "align": ["center", "left", "center", "center", "center", "center", "center", "center", "left"],
     "display_columns": ["d6", "Nombre", "#", "COM", "DEF", "AST", "PV", "MOV", "Arma"],
     "items": [
-      {"roll": 1, "name": "Iniciado", "spawn": "10", "combat": "2d4", "defense": "2d4", "wits": "2d4", "health": 6, "move": "5\"", "weapon": "Cable Cortado (`Cortante`, d4, CC)"},
+      {"roll": 1, "name": "Iniciado", "spawn": "10", "combat": "2d4", "defense": "2d4", "wits": "2d4", "health": 6, "move": "5\"", "weapon": "Chispeador (`Energía`, d4, Disparo)"},
       {"roll": 2, "name": "Injertado de Antena", "spawn": "7", "combat": "2d6", "defense": "2d4", "wits": "2d4", "health": 8, "move": "4\"", "weapon": "Garras de Señal (`Estático`, d4, CC)"},
       {"roll": 3, "name": "Converso", "spawn": "3", "combat": "2d6", "defense": "2d6", "wits": "2d6", "health": 10, "move": "5\"", "weapon": "Pistola de Arco (`Energía`, d4, Disparo)"},
       {"roll": 4, "name": "Sacerdote de Frecuencia", "spawn": "2", "combat": "2d6", "defense": "2d4", "wits": "2d8", "health": 12, "move": "5\"", "weapon": "Rayo de Onda (`Emisión`, d6, Poder)"},
@@ -20,10 +20,9 @@
     "align": ["center", "center", "center", "center"],
     "display_columns": ["d6", "Sin LdV", "Con LdV", "Trabado"],
     "items": [
-      {"roll": "1-2", "no_los": "Patrullar", "has_los": "Atacar", "engaged": "Atacar"},
-      {"roll": "3-4", "no_los": "Reagrupar", "has_los": "Cargar", "engaged": "Atacar"},
-      {"roll": "5", "no_los": "Reagrupar", "has_los": "Atacar", "engaged": "Frenesí"},
-      {"roll": "6", "no_los": "Emitir", "has_los": "Emitir", "engaged": "Frenesí"}
+      {"roll": "1-4", "no_los": "Patrullar", "has_los": "Atacar", "engaged": "Atacar"},
+      {"roll": "5", "no_los": "Emitir", "has_los": "Emitir", "engaged": "Atacar"},
+      {"roll": "6", "no_los": "Reagrupar", "has_los": "Atacar", "engaged": "Frenesí"}
     ]
   }
 }

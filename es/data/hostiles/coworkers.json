@@ -7,12 +7,12 @@
     "align": ["center", "left", "center", "center", "center", "center", "center", "center", "left"],
     "display_columns": ["d6", "Nombre", "#", "COM", "DEF", "AST", "PV", "MOV", "Arma"],
     "items": [
-      {"roll": 1, "name": "Currante", "spawn": "10", "combat": "2d4", "defense": "2d4", "wits": "2d10", "health": 8, "move": "4\"", "weapon": "Puños Cansados (`Contundente`, d4, CC)"},
-      {"roll": 2, "name": "Eventual", "spawn": "7", "combat": "2d4", "defense": "2d4", "wits": "2d10", "health": 8, "move": "5\"", "weapon": "Cúter (`Cortante`, d4, CC)"},
+      {"roll": 1, "name": "Currante", "spawn": "6", "combat": "2d4", "defense": "2d4", "wits": "2d10", "health": 8, "move": "4\"", "weapon": "Puños Cansados (`Contundente`, d4, CC)"},
+      {"roll": 2, "name": "Eventual", "spawn": "5", "combat": "2d4", "defense": "2d4", "wits": "2d10", "health": 8, "move": "5\"", "weapon": "Bengala de Emergencia (`Energía`, d4, Disparo)"},
       {"roll": 3, "name": "Viajero", "spawn": "4", "combat": "2d4", "defense": "2d6", "wits": "2d8", "health": 8, "move": "7\"", "weapon": "Bastón (`Contundente`, d4, CC)"},
-      {"roll": 4, "name": "Administrativo", "spawn": "2", "combat": "2d4", "defense": "2d6", "wits": "2d8", "health": 10, "move": "5\"", "weapon": "Punzón (`Cortante`, d4, CC)"},
-      {"roll": 5, "name": "Mando Intermedio", "spawn": "1", "combat": "2d6", "defense": "2d6", "wits": "2d6", "health": 10, "move": "5\"", "weapon": "Porra Eléctrica (`Estático`, d6, CC)"},
-      {"roll": 6, "name": "Asistente del Gerente Regional", "spawn": "1", "combat": "2d6", "defense": "2d6", "wits": "2d6", "health": 8, "move": "6\"", "weapon": "Pistola Oculta (`Proyectil`, d4, Disparo)"}
+      {"roll": 4, "name": "Administrativo", "spawn": "3", "combat": "2d4", "defense": "2d6", "wits": "2d8", "health": 10, "move": "5\"", "weapon": "Pistola Aturdidora (`Energía`, d4, Disparo)"},
+      {"roll": 5, "name": "Mando Intermedio", "spawn": "2", "combat": "2d8", "defense": "2d8", "wits": "2d6", "health": 10, "move": "5\"", "weapon": "Porra Eléctrica (`Estático`, d6, CC)"},
+      {"roll": 6, "name": "Asistente del Gerente Regional", "spawn": "2", "combat": "2d10", "defense": "2d8", "wits": "2d6", "health": 8, "move": "6\"", "weapon": "Pistola Oculta (`Proyectil`, d4, Disparo)"}
     ]
   },
   "behavior": {
@@ -21,10 +21,9 @@
     "align": ["center", "center", "center", "center"],
     "display_columns": ["d6", "Sin LdV", "Con LdV", "Trabado"],
     "items": [
-      {"roll": "1-2", "no_los": "Patrullar", "has_los": "Huir", "engaged": "Huir"},
-      {"roll": "3-4", "no_los": "Patrullar", "has_los": "Esperar", "engaged": "Esperar"},
-      {"roll": "5", "no_los": "Cobertura", "has_los": "Cobertura", "engaged": "Huir"},
-      {"roll": "6", "no_los": "Cooperar", "has_los": "Cooperar", "engaged": "Cooperar"}
+      {"roll": "1-4", "no_los": "Esperar", "has_los": "Esperar", "engaged": "Huir"},
+      {"roll": "5", "no_los": "Cooperar", "has_los": "Cooperar", "engaged": "Cooperar"},
+      {"roll": "6", "no_los": "Huir", "has_los": "Huir", "engaged": "Huir"}
     ]
   },
   "behavior_attacked": {
@@ -33,10 +32,9 @@
     "align": ["center", "center", "center", "center"],
     "display_columns": ["d6", "Sin LdV", "Con LdV", "Trabado"],
     "items": [
-      {"roll": "1-2", "no_los": "Huir", "has_los": "Huir", "engaged": "Huir"},
-      {"roll": "3-4", "no_los": "Huir", "has_los": "Cobertura", "engaged": "Atacar"},
-      {"roll": "5", "no_los": "Huir", "has_los": "Huir", "engaged": "Huir"},
-      {"roll": "6", "no_los": "Cobertura", "has_los": "Cobertura", "engaged": "Atacar"}
+      {"roll": "1-4", "no_los": "Patrullar", "has_los": "Atacar", "engaged": "Atacar"},
+      {"roll": "5", "no_los": "Patrullar", "has_los": "Cobertura", "engaged": "Atacar"},
+      {"roll": "6", "no_los": "Huir", "has_los": "Huir", "engaged": "Huir"}
     ]
   }
 }

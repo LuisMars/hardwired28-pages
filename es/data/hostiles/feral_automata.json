@@ -10,7 +10,7 @@
       {"roll": 1, "name": "Enjambre de Mantenimiento", "spawn": "8", "combat": "2d4", "defense": "2d4", "wits": "2d4", "health": 6, "move": "6\"", "weapon": "Mandíbulas Cortantes (`Cortante`, d4, CC)"},
       {"roll": 2, "name": "Dron de Seguridad", "spawn": "6", "combat": "2d6", "defense": "2d6", "wits": "2d4", "health": 8, "move": "4\"", "weapon": "Carabina de Pulso (`Energía`, d6, Disparo)"},
       {"roll": 3, "name": "Unidad de Objetivo", "spawn": "3", "combat": "2d6", "defense": "2d6", "wits": "2d8", "health": 10, "move": "4\"", "weapon": "Lanza Neural (`Energía`, d8, Disparo)"},
-      {"roll": 4, "name": "Unidad Pesada", "spawn": "2", "combat": "2d8", "defense": "2d8", "wits": "2d4", "health": 12, "move": "3\"", "weapon": "Bláster Montado (`Energía`, d8, Disparo)"},
+      {"roll": 4, "name": "Unidad Pesada", "spawn": "2", "combat": "2d8", "defense": "2d8", "wits": "2d4", "health": 12, "move": "3\"", "weapon": "Garra Trituradora (`Contundente`, d8, CC)"},
       {"roll": 5, "name": "Cazador-Asesino", "spawn": "1", "combat": "2d8", "defense": "2d6", "wits": "2d6", "health": 12, "move": "6\"", "weapon": "Hojas Trituradoras (`Cortante`, d6, CC)"},
       {"roll": 6, "name": "Plataforma de Defensa", "spawn": "1", "combat": "2d10", "defense": "2d6", "wits": "2d4", "health": 14, "move": "3\"", "weapon": "Guadaña de Arco (`Energía`, d10, CC)"}
     ]
@@ -20,10 +20,9 @@
     "align": ["center", "center", "center", "center"],
     "display_columns": ["d6", "Sin LdV", "Con LdV", "Trabado"],
     "items": [
-      {"roll": "1-2", "no_los": "Esperar", "has_los": "Atacar", "engaged": "Atacar"},
-      {"roll": "3-4", "no_los": "Patrullar", "has_los": "Cargar", "engaged": "Atacar"},
-      {"roll": "5", "no_los": "Esperar", "has_los": "Atacar", "engaged": "Frenesí"},
-      {"roll": "6", "no_los": "Patrullar", "has_los": "Cargar", "engaged": "Frenesí"}
+      {"roll": "1-4", "no_los": "Patrullar", "has_los": "Atacar", "engaged": "Atacar"},
+      {"roll": "5", "no_los": "Esperar", "has_los": "Esperar", "engaged": "Atacar"},
+      {"roll": "6", "no_los": "Reagrupar", "has_los": "Atacar", "engaged": "Frenesí"}
     ]
   }
 }

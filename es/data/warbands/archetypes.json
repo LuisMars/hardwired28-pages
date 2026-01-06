@@ -5,13 +5,13 @@
   "align": ["left", "center", "center", "center", "center", "left", "center"],
   "display_columns": ["Tipo de Contrato", "Salud", "Mov", "Armas", "Armadura Máx", "Especial", "Máx"],
   "items": [
-    {"contract_type": "`Jefe`", "health": "20", "move": "4\"", "weapons": "Ambas", "max_armor": "Pesada", "special": "`+1 ND` a un atributo", "max": "*"},
-    {"contract_type": "`Bruto`", "health": "20", "move": "3\"", "weapons": "CC", "max_armor": "Pesada", "special": "-", "max": "2"},
-    {"contract_type": "`Veterano`", "health": "14", "move": "4\"", "weapons": "Ambas", "max_armor": "Media", "special": "Inmune a `Huida`", "max": "2"},
-    {"contract_type": "`Tirador`", "health": "16", "move": "4\"", "weapons": "Disparo", "max_armor": "Media", "special": "`Apuntar` es acción gratuita", "max": "2"},
-    {"contract_type": "`Explorador`", "health": "12", "move": "6\"", "weapons": "Disparo", "max_armor": "Ligera", "special": "Avanza 3\" tras desplegar", "max": "2"},
-    {"contract_type": "`Zelote`", "health": "12", "move": "5\"", "weapons": "CC", "max_armor": "Ligera", "special": "+2\" Mov si acaba `Trabado`", "max": "2"},
-    {"contract_type": "`Agente`", "health": "16", "move": "4\"", "weapons": "Ambas", "max_armor": "Ligera", "special": "Repite `Buscar` e `Interrogar` fallidos", "max": "2"},
-    {"contract_type": "`Emisor`", "health": "16", "move": "4\"", "weapons": "CC", "max_armor": "Ligera", "special": "Puede `Canalizar`", "max": "1"}
+    {"contract_type": "`Jefe`", "health": "16", "move": "4\"", "weapons": "Ambas", "max_armor": "Pesada", "special": "`+1 ND` a un atributo", "max": "*"},
+    {"contract_type": "`Bruto`", "health": "14", "move": "3\"", "weapons": "CC", "max_armor": "Pesada", "special": "+1 daño CC, ignora penalización de movimiento de armadura", "max": "2"},
+    {"contract_type": "`Veterano`", "health": "13", "move": "4\"", "weapons": "Ambas", "max_armor": "Media", "special": "`+1 ND` `Defensa` bajo mitad de `Salud`", "max": "2"},
+    {"contract_type": "`Tirador`", "health": "14", "move": "4\"", "weapons": "Disparo", "max_armor": "Media", "special": "Sin `-1 ND` por moverse al disparar", "max": "2"},
+    {"contract_type": "`Explorador`", "health": "12", "move": "5\"", "weapons": "Ambas", "max_armor": "Ligera", "special": "`Retirarse` gratis, avanza 3\" tras desplegar", "max": "2"},
+    {"contract_type": "`Zelote`", "health": "12", "move": "5\"", "weapons": "CC", "max_armor": "Ligera", "special": "+2\" Mov si acaba `Trabado`, `+1 ND` `Combate` vs. 2+ enemigos", "max": "2"},
+    {"contract_type": "`Agente`", "health": "14", "move": "4\"", "weapons": "Ambas", "max_armor": "Ligera", "special": "Repite tiradas de `Astucia` fallidas", "max": "2"},
+    {"contract_type": "`Emisor`", "health": "14", "move": "4\"", "weapons": "CC", "max_armor": "Ligera", "special": "Puede `Canalizar`", "max": "1"}
   ]
 }

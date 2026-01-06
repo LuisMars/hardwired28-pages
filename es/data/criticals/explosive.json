@@ -9,7 +9,7 @@
     {"roll": 2, "result": "Shock", "effect": "Pierde la siguiente activación"},
     {"roll": 3, "result": "Desorientado", "effect": "`-1 ND` `Astucia` permanente"},
     {"roll": 4, "result": "Derribado", "effect": "Se aleja d6\" del atacante"},
-    {"roll": 5, "result": "Destrozado", "effect": "Mov a la mitad permanente"},
+    {"roll": 5, "result": "Destrozado", "effect": "-1\" `Mov` permanente"},
     {"roll": "6+", "result": "Devastado", "effect": "`FdC`, -2 a la tirada de Heridas"}
   ]
 }
