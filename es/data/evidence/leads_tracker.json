@@ -1,0 +1,17 @@
+{
+  "table_name": "Rastreador de Pistas",
+  "columns": ["#", "Pista"],
+  "align": ["center", "left"],
+  "items": [
+    {"roll": 1, "lead": ""},
+    {"roll": 2, "lead": ""},
+    {"roll": 3, "lead": ""},
+    {"roll": 4, "lead": ""},
+    {"roll": 5, "lead": ""},
+    {"roll": 6, "lead": ""},
+    {"roll": 7, "lead": ""},
+    {"roll": 8, "lead": ""},
+    {"roll": 9, "lead": ""},
+    {"roll": 10, "lead": ""}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "table_name": "Medium Armor",
+  "source": "03_equipment.md",
+  "columns": ["d6", "Armor", "Special", "Cost"],
+  "align": ["center", "left", "left", "right"],
+  "items": [
+    {"roll": 1, "name": "Standard Cuirass", "special": "-", "cost": 12},
+    {"roll": 2, "name": "Tactical Breastplate", "special": "+1\" `Move`", "cost": 15},
+    {"roll": 3, "name": "Patrol Harness", "special": "Re-roll 1s on `Defense`", "cost": 18},
+    {"roll": 4, "name": "Assault Rig", "special": "+2\" `Move`", "cost": 20},
+    {"roll": 5, "name": "Operations Suit", "special": "Re-roll 1s on `Defense`, +1\" `Move`", "cost": 22},
+    {"roll": 6, "name": "Reinforced Plating", "special": "Re-roll 1s and 2s on `Defense`", "cost": 25}
+  ]
+}

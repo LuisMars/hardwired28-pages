@@ -1,0 +1,17 @@
+{
+  "table_name": "Consumibles",
+  "source": "03_equipment.md",
+  "columns": ["d8", "Item", "Effect", "Cost"],
+  "align": ["center", "left", "left", "right"],
+  "display_columns": ["d8", "Objeto", "Efecto", "Coste"],
+  "items": [
+    {"roll": 1, "name": "Adrenalina", "effect": "+2\" `Mov` hasta fin de ronda", "cost": 4},
+    {"roll": 2, "name": "Combate", "effect": "`+1 ND` `Combate` hasta fin de escenario", "cost": 6},
+    {"roll": 3, "name": "Reflejos", "effect": "`+1 ND` `Defensa` hasta fin de escenario", "cost": 6},
+    {"roll": 4, "name": "Coagulante", "effect": "Detiene sangrado en miniatura adyacente", "cost": 6},
+    {"roll": 5, "name": "Antídoto", "effect": "Cura veneno en miniatura adyacente", "cost": 6},
+    {"roll": 6, "name": "Botiquín", "effect": "Restaura d6 `Salud` a miniatura adyacente", "cost": 8},
+    {"roll": 7, "name": "Sobrecarga", "effect": "`+2 ND` `Combate`, d4 de daño al final", "cost": 10},
+    {"roll": 8, "name": "Kit Trauma", "effect": "Niega efectos de un Crítico", "cost": 14}
+  ]
+}

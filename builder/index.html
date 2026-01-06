@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hardwired 28 - Squad Builder</title>
+    <meta property="og:title" content="Hardwired 28 - Squad Builder">
+    <meta property="og:description" content="Corporate cablepunk skirmish wargame">
+    <meta property="og:image" content="http://hardwired28.luismars.com/img/social.png">
+    <meta property="og:url" content="http://hardwired28.luismars.com/builder/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="../style-base.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/rpg-awesome@0.2.0/css/rpg-awesome.min.css">
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { margin: 0; }
+        code { font-family: var(--font-mono); font-weight: bold; }
+        .loading { display: flex; justify-content: center; align-items: center; height: 100vh; background: #1a1a2e; color: #fff; font-size: 1.5rem; }
+        @media print {
+            @page {
+                margin: 15mm 10mm;
+            }
+        }
+    </style>
+</head>
+<body class="has-app-menu">
+    <nav class="app-menu" data-theme="dark" data-open="false" aria-label="Navigation">
+        <div class="app-menu__inner">
+            <a class="app-menu__brand" href="../">Hardwired 28</a>
+            <button class="app-menu__toggle" type="button" onclick="toggleMenu()" aria-label="Menu"></button>
+            <div class="app-menu__links">
+                <a href="../rulebook">Rulebook</a>
+                <a href="../quick-reference">Quick Reference</a>
+                <a href="../es/builder/">Español</a>
+            </div>
+        </div>
+    </nav>
+    <div id="root"><div class="loading">Loading Squad Builder...</div></div>
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('.app-menu');
+            if (!nav) return;
+            nav.dataset.open = nav.dataset.open === 'true' ? 'false' : 'true';
+        }
+    </script>
+
+    <script>
+        // Load warband data and all UI modules in order
+        window.WARBAND_DATA = null;
+
+        // Helper to load a script and add it to the page
+        function loadScript(url, isBabel = false) {
+            return fetch(url)
+                .then(res => {
+                    if (!res.ok) throw new Error(`Failed to load ${url}`);
+                    return res.text();
+                })
+                .then(code => {
+                    const script = document.createElement('script');
+                    if (isBabel) {
+                        script.type = 'text/babel';
+                        script.setAttribute('data-type', 'module');
+                    }
+                    script.textContent = code;
+                    document.body.appendChild(script);
+                    return code;
+                });
+        }
+
+        // Helper for optional fetch (returns null on failure)
+        const fetchJson = url => fetch(url).then(r => r.ok ? r.json() : null).catch(() => null);
+
+        // Load all data from /data (single source of truth)
+        Promise.all([
+            // Weapons
+            fetchJson('../data/weapons/fallback.json'),
+            fetchJson('../data/weapons/melee.json'),
+            fetchJson('../data/weapons/ranged.json'),
+            fetchJson('../data/weapons/grenades.json'),
+            // Armor
+            fetchJson('../data/armor/light.json'),
+            fetchJson('../data/armor/medium.json'),
+            fetchJson('../data/armor/heavy.json'),
+            // Equipment
+            fetchJson('../data/equipment/consumables.json'),
+            fetchJson('../data/equipment/gear.json'),
+            fetchJson('../data/equipment/cybernetics.json'),
+            // Warbands
+            fetchJson('../data/warbands/archetypes.json'),
+            fetchJson('../data/combat/broadcast_powers.json'),
+            // Criticals (8)
+            fetchJson('../data/criticals/bladed.json'),
+            fetchJson('../data/criticals/blunt.json'),
+            fetchJson('../data/criticals/projectile.json'),
+            fetchJson('../data/criticals/energy.json'),
+            fetchJson('../data/criticals/explosive.json'),
+            fetchJson('../data/criticals/toxic.json'),
+            fetchJson('../data/criticals/static.json'),
+            // Fumbles (3)
+            fetchJson('../data/fumbles/melee.json'),
+            fetchJson('../data/fumbles/ranged.json'),
+            fetchJson('../data/fumbles/broadcast.json'),
+            // Hostiles (7)
+            fetchJson('../data/hostiles/coworkers.json'),
+            fetchJson('../data/hostiles/scrapers.json'),
+            fetchJson('../data/hostiles/feral_crews.json'),
+            fetchJson('../data/hostiles/wave_callers.json'),
+            fetchJson('../data/hostiles/static_wraiths.json'),
+            fetchJson('../data/hostiles/feral_automata.json'),
+            fetchJson('../data/hostiles/cable_feeders.json'),
+            // Campaign
+            fetchJson('../data/campaign/injuries.json'),
+            fetchJson('../data/campaign/promotions.json'),
+            // Evidence
+            fetchJson('../data/evidence/search_findings.json'),
+            fetchJson('../data/evidence/interrogate_results.json'),
+            fetchJson('../data/evidence/evidence_discoveries.json'),
+            // Names
+            fetchJson('../data/names/warband.json'),
+            fetchJson('../data/names/models.json'),
+            // Combat reference
+            fetchJson('../data/combat/maintenance_protocols.json'),
+        ])
+            .then(([
+                fallback, melee, ranged, grenades,
+                armorLight, armorMedium, armorHeavy,
+                consumables, gear, cybernetics,
+                archetypes, powers,
+                critBladed, critBlunt, critProjectile, critEnergy, critExplosive, critToxic, critStatic,
+                fumbleMelee, fumbleRanged, fumbleBroadcast,
+                hostCoworkers, hostScrapers, hostFeralCrews, hostWaveCallers, hostStaticWraiths, hostFeralAutomata, hostCableFeeders,
+                injuries, promotions,
+                search, interrogate, evidenceDiscoveries,
+                namesWarband, namesModels,
+                blessings,
+            ]) => {
+                // Transform archetypes array to object keyed by name
+                const archetypesObj = {};
+                (archetypes?.items || []).forEach(a => {
+                    const name = (a.contract_type || a.name || '').replace(/`/g, '').replace(/\*\*/g, '');
+                    archetypesObj[name] = {
+                        health: parseInt(a.health) || 8,
+                        move: parseInt(a.move) || 6,
+                        weapons: a.weapons,
+                        maxArmor: a.max_armor,
+                        special: a.special,
+                        max: a.max,
+                        limit: a.max === '*' ? 1 : parseInt(a.max) || 2,
+                    };
+                });
+
+                // Helper to add ID to items based on prefix and name
+                const addId = (prefix) => (item) => ({
+                    ...item,
+                    id: `${prefix}-${(item.name || item.power || 'unknown').toLowerCase().replace(/[^a-z0-9]/g, '-')}`
+                });
+
+                window.WARBAND_DATA = {
+                    // Equipment (extract items arrays with generated IDs)
+                    FALLBACK_WEAPONS: (fallback?.items || []).map(addId('melee')),
+                    MELEE_WEAPONS: (melee?.items || []).map(addId('melee')),
+                    RANGED_WEAPONS: (ranged?.items || []).map(addId('ranged')),
+                    ARMOR: [
+                        ...(armorLight?.items || []).map(i => ({ ...i, tier: 'Light', reduction: 1 })),
+                        ...(armorMedium?.items || []).map(i => ({ ...i, tier: 'Medium', reduction: 2 })),
+                        ...(armorHeavy?.items || []).map(i => ({ ...i, tier: 'Heavy', reduction: 3 })),
+                    ].map(addId('armor')),
+                    CONSUMABLES: (consumables?.items || []).map(addId('cons')),
+                    GEAR: (gear?.items || []).map(addId('gear')),
+                    CYBERNETICS: (cybernetics?.items || []).map(addId('cyber')),
+                    GRENADES: (grenades?.items || []).map(addId('grenade')),
+                    POWERS: (powers?.items || []).map(addId('power')),
+                    ARCHETYPES: archetypesObj,
+                    // Reference tables
+                    CRITICALS: {
+                        bladed: critBladed, blunt: critBlunt, projectile: critProjectile, energy: critEnergy,
+                        explosive: critExplosive, toxic: critToxic, static: critStatic,
+                    },
+                    FUMBLES: { melee: fumbleMelee, ranged: fumbleRanged, broadcast: fumbleBroadcast },
+                    HOSTILES: [hostCoworkers, hostScrapers, hostFeralCrews, hostWaveCallers, hostStaticWraiths, hostFeralAutomata, hostCableFeeders].filter(h => h),
+                    // Campaign
+                    INJURIES: injuries,
+                    PROMOTIONS: promotions,
+                    SEARCH: search,
+                    INTERROGATE: interrogate,
+                    EVIDENCE_DISCOVERIES: evidenceDiscoveries,
+                    // Names
+                    NAMES_WARBAND: namesWarband || {},
+                    NAMES_MODELS: namesModels || {},
+                    // Combat reference
+                    BLESSINGS: blessings || {},
+                };
+                // Load utils first (plain JS)
+                return loadScript('../warband-ui/utils.js', false);
+            })
+            .then(() => loadScript('../warband-ui/primitives.jsx', true))
+            .then(() => loadScript('../warband-ui/model-card.jsx', true))
+            .then(() => loadScript('../warband-ui/panels.jsx', true))
+            .then(() => loadScript('../warband-builder.jsx', true))
+            .then(() => {
+                // Transform all Babel scripts
+                Babel.transformScriptTags();
+            })
+            .catch(err => {
+                document.getElementById('root').innerHTML =
+                    '<div class="loading" style="flex-direction:column;"><div>Error loading warband builder</div><div style="font-size:0.8rem;margin-top:1rem;">' + err.message + '</div></div>';
+                console.error(err);
+            });
+    </script>
+</body>
+</html>

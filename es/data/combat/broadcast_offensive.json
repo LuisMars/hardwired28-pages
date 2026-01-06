@@ -1,0 +1,12 @@
+{
+  "table_name": "Poderes Ofensivos",
+  "source": "05_broadcast_powers.md",
+  "columns": ["d4", "Poder", "Efecto"],
+  "align": ["center", "left", "left"],
+  "items": [
+    {"roll": 1, "power": "Interferencia", "effect": "`-1 ND` todas las tiradas hasta la siguiente activación"},
+    {"roll": 2, "power": "Bloqueo de Arma", "effect": "El objetivo suelta un arma"},
+    {"roll": 3, "power": "Trampa Neural", "effect": "d6 daño (ignora armadura) si el objetivo se mueve en su siguiente activación"},
+    {"roll": 4, "power": "Empuje Resonante", "effect": "Empuja al objetivo d6\" en cualquier dirección"}
+  ]
+}

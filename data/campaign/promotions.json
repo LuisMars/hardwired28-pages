@@ -1,0 +1,19 @@
+{
+  "table_name": "Promotion",
+  "source": "10_postgame.md",
+  "columns": ["2d6", "Result", "Effect"],
+  "align": ["center", "left", "left"],
+  "items": [
+    {"roll": "2", "result": "Demotion", "effect": "`-1 DT` to lowest attribute"},
+    {"roll": "3", "result": "Bonus", "effect": "+1 max `Health`"},
+    {"roll": "4", "result": "Transfer", "effect": "+1\" `Move`"},
+    {"roll": "5", "result": "Clearance", "effect": "`+1 DT` `Combat` (or new Power for `Broadcaster`)"},
+    {"roll": "6", "result": "Coverage", "effect": "`+1 DT` `Defense`"},
+    {"roll": "7", "result": "Promotion", "effect": "Pick: `+1 DT` (any attribute), +1\" `Move`, +1 `Health`, or new Power (`Broadcaster` only)"},
+    {"roll": "8", "result": "Training", "effect": "`+1 DT` `Wits`"},
+    {"roll": "9", "result": "Raise", "effect": "`+1 DT` `Combat` (or new Power for `Broadcaster`)"},
+    {"roll": "10", "result": "Benefits", "effect": "+2 max `Health`"},
+    {"roll": "11", "result": "Relocation", "effect": "+2\" `Move`"},
+    {"roll": "12", "result": "Fast-track", "effect": "`+1 DT` to two different attributes"}
+  ]
+}

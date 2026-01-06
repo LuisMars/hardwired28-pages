@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hardwired 28 - Quick Reference 0.6.4-beta</title>
+    <meta property="og:title" content="Hardwired 28 - Quick Reference 0.6.4-beta">
+    <meta property="og:description" content="Corporate cablepunk skirmish wargame">
+    <meta property="og:image" content="http://hardwired28.luismars.com/img/social.png">
+    <meta property="og:url" content="http://hardwired28.luismars.com/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style-qr.css">
+</head>
+<body class="has-app-menu">
+    
+    <nav class="app-menu" data-theme="light" data-open="false" aria-label="Navigation">
+        <div class="app-menu__inner">
+            <a class="app-menu__brand" href="./">Hardwired 28</a>
+            <button class="app-menu__toggle" type="button" onclick="toggleMenu()" aria-label="Menu"></button>
+            <div class="app-menu__links">
+                <a href="rulebook">Rulebook</a>
+                <a href="print">Print</a>
+                <a href="quick-reference" class="current">Quick Reference</a>
+                <a href="builder/index">Squad Builder</a>
+                <a href="es/quick-reference">Español</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="content">
+    <div class="page">
+        <div class="three-column">
+            <div class="column">
+<div><h1>Hardwired 28 - Quick Reference</h1>
+<p><em>0.6.4-beta</em></p>
+</div>
+<div><h2>Dice Tiers (DT)</h2>
+<p class="dice-tier">2d4 → 2d6 → 2d8 → 2d10 → 2d12</p>
+<p class="dice-tier-arrows">← -1 DT | +1 DT →</p>
+
+<p>Roll 2 dice, add results. Never below 2d4 or above 2d12.</p>
+</div>
+<div><h2>Opposed Rolls</h2>
+<p>Both players roll simultaneously. Higher total wins. Lower <strong>DT</strong> wins ties. Same <strong>DT</strong>: reroll.</p>
+</div>
+<div><h2>Attributes</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Attribute</th>
+<th style="text-align: left;">Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>Combat</code></td>
+<td style="text-align: left;">Attack rolls</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Defense</code></td>
+<td style="text-align: left;">Resist attacks</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Wits</code></td>
+<td style="text-align: left;"><strong>Search</strong>, <strong>Interrogate</strong>, tech-related rolls</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div><h2>Values</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Value</th>
+<th style="text-align: left;">Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>Health</code></td>
+<td style="text-align: left;">Damage until <code>Out of Action</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Move</code></td>
+<td style="text-align: left;">Distance per activation (inches)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div><h2>Your Activation</h2>
+<p><strong>Move + Action</strong> OR <strong>Action + Move</strong></p>
+<p>Move up to your <code>Move</code> value in inches.</p>
+</div>
+<div><h2>Measuring</h2>
+<p>Measure from base edge to base edge.</p>
+</div>
+<div><h2>Line of Sight</h2>
+<p>Must see target's body (legs, torso, head). Arms and weapons don't count.</p>
+</div>
+<div><h2>Wounded</h2>
+<p>Model below max <code>Health</code>.</p>
+</div>
+<div><h2>Knockback</h2>
+<p>Model moves directly away from attacker. Stops at obstacles. Takes fall damage if pushed off edge.</p></div>
+            </div>
+
+            <div class="column">
+<div><h2>Each Round</h2>
+<ol>
+<li>Roll <strong>Corporate Blessings</strong> (d8 three times)</li>
+<li>Add one token per model not <code>OoA</code> to bag</li>
+<li>Draw a token: that faction activates one model (Hostiles/Coworkers: AI table)</li>
+<li>All models <code>OoA</code>: discard token</li>
+<li>Each activation: <strong>Move + Action</strong> OR <strong>Action + Move</strong></li>
+<li>Repeat from 3 until bag is empty</li>
+</ol>
+</div>
+<div><h2>Actions</h2>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Attack</td>
+<td>Roll <code>Combat</code> vs. <code>Defense</code></td>
+</tr>
+<tr>
+<td>Move Again</td>
+<td>Move a second time</td>
+</tr>
+<tr>
+<td>Disengage</td>
+<td>Leave <code>Engaged</code> safely</td>
+</tr>
+<tr>
+<td>Aim</td>
+<td>Declare target. <code>+1 DT</code> <code>Combat</code> on your next shot (lost if moved or damaged)</td>
+</tr>
+<tr>
+<td>Interact</td>
+<td>Use objective within 1"</td>
+</tr>
+<tr>
+<td>Search</td>
+<td><code>Wits</code> vs. 2d6 for <code>Loot</code>. Success: remove marker</td>
+</tr>
+<tr>
+<td>Interrogate</td>
+<td><code>Wits</code> vs. <code>Wits</code> for <code>Evidence</code> (+1 <strong>DT</strong> if wounded). Success: remove Coworker</td>
+</tr>
+<tr>
+<td>Loot</td>
+<td>Take item from <code>OoA</code> enemy within 1"</td>
+</tr>
+<tr>
+<td>Cast</td>
+<td><code>Wits</code> vs. <code>Wits</code> (Broadcasters only)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div><h2>Melee Engagement</h2>
+<ul>
+<li>Within 1" of enemy: <code>Engaged</code></li>
+<li>Leaving without Disengage: free attack at -1 <strong>DT</strong></li>
+<li>No melee weapon: use Fallback Melee</li>
+</ul>
+</div>
+<div><h2>Vertical Movement</h2>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Cost</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Climb up/down</td>
+<td>2" per 1" climbed</td>
+</tr>
+<tr>
+<td>Jump across</td>
+<td>1" per 1" jumped (max 2")</td>
+</tr>
+<tr>
+<td>Drop (up to 3")</td>
+<td>Free, no damage</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Falling:</strong> d6 damage per 3" after the first 3".</p>
+</div>
+<div><h2>Casting</h2>
+<ul>
+<li>Action, LoS, no range limit</li>
+<li><code>Wits</code> vs. <code>Wits</code>, damage direct</li>
+<li><strong>Interference:</strong> cumulative <code>-1</code> per fail, resets on fumble</li>
+<li><strong>Overbroadcast:</strong> <code>-1 DT</code>, +d4 or double effect</li>
+</ul></div>
+            </div>
+
+            <div class="column">
+<div><h2>Attack Resolution</h2>
+<ol>
+<li>Declare target and weapon</li>
+<li>Melee: defender chooses <code>Defense</code> or <strong>Riposte</strong></li>
+<li>Both roll: <strong>Combat DT</strong> vs. <strong>Defense DT</strong> (If <strong>Riposte</strong>: roll <code>Combat</code> at -1 <strong>DT</strong>)</li>
+<li>Higher wins (lower <strong>DT</strong> wins ties). Hit: roll damage. <strong>Riposte</strong> wins: defender also deals damage</li>
+</ol>
+</div>
+<div><h2>Damage</h2>
+<ol>
+<li>Roll weapon damage (Double+: max value)</li>
+<li>Subtract armor (Light: 1, Medium: 2, Heavy: 3)</li>
+<li>Deduct from <code>Health</code></li>
+<li>0 or below: <code>Out of Action</code></li>
+<li>Triple+: roll Critical table for bonus effect</li>
+</ol>
+</div>
+<div><h2>Criticals and Fumbles</h2>
+<ul>
+<li><strong>Double:</strong> Max damage. <strong>Triple+:</strong> Max damage + Critical table (quadruple: +1, etc.)</li>
+<li><strong>Fumble:</strong> Defender triples+ attacker (roll Fumble table). Quadruple: +1, etc.</li>
+</ul>
+</div>
+<div><h2>Cover and Ranged</h2>
+<ul>
+<li><strong>Cover</strong> (body obscured): -1 <strong>DT Combat</strong></li>
+<li><strong>Attacker moved:</strong> -1 <strong>DT Combat</strong></li>
+<li><strong>Target used Move Again:</strong> -1 <strong>DT Combat</strong></li>
+<li><strong>Into melee:</strong> -1 <strong>DT</strong>, miss hits random model within 1" (not target), fumble is Critical against it</li>
+<li><strong>Ranged:</strong> No range limits, no <strong>Riposte</strong></li>
+</ul>
+</div>
+<div><h2>Grenades</h2>
+<ul>
+<li>Throw at point within 6" (action). One use.</li>
+<li>Roll <code>Combat</code> vs 2d6. Failure: scatters d6". 2d6 doubles you: lands at your feet.</li>
+<li>3" blast hits all models (friend and foe). Roll damage for each.</li>
+</ul>
+</div>
+<div><h2>Morale</h2>
+<p>When <code>Boss</code> goes <code>Out of Action</code>: all friendlies immediately test <code>Wits</code> vs. 2d6. Fail: <code>Flee</code>. Retest each activation.</p>
+<p><code>Flee</code>: Move toward the nearest edge (stops at edge). Cannot act. If exits: drops items, no Merits. Performance Review: d6 damage after restoring <code>Health</code>.</p>
+<blockquote>
+<p>"Your subscription is your freedom."</p>
+<p><strong>Chief Executive Sovereign</strong></p>
+</blockquote></div>
+            </div>
+        </div>
+    </div>
+    <div class="page compact">
+        <div class="four-column">
+            <div class="column">
+<div><h2>Corporate Blessings</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">d8</th>
+<th style="text-align: left;">Blessing</th>
+<th style="text-align: left;">Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Denied</td>
+<td style="text-align: left;">No blessing</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Reroll</td>
+<td style="text-align: left;">Reroll a single die</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Boost</td>
+<td style="text-align: left;"><code>+1 DT</code> to one roll</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Overtime</td>
+<td style="text-align: left;">One model takes two actions</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Severance</td>
+<td style="text-align: left;">One attack deals max weapon damage</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: left;">Synergy</td>
+<td style="text-align: left;">After activating a model, activate an unactivated model within 6" of it</td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td style="text-align: left;">Wellness</td>
+<td style="text-align: left;">Restore d6 <code>Health</code> to one model, remove DoT effects</td>
+</tr>
+<tr>
+<td style="text-align: center;">8</td>
+<td style="text-align: left;">Surplus</td>
+<td style="text-align: left;">Roll twice, ignoring 8s</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div><h2>Search Findings</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">d20</th>
+<th style="text-align: left;">Finding</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Random Grenade</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Random Light Armor</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">4 subs</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Random Melee Weapon</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">6 subs</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: left;">1 <code>Evidence</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td style="text-align: left;">Random Consumable</td>
+</tr>
+<tr>
+<td style="text-align: center;">8</td>
+<td style="text-align: left;">8 subs</td>
+</tr>
+<tr>
+<td style="text-align: center;">9</td>
+<td style="text-align: left;">Random Ranged Weapon</td>
+</tr>
+<tr>
+<td style="text-align: center;">10</td>
+<td style="text-align: left;">1 <code>Evidence</code>, +1 <code>Lead</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">11</td>
+<td style="text-align: left;">Random Medium Armor</td>
+</tr>
+<tr>
+<td style="text-align: center;">12</td>
+<td style="text-align: left;">1 <code>Evidence</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">13</td>
+<td style="text-align: left;">Random Gear</td>
+</tr>
+<tr>
+<td style="text-align: center;">14</td>
+<td style="text-align: left;">12 subs</td>
+</tr>
+<tr>
+<td style="text-align: center;">15</td>
+<td style="text-align: left;">Random Heavy Armor</td>
+</tr>
+<tr>
+<td style="text-align: center;">16</td>
+<td style="text-align: left;">15 subs</td>
+</tr>
+<tr>
+<td style="text-align: center;">17</td>
+<td style="text-align: left;">1 <code>Evidence</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">18</td>
+<td style="text-align: left;">20 subs</td>
+</tr>
+<tr>
+<td style="text-align: center;">19</td>
+<td style="text-align: left;">1 <code>Evidence</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">20</td>
+<td style="text-align: left;">Roll twice (ignore 20s)</td>
+</tr>
+</tbody>
+</table></div>
+            </div>
+
+            <div class="column">
+<div><h2>Interrogate Results</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">2d4</th>
+<th style="text-align: left;">Result</th>
+<th style="text-align: left;">Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">False Data</td>
+<td style="text-align: left;">Lose 1 <code>Evidence</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Misdirection</td>
+<td style="text-align: left;">Nothing</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Bribe Offer</td>
+<td style="text-align: left;">10 subs</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Rumor</td>
+<td style="text-align: left;">1 <code>Lead</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: left;">Cooperates</td>
+<td style="text-align: left;">1 <code>Evidence</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td style="text-align: left;">Talkative</td>
+<td style="text-align: left;">1 <code>Evidence</code>, +1 <code>Lead</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">8</td>
+<td style="text-align: left;">Full Disclosure</td>
+<td style="text-align: left;">1 <code>Evidence</code>, +2 <code>Leads</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div><h2>Criticals: Bladed</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">d6</th>
+<th style="text-align: left;">Result</th>
+<th style="text-align: left;">Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Gash</td>
+<td style="text-align: left;">+d4 damage</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Bleed</td>
+<td style="text-align: left;">2 damage per activation this game (doesn't stack)</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Hamstrung</td>
+<td style="text-align: left;">-1" movement permanently</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Disarmed</td>
+<td style="text-align: left;">Drop weapon (at model's position)</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Maimed</td>
+<td style="text-align: left;"><code>-1 DT</code> <code>Combat</code> permanently</td>
+</tr>
+<tr>
+<td style="text-align: center;">6+</td>
+<td style="text-align: left;">Severed</td>
+<td style="text-align: left;"><code>OoA</code>, -2 Injury roll</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div><h2>Criticals: Blunt</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">d6</th>
+<th style="text-align: left;">Result</th>
+<th style="text-align: left;">Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Bruised</td>
+<td style="text-align: left;">+d4 damage</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Stunned</td>
+<td style="text-align: left;">Lose next activation</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Rattled</td>
+<td style="text-align: left;"><code>-1 DT</code> <code>Defense</code> permanently</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Concussed</td>
+<td style="text-align: left;"><code>-1 DT</code> <code>Wits</code> permanently</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Crippled</td>
+<td style="text-align: left;">-2" movement permanently</td>
+</tr>
+<tr>
+<td style="text-align: center;">6+</td>
+<td style="text-align: left;">Crushed</td>
+<td style="text-align: left;"><code>OoA</code>, -2 Injury roll</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div><h2>Criticals: Projectile</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">d6</th>
+<th style="text-align: left;">Result</th>
+<th style="text-align: left;">Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Grazed</td>
+<td style="text-align: left;">+d4 damage</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Punctured</td>
+<td style="text-align: left;">2 damage per activation (doesn't stack)</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Staggered</td>
+<td style="text-align: left;"><code>-1 DT</code> <code>Defense</code> permanently</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Shot Through</td>
+<td style="text-align: left;">Drop weapon (at model's position)</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Riddled</td>
+<td style="text-align: left;"><code>-1 DT</code> all attributes permanently</td>
+</tr>
+<tr>
+<td style="text-align: center;">6+</td>
+<td style="text-align: left;">Gutshot</td>
+<td style="text-align: left;"><code>OoA</code>, -2 Injury roll</td>
+</tr>
+</tbody>
+</table></div>
+            </div>
+
+            <div class="column">
+<div><h2>Criticals: Energy</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">d6</th>
+<th style="text-align: left;">Result</th>
+<th style="text-align: left;">Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Scorched</td>
+<td style="text-align: left;">+d4 damage</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Slag Armor</td>
+<td style="text-align: left;">Armor reduced one tier permanently (Heavy→Medium→Light→ Destroyed)</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Flash Blind</td>
+<td style="text-align: left;"><code>-1 DT</code> <code>Combat</code> permanently</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Nerve Damage</td>
+<td style="text-align: left;">-2" movement permanently</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Burned Out</td>
+<td style="text-align: left;"><code>-2 DT</code> ranged attacks permanently</td>
+</tr>
+<tr>
+<td style="text-align: center;">6+</td>
+<td style="text-align: left;">Overloaded</td>
+<td style="text-align: left;"><code>OoA</code>, -2 Injury roll</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div><h2>Criticals: Explosive</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">d6</th>
+<th style="text-align: left;">Result</th>
+<th style="text-align: left;">Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Shrapnel</td>
+<td style="text-align: left;">+d6 damage</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Shell Shocked</td>
+<td style="text-align: left;">Lose next activation</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Disoriented</td>
+<td style="text-align: left;"><code>-1 DT</code> <code>Wits</code> permanently</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Blown Back</td>
+<td style="text-align: left;">Move d6" directly away from attacker</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Shattered</td>
+<td style="text-align: left;">Movement halved permanently</td>
+</tr>
+<tr>
+<td style="text-align: center;">6+</td>
+<td style="text-align: left;">Devastated</td>
+<td style="text-align: left;"><code>OoA</code>, -2 Injury roll</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div><h2>Criticals: Toxic</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">d6</th>
+<th style="text-align: left;">Result</th>
+<th style="text-align: left;">Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Burned</td>
+<td style="text-align: left;">+d4 damage</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Corroding</td>
+<td style="text-align: left;">2 damage per activation (doesn't stack)</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Weakened</td>
+<td style="text-align: left;"><code>-1 DT</code> <code>Combat</code> permanently</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Delirium</td>
+<td style="text-align: left;"><code>-1 DT</code> <code>Wits</code> permanently, move toward the nearest enemy</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Systemic</td>
+<td style="text-align: left;"><code>-1 DT</code> all attributes permanently</td>
+</tr>
+<tr>
+<td style="text-align: center;">6+</td>
+<td style="text-align: left;">Dissolved</td>
+<td style="text-align: left;"><code>OoA</code> end of next round, -2 Injury roll</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div><h2>Criticals: Static</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">d6</th>
+<th style="text-align: left;">Result</th>
+<th style="text-align: left;">Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Signal Burn</td>
+<td style="text-align: left;">+d6 damage</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Frequency Terror</td>
+<td style="text-align: left;"><code>Flee</code> toward board edge</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">System Drain</td>
+<td style="text-align: left;"><code>-1 DT</code> <code>Combat</code> permanently</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Logic Crash</td>
+<td style="text-align: left;"><code>-2 DT</code> <code>Wits</code> permanently</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Hijacked</td>
+<td style="text-align: left;">Enemy controls next activation</td>
+</tr>
+<tr>
+<td style="text-align: center;">6+</td>
+<td style="text-align: left;">Total Corruption</td>
+<td style="text-align: left;"><code>OoA</code>, -2 Injury roll</td>
+</tr>
+</tbody>
+</table></div>
+            </div>
+
+            <div class="column">
+<div><h2>Fumbles: Melee</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">d6</th>
+<th style="text-align: left;">Result</th>
+<th style="text-align: left;">Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Stumbled</td>
+<td style="text-align: left;">Lose next activation</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Off Balance</td>
+<td style="text-align: left;"><code>-1 DT</code> next defense roll</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Self-Wound</td>
+<td style="text-align: left;">Take weapon damage</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Wild Swing</td>
+<td style="text-align: left;">Hit ally within 1" (or take weapon damage)</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Dropped</td>
+<td style="text-align: left;">Drop weapon, take weapon damage</td>
+</tr>
+<tr>
+<td style="text-align: center;">6+</td>
+<td style="text-align: left;">Shattered</td>
+<td style="text-align: left;">Weapon destroyed, take max weapon damage</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div><h2>Fumbles: Ranged</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">d6</th>
+<th style="text-align: left;">Result</th>
+<th style="text-align: left;">Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Jammed</td>
+<td style="text-align: left;">Lose next activation</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Misaligned</td>
+<td style="text-align: left;"><code>-1 DT</code> next attack</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Backfire</td>
+<td style="text-align: left;">Take weapon damage</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Friendly Fire</td>
+<td style="text-align: left;">Hit ally within 6" (or take weapon damage)</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Dropped</td>
+<td style="text-align: left;">Drop weapon, take weapon damage</td>
+</tr>
+<tr>
+<td style="text-align: center;">6+</td>
+<td style="text-align: left;">Exploded</td>
+<td style="text-align: left;">Weapon destroyed, take max weapon damage</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div><h2>Fumbles: Broadcast</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">d6</th>
+<th style="text-align: left;">Result</th>
+<th style="text-align: left;">Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Static Overload</td>
+<td style="text-align: left;">Caster loses next activation</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Interference</td>
+<td style="text-align: left;"><code>-1 DT</code> next cast</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Feedback</td>
+<td style="text-align: left;">Caster takes d4 damage</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Wave Bounce</td>
+<td style="text-align: left;">Ally within 6" takes d4 damage (or caster if none)</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Frequency Lock</td>
+<td style="text-align: left;">Cannot cast this power this scenario, take d4 damage</td>
+</tr>
+<tr>
+<td style="text-align: center;">6+</td>
+<td style="text-align: left;">Broadcast Storm</td>
+<td style="text-align: left;">Forget power permanently, caster and all within 6" take d8 damage</td>
+</tr>
+</tbody>
+</table></div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('.app-menu');
+            if (!nav) return;
+            nav.dataset.open = nav.dataset.open === 'true' ? 'false' : 'true';
+        }
+
+        // Mobile page scaling for landscape QR (A4 landscape: 297mm x 210mm)
+        function updatePageScale() {
+            const content = document.querySelector('.content');
+            if (!content) return;
+            const pageWidth = 1122; // 297mm in px at 96dpi
+            const viewportWidth = window.innerWidth;
+            // Scale whenever viewport is smaller than page width
+            if (viewportWidth < pageWidth) {
+                const scale = viewportWidth / pageWidth;
+                content.style.setProperty('--page-scale-landscape', scale.toFixed(3));
+                // No centering offset needed when scaling to full width
+                content.style.setProperty('--page-offset', '0px');
+            } else {
+                content.style.removeProperty('--page-scale-landscape');
+                content.style.removeProperty('--page-offset');
+            }
+        }
+        window.addEventListener('resize', updatePageScale);
+        document.addEventListener('DOMContentLoaded', updatePageScale);
+    </script>
+</body>
+</html>

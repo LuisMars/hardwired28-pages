@@ -1,0 +1,22 @@
+{
+  "first": [
+    "Marco", "Víctor", "Félix", "Casio", "Lucio", "Décimo",
+    "Abel", "Set", "Caín", "Esdras", "Silas", "Tobías",
+    "Axel", "Rex", "Max", "Dax", "Jax", "Knox",
+    "Darío", "Sergio", "Luis", "Iván", "Hugo", "Bruno",
+    "Vera", "Nova", "Iris", "Petra", "Lyra", "Mira",
+    "Elena", "Octavia", "Livia", "Aurelia", "Casia", "Priscila",
+    "Zara", "Kira", "Nix", "María", "Ceniza", "Brasa",
+    "Morgan", "Quinn", "Blake", "Vitaliy", "Josep", "Alondra"
+  ],
+  "last": [
+    "Soldar", "Forja", "Cable", "Alambre", "Voltio", "Ohmio",
+    "Latón", "Acero", "Hierro", "Cromo", "Cobre", "Cinc",
+    "Acreedor", "Deudor", "Contratista", "Auditor", "Cobrador", "Ejecutor",
+    "Terminal", "Conducto", "Circuito", "Relé", "Llave", "Corte",
+    "Nivel", "Rango", "Grado", "Clase", "Índice", "Cuota",
+    "Pacto", "Acuerdo", "Carta", "Mandato", "Decreto", "Edicto",
+    "Nulo", "Vacío", "Cero", "Blanco", "Estática", "Descarga",
+    "Reclamador", "Salvaje", "Operario", "Gestor", "Arreglador", "Corredor"
+  ]
+}

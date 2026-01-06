@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hardwired 28 - Referencia Rápida 0.6.2-beta</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style-qr.css">
+</head>
+<body class="has-app-menu">
+    
+    <nav class="app-menu" data-theme="light" data-open="false" aria-label="Navigation">
+        <div class="app-menu__inner">
+            <a class="app-menu__brand" href="./">Hardwired 28</a>
+            <button class="app-menu__toggle" type="button" onclick="toggleMenu()">Menú</button>
+            <div class="app-menu__links">
+                <div class="app-menu__dropdown">
+                    <button class="app-menu__dropdown-toggle">Reglas</button>
+                    <div class="app-menu__submenu">
+                        <a href="merged">Todas</a>
+                        <a href="manual">Manual</a>
+                        <a href="core">Básicas</a>
+                        <a href="hostiles">Hostiles</a>
+                        <a href="campaign">Campaña</a>
+                        <a href="qr">Referencia</a>
+                    </div>
+                </div>
+                <a href="./">Constructor</a>
+                <a href="../qr">English</a>
+            </div>
+            <div class="app-menu__actions">
+                
+            </div>
+        </div>
+    </nav>
+
+    <div class="content">
+    <div class="page">
+        <div class="three-column">
+            <div class="column">
+<div><h1>Hardwired 28 - Referencia Rápida</h1>
+<p><em>0.6.2-beta</em></p>
+</div>
+<div><h2>Niveles de Dado (ND)</h2>
+<p class="dice-tier">2d4 → 2d6 → 2d8 → 2d10 → 2d12</p>
+<p class="dice-tier-arrows">← -1 ND | +1 ND →</p>
+
+<p>Tira 2 dados, suma los resultados. Nunca por debajo de 2d4 ni por encima de 2d12.</p>
+</div>
+<div><h2>Tiradas Enfrentadas</h2>
+<p>Ambos jugadores tiran simultáneamente. El total más alto gana. <strong>ND</strong> inferior gana empates. Mismo <strong>ND</strong>: repite.</p>
+</div>
+<div><h2>Atributos</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Atributo</th>
+<th style="text-align: left;">Uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>Combate</code></td>
+<td style="text-align: left;">Las tiradas de ataque</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Defensa</code></td>
+<td style="text-align: left;">Resistir ataques</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Astucia</code></td>
+<td style="text-align: left;"><strong>Buscar</strong>, <strong>Interrogar</strong>, las tiradas de tecnología</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div><h2>Valores</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Valor</th>
+<th style="text-align: left;">Uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>Salud</code></td>
+<td style="text-align: left;">Daño hasta <code>Fuera de Combate</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Movimiento</code></td>
+<td style="text-align: left;">Distancia por activación (pulgadas)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div><h2>Tu Activación</h2>
+<p><strong>Movimiento + Acción</strong> O <strong>Acción + Movimiento</strong></p>
+<p>Muévete hasta tu valor de <code>Movimiento</code> en pulgadas.</p>
+</div>
+<div><h2>Medir</h2>
+<p>Mide de borde de peana a borde de peana.</p>
+</div>
+<div><h2>Línea de Visión</h2>
+<p>Debes ver el cuerpo del objetivo (piernas, torso, cabeza). Brazos y armas no cuentan.</p>
+</div>
+<div><h2>Herido</h2>
+<p>Miniatura por debajo de su <code>Salud</code> máxima.</p>
+</div>
+<div><h2>Empuje</h2>
+<p>La miniatura se mueve directamente lejos del atacante. Se detiene en obstáculos. Sufre daño de caída si cae por el borde.</p></div>
+            </div>
+
+            <div class="column">
+<div><h2>Cada Ronda</h2>
+<ol>
+<li>Tira <strong>Bendiciones Corporativas</strong> (d8 tres veces)</li>
+<li>Añade una ficha por cada miniatura que no esté <code>FdC</code> a la bolsa (colores distintos por facción)</li>
+<li>Saca una ficha: esa facción activa una miniatura (Hostiles/Compañeros siguen tabla de IA)</li>
+<li>Cada activación: <strong>Movimiento + Acción</strong> O <strong>Acción + Movimiento</strong></li>
+<li>Repite desde el 3 hasta que todas hayan activado</li>
+</ol>
+</div>
+<div><h2>Acciones</h2>
+<table>
+<thead>
+<tr>
+<th>Acción</th>
+<th>Efecto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Atacar</td>
+<td>Tira <code>Combate</code> vs <code>Defensa</code></td>
+</tr>
+<tr>
+<td>Moverse de Nuevo</td>
+<td>Muévete una segunda vez</td>
+</tr>
+<tr>
+<td>Destrabarse</td>
+<td>Abandona <code>Trabado</code> de forma segura</td>
+</tr>
+<tr>
+<td>Apuntar</td>
+<td>Declara objetivo. <code>-1 ND</code> <code>Defensa</code> contra tu próximo disparo (se pierde si te mueves o recibes daño)</td>
+</tr>
+<tr>
+<td>Interactuar</td>
+<td>Usa un objetivo a 1"</td>
+</tr>
+<tr>
+<td>Buscar</td>
+<td><code>Astucia</code> vs 2d6 para <code>Botín</code></td>
+</tr>
+<tr>
+<td>Interrogar</td>
+<td><code>Astucia</code> vs <code>Astucia</code> para <code>Pruebas</code> (+1 <strong>ND</strong> si el objetivo está herido)</td>
+</tr>
+<tr>
+<td>Saquear</td>
+<td>Toma un objeto de enemigo <code>FdC</code> a 1"</td>
+</tr>
+<tr>
+<td>Canalizar</td>
+<td><code>Astucia</code> vs <code>Astucia</code> (solo <code>Emisores</code>)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div><h2>Trabado en CC</h2>
+<ul>
+<li>A 1" del enemigo: <code>Trabado</code></li>
+<li>Abandonar sin <code>Destrabarse</code>: ataque gratuito a -1 <strong>ND</strong></li>
+<li>Sin arma CC: usa Combate Improvisado</li>
+</ul>
+</div>
+<div><h2>Movimiento Vertical</h2>
+<table>
+<thead>
+<tr>
+<th>Acción</th>
+<th>Coste</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Escalar arriba/abajo</td>
+<td>2" por 1" escalado</td>
+</tr>
+<tr>
+<td>Saltar hueco</td>
+<td>1" por 1" saltado (máx 2")</td>
+</tr>
+<tr>
+<td>Dejarse caer (hasta 3")</td>
+<td>Gratis, sin daño</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Caída:</strong> d6 de daño por cada 3" después de los primeros 3".</p>
+</div>
+<div><h2>Canalización</h2>
+<ul>
+<li>Acción, LdV, sin límite de alcance</li>
+<li><code>Astucia</code> vs <code>Astucia</code>, daño directo</li>
+<li><strong>Interferencia:</strong> <code>-1</code> acumulativo por fallo, reinicia tras pifia</li>
+<li><strong>Sobreemisión:</strong> <code>-1 ND</code>, +d4 o dobla el efecto</li>
+</ul></div>
+            </div>
+
+            <div class="column">
+<div><h2>Resolución de Ataque</h2>
+<ol>
+<li>Declara objetivo y arma</li>
+<li>CC: el defensor elige <code>Defensa</code> o <strong>Respuesta</strong></li>
+<li>Ambos tiran: <strong>Combate ND</strong> vs <strong>Defensa ND</strong> (Si <strong>Respuesta</strong>: tira <code>Combate</code> a -1 <strong>ND</strong>)</li>
+<li>El más alto gana (<strong>ND</strong> inferior gana empates). Impacto: tira el daño. Si <strong>Respuesta</strong> gana: el defensor también inflige daño</li>
+</ol>
+</div>
+<div><h2>Daño</h2>
+<ol>
+<li>Tira daño del arma (Doble+: valor máximo)</li>
+<li>Resta armadura (Ligera: 1, Media: 2, Pesada: 3)</li>
+<li>Resta de la <code>Salud</code></li>
+<li>0 o menos: <code>Fuera de Combate</code></li>
+<li>Triple+: tira en la tabla de críticos para efecto adicional</li>
+</ol>
+</div>
+<div><h2>Críticos y Pifias</h2>
+<ul>
+<li><strong>Doble:</strong> Daño máximo. <strong>Triple+:</strong> Daño máximo + tabla de críticos (cuádruple: +1, etc.)</li>
+<li><strong>Pifia:</strong> El defensor triplica+ al atacante (tira en la tabla de Pifias). Cuádruple: +1, etc.</li>
+</ul>
+</div>
+<div><h2>Cobertura y Disparo</h2>
+<ul>
+<li><strong>Cobertura</strong> (cuerpo oculto): -1 <strong>ND Combate</strong></li>
+<li><strong>Hacia CC:</strong> -1 <strong>ND</strong>, un fallo impacta a una miniatura aleatoria a 1", la pifia es un Crítico contra ella</li>
+<li><strong>Disparo:</strong> Sin límite de alcance, sin <strong>Respuesta</strong></li>
+</ul>
+</div>
+<div><h2>Explosión</h2>
+<p><strong>Todas</strong> las miniaturas en el radio son impactadas automáticamente (aliadas y enemigas). Tira daño por separado.</p>
+</div>
+<div><h2>Moral</h2>
+<p>Cuando el <code>Jefe</code> queda <code>Fuera de Combate</code>: todos los aliados tiran <code>Astucia</code> vs 2d6 inmediatamente. Fallo: <code>Huida</code>. Repite cada activación.</p>
+<p><code>Huida</code>: Muévete hacia el borde más cercano. No puede actuar. Si sale del tablero: suelta objetos, sin Méritos. Evaluación de Rendimiento: d6 de daño tras recuperar <code>Salud</code>.</p>
+<blockquote>
+<p>"Tu suscripción es tu libertad."</p>
+<p><strong>Soberano Ejecutivo</strong></p>
+</blockquote></div>
+            </div>
+        </div>
+    </div>
+    <div class="page compact">
+        <div class="five-column">
+            <div class="column">
+<div><h2>Bendiciones Corporativas</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">d8</th>
+<th style="text-align: left;">Bendición</th>
+<th style="text-align: left;">Efecto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Gracia Denegada</td>
+<td style="text-align: left;">Sin bendición</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Absolución</td>
+<td style="text-align: left;">Repite cualquier dado</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Bendición Trimestral</td>
+<td style="text-align: left;"><code>+1 ND</code> a una tirada</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Sanción de Horas Extra</td>
+<td style="text-align: left;">Una miniatura tiene dos acciones</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Finiquito</td>
+<td style="text-align: left;">Un ataque inflige el daño máximo</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: left;">Bendición de Sinergia</td>
+<td style="text-align: left;">Tras activar una miniatura, activa otra miniatura sin activar a 6" de ella</td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td style="text-align: left;">Dispensa de Bienestar</td>
+<td style="text-align: left;">Restaura d6 <code>Salud</code>, elimina efectos de daño continuo</td>
+</tr>
+<tr>
+<td style="text-align: center;">8</td>
+<td style="text-align: left;">Goteo</td>
+<td style="text-align: left;">Tira dos veces, ignora 8s</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div><h2>Hallazgos de Búsqueda</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">d20</th>
+<th style="text-align: left;">Hallazgo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">2 subs</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Armadura Ligera Aleatoria</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">4 subs</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Arma CC Aleatoria</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">6 subs</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: left;"><strong>Prueba</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td style="text-align: left;">Consumible Aleatorio</td>
+</tr>
+<tr>
+<td style="text-align: center;">8</td>
+<td style="text-align: left;">8 subs</td>
+</tr>
+<tr>
+<td style="text-align: center;">9</td>
+<td style="text-align: left;">Arma de Disparo Aleatoria</td>
+</tr>
+<tr>
+<td style="text-align: center;">10</td>
+<td style="text-align: left;">2 <strong>Pruebas</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">11</td>
+<td style="text-align: left;">Armadura Media Aleatoria</td>
+</tr>
+<tr>
+<td style="text-align: center;">12</td>
+<td style="text-align: left;"><strong>Prueba</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">13</td>
+<td style="text-align: left;">Equipo Aleatorio</td>
+</tr>
+<tr>
+<td style="text-align: center;">14</td>
+<td style="text-align: left;">12 subs</td>
+</tr>
+<tr>
+<td style="text-align: center;">15</td>
+<td style="text-align: left;">Armadura Pesada Aleatoria</td>
+</tr>
+<tr>
+<td style="text-align: center;">16</td>
+<td style="text-align: left;">15 subs</td>
+</tr>
+<tr>
+<td style="text-align: center;">17</td>
+<td style="text-align: left;"><strong>Prueba</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">18</td>
+<td style="text-align: left;">20 subs</td>
+</tr>
+<tr>
+<td style="text-align: center;">19</td>
+<td style="text-align: left;"><strong>Prueba</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">20</td>
+<td style="text-align: left;">Tira dos veces (ignora 20s)</td>
+</tr>
+</tbody>
+</table></div>
+            </div>
+
+            <div class="column">
+<div><h2>Resultados de Interrogatorio</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">2d4</th>
+<th style="text-align: left;">Resultado</th>
+<th style="text-align: left;">Efecto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Datos Falsos</td>
+<td style="text-align: left;">Pierde 1 <code>Prueba</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Desvío</td>
+<td style="text-align: left;">Nada</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Soborno</td>
+<td style="text-align: left;">10 subs</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Rumor</td>
+<td style="text-align: left;">1 <code>Pista</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: left;">Coopera</td>
+<td style="text-align: left;">1 <code>Prueba</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td style="text-align: left;">Hablador</td>
+<td style="text-align: left;">1 <code>Prueba</code>, +1 <code>Pista</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">8</td>
+<td style="text-align: left;">Revelación</td>
+<td style="text-align: left;">2 <code>Prueba</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div><h2>Críticos: Cortante</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">d6</th>
+<th style="text-align: left;">Resultado</th>
+<th style="text-align: left;">Efecto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Tajo</td>
+<td style="text-align: left;">+d4 de daño</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Sangrado</td>
+<td style="text-align: left;">2 daño por activación esta partida (no acumula)</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Desjarretado</td>
+<td style="text-align: left;">-1" Mov permanente</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Desarmado</td>
+<td style="text-align: left;">Suelta arma (en la posición de la miniatura)</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Mutilado</td>
+<td style="text-align: left;"><code>-1 ND</code> <code>Combate</code> permanente</td>
+</tr>
+<tr>
+<td style="text-align: center;">6+</td>
+<td style="text-align: left;">Cercenado</td>
+<td style="text-align: left;"><code>FdC</code>, -2 a la tirada de Heridas</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div><h2>Críticos: Contundente</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">d6</th>
+<th style="text-align: left;">Resultado</th>
+<th style="text-align: left;">Efecto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Magullado</td>
+<td style="text-align: left;">+d4 de daño</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Aturdido</td>
+<td style="text-align: left;">Pierde la siguiente activación</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Trastornado</td>
+<td style="text-align: left;"><code>-1 ND</code> <code>Defensa</code> permanente</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Conmocionado</td>
+<td style="text-align: left;"><code>-1 ND</code> <code>Astucia</code> permanente</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Tullido</td>
+<td style="text-align: left;">-2" Mov permanente</td>
+</tr>
+<tr>
+<td style="text-align: center;">6+</td>
+<td style="text-align: left;">Aplastado</td>
+<td style="text-align: left;"><code>FdC</code>, -2 a la tirada de Heridas</td>
+</tr>
+</tbody>
+</table></div>
+            </div>
+
+            <div class="column">
+<div><h2>Críticos: Proyectil</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">d6</th>
+<th style="text-align: left;">Resultado</th>
+<th style="text-align: left;">Efecto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Rozado</td>
+<td style="text-align: left;">+d4 de daño</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Perforado</td>
+<td style="text-align: left;">2 daño por activación esta partida (no acumula)</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Tambaleante</td>
+<td style="text-align: left;"><code>-1 ND</code> <code>Defensa</code> permanente</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Atravesado</td>
+<td style="text-align: left;">Suelta arma (en la posición de la miniatura)</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Acribillado</td>
+<td style="text-align: left;"><code>-1 ND</code> a todos los atributos permanente</td>
+</tr>
+<tr>
+<td style="text-align: center;">6+</td>
+<td style="text-align: left;">Destripado</td>
+<td style="text-align: left;"><code>FdC</code>, -2 a la tirada de Heridas</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div><h2>Críticos: Energía</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">d6</th>
+<th style="text-align: left;">Resultado</th>
+<th style="text-align: left;">Efecto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Chamuscado</td>
+<td style="text-align: left;">+d4 de daño</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Armadura Fundida</td>
+<td style="text-align: left;">Armadura -1 nivel permanente (Pesada→Media→Ligera→ destruida)</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Cegado</td>
+<td style="text-align: left;"><code>-1 ND</code> <code>Combate</code> permanente</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Daño Neural</td>
+<td style="text-align: left;">-2" Mov permanente</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Quemado</td>
+<td style="text-align: left;"><code>-2 ND</code> disparo permanente</td>
+</tr>
+<tr>
+<td style="text-align: center;">6+</td>
+<td style="text-align: left;">Sobrecargado</td>
+<td style="text-align: left;"><code>FdC</code>, -2 a la tirada de Heridas</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div><h2>Críticos: Explosivo</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">d6</th>
+<th style="text-align: left;">Resultado</th>
+<th style="text-align: left;">Efecto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Metralla</td>
+<td style="text-align: left;">+d6 de daño</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Shock</td>
+<td style="text-align: left;">Pierde la siguiente activación</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Desorientado</td>
+<td style="text-align: left;"><code>-1 ND</code> <code>Astucia</code> permanente</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Derribado</td>
+<td style="text-align: left;">Se aleja d6" del atacante</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Destrozado</td>
+<td style="text-align: left;">Mov a la mitad permanente</td>
+</tr>
+<tr>
+<td style="text-align: center;">6+</td>
+<td style="text-align: left;">Devastado</td>
+<td style="text-align: left;"><code>FdC</code>, -2 a la tirada de Heridas</td>
+</tr>
+</tbody>
+</table></div>
+            </div>
+
+            <div class="column">
+<div><h2>Críticos: Tóxico</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">d6</th>
+<th style="text-align: left;">Resultado</th>
+<th style="text-align: left;">Efecto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Quemadura</td>
+<td style="text-align: left;">+d4 de daño</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Corrosión</td>
+<td style="text-align: left;">2 daño por activación esta partida (no acumula)</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Debilitado</td>
+<td style="text-align: left;"><code>-1 ND</code> <code>Combate</code> permanente</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Delirio</td>
+<td style="text-align: left;"><code>-1 ND</code> <code>Astucia</code> permanente, se mueve hacia el enemigo más cercano</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Sistémico</td>
+<td style="text-align: left;"><code>-1 ND</code> a todos los atributos permanente</td>
+</tr>
+<tr>
+<td style="text-align: center;">6+</td>
+<td style="text-align: left;">Disuelto</td>
+<td style="text-align: left;"><code>FdC</code> al final de siguiente ronda, -2 a la tirada de Heridas</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div><h2>Críticos: Estático</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">d6</th>
+<th style="text-align: left;">Resultado</th>
+<th style="text-align: left;">Efecto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Quemadura de Señal</td>
+<td style="text-align: left;">+d6 de daño</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Terror de Frecuencia</td>
+<td style="text-align: left;"><code>Huida</code> hacia el borde del tablero</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Drenaje de Sistema</td>
+<td style="text-align: left;"><code>-1 ND</code> <code>Combate</code> permanente</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Colapso Lógico</td>
+<td style="text-align: left;"><code>-2 ND</code> <code>Astucia</code> permanente</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Secuestrado</td>
+<td style="text-align: left;">Enemigo controla la siguiente activación</td>
+</tr>
+<tr>
+<td style="text-align: center;">6+</td>
+<td style="text-align: left;">Corrupción Total</td>
+<td style="text-align: left;"><code>FdC</code>, -2 a la tirada de Heridas</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div><h2>Críticos: Emisión</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">d6</th>
+<th style="text-align: left;">Resultado</th>
+<th style="text-align: left;">Efecto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Sobrecarga</td>
+<td style="text-align: left;">+d6 de daño</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Cascada</td>
+<td style="text-align: left;">Impacta un objetivo adicional a 3"</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Drenaje de Banda</td>
+<td style="text-align: left;"><code>-1 ND</code> <code>Astucia</code> permanente</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Amplificar</td>
+<td style="text-align: left;">+d8 de daño</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Cortafuegos Roto</td>
+<td style="text-align: left;">Ignora armadura</td>
+</tr>
+<tr>
+<td style="text-align: center;">6+</td>
+<td style="text-align: left;">Borrado de Sistema</td>
+<td style="text-align: left;"><code>FdC</code>, -2 a la tirada de Heridas</td>
+</tr>
+</tbody>
+</table></div>
+            </div>
+
+            <div class="column">
+<div><h2>Pifias: CC</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">d6</th>
+<th style="text-align: left;">Resultado</th>
+<th style="text-align: left;">Efecto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Tropezón</td>
+<td style="text-align: left;">Pierde activación</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Desequilibrio</td>
+<td style="text-align: left;"><code>-1 ND</code> próx. defensa</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Autolesión</td>
+<td style="text-align: left;">Sufre su daño</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Golpe Errante</td>
+<td style="text-align: left;">Golpea aliado a 1" (si no, sufre daño)</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Soltada</td>
+<td style="text-align: left;">Suelta arma, sufre su daño</td>
+</tr>
+<tr>
+<td style="text-align: center;">6+</td>
+<td style="text-align: left;">Destrozada</td>
+<td style="text-align: left;">Arma destruida, daño máx.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div><h2>Pifias: Disparo</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">d6</th>
+<th style="text-align: left;">Resultado</th>
+<th style="text-align: left;">Efecto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Encasquillada</td>
+<td style="text-align: left;">Pierde activación</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Desalineada</td>
+<td style="text-align: left;"><code>-1 ND</code> próx. ataque</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Retroceso</td>
+<td style="text-align: left;">Sufre su daño</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Fuego Amigo</td>
+<td style="text-align: left;">Golpea aliado a 6" (si no, sufre daño)</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Soltada</td>
+<td style="text-align: left;">Suelta arma, sufre su daño</td>
+</tr>
+<tr>
+<td style="text-align: center;">6+</td>
+<td style="text-align: left;">Explosión</td>
+<td style="text-align: left;">Arma destruida, daño máx.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div><h2>Pifias: Emisión</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">d6</th>
+<th style="text-align: left;">Resultado</th>
+<th style="text-align: left;">Efecto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Sobrecarga</td>
+<td style="text-align: left;">Emisor pierde activación</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Interferencia</td>
+<td style="text-align: left;"><code>-1 ND</code> próx. canalización</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Contraflujo</td>
+<td style="text-align: left;">Emisor sufre d4 de daño</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Rebote</td>
+<td style="text-align: left;">Aliado a 6" sufre d4 (o emisor)</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Bloqueo</td>
+<td style="text-align: left;">Poder bloqueado este escenario, d4 de daño</td>
+</tr>
+<tr>
+<td style="text-align: center;">6+</td>
+<td style="text-align: left;">Tormenta</td>
+<td style="text-align: left;">Pierde el poder, Emisor y todos a 6" sufren d8</td>
+</tr>
+</tbody>
+</table></div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('.app-menu');
+            if (!nav) return;
+            nav.dataset.open = nav.dataset.open === 'true' ? 'false' : 'true';
+        }
+
+        // Mobile page scaling for landscape QR (A4 landscape: 297mm x 210mm)
+        function updatePageScale() {
+            const content = document.querySelector('.content');
+            if (!content) return;
+            const pageWidth = 1122; // 297mm in px at 96dpi
+            const pageHeight = 793; // 210mm in px at 96dpi
+            const viewportWidth = window.innerWidth;
+            if (viewportWidth < 980) {
+                const scale = Math.min(1, viewportWidth / pageWidth);
+                content.style.setProperty('--page-scale-landscape', scale.toFixed(3));
+            } else {
+                content.style.removeProperty('--page-scale-landscape');
+            }
+        }
+        window.addEventListener('resize', updatePageScale);
+        document.addEventListener('DOMContentLoaded', updatePageScale);
+    </script>
+</body>
+</html>

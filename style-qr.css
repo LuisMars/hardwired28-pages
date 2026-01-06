@@ -1,0 +1,273 @@
+/* Hardwired 28 - Quick Reference Stylesheet */
+/* Landscape A4, 3-column, dense layout */
+@import url('style-base.css');
+
+html, body {
+    overflow-x: hidden;
+}
+
+:root {
+    --color-table-header-bg: #000;
+    --color-table-header-text: #fff;
+
+    --page-margin-vertical: 6.5mm;
+    --page-margin-horizontal: 7mm;
+
+    /* QR-specific font sizes (smaller for dense layout) */
+    --font-size-body: 9pt;
+    --font-size-small: 8pt;
+    --font-size-tiny: 7pt;
+    --font-size-micro: 6pt;
+    --font-size-h1: 11pt;
+    --font-size-h2: 9.5pt;
+    --font-size-h3: 9pt;
+    --font-size-h4: 8pt;
+    --font-size-compact: 8pt;
+}
+
+@page {
+    size: A4 landscape;
+    margin: 0;
+}
+
+body {
+    font-size: var(--font-size-body);
+    line-height: 1.35;
+    margin: 0;
+    padding: 0;
+}
+
+/* Page container */
+.page {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/* Column layouts - flexbox for vertical justification */
+.three-column {
+    display: flex;
+    gap: 5mm;
+    height: 100%;
+}
+
+.four-column {
+    display: flex;
+    gap: 4mm;
+    height: 100%;
+}
+
+.five-column {
+    display: flex;
+    gap: 3mm;
+    height: 100%;
+}
+
+.column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Headings - compact sizes */
+h1 {
+    font-size: var(--font-size-h1);
+    letter-spacing: 0.5pt;
+    margin: 0;
+}
+
+h2 {
+    font-size: var(--font-size-h2);
+    letter-spacing: 0.3pt;
+    border-bottom: 1.5px solid var(--color-border);
+    margin: 0;
+    padding: 0;
+}
+
+h3 {
+    font-size: var(--font-size-h3);
+    letter-spacing: 0.2pt;
+    margin: 0;
+}
+
+h4 {
+    font-size: var(--font-size-h4);
+    margin: 0;
+}
+
+/* Prevent breaks inside sections */
+h2, h3, h4, table, pre {
+    break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+}
+
+h2, h3, h4 {
+    break-after: avoid;
+    page-break-after: avoid;
+}
+
+/* Paragraphs */
+p {
+    margin-block-start: 1mm;
+    margin-block-end: 1mm;
+    orphans: 2;
+    widows: 2;
+}
+
+/* Lists - tight */
+ol, ul {
+    margin-block-start: 1mm;
+    margin-block-end: 1mm;
+    padding-inline-start: 4mm;
+}
+
+li {
+    margin: 0;
+}
+
+/* Tables */
+table {
+    font-size: var(--font-size-body);
+    margin-block-start: 1mm;
+    margin-block-end: 1.5mm;
+    break-inside: avoid;
+}
+
+th, td {
+    padding: 0.3mm 1mm;
+}
+
+/* Compact mode - smaller tables for dense reference pages */
+.page.compact table {
+    font-size: var(--font-size-compact);
+}
+
+.page.compact th, .page.compact td {
+    padding: 0.2mm 0.8mm;
+}
+
+.page.compact h2 {
+    font-size: var(--font-size-h2);
+    margin-top: 1.5mm;
+}
+
+.page.compact p {
+    font-size: var(--font-size-small);
+}
+
+th {
+    background: var(--color-table-header-bg);
+    color: var(--color-table-header-text);
+}
+
+td:last-child {
+    text-align: left;
+}
+
+/* Dice tier visual */
+.dice-tier {
+    text-align: center;
+    font-family: var(--font-heading);
+    font-size: var(--font-size-h2);
+    font-weight: 700;
+    margin: 1mm 0;
+    letter-spacing: 0.5pt;
+}
+
+.dice-tier-arrows {
+    text-align: center;
+    font-size: var(--font-size-tiny);
+    color: var(--color-text-muted);
+    margin-bottom: 1mm;
+}
+
+
+/* Screen preview */
+@media screen {
+    body {
+        padding: 2em;
+        background: var(--color-bg-muted);
+    }
+
+    body.has-app-menu {
+        padding-top: calc(2em + var(--app-menu-height));
+    }
+
+    .content {
+        margin: 0 auto;
+    }
+
+    .page {
+        width: 297mm; /* A4 landscape full width */
+        height: 210mm;
+        margin: 0 auto 2em auto;
+        padding: var(--page-margin-vertical) var(--page-margin-horizontal);
+        background: white;
+        border: 1px solid #ccc;
+        position: relative;
+        overflow: visible;
+        box-sizing: border-box;
+    }
+
+    .page:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/* Print */
+@media print {
+    * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    body {
+        padding: 0;
+        background: white;
+    }
+
+    .page {
+        page-break-before: always;
+        position: relative;
+        width: 297mm;
+        height: 210mm;
+        
+        padding: var(--page-margin-vertical) var(--page-margin-horizontal);
+        box-sizing: border-box;
+    }
+
+    .page:first-child {
+        page-break-before: avoid;
+    }
+}
+
+/* Mobile responsive - landscape QR scaling */
+@media screen and (max-width: 980px) {
+    body {
+        padding: 0 !important;
+        margin: 0 !important;
+        overflow-x: hidden;
+    }
+
+    body.has-app-menu {
+        padding-top: var(--app-menu-height) !important;
+    }
+
+    .content {
+        display: block !important;
+        width: 100vw;
+        padding: 0 !important;
+        margin: 0 !important;
+        overflow-x: hidden;
+    }
+
+    .page {
+        /* Scale based on landscape width (297mm) */
+        transform: scale(var(--page-scale-landscape, 1));
+        transform-origin: top left;
+        margin: 0 !important;
+        margin-bottom: calc(-210mm * (1 - var(--page-scale-landscape, 1))) !important;
+    }
+}

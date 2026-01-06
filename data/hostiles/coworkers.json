@@ -1,0 +1,40 @@
+{
+  "table_name": "Coworkers",
+  "source": "07_hostiles.md",
+  "special_rule": "**Cooperate**: During the next round, **Interrogate** auto-succeeds, roll result table.\n**Hostile**: When attacked, mark this Coworker. Hostile Coworkers use the Attacked table.",
+  "units": {
+    "columns": ["d6", "Name", "Spawn", "Combat", "Defense", "Wits", "Health", "Move", "Weapon"],
+    "align": ["center", "left", "center", "center", "center", "center", "center", "center", "left"],
+    "display_columns": ["d6", "Name", "#", "COM", "DEF", "WIT", "HP", "MOV", "Weapon"],
+    "items": [
+      {"roll": 1, "name": "Shift Drone", "spawn": "6", "combat": "2d4", "defense": "2d4", "wits": "2d10", "health": 6, "move": "5\"", "weapon": "Tired Fists (`Blunt`, d4, Melee)"},
+      {"roll": 2, "name": "Temp", "spawn": "5", "combat": "2d4", "defense": "2d4", "wits": "2d10", "health": 8, "move": "6\"", "weapon": "Box Cutter (`Bladed`, d4, Melee)"},
+      {"roll": 3, "name": "Commuter", "spawn": "4", "combat": "2d4", "defense": "2d6", "wits": "2d8", "health": 8, "move": "7\"", "weapon": "Walking Cane (`Blunt`, d4, Melee)"},
+      {"roll": 4, "name": "Data Clerk", "spawn": "2", "combat": "2d4", "defense": "2d6", "wits": "2d8", "health": 10, "move": "5\"", "weapon": "Stylus (`Bladed`, d4, Melee)"},
+      {"roll": 5, "name": "Middle Manager", "spawn": "1", "combat": "2d6", "defense": "2d6", "wits": "2d6", "health": 12, "move": "5\"", "weapon": "Stun Baton (`Static`, d6, Melee)"},
+      {"roll": 6, "name": "Assistant to the Regional Manager", "spawn": "1", "combat": "2d6", "defense": "2d8", "wits": "2d6", "health": 10, "move": "6\"", "weapon": "Holdout Pistol (`Projectile`, d4, Ranged)"}
+    ]
+  },
+  "behavior": {
+    "title": "Normal",
+    "columns": ["d6", "No LoS", "Has LoS", "Engaged"],
+    "align": ["center", "center", "center", "center"],
+    "items": [
+      {"roll": "1-2", "no_los": "Patrol", "has_los": "Flee", "engaged": "Flee"},
+      {"roll": "3-4", "no_los": "Patrol", "has_los": "Wait", "engaged": "Wait"},
+      {"roll": "5", "no_los": "Cover", "has_los": "Cover", "engaged": "Flee"},
+      {"roll": "6", "no_los": "Cooperate", "has_los": "Cooperate", "engaged": "Cooperate"}
+    ]
+  },
+  "behavior_attacked": {
+    "title": "Attacked",
+    "columns": ["d6", "No LoS", "Has LoS", "Engaged"],
+    "align": ["center", "center", "center", "center"],
+    "items": [
+      {"roll": "1-2", "no_los": "Flee", "has_los": "Flee", "engaged": "Flee"},
+      {"roll": "3-4", "no_los": "Flee", "has_los": "Cover", "engaged": "Attack"},
+      {"roll": "5", "no_los": "Flee", "has_los": "Flee", "engaged": "Flee"},
+      {"roll": "6", "no_los": "Cover", "has_los": "Cover", "engaged": "Attack"}
+    ]
+  }
+}

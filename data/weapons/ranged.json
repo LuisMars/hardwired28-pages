@@ -1,0 +1,28 @@
+{
+  "table_name": "Ranged Weapons",
+  "source": "03_equipment.md",
+  "columns": ["d20", "Weapon", "Type", "Damage", "Special", "Cost"],
+  "align": ["center", "left", "center", "center", "left", "right"],
+  "items": [
+    {"roll": 1, "name": "Stapler", "type": "`Projectile`", "damage": "2", "special": "6\" max range", "cost": 2},
+    {"roll": 2, "name": "Pistol", "type": "`Projectile`", "damage": "d4", "special": "`-1 DT` beyond 6\"", "cost": 4},
+    {"roll": 3, "name": "Needle Gun", "type": "`Toxic`", "damage": "d4", "special": "+1 damage vs wounded", "cost": 5},
+    {"roll": 4, "name": "Arc Pistol", "type": "`Static`", "damage": "d4", "special": "No fumbles", "cost": 6},
+    {"roll": 5, "name": "Dart Gun", "type": "`Toxic`", "damage": "d6", "special": "Target `-1 DT` next activation", "cost": 7},
+    {"roll": 6, "name": "Laser", "type": "`Energy`", "damage": "d6", "special": "`+1 DT` if not moved this turn", "cost": 8},
+    {"roll": 7, "name": "Screamer", "type": "`Broadcast`", "damage": "d6", "special": "Ignores cover", "cost": 9},
+    {"roll": 8, "name": "Frag Pistol", "type": "`Explosive`", "damage": "d6", "special": "+1 vs armored", "cost": 10},
+    {"roll": 9, "name": "Carbine", "type": "`Projectile`", "damage": "d8", "special": "Re-roll 1s", "cost": 12},
+    {"roll": 10, "name": "Sonic Gun", "type": "`Broadcast`", "damage": "d8", "special": "`+1 DT` vs wounded", "cost": 14},
+    {"roll": 11, "name": "Tesla Gun", "type": "`Static`", "damage": "d8", "special": "Hits nearest model within 2\" of target", "cost": 15},
+    {"roll": 12, "name": "Flamer", "type": "`Energy`", "damage": "d8", "special": "Ignores cover", "cost": 16},
+    {"roll": 13, "name": "Shotgun", "type": "`Projectile`", "damage": "d10", "special": "Re-roll 1s, Knockback 1\"", "cost": 20},
+    {"roll": 14, "name": "Cryo Gun", "type": "`Toxic`", "damage": "d10", "special": "Ignores cover", "cost": 22},
+    {"roll": 15, "name": "Launcher", "type": "`Explosive`", "damage": "d10", "special": "Re-roll 1s, +1 vs armored", "cost": 24},
+    {"roll": 16, "name": "Arc Cannon", "type": "`Static`", "damage": "d10", "special": "Re-roll 1s, also hits 2 nearest models within 2\" of target", "cost": 26},
+    {"roll": 17, "name": "Rifle", "type": "`Energy`", "damage": "d12", "special": "Re-roll 1s and 2s, Overcharge: `-1 DT` for max damage", "cost": 30},
+    {"roll": 18, "name": "Wail Cannon", "type": "`Broadcast`", "damage": "d12", "special": "Re-roll 1s, Knockback 2\"", "cost": 32},
+    {"roll": 19, "name": "Missile Pod", "type": "`Explosive`", "damage": "d12", "special": "Re-roll 1s and 2s, +2 vs armored", "cost": 34},
+    {"roll": 20, "name": "Plasma Caster", "type": "`Energy`", "damage": "d12", "special": "Ignores cover, +1 vs armored", "cost": 38}
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "description": "Master list of game terminology for validation",
+  "source": "CLAUDE.md, 01_intro.md",
+  "attributes": ["Combat", "Defense", "Wits"],
+  "dice_system": ["DT"],
+  "conditions": ["Out of Action", "Flee", "Engaged", "wounded", "armored", "unarmored"],
+  "roles": ["Boss", "Resource"],
+  "actions": ["Search", "Interrogate", "Attack", "Aim", "Disengage", "Interact", "Loot", "Move Again", "Riposting"],
+  "objects": ["Loot Marker", "Evidence", "Relic"],
+  "weapon_types": ["Bladed", "Blunt", "Projectile", "Energy", "Explosive", "Toxic", "Static", "Broadcast"],
+  "weapon_abilities": ["Knockback", "Re-roll 1s", "Re-roll 1s and 2s", "Ignores cover", "No fumbles", "Overcharge"],
+  "notes": {
+    "wounded": "Model below max Health",
+    "armored": "Model wearing any armor",
+    "unarmored": "Model without armor"
+  }
+}
