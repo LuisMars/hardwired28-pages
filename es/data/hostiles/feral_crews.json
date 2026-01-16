@@ -1,7 +1,7 @@
 {
   "table_name": "Bandas Salvajes",
   "source": "07_hostiles.md",
-  "special_rule": "**Jauría**: Otros hostiles de Bandas Salvajes a 6\" obtienen `+1 ND` `Combate` esta activación",
+  "special_rule": "**Jauría**: Carga o Ataca con `+1 DT` `Combate`",
   "units": {
     "columns": ["d6", "Name", "Spawn", "Combat", "Defense", "Wits", "Health", "Move", "Weapon"],
     "align": ["center", "left", "center", "center", "center", "center", "center", "center", "left"],

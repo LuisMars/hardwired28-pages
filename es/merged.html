@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hardwired 28</title>
+    <meta property="og:title" content="Hardwired 28">
+    <meta property="og:description" content="Juego de escaramuzas cablepunk corporativo">
+    <meta property="og:image" content="http://hardwired28.luismars.com/img/social.png">
+    <meta property="og:url" content="http://hardwired28.luismars.com/es/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -56,7 +62,7 @@
 
 
 <h1 id="hardwired-28_1">Hardwired 28</h1>
-<p><em>0.6.2-beta</em> por LuisMars</p>
+<p><em>0.6.3-beta</em> por LuisMars</p>
 <h2 id="el-gran-complejo">El Gran Complejo</h2>
 <p>Una megaestructura vertical de tres kilómetros de altura. Los cables cuelgan de cada superficie. Se agrupan en troncos más gruesos que cuerpos, serpentean por las paredes, se enrollan bajo los pies. El Complejo iba a ser el paraíso. Ahora se pudre.</p>
 <p>La conexión por cable es sagrada. Lo inalámbrico es herejía. Desde el Anclaje, lo inalámbrico significa excomunión. Las deudas se heredan. Los hijos nacen suscritos.</p>
@@ -1145,7 +1151,7 @@
 <h2 id="ronda">Ronda</h2>
 <ol>
 <li>Cada jugador tira <strong>Bendiciones Corporativas</strong> (d8 tres veces)</li>
-<li>Añade una Ficha de Activación por cada miniatura que no esté <code>FdC</code> a una bolsa común (colores distintos por facción)</li>
+<li>Añade Fichas de Activación a una bolsa común: una por miniatura de jugador que no esté <code>FdC</code>, una por grupo de hostiles desplegado (colores distintos por facción)</li>
 <li>Saca una ficha: esa facción activa una miniatura (Hostiles y Compañeros siguen su tabla de IA)</li>
 <li>Cada activación: <strong>Movimiento + Acción</strong> O <strong>Acción + Movimiento</strong></li>
 <li>Repite desde el 3 hasta que todas las miniaturas hayan activado</li>
@@ -1430,34 +1436,22 @@
 <ul>
 <li>Acción para canalizar (una vez por activación)</li>
 <li>Sin límite de alcance (requiere LdV)</li>
-<li>Tira <code>Astucia</code> vs <code>Astucia</code> del objetivo</li>
-<li>Éxito con daño: inflige daño directo (sin tirada de <code>Combate</code>)</li>
-</ul>
-<div class="column-break"></div>
-
-<h2 id="interferencia">Interferencia</h2>
-<p>Por cada fallo: <code>-1</code> acumulativo a la siguiente canalización. Se reinicia tras pifia.</p>
-<h2 id="sobreemisión">Sobreemisión</h2>
-<p>Declara antes de tirar. Canaliza a <code>-1 ND</code> (se acumula con Interferencia). Con éxito: +d4 a efectos numéricos o dobla efectos no numéricos.</p>
-<h2 id="críticos-y-pifias">Críticos y Pifias</h2>
-<p>Doble activa crítico/pifia; triple o más añade modificadores.</p>
-<ul>
-<li><strong>Crítico:</strong> tira en la tabla de Críticos <code>Emisión</code></li>
-<li><strong>Pifia:</strong> tira en la tabla de Pifias <code>Emisión</code></li>
+<li>Poderes ofensivos: tira <code>Astucia</code> vs <code>Astucia</code> del objetivo</li>
+<li>Poderes de apoyo: tira <code>Astucia</code> vs 2d6 (el objetivo debe ser aliado)</li>
+<li>Triple+: el efecto se aplica a todos los objetivos válidos a 3"</li>
+<li>Defensor triplica o más: tira en la tabla de Pifias <code>Emisión</code></li>
 </ul>
 <blockquote>
 <p>"Cada cable es una correa. Cada peaje, un collar. Los cortaremos todos."<br />
 <strong>Emisión de Canal Abierto</strong></p>
 </blockquote>
-</div>
-<div class="single-column">
+<div class="column-break"></div>
 
-
-<h2 id="poderes">Poderes</h2>
+<h2 id="poderes-ofensivos">Poderes Ofensivos</h2>
 <table>
 <thead>
 <tr>
-<th style="text-align: center;">d6</th>
+<th style="text-align: center;">d4</th>
 <th style="text-align: left;">Poder</th>
 <th style="text-align: left;">Efecto</th>
 </tr>
@@ -1465,33 +1459,55 @@
 <tbody>
 <tr>
 <td style="text-align: center;">1</td>
-<td style="text-align: left;">Estallido Estático</td>
-<td style="text-align: left;">d8 daño <code>Emisión</code>, ignora armadura</td>
+<td style="text-align: left;">Interferencia</td>
+<td style="text-align: left;"><code>-1 ND</code> todas las tiradas hasta la siguiente activación</td>
 </tr>
 <tr>
 <td style="text-align: center;">2</td>
-<td style="text-align: left;">Empuje Resonante</td>
-<td style="text-align: left;">Empuja al objetivo d6" en cualquier dirección</td>
-</tr>
-<tr>
-<td style="text-align: center;">3</td>
-<td style="text-align: left;">Bloqueo de Señal</td>
-<td style="text-align: left;"><code>-1 ND</code> a todas las tiradas hasta la siguiente activación</td>
-</tr>
-<tr>
-<td style="text-align: center;">4</td>
-<td style="text-align: left;">Trampa Neural</td>
-<td style="text-align: left;">El objetivo recibe d6 de daño si se mueve en su siguiente activación</td>
-</tr>
-<tr>
-<td style="text-align: center;">5</td>
 <td style="text-align: left;">Bloqueo de Arma</td>
 <td style="text-align: left;">El objetivo suelta un arma</td>
 </tr>
 <tr>
-<td style="text-align: center;">6</td>
-<td style="text-align: left;">Latigazo Mental</td>
-<td style="text-align: left;">El objetivo ataca a la miniatura más cercana (aliada o enemiga)</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Trampa Neural</td>
+<td style="text-align: left;">d6 daño (ignora armadura) si el objetivo se mueve en su siguiente activación</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Empuje Resonante</td>
+<td style="text-align: left;">Empuja al objetivo d6" en cualquier dirección</td>
+</tr>
+</tbody>
+</table>
+<h2 id="poderes-de-apoyo">Poderes de Apoyo</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">d4</th>
+<th style="text-align: left;">Poder</th>
+<th style="text-align: left;">Efecto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Campo de Fuerza</td>
+<td style="text-align: left;"><code>+2 ND</code> <code>Defensa</code> vs a distancia hasta la siguiente activación</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Enfoque</td>
+<td style="text-align: left;">Añade 2 Fichas de Activación del objetivo a la bolsa</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Intercambio</td>
+<td style="text-align: left;">Intercambia posiciones con el objetivo (el canalizador ve a ambos, a 12" o menos)</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Ping</td>
+<td style="text-align: left;">El objetivo ignora cobertura y ve a través de paredes hasta la siguiente activación</td>
 </tr>
 </tbody>
 </table>
@@ -1829,52 +1845,6 @@
 <p>"La contaminación de señal comienza en el sitio de la herida. No existe procedimiento de descontaminación."<br />
 <strong>Advertencia de Buscaondas</strong></p>
 </blockquote>
-<h2 id="crítico-emisión">Crítico Emisión</h2>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">d6</th>
-<th style="text-align: left;">Resultado</th>
-<th style="text-align: left;">Efecto</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">1</td>
-<td style="text-align: left;">Sobrecarga</td>
-<td style="text-align: left;">+d6 de daño</td>
-</tr>
-<tr>
-<td style="text-align: center;">2</td>
-<td style="text-align: left;">Cascada</td>
-<td style="text-align: left;">Impacta un objetivo adicional a 3"</td>
-</tr>
-<tr>
-<td style="text-align: center;">3</td>
-<td style="text-align: left;">Drenaje de Banda</td>
-<td style="text-align: left;"><code>-1 ND</code> <code>Astucia</code> permanente</td>
-</tr>
-<tr>
-<td style="text-align: center;">4</td>
-<td style="text-align: left;">Amplificar</td>
-<td style="text-align: left;">+d8 de daño</td>
-</tr>
-<tr>
-<td style="text-align: center;">5</td>
-<td style="text-align: left;">Cortafuegos Roto</td>
-<td style="text-align: left;">Ignora armadura</td>
-</tr>
-<tr>
-<td style="text-align: center;">6+</td>
-<td style="text-align: left;">Borrado de Sistema</td>
-<td style="text-align: left;"><code>FdC</code>, -2 a la tirada de Heridas</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>"La señal habla. La carne escucha. La mente se quiebra."<br />
-<strong>Fragmento de Transmisión Desanclada</strong></p>
-</blockquote>
 </div>
 </div>
 
@@ -2101,7 +2071,7 @@
 <li>COM 2d4, DEF 2d6, AST 2d8</li>
 <li>Aguijón (5): d4 <code>Energía</code>, <code>-1 ND</code> en la siguiente activación</li>
 <li>Chaleco Acolchado (7): 1 reducción, reduce <code>Empuje</code> en 1"</li>
-<li><em>Solo <code>CC</code>, puede <code>Emitir</code></em></li>
+<li><em>Solo <code>CC</code>, puede <code>Canalizar</code></em></li>
 </ul>
 </div>
 </div>
@@ -2142,7 +2112,7 @@
 
 
 <h2 id="activación">Activación</h2>
-<p>Cuando ambos jugadores hayan activado todas sus miniaturas, los hostiles se activan uno a uno (primero el más cercano a cualquier miniatura de jugador). Tira el comportamiento de cada hostil. Ignoran las miniaturas <code>Fuera de Combate</code>.</p>
+<p>Cada grupo desplegado tiene una ficha en la bolsa. Al sacarla, tira comportamiento una vez para todo el grupo. Activa las miniaturas una a una (primero la más cercana a cualquier miniatura de jugador), todas realizando la misma acción. Ignoran las miniaturas <code>Fuera de Combate</code>.</p>
 <h2 id="situación">Situación</h2>
 <ul>
 <li><strong>Sin LdV</strong>: No ve a ningún enemigo</li>
@@ -2165,18 +2135,14 @@
 
 
 <h2 id="dirección-aleatoria">Dirección Aleatoria</h2>
-<p>Tira y mueve en esa dirección:</p>
-<ul>
-<li>d8 para 8 direcciones cardinales</li>
-<li>d12 para posiciones de reloj</li>
-<li>Dado de dispersión, si tienes uno</li>
-</ul>
+<p>Tira d8 (brújula), d12 (reloj) o dado de dispersión. Mueve en esa dirección.</p>
 <h2 id="desplegar-hostiles">Desplegar Hostiles</h2>
 <p>Cuando un escenario despliega hostiles:<br />
 1. Tira d6 por facción<br />
 2. Tira d2 por tipo de unidad en el nivel (ver escenario)<br />
 3. Despliega el número indicado en la columna Despliegue<br />
-4. Todos los hostiles desplegados siguen las reglas de su facción</p>
+4. Añade una ficha a la bolsa para este grupo<br />
+5. Cada tipo de unidad desplegado es un grupo separado con su propia ficha</p>
 <div class="column-break"></div>
 
 <h2 id="niveles-de-unidad">Niveles de Unidad</h2>
@@ -2212,7 +2178,7 @@
 
 
 
-<h2 id="carroñeros">CARROÑEROS</h2>
+<h2 id="carroñeros">Carroñeros</h2>
 <p>Recuperación de activos externalizada. Cumplimiento normativo subcontratado. Recolocación de recursos de terceros. Después de siete capas de empresas pantalla, nadie sabe qué decía el contrato original. Los Carroñeros quizá fueron legítimos alguna vez: equipos de embargo, cuadrillas de mantenimiento, auditores de infraestructura. El papeleo se degradó. La cadena de mando se disolvió. Ahora se llevan lo que parece valioso y facturan a alguien.</p>
 <p>Viven donde la infraestructura falló: las profundidades atestadas de cables donde el mantenimiento cesó hace generaciones. Los cobradores de suscripción no bajan del Nivel 7. Los peajes se oxidan sin abrir. Los Departamentos catalogaron estos niveles como "activos irrecuperables" y sellaron los accesos. Los Carroñeros los abrieron. Siempre lo hacen.</p>
 <p>Algunos han bajado a las Raíces. Algunos han visto lo que los Fundadores dejaron: máquinas limpias que aún funcionan, cámaras selladas que zumban con energía, pasillos donde las luces responden al movimiento. Comercian ese conocimiento con cuidado. No hablan de las otras cosas. Las que se mueven allá abajo. Las que recuerdan.</p>
@@ -2312,7 +2278,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Saquear</strong>: Al <strong>Trabar</strong>, roba 1 equipo aleatorio del objetivo</p>
+<p><strong>Saquear</strong>: El ataque roba 1 equipo aleatorio en lugar de causar daño</p>
 <p><strong>Behavior</strong></p>
 <table>
 <thead>
@@ -2358,7 +2324,7 @@
 
 
 
-<h2 id="bandas-salvajes">BANDAS SALVAJES</h2>
+<h2 id="bandas-salvajes">Bandas Salvajes</h2>
 <p>Trabajadores morosos que rechazaron la recaudación. Sus contratos fueron vendidos, revendidos y finalmente dados por pérdidas irrecuperables. Los Departamentos dejaron de enviar cobradores tras la tercera masacre. Ahora vagan por los niveles inferiores en bandas ruidosas y agresivas, controlando territorio que las corporaciones abandonaron. La intrusión se paga con violencia. No hay negociación. No hay plan de pagos.</p>
 <p>Su piel es verde. Generaciones de beber refrigerante filtrado los transformaron. El agua requiere suscripción; el refrigerante gotea gratis desde los sistemas de enfriamiento de los niveles superiores. Sus ancestros bebieron lo que había. Ahora lo beben por elección, se pintan con él, sueldan trofeos a armas, marcan sus sectores con avisos de deuda arrancados. El verde los marca como algo que el sistema de suscripciones no puede tocar. El verde los marca como libres.</p>
 <p>Las Crías atacan en manadas, gritando por los pasillos, abrumando objetivos con números. Los Matones atraviesan armaduras con cuchillas forjadas de equipo de corte industrial. Los Tiradores y Antorchas proporcionan fuego de cobertura con pistolas de proyectiles y lanzallamas improvisados de los niveles de mantenimiento. Los Pesados son moles andantes de músculo y metal, portando armas demasiado grandes para humanos normales. Y luego están los Jefes: líderes masivos y cicatrizados que ganaron su posición mediante violencia y la mantienen con algo peor. Cuando un Jefe ordena la carga, todo cuerpo verde al alcance del oído le sigue.</p>
@@ -2457,7 +2423,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Jauría</strong>: Otros hostiles de Bandas Salvajes a 6" obtienen <code>+1 ND</code> <code>Combate</code> esta activación</p>
+<p><strong>Jauría</strong>: Carga o Ataca con <code>+1 DT</code> <code>Combate</code></p>
 <p><strong>Behavior</strong></p>
 <table>
 <thead>
@@ -2503,7 +2469,7 @@
 
 
 
-<h2 id="invocadores-de-onda">INVOCADORES DE ONDA</h2>
+<h2 id="invocadores-de-onda">Invocadores de Onda</h2>
 <p>Cultistas inalámbricos. Creen que la Onda Divina cubrirá el Complejo, liberando a todos de cables y suscripciones. El aire no debería tener peajes. Los datos quieren ser libres. Los cables son cadenas, no conexiones. En algún lugar, de algún modo, las señales pueden viajar sin permiso. Los Fundadores lo sabían. Los Fundadores lo temían. Los cables nunca fueron solo por beneficio.</p>
 <p>Canal Abierto los coordina: una voz en frecuencias que no deberían existir, emitiendo desde algún lugar que la Autoridad nunca ha encontrado. Algunos dicen que Canal Abierto es una persona. Otros que es una señal que piensa. Otros que es lo que los Fundadores sellaron en las Raíces, y que por fin ha despertado. El rumor más peligroso: que pueden llegar más allá del propio Complejo. Que hay algo ahí fuera escuchando.</p>
 <p>Los Iniciados llevan cables cortados como marca de su rechazo, aprendiendo los himnos de la estática. Los Injertados de Antena han fusionado componentes transmisores directamente en su carne, recibiendo frecuencias que ningún humano base puede percibir. Los Conversos son antiguos Técnicos que vieron demasiado, que oyeron susurros en frecuencias equivocadas, que cortaron sus propios cables y siguieron caminando. Los Sacerdotes de Frecuencia dirigen los rituales, sobrecargando sistemas con estática de oración hasta que algo responde. Los Campeones de Señal lideran ataques con hojas de resonancia que alteran la electrónica con cada golpe. Y los Receptáculos: aquellos que se abrieron completamente a la Onda Divina, sus cuerpos ahora canales para algo que nunca debió caminar.</p>
@@ -2648,7 +2614,7 @@
 
 
 
-<h2 id="espectros-de-estática">ESPECTROS DE ESTÁTICA</h2>
+<h2 id="espectros-de-estática">Espectros de Estática</h2>
 <p>Entidades de señal. Datos corruptos que cobran forma. Ecos de transmisiones que no deberían existir. Aparecieron tras la Crisis de Señal y nunca han parado. Los Fundadores sabían lo que eran. Ese conocimiento murió con ellos. O fue enterrado. La Junta siempre lo ha sabido. Los cables no son solo para el beneficio. Son para el silencio.</p>
 <p>Atraviesan muros, parpadean entre momentos, aparecen donde no deberían. Matar a uno lo dispersa temporalmente. La señal siempre vuelve. Algunos creen que son fantasmas de la era inalámbrica, ecos de una red que abarcaba el Complejo antes del Anclaje. Otros dicen que son algo más antiguo, algo que existía en la estática antes de que la humanidad aprendiera a transmitir. Los Invocadores de Onda creen que son mensajeros de la Onda Divina. Los Monjes de Mantenimiento creen que son castigo por la herejía inalámbrica. Ambos grupos les temen.</p>
 <p>Los Parpadeos son los más pequeños, apenas coherentes, atravesando electrónica y dejando corrupción a su paso. Las Derivas se manifiestan más plenamente, garras de fase desgarrando armaduras que deberían proteger contra amenazas físicas. Los Ecos proyectan llamas de señal que queman sin calor, dañando las firmas bioeléctricas de los vivos. Las Interferencias son nudos densos de estática que distorsionan la realidad a su alrededor. Las Descargas cortan la materia con hojas de frecuencia sintonizadas para alterar enlaces moleculares. Y el Emisor: amalgamaciones masivas de señal y malicia, presuntamente Invocadores de Onda que lograron fundirse con la estática, o lo que queda de ellos después de que la Onda respondiera.</p>
@@ -2793,7 +2759,7 @@
 
 
 
-<h2 id="autómatas-salvajes">AUTÓMATAS SALVAJES</h2>
+<h2 id="autómatas-salvajes">Autómatas Salvajes</h2>
 <p>Máquinas que olvidaron su propósito. Ejecutan programas escritos para un Complejo que ya no existe, protegiendo activos que se oxidaron hace siglos. Su diseño es anterior al Anclaje. Los Fundadores los construyeron para durar. Duraron demasiado. Líneas limpias. Carcasas lisas. Sin parches. Los Monjes los llaman sagrados. Los Desanclados los llaman prueba de que los viejos métodos funcionaban. La Autoridad los llama fallos.</p>
 <p>Sus códigos de autorización tienen seiscientos años de antigüedad. No reconocen credenciales actuales. No reconocen humanos actuales. Su definición de "intruso" incluye a todos los que viven hoy. Su definición de "personal autorizado" no coincide con ninguna firma viva. Patrullan rutas a través de infraestructura colapsada, guardan puertas que dan a pozos vacíos, protegen activos que se disolvieron en óxido hace generaciones. Su programación es perfecta. Su contexto ha desaparecido.</p>
 <p>Los Enjambres de Mantenimiento se arrastran por conductos, mandíbulas cortantes aún afiladas tras siglos. Los Drones de Seguridad flotan en propulsores silenciosos como un susurro, carabinas de pulso rastreando cualquier movimiento. Las Unidades de Objetivo coordinan ataques con precisión mecánica, lanzas neurales golpeando sistemas bioeléctricos con exactitud quirúrgica. Las Unidades Pesadas anclan posiciones defensivas, blásteres montados cubriendo zonas de muerte que no han cambiado desde que los Fundadores las diseñaron. Los Cazadores-Asesinos persiguen objetivos por las profundidades, hojas trituradoras diseñadas para enemigos que murieron hace mucho. Y las Plataformas de Defensa: las más grandes, las más peligrosas, aún ejecutando protocolos de protección para bóvedas que la Autoridad finge que no existen.</p>
@@ -2938,10 +2904,10 @@
 
 
 
-<h2 id="parásitos-de-cable">PARÁSITOS DE CABLE</h2>
+<h2 id="parásitos-de-cable">Parásitos de Cable</h2>
 <p>Parásitos. Anidan entre conductos de energía, alimentándose de señales bioeléctricas. Los archivos sellados de los Fundadores mencionan "contramedidas bioeléctricas". Los Monjes dicen que evolucionaron naturalmente. Los archivos están en las Raíces. Los Monjes nunca han estado allí. La Junta sabe lo que los Fundadores crearon. La Junta siempre lo ha sabido. Algunas armas nunca debieron apagarse.</p>
 <p>Cazan en silencio. Prefieren objetivos aislados. Cuando se alimentan, drenan todo: sistema nervioso, implantes, la corriente que pasa por tus cables. Les atrae el calor de la corriente viva, el zumbido de la electrónica activa, el pulso de las firmas bioeléctricas. Algunos creen que fueron diseñados para cazar Desanclados, para consumir a cualquiera que transmitiera sin autorización. Otros creen que son lo que ocurre cuando la carne se encuentra con el cable demasiado tiempo, cuando la frontera entre organismo e infraestructura se disuelve. La verdad está en las Raíces. La verdad está sellada.</p>
-<p>Las Pinzas son las más pequeñas, rápidas y numerosas, garras de guadaña desgarrando armadura para alcanzar la corriente debajo. Las Larvas son pacientes, zarcillos alimentadores drenando víctimas lentamente mientras las toxinas paralizan. Los Acechadores rastrean presas en la oscuridad, garras desgarradoras diseñadas para abrir carcasas de cables y cuerpos por igual. Los Señuelos proyectan señales falsas, púas mentales atrayendo víctimas hacia emboscadas. Los Succionadores son los cazadores maduros, garras de drenaje arrancando la vida de todo lo que tocan. Y los Alfas: masivos, antiguos, inteligentes. Coordinan cacerías. Recuerdan lo que consumen. Recuerdan para qué fueron hechos.</p>
+<p>Los Segadores son los más pequeños, rápidos y numerosos, garras desgarrando armadura para alcanzar la corriente debajo. Las Larvas son pacientes, zarcillos alimentadores drenando víctimas lentamente mientras las toxinas paralizan. Los Acechadores rastrean presas en la oscuridad, zarpas diseñadas para abrir carcasas de cables y cuerpos por igual. Los Señuelos proyectan señales falsas, púas mentales atrayendo víctimas hacia emboscadas. Los Succionadores son los cazadores maduros, tubos de drenaje arrancando la vida de todo lo que tocan. Y los Agonistas: masivos, antiguos, inteligentes. Coordinan cacerías. Recuerdan lo que consumen. Recuerdan para qué fueron hechos.</p>
 <p>Los Carroñeros dicen que hay más grandes en las Raíces profundas. Que se alimentan de equipos enteros. Que llevan alimentándose desde la época de los Fundadores. La Autoridad recomienda sellar cualquier unión donde se confirmen Parásitos. La Autoridad no explica qué pasa si no lo haces. La Autoridad no explica por qué algunas uniones selladas tienen advertencias más antiguas que la propia Autoridad.</p>
 <blockquote>
 <p>"Barrido del Sector 7 completo. Sin supervivientes. Recomiendo sellar la unión permanentemente."<br />
@@ -2971,14 +2937,14 @@
 <tbody>
 <tr>
 <td style="text-align: center;">1</td>
-<td style="text-align: left;">Pinzas</td>
+<td style="text-align: left;">Segador</td>
 <td style="text-align: center;">5</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">4</td>
 <td style="text-align: center;">7"</td>
-<td style="text-align: left;">Garras de Guadaña (<code>Cortante</code>, d4, CC)</td>
+<td style="text-align: left;">Garras (<code>Cortante</code>, d4, CC)</td>
 </tr>
 <tr>
 <td style="text-align: center;">2</td>
@@ -3000,7 +2966,7 @@
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">10</td>
 <td style="text-align: center;">5"</td>
-<td style="text-align: left;">Garras Desgarradoras (<code>Cortante</code>, d6, CC)</td>
+<td style="text-align: left;">Zarpas (<code>Cortante</code>, d6, CC)</td>
 </tr>
 <tr>
 <td style="text-align: center;">4</td>
@@ -3022,7 +2988,7 @@
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">16</td>
 <td style="text-align: center;">6"</td>
-<td style="text-align: left;">Garras de Drenaje (<code>Tóxico</code>, d8, CC)</td>
+<td style="text-align: left;">Tubos de Drenaje (<code>Tóxico</code>, d8, CC)</td>
 </tr>
 <tr>
 <td style="text-align: center;">6</td>
@@ -3033,7 +2999,7 @@
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">20</td>
 <td style="text-align: center;">6"</td>
-<td style="text-align: left;">Golpe Biológico (<code>Tóxico</code>, d8, CC)</td>
+<td style="text-align: left;">Lengüetazo (<code>Tóxico</code>, d8, CC)</td>
 </tr>
 </tbody>
 </table>
@@ -3088,7 +3054,7 @@
 <div class="single-column">
 
 
-<h2 id="compañeros">COMPAÑEROS</h2>
+<h2 id="compañeros">Compañeros</h2>
 <p>Asignación de Recursos, Operaciones de Ingresos, Capital Humano, Seguridad y Cumplimiento: el departamento no importa. Toda corporación tiene trabajadores que fichan, agachan la cabeza y rezan para que la Autoridad no los note. Se dispersan cuando empieza la violencia. Pero conocen atajos, horarios y por dónde va cada señal. Los eventuales son eventuales. Los testigos, también.</p>
 <blockquote>
 <p>"No vi nada. No oí nada. Mi suscripción está al día."<br />
@@ -3468,12 +3434,12 @@
 <tr>
 <td style="text-align: center;">5</td>
 <td style="text-align: left;">Informante</td>
-<td style="text-align: left;">Vale 2 <code>Pruebas</code>. Repite resultados de 0</td>
+<td style="text-align: left;">Vale 1 <code>Prueba</code> + 1 <code>Pista</code>. Repite resultados de 0</td>
 </tr>
 <tr>
 <td style="text-align: center;">6</td>
 <td style="text-align: left;">Sobornado</td>
-<td style="text-align: left;">Paga 3 subs: éxito automático (aún tira tabla de resultado)</td>
+<td style="text-align: left;">Paga 15 subs: éxito automático (aún tira tabla de resultado)</td>
 </tr>
 </tbody>
 </table>
@@ -3667,9 +3633,9 @@
 <h4 id="terreno">Terreno</h4>
 <p>Sector 7-Moroso. Bloque en ruinas. Tuberías colapsadas, cableado expuesto, muchos huecos de mantenimiento para buscar.</p>
 <h4 id="botín">Botín</h4>
-<p>Los jugadores alternan colocando 3 <code>Marcadores de Botín</code> cada uno.</p>
+<p>Los jugadores alternan colocando 1 <code>Marcador de Botín</code> cada uno (6"+ de las zonas de despliegue).</p>
 <h4 id="compañeros_1">Compañeros</h4>
-<p>Tira Compañeros (nivel <code>Enjambre</code>). Deben tocar terreno.</p>
+<p>Tira Compañeros (nivel <code>Enjambre</code>). Coloca a 6" del centro, deben tocar terreno.</p>
 <h4 id="despliegue">Despliegue</h4>
 <p>Estándar.</p>
 <h4 id="amenazas">Amenazas</h4>
@@ -3691,9 +3657,9 @@
 <h4 id="terreno_1">Terreno</h4>
 <p>Bordes del Mercado de Estaño. Depósito de carga. Contenedores apilados, cables de carga, cabinas de peaje selladas.</p>
 <h4 id="botín_1">Botín</h4>
-<p>1 <code>Marcador de Botín</code> (el expediente) en el centro. Los jugadores alternan colocando 2 <code>Marcadores de Botín</code> cada uno (6"+ del centro).</p>
+<p>1 <code>Marcador de Botín</code> (el expediente) en el centro. Los jugadores alternan colocando 1 <code>Marcador de Botín</code> cada uno (6"+ del centro).</p>
 <h4 id="compañeros_2">Compañeros</h4>
-<p>Tira Compañeros (nivel <code>Élite</code>).</p>
+<p>Tira Compañeros (nivel <code>Élite</code>). Coloca a 6"+ del centro.</p>
 <h4 id="despliegue_1">Despliegue</h4>
 <p>Estándar.</p>
 <h4 id="amenazas_1">Amenazas</h4>
@@ -3715,15 +3681,15 @@
 <h4 id="terreno_2">Terreno</h4>
 <p>Unión de Conductos Nula. Altar corrupto. Terminal central, alfombrillas de oración, velas de diagnóstico, huecos ocultos.</p>
 <h4 id="botín_2">Botín</h4>
-<p>1 Reliquia en el centro. Los jugadores alternan colocando 1 <code>Marcador de Botín</code> cada uno a 6" de la Reliquia.</p>
+<p>1 Reliquia en el centro. Los jugadores alternan colocando 2 <code>Marcadores de Botín</code> cada uno a 6" de la Reliquia.</p>
 <h4 id="compañeros_3">Compañeros</h4>
-<p>Tira Compañeros (nivel <code>Normal</code>).</p>
+<p>Tira Compañeros (nivel <code>Normal</code>). Coloca a 6" del centro.</p>
 <h4 id="despliegue_2">Despliegue</h4>
 <p>Estándar.</p>
 <h4 id="amenazas_2">Amenazas</h4>
 <p><strong>Rondas 2, 4, 6:</strong> Tira en la tabla de Hostiles (nivel <code>Élite</code>). Aparecen desde el centro.</p>
 <h4 id="especial">Especial</h4>
-<p>Al final, el portador de la Reliquia gana +3 <code>Pruebas</code>.</p>
+<p>Al final, el portador de la Reliquia gana +1 <code>Prueba</code> + 2 <code>Pistas</code>.</p>
 <blockquote>
 <p>LO INALÁMBRICO ES MUERTE: Lo sentirás en los dientes.</p>
 </blockquote>
@@ -3831,7 +3797,7 @@
 <h4 id="terreno_6">Terreno</h4>
 <p>Complejo Bajo. Refugio calcinado. Conductos colapsados, cobertura desesperada, un camino claro de escape.</p>
 <h4 id="botín_6">Botín</h4>
-<p>El Defensor coloca 2 <code>Marcadores de Botín</code> a 6" del centro (el refugio).</p>
+<p>El Defensor coloca 4 <code>Marcadores de Botín</code> a 6" del centro (el refugio).</p>
 <h4 id="compañeros_7">Compañeros</h4>
 <p>Tira Compañeros (nivel <code>Élite</code>). Colócalos a 6" del centro.</p>
 <h4 id="despliegue_6">Despliegue</h4>
@@ -3855,7 +3821,7 @@
 <h4 id="terreno_7">Terreno</h4>
 <p>Las Raíces. Bóveda antigua. Pedestal central, corredores radiales, crecimientos corruptos por ondas.</p>
 <h4 id="botín_7">Botín</h4>
-<p>1 Reliquia en el centro. 1 <code>Marcador de Botín</code> en cada uno de los 4 bordes (12" del centro).</p>
+<p>1 Reliquia en el centro. Los jugadores alternan colocando 1 <code>Marcador de Botín</code> cada uno (12"+ del centro).</p>
 <h4 id="compañeros_8">Compañeros</h4>
 <p>Tira Compañeros (nivel <code>Enjambre</code>). Colócalos a 3" de cualquier <code>Marcador de Botín</code>.</p>
 <h4 id="despliegue_7">Despliegue</h4>
@@ -3863,7 +3829,7 @@
 <h4 id="amenazas_7">Amenazas</h4>
 <p><strong>Rondas 3, 5:</strong> Tira en la tabla de Hostiles (nivel <code>Normal</code>). Aparecen en un borde aleatorio.</p>
 <h4 id="especial_4">Especial</h4>
-<p>Los hostiles ignoran al Defensor salvo que tenga la Reliquia, o hasta la Ronda 4. Al final, el portador de la Reliquia gana +3 <code>Pruebas</code>.</p>
+<p>Los hostiles ignoran al Defensor salvo que tenga la Reliquia, o hasta la Ronda 4. Al final, el portador de la Reliquia gana +1 <code>Prueba</code> + 2 <code>Pistas</code>.</p>
 <blockquote>
 <p>"Espíritu del Cable, acepta esta ofrenda de estaño y corriente."<br />
 <strong>Rito de Mantenimiento</strong></p>
@@ -3881,7 +3847,7 @@
 <h4 id="terreno_8">Terreno</h4>
 <p>El Sustrato. Laberinto industrial. Múltiples niveles, corredores estrechos, ningún lugar donde esconderse de verdad.</p>
 <h4 id="botín_8">Botín</h4>
-<p>El Agresor coloca 2 <code>Marcadores de Botín</code> en cualquier lugar (3"+ de los bordes).</p>
+<p>El Agresor coloca 4 <code>Marcadores de Botín</code> en cualquier lugar (3"+ de los bordes).</p>
 <h4 id="compañeros_9">Compañeros</h4>
 <p>Tira Compañeros (nivel <code>Normal</code>). Colócalos en cualquier lugar (3"+ de los bordes).</p>
 <h4 id="despliegue_8">Despliegue</h4>
@@ -4175,28 +4141,18 @@
             const content = document.querySelector('.content');
             if (!content) return;
             const pageWidth = 559; // 148mm in px at 96dpi
-            const pageHeight = 793; // 210mm in px at 96dpi
             const viewportWidth = window.innerWidth;
-            if (viewportWidth < 768) {
+            // Match CSS breakpoint: max-width: 980px means <= 980
+            if (viewportWidth <= 980) {
                 const scale = Math.min(1, viewportWidth / pageWidth);
                 content.style.setProperty('--page-scale', scale.toFixed(3));
-                // Adjust layout since transform doesn't affect document flow
+                // Calculate centering offset
                 const scaledWidth = pageWidth * scale;
-                const scaledHeight = pageHeight * scale;
-                document.querySelectorAll('.page').forEach(page => {
-                    page.style.width = pageWidth + 'px';
-                    page.style.height = pageHeight + 'px';
-                    page.style.marginRight = -(pageWidth - scaledWidth) + 'px';
-                    page.style.marginBottom = -(pageHeight - scaledHeight) + 16 + 'px';
-                });
+                const leftOffset = (viewportWidth - scaledWidth) / 2;
+                content.style.setProperty('--page-offset', leftOffset + 'px');
             } else {
                 content.style.removeProperty('--page-scale');
-                document.querySelectorAll('.page').forEach(page => {
-                    page.style.width = '';
-                    page.style.height = '';
-                    page.style.marginRight = '';
-                    page.style.marginBottom = '';
-                });
+                content.style.removeProperty('--page-offset');
             }
         }
         window.addEventListener('resize', updatePageScale);

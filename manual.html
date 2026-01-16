@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hardwired 28</title>
+    <meta property="og:title" content="Hardwired 28">
+    <meta property="og:description" content="Corporate cablepunk skirmish wargame">
+    <meta property="og:image" content="http://hardwired28.luismars.com/img/social.png">
+    <meta property="og:url" content="http://hardwired28.luismars.com/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -49,7 +55,7 @@
 
 
 <h1 id="hardwired-28_1">Hardwired 28</h1>
-<p><em>0.6.2-beta</em> by LuisMars</p>
+<p><em>0.6.3-beta</em> by LuisMars</p>
 <h2 id="the-great-complex">The Great Complex</h2>
 <p>A vertical megastructure three kilometers tall. Cables hang from every surface. They bundle into trunks thicker than bodies, snake through walls, coil underfoot. The Complex was meant to be paradise. Now it decays.</p>
 <p>Wired connection is sacred. Wireless is heresy. Since the Tethering, wireless has meant excommunication. Debts are inherited. Children are born subscribed.</p>
@@ -1101,7 +1107,7 @@
 <h2 id="activation">Activation</h2>
 <ol>
 <li>Each player rolls <strong>Corporate Blessings</strong> (d8 three times)</li>
-<li>Add one Activation Token per model not <code>OoA</code> to a shared bag (different colors per faction)</li>
+<li>Add Activation Tokens to a shared bag: one per player model not <code>OoA</code>, one per hostile spawn group (different colors per faction)</li>
 <li>Draw a token: that faction activates one model (Hostiles and Coworkers follow their AI table)</li>
 <li>Each activation: <strong>Move + Action</strong> OR <strong>Action + Move</strong></li>
 <li>Repeat from 3 until all models have activated</li>
@@ -1371,20 +1377,10 @@
 <ul>
 <li>Action to cast (once per activation)</li>
 <li>No range limit (requires LoS)</li>
-<li>Roll <code>Wits</code> vs target <code>Wits</code></li>
-<li>Success with damage: deal damage directly (no separate <code>Combat</code> roll)</li>
-</ul>
-
-
-<h2 id="interference">Interference</h2>
-<p>Each fail: cumulative <code>-1</code> to next cast. Resets after fumble.</p>
-<h2 id="overbroadcast">Overbroadcast</h2>
-<p>Declare before rolling. Cast at <code>-1 DT</code> (stacks with Interference). On success: +d4 to numeric effects, or double non-numeric effects.</p>
-<h2 id="criticals-and-fumbles">Criticals and Fumbles</h2>
-<p>Double triggers critical/fumble, triple or more adds modifiers.</p>
-<ul>
-<li><strong>Critical:</strong> roll <code>Broadcast</code> Critical table</li>
-<li><strong>Fumble:</strong> roll <code>Broadcast</code> Fumble table</li>
+<li>Offensive powers: roll <code>Wits</code> vs target <code>Wits</code></li>
+<li>Support powers: roll <code>Wits</code> vs 2d6 (target must be friendly)</li>
+<li>Triple or more: effect applies to all valid targets within 3"</li>
+<li>Defender triples or more: roll <code>Broadcast</code> Fumble table</li>
 </ul>
 <blockquote>
 <p>"Every cable is a leash. Every toll is a collar. We will cut them all."<br />
@@ -1392,11 +1388,11 @@
 </blockquote>
 
 
-<h2 id="powers">Powers</h2>
+<h2 id="offensive-powers">Offensive Powers</h2>
 <table>
 <thead>
 <tr>
-<th style="text-align: center;">d6</th>
+<th style="text-align: center;">d4</th>
 <th style="text-align: left;">Power</th>
 <th style="text-align: left;">Effect</th>
 </tr>
@@ -1404,33 +1400,55 @@
 <tbody>
 <tr>
 <td style="text-align: center;">1</td>
-<td style="text-align: left;">Static Burst</td>
-<td style="text-align: left;">d8 Broadcast damage, ignores armor</td>
-</tr>
-<tr>
-<td style="text-align: center;">2</td>
-<td style="text-align: left;">Resonance Push</td>
-<td style="text-align: left;">Push target d6" in any direction</td>
-</tr>
-<tr>
-<td style="text-align: center;">3</td>
 <td style="text-align: left;">Signal Jam</td>
 <td style="text-align: left;"><code>-1 DT</code> all rolls until next activation</td>
 </tr>
 <tr>
-<td style="text-align: center;">4</td>
-<td style="text-align: left;">Neural Trap</td>
-<td style="text-align: left;">Target takes d6 damage if it moves next activation</td>
-</tr>
-<tr>
-<td style="text-align: center;">5</td>
+<td style="text-align: center;">2</td>
 <td style="text-align: left;">Weapon Lock</td>
 <td style="text-align: left;">Target drops one weapon</td>
 </tr>
 <tr>
-<td style="text-align: center;">6</td>
-<td style="text-align: left;">Mind Lash</td>
-<td style="text-align: left;">Target attacks nearest model (friend or foe)</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Neural Trap</td>
+<td style="text-align: left;">d6 damage (ignores armor) if target moves next activation</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Resonance Push</td>
+<td style="text-align: left;">Push target d6" in any direction</td>
+</tr>
+</tbody>
+</table>
+<h2 id="support-powers">Support Powers</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">d4</th>
+<th style="text-align: left;">Power</th>
+<th style="text-align: left;">Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Force Field</td>
+<td style="text-align: left;"><code>+2 DT</code> <code>Defense</code> vs ranged until next activation</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Focus</td>
+<td style="text-align: left;">Add 2 Activation Tokens for target to the bag</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Swap</td>
+<td style="text-align: left;">Switch positions with target (caster sees both, within 12")</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Ping</td>
+<td style="text-align: left;">Target ignores cover and sees through walls until next activation</td>
 </tr>
 </tbody>
 </table>
@@ -1758,52 +1776,6 @@
 <p>"Signal contamination begins at the wound site. There is no decontamination procedure."<br />
 <strong>Wave-Seeker Warning</strong></p>
 </blockquote>
-<h2 id="broadcast-critical">Broadcast Critical</h2>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">d6</th>
-<th style="text-align: left;">Result</th>
-<th style="text-align: left;">Effect</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">1</td>
-<td style="text-align: left;">Overload</td>
-<td style="text-align: left;">+d6 damage</td>
-</tr>
-<tr>
-<td style="text-align: center;">2</td>
-<td style="text-align: left;">Cascade</td>
-<td style="text-align: left;">Hit one additional target within 3"</td>
-</tr>
-<tr>
-<td style="text-align: center;">3</td>
-<td style="text-align: left;">Bandwidth Drain</td>
-<td style="text-align: left;">Target <code>-1 DT</code> <code>Wits</code> permanently</td>
-</tr>
-<tr>
-<td style="text-align: center;">4</td>
-<td style="text-align: left;">Amplify</td>
-<td style="text-align: left;">+d8 damage</td>
-</tr>
-<tr>
-<td style="text-align: center;">5</td>
-<td style="text-align: left;">Firewall Breach</td>
-<td style="text-align: left;">Ignore armor</td>
-</tr>
-<tr>
-<td style="text-align: center;">6+</td>
-<td style="text-align: left;">System Wipe</td>
-<td style="text-align: left;"><code>OoA</code>, -2 Injury roll</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>"The signal speaks. The flesh listens. The mind breaks."<br />
-<strong>Untethered Transmission Fragment</strong></p>
-</blockquote>
 
 
 
@@ -2048,7 +2020,7 @@
 
 
 <h2 id="activation_1">Activation</h2>
-<p>After both players finish activating all models, hostiles activate one at a time (closest to any player model first). Roll for behavior for each Hostile. Hostiles ignore <code>Out of Action</code> models.</p>
+<p>Each spawn group has one token in the bag. When drawn, roll behavior once for the entire group. Activate models one at a time (closest to any player model first), all performing the same action. Hostiles ignore <code>Out of Action</code> models.</p>
 <h2 id="situation">Situation</h2>
 <ul>
 <li><strong>No LoS</strong>: Cannot see any enemy</li>
@@ -2069,18 +2041,14 @@
 
 
 <h2 id="random-direction">Random Direction</h2>
-<p>Roll and move that way:</p>
-<ul>
-<li>d8 for 8 compass directions</li>
-<li>d12 for clock positions</li>
-<li>Scatter dice if you have one</li>
-</ul>
+<p>Roll d8 (compass), d12 (clock), or scatter dice. Move that direction.</p>
 <h2 id="spawning-hostiles">Spawning Hostiles</h2>
 <p>When a scenario spawns hostiles:<br />
 1. Roll d6 for faction<br />
 2. Roll d2 for unit type within tier (see scenario for tier)<br />
 3. Spawn the number shown in unit's Spawn column<br />
-4. All spawned hostiles behave per faction rules</p>
+4. Add one token to the bag for this spawn group<br />
+5. Each unit type spawned is a separate group with its own token</p>
 
 
 <h2 id="unit-type-tiers">Unit Type Tiers</h2>
@@ -2111,7 +2079,7 @@
 
 
 
-<h2 id="scrapers">SCRAPERS</h2>
+<h2 id="scrapers">Scrapers</h2>
 <p>Outsourced asset recovery. Subcontracted compliance enforcement. Third-party resource reallocation. After seven layers of shell companies, nobody knows what the original contract said. The Scrapers might have been legitimate once: repo crews, maintenance teams, infrastructure auditors. The paperwork degraded. The chain of command dissolved. Now they take what looks valuable and bill someone.</p>
 <p>They live where infrastructure failed: the cable-choked depths where maintenance stopped generations ago. Subscription collectors don't descend past Tier 7. Toll booths rust unopened. The Departments wrote off these levels as "unrecoverable assets" and sealed the access shafts. The Scrapers unsealed them. They always do.</p>
 <p>Some have been down to the Roots. Some have seen what the Founders left behind: clean machines that still work, sealed vaults that hum with power, corridors where the lights respond to movement. They trade that knowledge carefully. They don't talk about the other things. The things that move down there. The things that remember.</p>
@@ -2208,7 +2176,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Salvage</strong>: When <strong>Engaged</strong>, steal 1 random equipment from target</p>
+<p><strong>Salvage</strong>: Attack steals 1 random equipment instead of dealing damage</p>
 <p><strong>Behavior</strong></p>
 <table>
 <thead>
@@ -2249,7 +2217,7 @@
 
 
 
-<h2 id="feral-crews">FERAL CREWS</h2>
+<h2 id="feral-crews">Feral Crews</h2>
 <p>Defaulted workers who refused collection. Their contracts were sold, resold, and eventually written off as unrecoverable losses. The Departments stopped sending collectors after the third massacre. Now they roam the lower tiers in loud, aggressive gangs, holding territory the corporations abandoned. Trespass is answered with violence. There is no negotiation. There is no payment plan.</p>
 <p>Their skin is green. Generations of drinking leaked coolant changed them. Water is subscription-only; coolant drips free from the upper tier cooling systems. Their ancestors drank what was available. Now they drink it by choice, paint themselves with it, weld trophies to weapons, mark their sectors with torn debt notices. The green marks them as something the subscription system cannot touch. The green marks them as free.</p>
 <p>Runts swarm in packs, screaming through corridors, overwhelming targets with numbers. Bruisers carve through armor with cleavers forged from industrial cutting equipment. Gunners and Torches provide covering fire with slug guns and jury-rigged flame rigs salvaged from maintenance levels. The Heavies are walking slabs of muscle and metal, carrying weapons too large for normal humans. And then there are the Bosses: massive, scarred leaders who earned their position through violence and hold it through worse. When a Boss calls the charge, every green body in earshot follows.</p>
@@ -2345,7 +2313,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Mob Up</strong>: All Feral Crews within 6" get <code>+1 DT</code> <code>Combat</code> this activation</p>
+<p><strong>Mob Up</strong>: Charge or Attack at <code>+1 DT</code> <code>Combat</code></p>
 <p><strong>Behavior</strong></p>
 <table>
 <thead>
@@ -2386,7 +2354,7 @@
 
 
 
-<h2 id="wave-callers">WAVE CALLERS</h2>
+<h2 id="wave-callers">Wave Callers</h2>
 <p>Wireless cultists. They believe the Wave Divine will blanket the Complex, freeing everyone from cables and subscriptions. Air should not have toll booths. Data wants to be free. The cables are chains, not connections. Somewhere, somehow, signals can travel without permission. The Founders knew this. The Founders feared this. The cables were never just for profit.</p>
 <p>Open Channel coordinates them: a voice on frequencies that shouldn't exist, broadcasting from somewhere the Authority has never found. Some say Open Channel is a person. Some say it's a signal that thinks. Some say it's whatever the Founders sealed in the Roots, finally waking up. The most dangerous whisper: that they can reach beyond the Complex itself. That there is something out there listening.</p>
 <p>Initiates carry severed cables as marks of their rejection, learning the hymns of static. The Antenna-Grafted have fused transmitter components directly into their flesh, receiving frequencies no baseline human can perceive. Turncoats are former Technicians who saw too much, who heard the whispers in the wrong frequencies, who cut their own cables and kept walking. The Frequency Priests conduct the rituals, overloading systems with prayer-static until something responds. Signal Champions lead attacks with resonance blades that scramble electronics with each strike. And the Vessels: those who opened themselves completely to the Wave Divine, their bodies now channels for something that was never meant to walk.</p>
@@ -2523,7 +2491,7 @@
 
 
 
-<h2 id="static-wraiths">STATIC WRAITHS</h2>
+<h2 id="static-wraiths">Static Wraiths</h2>
 <p>Signal entities. Corrupted data given form. Echoes of transmissions that should not exist. They appeared after the Signal Crisis and have never stopped. The Founders knew what they were. That knowledge died with them. Or was buried. The Board has always known. The cables are not just for profit. They are for silence.</p>
 <p>They phase through walls, flicker between moments, appear where they should not be. Killing one disperses it temporarily. The signal always returns. Some believe they are ghosts of the wireless age, echoes of a network that spanned the Complex before the Tethering. Others say they are something older, something that existed in the static before humanity learned to transmit. The Wave Callers believe they are messengers from the Wave Divine. The Maintenance Monks believe they are punishment for wireless heresy. Both groups are terrified of them.</p>
 <p>Flickers are the smallest, barely coherent, darting through electronics and leaving corruption in their wake. Drifts manifest more fully, phase claws tearing through armor that should protect against physical threats. Echoes project signal flames that burn without heat, damaging the bioelectric signatures of the living. Interference entities are dense knots of static that distort reality around them. Surges cut through matter with frequency blades tuned to disrupt molecular bonds. And the Broadcast: massive amalgamations of signal and malice, rumored to be Wave Callers who achieved union with the static, or what remains of them after the Wave answered.</p>
@@ -2660,7 +2628,7 @@
 
 
 
-<h2 id="feral-automata">FERAL AUTOMATA</h2>
+<h2 id="feral-automata">Feral Automata</h2>
 <p>Machines that forgot their purpose. They run programs written for a Complex that no longer exists, protecting assets that rusted away centuries ago. Their design predates the Tethering. The Founders built them to last. They lasted too long. Clean lines. Smooth casings. No patches. The Monks call them holy. The Untethered call them proof that the old ways worked. The Authority calls them malfunctions.</p>
 <p>Their authorization codes are six hundred years out of date. They do not recognize current credentials. They do not recognize current humans. Their definition of "intruder" includes everyone alive today. Their definition of "authorized personnel" matches no living signature. They patrol routes through infrastructure that has collapsed, guard doorways that lead to empty shafts, protect assets that dissolved into rust generations ago. Their programming is perfect. Their context is gone.</p>
 <p>Maintenance Swarms scuttle through conduits, cutting mandibles still sharp after centuries. Security Drones hover on whisper-quiet thrusters, pulse carbines tracking any movement. Targeting Units coordinate attacks with machine precision, neural lances striking bioelectric systems with surgical accuracy. Heavy Units anchor defensive positions, mounted blasters covering kill zones that haven't changed since the Founders drew them. Hunter-Killers pursue targets through the depths, shredder blades designed for enemies that died long ago. And the Defense Platforms: the largest, most dangerous, still executing protection protocols for vaults the Authority pretends don't exist.</p>
@@ -2797,10 +2765,10 @@
 
 
 
-<h2 id="cable-feeders">CABLE FEEDERS</h2>
+<h2 id="cable-feeders">Cable Feeders</h2>
 <p>Parasites. They nest between power conduits, feeding on bioelectrical signals. The Founders' sealed archives mention "bioelectric countermeasures." The Monks say they evolved naturally. The archives are in the Roots. The Monks have never been there. The Board knows what the Founders created. The Board has always known. Some weapons were never meant to be turned off.</p>
 <p>They hunt in silence. They prefer isolated targets. When they feed, they drain everything: nervous system, implants, the current running through your cables. They are drawn to the warmth of living current, to the hum of active electronics, to the pulse of bioelectric signatures. Some believe they were engineered to hunt the Untethered, to consume anyone transmitting without authorization. Others believe they are what happens when flesh meets wire for too long, when the boundary between organism and infrastructure dissolves. The truth is in the Roots. The truth is sealed.</p>
-<p>Nippers are the smallest, fast and numerous, scythe talons shredding through armor to reach the current beneath. Larvae are patient, feeder tendrils draining victims slowly while toxins paralyze. Stalkers track prey through the dark, rend claws designed to open cable housings and bodies alike. Lures project false signals, mind spikes drawing victims toward ambush sites. Feeders are the mature hunters, drain claws pulling the life from anything they touch. And the Alphas: massive, ancient, intelligent. They coordinate hunts. They remember what they consume. They remember what they were made for.</p>
+<p>Reapers are the smallest, fast and numerous, claws shredding through armor to reach the current beneath. Larvae are patient, feeder tendrils draining victims slowly while toxins paralyze. Stalkers track prey through the dark, talons designed to open cable housings and bodies alike. Lures project false signals, mind spikes drawing victims toward ambush sites. Feeders are the mature hunters, drain tubes pulling the life from anything they touch. And the Agonists: massive, ancient, intelligent. They coordinate hunts. They remember what they consume. They remember what they were made for.</p>
 <p>The Scrapers say there are bigger ones in the deep Roots. Ones that feed on whole crews. Ones that have been feeding since the Founders. The Authority recommends sealing any junction where Feeders are confirmed. The Authority does not explain what happens if you don't. The Authority does not explain why some sealed junctions are marked with warnings older than the Authority itself.</p>
 <blockquote>
 <p>"Sector 7 sweep complete. No survivors. Recommend sealing the junction permanently."<br />
@@ -2827,14 +2795,14 @@
 <tbody>
 <tr>
 <td style="text-align: center;">1</td>
-<td style="text-align: left;">Nipper</td>
+<td style="text-align: left;">Reaper</td>
 <td style="text-align: center;">5</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">4</td>
 <td style="text-align: center;">7"</td>
-<td style="text-align: left;">Scythe Talons (<code>Bladed</code>, d4, Melee)</td>
+<td style="text-align: left;">Claws (<code>Bladed</code>, d4, Melee)</td>
 </tr>
 <tr>
 <td style="text-align: center;">2</td>
@@ -2856,7 +2824,7 @@
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">10</td>
 <td style="text-align: center;">5"</td>
-<td style="text-align: left;">Rend Claws (<code>Bladed</code>, d6, Melee)</td>
+<td style="text-align: left;">Talons (<code>Bladed</code>, d6, Melee)</td>
 </tr>
 <tr>
 <td style="text-align: center;">4</td>
@@ -2878,7 +2846,7 @@
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">16</td>
 <td style="text-align: center;">6"</td>
-<td style="text-align: left;">Drain Claws (<code>Toxic</code>, d8, Melee)</td>
+<td style="text-align: left;">Drain Tubes (<code>Toxic</code>, d8, Melee)</td>
 </tr>
 <tr>
 <td style="text-align: center;">6</td>
@@ -2889,7 +2857,7 @@
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">20</td>
 <td style="text-align: center;">6"</td>
-<td style="text-align: left;">Bio-Strike (<code>Toxic</code>, d8, Melee)</td>
+<td style="text-align: left;">Tongue Lash (<code>Toxic</code>, d8, Melee)</td>
 </tr>
 </tbody>
 </table>
@@ -2937,7 +2905,7 @@
 
 
 
-<h2 id="coworkers">COWORKERS</h2>
+<h2 id="coworkers">Coworkers</h2>
 <p>Resource Allocation, Revenue Operations, Human Capital, Security &amp; Compliance: the department doesn't matter. Every corporation has workers who clock in, keep their heads down, and pray the Authority doesn't notice them. They scatter when violence starts. But they know shortcuts, schedules, and which cables carry what. Temps are temporary. So are witnesses.</p>
 <blockquote>
 <p>"I saw nothing. I heard nothing. My subscription is current."<br />
@@ -3297,12 +3265,12 @@
 <tr>
 <td style="text-align: center;">5</td>
 <td style="text-align: left;">Informant</td>
-<td style="text-align: left;">Worth 2 <code>Evidence</code>. Reroll 0 results</td>
+<td style="text-align: left;">Worth 1 <code>Evidence</code> + 1 <code>Lead</code>. Reroll 0 results</td>
 </tr>
 <tr>
 <td style="text-align: center;">6</td>
 <td style="text-align: left;">Bribed</td>
-<td style="text-align: left;">Pay 3 subs: auto-succeed (still roll result table)</td>
+<td style="text-align: left;">Pay 15 subs: auto-succeed (still roll result table)</td>
 </tr>
 </tbody>
 </table>
@@ -3484,9 +3452,9 @@
 <h4 id="terrain">Terrain</h4>
 <p>Sector 7-Receivable. Ruined hab-block. Collapsed coolant pipes, exposed wiring, plenty of maintenance alcoves to search.</p>
 <h4 id="loot">Loot</h4>
-<p>Players alternate placing 3 <code>Loot Markers</code> each.</p>
+<p>Players alternate placing 1 <code>Loot Marker</code> each (6"+ from deployment zones).</p>
 <h4 id="coworkers_1">Coworkers</h4>
-<p>Roll Coworkers (<code>Swarm</code> tier). Must touch terrain.</p>
+<p>Roll Coworkers (<code>Swarm</code> tier). Place within 6" of center, must touch terrain.</p>
 <h4 id="deployment">Deployment</h4>
 <p>Standard.</p>
 <h4 id="threats">Threats</h4>
@@ -3505,9 +3473,9 @@
 <h4 id="terrain_1">Terrain</h4>
 <p>Solder Market edges. Cargo depot. Stacked containers, loading cables, toll-booths with sealed doors.</p>
 <h4 id="loot_1">Loot</h4>
-<p>1 <code>Loot Marker</code> (the dossier) in center. Players alternate placing 2 <code>Loot Markers</code> each (6"+ from center).</p>
+<p>1 <code>Loot Marker</code> (the dossier) in center. Players alternate placing 1 <code>Loot Marker</code> each (6"+ from center).</p>
 <h4 id="coworkers_2">Coworkers</h4>
-<p>Roll Coworkers (<code>Elite</code> tier).</p>
+<p>Roll Coworkers (<code>Elite</code> tier). Place 6"+ from center.</p>
 <h4 id="deployment_1">Deployment</h4>
 <p>Standard.</p>
 <h4 id="threats_1">Threats</h4>
@@ -3526,15 +3494,15 @@
 <h4 id="terrain_2">Terrain</h4>
 <p>Conduit Junction Null. Corrupted shrine. Central data-terminal, scattered prayer-mats, diagnostic candles, hidden alcoves.</p>
 <h4 id="loot_2">Loot</h4>
-<p>1 Relic in center. Players alternate placing 1 <code>Loot Marker</code> each within 6" of Relic.</p>
+<p>1 Relic in center. Players alternate placing 2 <code>Loot Markers</code> each within 6" of Relic.</p>
 <h4 id="coworkers_3">Coworkers</h4>
-<p>Roll Coworkers (<code>Normal</code> tier).</p>
+<p>Roll Coworkers (<code>Normal</code> tier). Place within 6" of center.</p>
 <h4 id="deployment_2">Deployment</h4>
 <p>Standard.</p>
 <h4 id="threats_2">Threats</h4>
 <p><strong>Rounds 2, 4, 6:</strong> Roll Hostile faction table (<code>Elite</code> tier). Spawn from center.</p>
 <h4 id="special">Special</h4>
-<p>At game end, Relic holder gains +3 <code>Evidence</code>.</p>
+<p>At game end, Relic holder gains +1 <code>Evidence</code> + 2 <code>Leads</code>.</p>
 <blockquote>
 <p>WIRELESS IS DEATH: Feel the feedback in your teeth.</p>
 </blockquote>
@@ -3622,7 +3590,7 @@
 <h4 id="terrain_6">Terrain</h4>
 <p>Lower Complex. Burned-out safehouse. Collapsed conduits, desperate cover, one clear path to escape.</p>
 <h4 id="loot_6">Loot</h4>
-<p>Defender places 2 <code>Loot Markers</code> within 6" of center (the safehouse).</p>
+<p>Defender places 4 <code>Loot Markers</code> within 6" of center (the safehouse).</p>
 <h4 id="coworkers_7">Coworkers</h4>
 <p>Roll Coworkers (<code>Elite</code> tier). Place within 6" of center.</p>
 <h4 id="deployment_6">Deployment</h4>
@@ -3643,7 +3611,7 @@
 <h4 id="terrain_7">Terrain</h4>
 <p>The Roots. Ancient vault. Central pedestal, radiating corridors, wave-corrupted growths.</p>
 <h4 id="loot_7">Loot</h4>
-<p>1 Relic in center. 1 <code>Loot Marker</code> at each cardinal edge (12" from center).</p>
+<p>1 Relic in center. Players alternate placing 1 <code>Loot Marker</code> each (12"+ from center).</p>
 <h4 id="coworkers_8">Coworkers</h4>
 <p>Roll Coworkers (<code>Swarm</code> tier). Place within 3" of any <code>Loot Marker</code>.</p>
 <h4 id="deployment_7">Deployment</h4>
@@ -3651,7 +3619,7 @@
 <h4 id="threats_7">Threats</h4>
 <p><strong>Rounds 3, 5:</strong> Roll Hostile faction table (<code>Normal</code> tier). Spawn on random edge.</p>
 <h4 id="special_4">Special</h4>
-<p>Hostiles ignore Defender unless Defender has the Relic or until Round 4. At game end, Relic holder gains +3 <code>Evidence</code>.</p>
+<p>Hostiles ignore Defender unless Defender has the Relic or until Round 4. At game end, Relic holder gains +1 <code>Evidence</code> + 2 <code>Leads</code>.</p>
 <blockquote>
 <p>"Cable Spirit, accept this offering of flux and current."<br />
 <strong>Maintenance Rite</strong></p>
@@ -3666,7 +3634,7 @@
 <h4 id="terrain_8">Terrain</h4>
 <p>The Substrate. Industrial warren. Multiple levels, tight corridors, nowhere to truly hide.</p>
 <h4 id="loot_8">Loot</h4>
-<p>Aggressor places 2 <code>Loot Markers</code> anywhere (3"+ from board edges).</p>
+<p>Aggressor places 4 <code>Loot Markers</code> anywhere (3"+ from board edges).</p>
 <h4 id="coworkers_9">Coworkers</h4>
 <p>Roll Coworkers (<code>Normal</code> tier). Place anywhere (3"+ from board edges).</p>
 <h4 id="deployment_8">Deployment</h4>
@@ -3947,28 +3915,18 @@
             const content = document.querySelector('.content');
             if (!content) return;
             const pageWidth = 559; // 148mm in px at 96dpi
-            const pageHeight = 793; // 210mm in px at 96dpi
             const viewportWidth = window.innerWidth;
-            if (viewportWidth < 768) {
+            // Match CSS breakpoint: max-width: 980px means <= 980
+            if (viewportWidth <= 980) {
                 const scale = Math.min(1, viewportWidth / pageWidth);
                 content.style.setProperty('--page-scale', scale.toFixed(3));
-                // Adjust layout since transform doesn't affect document flow
+                // Calculate centering offset
                 const scaledWidth = pageWidth * scale;
-                const scaledHeight = pageHeight * scale;
-                document.querySelectorAll('.page').forEach(page => {
-                    page.style.width = pageWidth + 'px';
-                    page.style.height = pageHeight + 'px';
-                    page.style.marginRight = -(pageWidth - scaledWidth) + 'px';
-                    page.style.marginBottom = -(pageHeight - scaledHeight) + 16 + 'px';
-                });
+                const leftOffset = (viewportWidth - scaledWidth) / 2;
+                content.style.setProperty('--page-offset', leftOffset + 'px');
             } else {
                 content.style.removeProperty('--page-scale');
-                document.querySelectorAll('.page').forEach(page => {
-                    page.style.width = '';
-                    page.style.height = '';
-                    page.style.marginRight = '';
-                    page.style.marginBottom = '';
-                });
+                content.style.removeProperty('--page-offset');
             }
         }
         window.addEventListener('resize', updatePageScale);

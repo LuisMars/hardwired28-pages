@@ -145,7 +145,7 @@ th, td {
 }
 
 .page.compact th, .page.compact td {
-    padding: 0.2mm 0.8mm;
+    padding: 0;
 }
 
 .page.compact h2 {
@@ -244,7 +244,8 @@ td:last-child {
 }
 
 /* Mobile responsive - landscape QR scaling */
-@media screen and (max-width: 980px) {
+/* Use 1122px breakpoint (297mm page width at 96dpi) */
+@media screen and (max-width: 1122px) {
     body {
         padding: 0 !important;
         margin: 0 !important;
@@ -268,6 +269,7 @@ td:last-child {
         transform: scale(var(--page-scale-landscape, 1));
         transform-origin: top left;
         margin: 0 !important;
+        margin-left: var(--page-offset, 0) !important;
         margin-bottom: calc(-210mm * (1 - var(--page-scale-landscape, 1))) !important;
     }
 }

@@ -83,18 +83,18 @@ const StatRow = ({ model, onChange, mode, archetypes }) => {
                 onChange={(e) => onChange({ ...model, technicianStat: e.target.value })}
                 className="border wb-border rounded px-2 py-1 bg-white wb-text-dark"
               >
-                <option value="combat">{t('combat2d8')}</option>
-                <option value="defense">{t('defense2d8')}</option>
-                <option value="wits">{t('wits2d8')}</option>
+                <option value="combat" disabled={model.technicianWeakStat === 'combat'}>{t('combat2d8')}</option>
+                <option value="defense" disabled={model.technicianWeakStat === 'defense'}>{t('defense2d8')}</option>
+                <option value="wits" disabled={model.technicianWeakStat === 'wits'}>{t('wits2d8')}</option>
               </select>
               <select
                 value={model.technicianWeakStat || 'combat'}
                 onChange={(e) => onChange({ ...model, technicianWeakStat: e.target.value })}
                 className="border wb-border rounded px-2 py-1 bg-white wb-text-dark"
               >
-                <option value="combat">{t('combat2d4')}</option>
-                <option value="defense">{t('defense2d4')}</option>
-                <option value="wits">{t('wits2d4')}</option>
+                <option value="combat" disabled={model.technicianStat === 'combat'}>{t('combat2d4')}</option>
+                <option value="defense" disabled={model.technicianStat === 'defense'}>{t('defense2d4')}</option>
+                <option value="wits" disabled={model.technicianStat === 'wits'}>{t('wits2d4')}</option>
               </select>
             </>
           )}
@@ -140,19 +140,24 @@ const HealthMoveRow = ({ model, onChange, mode }) => {
           </span>
         </div>
         <div className="flex gap-0.5 flex-wrap">
-          {Array.from({ length: Math.max(0, maxHealth) }, (_, i) => (
-            <button
-              key={i}
-              onClick={() => onChange({ ...model, currentHealth: i + 1 === (model.currentHealth ?? maxHealth) ? i : i + 1 })}
-              className={`${isPlay ? 'w-7 h-7 sm:w-8 sm:h-8 text-sm' : 'w-5 h-5 text-xs'} rounded font-bold transition-colors border ${
-                i < (model.currentHealth ?? maxHealth)
-                  ? 'wb-bg-accent wb-text-accent wb-border-accent'
-                  : 'bg-white wb-border wb-text-disabled'
-              }`}
-            >
-              {i + 1}
-            </button>
-          ))}
+          {Array.from({ length: Math.max(0, maxHealth) }, (_, i) => {
+            const currentHp = model.currentHealth ?? maxHealth;
+            const damage = i + 1 - currentHp;
+            return (
+              <button
+                key={i}
+                onClick={() => onChange({ ...model, currentHealth: i + 1 === currentHp ? i : i + 1 })}
+                className={`${isPlay ? 'w-7 sm:w-8 text-sm' : 'w-5 text-xs'} rounded font-bold transition-colors border flex flex-col items-center justify-center ${
+                  i < currentHp
+                    ? 'wb-bg-accent wb-text-accent wb-border-accent'
+                    : 'bg-white wb-border wb-text-disabled'
+                }`}
+              >
+                <span className={isPlay ? 'text-sm leading-tight' : 'text-xs leading-tight'}>{i + 1}</span>
+                {damage !== 0 && <span className={`${isPlay ? 'text-[8px]' : 'text-[6px]'} opacity-60 leading-none`}>{damage > 0 ? `+${damage}` : damage}</span>}
+              </button>
+            );
+          })}
         </div>
       </div>
       <div className={`${isPlay ? 'w-20 sm:w-24' : 'w-24'} border-2 wb-border rounded p-2 bg-white text-center`}>
@@ -262,6 +267,12 @@ const EquipmentSection = ({ model, onChange, onAddToStash, mode, subs, onBuy, as
   const canEdit = mode === 'build' || mode === 'edit';
 
   const removeItem = (itemId) => {
+    const item = equipment.find(e => e.id === itemId);
+    if (item && item.cost && !item.free) {
+      if (confirm(t('askReimburse', { cost: item.cost }))) {
+        onBuy(-item.cost); // Reimburse (negative spend)
+      }
+    }
     onChange({ ...model, equipment: equipment.filter(e => e.id !== itemId) });
   };
 
@@ -479,6 +490,13 @@ const ModifiersSection = ({ model, onChange, mode }) => {
   const modifiers = model.modifiers || [];
   const canEdit = mode === 'edit' || mode === 'build';
 
+  // Calculate unused promotions for this model (triangular thresholds: 1, 3, 6, 10, 15, 21, 28, 36...)
+  const xp = model.xp || 0;
+  let earnedPromotions = 0, threshold = 1, step = 2;
+  while (xp >= threshold) { earnedPromotions++; threshold += step; step++; }
+  const spentPromotions = model.levelUpsSpent || 0;
+  const unusedPromotions = Math.max(0, earnedPromotions - spentPromotions);
+
   const addModifier = (mod) => {
     onChange({ ...model, modifiers: [...modifiers, { ...mod, timestamp: Date.now() }] });
     setShowAdd(null);
@@ -488,12 +506,25 @@ const ModifiersSection = ({ model, onChange, mode }) => {
     onChange({ ...model, modifiers: modifiers.filter((_, i) => i !== idx) });
   };
 
+  const usePromotion = () => {
+    onChange({ ...model, levelUpsSpent: spentPromotions + 1 });
+  };
+
   return (
     <div className="border-2 wb-border rounded p-2 bg-white">
       <div className="flex items-center justify-between mb-2">
         <span className="text-xs font-semibold">{t('modifiers')}</span>
         {canEdit && (
           <div className="flex gap-1">
+            {unusedPromotions > 0 && (
+              <button
+                onClick={usePromotion}
+                className="text-xs px-2 py-0.5 rounded border wb-border-primary wb-bg-primary text-black font-bold"
+                title={t('usePromotion')}
+              >
+                <Icon name="level" /> {unusedPromotions}
+              </button>
+            )}
             <button
               onClick={() => setShowAdd(showAdd === 'negative' ? null : 'negative')}
               className={`text-xs px-2 py-0.5 rounded border ${showAdd === 'negative' ? 'wb-bg-danger text-white wb-border-danger' : 'wb-border wb-text-danger hover:wb-bg-light'}`}
@@ -557,7 +588,7 @@ const ModifiersSection = ({ model, onChange, mode }) => {
 };
 
 // Main model card component
-const ModelCard = ({ model, onChange, onFire, mode, subs, onSpend, onAddToStash, modelIndex, allModels, leaderDead, hasAscendedLeader, archetypes, weaponData, powers }) => {
+const ModelCard = ({ model, onChange, onFire, mode, subs, onSpend, onAddToStash, modelIndex, allModels, leaderDead, hasAscendedLeader, archetypes, weaponData, offensivePowers = [], supportPowers = [] }) => {
   const [showAscendChoice, setShowAscendChoice] = useState(false);
   const arch = archetypes[model.archetype];
   const equipmentCost = (model.equipment || []).filter(e => !e.free).reduce((sum, e) => sum + (e.cost || 0), 0);
@@ -628,7 +659,7 @@ const ModelCard = ({ model, onChange, onFire, mode, subs, onSpend, onAddToStash,
       isLeader ? 'wb-border-primary' :
       model.ascended ? 'wb-border-danger' :
       'wb-border'
-    }`}>
+    } ${model.outOfAction ? 'opacity-50' : ''}`}>
       {/* Header */}
       <div className={`px-3 py-2 border-b-2 ${
         isLeader ? 'wb-bg-accent wb-text-accent wb-border-primary' :
@@ -695,6 +726,19 @@ const ModelCard = ({ model, onChange, onFire, mode, subs, onSpend, onAddToStash,
             <span className="text-xs px-2 py-1 rounded bg-white wb-text-dark">
               {model.ascendedBonus === 'weapons' ? t('bothWeapons') : t('armorTier')}
             </span>
+          )}
+          {mode === 'play' && model.archetype && (
+            <button
+              onClick={() => onChange({ ...model, outOfAction: !model.outOfAction })}
+              className={`text-xs px-2 py-1 border rounded ${
+                model.outOfAction
+                  ? 'wb-bg-danger wb-text-light wb-border-danger'
+                  : isLeader ? 'wb-border-accent/50 wb-text-accent hover:bg-white/20' : 'wb-border hover:bg-white'
+              }`}
+              title={t('outOfAction')}
+            >
+              <Icon name="dead" />
+            </button>
           )}
           {mode !== 'play' && model.archetype && (
             <button
@@ -804,16 +848,24 @@ const ModelCard = ({ model, onChange, onFire, mode, subs, onSpend, onAddToStash,
             ) : (
               <select
                 onChange={(e) => {
-                  const power = powers.find(p => p.id === e.target.value);
+                  const allPowers = [...offensivePowers, ...supportPowers];
+                  const power = allPowers.find(p => p.id === e.target.value);
                   if (power) onChange({ ...model, power });
                 }}
                 className="w-full text-xs border wb-border rounded px-2 py-1 bg-white wb-text-dark"
                 disabled={mode === 'play'}
               >
                 <option value="">{t('choosePower')}</option>
-                {powers.map(p => (
-                  <option key={p.id} value={p.id}>{stripMarkdown(p.name)} (vs {stripMarkdown(p.vs)}) - {stripMarkdown(p.effect)}</option>
-                ))}
+                <optgroup label={t('offensivePowers')}>
+                  {offensivePowers.map(p => (
+                    <option key={p.id} value={p.id}>{stripMarkdown(p.name)} (vs {stripMarkdown(p.vs)}) - {stripMarkdown(p.effect)}</option>
+                  ))}
+                </optgroup>
+                <optgroup label={t('supportPowers')}>
+                  {supportPowers.map(p => (
+                    <option key={p.id} value={p.id}>{stripMarkdown(p.name)} (vs {stripMarkdown(p.vs)}) - {stripMarkdown(p.effect)}</option>
+                  ))}
+                </optgroup>
               </select>
             )}
           </div>
@@ -825,16 +877,33 @@ const ModelCard = ({ model, onChange, onFire, mode, subs, onSpend, onAddToStash,
             <span className="text-xs font-semibold">
               <Icon name="xp" className="mr-1" />{t('merits')}
             </span>
-            <input
-              type="number"
-              value={model.xp || 0}
-              onChange={(e) => onChange({ ...model, xp: parseInt(e.target.value) || 0 })}
-              className="w-12 text-sm font-bold text-center bg-white border wb-border-light rounded"
-              disabled={mode === 'play'}
-            />
+            {mode === 'play' ? (
+              <span className="w-12 text-sm font-bold text-center">{model.xp || 0}</span>
+            ) : (
+              <input
+                type="number"
+                value={model.xp || 0}
+                onChange={(e) => onChange({ ...model, xp: parseInt(e.target.value) || 0 })}
+                className="w-12 text-sm font-bold text-center bg-white border wb-border-light rounded"
+              />
+            )}
+            {mode === 'play' && (
+              <button
+                onClick={() => onChange({ ...model, xp: (model.xp || 0) + 1 })}
+                className="w-6 h-6 rounded wb-bg-accent wb-text-accent font-bold text-sm hover:opacity-80"
+                title="Add 1 merit"
+              >
+                +1
+              </button>
+            )}
           </div>
           <span className="text-xs wb-text-muted">
-            {t('next')}: {[1,3,6,10,15,21,28].find(threshold => threshold > (model.xp || 0)) || '28+'}
+            {t('next')}: {(() => {
+              const xp = model.xp || 0;
+              let threshold = 1, step = 2;
+              while (xp >= threshold) { threshold += step; step++; }
+              return threshold;
+            })()}
           </span>
         </div>
       </div>

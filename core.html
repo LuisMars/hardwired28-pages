@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hardwired 28 - Core Rules 0.6.2-beta</title>
+    <title>Hardwired 28 - Core Rules 0.6.3-beta</title>
+    <meta property="og:title" content="Hardwired 28 - Core Rules 0.6.3-beta">
+    <meta property="og:description" content="Corporate cablepunk skirmish wargame">
+    <meta property="og:image" content="http://hardwired28.luismars.com/img/social.png">
+    <meta property="og:url" content="http://hardwired28.luismars.com/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -56,7 +62,7 @@
 
 
 <h1 id="hardwired-28_1">Hardwired 28</h1>
-<p><em>0.6.2-beta</em> by LuisMars</p>
+<p><em>0.6.3-beta</em> by LuisMars</p>
 <h2 id="the-great-complex">The Great Complex</h2>
 <p>A vertical megastructure three kilometers tall. Cables hang from every surface. They bundle into trunks thicker than bodies, snake through walls, coil underfoot. The Complex was meant to be paradise. Now it decays.</p>
 <p>Wired connection is sacred. Wireless is heresy. Since the Tethering, wireless has meant excommunication. Debts are inherited. Children are born subscribed.</p>
@@ -1145,7 +1151,7 @@
 <h2 id="activation">Activation</h2>
 <ol>
 <li>Each player rolls <strong>Corporate Blessings</strong> (d8 three times)</li>
-<li>Add one Activation Token per model not <code>OoA</code> to a shared bag (different colors per faction)</li>
+<li>Add Activation Tokens to a shared bag: one per player model not <code>OoA</code>, one per hostile spawn group (different colors per faction)</li>
 <li>Draw a token: that faction activates one model (Hostiles and Coworkers follow their AI table)</li>
 <li>Each activation: <strong>Move + Action</strong> OR <strong>Action + Move</strong></li>
 <li>Repeat from 3 until all models have activated</li>
@@ -1430,34 +1436,22 @@
 <ul>
 <li>Action to cast (once per activation)</li>
 <li>No range limit (requires LoS)</li>
-<li>Roll <code>Wits</code> vs target <code>Wits</code></li>
-<li>Success with damage: deal damage directly (no separate <code>Combat</code> roll)</li>
-</ul>
-<div class="column-break"></div>
-
-<h2 id="interference">Interference</h2>
-<p>Each fail: cumulative <code>-1</code> to next cast. Resets after fumble.</p>
-<h2 id="overbroadcast">Overbroadcast</h2>
-<p>Declare before rolling. Cast at <code>-1 DT</code> (stacks with Interference). On success: +d4 to numeric effects, or double non-numeric effects.</p>
-<h2 id="criticals-and-fumbles">Criticals and Fumbles</h2>
-<p>Double triggers critical/fumble, triple or more adds modifiers.</p>
-<ul>
-<li><strong>Critical:</strong> roll <code>Broadcast</code> Critical table</li>
-<li><strong>Fumble:</strong> roll <code>Broadcast</code> Fumble table</li>
+<li>Offensive powers: roll <code>Wits</code> vs target <code>Wits</code></li>
+<li>Support powers: roll <code>Wits</code> vs 2d6 (target must be friendly)</li>
+<li>Triple or more: effect applies to all valid targets within 3"</li>
+<li>Defender triples or more: roll <code>Broadcast</code> Fumble table</li>
 </ul>
 <blockquote>
 <p>"Every cable is a leash. Every toll is a collar. We will cut them all."<br />
 <strong>Open Channel Broadcast</strong></p>
 </blockquote>
-</div>
-<div class="single-column">
+<div class="column-break"></div>
 
-
-<h2 id="powers">Powers</h2>
+<h2 id="offensive-powers">Offensive Powers</h2>
 <table>
 <thead>
 <tr>
-<th style="text-align: center;">d6</th>
+<th style="text-align: center;">d4</th>
 <th style="text-align: left;">Power</th>
 <th style="text-align: left;">Effect</th>
 </tr>
@@ -1465,33 +1459,55 @@
 <tbody>
 <tr>
 <td style="text-align: center;">1</td>
-<td style="text-align: left;">Static Burst</td>
-<td style="text-align: left;">d8 Broadcast damage, ignores armor</td>
-</tr>
-<tr>
-<td style="text-align: center;">2</td>
-<td style="text-align: left;">Resonance Push</td>
-<td style="text-align: left;">Push target d6" in any direction</td>
-</tr>
-<tr>
-<td style="text-align: center;">3</td>
 <td style="text-align: left;">Signal Jam</td>
 <td style="text-align: left;"><code>-1 DT</code> all rolls until next activation</td>
 </tr>
 <tr>
-<td style="text-align: center;">4</td>
-<td style="text-align: left;">Neural Trap</td>
-<td style="text-align: left;">Target takes d6 damage if it moves next activation</td>
-</tr>
-<tr>
-<td style="text-align: center;">5</td>
+<td style="text-align: center;">2</td>
 <td style="text-align: left;">Weapon Lock</td>
 <td style="text-align: left;">Target drops one weapon</td>
 </tr>
 <tr>
-<td style="text-align: center;">6</td>
-<td style="text-align: left;">Mind Lash</td>
-<td style="text-align: left;">Target attacks nearest model (friend or foe)</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Neural Trap</td>
+<td style="text-align: left;">d6 damage (ignores armor) if target moves next activation</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Resonance Push</td>
+<td style="text-align: left;">Push target d6" in any direction</td>
+</tr>
+</tbody>
+</table>
+<h2 id="support-powers">Support Powers</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">d4</th>
+<th style="text-align: left;">Power</th>
+<th style="text-align: left;">Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Force Field</td>
+<td style="text-align: left;"><code>+2 DT</code> <code>Defense</code> vs ranged until next activation</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Focus</td>
+<td style="text-align: left;">Add 2 Activation Tokens for target to the bag</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Swap</td>
+<td style="text-align: left;">Switch positions with target (caster sees both, within 12")</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Ping</td>
+<td style="text-align: left;">Target ignores cover and sees through walls until next activation</td>
 </tr>
 </tbody>
 </table>
@@ -1829,52 +1845,6 @@
 <p>"Signal contamination begins at the wound site. There is no decontamination procedure."<br />
 <strong>Wave-Seeker Warning</strong></p>
 </blockquote>
-<h2 id="broadcast-critical">Broadcast Critical</h2>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">d6</th>
-<th style="text-align: left;">Result</th>
-<th style="text-align: left;">Effect</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">1</td>
-<td style="text-align: left;">Overload</td>
-<td style="text-align: left;">+d6 damage</td>
-</tr>
-<tr>
-<td style="text-align: center;">2</td>
-<td style="text-align: left;">Cascade</td>
-<td style="text-align: left;">Hit one additional target within 3"</td>
-</tr>
-<tr>
-<td style="text-align: center;">3</td>
-<td style="text-align: left;">Bandwidth Drain</td>
-<td style="text-align: left;">Target <code>-1 DT</code> <code>Wits</code> permanently</td>
-</tr>
-<tr>
-<td style="text-align: center;">4</td>
-<td style="text-align: left;">Amplify</td>
-<td style="text-align: left;">+d8 damage</td>
-</tr>
-<tr>
-<td style="text-align: center;">5</td>
-<td style="text-align: left;">Firewall Breach</td>
-<td style="text-align: left;">Ignore armor</td>
-</tr>
-<tr>
-<td style="text-align: center;">6+</td>
-<td style="text-align: left;">System Wipe</td>
-<td style="text-align: left;"><code>OoA</code>, -2 Injury roll</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>"The signal speaks. The flesh listens. The mind breaks."<br />
-<strong>Untethered Transmission Fragment</strong></p>
-</blockquote>
 </div>
 </div>
 
@@ -2120,28 +2090,18 @@
             const content = document.querySelector('.content');
             if (!content) return;
             const pageWidth = 559; // 148mm in px at 96dpi
-            const pageHeight = 793; // 210mm in px at 96dpi
             const viewportWidth = window.innerWidth;
-            if (viewportWidth < 768) {
+            // Match CSS breakpoint: max-width: 980px means <= 980
+            if (viewportWidth <= 980) {
                 const scale = Math.min(1, viewportWidth / pageWidth);
                 content.style.setProperty('--page-scale', scale.toFixed(3));
-                // Adjust layout since transform doesn't affect document flow
+                // Calculate centering offset
                 const scaledWidth = pageWidth * scale;
-                const scaledHeight = pageHeight * scale;
-                document.querySelectorAll('.page').forEach(page => {
-                    page.style.width = pageWidth + 'px';
-                    page.style.height = pageHeight + 'px';
-                    page.style.marginRight = -(pageWidth - scaledWidth) + 'px';
-                    page.style.marginBottom = -(pageHeight - scaledHeight) + 16 + 'px';
-                });
+                const leftOffset = (viewportWidth - scaledWidth) / 2;
+                content.style.setProperty('--page-offset', leftOffset + 'px');
             } else {
                 content.style.removeProperty('--page-scale');
-                document.querySelectorAll('.page').forEach(page => {
-                    page.style.width = '';
-                    page.style.height = '';
-                    page.style.marginRight = '';
-                    page.style.marginBottom = '';
-                });
+                content.style.removeProperty('--page-offset');
             }
         }
         window.addEventListener('resize', updatePageScale);

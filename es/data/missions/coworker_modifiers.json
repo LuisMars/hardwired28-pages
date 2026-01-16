@@ -8,7 +8,7 @@
     {"roll": 2, "name": "Aterrorizado", "effect": "Siempre usa comportamiento Huir a mitad de `Movimiento` (ignora la tirada de IA)"},
     {"roll": 3, "name": "Escolta", "effect": "No se puede `Interrogar` in situ. Llevar a tu borde para puntuar"},
     {"roll": 4, "name": "Hostil", "effect": "Empieza marcado como Hostil (usa columnas Atq)"},
-    {"roll": 5, "name": "Informante", "effect": "Vale 2 `Pruebas`. Repite resultados de 0"},
-    {"roll": 6, "name": "Sobornado", "effect": "Paga 3 subs: éxito automático (aún tira tabla de resultado)"}
+    {"roll": 5, "name": "Informante", "effect": "Vale 1 `Prueba` + 1 `Pista`. Repite resultados de 0"},
+    {"roll": 6, "name": "Sobornado", "effect": "Paga 15 subs: éxito automático (aún tira tabla de resultado)"}
   ]
 }
