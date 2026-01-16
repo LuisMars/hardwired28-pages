@@ -4,13 +4,13 @@
   "columns": ["Contract Type", "Health", "Move", "Weapons", "Max Armor", "Special", "Max"],
   "align": ["left", "center", "center", "center", "center", "left", "center"],
   "items": [
-    {"contract_type": "`Boss`", "health": "20", "move": "6\"", "weapons": "Both", "max_armor": "Heavy", "special": "`+1 DT` to one attribute", "max": "*"},
-    {"contract_type": "`Brute`", "health": "20", "move": "5\"", "weapons": "Melee", "max_armor": "Heavy", "special": "-", "max": "2"},
-    {"contract_type": "`Veteran`", "health": "14", "move": "5\"", "weapons": "Both", "max_armor": "Medium", "special": "Immune to `Flee`", "max": "2"},
-    {"contract_type": "`Gunner`", "health": "16", "move": "6\"", "weapons": "Ranged", "max_armor": "Medium", "special": "Hit: `-1 DT` `Defense` next activation (no stack)", "max": "2"},
-    {"contract_type": "`Scout`", "health": "12", "move": "8\"", "weapons": "Ranged", "max_armor": "Light", "special": "Move 3\" after deployment", "max": "2"},
-    {"contract_type": "`Zealot`", "health": "12", "move": "7\"", "weapons": "Melee", "max_armor": "Light", "special": "+2\" Move if ending `Engaged`", "max": "2"},
-    {"contract_type": "`Agent`", "health": "16", "move": "6\"", "weapons": "Both", "max_armor": "Light", "special": "Re-roll failed `Search` / `Interrogate`", "max": "2"},
-    {"contract_type": "`Broadcaster`", "health": "16", "move": "6\"", "weapons": "Melee", "max_armor": "Light", "special": "Can `Cast`", "max": "1"}
+    {"contract_type": "`Boss`", "health": "20", "move": "4\"", "weapons": "Both", "max_armor": "Heavy", "special": "`+1 DT` to one attribute", "max": "*"},
+    {"contract_type": "`Brute`", "health": "20", "move": "3\"", "weapons": "Melee", "max_armor": "Heavy", "special": "-", "max": "2"},
+    {"contract_type": "`Veteran`", "health": "14", "move": "4\"", "weapons": "Both", "max_armor": "Medium", "special": "Immune to `Flee`", "max": "2"},
+    {"contract_type": "`Gunner`", "health": "16", "move": "4\"", "weapons": "Ranged", "max_armor": "Medium", "special": "`Aim` is a free action", "max": "2"},
+    {"contract_type": "`Scout`", "health": "12", "move": "6\"", "weapons": "Ranged", "max_armor": "Light", "special": "Move 3\" after deployment", "max": "2"},
+    {"contract_type": "`Zealot`", "health": "12", "move": "5\"", "weapons": "Melee", "max_armor": "Light", "special": "+2\" Move if ending `Engaged`", "max": "2"},
+    {"contract_type": "`Agent`", "health": "16", "move": "4\"", "weapons": "Both", "max_armor": "Light", "special": "Re-roll failed `Search` / `Interrogate`", "max": "2"},
+    {"contract_type": "`Broadcaster`", "health": "16", "move": "4\"", "weapons": "Melee", "max_armor": "Light", "special": "Can `Cast`", "max": "1"}
   ]
 }

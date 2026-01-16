@@ -438,7 +438,7 @@ const EnemyCard = ({ enemy, cardSize = DEFAULT_CARD_SIZE }) => {
 
 // Reference card for criticals, fumbles, and other tables
 // Supports 2-column (d20/finding) and 3-column (d6/result/effect) formats
-const ReferenceCard = ({ title, table, cardSize = DEFAULT_CARD_SIZE, smallFont = false }) => {
+const ReferenceCard = ({ title, table, cardSize = DEFAULT_CARD_SIZE, smallFont = false, largeFont = false }) => {
   const size = CARD_SIZES[cardSize] || CARD_SIZES[DEFAULT_CARD_SIZE];
   const isMini = isMiniCard(cardSize);
 
@@ -449,8 +449,8 @@ const ReferenceCard = ({ title, table, cardSize = DEFAULT_CARD_SIZE, smallFont =
 
   const fontSize = {
     header: isMini ? '8pt' : '10pt',
-    tableHeader: isMini ? '6pt' : '8pt',
-    tableBody: isMini ? (smallFont ? '5.5pt' : '6pt') : (smallFont ? '7pt' : '8pt'),
+    tableHeader: isMini ? '6pt' : (largeFont ? '9pt' : '8pt'),
+    tableBody: isMini ? (smallFont ? '5.5pt' : '6pt') : (largeFont ? '10pt' : smallFont ? '7pt' : '8pt'),
   };
 
   const pad = isMini ? '1mm' : '1.5mm';
@@ -723,7 +723,7 @@ const CorporateBlessingsCard = ({ blessings, cardSize = DEFAULT_CARD_SIZE }) => 
             {/* Name and effect on two lines */}
             <div className="flex-1" style={{ lineHeight: 1.15 }}>
               <div className="font-bold" style={{ fontSize: fontSize.name }}>{item.name}</div>
-              <div className="text-gray-600" style={{ fontSize: fontSize.effect }}>{item.effect}</div>
+              <div className="text-gray-600" style={{ fontSize: fontSize.effect }} dangerouslySetInnerHTML={{ __html: markdownToHtml(item.effect) }} />
             </div>
           </div>
         ))}
@@ -818,5 +818,73 @@ const BlankModelBackCard = ({ cardSize = DEFAULT_CARD_SIZE }) => {
   );
 };
 
+// Evidence + Leads combined card
+const EvidenceAndLeadsCard = ({ evidenceTable, leadsTable, cardSize = DEFAULT_CARD_SIZE }) => {
+  const size = CARD_SIZES[cardSize] || CARD_SIZES[DEFAULT_CARD_SIZE];
+  const isMini = isMiniCard(cardSize);
+
+  const fontSize = {
+    header: isMini ? '8pt' : '10pt',
+    tableHeader: isMini ? '6pt' : '9pt',
+    tableBody: isMini ? '6pt' : '10pt',
+  };
+
+  const pad = isMini ? '1mm' : '1.5mm';
+
+  return (
+    <div
+      className="evidence-leads-card bg-white border-[2px] border-black rounded-sm inline-flex flex-col text-black overflow-hidden align-top m-[1mm] print:m-0"
+      style={{
+        width: `${size.width}mm`,
+        height: `${size.height}mm`,
+        pageBreakInside: 'avoid',
+        breakInside: 'avoid',
+      }}
+    >
+      {/* Header */}
+      <div
+        className="bg-black text-white text-center"
+        style={{ padding: pad, fontSize: fontSize.header, fontFamily: 'var(--font-heading)' }}
+      >
+        <span className="font-bold uppercase tracking-wider">EVIDENCE & LEADS</span>
+      </div>
+
+      {/* Evidence section */}
+      <div className="flex-1 overflow-hidden flex flex-col">
+        <div className="border-b border-black" style={{ padding: `${pad} 0` }}>
+          <table className="w-full border-collapse" style={{ fontSize: fontSize.tableBody }}>
+            <thead>
+              <tr style={{ fontSize: fontSize.tableHeader }}>
+                <th className="text-center border-b border-black font-bold uppercase" style={{ width: isMini ? '6mm' : '8mm', padding: `0 ${pad}`, fontFamily: 'var(--font-heading)' }}>d10</th>
+                <th className="text-left border-b border-black font-bold uppercase" style={{ padding: `0 ${pad}`, fontFamily: 'var(--font-heading)' }}>EVIDENCE</th>
+              </tr>
+            </thead>
+            <tbody>
+              {(evidenceTable?.items || []).map((item, i) => (
+                <tr key={i} className={i % 2 === 0 ? 'bg-gray-50' : ''}>
+                  <td className="text-center font-bold" style={{ padding: `0 ${pad}` }}>{item.roll}</td>
+                  <td style={{ padding: `0 ${pad}` }}>{item.evidence}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        {/* Leads section */}
+        <div className="flex-1 flex items-center justify-center border-t-2 border-black" style={{ padding: pad }}>
+          <div className="text-center w-full">
+            <div style={{ fontSize: fontSize.tableHeader, fontFamily: 'var(--font-heading)' }} className="font-bold uppercase mb-2">
+              LEADS
+            </div>
+            <div className="border-b-2 border-black mx-auto" style={{ width: '80%', minHeight: isMini ? '8mm' : '12mm' }}>
+              {/* Empty space for writing lead count */}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 // Export to window
-window.H28_PRIMITIVES = { Icon, TypeLabel, ModeSelector, ItemCard, ArchetypeCard, BlankModelCard, BlankModelBackCard, EnemyCard, FactionCard, ReferenceCard, CorporateBlessingsCard };
+window.H28_PRIMITIVES = { Icon, TypeLabel, ModeSelector, ItemCard, ArchetypeCard, BlankModelCard, BlankModelBackCard, EnemyCard, FactionCard, ReferenceCard, CorporateBlessingsCard, EvidenceAndLeadsCard };

@@ -11,6 +11,6 @@
     {"roll": 5, "result": "Rumor", "effect": "1 `Pista`"},
     {"roll": 6, "result": "Coopera", "effect": "1 `Prueba`"},
     {"roll": 7, "result": "Hablador", "effect": "1 `Prueba`, +1 `Pista`"},
-    {"roll": 8, "result": "Revelación", "effect": "2 `Prueba`"}
+    {"roll": 8, "result": "Revelación", "effect": "1 `Prueba`, +2 `Pistas`"}
   ]
 }

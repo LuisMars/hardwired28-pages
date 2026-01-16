@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hardwired 28 - Quick Reference 0.6.3-beta</title>
-    <meta property="og:title" content="Hardwired 28 - Quick Reference 0.6.3-beta">
+    <title>Hardwired 28 - Quick Reference 0.6.4-beta</title>
+    <meta property="og:title" content="Hardwired 28 - Quick Reference 0.6.4-beta">
     <meta property="og:description" content="Corporate cablepunk skirmish wargame">
     <meta property="og:image" content="http://hardwired28.luismars.com/img/social.png">
     <meta property="og:url" content="http://hardwired28.luismars.com/">
@@ -21,24 +21,13 @@
     <nav class="app-menu" data-theme="light" data-open="false" aria-label="Navigation">
         <div class="app-menu__inner">
             <a class="app-menu__brand" href="./">Hardwired 28</a>
-            <button class="app-menu__toggle" type="button" onclick="toggleMenu()">Menu</button>
+            <button class="app-menu__toggle" type="button" onclick="toggleMenu()" aria-label="Menu"></button>
             <div class="app-menu__links">
-                <div class="app-menu__dropdown">
-                    <button class="app-menu__dropdown-toggle">Rules</button>
-                    <div class="app-menu__submenu">
-                        <a href="merged">All Rules</a>
-                        <a href="manual">Manual</a>
-                        <a href="core">Core</a>
-                        <a href="hostiles">Hostiles</a>
-                        <a href="campaign">Campaign</a>
-                        <a href="qr">Reference</a>
-                    </div>
-                </div>
-                <a href="./">Builder</a>
-                <a href="es/qr">Español</a>
-            </div>
-            <div class="app-menu__actions">
-                
+                <a href="rulebook">Rulebook</a>
+                <a href="print">Print</a>
+                <a href="quick-reference" class="current">Quick Reference</a>
+                <a href="builder/">Squad Builder</a>
+                <a href="es/quick-reference">Español</a>
             </div>
         </div>
     </nav>
@@ -48,7 +37,7 @@
         <div class="three-column">
             <div class="column">
 <div><h1>Hardwired 28 - Quick Reference</h1>
-<p><em>0.6.3-beta</em></p>
+<p><em>0.6.4-beta</em></p>
 </div>
 <div><h2>Dice Tiers (DT)</h2>
 <p class="dice-tier">2d4 → 2d6 → 2d8 → 2d10 → 2d12</p>
@@ -124,10 +113,11 @@
 <div><h2>Each Round</h2>
 <ol>
 <li>Roll <strong>Corporate Blessings</strong> (d8 three times)</li>
-<li>Add one token per model not <code>OoA</code> to bag (different colors per faction)</li>
-<li>Draw a token: that faction activates one model (Hostiles/Coworkers follow AI table)</li>
+<li>Add one token per model not <code>OoA</code> to bag</li>
+<li>Draw a token: that faction activates one model (Hostiles/Coworkers: AI table)</li>
+<li>All models <code>OoA</code>: discard token</li>
 <li>Each activation: <strong>Move + Action</strong> OR <strong>Action + Move</strong></li>
-<li>Repeat from 3 until all models have activated</li>
+<li>Repeat from 3 until bag is empty</li>
 </ol>
 </div>
 <div><h2>Actions</h2>
@@ -141,7 +131,7 @@
 <tbody>
 <tr>
 <td>Attack</td>
-<td>Roll <code>Combat</code> vs <code>Defense</code></td>
+<td>Roll <code>Combat</code> vs. <code>Defense</code></td>
 </tr>
 <tr>
 <td>Move Again</td>
@@ -153,7 +143,7 @@
 </tr>
 <tr>
 <td>Aim</td>
-<td>Declare target. <code>-1 DT</code> <code>Defense</code> vs your next shot (lost if moved or damaged)</td>
+<td>Declare target. <code>+1 DT</code> <code>Combat</code> on your next shot (lost if moved or damaged)</td>
 </tr>
 <tr>
 <td>Interact</td>
@@ -161,11 +151,11 @@
 </tr>
 <tr>
 <td>Search</td>
-<td><code>Wits</code> vs 2d6 for <code>Loot</code></td>
+<td><code>Wits</code> vs. 2d6 for <code>Loot</code>. Success: remove marker</td>
 </tr>
 <tr>
 <td>Interrogate</td>
-<td><code>Wits</code> vs <code>Wits</code> for <code>Evidence</code> (+1 <strong>DT</strong> if wounded)</td>
+<td><code>Wits</code> vs. <code>Wits</code> for <code>Evidence</code> (+1 <strong>DT</strong> if wounded). Success: remove Coworker</td>
 </tr>
 <tr>
 <td>Loot</td>
@@ -173,7 +163,7 @@
 </tr>
 <tr>
 <td>Cast</td>
-<td><code>Wits</code> vs <code>Wits</code> (Broadcasters only)</td>
+<td><code>Wits</code> vs. <code>Wits</code> (Broadcasters only)</td>
 </tr>
 </tbody>
 </table>
@@ -213,7 +203,7 @@
 <div><h2>Casting</h2>
 <ul>
 <li>Action, LoS, no range limit</li>
-<li><code>Wits</code> vs <code>Wits</code>, damage direct</li>
+<li><code>Wits</code> vs. <code>Wits</code>, damage direct</li>
 <li><strong>Interference:</strong> cumulative <code>-1</code> per fail, resets on fumble</li>
 <li><strong>Overbroadcast:</strong> <code>-1 DT</code>, +d4 or double effect</li>
 </ul></div>
@@ -224,7 +214,7 @@
 <ol>
 <li>Declare target and weapon</li>
 <li>Melee: defender chooses <code>Defense</code> or <strong>Riposte</strong></li>
-<li>Both roll: <strong>Combat DT</strong> vs <strong>Defense DT</strong> (If <strong>Riposte</strong>: roll <code>Combat</code> at -1 <strong>DT</strong>)</li>
+<li>Both roll: <strong>Combat DT</strong> vs. <strong>Defense DT</strong> (If <strong>Riposte</strong>: roll <code>Combat</code> at -1 <strong>DT</strong>)</li>
 <li>Higher wins (lower <strong>DT</strong> wins ties). Hit: roll damage. <strong>Riposte</strong> wins: defender also deals damage</li>
 </ol>
 </div>
@@ -246,16 +236,22 @@
 <div><h2>Cover and Ranged</h2>
 <ul>
 <li><strong>Cover</strong> (body obscured): -1 <strong>DT Combat</strong></li>
-<li><strong>Into melee:</strong> -1 <strong>DT</strong>, miss hits random model within 1", fumble is Critical against it</li>
+<li><strong>Attacker moved:</strong> -1 <strong>DT Combat</strong></li>
+<li><strong>Target used Move Again:</strong> -1 <strong>DT Combat</strong></li>
+<li><strong>Into melee:</strong> -1 <strong>DT</strong>, miss hits random model within 1" (not target), fumble is Critical against it</li>
 <li><strong>Ranged:</strong> No range limits, no <strong>Riposte</strong></li>
 </ul>
 </div>
-<div><h2>Blast</h2>
-<p><strong>All</strong> models in radius auto-hit (friend or foe). Roll damage separately.</p>
+<div><h2>Grenades</h2>
+<ul>
+<li>Throw at point within 6" (action). One use.</li>
+<li>Roll <code>Combat</code> vs 2d6. Failure: scatters d6". 2d6 doubles you: lands at your feet.</li>
+<li>3" blast hits all models (friend and foe). Roll damage for each.</li>
+</ul>
 </div>
 <div><h2>Morale</h2>
-<p>When <code>Boss</code> goes <code>Out of Action</code>: all friendlies immediately test <code>Wits</code> vs 2d6. Fail: <code>Flee</code>. Retest each activation.</p>
-<p><code>Flee</code>: Move toward nearest edge. Cannot act. If exits: drops items, no Merits. Performance Review: d6 damage after restoring <code>Health</code>.</p>
+<p>When <code>Boss</code> goes <code>Out of Action</code>: all friendlies immediately test <code>Wits</code> vs. 2d6. Fail: <code>Flee</code>. Retest each activation.</p>
+<p><code>Flee</code>: Move toward the nearest edge (stops at edge). Cannot act. If exits: drops items, no Merits. Performance Review: d6 damage after restoring <code>Health</code>.</p>
 <blockquote>
 <p>"Your subscription is your freedom."</p>
 <p><strong>Chief Executive Sovereign</strong></p>
@@ -278,42 +274,42 @@
 <tbody>
 <tr>
 <td style="text-align: center;">1</td>
-<td style="text-align: left;">Grace Denied</td>
+<td style="text-align: left;">Denied</td>
 <td style="text-align: left;">No blessing</td>
 </tr>
 <tr>
 <td style="text-align: center;">2</td>
-<td style="text-align: left;">Absolution</td>
-<td style="text-align: left;">Reroll any one die</td>
+<td style="text-align: left;">Reroll</td>
+<td style="text-align: left;">Reroll a single die</td>
 </tr>
 <tr>
 <td style="text-align: center;">3</td>
-<td style="text-align: left;">Quarterly Blessing</td>
+<td style="text-align: left;">Boost</td>
 <td style="text-align: left;"><code>+1 DT</code> to one roll</td>
 </tr>
 <tr>
 <td style="text-align: center;">4</td>
-<td style="text-align: left;">Overtime Sanction</td>
+<td style="text-align: left;">Overtime</td>
 <td style="text-align: left;">One model takes two actions</td>
 </tr>
 <tr>
 <td style="text-align: center;">5</td>
-<td style="text-align: left;">Severance Package</td>
+<td style="text-align: left;">Severance</td>
 <td style="text-align: left;">One attack deals max weapon damage</td>
 </tr>
 <tr>
 <td style="text-align: center;">6</td>
-<td style="text-align: left;">Synergy Blessing</td>
+<td style="text-align: left;">Synergy</td>
 <td style="text-align: left;">After activating a model, activate an unactivated model within 6" of it</td>
 </tr>
 <tr>
 <td style="text-align: center;">7</td>
-<td style="text-align: left;">Wellness Dispensation</td>
+<td style="text-align: left;">Wellness</td>
 <td style="text-align: left;">Restore d6 <code>Health</code> to one model, remove DoT effects</td>
 </tr>
 <tr>
 <td style="text-align: center;">8</td>
-<td style="text-align: left;">Trickle-Down</td>
+<td style="text-align: left;">Surplus</td>
 <td style="text-align: left;">Roll twice, ignoring 8s</td>
 </tr>
 </tbody>
@@ -330,7 +326,7 @@
 <tbody>
 <tr>
 <td style="text-align: center;">1</td>
-<td style="text-align: left;">2 subs</td>
+<td style="text-align: left;">Random Grenade</td>
 </tr>
 <tr>
 <td style="text-align: center;">2</td>
@@ -350,7 +346,7 @@
 </tr>
 <tr>
 <td style="text-align: center;">6</td>
-<td style="text-align: left;"><strong>Evidence</strong></td>
+<td style="text-align: left;">1 <code>Evidence</code></td>
 </tr>
 <tr>
 <td style="text-align: center;">7</td>
@@ -366,7 +362,7 @@
 </tr>
 <tr>
 <td style="text-align: center;">10</td>
-<td style="text-align: left;">2 <strong>Evidence</strong></td>
+<td style="text-align: left;">1 <code>Evidence</code>, +1 <code>Lead</code></td>
 </tr>
 <tr>
 <td style="text-align: center;">11</td>
@@ -374,7 +370,7 @@
 </tr>
 <tr>
 <td style="text-align: center;">12</td>
-<td style="text-align: left;"><strong>Evidence</strong></td>
+<td style="text-align: left;">1 <code>Evidence</code></td>
 </tr>
 <tr>
 <td style="text-align: center;">13</td>
@@ -394,7 +390,7 @@
 </tr>
 <tr>
 <td style="text-align: center;">17</td>
-<td style="text-align: left;"><strong>Evidence</strong></td>
+<td style="text-align: left;">1 <code>Evidence</code></td>
 </tr>
 <tr>
 <td style="text-align: center;">18</td>
@@ -402,7 +398,7 @@
 </tr>
 <tr>
 <td style="text-align: center;">19</td>
-<td style="text-align: left;"><strong>Evidence</strong></td>
+<td style="text-align: left;">1 <code>Evidence</code></td>
 </tr>
 <tr>
 <td style="text-align: center;">20</td>
@@ -456,7 +452,7 @@
 <tr>
 <td style="text-align: center;">8</td>
 <td style="text-align: left;">Full Disclosure</td>
-<td style="text-align: left;">2 <code>Evidence</code></td>
+<td style="text-align: left;">1 <code>Evidence</code>, +2 <code>Leads</code></td>
 </tr>
 </tbody>
 </table>
@@ -706,7 +702,7 @@
 <tr>
 <td style="text-align: center;">4</td>
 <td style="text-align: left;">Delirium</td>
-<td style="text-align: left;"><code>-1 DT</code> <code>Wits</code> permanently, move toward nearest enemy</td>
+<td style="text-align: left;"><code>-1 DT</code> <code>Wits</code> permanently, move toward the nearest enemy</td>
 </tr>
 <tr>
 <td style="text-align: center;">5</td>

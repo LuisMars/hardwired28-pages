@@ -1,7 +1,7 @@
 // Hardwired 28 Warband Builder - Panel Components (Zorn Palette)
 
 const { useState } = React;
-const { Icon, TypeLabel, ItemCard, ArchetypeCard, BlankModelCard, BlankModelBackCard, EnemyCard, FactionCard, ReferenceCard, CorporateBlessingsCard } = window.H28_PRIMITIVES;
+const { Icon, TypeLabel, ItemCard, ArchetypeCard, BlankModelCard, BlankModelBackCard, EnemyCard, FactionCard, ReferenceCard, CorporateBlessingsCard, EvidenceAndLeadsCard } = window.H28_PRIMITIVES;
 const { ICONS, CARD_SIZES, getItemType, getBaseItemId, t } = window.H28_UTILS;
 
 // Reference data (loaded from JSON files via window.WARBAND_DATA)
@@ -12,6 +12,7 @@ const INTERROGATE = window.WARBAND_DATA?.INTERROGATE || {};
 const INJURIES = window.WARBAND_DATA?.INJURIES || {};
 const PROMOTIONS = window.WARBAND_DATA?.PROMOTIONS || {};
 const EVIDENCE_DISCOVERIES = window.WARBAND_DATA?.EVIDENCE_DISCOVERIES || {};
+const LEADS_TRACKER = window.WARBAND_DATA?.LEADS_TRACKER || {};
 const HOSTILES = window.WARBAND_DATA?.HOSTILES || [];
 const BLESSINGS = window.WARBAND_DATA?.BLESSINGS || {};
 
@@ -448,7 +449,7 @@ const PrintModal = ({ isOpen, onCloseModal, onBack, options, setOptions, onPrint
                   onChange={(e) => setOptions({ ...options, printEvidence: e.target.checked })}
                   className="w-3 h-3"
                 />
-                <span className="text-sm">{t('cardEvidence')}</span>
+                <span className="text-sm">{t('cardEvidence') || 'Evidence & Leads'}</span>
               </label>
               {options.printEvidence && (
                 <div className="flex items-center gap-2 ml-5">
@@ -804,15 +805,8 @@ const CardPrintView = ({ onClose, weaponData, archetypes, warband }) => {
       smallFont: true,
     });
   }
-  // Evidence (based on count if enabled)
-  const evidenceCardCount = options.printEvidence && EVIDENCE_DISCOVERIES.items?.length > 0 ? (options.evidenceCount || 1) : 0;
-  for (let i = 0; i < evidenceCardCount; i++) {
-    campaignCards.push({
-      key: `evidence-${i}`,
-      title: t('cardEvidence'),
-      table: EVIDENCE_DISCOVERIES,
-    });
-  }
+  // Evidence & Leads combined cards (based on count if enabled)
+  const evidenceCardCount = options.printEvidence && EVIDENCE_DISCOVERIES.items?.length > 0 && LEADS_TRACKER.items?.length > 0 ? (options.evidenceCount || 1) : 0;
 
   // Blessings cards (based on count if enabled)
   const blessingsCardCount = options.printBlessings && BLESSINGS.items?.length > 0 ? options.blessingsCount : 0;
@@ -830,6 +824,7 @@ const CardPrintView = ({ onClose, weaponData, archetypes, warband }) => {
     ...criticalCards.map(c => c.key),
     ...fumbleCards.map(c => c.key),
     ...campaignCards.map(c => c.key),
+    ...Array.from({ length: evidenceCardCount }, (_, i) => `evidence-${i}`),
     ...Array.from({ length: blessingsCardCount }, (_, i) => `blessings-${i}`),
   ];
   const activeCards = allCardKeys.filter(k => !excludedCards.has(k)).length;
@@ -855,42 +850,44 @@ const CardPrintView = ({ onClose, weaponData, archetypes, warband }) => {
       />
 
       {/* Control bar - hidden when printing */}
-      <div className="print:hidden sticky top-0 z-10 wb-bg-accent wb-text-accent p-4 border-b-2 wb-border-primary">
-        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
-          <div>
-            <h1 className="text-2xl font-bold font-heading uppercase tracking-wide">{t('title')} - {t('cards')}</h1>
-            <p className="wb-text-muted text-sm">
-              {size.name}: {size.width}mm x {size.height}mm | {activeCards}/{totalCards} {t('cardsTotal')}
-              {excludedCards.size > 0 && (
-                <button
-                  onClick={() => setExcludedCards(new Set())}
-                  className="ml-2 wb-text-primary hover:underline"
-                >
-                  (reset)
-                </button>
-              )}
-            </p>
-          </div>
+      <div className="print:hidden sticky top-0 z-10 wb-bg-darker wb-text-light border-b-2 wb-border-primary shadow-md">
+        <div className="max-w-7xl mx-auto p-4">
+          <div className="flex items-start justify-between gap-4">
+            <div className="flex-1 min-w-0">
+              <h1 className="text-xl sm:text-2xl font-bold font-heading uppercase tracking-wide">{t('title')} - {t('cards')}</h1>
+              <p className="wb-text-muted text-xs sm:text-sm">
+                {size.name}: {size.width}mm x {size.height}mm | {activeCards}/{totalCards} {t('cardsTotal')}
+                {excludedCards.size > 0 && (
+                  <button
+                    onClick={() => setExcludedCards(new Set())}
+                    className="ml-2 wb-text-primary hover:underline"
+                  >
+                    (reset)
+                  </button>
+                )}
+              </p>
+            </div>
 
-          <div className="flex items-center gap-2">
-            <button
-              onClick={() => setShowModal(true)}
-              className="px-4 py-2 wb-bg-medium wb-text-light border wb-border-hover rounded hover:wb-bg-medium-hover font-bold"
-            >
-              {t('options')}
-            </button>
-            <button
-              onClick={() => window.print()}
-              className="px-4 py-2 wb-bg-primary wb-text-dark rounded hover:wb-bg-primary-hover font-bold flex items-center gap-2"
-            >
-              <Icon name="print" /> {t('print')}
-            </button>
-            <button
-              onClick={onClose}
-              className="px-4 py-2 wb-bg-medium wb-text-light border wb-border-hover rounded hover:wb-bg-medium-hover font-bold"
-            >
-              {t('back')}
-            </button>
+            <div className="flex items-center gap-2 flex-shrink-0">
+              <button
+                onClick={() => setShowModal(true)}
+                className="px-3 py-2 wb-bg-medium wb-text-light border wb-border-hover rounded hover:wb-bg-medium-hover font-bold whitespace-nowrap text-sm"
+              >
+                {t('options')}
+              </button>
+              <button
+                onClick={() => window.print()}
+                className="px-3 py-2 wb-bg-primary wb-text-on-primary rounded hover:wb-bg-primary-hover font-bold flex items-center gap-2 whitespace-nowrap text-sm"
+              >
+                <Icon name="print" /> {t('print')}
+              </button>
+              <button
+                onClick={onClose}
+                className="px-3 py-2 wb-bg-medium wb-text-light border wb-border-hover rounded hover:wb-bg-medium-hover font-bold whitespace-nowrap text-sm"
+              >
+                {t('back')}
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -1009,6 +1006,20 @@ const CardPrintView = ({ onClose, weaponData, archetypes, warband }) => {
             {campaignCards.map(({ key, title, table, smallFont }) => (
               <CardWrapper key={key} cardKey={key}>
                 <ReferenceCard title={title} table={table} cardSize={options.cardSize} smallFont={smallFont} />
+              </CardWrapper>
+            ))}
+          </>
+        )}
+
+        {/* Evidence & Leads combined cards */}
+        {evidenceCardCount > 0 && (
+          <>
+            <h2 className="w-full text-xl font-bold mb-3 wb-text-dark font-heading uppercase print:hidden">
+              {t('cardEvidence') || 'Evidence & Leads'} ({evidenceCardCount} {evidenceCardCount === 1 ? 'card' : 'cards'})
+            </h2>
+            {Array.from({ length: evidenceCardCount }, (_, i) => (
+              <CardWrapper key={`evidence-${i}`} cardKey={`evidence-${i}`}>
+                <EvidenceAndLeadsCard evidenceTable={EVIDENCE_DISCOVERIES} leadsTable={LEADS_TRACKER} cardSize={options.cardSize} />
               </CardWrapper>
             ))}
           </>

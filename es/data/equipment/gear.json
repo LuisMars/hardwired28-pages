@@ -5,9 +5,9 @@
   "align": ["center", "left", "left", "right"],
   "display_columns": ["d8", "Objeto", "Efecto", "Coste"],
   "items": [
-    {"roll": 1, "name": "Máscara", "effect": "`+1 ND` `Defensa` vs Tóxico", "cost": 6},
+    {"roll": 1, "name": "Máscara", "effect": "`+1 ND` `Defensa` vs. Tóxico", "cost": 6},
     {"roll": 2, "name": "Escáner", "effect": "`+1 ND` `Astucia` para `Buscar`", "cost": 8},
-    {"roll": 3, "name": "Mira", "effect": "`+1 ND` disparo más allá de 12\"", "cost": 8},
+    {"roll": 3, "name": "Mira", "effect": "`+1 ND` disparo a más de 12\"", "cost": 8},
     {"roll": 4, "name": "Camuflaje", "effect": "`+1 ND` `Defensa` en cobertura", "cost": 10},
     {"roll": 5, "name": "Sensores Periféricos", "effect": "`+1 ND` `Defensa` `Trabado` con 2+ enemigos", "cost": 10},
     {"roll": 6, "name": "Botas Magnéticas", "effect": "Ignora Empuje", "cost": 10},

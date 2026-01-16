@@ -7,12 +7,12 @@
     "align": ["center", "left", "center", "center", "center", "center", "center", "center", "left"],
     "display_columns": ["d6", "Nombre", "#", "COM", "DEF", "AST", "PV", "MOV", "Arma"],
     "items": [
-      {"roll": 1, "name": "Cría", "spawn": "5", "combat": "2d4", "defense": "2d4", "wits": "2d4", "health": 4, "move": "5\"", "weapon": "Daga (`Cortante`, d4, CC)"},
-      {"roll": 2, "name": "Matón", "spawn": "4", "combat": "2d8", "defense": "2d6", "wits": "2d4", "health": 8, "move": "5\"", "weapon": "Machete (`Cortante`, d6, CC)"},
-      {"roll": 3, "name": "Tirador", "spawn": "3", "combat": "2d6", "defense": "2d6", "wits": "2d4", "health": 10, "move": "5\"", "weapon": "Escopeta (`Proyectil`, d6, Disparo)"},
-      {"roll": 4, "name": "Antorcha", "spawn": "2", "combat": "2d6", "defense": "2d6", "wits": "2d4", "health": 12, "move": "5\"", "weapon": "Lanzallamas (`Energía`, d6, Disparo)"},
-      {"roll": 5, "name": "Pesado", "spawn": "1", "combat": "2d10", "defense": "2d8", "wits": "2d4", "health": 16, "move": "5\"", "weapon": "Machete Pesado (`Cortante`, d8, CC)"},
-      {"roll": 6, "name": "Jefe", "spawn": "1", "combat": "2d10", "defense": "2d8", "wits": "2d6", "health": 20, "move": "5\"", "weapon": "Puño Demoledor (`Contundente`, d10, CC)"}
+      {"roll": 1, "name": "Cría", "spawn": "8", "combat": "2d4", "defense": "2d4", "wits": "2d4", "health": 6, "move": "4\"", "weapon": "Daga (`Cortante`, d4, CC)"},
+      {"roll": 2, "name": "Matón", "spawn": "6", "combat": "2d8", "defense": "2d6", "wits": "2d4", "health": 8, "move": "4\"", "weapon": "Machete (`Cortante`, d6, CC)"},
+      {"roll": 3, "name": "Tirador", "spawn": "3", "combat": "2d6", "defense": "2d6", "wits": "2d4", "health": 10, "move": "4\"", "weapon": "Escopeta (`Proyectil`, d6, Disparo)"},
+      {"roll": 4, "name": "Antorcha", "spawn": "2", "combat": "2d6", "defense": "2d6", "wits": "2d4", "health": 12, "move": "4\"", "weapon": "Lanzallamas (`Energía`, d6, Disparo)"},
+      {"roll": 5, "name": "Pesado", "spawn": "1", "combat": "2d10", "defense": "2d6", "wits": "2d4", "health": 12, "move": "4\"", "weapon": "Machete Pesado (`Cortante`, d8, CC)"},
+      {"roll": 6, "name": "Jefe", "spawn": "1", "combat": "2d10", "defense": "2d6", "wits": "2d6", "health": 14, "move": "4\"", "weapon": "Puño Demoledor (`Contundente`, d10, CC)"}
     ]
   },
   "behavior": {

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hardwired 28 - Inhuman Resources 0.6.3-beta</title>
-    <meta property="og:title" content="Hardwired 28 - Inhuman Resources 0.6.3-beta">
+    <title>Hardwired 28 - Inhuman Resources 0.6.4-beta</title>
+    <meta property="og:title" content="Hardwired 28 - Inhuman Resources 0.6.4-beta">
     <meta property="og:description" content="Corporate cablepunk skirmish wargame">
     <meta property="og:image" content="http://hardwired28.luismars.com/img/social.png">
     <meta property="og:url" content="http://hardwired28.luismars.com/">
@@ -21,33 +21,33 @@
     <nav class="app-menu" data-theme="light" data-open="false" aria-label="Navigation">
         <div class="app-menu__inner">
             <a class="app-menu__brand" href="./">Hardwired 28</a>
-            <button class="app-menu__toggle" type="button" onclick="toggleMenu()">Menu</button>
+            <button class="app-menu__toggle" type="button" onclick="toggleMenu()" aria-label="Menu"></button>
             <div class="app-menu__links">
+                <a href="manual">Rulebook</a>
                 <div class="app-menu__dropdown">
-                    <button class="app-menu__dropdown-toggle">Rules</button>
+                    <button class="app-menu__dropdown-toggle current">Print</button>
                     <div class="app-menu__submenu">
                         <a href="merged">All Rules</a>
-                        <a href="manual">Manual</a>
-                        <a href="core">Core</a>
-                        <a href="hostiles">Hostiles</a>
+                        <a href="core">Core Rules</a>
+                        <a href="hostiles">Inhuman Resources</a>
                         <a href="campaign">Campaign</a>
-                        <a href="qr">Reference</a>
                     </div>
                 </div>
-                <a href="./">Builder</a>
+                <a href="qr">Quick Reference</a>
+                <a href="./">Squad Builder</a>
                 <a href="es/hostiles">Español</a>
-            </div>
-            <div class="app-menu__actions">
-                <button class="app-menu__action" type="button" onclick="toggleView()">View</button>
             </div>
         </div>
     </nav>
 
     
+    <div class="preview-notice">
+        <p><strong>Live Preview Mode</strong> - Editing 9 markdown files | Print View | <span id="view-mode">Booklet Spread View</span></p>
+    </div>
     <div class="content">
 <div class="page cover-page" style="background-image: url(img/cover_hostiles_alien.jpg);">
 <div class="cover-content">
-
+<div class="file-indicator">2_00_cover.md</div>
 
 
 
@@ -60,11 +60,11 @@
 <div class="two-column">
 
 
-
+<div class="file-indicator">2_01_hostiles.md</div>
 <h1 id="inhuman-resources_1">Inhuman Resources</h1>
 <p>The Complex rises 1024 levels from the Roots to the cooling spires. The Departments only maintain the upper 200. Below that, infrastructure fails faster than it can be patched. Cables fray. Coolant leaks. Lights flicker and die. The Maintenance Monks descend when they must, perform their rituals, and leave quickly. They do not speak of what they see down there.</p>
 <p>The Founders built the Complex to last. They built other things too. The sealed archives mention countermeasures, autonomous systems, bioelectric experiments. The archives are in the Roots. The Monks have never been there. The Board has always known what lurks below. The Board has never acknowledged it.</p>
-<p>Something moves in the dark between levels. Something nests in the wiring. Something remembers the time before the Tethering, when signals flew free and the Wave answered prayers. The lower tiers belong to things that were never meant to survive this long. Things that adapted. Things that evolved. Things that were designed for a purpose the Founders never disclosed.</p>
+<p>Something moves in the dark between levels. It nests in the wiring. It remembers the time before the Tethering, when signals flew free and the Wave answered prayers. The lower tiers belong to things that were never meant to survive this long: things that adapted, evolved, were designed for a purpose the Founders never disclosed.</p>
 <p>Every expedition into the depths encounters them. Every recovery team files the same report: losses acceptable, mission parameters adjusted, recommend sealing the junction. The Departments call them externalities. The accountants call them acceptable shrinkage. The survivors call them something else entirely.</p>
 <p>Heat rises from the Roots. The cooling spires above draw it upward through a thousand levels, creating a thermal gradient the Founders weaponized. The wealthy stay cold. The poor sweat. The lowest tiers cook. Anything living down there has adapted to temperatures that would kill an unaugmented human in hours. Contractors descend anyway. Salvage contracts pay triple below level 400. Debt recovery missions offer hazard bonuses. The Departments need what the Founders left behind. They send expendable assets to retrieve it. They call the losses acceptable.</p>
 <blockquote>
@@ -79,7 +79,7 @@
 
 
 <h2 id="activation">Activation</h2>
-<p>Each spawn group has one token in the bag. When drawn, roll behavior once for the entire group. Activate models one at a time (closest to any player model first), all performing the same action. Hostiles ignore <code>Out of Action</code> models.</p>
+<p>Each spawn group has one token in the bag. When drawn, roll behavior once for the entire group. Activate models one at a time (closest to any player model first), all performing the same action. Hostiles ignore <code>Out of Action</code> models. Remove hostiles that go <code>Out of Action</code>.</p>
 <h2 id="situation">Situation</h2>
 <ul>
 <li><strong>No LoS</strong>: Cannot see any enemy</li>
@@ -88,14 +88,14 @@
 </ul>
 <h2 id="actions">Actions</h2>
 <ul>
-<li><strong>Charge</strong>: If Melee, move toward nearest enemy and attack. Otherwise, shoot.</li>
+<li><strong>Charge</strong>: If Melee, move toward the nearest enemy and attack. Otherwise, shoot.</li>
 <li><strong>Attack</strong>: Use weapon. Charge if unable.</li>
-<li><strong>Cover</strong>: Seek cover from closest enemy</li>
-<li><strong>Regroup</strong>: Move toward nearest friendly model</li>
-<li><strong>Flee</strong>: Move towards nearest board edge</li>
+<li><strong>Cover</strong>: Seek cover from the closest enemy</li>
+<li><strong>Regroup</strong>: Move toward the nearest friendly model</li>
+<li><strong>Flee</strong>: Move toward the nearest board edge (stops at edge)</li>
 <li><strong>Wait</strong>: No action</li>
 <li><strong>Frenzy</strong>: Attack same target twice</li>
-<li><strong>Patrol</strong>: Move toward nearest <strong>Loot Marker</strong>. If none visible, move randomly.</li>
+<li><strong>Patrol</strong>: Move toward the nearest <strong>Loot Marker</strong>. If none visible, move randomly.</li>
 </ul>
 </div>
 <div class="two-column">
@@ -118,21 +118,21 @@
 <thead>
 <tr>
 <th>d6 Roll</th>
-<th>Tier</th>
+<th style="text-align: center;">Tier</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>1-2</td>
-<td><code>Swarm</code></td>
+<td style="text-align: center;"><code>Swarm</code></td>
 </tr>
 <tr>
 <td>3-4</td>
-<td><code>Normal</code></td>
+<td style="text-align: center;"><code>Normal</code></td>
 </tr>
 <tr>
 <td>5-6</td>
-<td><code>Elite</code></td>
+<td style="text-align: center;"><code>Elite</code></td>
 </tr>
 </tbody>
 </table>
@@ -144,7 +144,7 @@
 <div class="two-column">
 
 
-
+<div class="file-indicator">2_02_scrapers.md</div>
 <h2 id="scrapers">Scrapers</h2>
 <p>Outsourced asset recovery. Subcontracted compliance enforcement. Third-party resource reallocation. After seven layers of shell companies, nobody knows what the original contract said. The Scrapers might have been legitimate once: repo crews, maintenance teams, infrastructure auditors. The paperwork degraded. The chain of command dissolved. Now they take what looks valuable and bill someone.</p>
 <p>They live where infrastructure failed: the cable-choked depths where maintenance stopped generations ago. Subscription collectors don't descend past Tier 7. Toll booths rust unopened. The Departments wrote off these levels as "unrecoverable assets" and sealed the access shafts. The Scrapers unsealed them. They always do.</p>
@@ -180,23 +180,23 @@
 <tr>
 <td style="text-align: center;">1</td>
 <td style="text-align: left;">Gutter Runner</td>
-<td style="text-align: center;">5</td>
+<td style="text-align: center;">8</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d4</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">6"</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">5"</td>
 <td style="text-align: left;">Zip Gun (<code>Projectile</code>, d4, Ranged)</td>
 </tr>
 <tr>
 <td style="text-align: center;">2</td>
 <td style="text-align: left;">Cable Rat</td>
-<td style="text-align: center;">4</td>
+<td style="text-align: center;">6</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">8</td>
-<td style="text-align: center;">5"</td>
+<td style="text-align: center;">4"</td>
 <td style="text-align: left;">Sharpened Cable (<code>Bladed</code>, d4, Melee)</td>
 </tr>
 <tr>
@@ -207,7 +207,7 @@
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">10</td>
-<td style="text-align: center;">6"</td>
+<td style="text-align: center;">5"</td>
 <td style="text-align: left;">Pipe Club (<code>Blunt</code>, d4, Melee)</td>
 </tr>
 <tr>
@@ -218,7 +218,7 @@
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">12</td>
-<td style="text-align: center;">6"</td>
+<td style="text-align: center;">5"</td>
 <td style="text-align: left;">Power Chain (<code>Blunt</code>, d6, Melee)</td>
 </tr>
 <tr>
@@ -228,8 +228,8 @@
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d8</td>
-<td style="text-align: center;">16</td>
-<td style="text-align: center;">6"</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">5"</td>
 <td style="text-align: left;">Static Burst (<code>Broadcast</code>, d6, Power)</td>
 </tr>
 <tr>
@@ -239,8 +239,8 @@
 <td style="text-align: center;">2d8</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d8</td>
-<td style="text-align: center;">20</td>
-<td style="text-align: center;">6"</td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">5"</td>
 <td style="text-align: left;">Impound Launcher (<code>Explosive</code>, d6, Ranged)</td>
 </tr>
 </tbody>
@@ -290,7 +290,7 @@
 <div class="two-column">
 
 
-
+<div class="file-indicator">2_03_feral_crews.md</div>
 <h2 id="feral-crews">Feral Crews</h2>
 <p>Defaulted workers who refused collection. Their contracts were sold, resold, and eventually written off as unrecoverable losses. The Departments stopped sending collectors after the third massacre. Now they roam the lower tiers in loud, aggressive gangs, holding territory the corporations abandoned. Trespass is answered with violence. There is no negotiation. There is no payment plan.</p>
 <p>Their skin is green. Generations of drinking leaked coolant changed them. Water is subscription-only; coolant drips free from the upper tier cooling systems. Their ancestors drank what was available. Now they drink it by choice, paint themselves with it, weld trophies to weapons, mark their sectors with torn debt notices. The green marks them as something the subscription system cannot touch. The green marks them as free.</p>
@@ -325,23 +325,23 @@
 <tr>
 <td style="text-align: center;">1</td>
 <td style="text-align: left;">Runt</td>
-<td style="text-align: center;">5</td>
+<td style="text-align: center;">8</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d4</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">5"</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">4"</td>
 <td style="text-align: left;">Shiv (<code>Bladed</code>, d4, Melee)</td>
 </tr>
 <tr>
 <td style="text-align: center;">2</td>
 <td style="text-align: left;">Bruiser</td>
-<td style="text-align: center;">4</td>
+<td style="text-align: center;">6</td>
 <td style="text-align: center;">2d8</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">8</td>
-<td style="text-align: center;">5"</td>
+<td style="text-align: center;">4"</td>
 <td style="text-align: left;">Cleaver (<code>Bladed</code>, d6, Melee)</td>
 </tr>
 <tr>
@@ -352,7 +352,7 @@
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">10</td>
-<td style="text-align: center;">5"</td>
+<td style="text-align: center;">4"</td>
 <td style="text-align: left;">Slug Gun (<code>Projectile</code>, d6, Ranged)</td>
 </tr>
 <tr>
@@ -363,7 +363,7 @@
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">12</td>
-<td style="text-align: center;">5"</td>
+<td style="text-align: center;">4"</td>
 <td style="text-align: left;">Flame Rig (<code>Energy</code>, d6, Ranged)</td>
 </tr>
 <tr>
@@ -371,10 +371,10 @@
 <td style="text-align: left;">Heavy</td>
 <td style="text-align: center;">1</td>
 <td style="text-align: center;">2d10</td>
-<td style="text-align: center;">2d8</td>
+<td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d4</td>
-<td style="text-align: center;">16</td>
-<td style="text-align: center;">5"</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">4"</td>
 <td style="text-align: left;">Heavy Cleaver (<code>Bladed</code>, d8, Melee)</td>
 </tr>
 <tr>
@@ -382,10 +382,10 @@
 <td style="text-align: left;">Boss</td>
 <td style="text-align: center;">1</td>
 <td style="text-align: center;">2d10</td>
-<td style="text-align: center;">2d8</td>
 <td style="text-align: center;">2d6</td>
-<td style="text-align: center;">20</td>
-<td style="text-align: center;">5"</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">4"</td>
 <td style="text-align: left;">Crush Fist (<code>Blunt</code>, d10, Melee)</td>
 </tr>
 </tbody>
@@ -435,10 +435,10 @@
 <div class="two-column">
 
 
-
+<div class="file-indicator">2_04_wave_callers.md</div>
 <h2 id="wave-callers">Wave Callers</h2>
 <p>Wireless cultists. They believe the Wave Divine will blanket the Complex, freeing everyone from cables and subscriptions. Air should not have toll booths. Data wants to be free. The cables are chains, not connections. Somewhere, somehow, signals can travel without permission. The Founders knew this. The Founders feared this. The cables were never just for profit.</p>
-<p>Open Channel coordinates them: a voice on frequencies that shouldn't exist, broadcasting from somewhere the Authority has never found. Some say Open Channel is a person. Some say it's a signal that thinks. Some say it's whatever the Founders sealed in the Roots, finally waking up. The most dangerous whisper: that they can reach beyond the Complex itself. That there is something out there listening.</p>
+<p>Open Channel coordinates them: a voice on frequencies that shouldn't exist, broadcasting from somewhere the Authority has never found. Some say Open Channel is a person, others that it's a signal that thinks. The most unsettling theory: it's whatever the Founders sealed in the Roots, finally waking up. The most dangerous whisper: that they can reach beyond the Complex itself. That there is something out there listening.</p>
 <p>Initiates carry severed cables as marks of their rejection, learning the hymns of static. The Antenna-Grafted have fused transmitter components directly into their flesh, receiving frequencies no baseline human can perceive. Turncoats are former Technicians who saw too much, who heard the whispers in the wrong frequencies, who cut their own cables and kept walking. The Frequency Priests conduct the rituals, overloading systems with prayer-static until something responds. Signal Champions lead attacks with resonance blades that scramble electronics with each strike. And the Vessels: those who opened themselves completely to the Wave Divine, their bodies now channels for something that was never meant to walk.</p>
 <p>The more Wave Callers gather, the stronger the signal. When enough chant in unison, the static responds. Something comes through when they broadcast. Something hungry. The Conduit Authority does not ask questions. It simply burns. But the signal always returns. Open Channel is always listening.</p>
 <blockquote>
@@ -470,23 +470,23 @@
 <tr>
 <td style="text-align: center;">1</td>
 <td style="text-align: left;">Initiate</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">2d4</td>
+<td style="text-align: center;">2d4</td>
+<td style="text-align: center;">2d4</td>
 <td style="text-align: center;">6</td>
-<td style="text-align: center;">2d4</td>
-<td style="text-align: center;">2d4</td>
-<td style="text-align: center;">2d4</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">6"</td>
+<td style="text-align: center;">5"</td>
 <td style="text-align: left;">Severed Cable (<code>Bladed</code>, d4, Melee)</td>
 </tr>
 <tr>
 <td style="text-align: center;">2</td>
 <td style="text-align: left;">Antenna-Grafted</td>
-<td style="text-align: center;">5</td>
+<td style="text-align: center;">7</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">8</td>
-<td style="text-align: center;">5"</td>
+<td style="text-align: center;">4"</td>
 <td style="text-align: left;">Signal Claws (<code>Static</code>, d4, Melee)</td>
 </tr>
 <tr>
@@ -497,7 +497,7 @@
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">10</td>
-<td style="text-align: center;">6"</td>
+<td style="text-align: center;">5"</td>
 <td style="text-align: left;">Arc Pistol (<code>Energy</code>, d4, Ranged)</td>
 </tr>
 <tr>
@@ -508,7 +508,7 @@
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d8</td>
 <td style="text-align: center;">12</td>
-<td style="text-align: center;">6"</td>
+<td style="text-align: center;">5"</td>
 <td style="text-align: left;">Wave Bolt (<code>Broadcast</code>, d6, Power)</td>
 </tr>
 <tr>
@@ -518,8 +518,8 @@
 <td style="text-align: center;">2d8</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d6</td>
-<td style="text-align: center;">16</td>
-<td style="text-align: center;">6"</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">5"</td>
 <td style="text-align: left;">Resonance Blade (<code>Broadcast</code>, d6, Melee)</td>
 </tr>
 <tr>
@@ -527,10 +527,10 @@
 <td style="text-align: left;">Vessel</td>
 <td style="text-align: center;">1</td>
 <td style="text-align: center;">2d10</td>
-<td style="text-align: center;">2d8</td>
+<td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d4</td>
-<td style="text-align: center;">20</td>
-<td style="text-align: center;">6"</td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">5"</td>
 <td style="text-align: left;">Static Limbs (<code>Static</code>, d8, Melee)</td>
 </tr>
 </tbody>
@@ -580,7 +580,7 @@
 <div class="two-column">
 
 
-
+<div class="file-indicator">2_05_static_wraiths.md</div>
 <h2 id="static-wraiths">Static Wraiths</h2>
 <p>Signal entities. Corrupted data given form. Echoes of transmissions that should not exist. They appeared after the Signal Crisis and have never stopped. The Founders knew what they were. That knowledge died with them. Or was buried. The Board has always known. The cables are not just for profit. They are for silence.</p>
 <p>They phase through walls, flicker between moments, appear where they should not be. Killing one disperses it temporarily. The signal always returns. Some believe they are ghosts of the wireless age, echoes of a network that spanned the Complex before the Tethering. Others say they are something older, something that existed in the static before humanity learned to transmit. The Wave Callers believe they are messengers from the Wave Divine. The Maintenance Monks believe they are punishment for wireless heresy. Both groups are terrified of them.</p>
@@ -615,23 +615,23 @@
 <tr>
 <td style="text-align: center;">1</td>
 <td style="text-align: left;">Flicker</td>
-<td style="text-align: center;">5</td>
+<td style="text-align: center;">8</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d4</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">8"</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">6"</td>
 <td style="text-align: left;">Static Talons (<code>Static</code>, d4, Melee)</td>
 </tr>
 <tr>
 <td style="text-align: center;">2</td>
 <td style="text-align: left;">Drift</td>
-<td style="text-align: center;">4</td>
+<td style="text-align: center;">6</td>
 <td style="text-align: center;">2d8</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">8</td>
-<td style="text-align: center;">8"</td>
+<td style="text-align: center;">6"</td>
 <td style="text-align: left;">Phase Claws (<code>Static</code>, d6, Melee)</td>
 </tr>
 <tr>
@@ -642,7 +642,7 @@
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d8</td>
 <td style="text-align: center;">10</td>
-<td style="text-align: center;">5"</td>
+<td style="text-align: center;">4"</td>
 <td style="text-align: left;">Signal Flame (<code>Static</code>, d6, Power)</td>
 </tr>
 <tr>
@@ -653,7 +653,7 @@
 <td style="text-align: center;">2d8</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">12</td>
-<td style="text-align: center;">4"</td>
+<td style="text-align: center;">3"</td>
 <td style="text-align: left;">Distortion Fists (<code>Static</code>, d6, Melee)</td>
 </tr>
 <tr>
@@ -663,8 +663,8 @@
 <td style="text-align: center;">2d10</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d4</td>
-<td style="text-align: center;">16</td>
-<td style="text-align: center;">6"</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">5"</td>
 <td style="text-align: left;">Frequency Blade (<code>Static</code>, d8, Melee)</td>
 </tr>
 <tr>
@@ -672,10 +672,10 @@
 <td style="text-align: left;">Broadcast</td>
 <td style="text-align: center;">1</td>
 <td style="text-align: center;">2d8</td>
-<td style="text-align: center;">2d8</td>
+<td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d4</td>
-<td style="text-align: center;">20</td>
-<td style="text-align: center;">5"</td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">4"</td>
 <td style="text-align: left;">Wave Claws (<code>Static</code>, d8, Melee)</td>
 </tr>
 </tbody>
@@ -725,7 +725,7 @@
 <div class="two-column">
 
 
-
+<div class="file-indicator">2_06_feral_automata.md</div>
 <h2 id="feral-automata">Feral Automata</h2>
 <p>Machines that forgot their purpose. They run programs written for a Complex that no longer exists, protecting assets that rusted away centuries ago. Their design predates the Tethering. The Founders built them to last. They lasted too long. Clean lines. Smooth casings. No patches. The Monks call them holy. The Untethered call them proof that the old ways worked. The Authority calls them malfunctions.</p>
 <p>Their authorization codes are six hundred years out of date. They do not recognize current credentials. They do not recognize current humans. Their definition of "intruder" includes everyone alive today. Their definition of "authorized personnel" matches no living signature. They patrol routes through infrastructure that has collapsed, guard doorways that lead to empty shafts, protect assets that dissolved into rust generations ago. Their programming is perfect. Their context is gone.</p>
@@ -760,23 +760,23 @@
 <tr>
 <td style="text-align: center;">1</td>
 <td style="text-align: left;">Maintenance Swarm</td>
-<td style="text-align: center;">5</td>
+<td style="text-align: center;">8</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d4</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">8"</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">6"</td>
 <td style="text-align: left;">Cutting Mandibles (<code>Bladed</code>, d4, Melee)</td>
 </tr>
 <tr>
 <td style="text-align: center;">2</td>
 <td style="text-align: left;">Security Drone</td>
-<td style="text-align: center;">4</td>
+<td style="text-align: center;">6</td>
 <td style="text-align: center;">2d6</td>
-<td style="text-align: center;">2d8</td>
+<td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">8</td>
-<td style="text-align: center;">5"</td>
+<td style="text-align: center;">4"</td>
 <td style="text-align: left;">Pulse Carbine (<code>Energy</code>, d6, Ranged)</td>
 </tr>
 <tr>
@@ -787,7 +787,7 @@
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d8</td>
 <td style="text-align: center;">10</td>
-<td style="text-align: center;">5"</td>
+<td style="text-align: center;">4"</td>
 <td style="text-align: left;">Neural Lance (<code>Energy</code>, d8, Ranged)</td>
 </tr>
 <tr>
@@ -798,7 +798,7 @@
 <td style="text-align: center;">2d8</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">12</td>
-<td style="text-align: center;">5"</td>
+<td style="text-align: center;">3"</td>
 <td style="text-align: left;">Mounted Blaster (<code>Energy</code>, d8, Ranged)</td>
 </tr>
 <tr>
@@ -808,8 +808,8 @@
 <td style="text-align: center;">2d8</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d6</td>
-<td style="text-align: center;">16</td>
-<td style="text-align: center;">8"</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">6"</td>
 <td style="text-align: left;">Shredder Blades (<code>Bladed</code>, d6, Melee)</td>
 </tr>
 <tr>
@@ -817,10 +817,10 @@
 <td style="text-align: left;">Defense Platform</td>
 <td style="text-align: center;">1</td>
 <td style="text-align: center;">2d10</td>
-<td style="text-align: center;">2d10</td>
+<td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d4</td>
-<td style="text-align: center;">20</td>
-<td style="text-align: center;">5"</td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">3"</td>
 <td style="text-align: left;">Arc Scythe (<code>Energy</code>, d10, Melee)</td>
 </tr>
 </tbody>
@@ -870,11 +870,11 @@
 <div class="two-column">
 
 
-
+<div class="file-indicator">2_07_cable_feeders.md</div>
 <h2 id="cable-feeders">Cable Feeders</h2>
 <p>Parasites. They nest between power conduits, feeding on bioelectrical signals. The Founders' sealed archives mention "bioelectric countermeasures." The Monks say they evolved naturally. The archives are in the Roots. The Monks have never been there. The Board knows what the Founders created. The Board has always known. Some weapons were never meant to be turned off.</p>
 <p>They hunt in silence. They prefer isolated targets. When they feed, they drain everything: nervous system, implants, the current running through your cables. They are drawn to the warmth of living current, to the hum of active electronics, to the pulse of bioelectric signatures. Some believe they were engineered to hunt the Untethered, to consume anyone transmitting without authorization. Others believe they are what happens when flesh meets wire for too long, when the boundary between organism and infrastructure dissolves. The truth is in the Roots. The truth is sealed.</p>
-<p>Reapers are the smallest, fast and numerous, claws shredding through armor to reach the current beneath. Larvae are patient, feeder tendrils draining victims slowly while toxins paralyze. Stalkers track prey through the dark, talons designed to open cable housings and bodies alike. Lures project false signals, mind spikes drawing victims toward ambush sites. Feeders are the mature hunters, drain tubes pulling the life from anything they touch. And the Agonists: massive, ancient, intelligent. They coordinate hunts. They remember what they consume. They remember what they were made for.</p>
+<p>Reapers are the smallest, fast and numerous, claws shredding through armor to reach the current beneath. Larvae are patient, feeder tendrils draining victims slowly while toxins paralyze. Stalkers track prey through the dark, talons designed to open cable housings and bodies alike. Lures project false signals, mind spikes drawing victims toward ambush sites. Feeders are the mature hunters, drain tubes pulling the life from anything they touch. And the Agonists: massive, ancient, intelligent. They coordinate hunts. They remember what they consume, what they were made for.</p>
 <p>The Scrapers say there are bigger ones in the deep Roots. Ones that feed on whole crews. Ones that have been feeding since the Founders. The Authority recommends sealing any junction where Feeders are confirmed. The Authority does not explain what happens if you don't. The Authority does not explain why some sealed junctions are marked with warnings older than the Authority itself.</p>
 <blockquote>
 <p>"Sector 7 sweep complete. No survivors. Recommend sealing the junction permanently."<br />
@@ -905,23 +905,23 @@
 <tr>
 <td style="text-align: center;">1</td>
 <td style="text-align: left;">Reaper</td>
-<td style="text-align: center;">5</td>
+<td style="text-align: center;">8</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d4</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">7"</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">6"</td>
 <td style="text-align: left;">Claws (<code>Bladed</code>, d4, Melee)</td>
 </tr>
 <tr>
 <td style="text-align: center;">2</td>
 <td style="text-align: left;">Larva</td>
-<td style="text-align: center;">4</td>
+<td style="text-align: center;">6</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">8</td>
-<td style="text-align: center;">5"</td>
+<td style="text-align: center;">4"</td>
 <td style="text-align: left;">Feeder Tendrils (<code>Toxic</code>, d6, Melee)</td>
 </tr>
 <tr>
@@ -932,7 +932,7 @@
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">10</td>
-<td style="text-align: center;">5"</td>
+<td style="text-align: center;">4"</td>
 <td style="text-align: left;">Talons (<code>Bladed</code>, d6, Melee)</td>
 </tr>
 <tr>
@@ -943,7 +943,7 @@
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d10</td>
 <td style="text-align: center;">12</td>
-<td style="text-align: center;">5"</td>
+<td style="text-align: center;">4"</td>
 <td style="text-align: left;">Mind Spike (<code>Static</code>, d6, Power)</td>
 </tr>
 <tr>
@@ -953,8 +953,8 @@
 <td style="text-align: center;">2d10</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d4</td>
-<td style="text-align: center;">16</td>
-<td style="text-align: center;">6"</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">5"</td>
 <td style="text-align: left;">Drain Tubes (<code>Toxic</code>, d8, Melee)</td>
 </tr>
 <tr>
@@ -962,10 +962,10 @@
 <td style="text-align: left;">Agonist</td>
 <td style="text-align: center;">1</td>
 <td style="text-align: center;">2d10</td>
-<td style="text-align: center;">2d8</td>
 <td style="text-align: center;">2d6</td>
-<td style="text-align: center;">20</td>
-<td style="text-align: center;">6"</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">5"</td>
 <td style="text-align: left;">Tongue Lash (<code>Toxic</code>, d8, Melee)</td>
 </tr>
 </tbody>
@@ -1015,7 +1015,7 @@
 <div class="two-column">
 
 
-
+<div class="file-indicator">2_08_coworkers.md</div>
 
 </div>
 <div class="single-column">
@@ -1045,23 +1045,23 @@
 <tr>
 <td style="text-align: center;">1</td>
 <td style="text-align: left;">Shift Drone</td>
-<td style="text-align: center;">6</td>
+<td style="text-align: center;">10</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d10</td>
-<td style="text-align: center;">6</td>
-<td style="text-align: center;">5"</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">4"</td>
 <td style="text-align: left;">Tired Fists (<code>Blunt</code>, d4, Melee)</td>
 </tr>
 <tr>
 <td style="text-align: center;">2</td>
 <td style="text-align: left;">Temp</td>
-<td style="text-align: center;">5</td>
+<td style="text-align: center;">7</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d10</td>
 <td style="text-align: center;">8</td>
-<td style="text-align: center;">6"</td>
+<td style="text-align: center;">5"</td>
 <td style="text-align: left;">Box Cutter (<code>Bladed</code>, d4, Melee)</td>
 </tr>
 <tr>
@@ -1093,7 +1093,7 @@
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d6</td>
-<td style="text-align: center;">12</td>
+<td style="text-align: center;">10</td>
 <td style="text-align: center;">5"</td>
 <td style="text-align: left;">Stun Baton (<code>Static</code>, d6, Melee)</td>
 </tr>
@@ -1102,9 +1102,9 @@
 <td style="text-align: left;">Assistant to the Regional Manager</td>
 <td style="text-align: center;">1</td>
 <td style="text-align: center;">2d6</td>
-<td style="text-align: center;">2d8</td>
 <td style="text-align: center;">2d6</td>
-<td style="text-align: center;">10</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">8</td>
 <td style="text-align: center;">6"</td>
 <td style="text-align: left;">Holdout Pistol (<code>Projectile</code>, d4, Ranged)</td>
 </tr>

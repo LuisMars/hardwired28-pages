@@ -212,19 +212,9 @@ function WarbandSheet() {
   const leaderDead = warband.leaderDead;
   const hasAscendedLeader = warband.models.some(m => m.ascended);
 
-  // Card Print View
-  if (viewMode === 'cards') {
-    return <CardPrintView onClose={() => {
-      setViewMode('warband');
-      const url = new URL(window.location);
-      url.searchParams.delete('view');
-      window.history.pushState({}, '', url);
-    }} weaponData={WEAPON_DATA} archetypes={ARCHETYPES} warband={warband} />;
-  }
-
-  return (
-    <>
-      <style>{`
+  // Theme styles (always loaded)
+  const themeStyles = (
+    <style>{`
         :root, [data-theme="zorn"] {
           --wb-primary: #c9a227;
           --wb-primary-hover: #8b6914;
@@ -555,6 +545,26 @@ function WarbandSheet() {
         .hover\\:wb-text-dark:hover { color: var(--wb-text-on-light); }
         .hover\\:wb-text-danger-hover:hover { color: var(--wb-danger-hover); }
       `}</style>
+  );
+
+  // Card Print View
+  if (viewMode === 'cards') {
+    return (
+      <>
+        {themeStyles}
+        <CardPrintView onClose={() => {
+          setViewMode('warband');
+          const url = new URL(window.location);
+          url.searchParams.delete('view');
+          window.history.pushState({}, '', url);
+        }} weaponData={WEAPON_DATA} archetypes={ARCHETYPES} warband={warband} />
+      </>
+    );
+  }
+
+  return (
+    <>
+      {themeStyles}
       <div className="min-h-screen wb-bg-dark p-2 sm:p-4">
       <div className="max-w-7xl mx-auto space-y-4">
         {/* Header */}

@@ -4,7 +4,7 @@
   "columns": ["d4", "Power", "Effect"],
   "align": ["center", "left", "left"],
   "items": [
-    {"roll": 1, "power": "Force Field", "effect": "`+2 DT` `Defense` vs ranged until next activation"},
+    {"roll": 1, "power": "Force Field", "effect": "`+2 DT` `Defense` vs. ranged until next activation"},
     {"roll": 2, "power": "Focus", "effect": "Add 2 Activation Tokens for target to the bag"},
     {"roll": 3, "power": "Swap", "effect": "Switch positions with target (caster sees both, within 12\")"},
     {"roll": 4, "power": "Ping", "effect": "Target ignores cover and sees through walls until next activation"}

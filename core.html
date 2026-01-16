@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hardwired 28 - Core Rules 0.6.3-beta</title>
-    <meta property="og:title" content="Hardwired 28 - Core Rules 0.6.3-beta">
+    <title>Hardwired 28 - Core Rules 0.6.4-beta</title>
+    <meta property="og:title" content="Hardwired 28 - Core Rules 0.6.4-beta">
     <meta property="og:description" content="Corporate cablepunk skirmish wargame">
     <meta property="og:image" content="http://hardwired28.luismars.com/img/social.png">
     <meta property="og:url" content="http://hardwired28.luismars.com/">
@@ -21,33 +21,33 @@
     <nav class="app-menu" data-theme="light" data-open="false" aria-label="Navigation">
         <div class="app-menu__inner">
             <a class="app-menu__brand" href="./">Hardwired 28</a>
-            <button class="app-menu__toggle" type="button" onclick="toggleMenu()">Menu</button>
+            <button class="app-menu__toggle" type="button" onclick="toggleMenu()" aria-label="Menu"></button>
             <div class="app-menu__links">
+                <a href="manual">Rulebook</a>
                 <div class="app-menu__dropdown">
-                    <button class="app-menu__dropdown-toggle">Rules</button>
+                    <button class="app-menu__dropdown-toggle current">Print</button>
                     <div class="app-menu__submenu">
                         <a href="merged">All Rules</a>
-                        <a href="manual">Manual</a>
-                        <a href="core">Core</a>
-                        <a href="hostiles">Hostiles</a>
+                        <a href="core">Core Rules</a>
+                        <a href="hostiles">Inhuman Resources</a>
                         <a href="campaign">Campaign</a>
-                        <a href="qr">Reference</a>
                     </div>
                 </div>
-                <a href="./">Builder</a>
+                <a href="qr">Quick Reference</a>
+                <a href="./">Squad Builder</a>
                 <a href="es/core">Español</a>
-            </div>
-            <div class="app-menu__actions">
-                <button class="app-menu__action" type="button" onclick="toggleView()">View</button>
             </div>
         </div>
     </nav>
 
     
+    <div class="preview-notice">
+        <p><strong>Live Preview Mode</strong> - Editing 9 markdown files | Print View | <span id="view-mode">Booklet Spread View</span></p>
+    </div>
     <div class="content">
 <div class="page cover-page" style="background-image: url(img/cover_main.jpg); background-size: auto;">
 <div class="cover-content">
-
+<div class="file-indicator">1_00_cover.md</div>
 
 
 
@@ -60,9 +60,9 @@
 <div class="two-column">
 
 
-
+<div class="file-indicator">1_01_intro.md</div>
 <h1 id="hardwired-28_1">Hardwired 28</h1>
-<p><em>0.6.3-beta</em> by LuisMars</p>
+<p><em>0.6.4-beta</em> by LuisMars</p>
 <h2 id="the-great-complex">The Great Complex</h2>
 <p>A vertical megastructure three kilometers tall. Cables hang from every surface. They bundle into trunks thicker than bodies, snake through walls, coil underfoot. The Complex was meant to be paradise. Now it decays.</p>
 <p>Wired connection is sacred. Wireless is heresy. Since the Tethering, wireless has meant excommunication. Debts are inherited. Children are born subscribed.</p>
@@ -92,17 +92,17 @@
 
 
 <h2 id="miniatures">Miniatures</h2>
-<p>This game is meant to be used with 28mm miniatures. Anything in the 28mm to 32mm range works. Models on bases between 25mm and 32mm are fully compatible.</p>
+<p>This game is meant to be used with 28 mm miniatures. Anything in the 28 mm to 32 mm range works. Models on bases between 25 mm and 32 mm are fully compatible.</p>
 <p>Use whatever models you have. Convert them. Kitbash corporate enforcers from sci-fi kits. Build cable-wrapped cultists from fantasy bits. Proxy freely. The model represents what you say it represents. There are no wrong answers.</p>
 <h2 id="what-youll-need">What You'll Need</h2>
 <p><strong>Required</strong><br />
-- 5 miniatures per warband (1 <code>Boss</code>, 4 <code>Resources</code>)<br />
+- 5 miniatures per squad (1 <code>Boss</code>, 4 <code>Resources</code>)<br />
 - 3-6 Coworker miniatures (placed at setup)<br />
 - 5+ Hostile miniatures (for spawns)<br />
 - Dice: 2d4, 2d6, 2d8, 2d10, 2d12<br />
 - Bag with Activation Tokens (chips, dice, or similar markers - one per model, different colors per faction)<br />
 - Measuring tape (inches)<br />
-- 2'x2' board with dense terrain<br />
+- 2' × 2' board with dense terrain<br />
 - <code>Loot Markers</code> (5-6)</p>
 <p><strong>Optional</strong><br />
 - Condition markers (Activated, Blessed, <code>OoA</code>, <code>Flee</code>, <code>Engaged</code>, <code>Bleed</code>, etc.)<br />
@@ -137,7 +137,7 @@
 <div class="two-column">
 
 
-
+<div class="file-indicator">1_02_warbands.md</div>
 
 </div>
 <div class="single-column">
@@ -269,7 +269,7 @@
 <tr>
 <td style="text-align: left;"><code>Boss</code></td>
 <td style="text-align: center;">20</td>
-<td style="text-align: center;">6"</td>
+<td style="text-align: center;">4"</td>
 <td style="text-align: center;">Both</td>
 <td style="text-align: center;">Heavy</td>
 <td style="text-align: left;"><code>+1 DT</code> to one attribute</td>
@@ -278,7 +278,7 @@
 <tr>
 <td style="text-align: left;"><code>Brute</code></td>
 <td style="text-align: center;">20</td>
-<td style="text-align: center;">5"</td>
+<td style="text-align: center;">3"</td>
 <td style="text-align: center;">Melee</td>
 <td style="text-align: center;">Heavy</td>
 <td style="text-align: left;">-</td>
@@ -287,7 +287,7 @@
 <tr>
 <td style="text-align: left;"><code>Veteran</code></td>
 <td style="text-align: center;">14</td>
-<td style="text-align: center;">5"</td>
+<td style="text-align: center;">4"</td>
 <td style="text-align: center;">Both</td>
 <td style="text-align: center;">Medium</td>
 <td style="text-align: left;">Immune to <code>Flee</code></td>
@@ -296,16 +296,16 @@
 <tr>
 <td style="text-align: left;"><code>Gunner</code></td>
 <td style="text-align: center;">16</td>
-<td style="text-align: center;">6"</td>
+<td style="text-align: center;">4"</td>
 <td style="text-align: center;">Ranged</td>
 <td style="text-align: center;">Medium</td>
-<td style="text-align: left;">Hit: <code>-1 DT</code> <code>Defense</code> next activation (no stack)</td>
+<td style="text-align: left;"><code>Aim</code> is a free action</td>
 <td style="text-align: center;">2</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>Scout</code></td>
 <td style="text-align: center;">12</td>
-<td style="text-align: center;">8"</td>
+<td style="text-align: center;">6"</td>
 <td style="text-align: center;">Ranged</td>
 <td style="text-align: center;">Light</td>
 <td style="text-align: left;">Move 3" after deployment</td>
@@ -314,7 +314,7 @@
 <tr>
 <td style="text-align: left;"><code>Zealot</code></td>
 <td style="text-align: center;">12</td>
-<td style="text-align: center;">7"</td>
+<td style="text-align: center;">5"</td>
 <td style="text-align: center;">Melee</td>
 <td style="text-align: center;">Light</td>
 <td style="text-align: left;">+2" Move if ending <code>Engaged</code></td>
@@ -323,7 +323,7 @@
 <tr>
 <td style="text-align: left;"><code>Agent</code></td>
 <td style="text-align: center;">16</td>
-<td style="text-align: center;">6"</td>
+<td style="text-align: center;">4"</td>
 <td style="text-align: center;">Both</td>
 <td style="text-align: center;">Light</td>
 <td style="text-align: left;">Re-roll failed <code>Search</code> / <code>Interrogate</code></td>
@@ -332,7 +332,7 @@
 <tr>
 <td style="text-align: left;"><code>Broadcaster</code></td>
 <td style="text-align: center;">16</td>
-<td style="text-align: center;">6"</td>
+<td style="text-align: center;">4"</td>
 <td style="text-align: center;">Melee</td>
 <td style="text-align: center;">Light</td>
 <td style="text-align: left;">Can <code>Cast</code></td>
@@ -348,7 +348,7 @@
 <div class="two-column">
 
 
-
+<div class="file-indicator">1_03_equipment.md</div>
 
 </div>
 <div class="single-column">
@@ -414,7 +414,7 @@
 <td style="text-align: left;">Shiv</td>
 <td style="text-align: center;"><code>Toxic</code></td>
 <td style="text-align: center;">d4</td>
-<td style="text-align: left;">+1 damage vs wounded</td>
+<td style="text-align: left;">+1 damage vs. wounded</td>
 <td style="text-align: right;">4</td>
 </tr>
 <tr>
@@ -427,22 +427,6 @@
 </tr>
 <tr>
 <td style="text-align: center;">5</td>
-<td style="text-align: left;">Mace</td>
-<td style="text-align: center;"><code>Blunt</code></td>
-<td style="text-align: center;">d6</td>
-<td style="text-align: left;">Knockback 1"</td>
-<td style="text-align: right;">7</td>
-</tr>
-<tr>
-<td style="text-align: center;">6</td>
-<td style="text-align: left;">Sword</td>
-<td style="text-align: center;"><code>Bladed</code></td>
-<td style="text-align: center;">d6</td>
-<td style="text-align: left;"><code>+1 DT</code> when <code>Riposting</code></td>
-<td style="text-align: right;">8</td>
-</tr>
-<tr>
-<td style="text-align: center;">7</td>
 <td style="text-align: left;">Injector</td>
 <td style="text-align: center;"><code>Toxic</code></td>
 <td style="text-align: center;">d6</td>
@@ -450,12 +434,28 @@
 <td style="text-align: right;">9</td>
 </tr>
 <tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: left;">Mace</td>
+<td style="text-align: center;"><code>Blunt</code></td>
+<td style="text-align: center;">d6</td>
+<td style="text-align: left;">Knockback 1"</td>
+<td style="text-align: right;">9</td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td style="text-align: left;">Sword</td>
+<td style="text-align: center;"><code>Bladed</code></td>
+<td style="text-align: center;">d6</td>
+<td style="text-align: left;"><code>+1 DT</code> when <code>Riposting</code></td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr>
 <td style="text-align: center;">8</td>
 <td style="text-align: left;">Cable Whip</td>
 <td style="text-align: center;"><code>Static</code></td>
 <td style="text-align: center;">d6</td>
 <td style="text-align: left;">2" reach</td>
-<td style="text-align: right;">10</td>
+<td style="text-align: right;">11</td>
 </tr>
 <tr>
 <td style="text-align: center;">9</td>
@@ -463,47 +463,47 @@
 <td style="text-align: center;"><code>Bladed</code></td>
 <td style="text-align: center;">d8</td>
 <td style="text-align: left;">Re-roll 1s</td>
-<td style="text-align: right;">12</td>
+<td style="text-align: right;">13</td>
 </tr>
 <tr>
 <td style="text-align: center;">10</td>
-<td style="text-align: left;">Hammer</td>
-<td style="text-align: center;"><code>Blunt</code></td>
-<td style="text-align: center;">d8</td>
-<td style="text-align: left;">Re-roll 1s, Knockback 1"</td>
-<td style="text-align: right;">14</td>
-</tr>
-<tr>
-<td style="text-align: center;">11</td>
-<td style="text-align: left;">Static Blade</td>
-<td style="text-align: center;"><code>Static</code></td>
-<td style="text-align: center;">d8</td>
-<td style="text-align: left;"><code>+1 DT</code> vs wounded</td>
-<td style="text-align: right;">15</td>
-</tr>
-<tr>
-<td style="text-align: center;">12</td>
 <td style="text-align: left;">Stunner</td>
 <td style="text-align: center;"><code>Energy</code></td>
 <td style="text-align: center;">d8</td>
 <td style="text-align: left;">Target <code>-1 DT</code> next activation</td>
-<td style="text-align: right;">16</td>
+<td style="text-align: right;">13</td>
+</tr>
+<tr>
+<td style="text-align: center;">11</td>
+<td style="text-align: left;">Hammer</td>
+<td style="text-align: center;"><code>Blunt</code></td>
+<td style="text-align: center;">d8</td>
+<td style="text-align: left;">Re-roll 1s, Knockback 1"</td>
+<td style="text-align: right;">15</td>
+</tr>
+<tr>
+<td style="text-align: center;">12</td>
+<td style="text-align: left;">Static Blade</td>
+<td style="text-align: center;"><code>Static</code></td>
+<td style="text-align: center;">d8</td>
+<td style="text-align: left;"><code>+1 DT</code> vs. wounded</td>
+<td style="text-align: right;">15</td>
 </tr>
 <tr>
 <td style="text-align: center;">13</td>
-<td style="text-align: left;">Saber</td>
-<td style="text-align: center;"><code>Bladed</code></td>
-<td style="text-align: center;">d10</td>
-<td style="text-align: left;">Re-roll 1s and 2s, +1 vs armored</td>
-<td style="text-align: right;">22</td>
-</tr>
-<tr>
-<td style="text-align: center;">14</td>
 <td style="text-align: left;">Corrosive Blade</td>
 <td style="text-align: center;"><code>Toxic</code></td>
 <td style="text-align: center;">d10</td>
-<td style="text-align: left;">+1 vs armored</td>
-<td style="text-align: right;">24</td>
+<td style="text-align: left;">+1 vs. armored</td>
+<td style="text-align: right;">17</td>
+</tr>
+<tr>
+<td style="text-align: center;">14</td>
+<td style="text-align: left;">Arc Claw</td>
+<td style="text-align: center;"><code>Static</code></td>
+<td style="text-align: center;">d10</td>
+<td style="text-align: left;">Re-roll 1s, +1 to Critical roll</td>
+<td style="text-align: right;">19</td>
 </tr>
 <tr>
 <td style="text-align: center;">15</td>
@@ -511,39 +511,39 @@
 <td style="text-align: center;"><code>Blunt</code></td>
 <td style="text-align: center;">d10</td>
 <td style="text-align: left;">Re-roll 1s and 2s, Knockback 1"</td>
-<td style="text-align: right;">26</td>
+<td style="text-align: right;">21</td>
 </tr>
 <tr>
 <td style="text-align: center;">16</td>
-<td style="text-align: left;">Arc Claw</td>
-<td style="text-align: center;"><code>Static</code></td>
-<td style="text-align: center;">d10</td>
-<td style="text-align: left;">Re-roll 1s, +1 to Critical roll</td>
-<td style="text-align: right;">28</td>
-</tr>
-<tr>
-<td style="text-align: center;">17</td>
-<td style="text-align: left;">Chain Blade</td>
-<td style="text-align: center;"><code>Bladed</code></td>
-<td style="text-align: center;">d12</td>
-<td style="text-align: left;">Re-roll 1s and 2s, +2 vs armored</td>
-<td style="text-align: right;">32</td>
-</tr>
-<tr>
-<td style="text-align: center;">18</td>
 <td style="text-align: left;">Plague Fist</td>
 <td style="text-align: center;"><code>Toxic</code></td>
 <td style="text-align: center;">d12</td>
-<td style="text-align: left;">Re-roll 1s, +1 damage vs wounded</td>
-<td style="text-align: right;">34</td>
+<td style="text-align: left;">Re-roll 1s, +1 damage vs. wounded</td>
+<td style="text-align: right;">22</td>
 </tr>
 <tr>
-<td style="text-align: center;">19</td>
+<td style="text-align: center;">17</td>
+<td style="text-align: left;">Saber</td>
+<td style="text-align: center;"><code>Bladed</code></td>
+<td style="text-align: center;">d10</td>
+<td style="text-align: left;">Re-roll 1s and 2s, <code>+1 DT</code> when <code>Riposting</code></td>
+<td style="text-align: right;">22</td>
+</tr>
+<tr>
+<td style="text-align: center;">18</td>
 <td style="text-align: left;">Shock Maul</td>
 <td style="text-align: center;"><code>Static</code></td>
 <td style="text-align: center;">d12</td>
-<td style="text-align: left;">Re-roll 1s, Knockback 2", stuns on 6</td>
-<td style="text-align: right;">36</td>
+<td style="text-align: left;">Re-roll 1s, Knockback 2"</td>
+<td style="text-align: right;">25</td>
+</tr>
+<tr>
+<td style="text-align: center;">19</td>
+<td style="text-align: left;">Chain Blade</td>
+<td style="text-align: center;"><code>Bladed</code></td>
+<td style="text-align: center;">d12</td>
+<td style="text-align: left;">Re-roll 1s and 2s, +2 vs. armored</td>
+<td style="text-align: right;">27</td>
 </tr>
 <tr>
 <td style="text-align: center;">20</td>
@@ -551,7 +551,7 @@
 <td style="text-align: center;"><code>Energy</code></td>
 <td style="text-align: center;">d12</td>
 <td style="text-align: left;">Re-roll 1s and 2s, Knockback 2"</td>
-<td style="text-align: right;">38</td>
+<td style="text-align: right;">27</td>
 </tr>
 </tbody>
 </table>
@@ -581,7 +581,7 @@
 <td style="text-align: center;"><code>Projectile</code></td>
 <td style="text-align: center;">2</td>
 <td style="text-align: left;">6" max range</td>
-<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
 </tr>
 <tr>
 <td style="text-align: center;">2</td>
@@ -589,15 +589,15 @@
 <td style="text-align: center;"><code>Projectile</code></td>
 <td style="text-align: center;">d4</td>
 <td style="text-align: left;"><code>-1 DT</code> beyond 6"</td>
-<td style="text-align: right;">4</td>
+<td style="text-align: right;">2</td>
 </tr>
 <tr>
 <td style="text-align: center;">3</td>
 <td style="text-align: left;">Needle Gun</td>
 <td style="text-align: center;"><code>Toxic</code></td>
 <td style="text-align: center;">d4</td>
-<td style="text-align: left;">+1 damage vs wounded</td>
-<td style="text-align: right;">5</td>
+<td style="text-align: left;">+1 damage vs. wounded</td>
+<td style="text-align: right;">4</td>
 </tr>
 <tr>
 <td style="text-align: center;">4</td>
@@ -605,7 +605,7 @@
 <td style="text-align: center;"><code>Static</code></td>
 <td style="text-align: center;">d4</td>
 <td style="text-align: left;">No fumbles</td>
-<td style="text-align: right;">6</td>
+<td style="text-align: right;">5</td>
 </tr>
 <tr>
 <td style="text-align: center;">5</td>
@@ -613,31 +613,31 @@
 <td style="text-align: center;"><code>Toxic</code></td>
 <td style="text-align: center;">d6</td>
 <td style="text-align: left;">Target <code>-1 DT</code> next activation</td>
-<td style="text-align: right;">7</td>
+<td style="text-align: right;">9</td>
 </tr>
 <tr>
 <td style="text-align: center;">6</td>
+<td style="text-align: left;">Frag Pistol</td>
+<td style="text-align: center;"><code>Explosive</code></td>
+<td style="text-align: center;">d6</td>
+<td style="text-align: left;">+1 vs. armored</td>
+<td style="text-align: right;">9</td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
 <td style="text-align: left;">Laser</td>
 <td style="text-align: center;"><code>Energy</code></td>
 <td style="text-align: center;">d6</td>
 <td style="text-align: left;"><code>+1 DT</code> if not moved this turn</td>
-<td style="text-align: right;">8</td>
-</tr>
-<tr>
-<td style="text-align: center;">7</td>
-<td style="text-align: left;">Screamer</td>
-<td style="text-align: center;"><code>Broadcast</code></td>
-<td style="text-align: center;">d6</td>
-<td style="text-align: left;">Ignores cover</td>
 <td style="text-align: right;">9</td>
 </tr>
 <tr>
 <td style="text-align: center;">8</td>
-<td style="text-align: left;">Frag Pistol</td>
-<td style="text-align: center;"><code>Explosive</code></td>
+<td style="text-align: left;">Screamer</td>
+<td style="text-align: center;"><code>Broadcast</code></td>
 <td style="text-align: center;">d6</td>
-<td style="text-align: left;">+1 vs armored</td>
-<td style="text-align: right;">10</td>
+<td style="text-align: left;">Ignores cover</td>
+<td style="text-align: right;">11</td>
 </tr>
 <tr>
 <td style="text-align: center;">9</td>
@@ -645,18 +645,26 @@
 <td style="text-align: center;"><code>Projectile</code></td>
 <td style="text-align: center;">d8</td>
 <td style="text-align: left;">Re-roll 1s</td>
-<td style="text-align: right;">12</td>
+<td style="text-align: right;">13</td>
 </tr>
 <tr>
 <td style="text-align: center;">10</td>
-<td style="text-align: left;">Sonic Gun</td>
-<td style="text-align: center;"><code>Broadcast</code></td>
+<td style="text-align: left;">Flamer</td>
+<td style="text-align: center;"><code>Energy</code></td>
 <td style="text-align: center;">d8</td>
-<td style="text-align: left;"><code>+1 DT</code> vs wounded</td>
-<td style="text-align: right;">14</td>
+<td style="text-align: left;">Ignores cover</td>
+<td style="text-align: right;">15</td>
 </tr>
 <tr>
 <td style="text-align: center;">11</td>
+<td style="text-align: left;">Sonic Gun</td>
+<td style="text-align: center;"><code>Broadcast</code></td>
+<td style="text-align: center;">d8</td>
+<td style="text-align: left;"><code>+1 DT</code> vs. wounded</td>
+<td style="text-align: right;">15</td>
+</tr>
+<tr>
+<td style="text-align: center;">12</td>
 <td style="text-align: left;">Tesla Gun</td>
 <td style="text-align: center;"><code>Static</code></td>
 <td style="text-align: center;">d8</td>
@@ -664,36 +672,28 @@
 <td style="text-align: right;">15</td>
 </tr>
 <tr>
-<td style="text-align: center;">12</td>
-<td style="text-align: left;">Flamer</td>
-<td style="text-align: center;"><code>Energy</code></td>
-<td style="text-align: center;">d8</td>
-<td style="text-align: left;">Ignores cover</td>
-<td style="text-align: right;">16</td>
-</tr>
-<tr>
 <td style="text-align: center;">13</td>
-<td style="text-align: left;">Shotgun</td>
-<td style="text-align: center;"><code>Projectile</code></td>
-<td style="text-align: center;">d10</td>
-<td style="text-align: left;">Re-roll 1s, Knockback 1"</td>
-<td style="text-align: right;">20</td>
-</tr>
-<tr>
-<td style="text-align: center;">14</td>
 <td style="text-align: left;">Cryo Gun</td>
 <td style="text-align: center;"><code>Toxic</code></td>
 <td style="text-align: center;">d10</td>
 <td style="text-align: left;">Ignores cover</td>
-<td style="text-align: right;">22</td>
+<td style="text-align: right;">19</td>
 </tr>
 <tr>
-<td style="text-align: center;">15</td>
+<td style="text-align: center;">14</td>
 <td style="text-align: left;">Launcher</td>
 <td style="text-align: center;"><code>Explosive</code></td>
 <td style="text-align: center;">d10</td>
-<td style="text-align: left;">Re-roll 1s, +1 vs armored</td>
-<td style="text-align: right;">24</td>
+<td style="text-align: left;">Re-roll 1s, +1 vs. armored</td>
+<td style="text-align: right;">19</td>
+</tr>
+<tr>
+<td style="text-align: center;">15</td>
+<td style="text-align: left;">Shotgun</td>
+<td style="text-align: center;"><code>Projectile</code></td>
+<td style="text-align: center;">d10</td>
+<td style="text-align: left;">Re-roll 1s, Knockback 1"</td>
+<td style="text-align: right;">19</td>
 </tr>
 <tr>
 <td style="text-align: center;">16</td>
@@ -701,44 +701,43 @@
 <td style="text-align: center;"><code>Static</code></td>
 <td style="text-align: center;">d10</td>
 <td style="text-align: left;">Re-roll 1s, also hits 2 nearest models within 2" of target</td>
-<td style="text-align: right;">26</td>
+<td style="text-align: right;">21</td>
 </tr>
 <tr>
 <td style="text-align: center;">17</td>
+<td style="text-align: left;">Plasma Caster</td>
+<td style="text-align: center;"><code>Energy</code></td>
+<td style="text-align: center;">d12</td>
+<td style="text-align: left;">Ignores cover, +1 vs. armored</td>
+<td style="text-align: right;">25</td>
+</tr>
+<tr>
+<td style="text-align: center;">18</td>
 <td style="text-align: left;">Rifle</td>
 <td style="text-align: center;"><code>Energy</code></td>
 <td style="text-align: center;">d12</td>
 <td style="text-align: left;">Re-roll 1s and 2s, Overcharge: <code>-1 DT</code> for max damage</td>
-<td style="text-align: right;">30</td>
+<td style="text-align: right;">25</td>
 </tr>
 <tr>
-<td style="text-align: center;">18</td>
+<td style="text-align: center;">19</td>
 <td style="text-align: left;">Wail Cannon</td>
 <td style="text-align: center;"><code>Broadcast</code></td>
 <td style="text-align: center;">d12</td>
 <td style="text-align: left;">Re-roll 1s, Knockback 2"</td>
-<td style="text-align: right;">32</td>
-</tr>
-<tr>
-<td style="text-align: center;">19</td>
-<td style="text-align: left;">Missile Pod</td>
-<td style="text-align: center;"><code>Explosive</code></td>
-<td style="text-align: center;">d12</td>
-<td style="text-align: left;">Re-roll 1s and 2s, +2 vs armored</td>
-<td style="text-align: right;">34</td>
+<td style="text-align: right;">25</td>
 </tr>
 <tr>
 <td style="text-align: center;">20</td>
-<td style="text-align: left;">Plasma Caster</td>
-<td style="text-align: center;"><code>Energy</code></td>
+<td style="text-align: left;">Missile Pod</td>
+<td style="text-align: center;"><code>Explosive</code></td>
 <td style="text-align: center;">d12</td>
-<td style="text-align: left;">Ignores cover, +1 vs armored</td>
-<td style="text-align: right;">38</td>
+<td style="text-align: left;">Re-roll 1s and 2s, +2 vs. armored</td>
+<td style="text-align: right;">27</td>
 </tr>
 </tbody>
 </table>
 <h2 id="grenades">Grenades</h2>
-<p>3" blast, 6" range. Action to throw.</p>
 <table>
 <thead>
 <tr>
@@ -752,13 +751,13 @@
 <tr>
 <td style="text-align: center;">1</td>
 <td style="text-align: left;">Smoke</td>
-<td style="text-align: left;">Blocks LoS until next round</td>
+<td style="text-align: left;">1 damage, leaves smoke column blocking LoS until next round</td>
 <td style="text-align: right;">8</td>
 </tr>
 <tr>
 <td style="text-align: center;">2</td>
 <td style="text-align: left;">Flash</td>
-<td style="text-align: left;">Target <code>-1 DT</code> next activation</td>
+<td style="text-align: left;">1 damage, target <code>-1 DT</code> next activation</td>
 <td style="text-align: right;">10</td>
 </tr>
 <tr>
@@ -769,20 +768,20 @@
 </tr>
 <tr>
 <td style="text-align: center;">4</td>
-<td style="text-align: left;">Incendiary</td>
-<td style="text-align: left;">d6 <code>Energy</code> damage, ignores cover</td>
-<td style="text-align: right;">12</td>
-</tr>
-<tr>
-<td style="text-align: center;">5</td>
 <td style="text-align: left;">EMP</td>
 <td style="text-align: left;">d6 <code>Static</code> damage, <code>-1 DT</code> next activation</td>
 <td style="text-align: right;">12</td>
 </tr>
 <tr>
-<td style="text-align: center;">6</td>
+<td style="text-align: center;">5</td>
 <td style="text-align: left;">Frag</td>
 <td style="text-align: left;">d8 <code>Explosive</code> damage</td>
+<td style="text-align: right;">14</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: left;">Incendiary</td>
+<td style="text-align: left;">d6 <code>Energy</code> damage, ignores cover</td>
 <td style="text-align: right;">14</td>
 </tr>
 </tbody>
@@ -828,33 +827,33 @@
 </tr>
 <tr>
 <td style="text-align: center;">4</td>
+<td style="text-align: left;">Light Vest</td>
+<td style="text-align: left;">+1" <code>Move</code></td>
+<td style="text-align: right;">7</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
 <td style="text-align: left;">Padded Vest</td>
 <td style="text-align: left;">Reduce <code>Knockback</code> by 1"</td>
 <td style="text-align: right;">7</td>
 </tr>
 <tr>
-<td style="text-align: center;">5</td>
-<td style="text-align: left;">Light Vest</td>
-<td style="text-align: left;">+1" <code>Move</code></td>
-<td style="text-align: right;">9</td>
-</tr>
-<tr>
 <td style="text-align: center;">6</td>
 <td style="text-align: left;">Defensive Mesh</td>
 <td style="text-align: left;">Re-roll 1s on <code>Defense</code></td>
-<td style="text-align: right;">12</td>
+<td style="text-align: right;">8</td>
 </tr>
 <tr>
 <td style="text-align: center;">7</td>
 <td style="text-align: left;">Runner's Harness</td>
 <td style="text-align: left;">+2" <code>Move</code></td>
-<td style="text-align: right;">14</td>
+<td style="text-align: right;">10</td>
 </tr>
 <tr>
 <td style="text-align: center;">8</td>
 <td style="text-align: left;">Scout Suit</td>
 <td style="text-align: left;">Re-roll 1s on <code>Defense</code>, +1" <code>Move</code></td>
-<td style="text-align: right;">16</td>
+<td style="text-align: right;">11</td>
 </tr>
 </tbody>
 </table>
@@ -874,37 +873,37 @@
 <td style="text-align: center;">1</td>
 <td style="text-align: left;">Standard Cuirass</td>
 <td style="text-align: left;">-</td>
-<td style="text-align: right;">12</td>
+<td style="text-align: right;">8</td>
 </tr>
 <tr>
 <td style="text-align: center;">2</td>
 <td style="text-align: left;">Tactical Breastplate</td>
 <td style="text-align: left;">+1" <code>Move</code></td>
-<td style="text-align: right;">15</td>
+<td style="text-align: right;">11</td>
 </tr>
 <tr>
 <td style="text-align: center;">3</td>
 <td style="text-align: left;">Patrol Harness</td>
 <td style="text-align: left;">Re-roll 1s on <code>Defense</code></td>
-<td style="text-align: right;">18</td>
+<td style="text-align: right;">12</td>
 </tr>
 <tr>
 <td style="text-align: center;">4</td>
 <td style="text-align: left;">Assault Rig</td>
 <td style="text-align: left;">+2" <code>Move</code></td>
-<td style="text-align: right;">20</td>
+<td style="text-align: right;">14</td>
 </tr>
 <tr>
 <td style="text-align: center;">5</td>
-<td style="text-align: left;">Operations Suit</td>
-<td style="text-align: left;">Re-roll 1s on <code>Defense</code>, +1" <code>Move</code></td>
-<td style="text-align: right;">22</td>
+<td style="text-align: left;">Reinforced Plating</td>
+<td style="text-align: left;">Re-roll 1s and 2s on <code>Defense</code></td>
+<td style="text-align: right;">14</td>
 </tr>
 <tr>
 <td style="text-align: center;">6</td>
-<td style="text-align: left;">Reinforced Plating</td>
-<td style="text-align: left;">Re-roll 1s and 2s on <code>Defense</code></td>
-<td style="text-align: right;">25</td>
+<td style="text-align: left;">Operations Suit</td>
+<td style="text-align: left;">Re-roll 1s on <code>Defense</code>, +1" <code>Move</code></td>
+<td style="text-align: right;">15</td>
 </tr>
 </tbody>
 </table>
@@ -924,37 +923,37 @@
 <td style="text-align: center;">1</td>
 <td style="text-align: left;">Heavy Cuirass</td>
 <td style="text-align: left;">-</td>
-<td style="text-align: right;">18</td>
+<td style="text-align: right;">12</td>
 </tr>
 <tr>
 <td style="text-align: center;">2</td>
-<td style="text-align: left;">Industrial Frame</td>
-<td style="text-align: left;">-1" <code>Move</code>, Re-roll 1s on <code>Defense</code></td>
-<td style="text-align: right;">20</td>
+<td style="text-align: left;">Bunker Suit</td>
+<td style="text-align: left;">-2" <code>Move</code>, Re-roll 1s and 2s on <code>Defense</code></td>
+<td style="text-align: right;">14</td>
 </tr>
 <tr>
 <td style="text-align: center;">3</td>
-<td style="text-align: left;">Combat Plating</td>
-<td style="text-align: left;">Re-roll 1s on <code>Defense</code></td>
-<td style="text-align: right;">23</td>
+<td style="text-align: left;">Industrial Frame</td>
+<td style="text-align: left;">-1" <code>Move</code>, Re-roll 1s on <code>Defense</code></td>
+<td style="text-align: right;">14</td>
 </tr>
 <tr>
 <td style="text-align: center;">4</td>
-<td style="text-align: left;">Bunker Suit</td>
-<td style="text-align: left;">-2" <code>Move</code>, Re-roll 1s and 2s on <code>Defense</code></td>
-<td style="text-align: right;">24</td>
+<td style="text-align: left;">Combat Plating</td>
+<td style="text-align: left;">Re-roll 1s on <code>Defense</code></td>
+<td style="text-align: right;">16</td>
 </tr>
 <tr>
 <td style="text-align: center;">5</td>
 <td style="text-align: left;">Assault Exoskeleton</td>
 <td style="text-align: left;">Re-roll 1s and 2s on <code>Defense</code></td>
-<td style="text-align: right;">27</td>
+<td style="text-align: right;">18</td>
 </tr>
 <tr>
 <td style="text-align: center;">6</td>
 <td style="text-align: left;">Fortress Plating</td>
 <td style="text-align: left;">Re-roll 1s, 2s, and 3s on <code>Defense</code></td>
-<td style="text-align: right;">30</td>
+<td style="text-align: right;">20</td>
 </tr>
 </tbody>
 </table>
@@ -1042,7 +1041,7 @@
 <tr>
 <td style="text-align: center;">1</td>
 <td style="text-align: left;">Mask</td>
-<td style="text-align: left;"><code>+1 DT</code> <code>Defense</code> vs Toxic</td>
+<td style="text-align: left;"><code>+1 DT</code> <code>Defense</code> vs. Toxic</td>
 <td style="text-align: right;">6</td>
 </tr>
 <tr>
@@ -1146,18 +1145,19 @@
 <div class="two-column">
 
 
-
+<div class="file-indicator">1_04_combat.md</div>
 <h1 id="combat-actions">Combat &amp; Actions</h1>
 <h2 id="activation">Activation</h2>
 <ol>
 <li>Each player rolls <strong>Corporate Blessings</strong> (d8 three times)</li>
-<li>Add Activation Tokens to a shared bag: one per player model not <code>OoA</code>, one per hostile spawn group (different colors per faction)</li>
+<li>Add Activation Tokens to a shared bag: one per player model not <code>OoA</code>, one per hostile spawn group</li>
 <li>Draw a token: that faction activates one model (Hostiles and Coworkers follow their AI table)</li>
+<li>All models <code>OoA</code>: discard token</li>
 <li>Each activation: <strong>Move + Action</strong> OR <strong>Action + Move</strong></li>
-<li>Repeat from 3 until all models have activated</li>
+<li>Repeat from 3 until bag is empty</li>
 </ol>
 <h2 id="corporate-blessings">Corporate Blessings</h2>
-<p>At the start of each round, roll a d8 three times. Each roll grants one blessing. Use them this round or lose them. No model can receive two blessings per round.</p>
+<p>No model can receive two blessings per round.</p>
 <table>
 <thead>
 <tr>
@@ -1169,42 +1169,42 @@
 <tbody>
 <tr>
 <td style="text-align: center;">1</td>
-<td style="text-align: left;">Grace Denied</td>
+<td style="text-align: left;">Denied</td>
 <td style="text-align: left;">No blessing</td>
 </tr>
 <tr>
 <td style="text-align: center;">2</td>
-<td style="text-align: left;">Absolution</td>
-<td style="text-align: left;">Reroll any one die</td>
+<td style="text-align: left;">Reroll</td>
+<td style="text-align: left;">Reroll a single die</td>
 </tr>
 <tr>
 <td style="text-align: center;">3</td>
-<td style="text-align: left;">Quarterly Blessing</td>
+<td style="text-align: left;">Boost</td>
 <td style="text-align: left;"><code>+1 DT</code> to one roll</td>
 </tr>
 <tr>
 <td style="text-align: center;">4</td>
-<td style="text-align: left;">Overtime Sanction</td>
+<td style="text-align: left;">Overtime</td>
 <td style="text-align: left;">One model takes two actions</td>
 </tr>
 <tr>
 <td style="text-align: center;">5</td>
-<td style="text-align: left;">Severance Package</td>
+<td style="text-align: left;">Severance</td>
 <td style="text-align: left;">One attack deals max weapon damage</td>
 </tr>
 <tr>
 <td style="text-align: center;">6</td>
-<td style="text-align: left;">Synergy Blessing</td>
+<td style="text-align: left;">Synergy</td>
 <td style="text-align: left;">After activating a model, activate an unactivated model within 6" of it</td>
 </tr>
 <tr>
 <td style="text-align: center;">7</td>
-<td style="text-align: left;">Wellness Dispensation</td>
+<td style="text-align: left;">Wellness</td>
 <td style="text-align: left;">Restore d6 <code>Health</code> to one model, remove DoT effects</td>
 </tr>
 <tr>
 <td style="text-align: center;">8</td>
-<td style="text-align: left;">Trickle-Down</td>
+<td style="text-align: left;">Surplus</td>
 <td style="text-align: left;">Roll twice, ignoring 8s</td>
 </tr>
 </tbody>
@@ -1222,7 +1222,7 @@
 <tbody>
 <tr>
 <td style="text-align: left;"><code>Attack</code></td>
-<td style="text-align: left;"><code>Combat</code> vs <code>Defense</code>, deal weapon damage</td>
+<td style="text-align: left;"><code>Combat</code> vs. <code>Defense</code>, deal weapon damage</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>Move Again</code></td>
@@ -1234,7 +1234,7 @@
 </tr>
 <tr>
 <td style="text-align: left;"><code>Aim</code></td>
-<td style="text-align: left;">Declare target. Target has <code>-1 DT</code> <code>Defense</code> vs your next shot (lost if moved or damaged)</td>
+<td style="text-align: left;">Declare target. <code>+1 DT</code> <code>Combat</code> on your next shot (lost if moved or damaged)</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>Interact</code></td>
@@ -1242,11 +1242,11 @@
 </tr>
 <tr>
 <td style="text-align: left;"><code>Search</code></td>
-<td style="text-align: left;">Within 1" of <code>Loot Marker</code>. <code>Wits</code> vs 2d6</td>
+<td style="text-align: left;">Within 1" of <code>Loot Marker</code>. <code>Wits</code> vs. 2d6</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>Interrogate</code></td>
-<td style="text-align: left;">Within 1" of Coworker. <code>Wits</code> vs <code>Wits</code> (<code>+1 DT</code> if wounded)</td>
+<td style="text-align: left;">Within 1" of Coworker. <code>Wits</code> vs. <code>Wits</code> (<code>+1 DT</code> if wounded)</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>Loot</code></td>
@@ -1254,7 +1254,7 @@
 </tr>
 <tr>
 <td style="text-align: left;"><code>Cast</code></td>
-<td style="text-align: left;"><code>Wits</code> vs target <code>Wits</code> or 2d6 (Broadcasters only)</td>
+<td style="text-align: left;"><code>Wits</code> vs. target <code>Wits</code> or 2d6 (Broadcasters only)</td>
 </tr>
 </tbody>
 </table>
@@ -1316,7 +1316,6 @@
 <li>Compare results:</li>
 <li><strong>Attacker wins:</strong> Hit</li>
 <li><strong>Defender wins:</strong> Avoided (<code>Riposte</code>: also deal weapon damage to attacker)</li>
-<li><strong>Tie:</strong> Attacker wins</li>
 </ol>
 <div class="column-break"></div>
 
@@ -1331,7 +1330,7 @@
 <h2 id="shooting-into-melee">Shooting Into Melee</h2>
 <ul>
 <li><code>-1 DT</code> <code>Combat</code></li>
-<li>Miss hits random model within 1" of target</li>
+<li>Miss hits random model within 1" of target (excluding target)</li>
 <li>Fumble is a Critical against that model</li>
 </ul>
 <blockquote>
@@ -1352,6 +1351,10 @@
 <li>Any body part obscured by terrain: <strong>Cover</strong></li>
 <li><strong>Cover:</strong> <code>-1 DT</code> <code>Combat</code> for attacker</li>
 </ul>
+<h2 id="range">Range</h2>
+<ul>
+<li>No limits except grenades (6")</li>
+</ul>
 </div>
 </div>
 
@@ -1359,19 +1362,18 @@
 <div class="two-column">
 
 
-<h2 id="range">Range</h2>
+<h2 id="movement-modifiers">Movement Modifiers</h2>
 <ul>
-<li>No limits except grenades (6")</li>
+<li>Attacker moved this activation: <code>-1 DT</code> <code>Combat</code></li>
+<li>Target used <code>Move Again</code> this round: <code>-1 DT</code> <code>Combat</code></li>
 </ul>
-<h3 id="blast">Blast</h3>
+<p>These stack with Cover and Shooting into Melee.</p>
+<h2 id="grenades_1">Grenades</h2>
 <ul>
-<li>All models in radius auto-hit (friend or foe)</li>
-<li>Roll damage separately for each</li>
+<li>Throw at a point within 6" (action). One use.</li>
+<li>Roll <code>Combat</code> vs 2d6. Failure: scatters d6". 2d6 doubles you: lands at your feet.</li>
+<li>3" blast hits all models (friend and foe). Roll damage for each.</li>
 </ul>
-<blockquote>
-<p>"Blast radius assumes standard cable density. Personnel are rounding errors."<br />
-<strong>Demolitions Handbook</strong></p>
-</blockquote>
 <h2 id="critical-hits">Critical Hits</h2>
 <ul>
 <li>Double the defender: max weapon damage</li>
@@ -1407,8 +1409,8 @@
 </blockquote>
 <h2 id="morale">Morale</h2>
 <ul>
-<li>When <code>Boss</code> goes <code>Out of Action</code>: all friendly models immediately test <code>Wits</code> vs 2d6</li>
-<li>Fail: <code>Flee</code> (move toward nearest edge, cannot act, exits if reaches edge)</li>
+<li>When <code>Boss</code> goes <code>Out of Action</code>: all friendly models immediately test <code>Wits</code> vs. 2d6</li>
+<li>Fail: <code>Flee</code> (move toward the nearest edge, cannot act, exits if reaches edge)</li>
 <li>Retest at start of each activation until passed</li>
 </ul>
 <blockquote>
@@ -1428,7 +1430,7 @@
 <div class="two-column">
 
 
-
+<div class="file-indicator">1_05_broadcast_powers.md</div>
 <h1 id="broadcast-powers">Broadcast Powers</h1>
 <p>Wireless is heresy. Unless someone in corporate decided to diversify revenue streams.</p>
 <p>Licensed Broadcasters pay steep fees and submit to monitoring. The Untethered refuse. They broadcast without paying, spread without subscription. The Authority calls them terrorists. The Monks call them plague. The Untethered call themselves free.</p>
@@ -1436,8 +1438,8 @@
 <ul>
 <li>Action to cast (once per activation)</li>
 <li>No range limit (requires LoS)</li>
-<li>Offensive powers: roll <code>Wits</code> vs target <code>Wits</code></li>
-<li>Support powers: roll <code>Wits</code> vs 2d6 (target must be friendly)</li>
+<li>Offensive powers: roll <code>Wits</code> vs. target <code>Wits</code></li>
+<li>Support powers: roll <code>Wits</code> vs. 2d6 (target must be friendly)</li>
 <li>Triple or more: effect applies to all valid targets within 3"</li>
 <li>Defender triples or more: roll <code>Broadcast</code> Fumble table</li>
 </ul>
@@ -1492,7 +1494,7 @@
 <tr>
 <td style="text-align: center;">1</td>
 <td style="text-align: left;">Force Field</td>
-<td style="text-align: left;"><code>+2 DT</code> <code>Defense</code> vs ranged until next activation</td>
+<td style="text-align: left;"><code>+2 DT</code> <code>Defense</code> vs. ranged until next activation</td>
 </tr>
 <tr>
 <td style="text-align: center;">2</td>
@@ -1518,7 +1520,7 @@
 <div class="two-column">
 
 
-
+<div class="file-indicator">1_06_criticals.md</div>
 <h1 id="critical-tables">Critical Tables</h1>
 <p>When you double the target, deal max weapon damage. When you triple or more, deal max damage and roll on the appropriate critical table. The weapon type determines which table. Quadruple adds +1, quintuple adds +2, and so on.</p>
 <blockquote>
@@ -1783,7 +1785,7 @@
 <tr>
 <td style="text-align: center;">4</td>
 <td style="text-align: left;">Delirium</td>
-<td style="text-align: left;"><code>-1 DT</code> <code>Wits</code> permanently, move toward nearest enemy</td>
+<td style="text-align: left;"><code>-1 DT</code> <code>Wits</code> permanently, move toward the nearest enemy</td>
 </tr>
 <tr>
 <td style="text-align: center;">5</td>
@@ -1852,7 +1854,7 @@
 <div class="two-column">
 
 
-
+<div class="file-indicator">1_07_fumbles.md</div>
 <h1 id="fumble-tables">Fumble Tables</h1>
 <p>When the defender exceeds you by triple or more, roll on the appropriate fumble table. Melee for close combat, Ranged for shooting, Broadcast for transmissions. Quadruple adds +1, quintuple adds +2.</p>
 <blockquote>
@@ -2004,39 +2006,40 @@
 <div class="two-column">
 
 
-
+<div class="file-indicator">1_08_samples.md</div>
 <h1 id="sample-resources">Sample Resources</h1>
 <p>One example per contract type. Each model costs 12 subs.</p>
 <h2 id="boss-12">Boss [12]</h2>
 <h3 id="20-hp-6-mov">20 HP, 6" MOV</h3>
 <ul>
 <li>COM 2d8, DEF 2d6, WIT 2d6</li>
-<li>Needle Gun (5): d4 <code>Toxic</code>, +1 damage vs wounded</li>
-<li>Knife (3): d4 <code>Bladed</code></li>
+<li>Needle Gun (4): d4 <code>Toxic</code>, +1 damage vs. wounded</li>
+<li>Shiv (4): d4 <code>Toxic</code>, +1 damage vs. wounded</li>
 <li>Flak Wrap (4): 1 reduction</li>
 </ul>
 <h2 id="brute-12">Brute [12]</h2>
 <h3 id="20-hp-5-mov">20 HP, 5" MOV</h3>
 <ul>
 <li>COM 2d8, DEF 2d6, WIT 2d4</li>
-<li>Sword (8): d6 <code>Bladed</code>, <code>+1 DT</code> when <code>Riposting</code></li>
-<li>Flak Wrap (4): 1 reduction</li>
+<li>Sword (10): d6 <code>Bladed</code>, <code>+1 DT</code> when <code>Riposting</code></li>
+<li>Mesh Wrap (2): 1 reduction, -1" <code>Move</code></li>
 <li><em><code>Melee</code> only, can wear <code>Heavy</code> armor</em></li>
 </ul>
 <h2 id="veteran-12">Veteran [12]</h2>
 <h3 id="14-hp-5-mov">14 HP, 5" MOV</h3>
 <ul>
 <li>COM 2d6, DEF 2d6, WIT 2d6</li>
-<li>Pistol (4): d4 <code>Projectile</code>, <code>-1 DT</code> beyond 6"</li>
-<li>Shiv (4): d4 <code>Toxic</code>, +1 damage vs wounded</li>
-<li>Flak Wrap (4): 1 reduction</li>
+<li>Pistol (2): d4 <code>Projectile</code>, <code>-1 DT</code> beyond 6"</li>
+<li>Shiv (4): d4 <code>Toxic</code>, +1 damage vs. wounded</li>
+<li>Protective Lining (6): 1 reduction, -1 to Critical table rolls against you</li>
 <li><em>Immune to <code>Flee</code></em></li>
 </ul>
 <h2 id="gunner-12">Gunner [12]</h2>
 <h3 id="16-hp-6-mov">16 HP, 6" MOV</h3>
 <ul>
 <li>COM 2d8, DEF 2d6, WIT 2d4</li>
-<li>Carbine (12): d8 <code>Projectile</code>, re-roll 1s</li>
+<li>Laser (9): d6 <code>Energy</code>, <code>+1 DT</code> if not moved this turn</li>
+<li>Knife (3): d4 <code>Bladed</code></li>
 <li><em>Hit: target <code>-1 DT</code> <code>Defense</code> next activation, can wear <code>Medium</code> armor</em></li>
 </ul>
 <div class="column-break"></div>
@@ -2045,24 +2048,24 @@
 <h3 id="12-hp-8-mov">12 HP, 8" MOV</h3>
 <ul>
 <li>COM 2d6, DEF 2d4, WIT 2d8</li>
-<li>Arc Pistol (6): d4 <code>Static</code>, no fumbles</li>
-<li>Protective Lining (6): 1 reduction, -1 to Critical table rolls against you</li>
+<li>Arc Pistol (5): d4 <code>Static</code>, no fumbles</li>
+<li>Light Vest (7): 1 reduction, +1" <code>Move</code></li>
 <li><em><code>Move</code> 3" after deployment, <code>Ranged</code> only</em></li>
 </ul>
 <h2 id="zealot-12">Zealot [12]</h2>
 <h3 id="12-hp-6-mov">12 HP, 6" MOV</h3>
 <ul>
 <li>COM 2d8, DEF 2d4, WIT 2d6</li>
-<li>Cable Whip (10): d6 <code>Static</code>, 2" reach</li>
-<li>Mesh Wrap (2): 1 reduction</li>
+<li>Injector (9): d6 <code>Toxic</code>, re-roll 1s</li>
+<li>Knife (3): d4 <code>Bladed</code></li>
 <li><em>+2" <code>Move</code> if ending <code>Engaged</code>, <code>Melee</code> only</em></li>
 </ul>
 <h2 id="agent-12">Agent [12]</h2>
 <h3 id="16-hp-6-mov_1">16 HP, 6" MOV</h3>
 <ul>
 <li>COM 2d4, DEF 2d6, WIT 2d8</li>
-<li>Needle Gun (5): d4 <code>Toxic</code>, +1 damage vs wounded</li>
-<li>Mace (7): d6 <code>Blunt</code>, Knockback 1"</li>
+<li>Pistol (2): d4 <code>Projectile</code>, <code>-1 DT</code> beyond 6"</li>
+<li>Sword (10): d6 <code>Bladed</code>, <code>+1 DT</code> when <code>Riposting</code></li>
 <li><em>Re-roll failed <code>Search</code>/<code>Interrogate</code></em></li>
 </ul>
 <h2 id="broadcaster-12">Broadcaster [12]</h2>

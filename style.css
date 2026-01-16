@@ -13,6 +13,7 @@ html, body {
 body {
     font-size: var(--font-size-body);
     line-height: 1.45;
+    background: var(--color-bg-muted);
 }
 
 /* Page numbering */
@@ -37,10 +38,9 @@ body {
     right: auto;
 }
 
-@media screen and (min-width: 981px) {
+@media screen and (min-width: 1120px) {
     body {
         padding: 2em;
-        background: var(--color-bg-muted);
     }
 
     body.has-app-menu {
@@ -70,7 +70,7 @@ body {
 }
 
 /* Booklet mode - desktop only */
-@media screen and (min-width: 981px) {
+@media screen and (min-width: 1120px) {
     body.booklet-mode .content {
         display: grid;
         grid-template-columns: repeat(2, 148mm);
