@@ -1,0 +1,17 @@
+{
+  "table_name": "Tipos de Contrato",
+  "source": "02_warbands.md",
+  "columns": ["Contract Type", "Health", "Move", "Weapons", "Max Armor", "Special", "Max"],
+  "align": ["left", "center", "center", "center", "center", "left", "center"],
+  "display_columns": ["Tipo de Contrato", "Salud", "Mov", "Armas", "Armadura Máx", "Especial", "Máx"],
+  "items": [
+    {"contract_type": "`Jefe`", "health": "20", "move": "6\"", "weapons": "Ambas", "max_armor": "Pesada", "special": "`+1 ND` a un atributo", "max": "*"},
+    {"contract_type": "`Bruto`", "health": "20", "move": "5\"", "weapons": "CC", "max_armor": "Pesada", "special": "-", "max": "2"},
+    {"contract_type": "`Veterano`", "health": "14", "move": "5\"", "weapons": "Ambas", "max_armor": "Media", "special": "Inmune a `Huida`", "max": "2"},
+    {"contract_type": "`Tirador`", "health": "16", "move": "6\"", "weapons": "Disparo", "max_armor": "Media", "special": "Impacto: `-1 ND` `Defensa` (no acumulable)", "max": "2"},
+    {"contract_type": "`Explorador`", "health": "12", "move": "8\"", "weapons": "Disparo", "max_armor": "Ligera", "special": "Avanza 3\" tras desplegar", "max": "2"},
+    {"contract_type": "`Zelote`", "health": "12", "move": "7\"", "weapons": "CC", "max_armor": "Ligera", "special": "+2\" Mov si acaba `Trabado`", "max": "2"},
+    {"contract_type": "`Agente`", "health": "16", "move": "6\"", "weapons": "Ambas", "max_armor": "Ligera", "special": "Repite `Buscar` e `Interrogar` fallidos", "max": "2"},
+    {"contract_type": "`Emisor`", "health": "16", "move": "6\"", "weapons": "CC", "max_armor": "Ligera", "special": "Puede `Canalizar`", "max": "1"}
+  ]
+}

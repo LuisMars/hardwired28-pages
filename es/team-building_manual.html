@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hardwired 28 - Formación de Equipos 0.6.5-beta</title>
+    <meta property="og:title" content="Hardwired 28 - Formación de Equipos 0.6.5-beta">
+    <meta property="og:description" content="Juego de escaramuzas cablepunk corporativo">
+    <meta property="og:image" content="http://hardwired28.luismars.com/img/social.png">
+    <meta property="og:url" content="http://hardwired28.luismars.com/es/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style_manual.css">
+</head>
+<body class="has-app-menu">
+    
+    <nav class="app-menu" data-theme="corporate" data-open="false" aria-label="Navigation">
+        <div class="app-menu__inner">
+            <a class="app-menu__brand" href="./">Hardwired 28</a>
+            <button class="app-menu__toggle" type="button" onclick="toggleMenu()" aria-label="Menú"></button>
+            <div class="app-menu__links">
+                <a href="rulebook">Reglamento</a>
+                <div class="app-menu__dropdown">
+                    <button class="app-menu__dropdown-toggle current">Imprimir</button>
+                    <div class="app-menu__submenu">
+                        <a href="print">Todas las Reglas</a>
+                        <a href="core-rules">Reglas Básicas</a>
+                        <a href="inhuman-resources">Recursos Inhumanos</a>
+                        <a href="campaign">Campaña</a>
+                        <a href="team-building">Team Building</a>
+                    </div>
+                </div>
+                <a href="quick-reference">Referencia Rápida</a>
+                <a href="builder/">Creador de Plantillas</a>
+                <a href="../team-building">English</a>
+            </div>
+        </div>
+    </nav>
+
+    
+    <div class="manual-layout">
+    <nav class="sidebar">
+        <ul class="sidebar-nav">
+            <li class="toc-h1"><a href="#hardwired-28">Formación de Equipos</a></li>
+            <li class="toc-h1"><a href="#formación-de-equipos_1">Formación de Equipos</a></li>
+            <li class="toc-h2"><a href="#operaciones-en-solitario">Operaciones en Solitario</a></li>
+            <li class="toc-h2"><a href="#fichas-de-activación">Fichas de Activación</a></li>
+            <li class="toc-h2"><a href="#retirada-de-fichas">Retirada de Fichas</a></li>
+            <li class="toc-h2"><a href="#comportamiento-hostil">Comportamiento Hostil</a></li>
+            <li class="toc-h2"><a href="#campaña-en-solitario">Campaña en Solitario</a></li>
+            <li class="toc-h2"><a href="#selección-de-escenario">Selección de Escenario</a></li>
+            <li class="toc-h2"><a href="#adaptación-de-escenario">Adaptación de Escenario</a></li>
+            <li class="toc-h2"><a href="#operaciones-cooperativas">Operaciones Cooperativas</a></li>
+            <li class="toc-h2"><a href="#tamaño-del-equipo">Tamaño del Equipo</a></li>
+            <li class="toc-h2"><a href="#asignación-de-miniaturas">Asignación de Miniaturas</a></li>
+            <li class="toc-h2"><a href="#fichas-de-activación_1">Fichas de Activación</a></li>
+            <li class="toc-h2"><a href="#campaña">Campaña</a></li>
+            <li class="toc-h2"><a href="#escalado-de-escenario">Escalado de Escenario</a></li>
+            <li class="toc-h2"><a href="#escalera-de-mercenarios-opcional">Escalera de Mercenarios (Opcional)</a></li>
+            <li class="toc-h2"><a href="#reglas-de-contratación">Reglas de Contratación</a></li>
+            <li class="toc-h2"><a href="#la-escalera">La Escalera</a></li>
+            <li class="toc-h2"><a href="#reglas-de-mercenarios">Reglas de Mercenarios</a></li>
+            <li class="toc-h2"><a href="#compatibilidad-de-modos">Compatibilidad de Modos</a></li>
+            <li class="toc-h2"><a href="#el-becario">El Becario</a></li>
+            <li class="toc-h2"><a href="#líder-de-equipo">Líder de Equipo</a></li>
+            <li class="toc-h2"><a href="#ingeniero-de-éxito">Ingeniero de Éxito</a></li>
+            <li class="toc-h2"><a href="#consultor-de-disrupción">Consultor de Disrupción</a></li>
+            <li class="toc-h2"><a href="#coach-de-rendimiento">Coach de Rendimiento</a></li>
+            <li class="toc-h2"><a href="#director-de-moral">Director de Moral</a></li>
+            <li class="toc-h2"><a href="#evaluador-de-riesgos">Evaluador de Riesgos</a></li>
+            <li class="toc-h2"><a href="#especialista-en-liquidación">Especialista en Liquidación</a></li>
+            <li class="toc-h1"><a href="#reglas-opcionales">Reglas Opcionales</a></li>
+            <li class="toc-h2"><a href="#calor">Calor</a></li>
+            <li class="toc-h3"><a href="#ganar-calor">Ganar Calor</a></li>
+            <li class="toc-h3"><a href="#perder-calor">Perder Calor</a></li>
+            <li class="toc-h3"><a href="#efectos-del-calor">Efectos del Calor</a></li>
+            <li class="toc-h3"><a href="#versus-con-hostiles">Versus con Hostiles</a></li>
+            <li class="toc-h2"><a href="#trofeos">Trofeos</a></li>
+            <li class="toc-h2"><a href="#escalada">Escalada</a></li>
+            <li class="toc-h2"><a href="#final-de-campaña-la-fuente">Final de Campaña: La Fuente</a></li>
+        </ul>
+    </nav>
+    <div class="sidebar-overlay" onclick="toggleSidebar()"></div>
+    <button class="mobile-toc-btn" onclick="toggleSidebar()" aria-label="Índice"></button>
+    <div class="content">
+
+
+
+
+<h1 id="hardwired-28">Hardwired 28</h1>
+<h2 id="formación-de-equipos">Formación de Equipos</h2>
+
+
+
+<h1 id="formación-de-equipos_1">Formación de Equipos</h1>
+<p>Los Departamentos han descubierto algo: la colaboración funciona. No entre Departamentos, claro. Entre contratistas. Las operaciones de campo van más fluidas cuando los activos prescindibles se coordinan. Menos costes de reemplazo. Mayores tasas de recuperación. Mejores proyecciones trimestrales. Capital Humano puso en marcha un programa piloto. Los supervivientes reportaron resultados mejorados.</p>
+<p>Los contratistas solitarios trabajan solos. Un operativo, autoridad total, cero testigos. Los Departamentos usan activos solitarios para extracciones sensibles. La negabilidad aumenta. Los daños colaterales disminuyen. Los costes de suscripción bajan cuando solo tienes que pagar a un superviviente.</p>
+<p>El Registro de Mercenarios es anterior a la estructura actual de los Departamentos. Ocho especialistas mantenidos por Operaciones de Ingresos. No cuestan nada por adelantado. Se llevan porcentajes. Mueren permanentemente. Los reemplazos son caros. Se desbloquean secuencialmente. El Registro controla el flujo.</p>
+
+
+<p>Adáptate o serás reemplazado.</p>
+<blockquote>
+<p>SINERGIA A TRAVÉS DE LA VIOLENCIA. COLABORACIÓN A TRAVÉS DEL MIEDO.<br />
+<strong>Cartel de Reclutamiento de Capital Humano</strong></p>
+</blockquote>
+
+
+<h2 id="operaciones-en-solitario">Operaciones en Solitario</h2>
+<p>Tú contra el Complejo. Sin apoyo. Sin segundas opiniones. Plantilla estándar (1 <code>Jefe</code>, 4 <code>Recursos</code>), objetivos estándar, oposición hostil en todos los frentes.</p>
+<h2 id="fichas-de-activación">Fichas de Activación</h2>
+<p>El juego en solitario usa la bolsa de activación estándar con una modificación: los hostiles se activan individualmente en lugar de en grupos.</p>
+<p><strong>Tu Plantilla</strong>: Añade 1 ficha por miniatura (5 fichas en total).</p>
+<p><strong>Hostiles</strong>: Añade 1 ficha por miniatura hostil. Cada hostil tiene su propia ficha en la bolsa.</p>
+<h2 id="retirada-de-fichas">Retirada de Fichas</h2>
+<p>Retira las fichas de las miniaturas <code>Fuera de Combate</code> al inicio de la siguiente ronda. Una miniatura que quede <code>Fuera de Combate</code> a mitad de ronda puede tener su ficha sacada (salta la activación).</p>
+
+
+<h2 id="comportamiento-hostil">Comportamiento Hostil</h2>
+<p>Los hostiles usan las tablas de comportamiento de Recursos Inhumanos. Cada hostil se activa independientemente cuando se saca su ficha.</p>
+<h2 id="campaña-en-solitario">Campaña en Solitario</h2>
+<p>Registra <code>Pruebas</code>, <code>Pistas</code> y la Secuencia Post-Partida normalmente. Victoria de campaña estándar.</p>
+<h2 id="selección-de-escenario">Selección de Escenario</h2>
+<p>Tira d3 para el nivel, d3 para el escenario. O juega los escenarios secuencialmente.</p>
+<h2 id="adaptación-de-escenario">Adaptación de Escenario</h2>
+<p>En escenarios Agresor/Defensor, siempre eres Defensor. Sigue las reglas de colocación y despliegue del Defensor. Durante el despliegue, despliega un grupo hostil en la zona del Agresor (centrado). Las amenazas del escenario aparecen normalmente.</p>
+
+
+
+<h2 id="operaciones-cooperativas">Operaciones Cooperativas</h2>
+<p>Varios jugadores, una plantilla, cooperación pura. Compartís recursos, compartís bendiciones, compartís la culpa cuando las cosas salen mal.</p>
+<h2 id="tamaño-del-equipo">Tamaño del Equipo</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Jugadores</th>
+<th style="text-align: center;">Miniaturas por Jugador</th>
+<th style="text-align: center;">Plantilla Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">6</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">6</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">8</td>
+</tr>
+</tbody>
+</table>
+<h2 id="asignación-de-miniaturas">Asignación de Miniaturas</h2>
+<p>Antes de cada misión, dividid las miniaturas entre jugadores. Cada jugador controla sus miniaturas asignadas durante toda la misión. El jugador que controla al <code>Jefe</code> toma las decisiones de desempate.</p>
+<h2 id="fichas-de-activación_1">Fichas de Activación</h2>
+<p><strong>Miniaturas Amigas</strong>: Añade 1 ficha por miniatura. Cuando se saca una ficha, el jugador que controla esa miniatura la activa.</p>
+<p><strong>Hostiles</strong>: Añade 1 ficha por grupo desplegado (reglas de activación estándar de Recursos Inhumanos).</p>
+
+
+<h2 id="campaña">Campaña</h2>
+<p>El equipo comparte <code>Pruebas</code>, <code>Pistas</code>, roster de plantilla y saldo de subs. Todos los jugadores deben estar presentes en cada misión. Secuencia Post-Partida y victoria de campaña estándar.</p>
+<p>Tira d3 para el nivel, d3 para el escenario. O juega los escenarios secuencialmente.</p>
+<h2 id="escalado-de-escenario">Escalado de Escenario</h2>
+<p>Escala las apariciones hostiles según el tamaño de la plantilla.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Total Miniaturas</th>
+<th>Modificador Hostil</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">6</td>
+<td>+1 miniatura por aparición</td>
+</tr>
+<tr>
+<td style="text-align: center;">8</td>
+<td>+2 miniaturas por aparición</td>
+</tr>
+</tbody>
+</table>
+<p>En escenarios Agresor/Defensor, siempre sois Defensor. Durante el despliegue, despliega un grupo hostil en la zona del Agresor (centrado).</p>
+
+
+
+<h2 id="escalera-de-mercenarios-opcional">Escalera de Mercenarios (Opcional)</h2>
+<p>Los Departamentos mantienen un registro de contratistas independientes. No freelancers. Especialistas. No cuestan nada contratar. Se llevan un porcentaje de todo lo que recuperes. No ganan experiencia. Ya saben todo lo que vale la pena saber. No pueden ser despedidos. Nunca se unieron formalmente.</p>
+<p>Cuando mueren, permanecen muertos. El registro se actualiza. El siguiente nombre queda disponible. Operaciones de Ingresos controla el flujo. Siempre tienen otro nombre preparado.</p>
+<h2 id="reglas-de-contratación">Reglas de Contratación</h2>
+<p><strong>Momento</strong>: Contrata solo entre misiones.</p>
+<p><strong>Límite</strong>: 1 mercenario por escuadra.</p>
+<p><strong>Coste</strong>: Gratis. Los mercenarios cobran su parte directamente de los pagos de misión.</p>
+<p><strong>Hueco de Roster</strong>: Los mercenarios cuentan contra tu límite de personal. Una escuadra con mercenario tiene 4 miniaturas regulares más 1 mercenario.</p>
+
+
+<h2 id="la-escalera">La Escalera</h2>
+<p>Los mercenarios se desbloquean en secuencia. Empiezas con acceso al primer mercenario de la escalera. Cuando ese mercenario muere, el siguiente queda disponible.</p>
+<ol>
+<li>Contrata al primer mercenario disponible (o elige no contratar)</li>
+<li>Cuando tu mercenario actual queda <code>Fuera de Combate</code>, muere</li>
+<li>El siguiente mercenario de la escalera queda disponible</li>
+<li>Repite hasta que los ocho mueran</li>
+</ol>
+<p>Una vez muertos los ocho mercenarios, no hay más disponibles para esa campaña. Úsalos sabiamente.</p>
+<h2 id="reglas-de-mercenarios">Reglas de Mercenarios</h2>
+<p><strong>Sin Experiencia</strong>: Los mercenarios no ganan Méritos. No pueden ser promovidos.</p>
+<p><strong>Sin Heridas</strong>: Si quedan <code>Fuera de Combate</code>, mueren. Sin tirada de recuperación.</p>
+<p><strong>No Pueden Ser Despedidos</strong>: Los mercenarios se van cuando mueren. No antes.</p>
+<p><strong>Equipamiento Fijo</strong>: El equipamiento no puede cambiarse, venderse ni transferirse.</p>
+<h2 id="compatibilidad-de-modos">Compatibilidad de Modos</h2>
+<p>Los mercenarios funcionan en todos los modos. En juego cooperativo, el equipo comparte la escalera de mercenarios. En versus con hostiles, cada plantilla tiene su propia escalera.</p>
+
+
+
+
+<h2 id="el-becario">El Becario</h2>
+<p>Recién salido de la división de entrenamiento. Entusiasta, prescindible, fácilmente reemplazable. Los Departamentos siempre tienen más de donde vino este. Capital Humano rota Becarios más rápido que avisos de suscripción. La mayoría no sobrevive la orientación. Los que llegan al despliegue de campo ya han aprendido la lección esencial: nadie viene a ayudar.</p>
+<p>Equipamiento estándar. Requisiciones no autoriza nada mejor. Órdenes seguidas sin cuestionar. Desviarse significa rescisión. La prescindibilidad genera cautela. Cuando uno muere, otra cara idéntica aparece en el roster. Los Departamentos lo llaman eficiencia.</p>
+<blockquote>
+<p>"Primer día de trabajo. Dijeron que aprendería rápido. No dijeron qué."<br />
+<strong>Formulario de Feedback de Orientación de Becarios</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Salud</th>
+<th style="text-align: center;">Mov</th>
+<th style="text-align: center;">Combate</th>
+<th style="text-align: center;">Defensa</th>
+<th style="text-align: center;">Astucia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">5"</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">2d6</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Armas</strong>: Ambas</p>
+<p><strong>Armadura</strong>: Ligera (1 reducción)</p>
+<ul>
+<li>Hoja de Requisición: d6 <code>Cortante</code></li>
+<li>Pistola de Inicio: d6 <code>Proyectil</code>, 6" alcance</li>
+<li>Chaleco de Entrenamiento: 1 reducción</li>
+</ul>
+<p><strong>Horas Extra No Pagadas</strong>: La primera vez que el Becario queda <code>Fuera de Combate</code> cada campaña, regresa al inicio de la siguiente misión con <code>Salud</code> completa. La segunda vez, muere permanentemente.</p>
+
+
+
+
+<h2 id="líder-de-equipo">Líder de Equipo</h2>
+<p>Diecisiete años en mandos intermedios. Sobrevivió a cuatro reestructuraciones, dos adquisiciones hostiles y una incursión hostil literal. Sabe delegar. Sabe mejor cómo posicionar subordinados entre ellos y el fuego entrante.</p>
+<p>El portapapeles nunca abandona su mano. Nadie sabe qué hay en él. Las reuniones ocurren a mitad de tiroteo. Nadie lo cuestiona. El valor no reside en la capacidad de combate personal sino en hacer a todos los demás marginalmente más competentes. Sinergia, lo llaman. Los cuerpos se apilan de todas formas, pero los informes quedan mejor.</p>
+<blockquote>
+<p>"Según la agenda, punto tres: no morir. ¿Preguntas? Bien. Ejecutad."<br />
+<strong>Líder de Equipo, Briefing en Combate</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Salud</th>
+<th style="text-align: center;">Mov</th>
+<th style="text-align: center;">Combate</th>
+<th style="text-align: center;">Defensa</th>
+<th style="text-align: center;">Astucia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">13</td>
+<td style="text-align: center;">4"</td>
+<td style="text-align: center;">2d8</td>
+<td style="text-align: center;">2d8</td>
+<td style="text-align: center;">2d6</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Armas</strong>: Ambas</p>
+<p><strong>Armadura</strong>: Media (2 reducción)</p>
+<ul>
+<li>Hoja Ejecutiva: d6 <code>Cortante</code>, repite 1s en <code>Respuesta</code></li>
+<li>Carabina de Gestión: d8 <code>Proyectil</code>, repite 1s</li>
+<li>Chaleco de Delegación: 2 reducción</li>
+</ul>
+<p><strong>Bonus de Sinergia</strong>: Una vez por ronda, cuando un aliado a 1" hace un ataque, ese aliado tira con <code>+1 ND</code>. Declara antes de tirar.</p>
+
+
+
+
+<h2 id="ingeniero-de-éxito">Ingeniero de Éxito</h2>
+<p>Analiza resultados operacionales. Optimiza métricas de supervivencia. Nunca ha fallado personalmente en nada. Los registros lo confirman. El expediente de personal contiene solo marcas verdes y objetivos superados. Los colegas que cuestionaron las métricas sufrieron contratiempos profesionales. Los que investigaron sufrieron accidentes.</p>
+<p>Resultados garantizados. Metodología propietaria. El rendimiento del equipo mejora a través de mecanismos que resisten documentación. Cuando las situaciones se vuelven insostenibles, las soluciones aparecen de la nada. Suerte, dicen los testigos. Ingeniería, dice el expediente.</p>
+<blockquote>
+<p>"El fracaso no es una opción. El fracaso es una categoría de facturación."<br />
+<strong>Ingeniero de Éxito, Revisión Trimestral</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Salud</th>
+<th style="text-align: center;">Mov</th>
+<th style="text-align: center;">Combate</th>
+<th style="text-align: center;">Defensa</th>
+<th style="text-align: center;">Astucia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">4"</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">2d8</td>
+<td style="text-align: center;">2d10</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Armas</strong>: Ambas</p>
+<p><strong>Armadura</strong>: Ligera (1 reducción)</p>
+<ul>
+<li>Dardo de Métricas: d6 <code>Tóxico</code>, -1 <strong>ND</strong> siguiente activación</li>
+<li>Hoja de Optimización: d6 <code>Cortante</code>, <code>+1 ND</code> vs. herido</li>
+<li>Suite de Analítica: 1 reducción, repite 1s en <code>Astucia</code></li>
+</ul>
+<p><strong>Resultados Garantizados</strong>: Una vez por partida, pasa automáticamente una prueba de <code>Astucia</code> sin tirar. Declara antes de que ocurra la tirada.</p>
+
+
+
+
+<h2 id="consultor-de-disrupción">Consultor de Disrupción</h2>
+<p>Contratado para romper lo que construyeron los competidores. Rápido. Agresivo. Factura por hora pero trabaja por segundo. El Consultor de Disrupción no tiene paciencia para procedimientos establecidos, metodologías probadas ni protocolos básicos de seguridad. La tradición es ineficiencia. La cautela es cobardía. El único enfoque aceptable es el que nadie esperaba.</p>
+<p>Cada enfrentamiento se convierte en caso de estudio. Cada baja se convierte en lección aprendida. El Consultor de Disrupción se mueve por entornos hostiles como una hoja a través de cables: cortando conexiones, cercenando dependencias, dejando caos a su paso. Reconstruir es problema de otro. La disrupción es el producto.</p>
+<blockquote>
+<p>"Tu plan tenía diecisiete pasos. El mío tiene uno. Observa."<br />
+<strong>Consultor de Disrupción, Incorporación de Cliente</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Salud</th>
+<th style="text-align: center;">Mov</th>
+<th style="text-align: center;">Combate</th>
+<th style="text-align: center;">Defensa</th>
+<th style="text-align: center;">Astucia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">5"</td>
+<td style="text-align: center;">2d10</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">2d6</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Armas</strong>: Cuerpo a cuerpo</p>
+<p><strong>Armadura</strong>: Ligera (1 reducción)</p>
+<ul>
+<li>Garra Disruptiva: d10 <code>Estático</code>, repite 1s, +1 a tirada de Crítico</li>
+<li>Arnés de Innovación: 1 reducción, +1" <code>Movimiento</code></li>
+</ul>
+<p><strong>Reestructuración Agresiva</strong>: Una vez por ronda, obliga a un enemigo a repetir cualquier tirada de dado. El segundo resultado permanece. Declara inmediatamente después de la tirada.</p>
+
+
+
+
+<h2 id="coach-de-rendimiento">Coach de Rendimiento</h2>
+<p>Motiva con el ejemplo. El ejemplo suele ser violencia. Las revisiones trimestrales tienen un 40% de tasa de supervivencia. Cree en el potencial. Todos tienen potencial. El trabajo es extraer ese potencial mediante metodología intensiva y práctica. Los de bajo rendimiento reciben coaching adicional. Los de alto rendimiento reciben ligeramente menos.</p>
+<p>El martillo resuelve problemas. Armadura pesada significa liderar desde el frente. Cuando los aliados flaquean, sigue el ánimo. Cuando los aliados triunfan, se lleva el mérito. Esto se llama gestión.</p>
+<blockquote>
+<p>"No estás cansado. No estás herido. No estás suficientemente motivado. Otra vez."<br />
+<strong>Coach de Rendimiento, Ejercicio de Formación de Equipos</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Salud</th>
+<th style="text-align: center;">Mov</th>
+<th style="text-align: center;">Combate</th>
+<th style="text-align: center;">Defensa</th>
+<th style="text-align: center;">Astucia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">3"</td>
+<td style="text-align: center;">2d10</td>
+<td style="text-align: center;">2d8</td>
+<td style="text-align: center;">2d6</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Armas</strong>: Cuerpo a cuerpo</p>
+<p><strong>Armadura</strong>: Pesada (3 reducción)</p>
+<ul>
+<li>Martillo Motivacional: d8 <code>Contundente</code>, repite 1s, Empuje 1"</li>
+<li>Placa de Rendimiento: 3 reducción, reduce <code>Empuje</code> en 1"</li>
+</ul>
+<p><strong>Horas Extra Obligatorias</strong>: Una vez por partida, cuando un aliado a 1" completa su activación, ese aliado realiza inmediatamente una segunda acción. Declara antes de que termine la activación del aliado.</p>
+
+
+
+
+<h2 id="director-de-moral">Director de Moral</h2>
+<p>Espíritu de equipo impuesto. Positividad a través de frecuencias de resonancia que evitan el pensamiento consciente. Sonríe. Eres feliz. Esto no es una sugerencia. El equipamiento está oficialmente clasificado como "tecnología de bienestar". Las frecuencias no aparecen en ningún espectro aprobado. Efectos: inmediatos y totales.</p>
+<p>El pánico se convierte en calma. La huida se convierte en lucha. La desesperación se convierte en determinación. Los equipos mantienen configuración emocional óptima independientemente de las circunstancias. Los efectos secundarios son temporales. Los efectos secundarios son aceptables. Los efectos secundarios son clasificados.</p>
+<blockquote>
+<p>"La moral es obligatoria. La felicidad es política. El cumplimiento es bienestar."<br />
+<strong>Director de Moral, Emisión General</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Salud</th>
+<th style="text-align: center;">Mov</th>
+<th style="text-align: center;">Combate</th>
+<th style="text-align: center;">Defensa</th>
+<th style="text-align: center;">Astucia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">4"</td>
+<td style="text-align: center;">2d8</td>
+<td style="text-align: center;">2d8</td>
+<td style="text-align: center;">2d8</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Armas</strong>: Cuerpo a cuerpo</p>
+<p><strong>Armadura</strong>: Ligera (1 reducción)</p>
+<ul>
+<li>Alarido de Bienestar: d6 <code>Emisión</code>, ignora cobertura</li>
+<li>Aguijón de Positividad: d6 <code>Energía</code>, -1 <strong>ND</strong> siguiente activación</li>
+<li>Matriz de Cumplimiento: 1 reducción, aliados a 3" repiten pruebas de <code>Astucia</code> fallidas</li>
+</ul>
+<p><strong>Positividad Obligatoria</strong>: Una vez por partida, cuando cualquier miniatura amiga entraría en <code>Huida</code>, cancela ese resultado. La miniatura actúa normalmente. Afecta a toda la plantilla.</p>
+
+
+
+
+<h2 id="evaluador-de-riesgos">Evaluador de Riesgos</h2>
+<p>Calcula probabilidad de supervivencia. Documenta exposición a responsabilidad. Archiva informes de incidentes preventivos antes de que ocurra el incidente. Catástrofe por todas partes. Las estadísticas no mienten. La gente miente. No confía en ninguno.</p>
+<p>Cada operación conlleva pérdidas aceptables. Lo aceptable se define por adelantado. Cada enfrentamiento tiene un umbral de salida. Las métricas se monitorizan constantemente. Cuando los números se ponen rojos, el vector de retirada óptimo ya ha sido identificado. La cobardía es solo mitigación de riesgo con mejor imagen.</p>
+<blockquote>
+<p>"Las bajas proyectadas exceden la asignación trimestral. Recomiendo desenganche inmediato."<br />
+<strong>Evaluador de Riesgos, Análisis en Combate</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Salud</th>
+<th style="text-align: center;">Mov</th>
+<th style="text-align: center;">Combate</th>
+<th style="text-align: center;">Defensa</th>
+<th style="text-align: center;">Astucia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">4"</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">2d10</td>
+<td style="text-align: center;">2d8</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Armas</strong>: Distancia</p>
+<p><strong>Armadura</strong>: Media (2 reducción)</p>
+<ul>
+<li>Pistola de Evaluación: d6 <code>Proyectil</code>, repite 1s</li>
+<li>Chaleco de Responsabilidad: 2 reducción, -1 a tiradas de Crítico contra ti</li>
+<li>Suite de Probabilidad: Repite 1s en <code>Defensa</code></li>
+</ul>
+<p><strong>Prevención de Pérdidas</strong>: Una vez por partida, cuando una miniatura amiga a 6" quedaría <code>Fuera de Combate</code>, esa miniatura en su lugar sobrevive con 1 <code>Salud</code>. Declara inmediatamente al resolver el daño.</p>
+
+
+
+
+<h2 id="especialista-en-liquidación">Especialista en Liquidación</h2>
+<p>Resuelve activos de bajo rendimiento. Rescinde contratos permanentemente. Sin negociaciones. Sin contraofertas. Cuando los Departamentos necesitan que algo deje de existir, llaman a este. Metodología: directa. Resultados: finales.</p>
+<p>Diecisiete años de rescisiones han dejado marcas. El movimiento es lento ahora, deliberado, conservando energía para los momentos que importan. Cada golpe lleva el peso de indemnizaciones acumuladas. Cada impacto representa cierre. Sin disfrute en el trabajo. Sin necesidad de ello.</p>
+<blockquote>
+<p>"Tu revisión de rendimiento ha concluido. Los resultados no son apelables."<br />
+<strong>Especialista en Liquidación, Aviso Final</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Salud</th>
+<th style="text-align: center;">Mov</th>
+<th style="text-align: center;">Combate</th>
+<th style="text-align: center;">Defensa</th>
+<th style="text-align: center;">Astucia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">3"</td>
+<td style="text-align: center;">2d10</td>
+<td style="text-align: center;">2d8</td>
+<td style="text-align: center;">2d6</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Armas</strong>: Cuerpo a cuerpo</p>
+<p><strong>Armadura</strong>: Pesada (3 reducción)</p>
+<ul>
+<li>Cuchilla de Rescisión: d10 <code>Cortante</code>, repite 1s y 2s, +2 vs. blindado</li>
+<li>Placa de Aviso Final: 3 reducción, +1 <code>Salud</code></li>
+</ul>
+<p><strong>Paquete de Indemnización</strong>: Los ataques contra objetivos heridos infligen +d6 de daño.</p>
+
+
+
+<h1 id="reglas-opcionales">Reglas Opcionales</h1>
+<p>Los Departamentos nunca paran de innovar. Nuevos protocolos emergen de los estudios de eficiencia de Asignación de Recursos. Algunas plantillas los adoptan. La mayoría no sobrevive lo suficiente para notar la diferencia.</p>
+<h2 id="calor">Calor</h2>
+<p>Los Departamentos rastrean la actividad de contratistas. Las plantillas eficaces atraen atención. La atención atrae refuerzos.</p>
+<p>Registra el Calor en una escala de 0 a 6. Todas las campañas empiezan en Calor 0.</p>
+<h3 id="ganar-calor">Ganar Calor</h3>
+<p>Al final de cualquier misión en la que elimines todos los hostiles: gana 2 Calor.</p>
+<h3 id="perder-calor">Perder Calor</h3>
+<p>Al inicio de cada misión: pierde 1 Calor (mínimo 0).</p>
+<h3 id="efectos-del-calor">Efectos del Calor</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Calor</th>
+<th>Efecto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0-2</td>
+<td>Sin efecto</td>
+</tr>
+<tr>
+<td style="text-align: center;">3-4</td>
+<td>Todas las apariciones hostiles obtienen +1 miniatura</td>
+</tr>
+<tr>
+<td style="text-align: center;">5-6</td>
+<td>Todas las apariciones hostiles obtienen +2 miniaturas</td>
+</tr>
+</tbody>
+</table>
+
+
+<h3 id="versus-con-hostiles">Versus con Hostiles</h3>
+<p>Cuando ambas plantillas juegan con hostiles, comparten un marcador de Calor. Cualquier plantilla que elimine a todos los hostiles aumenta el Calor.</p>
+<blockquote>
+<p>"Las métricas de rendimiento indican eficiencia elevada de contratistas en el Sector 7. Se recomienda reasignación de activos."<br />
+<strong>Memo Interno de Asignación de Recursos</strong></p>
+</blockquote>
+
+
+<h2 id="trofeos">Trofeos</h2>
+<p>Operaciones de Ingresos rastrea las bajas. Las eliminaciones de alto valor significan bonificaciones extra. Los Departamentos lo llaman alineación de incentivos.</p>
+<p>Al final de cada misión, gana subs por eliminaciones confirmadas:</p>
+<table>
+<thead>
+<tr>
+<th>Objetivo</th>
+<th style="text-align: right;">Bonus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Líder hostil (mayor <code>Salud</code> del grupo)</td>
+<td style="text-align: right;">3 subs</td>
+</tr>
+<tr>
+<td>Hostil con habilidad especial</td>
+<td style="text-align: right;">2 subs</td>
+</tr>
+<tr>
+<td>Hostil estándar</td>
+<td style="text-align: right;">1 sub</td>
+</tr>
+</tbody>
+</table>
+<p>Solo cuentan las bajas de tu plantilla. Hostiles eliminados por otros hostiles o peligros no pagan nada.</p>
+
+
+<h2 id="escalada">Escalada</h2>
+<p>El Complejo aprende. Los hostiles se adaptan a las incursiones repetidas de contratistas. La supervivencia genera resistencia.</p>
+<p>Registra victorias de campaña. Cada 3 victorias, los hostiles escalan:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Victorias</th>
+<th>Escalada</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">3</td>
+<td>Los hostiles aparecen con +1 <code>Salud</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td>Los líderes hostiles ganan <code>+1 ND</code> a todos los atributos</td>
+</tr>
+<tr>
+<td style="text-align: center;">9</td>
+<td>Todas las apariciones hostiles obtienen +1 miniatura</td>
+</tr>
+</tbody>
+</table>
+<p>La escalada es acumulativa. A las 9 victorias, los hostiles tienen las tres bonificaciones.</p>
+<blockquote>
+<p>"Las pérdidas trimestrales superan las proyecciones. Se recomienda despliegue de activos mejorado."<br />
+<strong>Evaluación de Amenazas de Seguridad y Cumplimiento</strong></p>
+</blockquote>
+
+
+
+
+<h2 id="final-de-campaña-la-fuente">Final de Campaña: La Fuente</h2>
+<p>Con 9 <code>Pruebas</code>, la primera plantilla en llegar decide: una misión más para victoria estándar con 10, o arriesgarlo todo en la extracción ahora. La señal llevó hasta aquí. Seiscientos años de puertas selladas en las Raíces más profundas. Los Departamentos enviaron equipos antes. Ninguno regresó. Ahora sabes lo que enterraron.</p>
+<p>La Fuente emite en frecuencias anteriores al Complejo. Anteriores al Anclaje. Anteriores a todo lo que los Departamentos construyeron su autoridad. Sácala y los Departamentos pierden el control. Sácala y alguien finalmente conoce la verdad.</p>
+<h4 id="terreno">Terreno</h4>
+<p>Las Raíces. Infraestructura colapsada, iluminación de emergencia. Los escombros bloquean rutas directas.</p>
+<h4 id="despliegue">Despliegue</h4>
+<p><strong>Extractor:</strong> Una miniatura porta la Fuente. Despliega a 6" de un borde.</p>
+<p><strong>Interceptor:</strong> Despliega a 6" del borde opuesto. En partida solitaria o cooperativa, déjalo vacío.</p>
+<p><strong>Hostiles:</strong> Aparición <code>Élite</code> en el centro tras el despliegue.</p>
+<h4 id="amenazas">Amenazas</h4>
+<ul>
+<li><strong>Ronda 2+:</strong> Aparición <code>Normal</code> desde el borde del Extractor</li>
+<li><strong>Ronda 4+:</strong> Aparición <code>Élite</code> desde el borde de salida</li>
+</ul>
+<h4 id="la-fuente">La Fuente</h4>
+<p>El portador de la Fuente sufre <code>-1 ND</code> a <code>Astucia</code> y no puede usar <code>Poderes de Emisión</code>.</p>
+<p>Si el portador queda <code>Fuera de Combate</code>, cualquier miniatura a 1" la recoge (<code>Interactuar</code>). Si no, cae en su sitio.</p>
+<p><strong>Detonación:</strong> Al final de la partida, la Fuente explota. Todas las miniaturas a 3" reciben d6 de daño (ignora armadura).</p>
+<p><strong>Extracción:</strong> El Extractor sale por el borde opuesto con la Fuente. Victoria de campaña.</p>
+<p><strong>Intercepción:</strong> El Interceptor tiene la Fuente al final o elimina a todas las miniaturas del Extractor. El Extractor pierde d6 <code>Pruebas</code> y todas las <code>Pistas</code>. El Interceptor captura la Fuente. Con 9 <code>Pruebas</code>, el portador de la Fuente se convierte en Extractor.</p>
+<p><strong>Fracaso:</strong> La Fuente perdida ante hostiles o sin miniaturas amigas. Pierde d6 <code>Pruebas</code> y todas las <code>Pistas</code>. Los Departamentos entierran la señal. Otra vez.</p>
+    </div>
+</div>
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('.app-menu');
+            if (!nav) return;
+            nav.dataset.open = nav.dataset.open === 'true' ? 'false' : 'true';
+        }
+
+        // Mobile page scaling - scales entire page proportionally
+        function updatePageScale() {
+            const content = document.querySelector('.content');
+            if (!content) return;
+            const pageWidth = 559; // 148mm in px at 96dpi
+            const viewportWidth = window.innerWidth;
+            // Match CSS breakpoint: max-width: 980px means <= 980
+            if (viewportWidth <= 980) {
+                const scale = Math.min(1, viewportWidth / pageWidth);
+                content.style.setProperty('--page-scale', scale.toFixed(3));
+                // Calculate centering offset
+                const scaledWidth = pageWidth * scale;
+                const leftOffset = (viewportWidth - scaledWidth) / 2;
+                content.style.setProperty('--page-offset', leftOffset + 'px');
+            } else {
+                content.style.removeProperty('--page-scale');
+                content.style.removeProperty('--page-offset');
+            }
+        }
+        window.addEventListener('resize', updatePageScale);
+        document.addEventListener('DOMContentLoaded', updatePageScale);
+    </script>
+    <script>
+        // Scroll spy: highlight current section in sidebar
+        function updateActiveLink() {
+            const headers = document.querySelectorAll('h1[id], h2[id], h3[id]');
+            const links = document.querySelectorAll('.sidebar-nav a');
+            const sidebar = document.querySelector('.sidebar');
+            const offset = 100; // Account for sticky header
+
+            let current = '';
+            headers.forEach(header => {
+                const top = header.getBoundingClientRect().top;
+                if (top < offset) {
+                    current = header.id;
+                }
+            });
+
+            links.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                    // Auto-scroll sidebar to keep active item in view
+                    if (sidebar) {
+                        const linkRect = link.getBoundingClientRect();
+                        const sidebarRect = sidebar.getBoundingClientRect();
+                        const linkTop = linkRect.top - sidebarRect.top;
+                        const linkBottom = linkRect.bottom - sidebarRect.top;
+                        const visibleHeight = sidebar.clientHeight;
+                        // Scroll if link is outside visible area (with padding)
+                        if (linkTop < 50 || linkBottom > visibleHeight - 50) {
+                            link.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        }
+                    }
+                }
+            });
+        }
+
+        // Mobile sidebar toggle
+        function toggleSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            const overlay = document.querySelector('.sidebar-overlay');
+            if (sidebar) {
+                sidebar.classList.toggle('mobile-open');
+                if (overlay) overlay.classList.toggle('active');
+            }
+        }
+
+        window.addEventListener('scroll', updateActiveLink);
+        document.addEventListener('DOMContentLoaded', updateActiveLink);
+    </script>
+</body>
+</html>

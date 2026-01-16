@@ -1,0 +1,12 @@
+{
+  "table_name": "Selección de Escenario",
+  "source": "09_campaign.md",
+  "columns": ["Gap", "d3: 1", "d3: 2", "d3: 3"],
+  "align": ["center", "left", "left", "left"],
+  "display_columns": ["Brecha", "d3: 1", "d3: 2", "d3: 3"],
+  "items": [
+    {"gap": "**0-1**", "d3_1": "El Bloque Condenado", "d3_2": "Ruta del Traficante", "d3_3": "El Altar de la Onda"},
+    {"gap": "**2-3**", "d3_1": "Claves de Cifrado", "d3_2": "La Barricada", "d3_3": "Emboscada"},
+    {"gap": "**4+**", "d3_1": "Sin Piedad", "d3_2": "La Reliquia", "d3_3": "Apalancamiento"}
+  ]
+}

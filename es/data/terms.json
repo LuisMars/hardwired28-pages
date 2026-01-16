@@ -1,0 +1,17 @@
+{
+  "description": "Lista maestra de terminología del juego para validación",
+  "source": "TRANSLATION.md",
+  "attributes": ["Combate", "Defensa", "Astucia"],
+  "dice_system": ["ND"],
+  "conditions": ["Fuera de Combate", "Huida", "Trabado", "herido", "blindado", "sin blindaje"],
+  "roles": ["Jefe", "Recurso"],
+  "actions": ["Buscar", "Interrogar", "Atacar", "Apuntar", "Destrabarse", "Interactuar", "Saquear", "Moverse de Nuevo", "Respuesta"],
+  "objects": ["Marcador de Botín", "Prueba", "Reliquia"],
+  "weapon_types": ["Cortante", "Contundente", "Proyectil", "Energía", "Explosivo", "Tóxico", "Estático", "Emisión"],
+  "weapon_abilities": ["Empuje", "Repite 1s", "Repite 1s y 2s", "Ignora cobertura", "Sin pifias", "Sobrecarga"],
+  "notes": {
+    "herido": "Miniatura por debajo de **su** Salud máxima",
+    "blindado": "Miniatura con cualquier armadura",
+    "sin blindaje": "Miniatura sin armadura"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "table_name": "Crítico `Proyectil`",
+  "source": "05_criticals.md",
+  "columns": ["d6", "Result", "Effect"],
+  "align": ["center", "left", "left"],
+  "display_columns": ["d6", "Resultado", "Efecto"],
+  "items": [
+    {"roll": 1, "result": "Rozado", "effect": "+d4 de daño"},
+    {"roll": 2, "result": "Perforado", "effect": "2 daño por activación esta partida (no acumula)"},
+    {"roll": 3, "result": "Tambaleante", "effect": "`-1 ND` `Defensa` permanente"},
+    {"roll": 4, "result": "Atravesado", "effect": "Suelta arma (en la posición de la miniatura)"},
+    {"roll": 5, "result": "Acribillado", "effect": "`-1 ND` a todos los atributos permanente"},
+    {"roll": "6+", "result": "Destripado", "effect": "`FdC`, -2 a la tirada de Heridas"}
+  ]
+}

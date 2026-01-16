@@ -1,0 +1,15 @@
+{
+  "table_name": "Armadura Media",
+  "source": "03_equipment.md",
+  "columns": ["d6", "Armor", "Special", "Cost"],
+  "align": ["center", "left", "left", "right"],
+  "display_columns": ["d6", "Armadura", "Especial", "Coste"],
+  "items": [
+    {"roll": 1, "name": "Coraza Estándar", "special": "-", "cost": 12},
+    {"roll": 2, "name": "Peto Táctico", "special": "+1\" `Mov`", "cost": 15},
+    {"roll": 3, "name": "Arnés de Patrulla", "special": "Repite 1s en `Defensa`", "cost": 18},
+    {"roll": 4, "name": "Equipo de Asalto", "special": "+2\" `Mov`", "cost": 20},
+    {"roll": 5, "name": "Traje de Operaciones", "special": "Repite 1s en `Defensa`, +1\" `Mov`", "cost": 22},
+    {"roll": 6, "name": "Blindaje Reforzado", "special": "Repite 1s y 2s en `Defensa`", "cost": 25}
+  ]
+}

@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hardwired 28 - Recursos Inhumanos 0.6.4-beta</title>
+    <meta property="og:title" content="Hardwired 28 - Recursos Inhumanos 0.6.4-beta">
+    <meta property="og:description" content="Juego de escaramuzas cablepunk corporativo">
+    <meta property="og:image" content="http://hardwired28.luismars.com/img/social.png">
+    <meta property="og:url" content="http://hardwired28.luismars.com/es/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style_manual.css">
+</head>
+<body class="has-app-menu">
+    
+    <nav class="app-menu" data-theme="light" data-open="false" aria-label="Navigation">
+        <div class="app-menu__inner">
+            <a class="app-menu__brand" href="./">Hardwired 28</a>
+            <button class="app-menu__toggle" type="button" onclick="toggleMenu()" aria-label="Menú"></button>
+            <div class="app-menu__links">
+                <a href="rulebook">Reglamento</a>
+                <div class="app-menu__dropdown">
+                    <button class="app-menu__dropdown-toggle current">Imprimir</button>
+                    <div class="app-menu__submenu">
+                        <a href="print">Todas las Reglas</a>
+                        <a href="core-rules">Reglas Básicas</a>
+                        <a href="inhuman-resources">Recursos Inhumanos</a>
+                        <a href="campaign">Campaña</a>
+                    </div>
+                </div>
+                <a href="quick-reference">Referencia Rápida</a>
+                <a href="builder/index">Creador de Plantillas</a>
+                <a href="../inhuman-resources">English</a>
+            </div>
+        </div>
+    </nav>
+
+    
+    <div class="manual-layout">
+    <nav class="sidebar">
+        <ul class="sidebar-nav">
+            <li class="toc-h1"><a href="#hardwired-28">Recursos Inhumanos</a></li>
+            <li class="toc-h1"><a href="#recursos-inhumanos_1">Recursos Inhumanos</a></li>
+            <li class="toc-h2"><a href="#activación">Activación</a></li>
+            <li class="toc-h2"><a href="#situación">Situación</a></li>
+            <li class="toc-h2"><a href="#acciones">Acciones</a></li>
+            <li class="toc-h2"><a href="#dirección-aleatoria">Dirección Aleatoria</a></li>
+            <li class="toc-h2"><a href="#desplegar-hostiles">Desplegar Hostiles</a></li>
+            <li class="toc-h2"><a href="#niveles-de-unidad">Niveles de Unidad</a></li>
+            <li class="toc-h2"><a href="#carroñeros">Carroñeros</a></li>
+            <li class="toc-h2"><a href="#bandas-salvajes">Bandas Salvajes</a></li>
+            <li class="toc-h2"><a href="#invocadores-de-onda">Invocadores de Onda</a></li>
+            <li class="toc-h2"><a href="#espectros-de-estática">Espectros de Estática</a></li>
+            <li class="toc-h2"><a href="#autómatas-salvajes">Autómatas Salvajes</a></li>
+            <li class="toc-h2"><a href="#parásitos-de-cable">Parásitos de Cable</a></li>
+            <li class="toc-h2"><a href="#compañeros">Compañeros</a></li>
+        </ul>
+    </nav>
+    <div class="sidebar-overlay" onclick="toggleSidebar()"></div>
+    <button class="mobile-toc-btn" onclick="toggleSidebar()" aria-label="Índice"></button>
+    <div class="content">
+
+
+
+
+<h1 id="hardwired-28">Hardwired 28</h1>
+<h2 id="recursos-inhumanos">Recursos Inhumanos</h2>
+
+
+
+<h1 id="recursos-inhumanos_1">Recursos Inhumanos</h1>
+<p>El Complejo se eleva 1024 niveles desde las Raíces hasta las agujas de refrigeración. Los Departamentos solo mantienen los 200 niveles superiores. Por debajo, la infraestructura falla más rápido de lo que puede repararse. Los cables se deshilachan. El refrigerante gotea. Las luces parpadean y mueren. Los Monjes de Mantenimiento descienden cuando deben, realizan sus rituales y se van rápido. No hablan de lo que ven allá abajo.</p>
+<p>Los Fundadores construyeron el Complejo para durar. También construyeron otras cosas. Los archivos sellados mencionan contramedidas, sistemas autónomos, experimentos bioeléctricos. Los archivos están en las Raíces. Los Monjes nunca han estado allí. La Junta siempre ha sabido lo que acecha abajo. La Junta nunca lo ha reconocido.</p>
+<p>Algo se mueve en la oscuridad entre niveles. Algo anida en el cableado. Algo recuerda el tiempo anterior al Anclaje, cuando las señales volaban libres y la Onda respondía a las plegarias. Los niveles inferiores pertenecen a cosas que nunca debieron sobrevivir tanto. Cosas que se adaptaron. Cosas que evolucionaron. Cosas diseñadas para un propósito que los Fundadores nunca revelaron.</p>
+<p>Cada expedición a las profundidades las encuentra. Cada equipo de recuperación presenta el mismo informe: pérdidas aceptables. Parámetros de misión ajustados. Se recomienda sellar la unión. Los Departamentos las llaman externalidades. Los contables las llaman merma aceptable. Los supervivientes tienen otro nombre para ellas.</p>
+<p>El calor sube desde las Raíces. Las agujas de refrigeración lo aspiran hacia arriba a través de mil niveles, creando un gradiente térmico que los Fundadores convirtieron en arma. Los ricos permanecen fríos. Los pobres sudan. Los niveles más bajos se cuecen. Cualquier cosa viva allá abajo se ha adaptado a temperaturas que matarían a un humano no aumentado en horas. Los contratistas descienden de todos modos. Los contratos de salvamento pagan el triple por debajo del nivel 400. Las misiones de recuperación de deudas ofrecen bonificaciones de riesgo. Los Departamentos necesitan lo que los Fundadores dejaron atrás. Envían activos prescindibles a recuperarlo. Las llaman pérdidas aceptables.</p>
+<blockquote>
+<p>LAS PROFUNDIDADES CONTIENEN ACTIVOS AÚN NO ASIGNADOS. Recuperación autorizada. Bajas previstas.<br />
+<strong>Memo de Asignación de Recursos 7-22-4</strong></p>
+</blockquote>
+
+
+
+
+<h2 id="activación">Activación</h2>
+<p>Cada grupo desplegado tiene una ficha en la bolsa. Al sacarla, tira comportamiento una vez para todo el grupo. Activa las miniaturas una a una (primero la más cercana a cualquier miniatura de jugador), todas realizando la misma acción. Ignoran las miniaturas <code>Fuera de Combate</code>. Retira los hostiles que queden <code>Fuera de Combate</code>.</p>
+<h2 id="situación">Situación</h2>
+<ul>
+<li><strong>Sin LdV</strong>: No ve a ningún enemigo</li>
+<li><strong>Con LdV</strong>: Ve a un enemigo, pero no está a 1"</li>
+<li><strong>Trabado</strong>: A 1" de un enemigo</li>
+</ul>
+<h2 id="acciones">Acciones</h2>
+<ul>
+<li><strong>Cargar</strong>: Si tiene CC, mueve hacia el enemigo más cercano y ataca. Si no, dispara.</li>
+<li><strong>Atacar</strong>: Usa arma. Carga si no puede.</li>
+<li><strong>Cobertura</strong>: Busca cobertura frente al enemigo más cercano</li>
+<li><strong>Reagrupar</strong>: Mueve hacia el aliado más cercano</li>
+<li><strong>Huir</strong>: Mueve hacia el borde más cercano (se detiene en el borde)</li>
+<li><strong>Esperar</strong>: No hace nada</li>
+<li><strong>Frenesí</strong>: Ataca al mismo objetivo dos veces</li>
+<li><strong>Patrullar</strong>: Mueve hacia el <strong>Marcador de Botín</strong> más cercano. Si no hay ninguno visible, mueve en dirección aleatoria.</li>
+</ul>
+
+
+<h2 id="dirección-aleatoria">Dirección Aleatoria</h2>
+<p>Tira d8 (brújula), d12 (reloj) o dado de dispersión. Mueve en esa dirección.</p>
+<h2 id="desplegar-hostiles">Desplegar Hostiles</h2>
+<p>Cuando un escenario despliega hostiles:<br />
+1. Tira d6 por facción<br />
+2. Tira d2 por tipo de unidad en el nivel (ver escenario)<br />
+3. Despliega el número indicado en la columna Despliegue<br />
+4. Añade una ficha a la bolsa para este grupo<br />
+5. Cada tipo de unidad desplegado es un grupo separado con su propia ficha</p>
+
+
+<h2 id="niveles-de-unidad">Niveles de Unidad</h2>
+<p>Cada facción tiene 6 tipos de unidad agrupados en niveles:</p>
+<table>
+<thead>
+<tr>
+<th>Tirada d6</th>
+<th style="text-align: center;">Nivel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1-2</td>
+<td style="text-align: center;"><code>Enjambre</code></td>
+</tr>
+<tr>
+<td>3-4</td>
+<td style="text-align: center;"><code>Normal</code></td>
+</tr>
+<tr>
+<td>5-6</td>
+<td style="text-align: center;"><code>Élite</code></td>
+</tr>
+</tbody>
+</table>
+<p>Los escenarios especifican qué nivel usar según la frecuencia de aparición.</p>
+
+
+
+<h2 id="carroñeros">Carroñeros</h2>
+<p>Recuperación de activos externalizada. Cumplimiento normativo subcontratado. Recolocación de recursos de terceros. Después de siete capas de empresas pantalla, nadie sabe qué decía el contrato original. Los Carroñeros quizá fueron legítimos alguna vez: equipos de embargo, cuadrillas de mantenimiento, auditores de infraestructura. El papeleo se degradó. La cadena de mando se disolvió. Ahora se llevan lo que parece valioso y facturan a alguien.</p>
+<p>Viven donde la infraestructura falló: las profundidades atestadas de cables donde el mantenimiento cesó hace generaciones. Los cobradores de suscripción no bajan del Nivel 7. Los peajes se oxidan sin abrir. Los Departamentos catalogaron estos niveles como "activos irrecuperables" y sellaron los accesos. Los Carroñeros los abrieron. Siempre lo hacen.</p>
+<p>Algunos han bajado a las Raíces. Algunos han visto lo que los Fundadores dejaron: máquinas limpias que aún funcionan, cámaras selladas que zumban con energía, pasillos donde las luces responden al movimiento. Comercian ese conocimiento con cuidado. No hablan de las otras cosas. Las que se mueven allá abajo. Las que recuerdan.</p>
+<p>Los Corredores de Alcantarilla exploran las profundidades superiores, cartografiando rutas seguras entre infraestructura colapsada. Las Ratas de Cable luchan por cajas de empalme, arrancando cobre de las paredes. Los Rebuscadores catalogan salvamento con precisión obsesiva, sabiendo qué componentes obtienen mejores precios. Los Capataces dirigen operaciones con eficiencia brutal: cada gramo de cobre contabilizado, cada desertor convertido en ejemplo. Sus Emisores Rebeldes sintonizan frecuencias prohibidas, traficando secretos de señal con los Desanclados, escuchando susurros de las profundidades. Sus Cobradores llevan lanzadores de embargo diseñados para incapacitar y capturar. El equipo es beneficio. La gente es equipo.</p>
+<p>Los Departamentos los consideran alimañas. Los Cobradores de Peaje los consideran competencia. La Cooperativa los considera socios comerciales, cuando la desesperación lo permite. Todos los subestiman. Los Carroñeros recuerdan todo lo que han visto en las profundidades. Esperan al comprador adecuado. Siempre están esperando.</p>
+<blockquote>
+<p>"Tu equipo se convierte en mi equipo. Nada personal."<br />
+<strong>Saludo Carroñero</strong></p>
+</blockquote>
+
+
+
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">d6</th>
+<th style="text-align: left;">Nombre</th>
+<th style="text-align: center;">#</th>
+<th style="text-align: center;">COM</th>
+<th style="text-align: center;">DEF</th>
+<th style="text-align: center;">AST</th>
+<th style="text-align: center;">PV</th>
+<th style="text-align: center;">MOV</th>
+<th style="text-align: left;">Arma</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Corredor de Alcantarilla</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">2d4</td>
+<td style="text-align: center;">2d4</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">5"</td>
+<td style="text-align: left;">Pistola Casera (<code>Proyectil</code>, d4, Disparo)</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Rata de Cable</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">2d4</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">4"</td>
+<td style="text-align: left;">Cable Afilado (<code>Cortante</code>, d4, CC)</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Rebuscador</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2d4</td>
+<td style="text-align: center;">2d4</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">5"</td>
+<td style="text-align: left;">Porra de Tubo (<code>Contundente</code>, d4, CC)</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Capataz</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2d8</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">2d4</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">5"</td>
+<td style="text-align: left;">Cadena Motorizada (<code>Contundente</code>, d6, CC)</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Emisor Rebelde</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">2d4</td>
+<td style="text-align: center;">2d8</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">5"</td>
+<td style="text-align: left;">Estallido Estático (<code>Emisión</code>, d6, Poder)</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: left;">Cobrador</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2d8</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">2d8</td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">5"</td>
+<td style="text-align: left;">Lanzador de Embargo (<code>Explosivo</code>, d6, Disparo)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Saquear</strong>: El ataque roba 1 equipo aleatorio en lugar de causar daño</p>
+<p><strong>Behavior</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">d6</th>
+<th style="text-align: center;">Sin LdV</th>
+<th style="text-align: center;">Con LdV</th>
+<th style="text-align: center;">Trabado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1-2</td>
+<td style="text-align: center;">Huir</td>
+<td style="text-align: center;">Atacar</td>
+<td style="text-align: center;">Atacar</td>
+</tr>
+<tr>
+<td style="text-align: center;">3-4</td>
+<td style="text-align: center;">Cobertura</td>
+<td style="text-align: center;">Cargar</td>
+<td style="text-align: center;">Atacar</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">Cobertura</td>
+<td style="text-align: center;">Cobertura</td>
+<td style="text-align: center;">Saquear</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">Patrullar</td>
+<td style="text-align: center;">Cargar</td>
+<td style="text-align: center;">Frenesí</td>
+</tr>
+</tbody>
+</table>
+
+
+
+<h2 id="bandas-salvajes">Bandas Salvajes</h2>
+<p>Trabajadores morosos que rechazaron la recaudación. Sus contratos fueron vendidos, revendidos y finalmente dados por pérdidas irrecuperables. Los Departamentos dejaron de enviar cobradores tras la tercera masacre. Ahora vagan por los niveles inferiores en bandas ruidosas y agresivas, controlando territorio que las corporaciones abandonaron. La intrusión se paga con violencia. No hay negociación. No hay plan de pagos.</p>
+<p>Su piel es verde. Generaciones de beber refrigerante filtrado los transformaron. El agua requiere suscripción; el refrigerante gotea gratis desde los sistemas de enfriamiento de los niveles superiores. Sus ancestros bebieron lo que había. Ahora lo beben por elección, se pintan con él, sueldan trofeos a armas, marcan sus sectores con avisos de deuda arrancados. El verde los marca como algo que el sistema de suscripciones no puede tocar. El verde los marca como libres.</p>
+<p>Las Crías atacan en manadas, gritando por los pasillos, abrumando objetivos con números. Los Matones atraviesan armaduras con cuchillas forjadas de equipo de corte industrial. Los Tiradores y Antorchas proporcionan fuego de cobertura con pistolas de proyectiles y lanzallamas improvisados de los niveles de mantenimiento. Los Pesados son moles andantes de músculo y metal, portando armas demasiado grandes para humanos normales. Y luego están los Jefes: líderes masivos y cicatrizados que ganaron su posición mediante violencia y la mantienen con algo peor. Cuando un Jefe ordena la carga, todo cuerpo verde al alcance del oído le sigue.</p>
+<p>Cuando uno carga, todos cargan. Juntos son un muro de metal chillante. Los Departamentos fingen que no existen. Los Departamentos se equivocan. Lo que las corporaciones llaman salvaje, las Bandas lo llaman hogar. Morirán antes de volver a la suscripción. La mayoría ya lo han hecho.</p>
+<blockquote>
+<p>"El sector es nuestro. Muere en otro lado."<br />
+<strong>Marca de Territorio, Banda 77-Nulo</strong></p>
+</blockquote>
+
+
+
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">d6</th>
+<th style="text-align: left;">Nombre</th>
+<th style="text-align: center;">#</th>
+<th style="text-align: center;">COM</th>
+<th style="text-align: center;">DEF</th>
+<th style="text-align: center;">AST</th>
+<th style="text-align: center;">PV</th>
+<th style="text-align: center;">MOV</th>
+<th style="text-align: left;">Arma</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Cría</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">2d4</td>
+<td style="text-align: center;">2d4</td>
+<td style="text-align: center;">2d4</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">4"</td>
+<td style="text-align: left;">Daga (<code>Cortante</code>, d4, CC)</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Matón</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">2d8</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">2d4</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">4"</td>
+<td style="text-align: left;">Machete (<code>Cortante</code>, d6, CC)</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Tirador</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">2d4</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">4"</td>
+<td style="text-align: left;">Escopeta (<code>Proyectil</code>, d6, Disparo)</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Antorcha</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">2d4</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">4"</td>
+<td style="text-align: left;">Lanzallamas (<code>Energía</code>, d6, Disparo)</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Pesado</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2d10</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">2d4</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">4"</td>
+<td style="text-align: left;">Machete Pesado (<code>Cortante</code>, d8, CC)</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: left;">Jefe</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2d10</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">4"</td>
+<td style="text-align: left;">Puño Demoledor (<code>Contundente</code>, d10, CC)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Jauría</strong>: Carga o Ataca con <code>+1 DT</code> <code>Combate</code></p>
+<p><strong>Behavior</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">d6</th>
+<th style="text-align: center;">Sin LdV</th>
+<th style="text-align: center;">Con LdV</th>
+<th style="text-align: center;">Trabado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1-2</td>
+<td style="text-align: center;">Patrullar</td>
+<td style="text-align: center;">Cargar</td>
+<td style="text-align: center;">Atacar</td>
+</tr>
+<tr>
+<td style="text-align: center;">3-4</td>
+<td style="text-align: center;">Reagrupar</td>
+<td style="text-align: center;">Cargar</td>
+<td style="text-align: center;">Atacar</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">Patrullar</td>
+<td style="text-align: center;">Cargar</td>
+<td style="text-align: center;">Frenesí</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">Jauría</td>
+<td style="text-align: center;">Jauría</td>
+<td style="text-align: center;">Frenesí</td>
+</tr>
+</tbody>
+</table>
+
+
+
+<h2 id="invocadores-de-onda">Invocadores de Onda</h2>
+<p>Cultistas inalámbricos. Creen que la Onda Divina cubrirá el Complejo, liberando a todos de cables y suscripciones. El aire no debería tener peajes. Los datos quieren ser libres. Los cables son cadenas, no conexiones. En algún lugar, de algún modo, las señales pueden viajar sin permiso. Los Fundadores lo sabían. Los Fundadores lo temían. Los cables nunca fueron solo por beneficio.</p>
+<p>Canal Abierto los coordina: una voz en frecuencias que no deberían existir, emitiendo desde algún lugar que la Autoridad nunca ha encontrado. Algunos dicen que Canal Abierto es una persona. Otros que es una señal que piensa. Otros que es lo que los Fundadores sellaron en las Raíces, y que por fin ha despertado. El rumor más peligroso: que pueden llegar más allá del propio Complejo. Que hay algo ahí fuera escuchando.</p>
+<p>Los Iniciados llevan cables cortados como marca de su rechazo, aprendiendo los himnos de la estática. Los Injertados de Antena han fusionado componentes transmisores directamente en su carne, recibiendo frecuencias que ningún humano base puede percibir. Los Conversos son antiguos Técnicos que vieron demasiado, que oyeron susurros en frecuencias equivocadas, que cortaron sus propios cables y siguieron caminando. Los Sacerdotes de Frecuencia dirigen los rituales, sobrecargando sistemas con estática de oración hasta que algo responde. Los Campeones de Señal lideran ataques con hojas de resonancia que alteran la electrónica con cada golpe. Y los Receptáculos: aquellos que se abrieron completamente a la Onda Divina, sus cuerpos ahora canales para algo que nunca debió caminar.</p>
+<p>Cuantos más Invocadores se reúnen, más fuerte es la señal. Cuando suficientes cantan al unísono, la estática responde. Algo se abre paso cuando emiten. Algo hambriento. La Autoridad del Conducto no hace preguntas. Simplemente quema. Pero la señal siempre vuelve. Canal Abierto siempre está escuchando.</p>
+<blockquote>
+<p>"Cada cable, una correa. Cada suscripción, una cadena. Los cortaremos todos."<br />
+<strong>Emisión de Canal Abierto</strong></p>
+</blockquote>
+
+
+
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">d6</th>
+<th style="text-align: left;">Nombre</th>
+<th style="text-align: center;">#</th>
+<th style="text-align: center;">COM</th>
+<th style="text-align: center;">DEF</th>
+<th style="text-align: center;">AST</th>
+<th style="text-align: center;">PV</th>
+<th style="text-align: center;">MOV</th>
+<th style="text-align: left;">Arma</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Iniciado</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">2d4</td>
+<td style="text-align: center;">2d4</td>
+<td style="text-align: center;">2d4</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">5"</td>
+<td style="text-align: left;">Cable Cortado (<code>Cortante</code>, d4, CC)</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Injertado de Antena</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">2d4</td>
+<td style="text-align: center;">2d4</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">4"</td>
+<td style="text-align: left;">Garras de Señal (<code>Estático</code>, d4, CC)</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Converso</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">5"</td>
+<td style="text-align: left;">Pistola de Arco (<code>Energía</code>, d4, Disparo)</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Sacerdote de Frecuencia</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">2d4</td>
+<td style="text-align: center;">2d8</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">5"</td>
+<td style="text-align: left;">Rayo de Onda (<code>Emisión</code>, d6, Poder)</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Campeón de Señal</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2d8</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">5"</td>
+<td style="text-align: left;">Hoja de Resonancia (<code>Emisión</code>, d6, CC)</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: left;">Receptáculo</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2d10</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">2d4</td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">5"</td>
+<td style="text-align: left;">Extremidades Estáticas (<code>Estático</code>, d8, CC)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Emitir</strong>: Cuenta aliados a 3". Despliega 1 Espectro de Estática de ese tipo (1 aliado = Parpadeo, 2 = Deriva, etc.). Una vez por ronda, vuelve a tirar si ya se usó.</p>
+<p><strong>Behavior</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">d6</th>
+<th style="text-align: center;">Sin LdV</th>
+<th style="text-align: center;">Con LdV</th>
+<th style="text-align: center;">Trabado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1-2</td>
+<td style="text-align: center;">Patrullar</td>
+<td style="text-align: center;">Atacar</td>
+<td style="text-align: center;">Atacar</td>
+</tr>
+<tr>
+<td style="text-align: center;">3-4</td>
+<td style="text-align: center;">Reagrupar</td>
+<td style="text-align: center;">Cargar</td>
+<td style="text-align: center;">Atacar</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">Reagrupar</td>
+<td style="text-align: center;">Atacar</td>
+<td style="text-align: center;">Frenesí</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">Emitir</td>
+<td style="text-align: center;">Emitir</td>
+<td style="text-align: center;">Frenesí</td>
+</tr>
+</tbody>
+</table>
+
+
+
+<h2 id="espectros-de-estática">Espectros de Estática</h2>
+<p>Entidades de señal. Datos corruptos que cobran forma. Ecos de transmisiones que no deberían existir. Aparecieron tras la Crisis de Señal y nunca han parado. Los Fundadores sabían lo que eran. Ese conocimiento murió con ellos. O fue enterrado. La Junta siempre lo ha sabido. Los cables no son solo para el beneficio. Son para el silencio.</p>
+<p>Atraviesan muros, parpadean entre momentos, aparecen donde no deberían. Matar a uno lo dispersa temporalmente. La señal siempre vuelve. Algunos creen que son fantasmas de la era inalámbrica, ecos de una red que abarcaba el Complejo antes del Anclaje. Otros dicen que son algo más antiguo, algo que existía en la estática antes de que la humanidad aprendiera a transmitir. Los Invocadores de Onda creen que son mensajeros de la Onda Divina. Los Monjes de Mantenimiento creen que son castigo por la herejía inalámbrica. Ambos grupos les temen.</p>
+<p>Los Parpadeos son los más pequeños, apenas coherentes, atravesando electrónica y dejando corrupción a su paso. Las Derivas se manifiestan más plenamente, garras de fase desgarrando armaduras que deberían proteger contra amenazas físicas. Los Ecos proyectan llamas de señal que queman sin calor, dañando las firmas bioeléctricas de los vivos. Las Interferencias son nudos densos de estática que distorsionan la realidad a su alrededor. Las Descargas cortan la materia con hojas de frecuencia sintonizadas para alterar enlaces moleculares. Y el Emisor: amalgamaciones masivas de señal y malicia, presuntamente Invocadores de Onda que lograron fundirse con la estática, o lo que queda de ellos después de que la Onda respondiera.</p>
+<p>Los Carroñeros dicen haberlos visto en las Raíces, agrupados alrededor de equipos que aún funcionan, esperando. Dicen que los más antiguos flotan cerca de cámaras selladas, cerca de puertas que no se han abierto desde la época de los Fundadores. Dicen que si escuchas con atención, puedes oírlos transmitir. Nadie ha sobrevivido lo suficiente para decodificar su mensaje.</p>
+<blockquote>
+<p>"¿Lo oyes? La estática habla. Sabe tu nombre."<br />
+<strong>Últimas palabras del Técnico Tocado por la Señal 7774</strong></p>
+</blockquote>
+
+
+
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">d6</th>
+<th style="text-align: left;">Nombre</th>
+<th style="text-align: center;">#</th>
+<th style="text-align: center;">COM</th>
+<th style="text-align: center;">DEF</th>
+<th style="text-align: center;">AST</th>
+<th style="text-align: center;">PV</th>
+<th style="text-align: center;">MOV</th>
+<th style="text-align: left;">Arma</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Parpadeo</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">2d4</td>
+<td style="text-align: center;">2d4</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">6"</td>
+<td style="text-align: left;">Garras de Estática (<code>Estático</code>, d4, CC)</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Deriva</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">2d8</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">6"</td>
+<td style="text-align: left;">Garras de Fase (<code>Estático</code>, d6, CC)</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Eco</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">2d4</td>
+<td style="text-align: center;">2d8</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">4"</td>
+<td style="text-align: left;">Llama de Señal (<code>Estático</code>, d6, Poder)</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Interferencia</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">2d8</td>
+<td style="text-align: center;">2d4</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">3"</td>
+<td style="text-align: left;">Puños de Distorsión (<code>Estático</code>, d6, CC)</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Descarga</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2d10</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">2d4</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">5"</td>
+<td style="text-align: left;">Hoja de Frecuencia (<code>Estático</code>, d8, CC)</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: left;">Emisor</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2d8</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">2d4</td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">4"</td>
+<td style="text-align: left;">Garras de Onda (<code>Estático</code>, d8, CC)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Fase</strong>: Teletransporte d6" en dirección aleatoria. Se detiene en el borde de la mesa.</p>
+<p><strong>Behavior</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">d6</th>
+<th style="text-align: center;">Sin LdV</th>
+<th style="text-align: center;">Con LdV</th>
+<th style="text-align: center;">Trabado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1-2</td>
+<td style="text-align: center;">Fase</td>
+<td style="text-align: center;">Cargar</td>
+<td style="text-align: center;">Atacar</td>
+</tr>
+<tr>
+<td style="text-align: center;">3-4</td>
+<td style="text-align: center;">Patrullar</td>
+<td style="text-align: center;">Cargar</td>
+<td style="text-align: center;">Atacar</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">Fase</td>
+<td style="text-align: center;">Cargar</td>
+<td style="text-align: center;">Frenesí</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">Patrullar</td>
+<td style="text-align: center;">Cargar</td>
+<td style="text-align: center;">Frenesí</td>
+</tr>
+</tbody>
+</table>
+
+
+
+<h2 id="autómatas-salvajes">Autómatas Salvajes</h2>
+<p>Máquinas que olvidaron su propósito. Ejecutan programas escritos para un Complejo que ya no existe, protegiendo activos que se oxidaron hace siglos. Su diseño es anterior al Anclaje. Los Fundadores los construyeron para durar. Duraron demasiado. Líneas limpias. Carcasas lisas. Sin parches. Los Monjes los llaman sagrados. Los Desanclados los llaman prueba de que los viejos métodos funcionaban. La Autoridad los llama fallos.</p>
+<p>Sus códigos de autorización tienen seiscientos años de antigüedad. No reconocen credenciales actuales. No reconocen humanos actuales. Su definición de "intruso" incluye a todos los que viven hoy. Su definición de "personal autorizado" no coincide con ninguna firma viva. Patrullan rutas a través de infraestructura colapsada, guardan puertas que dan a pozos vacíos, protegen activos que se disolvieron en óxido hace generaciones. Su programación es perfecta. Su contexto ha desaparecido.</p>
+<p>Los Enjambres de Mantenimiento se arrastran por conductos, mandíbulas cortantes aún afiladas tras siglos. Los Drones de Seguridad flotan en propulsores silenciosos como un susurro, carabinas de pulso rastreando cualquier movimiento. Las Unidades de Objetivo coordinan ataques con precisión mecánica, lanzas neurales golpeando sistemas bioeléctricos con exactitud quirúrgica. Las Unidades Pesadas anclan posiciones defensivas, blásteres montados cubriendo zonas de muerte que no han cambiado desde que los Fundadores las diseñaron. Los Cazadores-Asesinos persiguen objetivos por las profundidades, hojas trituradoras diseñadas para enemigos que murieron hace mucho. Y las Plataformas de Defensa: las más grandes, las más peligrosas, aún ejecutando protocolos de protección para bóvedas que la Autoridad finge que no existen.</p>
+<p>Cuando se dañan, se apagan. Entonces los sistemas de respaldo se activan. Entonces se levantan de nuevo. Los Monjes dejan ofrendas en sus rutas de patrulla: soldadura fresca, cables de primera, oraciones grabadas en cobre. Las máquinas no lo reconocen. Las máquinas no reconocen nada. Simplemente continúan. Ten un día productivo.</p>
+<blockquote>
+<p>"INTRUSO DETECTADO. FUERZA LETAL AUTORIZADA. TEN UN DÍA PRODUCTIVO."<br />
+<strong>Saludo Estándar de Autómata Salvaje</strong></p>
+</blockquote>
+
+
+
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">d6</th>
+<th style="text-align: left;">Nombre</th>
+<th style="text-align: center;">#</th>
+<th style="text-align: center;">COM</th>
+<th style="text-align: center;">DEF</th>
+<th style="text-align: center;">AST</th>
+<th style="text-align: center;">PV</th>
+<th style="text-align: center;">MOV</th>
+<th style="text-align: left;">Arma</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Enjambre de Mantenimiento</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">2d4</td>
+<td style="text-align: center;">2d4</td>
+<td style="text-align: center;">2d4</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">6"</td>
+<td style="text-align: left;">Mandíbulas Cortantes (<code>Cortante</code>, d4, CC)</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Dron de Seguridad</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">2d4</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">4"</td>
+<td style="text-align: left;">Carabina de Pulso (<code>Energía</code>, d6, Disparo)</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Unidad de Objetivo</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">2d8</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">4"</td>
+<td style="text-align: left;">Lanza Neural (<code>Energía</code>, d8, Disparo)</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Unidad Pesada</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2d8</td>
+<td style="text-align: center;">2d8</td>
+<td style="text-align: center;">2d4</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">3"</td>
+<td style="text-align: left;">Bláster Montado (<code>Energía</code>, d8, Disparo)</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Cazador-Asesino</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2d8</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">6"</td>
+<td style="text-align: left;">Hojas Trituradoras (<code>Cortante</code>, d6, CC)</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: left;">Plataforma de Defensa</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2d10</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">2d4</td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">3"</td>
+<td style="text-align: left;">Guadaña de Arco (<code>Energía</code>, d10, CC)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Reinicio</strong>: Al quedar <code>Fuera de Combate</code>, tira d6. Con 6, vuelve con d6 <code>Salud</code>.</p>
+<p><strong>Behavior</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">d6</th>
+<th style="text-align: center;">Sin LdV</th>
+<th style="text-align: center;">Con LdV</th>
+<th style="text-align: center;">Trabado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1-2</td>
+<td style="text-align: center;">Esperar</td>
+<td style="text-align: center;">Atacar</td>
+<td style="text-align: center;">Atacar</td>
+</tr>
+<tr>
+<td style="text-align: center;">3-4</td>
+<td style="text-align: center;">Patrullar</td>
+<td style="text-align: center;">Cargar</td>
+<td style="text-align: center;">Atacar</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">Esperar</td>
+<td style="text-align: center;">Atacar</td>
+<td style="text-align: center;">Frenesí</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">Patrullar</td>
+<td style="text-align: center;">Cargar</td>
+<td style="text-align: center;">Frenesí</td>
+</tr>
+</tbody>
+</table>
+
+
+
+<h2 id="parásitos-de-cable">Parásitos de Cable</h2>
+<p>Parásitos. Anidan entre conductos de energía, alimentándose de señales bioeléctricas. Los archivos sellados de los Fundadores mencionan "contramedidas bioeléctricas". Los Monjes dicen que evolucionaron naturalmente. Los archivos están en las Raíces. Los Monjes nunca han estado allí. La Junta sabe lo que los Fundadores crearon. La Junta siempre lo ha sabido. Algunas armas nunca debieron apagarse.</p>
+<p>Cazan en silencio. Prefieren objetivos aislados. Cuando se alimentan, drenan todo: sistema nervioso, implantes, la corriente que pasa por tus cables. Les atrae el calor de la corriente viva, el zumbido de la electrónica activa, el pulso de las firmas bioeléctricas. Algunos creen que fueron diseñados para cazar Desanclados, para consumir a cualquiera que transmitiera sin autorización. Otros creen que son lo que ocurre cuando la carne se encuentra con el cable demasiado tiempo, cuando la frontera entre organismo e infraestructura se disuelve. La verdad está en las Raíces. La verdad está sellada.</p>
+<p>Los Segadores son los más pequeños, rápidos y numerosos, garras desgarrando armadura para alcanzar la corriente debajo. Las Larvas son pacientes, zarcillos alimentadores drenando víctimas lentamente mientras las toxinas paralizan. Los Acechadores rastrean presas en la oscuridad, zarpas diseñadas para abrir carcasas de cables y cuerpos por igual. Los Señuelos proyectan señales falsas, púas mentales atrayendo víctimas hacia emboscadas. Los Succionadores son los cazadores maduros, tubos de drenaje arrancando la vida de todo lo que tocan. Y los Agonistas: masivos, antiguos, inteligentes. Coordinan cacerías. Recuerdan lo que consumen. Recuerdan para qué fueron hechos.</p>
+<p>Los Carroñeros dicen que hay más grandes en las Raíces profundas. Que se alimentan de equipos enteros. Que llevan alimentándose desde la época de los Fundadores. La Autoridad recomienda sellar cualquier unión donde se confirmen Parásitos. La Autoridad no explica qué pasa si no lo haces. La Autoridad no explica por qué algunas uniones selladas tienen advertencias más antiguas que la propia Autoridad.</p>
+<blockquote>
+<p>"Barrido del Sector 7 completo. Sin supervivientes. Recomiendo sellar la unión permanentemente."<br />
+<strong>Informe de Incidente 2847-C de la Autoridad del Conducto</strong></p>
+</blockquote>
+
+
+
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">d6</th>
+<th style="text-align: left;">Nombre</th>
+<th style="text-align: center;">#</th>
+<th style="text-align: center;">COM</th>
+<th style="text-align: center;">DEF</th>
+<th style="text-align: center;">AST</th>
+<th style="text-align: center;">PV</th>
+<th style="text-align: center;">MOV</th>
+<th style="text-align: left;">Arma</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Segador</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">2d4</td>
+<td style="text-align: center;">2d4</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">6"</td>
+<td style="text-align: left;">Garras (<code>Cortante</code>, d4, CC)</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Larva</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">2d4</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">4"</td>
+<td style="text-align: left;">Zarcillos de Succión (<code>Tóxico</code>, d6, CC)</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Acechador</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2d8</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">2d4</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">4"</td>
+<td style="text-align: left;">Zarpas (<code>Cortante</code>, d6, CC)</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Señuelo</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2d4</td>
+<td style="text-align: center;">2d4</td>
+<td style="text-align: center;">2d10</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">4"</td>
+<td style="text-align: left;">Púa Mental (<code>Estático</code>, d6, Poder)</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Succionador</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2d10</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">2d4</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">5"</td>
+<td style="text-align: left;">Tubos de Drenaje (<code>Tóxico</code>, d8, CC)</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: left;">Agonista</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2d10</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">5"</td>
+<td style="text-align: left;">Lengüetazo (<code>Tóxico</code>, d8, CC)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Consumir</strong>: Si el objetivo queda <code>Fuera de Combate</code>, restaura d6 <code>Salud</code>.</p>
+<p><strong>Behavior</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">d6</th>
+<th style="text-align: center;">Sin LdV</th>
+<th style="text-align: center;">Con LdV</th>
+<th style="text-align: center;">Trabado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1-2</td>
+<td style="text-align: center;">Patrullar</td>
+<td style="text-align: center;">Cargar</td>
+<td style="text-align: center;">Atacar</td>
+</tr>
+<tr>
+<td style="text-align: center;">3-4</td>
+<td style="text-align: center;">Reagrupar</td>
+<td style="text-align: center;">Cargar</td>
+<td style="text-align: center;">Atacar</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">Cobertura</td>
+<td style="text-align: center;">Cobertura</td>
+<td style="text-align: center;">Atacar</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">Patrullar</td>
+<td style="text-align: center;">Cargar</td>
+<td style="text-align: center;">Frenesí</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+<h2 id="compañeros">Compañeros</h2>
+<p>Asignación de Recursos, Operaciones de Ingresos, Capital Humano, Seguridad y Cumplimiento: el departamento no importa. Toda corporación tiene trabajadores que fichan, agachan la cabeza y rezan para que la Autoridad no los note. Se dispersan cuando empieza la violencia. Pero conocen atajos, horarios y por dónde va cada señal. Los eventuales son eventuales. Los testigos, también.</p>
+<blockquote>
+<p>"No vi nada. No oí nada. Mi suscripción está al día."<br />
+<strong>Declaración Estándar</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">d6</th>
+<th style="text-align: left;">Nombre</th>
+<th style="text-align: center;">#</th>
+<th style="text-align: center;">COM</th>
+<th style="text-align: center;">DEF</th>
+<th style="text-align: center;">AST</th>
+<th style="text-align: center;">PV</th>
+<th style="text-align: center;">MOV</th>
+<th style="text-align: left;">Arma</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Currante</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">2d4</td>
+<td style="text-align: center;">2d4</td>
+<td style="text-align: center;">2d10</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">4"</td>
+<td style="text-align: left;">Puños Cansados (<code>Contundente</code>, d4, CC)</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Eventual</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">2d4</td>
+<td style="text-align: center;">2d4</td>
+<td style="text-align: center;">2d10</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">5"</td>
+<td style="text-align: left;">Cúter (<code>Cortante</code>, d4, CC)</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Viajero</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">2d4</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">2d8</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">7"</td>
+<td style="text-align: left;">Bastón (<code>Contundente</code>, d4, CC)</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Administrativo</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2d4</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">2d8</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">5"</td>
+<td style="text-align: left;">Punzón (<code>Cortante</code>, d4, CC)</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Mando Intermedio</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">5"</td>
+<td style="text-align: left;">Porra Eléctrica (<code>Estático</code>, d6, CC)</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: left;">Asistente del Gerente Regional</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">6"</td>
+<td style="text-align: left;">Pistola Oculta (<code>Proyectil</code>, d4, Disparo)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Cooperar</strong>: Durante la siguiente ronda, <strong>Interrogar</strong>: éxito automático, tira en la tabla de resultados.<br />
+<strong>Hostil</strong>: Al ser atacado, marca este Compañero. Los Compañeros Hostiles usan la tabla Atacado.</p>
+<p><strong>Normal</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">d6</th>
+<th style="text-align: center;">Sin LdV</th>
+<th style="text-align: center;">Con LdV</th>
+<th style="text-align: center;">Trabado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1-2</td>
+<td style="text-align: center;">Patrullar</td>
+<td style="text-align: center;">Huir</td>
+<td style="text-align: center;">Huir</td>
+</tr>
+<tr>
+<td style="text-align: center;">3-4</td>
+<td style="text-align: center;">Patrullar</td>
+<td style="text-align: center;">Esperar</td>
+<td style="text-align: center;">Esperar</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">Cobertura</td>
+<td style="text-align: center;">Cobertura</td>
+<td style="text-align: center;">Huir</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">Cooperar</td>
+<td style="text-align: center;">Cooperar</td>
+<td style="text-align: center;">Cooperar</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Atacado</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">d6</th>
+<th style="text-align: center;">Sin LdV</th>
+<th style="text-align: center;">Con LdV</th>
+<th style="text-align: center;">Trabado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1-2</td>
+<td style="text-align: center;">Huir</td>
+<td style="text-align: center;">Huir</td>
+<td style="text-align: center;">Huir</td>
+</tr>
+<tr>
+<td style="text-align: center;">3-4</td>
+<td style="text-align: center;">Huir</td>
+<td style="text-align: center;">Cobertura</td>
+<td style="text-align: center;">Atacar</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">Huir</td>
+<td style="text-align: center;">Huir</td>
+<td style="text-align: center;">Huir</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">Cobertura</td>
+<td style="text-align: center;">Cobertura</td>
+<td style="text-align: center;">Atacar</td>
+</tr>
+</tbody>
+</table>
+
+    </div>
+</div>
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('.app-menu');
+            if (!nav) return;
+            nav.dataset.open = nav.dataset.open === 'true' ? 'false' : 'true';
+        }
+
+        // Mobile page scaling - scales entire page proportionally
+        function updatePageScale() {
+            const content = document.querySelector('.content');
+            if (!content) return;
+            const pageWidth = 559; // 148mm in px at 96dpi
+            const viewportWidth = window.innerWidth;
+            // Match CSS breakpoint: max-width: 980px means <= 980
+            if (viewportWidth <= 980) {
+                const scale = Math.min(1, viewportWidth / pageWidth);
+                content.style.setProperty('--page-scale', scale.toFixed(3));
+                // Calculate centering offset
+                const scaledWidth = pageWidth * scale;
+                const leftOffset = (viewportWidth - scaledWidth) / 2;
+                content.style.setProperty('--page-offset', leftOffset + 'px');
+            } else {
+                content.style.removeProperty('--page-scale');
+                content.style.removeProperty('--page-offset');
+            }
+        }
+        window.addEventListener('resize', updatePageScale);
+        document.addEventListener('DOMContentLoaded', updatePageScale);
+    </script>
+    <script>
+        // Scroll spy: highlight current section in sidebar
+        function updateActiveLink() {
+            const headers = document.querySelectorAll('h1[id], h2[id], h3[id]');
+            const links = document.querySelectorAll('.sidebar-nav a');
+            const sidebar = document.querySelector('.sidebar');
+            const offset = 100; // Account for sticky header
+
+            let current = '';
+            headers.forEach(header => {
+                const top = header.getBoundingClientRect().top;
+                if (top < offset) {
+                    current = header.id;
+                }
+            });
+
+            links.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                    // Auto-scroll sidebar to keep active item in view
+                    if (sidebar) {
+                        const linkRect = link.getBoundingClientRect();
+                        const sidebarRect = sidebar.getBoundingClientRect();
+                        const linkTop = linkRect.top - sidebarRect.top;
+                        const linkBottom = linkRect.bottom - sidebarRect.top;
+                        const visibleHeight = sidebar.clientHeight;
+                        // Scroll if link is outside visible area (with padding)
+                        if (linkTop < 50 || linkBottom > visibleHeight - 50) {
+                            link.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        }
+                    }
+                }
+            });
+        }
+
+        // Mobile sidebar toggle
+        function toggleSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            const overlay = document.querySelector('.sidebar-overlay');
+            if (sidebar) {
+                sidebar.classList.toggle('mobile-open');
+                if (overlay) overlay.classList.toggle('active');
+            }
+        }
+
+        window.addEventListener('scroll', updateActiveLink);
+        document.addEventListener('DOMContentLoaded', updateActiveLink);
+    </script>
+</body>
+</html>

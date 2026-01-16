@@ -1,0 +1,18 @@
+{
+  "table_name": "Descubrimiento de Pruebas",
+  "source": "3_02_evidence.md",
+  "columns": ["d10", "Prueba"],
+  "align": ["center", "left"],
+  "items": [
+    {"roll": 1, "evidence": "Fragmento de Señal Corrupta"},
+    {"roll": 2, "evidence": "Declaración de Testigo"},
+    {"roll": 3, "evidence": "Coordenadas sin Marcar"},
+    {"roll": 4, "evidence": "Confesión de Monje"},
+    {"roll": 5, "evidence": "Plano Pre-Anclaje"},
+    {"roll": 6, "evidence": "Orden de Supresión"},
+    {"roll": 7, "evidence": "Correspondencia de Fundadores"},
+    {"roll": 8, "evidence": "Análisis de Frecuencia"},
+    {"roll": 9, "evidence": "Protocolo de Anclaje Cero"},
+    {"roll": 10, "evidence": "La Grabación Original"}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "table_name": "Grenades",
+  "source": "03_equipment.md",
+  "columns": ["d6", "Weapon", "Effect", "Cost"],
+  "align": ["center", "left", "left", "right"],
+  "items": [
+    {"roll": 1, "name": "Smoke", "effect": "Blocks LoS until next round", "cost": 8},
+    {"roll": 2, "name": "Flash", "effect": "Target `-1 DT` next activation", "cost": 10},
+    {"roll": 3, "name": "Gas", "effect": "d6 `Toxic` damage", "cost": 10},
+    {"roll": 4, "name": "Incendiary", "effect": "d6 `Energy` damage, ignores cover", "cost": 12},
+    {"roll": 5, "name": "EMP", "effect": "d6 `Static` damage, `-1 DT` next activation", "cost": 12},
+    {"roll": 6, "name": "Frag", "effect": "d8 `Explosive` damage", "cost": 14}
+  ]
+}

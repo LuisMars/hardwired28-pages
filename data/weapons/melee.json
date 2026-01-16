@@ -1,0 +1,28 @@
+{
+  "table_name": "Melee Weapons",
+  "source": "03_equipment.md",
+  "columns": ["d20", "Weapon", "Type", "Damage", "Special", "Cost"],
+  "align": ["center", "left", "center", "center", "left", "right"],
+  "items": [
+    {"roll": 1, "name": "Knuckles", "type": "`Blunt`", "damage": "2", "special": "", "cost": 2},
+    {"roll": 2, "name": "Knife", "type": "`Bladed`", "damage": "d4", "special": "", "cost": 3},
+    {"roll": 3, "name": "Shiv", "type": "`Toxic`", "damage": "d4", "special": "+1 damage vs wounded", "cost": 4},
+    {"roll": 4, "name": "Prod", "type": "`Energy`", "damage": "d4", "special": "Target `-1 DT` next activation", "cost": 5},
+    {"roll": 5, "name": "Mace", "type": "`Blunt`", "damage": "d6", "special": "Knockback 1\"", "cost": 7},
+    {"roll": 6, "name": "Sword", "type": "`Bladed`", "damage": "d6", "special": "`+1 DT` when `Riposting`", "cost": 8},
+    {"roll": 7, "name": "Injector", "type": "`Toxic`", "damage": "d6", "special": "Re-roll 1s", "cost": 9},
+    {"roll": 8, "name": "Cable Whip", "type": "`Static`", "damage": "d6", "special": "2\" reach", "cost": 10},
+    {"roll": 9, "name": "Machete", "type": "`Bladed`", "damage": "d8", "special": "Re-roll 1s", "cost": 12},
+    {"roll": 10, "name": "Hammer", "type": "`Blunt`", "damage": "d8", "special": "Re-roll 1s, Knockback 1\"", "cost": 14},
+    {"roll": 11, "name": "Static Blade", "type": "`Static`", "damage": "d8", "special": "`+1 DT` vs wounded", "cost": 15},
+    {"roll": 12, "name": "Stunner", "type": "`Energy`", "damage": "d8", "special": "Target `-1 DT` next activation", "cost": 16},
+    {"roll": 13, "name": "Saber", "type": "`Bladed`", "damage": "d10", "special": "Re-roll 1s and 2s, +1 vs armored", "cost": 22},
+    {"roll": 14, "name": "Corrosive Blade", "type": "`Toxic`", "damage": "d10", "special": "+1 vs armored", "cost": 24},
+    {"roll": 15, "name": "Gauntlet", "type": "`Blunt`", "damage": "d10", "special": "Re-roll 1s and 2s, Knockback 1\"", "cost": 26},
+    {"roll": 16, "name": "Arc Claw", "type": "`Static`", "damage": "d10", "special": "Re-roll 1s, +1 to Critical roll", "cost": 28},
+    {"roll": 17, "name": "Chain Blade", "type": "`Bladed`", "damage": "d12", "special": "Re-roll 1s and 2s, +2 vs armored", "cost": 32},
+    {"roll": 18, "name": "Plague Fist", "type": "`Toxic`", "damage": "d12", "special": "Re-roll 1s, +1 damage vs wounded", "cost": 34},
+    {"roll": 19, "name": "Shock Maul", "type": "`Static`", "damage": "d12", "special": "Re-roll 1s, Knockback 2\", stuns on 6", "cost": 36},
+    {"roll": 20, "name": "Power Fist", "type": "`Energy`", "damage": "d12", "special": "Re-roll 1s and 2s, Knockback 2\"", "cost": 38}
+  ]
+}

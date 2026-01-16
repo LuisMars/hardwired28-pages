@@ -1,0 +1,16 @@
+{
+  "table_name": "Light Armor",
+  "source": "03_equipment.md",
+  "columns": ["d8", "Armor", "Special", "Cost"],
+  "align": ["center", "left", "left", "right"],
+  "items": [
+    {"roll": 1, "name": "Mesh Wrap", "special": "-1\" `Move`", "cost": 2},
+    {"roll": 2, "name": "Flak Wrap", "special": "-", "cost": 4},
+    {"roll": 3, "name": "Protective Lining", "special": "-1 to Critical table rolls against you", "cost": 6},
+    {"roll": 4, "name": "Padded Vest", "special": "Reduce `Knockback` by 1\"", "cost": 7},
+    {"roll": 5, "name": "Light Vest", "special": "+1\" `Move`", "cost": 9},
+    {"roll": 6, "name": "Defensive Mesh", "special": "Re-roll 1s on `Defense`", "cost": 12},
+    {"roll": 7, "name": "Runner's Harness", "special": "+2\" `Move`", "cost": 14},
+    {"roll": 8, "name": "Scout Suit", "special": "Re-roll 1s on `Defense`, +1\" `Move`", "cost": 16}
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "prefix": [
+    "The", "The Great", "The Blessed", "The Wretched", "The Lost",
+    "The Burning", "The Silent", "The Hollow", "The Broken", "The Fallen",
+    "The Last", "The First", "The Unchained", "The Severed", "The Bound",
+    "The Indebted", "The Voided", "The Marked", "The Grounded", "The Exiled"
+  ],
+  "core": [
+    "Iron", "Steel", "Chrome", "Copper", "Brass", "Bronze",
+    "Signal", "Voltage", "Static", "Surge", "Pulse", "Current",
+    "Wire", "Cable", "Circuit", "Coil", "Conduit", "Terminal",
+    "Null", "Dead", "Black", "Red", "Grey", "Burned",
+    "Rust", "Scrap", "Debt", "Wage", "Contract", "Toll"
+  ],
+  "suffix": [
+    "Collective", "Syndicate", "Division", "Corps", "Guild",
+    "Order", "Covenant", "Brotherhood", "Compact", "Cartel",
+    "Consortium", "Assembly", "Union", "League", "Crew",
+    "Gang", "Pack", "Cell", "Cadre", "Enforcers",
+    "Reclaimers", "Contractors", "Operators", "Executors", "Debtors"
+  ]
+}

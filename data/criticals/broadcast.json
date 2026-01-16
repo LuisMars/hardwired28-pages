@@ -1,0 +1,14 @@
+{
+  "table_name": "`Broadcast` Critical",
+  "source": "05_criticals.md",
+  "columns": ["d6", "Result", "Effect"],
+  "align": ["center", "left", "left"],
+  "items": [
+    {"roll": 1, "result": "Overload", "effect": "+d6 damage"},
+    {"roll": 2, "result": "Cascade", "effect": "Hit one additional target within 3\""},
+    {"roll": 3, "result": "Bandwidth Drain", "effect": "Target `-1 DT` `Wits` permanently"},
+    {"roll": 4, "result": "Amplify", "effect": "+d8 damage"},
+    {"roll": 5, "result": "Firewall Breach", "effect": "Ignore armor"},
+    {"roll": "6+", "result": "System Wipe", "effect": "`OoA`, -2 Injury roll"}
+  ]
+}

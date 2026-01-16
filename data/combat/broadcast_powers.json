@@ -1,0 +1,14 @@
+{
+  "table_name": "Broadcast Powers",
+  "source": "04a_broadcast_powers.md",
+  "columns": ["d6", "Power", "Effect"],
+  "align": ["center", "left", "left"],
+  "items": [
+    {"roll": 1, "power": "Static Burst", "effect": "d8 Broadcast damage, ignores armor"},
+    {"roll": 2, "power": "Resonance Push", "effect": "Push target d6\" in any direction"},
+    {"roll": 3, "power": "Signal Jam", "effect": "`-1 DT` all rolls until next activation"},
+    {"roll": 4, "power": "Neural Trap", "effect": "Target takes d6 damage if it moves next activation"},
+    {"roll": 5, "power": "Weapon Lock", "effect": "Target drops one weapon"},
+    {"roll": 6, "power": "Mind Lash", "effect": "Target attacks nearest model (friend or foe)"}
+  ]
+}

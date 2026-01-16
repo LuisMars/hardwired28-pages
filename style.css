@@ -1,0 +1,577 @@
+/* Hardwired 28 - A5 Print Stylesheet */
+@import url('style-base.css');
+
+html, body {
+    overflow-x: hidden;
+}
+
+@page {
+    size: A5;
+    margin: var(--page-margin-vertical) var(--page-margin-horizontal);
+}
+
+body {
+    font-size: var(--font-size-body);
+    line-height: 1.45;
+}
+
+/* Page numbering */
+.page::after {
+    content: counter(page-number);
+    position: absolute;
+    bottom: 5mm;
+    font-family: var(--font-heading);
+    font-size: var(--font-size-small);
+    z-index: 100;
+}
+
+/* Odd pages - page number on right */
+.page:nth-child(odd)::after {
+    right: var(--page-margin-horizontal);
+    left: auto;
+}
+
+/* Even pages - page number on left */
+.page:nth-child(even)::after {
+    left: var(--page-margin-horizontal);
+    right: auto;
+}
+
+@media screen and (min-width: 981px) {
+    body {
+        padding: 2em;
+        background: var(--color-bg-muted);
+    }
+
+    body.has-app-menu {
+        padding-top: calc(2em + var(--app-menu-height));
+    }
+}
+
+@media screen {
+    .content {
+        margin: 0 auto;
+        column-count: 1;
+        counter-reset: page-number;
+    }
+
+    .page {
+        width: 148mm;
+        height: 210mm;
+        margin: 0 auto 2em auto;
+        padding: var(--page-margin-vertical) var(--page-margin-horizontal);
+        background: white;
+        border: 1px solid #ccc;
+        position: relative;
+        overflow: visible;
+        counter-increment: page-number;
+        box-sizing: border-box;
+    }
+}
+
+/* Booklet mode - desktop only */
+@media screen and (min-width: 981px) {
+    body.booklet-mode .content {
+        display: grid;
+        grid-template-columns: repeat(2, 148mm);
+        justify-content: center;
+        gap: 2em 1em;
+    }
+
+    body.booklet-mode .page {
+        margin: 0;
+    }
+
+    body.booklet-mode .page:first-child {
+        grid-column: 1 / -1;
+        justify-self: center;
+    }
+
+    /* Odd/even page margins for binding */
+    body.booklet-mode .page:nth-child(odd) {
+        padding-left: var(--page-margin-spine);
+        padding-right: var(--page-margin-horizontal);
+    }
+
+    body.booklet-mode .page:nth-child(even) {
+        padding-left: var(--page-margin-horizontal);
+        padding-right: var(--page-margin-spine);
+    }
+
+    /* First page (cover) - uniform padding */
+    body.booklet-mode .page:first-child {
+        padding: var(--page-margin-vertical) var(--page-margin-horizontal);
+    }
+
+    /* Last page - uniform padding */
+    body.booklet-mode .page:last-child {
+        padding: var(--page-margin-vertical) var(--page-margin-horizontal);
+    }
+
+    /* Secondary covers break to new row, centered like first cover */
+    body.booklet-mode .page.secondary-cover {
+        grid-column: 1 / -1;
+        justify-self: center;
+        margin-top: 2em;
+    }
+}
+
+@media print {
+    .content {
+        counter-reset: page-number;
+    }
+
+    .page {
+        page-break-before: always;
+        counter-increment: page-number;
+        position: relative;
+        height: 210mm;
+        padding: var(--page-margin-vertical) var(--page-margin-horizontal);
+        box-sizing: border-box;
+    }
+
+    /* Odd/even page margins for binding (fake @page:left/@page:right) */
+    .page:nth-child(odd) {
+        padding-left: var(--page-margin-spine);
+        padding-right: var(--page-margin-horizontal);
+    }
+
+    .page:nth-child(even) {
+        padding-left: var(--page-margin-horizontal);
+        padding-right: var(--page-margin-spine);
+    }
+
+    /* First page - uniform padding */
+    .page:first-child {
+        padding: var(--page-margin-vertical) var(--page-margin-horizontal);
+        page-break-before: avoid;
+    }
+
+    /* Cover page - uniform padding */
+    .page.cover-page {
+        padding: var(--page-margin-vertical) var(--page-margin-horizontal);
+    }
+
+    /* Last page - uniform padding */
+    .page:last-child {
+        padding: var(--page-margin-vertical) var(--page-margin-horizontal);
+    }
+
+    .page::after {
+        bottom: 5mm;
+    }
+}
+
+/* Headings - print sizes */
+h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+}
+
+h1, h2, h3, h4, table, pre {
+    break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+}
+
+h1 {
+    font-size: var(--font-size-h1);
+    letter-spacing: 1pt;
+}
+
+h2 {
+    font-size: var(--font-size-h2);
+    border-bottom: 1.5px solid var(--color-border);
+    letter-spacing: 0.8pt;
+}
+
+h3 {
+    font-size: var(--font-size-h3);
+    letter-spacing: 0.5pt;
+}
+
+h4 {
+    font-size: var(--font-size-h4);
+    letter-spacing: 0.3pt;
+}
+
+h4 + p {
+    page-break-before: avoid;
+}
+
+/* Paragraphs */
+p {
+    margin-block-start: 2mm;
+    margin-block-end: 2mm;
+    orphans: 3;
+    widows: 3;
+}
+
+/* Blockquote - Flavor Quotes */
+blockquote {
+    margin-block-start: 2mm;
+    margin-block-end: 2mm;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding: 1.5mm 3mm;
+    border-left: 2px solid var(--color-border);
+    font-style: italic;
+    font-size: var(--font-size-small);
+    break-inside: avoid;
+}
+
+blockquote p {
+    margin: 0;
+}
+
+blockquote p:first-child {
+    font-style: italic;
+}
+
+blockquote p:last-child strong,
+blockquote strong {
+    display: block;
+    font-style: normal;
+    font-size: var(--font-size-tiny);
+    color: var(--color-text-muted);
+    margin-top: 0.5mm;
+}
+
+/* Lists */
+ol, ul {
+    padding-inline-start: 2.5mm;
+}
+
+/* Tables - print styles */
+table {
+    font-size: var(--font-size-tiny);
+    page-break-inside: avoid;
+}
+
+table + h1,
+table + h2,
+table + h3,
+table + h4,
+table + h5,
+table + h6 {
+    margin-top: 3mm;
+}
+
+/* Large text wrapper for bigger tables */
+.large-text table {
+    font-size: var(--font-size-h2);
+    font-family: var(--font-heading);
+}
+
+.large-text h3 {
+    font-size: var(--font-size-h2);
+}
+
+.large-text th:empty {
+    display: none;
+}
+
+/* Spacer */
+.spacer {
+    height: 5mm;
+}
+
+th, td {
+    padding: 0.2em 0.3em;
+}
+
+th {
+    background: var(--color-table-header-bg);
+    color: var(--color-table-header-text);
+}
+
+td:last-child {
+    text-align: right;
+}
+
+/* HR */
+hr {
+    page-break-after: avoid;
+}
+
+/* Code */
+code {
+    white-space: nowrap;
+}
+
+pre {
+    font-size: var(--font-size-tiny);
+    page-break-inside: avoid;
+}
+
+h4 + p,
+h4 + p + p,
+h4 + p + p + p {
+    page-break-before: avoid;
+    page-break-inside: avoid;
+}
+
+@media print {
+    .preview-notice {
+        display: none;
+    }
+}
+
+/* Column layouts */
+.single-column {
+    column-count: 1 !important;
+}
+
+.two-column {
+    column-count: 2 !important;
+    column-gap: 4mm;
+}
+
+@media screen {
+    .two-column {
+        column-fill: balance;
+    }
+}
+
+@media print {
+    .two-column {
+        column-fill: balance;
+    }
+}
+
+.two-column h1,
+.two-column h2,
+.two-column h3,
+.two-column h4,
+.two-column table,
+.two-column pre {
+    break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+}
+
+.column-break {
+    break-after: column;
+    -webkit-column-break-after: always;
+}
+
+.column-break-visible {
+    break-after: column;
+    -webkit-column-break-after: always;
+    border-top: 1px dashed #ccc;
+}
+
+@media print {
+    .column-break-visible {
+        border: none;
+    }
+}
+
+.full-width {
+    column-span: all;
+    -webkit-column-span: all;
+}
+
+.page-break-marker {
+    column-span: all;
+    -webkit-column-span: all;
+    border-top: 1px dashed #ccc;
+}
+
+.page-break-marker::before {
+    font-size: var(--font-size-tiny);
+}
+
+@media screen {
+    .page-break-marker::before {
+        content: "- - - Section Break - - -";
+    }
+}
+
+@media print {
+    .page-break-marker {
+        border: none;
+    }
+
+    .page-break-marker::before {
+        display: none;
+    }
+}
+
+table, pre, blockquote {
+    page-break-inside: avoid;
+}
+
+@media print {
+    * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}
+
+/* File indicator */
+.file-indicator {
+    position: absolute;
+    top: 2mm;
+    right: 2mm;
+    font-size: var(--font-size-micro);
+    color: #999;
+    opacity: 0.5;
+    font-family: var(--font-mono);
+    z-index: 10;
+}
+
+@media print {
+    .file-indicator {
+        display: none;
+    }
+}
+
+/* Cover page */
+.page.cover-page {
+    padding: var(--page-margin-vertical) var(--page-margin-horizontal);
+    overflow: hidden;
+    background-size: calc(100% - 2 * var(--page-margin-horizontal));
+    background-position: center calc(100% - 1.5 * var(--page-margin-vertical));
+    background-repeat: no-repeat;
+}
+
+.page.cover-page .cover-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.page.cover-page h1 {
+    position: absolute;
+    top: 5mm;
+    left: 5mm;
+    right: 5mm;
+    text-align: center;
+    color: #000;
+    font-size: var(--font-size-cover-h1);
+    font-weight: 900;
+    letter-spacing: 0;
+    z-index: 10;
+    margin: 0;
+    border-bottom: none;
+    transform-origin: center;
+}
+
+.page.cover-page h2 {
+    position: absolute;
+    top: 26mm;
+    left: 10mm;
+    right: 10mm;
+    text-align: center;
+    color: #000;
+    font-size: var(--font-size-cover-h2);
+    font-weight: 900;
+    z-index: 10;
+    margin: 0;
+    border-bottom: none;
+    transform-origin: center;
+}
+
+
+.page.cover-page::after {
+    display: none;
+}
+
+.page.cover-page .file-indicator {
+    display: none;
+}
+
+/* Index page */
+.index-entries {
+    columns: 2;
+    column-gap: 8mm;
+}
+
+.index-h1, .index-h2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+    padding: 0.2em 0;
+}
+
+.index-h1 {
+    font-family: var(--font-heading);
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-top: 0.4em;
+    border-bottom: 1px dotted #ccc;
+}
+
+.index-h2 {
+    padding-left: 1em;
+    font-size: var(--font-size-small);
+}
+
+/* Index link reset */
+.index-h1 a,
+.index-h2 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.index-h1 a:hover,
+.index-h2 a:hover {
+    text-decoration: underline;
+}
+
+.index-page::after {
+    display: none;
+}
+
+/* Mobile responsive - single page view only, no booklet */
+/* Uses 980px to match app-menu hamburger breakpoint */
+@media screen and (max-width: 980px) {
+    /* Remove body padding on mobile */
+    body {
+        padding: 0 !important;
+        overflow-x: hidden;
+    }
+
+    /* Only keep app-menu height offset, no extra padding */
+    body.has-app-menu {
+        padding-top: var(--app-menu-height) !important;
+    }
+
+    /* Force single-page layout on mobile (no booklet mode) */
+    .content,
+    body.booklet-mode .content {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        grid-template-columns: none !important;
+        width: 100vw;
+        overflow-x: hidden;
+    }
+
+    /* Scale pages to fit viewport - keeps all proportions (fonts, margins, etc) */
+    .page,
+    .page:first-child,
+    body.booklet-mode .page,
+    body.booklet-mode .page:first-child,
+    body.booklet-mode .page:nth-child(odd),
+    body.booklet-mode .page:nth-child(even),
+    body.booklet-mode .page:last-child {
+        transform: scale(var(--page-scale, 1));
+        transform-origin: top left;
+        /* Compensate for scaled height: pull up by the "empty" space */
+        margin-bottom: calc(-210mm * (1 - var(--page-scale, 1))) !important;
+        margin-top: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        grid-column: auto !important;
+        justify-self: auto !important;
+        padding: var(--page-margin-vertical) var(--page-margin-horizontal) !important;
+    }
+
+    /* Hide view toggle on mobile (no booklet option) */
+    .app-menu__actions {
+        display: none;
+    }
+
+}

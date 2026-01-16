@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hardwired 28 - Team Building 0.6.5-beta</title>
+    <meta property="og:title" content="Hardwired 28 - Team Building 0.6.5-beta">
+    <meta property="og:description" content="Corporate cablepunk skirmish wargame">
+    <meta property="og:image" content="http://hardwired28.luismars.com/img/social.png">
+    <meta property="og:url" content="http://hardwired28.luismars.com/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style_manual.css">
+</head>
+<body class="has-app-menu">
+    
+    <nav class="app-menu" data-theme="corporate" data-open="false" aria-label="Navigation">
+        <div class="app-menu__inner">
+            <a class="app-menu__brand" href="./">Hardwired 28</a>
+            <button class="app-menu__toggle" type="button" onclick="toggleMenu()" aria-label="Menu"></button>
+            <div class="app-menu__links">
+                <a href="rulebook">Rulebook</a>
+                <div class="app-menu__dropdown">
+                    <button class="app-menu__dropdown-toggle current">Print</button>
+                    <div class="app-menu__submenu">
+                        <a href="print">All Rules</a>
+                        <a href="core-rules">Core Rules</a>
+                        <a href="inhuman-resources">Inhuman Resources</a>
+                        <a href="campaign">Campaign</a>
+                        <a href="team-building">Team Building</a>
+                    </div>
+                </div>
+                <a href="quick-reference">Quick Reference</a>
+                <a href="builder/">Squad Builder</a>
+                <a href="es/team-building">Castellano</a>
+            </div>
+        </div>
+    </nav>
+
+    
+    <div class="manual-layout">
+    <nav class="sidebar">
+        <ul class="sidebar-nav">
+            <li class="toc-h1"><a href="#hardwired-28">Team Building</a></li>
+            <li class="toc-h1"><a href="#team-building_1">Team Building</a></li>
+            <li class="toc-h2"><a href="#solo-operations">Solo Operations</a></li>
+            <li class="toc-h2"><a href="#activation-tokens">Activation Tokens</a></li>
+            <li class="toc-h2"><a href="#token-removal">Token Removal</a></li>
+            <li class="toc-h2"><a href="#hostile-behavior">Hostile Behavior</a></li>
+            <li class="toc-h2"><a href="#solo-campaign">Solo Campaign</a></li>
+            <li class="toc-h2"><a href="#scenario-selection">Scenario Selection</a></li>
+            <li class="toc-h2"><a href="#scenario-adaptation">Scenario Adaptation</a></li>
+            <li class="toc-h2"><a href="#cooperative-operations">Cooperative Operations</a></li>
+            <li class="toc-h2"><a href="#team-size">Team Size</a></li>
+            <li class="toc-h2"><a href="#model-assignment">Model Assignment</a></li>
+            <li class="toc-h2"><a href="#activation-tokens_1">Activation Tokens</a></li>
+            <li class="toc-h2"><a href="#campaign">Campaign</a></li>
+            <li class="toc-h2"><a href="#scenario-scaling">Scenario Scaling</a></li>
+            <li class="toc-h2"><a href="#mercenary-ladder-optional">Mercenary Ladder (Optional)</a></li>
+            <li class="toc-h2"><a href="#hiring-rules">Hiring Rules</a></li>
+            <li class="toc-h2"><a href="#the-ladder">The Ladder</a></li>
+            <li class="toc-h2"><a href="#mercenary-rules">Mercenary Rules</a></li>
+            <li class="toc-h2"><a href="#mode-compatibility">Mode Compatibility</a></li>
+            <li class="toc-h2"><a href="#the-intern">The Intern</a></li>
+            <li class="toc-h2"><a href="#team-leader">Team Leader</a></li>
+            <li class="toc-h2"><a href="#success-engineer">Success Engineer</a></li>
+            <li class="toc-h2"><a href="#disruption-consultant">Disruption Consultant</a></li>
+            <li class="toc-h2"><a href="#performance-coach">Performance Coach</a></li>
+            <li class="toc-h2"><a href="#chief-morale-officer">Chief Morale Officer</a></li>
+            <li class="toc-h2"><a href="#risk-assessor">Risk Assessor</a></li>
+            <li class="toc-h2"><a href="#liquidation-specialist">Liquidation Specialist</a></li>
+            <li class="toc-h1"><a href="#optional-rules">Optional Rules</a></li>
+            <li class="toc-h2"><a href="#heat">Heat</a></li>
+            <li class="toc-h3"><a href="#gaining-heat">Gaining Heat</a></li>
+            <li class="toc-h3"><a href="#losing-heat">Losing Heat</a></li>
+            <li class="toc-h3"><a href="#heat-effects">Heat Effects</a></li>
+            <li class="toc-h3"><a href="#versus-play-with-hostiles">Versus Play with Hostiles</a></li>
+            <li class="toc-h2"><a href="#trophies">Trophies</a></li>
+            <li class="toc-h2"><a href="#escalation">Escalation</a></li>
+            <li class="toc-h2"><a href="#campaign-finale-the-source">Campaign Finale: The Source</a></li>
+        </ul>
+    </nav>
+    <div class="sidebar-overlay" onclick="toggleSidebar()"></div>
+    <button class="mobile-toc-btn" onclick="toggleSidebar()" aria-label="Contents"></button>
+    <div class="content">
+
+
+
+
+<h1 id="hardwired-28">Hardwired 28</h1>
+<h2 id="team-building">Team Building</h2>
+
+
+
+<h1 id="team-building_1">Team Building</h1>
+<p>The Departments have discovered something: collaboration works. Not between Departments, of course. Between contractors. Field operations run smoother when expendable assets coordinate. Fewer replacement costs. Higher retrieval rates. Better quarterly projections. Human Capital ran a pilot program. The survivors reported improved outcomes.</p>
+<p>Solo contractors work alone. One operative, full authority, zero witnesses. The Departments use solo assets for sensitive extractions. Deniability increases. Collateral decreases. Subscription costs drop when you only have to pay one survivor.</p>
+<p>The Mercenary Registry predates the current Department structure. Eight specialists maintained by Revenue Operations. They cost nothing upfront. They take percentages. They die permanently. Replacements are expensive. They unlock sequentially. The Registry controls the pipeline.</p>
+
+
+<p>Adapt or be replaced.</p>
+<blockquote>
+<p>SYNERGY THROUGH VIOLENCE. COLLABORATION THROUGH FEAR.<br />
+<strong>Human Capital Recruitment Poster</strong></p>
+</blockquote>
+
+
+<h2 id="solo-operations">Solo Operations</h2>
+<p>You against the Complex. No backup. No second opinions. Standard warband (1 <code>Boss</code>, 4 <code>Resources</code>), standard objectives, hostile opposition on every front.</p>
+<h2 id="activation-tokens">Activation Tokens</h2>
+<p>Solo play uses the standard activation bag with one modification: hostiles activate individually rather than as groups.</p>
+<p><strong>Your Warband</strong>: Add 1 token per model (5 tokens total).</p>
+<p><strong>Hostiles</strong>: Add 1 token per hostile model. Each hostile has its own token in the bag.</p>
+<h2 id="token-removal">Token Removal</h2>
+<p>Remove tokens for <code>Out of Action</code> models at the start of the next round. A model that goes <code>Out of Action</code> mid-round may still have its token drawn (skip the activation).</p>
+
+
+<h2 id="hostile-behavior">Hostile Behavior</h2>
+<p>Hostiles use behavior tables from Inhuman Resources. Each hostile activates independently when its token is drawn.</p>
+<h2 id="solo-campaign">Solo Campaign</h2>
+<p>Track <code>Evidence</code>, <code>Leads</code>, and the Post-Game Sequence normally. Standard campaign victory.</p>
+<h2 id="scenario-selection">Scenario Selection</h2>
+<p>Roll d3 for tier, d3 for scenario. Or play scenarios sequentially.</p>
+<h2 id="scenario-adaptation">Scenario Adaptation</h2>
+<p>In Aggressor/Defender scenarios, you are always Defender. Follow Defender placement and deployment rules. During deployment, spawn one hostile group in the Aggressor zone (centered). Scenario threats spawn normally.</p>
+
+
+
+<h2 id="cooperative-operations">Cooperative Operations</h2>
+<p>Multiple players, one warband, pure cooperation. You share resources, share blessings, share the blame when things go wrong.</p>
+<h2 id="team-size">Team Size</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Players</th>
+<th style="text-align: center;">Models per Player</th>
+<th style="text-align: center;">Total Warband</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">6</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">6</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">8</td>
+</tr>
+</tbody>
+</table>
+<h2 id="model-assignment">Model Assignment</h2>
+<p>Before each mission, divide models among players. Each player controls their assigned models for the entire mission. The player controlling the <code>Boss</code> makes tie-breaking decisions.</p>
+<h2 id="activation-tokens_1">Activation Tokens</h2>
+<p><strong>Friendly Models</strong>: Add 1 token per model. When a token is drawn, the player controlling that model activates it.</p>
+<p><strong>Hostiles</strong>: Add 1 token per spawn group (standard activation rules from Inhuman Resources).</p>
+
+
+<h2 id="campaign">Campaign</h2>
+<p>The team shares <code>Evidence</code>, <code>Leads</code>, warband roster, and subs balance. All players must be present for each mission. Standard Post-Game Sequence and campaign victory.</p>
+<p>Roll d3 for tier, d3 for scenario. Or play scenarios sequentially.</p>
+<h2 id="scenario-scaling">Scenario Scaling</h2>
+<p>Scale hostile spawns based on warband size.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Total Models</th>
+<th>Hostile Modifier</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">6</td>
+<td>+1 model per spawn</td>
+</tr>
+<tr>
+<td style="text-align: center;">8</td>
+<td>+2 models per spawn</td>
+</tr>
+</tbody>
+</table>
+<p>In Aggressor/Defender scenarios, you are always Defender. During deployment, spawn one hostile group in the Aggressor zone (centered).</p>
+
+
+
+<h2 id="mercenary-ladder-optional">Mercenary Ladder (Optional)</h2>
+<p>The Departments maintain a registry of independent contractors. Not freelancers. Specialists. They cost nothing to hire. They take a percentage of everything you recover. They do not gain experience. They already know everything worth knowing. They cannot be fired. They never formally joined.</p>
+<p>When they die, they stay dead. The registry updates. The next name becomes available. Revenue Operations controls the pipeline. They always have another name ready.</p>
+<h2 id="hiring-rules">Hiring Rules</h2>
+<p><strong>Timing</strong>: Hire between missions only.</p>
+<p><strong>Limit</strong>: 1 mercenary per squad.</p>
+<p><strong>Cost</strong>: Free. Mercenaries take their cut directly from mission payouts.</p>
+<p><strong>Roster Slot</strong>: Mercenaries count against your personnel limit. A squad with a mercenary has 4 regular models plus 1 mercenary.</p>
+
+
+<h2 id="the-ladder">The Ladder</h2>
+<p>Mercenaries unlock in sequence. You start with access to the first mercenary on the ladder. When that mercenary dies, the next one becomes available.</p>
+<ol>
+<li>Hire the first available mercenary (or choose not to hire)</li>
+<li>When your current mercenary goes <code>Out of Action</code>, they die</li>
+<li>The next mercenary on the ladder becomes available</li>
+<li>Repeat until all eight are dead</li>
+</ol>
+<p>Once all eight mercenaries are dead, no more are available for that campaign. Use them wisely.</p>
+<h2 id="mercenary-rules">Mercenary Rules</h2>
+<p><strong>No Experience</strong>: Mercenaries do not earn Merits. They cannot be promoted.</p>
+<p><strong>No Injuries</strong>: If they go <code>Out of Action</code>, they die. No recovery roll.</p>
+<p><strong>Cannot Be Fired</strong>: Mercenaries leave when they die. Not before.</p>
+<p><strong>Fixed Loadout</strong>: Equipment cannot be changed, sold, or transferred.</p>
+<h2 id="mode-compatibility">Mode Compatibility</h2>
+<p>Mercenaries work in all modes. In cooperative play, the team shares the mercenary ladder. In versus play with hostiles, each warband has its own ladder.</p>
+
+
+
+
+<h2 id="the-intern">The Intern</h2>
+<p>Fresh from the training division. Eager, expendable, easily replaced. The Departments always have more where this one came from. Human Capital cycles through Interns faster than subscription notices. Most don't survive orientation. The ones who make it to field deployment have already learned the essential lesson: nobody is coming to help.</p>
+<p>Standard-issue equipment. Requisitions won't authorize anything better. Orders followed without question. Deviation means termination. Expendability breeds caution. When one dies, another identical face appears in the roster. The Departments call this efficiency.</p>
+<blockquote>
+<p>"First day on the job. They said I'd learn fast. They didn't say what."<br />
+<strong>Intern Orientation Feedback Form</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Health</th>
+<th style="text-align: center;">Move</th>
+<th style="text-align: center;">Combat</th>
+<th style="text-align: center;">Defense</th>
+<th style="text-align: center;">Wits</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">5"</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">2d6</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Weapons</strong>: Both</p>
+<p><strong>Armor</strong>: Light (1 reduction)</p>
+<ul>
+<li>Requisition Blade: d6 <code>Bladed</code></li>
+<li>Starter Pistol: d6 <code>Projectile</code>, 6" range</li>
+<li>Training Vest: 1 reduction</li>
+</ul>
+<p><strong>Unpaid Overtime</strong>: The first time The Intern goes <code>Out of Action</code> each campaign, they return at the start of the next mission with full <code>Health</code>. The second time, they die permanently.</p>
+
+
+
+
+<h2 id="team-leader">Team Leader</h2>
+<p>Seventeen years in middle management. Survived four restructurings, two hostile takeovers, and one literal hostile incursion. Knows how to delegate. Knows better how to position subordinates between themselves and incoming fire.</p>
+<p>The clipboard never leaves their hand. Nobody knows what's on it. Meetings happen mid-firefight. Nobody questions it. Value lies not in personal combat ability but in making everyone else marginally more competent. Synergy, they call it. The bodies pile up either way, but the reports look better.</p>
+<blockquote>
+<p>"Per the agenda, item three: not dying. Questions? Good. Execute."<br />
+<strong>Team Leader, Mid-Combat Briefing</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Health</th>
+<th style="text-align: center;">Move</th>
+<th style="text-align: center;">Combat</th>
+<th style="text-align: center;">Defense</th>
+<th style="text-align: center;">Wits</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">13</td>
+<td style="text-align: center;">4"</td>
+<td style="text-align: center;">2d8</td>
+<td style="text-align: center;">2d8</td>
+<td style="text-align: center;">2d6</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Weapons</strong>: Both</p>
+<p><strong>Armor</strong>: Medium (2 reduction)</p>
+<ul>
+<li>Executive Blade: d6 <code>Bladed</code>, re-roll 1s when <code>Riposting</code></li>
+<li>Management Carbine: d8 <code>Projectile</code>, re-roll 1s</li>
+<li>Delegation Vest: 2 reduction</li>
+</ul>
+<p><strong>Synergy Bonus</strong>: Once per round, when an ally within 1" makes an attack, that ally rolls at <code>+1 DT</code>. Declare before rolling.</p>
+
+
+
+
+<h2 id="success-engineer">Success Engineer</h2>
+<p>Analyzes operational outcomes. Optimizes survival metrics. Has never personally failed at anything. The records confirm this. Personnel file contains only green checkmarks and exceeded targets. Colleagues who questioned the metrics suffered career setbacks. Colleagues who investigated suffered accidents.</p>
+<p>Results guaranteed. Methodology proprietary. Team performance improves through mechanisms that resist documentation. When situations become untenable, solutions appear from nowhere. Luck, witnesses say. Engineering, says the file.</p>
+<blockquote>
+<p>"Failure is not an option. Failure is a billing category."<br />
+<strong>Success Engineer, Quarterly Review</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Health</th>
+<th style="text-align: center;">Move</th>
+<th style="text-align: center;">Combat</th>
+<th style="text-align: center;">Defense</th>
+<th style="text-align: center;">Wits</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">4"</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">2d8</td>
+<td style="text-align: center;">2d10</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Weapons</strong>: Both</p>
+<p><strong>Armor</strong>: Light (1 reduction)</p>
+<ul>
+<li>Metrics Dart: d6 <code>Toxic</code>, target <code>-1 DT</code> next activation</li>
+<li>Optimization Blade: d6 <code>Bladed</code>, <code>+1 DT</code> vs. wounded</li>
+<li>Analytics Suite: 1 reduction, re-roll 1s on <code>Wits</code></li>
+</ul>
+<p><strong>Guaranteed Results</strong>: Once per game, automatically pass a <code>Wits</code> test without rolling. Declare before rolling would occur.</p>
+
+
+
+
+<h2 id="disruption-consultant">Disruption Consultant</h2>
+<p>Hired to break what competitors built. Fast. Aggressive. Bills by the hour but works by the second. The Disruption Consultant has no patience for established procedures, tested methodologies, or basic safety protocols. Tradition is inefficiency. Caution is cowardice. The only acceptable approach is the one nobody expected.</p>
+<p>Every engagement becomes a case study. Every casualty becomes a lesson learned. The Disruption Consultant moves through hostile environments like a blade through cables: cutting connections, severing dependencies, leaving chaos in their wake. Rebuilding is someone else's problem. Disruption is the product.</p>
+<blockquote>
+<p>"Your plan had seventeen steps. Mine has one. Watch."<br />
+<strong>Disruption Consultant, Client Onboarding</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Health</th>
+<th style="text-align: center;">Move</th>
+<th style="text-align: center;">Combat</th>
+<th style="text-align: center;">Defense</th>
+<th style="text-align: center;">Wits</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">5"</td>
+<td style="text-align: center;">2d10</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">2d6</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Weapons</strong>: Melee</p>
+<p><strong>Armor</strong>: Light (1 reduction)</p>
+<ul>
+<li>Disruption Claw: d10 <code>Static</code>, re-roll 1s, +1 to Critical roll</li>
+<li>Innovation Harness: 1 reduction, +1" <code>Move</code></li>
+</ul>
+<p><strong>Aggressive Restructuring</strong>: Once per round, force one enemy to reroll any single die roll. The second result stands. Declare immediately after the roll.</p>
+
+
+
+
+<h2 id="performance-coach">Performance Coach</h2>
+<p>Motivates through example. The example is usually violence. Quarterly reviews have a 40% survival rate. Believes in potential. Everyone has potential. The job is to extract that potential through intensive, hands-on methodology. Underperformers receive additional coaching. Top performers receive slightly less.</p>
+<p>The hammer solves problems. Heavy armor means leading from the front. When allies falter, encouragement follows. When allies succeed, credit is taken. This is called management.</p>
+<blockquote>
+<p>"You're not tired. You're not injured. You're not motivated enough. Again."<br />
+<strong>Performance Coach, Team Building Exercise</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Health</th>
+<th style="text-align: center;">Move</th>
+<th style="text-align: center;">Combat</th>
+<th style="text-align: center;">Defense</th>
+<th style="text-align: center;">Wits</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">3"</td>
+<td style="text-align: center;">2d10</td>
+<td style="text-align: center;">2d8</td>
+<td style="text-align: center;">2d6</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Weapons</strong>: Melee</p>
+<p><strong>Armor</strong>: Heavy (3 reduction)</p>
+<ul>
+<li>Motivation Hammer: d8 <code>Blunt</code>, re-roll 1s, Knockback 1"</li>
+<li>Performance Plate: 3 reduction, reduce <code>Knockback</code> by 1"</li>
+</ul>
+<p><strong>Mandatory Overtime</strong>: Once per game, when an ally within 1" completes their activation, that ally immediately takes a second action. Declare before the ally's activation ends.</p>
+
+
+
+
+<h2 id="chief-morale-officer">Chief Morale Officer</h2>
+<p>Team spirit enforced. Positivity through resonance frequencies that bypass conscious thought. Smile. You are happy. This is not a suggestion. The equipment is officially classified as "wellness technology." The frequencies do not appear on any approved spectrum. Effects: immediate and total.</p>
+<p>Panic becomes calm. Flight becomes fight. Despair becomes determination. Teams maintain optimal emotional configuration regardless of circumstances. Side effects are temporary. Side effects are acceptable. Side effects are classified.</p>
+<blockquote>
+<p>"Morale is mandatory. Happiness is policy. Compliance is wellness."<br />
+<strong>Chief Morale Officer, All-Hands Broadcast</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Health</th>
+<th style="text-align: center;">Move</th>
+<th style="text-align: center;">Combat</th>
+<th style="text-align: center;">Defense</th>
+<th style="text-align: center;">Wits</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">4"</td>
+<td style="text-align: center;">2d8</td>
+<td style="text-align: center;">2d8</td>
+<td style="text-align: center;">2d8</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Weapons</strong>: Melee</p>
+<p><strong>Armor</strong>: Light (1 reduction)</p>
+<ul>
+<li>Wellness Screamer: d6 <code>Broadcast</code>, ignores cover</li>
+<li>Positivity Prod: d6 <code>Energy</code>, target <code>-1 DT</code> next activation</li>
+<li>Compliance Array: 1 reduction, allies within 3" re-roll failed <code>Wits</code> tests</li>
+</ul>
+<p><strong>Mandatory Positivity</strong>: Once per game, when any friendly model would <code>Flee</code>, cancel that result. The model acts normally instead. Affects the entire warband.</p>
+
+
+
+
+<h2 id="risk-assessor">Risk Assessor</h2>
+<p>Calculates probability of survival. Documents liability exposure. Files preemptive incident reports before the incident occurs. Catastrophe everywhere. Statistics don't lie. People lie. Neither trusted.</p>
+<p>Every operation carries acceptable losses. Acceptable is defined in advance. Every engagement has an exit threshold. The metrics are monitored constantly. When the numbers turn red, the optimal retreat vector has already been identified. Cowardice is just risk mitigation with better optics.</p>
+<blockquote>
+<p>"Projected casualties exceed quarterly allocation. Recommend immediate disengagement."<br />
+<strong>Risk Assessor, Mid-Combat Analysis</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Health</th>
+<th style="text-align: center;">Move</th>
+<th style="text-align: center;">Combat</th>
+<th style="text-align: center;">Defense</th>
+<th style="text-align: center;">Wits</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">4"</td>
+<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">2d10</td>
+<td style="text-align: center;">2d8</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Weapons</strong>: Ranged</p>
+<p><strong>Armor</strong>: Medium (2 reduction)</p>
+<ul>
+<li>Assessment Pistol: d6 <code>Projectile</code>, re-roll 1s</li>
+<li>Liability Vest: 2 reduction, -1 to Critical table rolls against you</li>
+<li>Probability Suite: Re-roll 1s on <code>Defense</code></li>
+</ul>
+<p><strong>Loss Prevention</strong>: Once per game, when a friendly model within 6" would go <code>Out of Action</code>, that model instead survives with 1 <code>Health</code>. Declare immediately when damage is resolved.</p>
+
+
+
+
+<h2 id="liquidation-specialist">Liquidation Specialist</h2>
+<p>Resolves underperforming assets. Terminates contracts permanently. No negotiations. No counter-offers. When the Departments need something to stop existing, they send for this one. Methodology: straightforward. Results: final.</p>
+<p>Seventeen years of terminations have left marks. Movement is slow now, deliberate, conserving energy for the moments that matter. Each swing carries the weight of accumulated severance. Each impact represents closure. No enjoyment in the work. No need for it.</p>
+<blockquote>
+<p>"Your performance review has concluded. The results are not appealable."<br />
+<strong>Liquidation Specialist, Final Notice</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Health</th>
+<th style="text-align: center;">Move</th>
+<th style="text-align: center;">Combat</th>
+<th style="text-align: center;">Defense</th>
+<th style="text-align: center;">Wits</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">3"</td>
+<td style="text-align: center;">2d10</td>
+<td style="text-align: center;">2d8</td>
+<td style="text-align: center;">2d6</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Weapons</strong>: Melee</p>
+<p><strong>Armor</strong>: Heavy (3 reduction)</p>
+<ul>
+<li>Termination Cleaver: d10 <code>Bladed</code>, re-roll 1s and 2s, +2 vs. armored</li>
+<li>Final Notice Plate: 3 reduction, +1 <code>Health</code></li>
+</ul>
+<p><strong>Severance Package</strong>: Attacks against wounded targets deal +d6 damage.</p>
+
+
+
+<h1 id="optional-rules">Optional Rules</h1>
+<p>The Departments never stop innovating. New protocols emerge from Resource Allocation's endless efficiency studies. Some squads adopt them. Most don't survive long enough to notice the difference.</p>
+<h2 id="heat">Heat</h2>
+<p>The Departments track contractor activity. Effective squads attract attention. Attention attracts reinforcements.</p>
+<p>Track Heat on a scale of 0 to 6. All campaigns start at Heat 0.</p>
+<h3 id="gaining-heat">Gaining Heat</h3>
+<p>At the end of any mission where you eliminate all hostile models: gain 2 Heat.</p>
+<h3 id="losing-heat">Losing Heat</h3>
+<p>At the start of each mission: lose 1 Heat (minimum 0).</p>
+<h3 id="heat-effects">Heat Effects</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Heat</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0-2</td>
+<td>No effect</td>
+</tr>
+<tr>
+<td style="text-align: center;">3-4</td>
+<td>All hostile spawns get +1 model</td>
+</tr>
+<tr>
+<td style="text-align: center;">5-6</td>
+<td>All hostile spawns get +2 models</td>
+</tr>
+</tbody>
+</table>
+
+
+<h3 id="versus-play-with-hostiles">Versus Play with Hostiles</h3>
+<p>When both warbands play with hostile spawns, share one Heat tracker. Either warband eliminating all hostiles increases Heat.</p>
+<blockquote>
+<p>"Performance metrics indicate elevated contractor efficiency in Sector 7. Recommend asset reallocation."<br />
+<strong>Resource Allocation Internal Memo</strong></p>
+</blockquote>
+
+
+<h2 id="trophies">Trophies</h2>
+<p>Revenue Operations tracks kills. High-value eliminations mean bonus payouts. The Departments call it incentive alignment.</p>
+<p>At the end of each mission, gain subs for confirmed eliminations:</p>
+<table>
+<thead>
+<tr>
+<th>Target</th>
+<th style="text-align: right;">Bonus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hostile leader (highest <code>Health</code> in group)</td>
+<td style="text-align: right;">3 subs</td>
+</tr>
+<tr>
+<td>Hostile with special ability</td>
+<td style="text-align: right;">2 subs</td>
+</tr>
+<tr>
+<td>Standard hostile</td>
+<td style="text-align: right;">1 sub</td>
+</tr>
+</tbody>
+</table>
+<p>Only your squads's kills count. Hostiles eliminated by other hostiles or hazards pay nothing.</p>
+
+
+<h2 id="escalation">Escalation</h2>
+<p>The Complex learns. Hostiles adapt to repeated contractor incursions. Survival breeds resistance.</p>
+<p>Track campaign victories. After every 3 victories, hostiles escalate:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Victories</th>
+<th>Escalation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">3</td>
+<td>Hostiles spawn with +1 <code>Health</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td>Hostile leaders gain +1 DT to all stats</td>
+</tr>
+<tr>
+<td style="text-align: center;">9</td>
+<td>All hostile spawns get +1 model</td>
+</tr>
+</tbody>
+</table>
+<p>Escalation is cumulative. At 9 victories, hostiles have all three bonuses.</p>
+<blockquote>
+<p>"Quarterly losses exceed projections. Recommend enhanced asset deployment."<br />
+<strong>Security &amp; Compliance Threat Assessment</strong></p>
+</blockquote>
+
+
+
+
+<h2 id="campaign-finale-the-source">Campaign Finale: The Source</h2>
+<p>At 9 <code>Evidence</code>, the first warband to arrive decides: one more mission for standard victory at 10, or risk everything on extraction now. The signal led here. Six hundred years of sealed doors in the deepest Roots. The Departments sent teams before. None returned. Now you know what they buried.</p>
+<p>The Source broadcasts on frequencies that predate the Complex. Predate the Tethering. Predate everything the Departments built their authority on. Carry it out and the Departments lose control. Carry it out and someone finally knows the truth.</p>
+<h4 id="terrain">Terrain</h4>
+<p>The Roots. Collapsed infrastructure, emergency lighting. Debris blocks direct paths.</p>
+<h4 id="deployment">Deployment</h4>
+<p><strong>Extractor:</strong> One model holds the Source. Deploys within 6" of one table edge.</p>
+<p><strong>Interceptor:</strong> Deploys within 6" of the opposite table edge. In solo or cooperative play, leave empty.</p>
+<p><strong>Hostiles:</strong> <code>Elite</code> spawn at table center after deployment.</p>
+<h4 id="threats">Threats</h4>
+<ul>
+<li><strong>Round 2+:</strong> <code>Normal</code> spawns from Extractor's deployment edge</li>
+<li><strong>Round 4+:</strong> <code>Elite</code> spawns from exit edge</li>
+</ul>
+<h4 id="the-source">The Source</h4>
+<p>Model holding the Source suffers <code>-1 DT</code> to <code>Wits</code>, and cannot use Broadcast Powers.</p>
+<p>If holder goes <code>Out of Action</code>, any model within 1" picks it up (<code>Interact</code>). Otherwise, it drops in place.</p>
+<p><strong>Detonation:</strong> At game end, the Source explodes. All models within 3" take d6 damage (ignores armor).</p>
+<p><strong>Extraction:</strong> Extractor exits the opposite table edge with the Source. Campaign victory.</p>
+<p><strong>Interception:</strong> Interceptor holds the Source at game end or eliminates all Extractor models. Extractor loses d6 <code>Evidence</code> and all <code>Leads</code>. Interceptor captures the Source. At 9 <code>Evidence</code>, the Source holder becomes Extractor.</p>
+<p><strong>Failure:</strong> Source lost to hostiles or no friendly models remain. Lose d6 <code>Evidence</code> and all <code>Leads</code>. The Departments bury the signal. Again.</p>
+    </div>
+</div>
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('.app-menu');
+            if (!nav) return;
+            nav.dataset.open = nav.dataset.open === 'true' ? 'false' : 'true';
+        }
+
+        // Mobile page scaling - scales entire page proportionally
+        function updatePageScale() {
+            const content = document.querySelector('.content');
+            if (!content) return;
+            const pageWidth = 559; // 148mm in px at 96dpi
+            const viewportWidth = window.innerWidth;
+            // Match CSS breakpoint: max-width: 980px means <= 980
+            if (viewportWidth <= 980) {
+                const scale = Math.min(1, viewportWidth / pageWidth);
+                content.style.setProperty('--page-scale', scale.toFixed(3));
+                // Calculate centering offset
+                const scaledWidth = pageWidth * scale;
+                const leftOffset = (viewportWidth - scaledWidth) / 2;
+                content.style.setProperty('--page-offset', leftOffset + 'px');
+            } else {
+                content.style.removeProperty('--page-scale');
+                content.style.removeProperty('--page-offset');
+            }
+        }
+        window.addEventListener('resize', updatePageScale);
+        document.addEventListener('DOMContentLoaded', updatePageScale);
+    </script>
+    <script>
+        // Scroll spy: highlight current section in sidebar
+        function updateActiveLink() {
+            const headers = document.querySelectorAll('h1[id], h2[id], h3[id]');
+            const links = document.querySelectorAll('.sidebar-nav a');
+            const sidebar = document.querySelector('.sidebar');
+            const offset = 100; // Account for sticky header
+
+            let current = '';
+            headers.forEach(header => {
+                const top = header.getBoundingClientRect().top;
+                if (top < offset) {
+                    current = header.id;
+                }
+            });
+
+            links.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                    // Auto-scroll sidebar to keep active item in view
+                    if (sidebar) {
+                        const linkRect = link.getBoundingClientRect();
+                        const sidebarRect = sidebar.getBoundingClientRect();
+                        const linkTop = linkRect.top - sidebarRect.top;
+                        const linkBottom = linkRect.bottom - sidebarRect.top;
+                        const visibleHeight = sidebar.clientHeight;
+                        // Scroll if link is outside visible area (with padding)
+                        if (linkTop < 50 || linkBottom > visibleHeight - 50) {
+                            link.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        }
+                    }
+                }
+            });
+        }
+
+        // Mobile sidebar toggle
+        function toggleSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            const overlay = document.querySelector('.sidebar-overlay');
+            if (sidebar) {
+                sidebar.classList.toggle('mobile-open');
+                if (overlay) overlay.classList.toggle('active');
+            }
+        }
+
+        window.addEventListener('scroll', updateActiveLink);
+        document.addEventListener('DOMContentLoaded', updateActiveLink);
+    </script>
+</body>
+</html>

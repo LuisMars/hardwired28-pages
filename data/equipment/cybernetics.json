@@ -1,0 +1,14 @@
+{
+  "table_name": "Cybernetics",
+  "source": "03_equipment.md",
+  "columns": ["d6", "Cybernetic", "Effect", "Cost"],
+  "align": ["center", "left", "left", "right"],
+  "items": [
+    {"roll": 1, "name": "Regenerator", "effect": "Ignore \"Miss next game\"", "cost": 5},
+    {"roll": 2, "name": "Leg", "effect": "+1\" `Move`", "cost": 8},
+    {"roll": 3, "name": "Targeting", "effect": "`+1 DT` `Combat`", "cost": 10},
+    {"roll": 4, "name": "Reflexes", "effect": "`+1 DT` `Defense`", "cost": 10},
+    {"roll": 5, "name": "Processor", "effect": "`+1 DT` `Wits`", "cost": 10},
+    {"roll": 6, "name": "Organs", "effect": "+1 max `Health`", "cost": 12}
+  ]
+}

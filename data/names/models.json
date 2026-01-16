@@ -1,0 +1,22 @@
+{
+  "first": [
+    "Marcus", "Victor", "Felix", "Cassius", "Lucius", "Decimus",
+    "Abel", "Seth", "Cain", "Ezra", "Silas", "Tobias",
+    "Axel", "Rex", "Max", "Dax", "Jax", "Knox",
+    "Warren", "Sterling", "Luis", "Pierce", "Hugo", "Cole",
+    "Vera", "Nova", "Iris", "Petra", "Lyra", "Mira",
+    "Helena", "Octavia", "Livia", "Aurelia", "Cassia", "Priscilla",
+    "Zara", "Kira", "Nyx", "María", "Ash", "Ember",
+    "Morgan", "Quinn", "Blake", "Vitaliy", "Josep", "Wren"
+  ],
+  "last": [
+    "Weld", "Forge", "Cable", "Wire", "Volt", "Ohm",
+    "Brass", "Steel", "Iron", "Chrome", "Copper", "Zinc",
+    "Creditor", "Debtor", "Contractor", "Auditor", "Collector", "Enforcer",
+    "Terminal", "Conduit", "Circuit", "Relay", "Switch", "Breaker",
+    "Tier", "Level", "Rank", "Grade", "Class", "Index",
+    "Covenant", "Compact", "Charter", "Mandate", "Decree", "Writ",
+    "Null", "Void", "Zero", "Blank", "Static", "Surge",
+    "Reclaimer", "Salvager", "Operator", "Handler", "Fixer", "Runner"
+  ]
+}

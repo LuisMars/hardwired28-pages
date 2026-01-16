@@ -1,0 +1,29 @@
+{
+  "table_name": "Bandas Salvajes",
+  "source": "07_hostiles.md",
+  "special_rule": "**Jauría**: Otros hostiles de Bandas Salvajes a 6\" obtienen `+1 ND` `Combate` esta activación",
+  "units": {
+    "columns": ["d6", "Name", "Spawn", "Combat", "Defense", "Wits", "Health", "Move", "Weapon"],
+    "align": ["center", "left", "center", "center", "center", "center", "center", "center", "left"],
+    "display_columns": ["d6", "Nombre", "#", "COM", "DEF", "AST", "PV", "MOV", "Arma"],
+    "items": [
+      {"roll": 1, "name": "Cría", "spawn": "5", "combat": "2d4", "defense": "2d4", "wits": "2d4", "health": 4, "move": "5\"", "weapon": "Daga (`Cortante`, d4, CC)"},
+      {"roll": 2, "name": "Matón", "spawn": "4", "combat": "2d8", "defense": "2d6", "wits": "2d4", "health": 8, "move": "5\"", "weapon": "Machete (`Cortante`, d6, CC)"},
+      {"roll": 3, "name": "Tirador", "spawn": "3", "combat": "2d6", "defense": "2d6", "wits": "2d4", "health": 10, "move": "5\"", "weapon": "Escopeta (`Proyectil`, d6, Disparo)"},
+      {"roll": 4, "name": "Antorcha", "spawn": "2", "combat": "2d6", "defense": "2d6", "wits": "2d4", "health": 12, "move": "5\"", "weapon": "Lanzallamas (`Energía`, d6, Disparo)"},
+      {"roll": 5, "name": "Pesado", "spawn": "1", "combat": "2d10", "defense": "2d8", "wits": "2d4", "health": 16, "move": "5\"", "weapon": "Machete Pesado (`Cortante`, d8, CC)"},
+      {"roll": 6, "name": "Jefe", "spawn": "1", "combat": "2d10", "defense": "2d8", "wits": "2d6", "health": 20, "move": "5\"", "weapon": "Puño Demoledor (`Contundente`, d10, CC)"}
+    ]
+  },
+  "behavior": {
+    "columns": ["d6", "No LoS", "Has LoS", "Engaged"],
+    "align": ["center", "center", "center", "center"],
+    "display_columns": ["d6", "Sin LdV", "Con LdV", "Trabado"],
+    "items": [
+      {"roll": "1-2", "no_los": "Patrullar", "has_los": "Cargar", "engaged": "Atacar"},
+      {"roll": "3-4", "no_los": "Reagrupar", "has_los": "Cargar", "engaged": "Atacar"},
+      {"roll": "5", "no_los": "Patrullar", "has_los": "Cargar", "engaged": "Frenesí"},
+      {"roll": "6", "no_los": "Jauría", "has_los": "Jauría", "engaged": "Frenesí"}
+    ]
+  }
+}

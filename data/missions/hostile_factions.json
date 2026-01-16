@@ -1,0 +1,14 @@
+{
+  "table_name": "Hostile Type",
+  "source": "09_campaign.md",
+  "columns": ["d6", "Faction"],
+  "align": ["center", "left"],
+  "items": [
+    {"roll": 1, "faction": "Scrapers"},
+    {"roll": 2, "faction": "Feral Crews"},
+    {"roll": 3, "faction": "Wave Callers"},
+    {"roll": 4, "faction": "Static Wraiths"},
+    {"roll": 5, "faction": "Feral Automata"},
+    {"roll": 6, "faction": "Cable Feeders"}
+  ]
+}

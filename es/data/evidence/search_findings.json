@@ -1,0 +1,29 @@
+{
+  "table_name": "Hallazgos de Búsqueda",
+  "source": "08_evidence.md",
+  "columns": ["d20", "Finding"],
+  "align": ["center", "left"],
+  "display_columns": ["d20", "Hallazgo"],
+  "items": [
+    {"roll": 1, "finding": "2 subs"},
+    {"roll": 2, "finding": "Armadura Ligera Aleatoria"},
+    {"roll": 3, "finding": "4 subs"},
+    {"roll": 4, "finding": "Arma CC Aleatoria"},
+    {"roll": 5, "finding": "6 subs"},
+    {"roll": 6, "finding": "**Prueba**"},
+    {"roll": 7, "finding": "Consumible Aleatorio"},
+    {"roll": 8, "finding": "8 subs"},
+    {"roll": 9, "finding": "Arma de Disparo Aleatoria"},
+    {"roll": 10, "finding": "2 **Pruebas**"},
+    {"roll": 11, "finding": "Armadura Media Aleatoria"},
+    {"roll": 12, "finding": "**Prueba**"},
+    {"roll": 13, "finding": "Equipo Aleatorio"},
+    {"roll": 14, "finding": "12 subs"},
+    {"roll": 15, "finding": "Armadura Pesada Aleatoria"},
+    {"roll": 16, "finding": "15 subs"},
+    {"roll": 17, "finding": "**Prueba**"},
+    {"roll": 18, "finding": "20 subs"},
+    {"roll": 19, "finding": "**Prueba**"},
+    {"roll": 20, "finding": "Tira dos veces (ignora 20s)"}
+  ]
+}

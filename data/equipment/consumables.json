@@ -1,0 +1,16 @@
+{
+  "table_name": "Consumables",
+  "source": "03_equipment.md",
+  "columns": ["d8", "Item", "Effect", "Cost"],
+  "align": ["center", "left", "left", "right"],
+  "items": [
+    {"roll": 1, "name": "Adrenaline", "effect": "+2\" `Move` until end of round", "cost": 4},
+    {"roll": 2, "name": "Combat Stim", "effect": "`+1 DT` `Combat` until end of scenario", "cost": 6},
+    {"roll": 3, "name": "Reflex Stim", "effect": "`+1 DT` `Defense` until end of scenario", "cost": 6},
+    {"roll": 4, "name": "Coagulant", "effect": "Stop bleeding on adjacent model", "cost": 6},
+    {"roll": 5, "name": "Antidote", "effect": "Cure poison on adjacent model", "cost": 6},
+    {"roll": 6, "name": "Medkit", "effect": "Restore d6 `Health` to adjacent model", "cost": 8},
+    {"roll": 7, "name": "Overcharge", "effect": "`+2 DT` `Combat`, take d4 damage at scenario end", "cost": 10},
+    {"roll": 8, "name": "Trauma Kit", "effect": "Negate all effects from a Critical hit", "cost": 14}
+  ]
+}
