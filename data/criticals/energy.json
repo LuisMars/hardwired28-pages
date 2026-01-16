@@ -7,8 +7,8 @@
     {"roll": 1, "result": "Scorched", "effect": "+d4 damage"},
     {"roll": 2, "result": "Slag Armor", "effect": "Armor reduced one tier permanently (Heavy→Medium→Light→ Destroyed)"},
     {"roll": 3, "result": "Flash Blind", "effect": "`-1 DT` `Combat` permanently"},
-    {"roll": 4, "result": "Nerve Damage", "effect": "-2\" movement permanently"},
-    {"roll": 5, "result": "Burned Out", "effect": "`-2 DT` ranged attacks permanently"},
+    {"roll": 4, "result": "Nerve Damage", "effect": "-1\" `Move` permanently"},
+    {"roll": 5, "result": "Burned Out", "effect": "`-1 DT` ranged attacks permanently"},
     {"roll": "6+", "result": "Overloaded", "effect": "`OoA`, -2 Injury roll"}
   ]
 }

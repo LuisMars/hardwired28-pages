@@ -10,6 +10,6 @@
     {"roll": 3, "result": "Contraflujo", "effect": "Emisor sufre d4 de daño"},
     {"roll": 4, "result": "Rebote", "effect": "Aliado a 6\" sufre d4 (o emisor)"},
     {"roll": 5, "result": "Bloqueo", "effect": "Poder bloqueado este escenario, d4 de daño"},
-    {"roll": "6+", "result": "Tormenta", "effect": "Pierde el poder, Emisor y todos a 6\" sufren d8"}
+    {"roll": "6+", "result": "Tormenta", "effect": "Pierde el poder permanentemente"}
   ]
 }

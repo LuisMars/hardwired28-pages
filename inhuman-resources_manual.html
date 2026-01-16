@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hardwired 28 - Inhuman Resources 0.6.4-beta</title>
-    <meta property="og:title" content="Hardwired 28 - Inhuman Resources 0.6.4-beta">
+    <title>Hardwired 28 - Inhuman Resources 0.6.5-beta</title>
+    <meta property="og:title" content="Hardwired 28 - Inhuman Resources 0.6.5-beta">
     <meta property="og:description" content="Corporate cablepunk skirmish wargame">
     <meta property="og:image" content="http://hardwired28.luismars.com/img/social.png">
     <meta property="og:url" content="http://hardwired28.luismars.com/">
@@ -97,9 +97,8 @@
 </ul>
 <h2 id="actions">Actions</h2>
 <ul>
-<li><strong>Charge</strong>: If Melee, move toward the nearest enemy and attack. Otherwise, shoot.</li>
-<li><strong>Attack</strong>: Use weapon. Charge if unable.</li>
-<li><strong>Cover</strong>: Seek cover from the closest enemy</li>
+<li><strong>Attack</strong>: Use weapon. Melee charges if not in range.</li>
+<li><strong>Cover</strong>: Seek cover from the closest enemy, or move away</li>
 <li><strong>Regroup</strong>: Move toward the nearest friendly model</li>
 <li><strong>Flee</strong>: Move toward the nearest board edge (stops at edge)</li>
 <li><strong>Wait</strong>: No action</li>
@@ -207,7 +206,7 @@
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">10</td>
 <td style="text-align: center;">5"</td>
-<td style="text-align: left;">Pipe Club (<code>Blunt</code>, d4, Melee)</td>
+<td style="text-align: left;">Junk Launcher (<code>Projectile</code>, d4, Ranged)</td>
 </tr>
 <tr>
 <td style="text-align: center;">4</td>
@@ -244,7 +243,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Salvage</strong>: Attack steals 1 random equipment instead of dealing damage</p>
+<p><strong>Opportunists</strong>: <code>+1 DT</code> <code>Combat</code> vs wounded targets</p>
 <p><strong>Behavior</strong></p>
 <table>
 <thead>
@@ -257,27 +256,21 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;">1-2</td>
-<td style="text-align: center;">Flee</td>
+<td style="text-align: center;">1-4</td>
+<td style="text-align: center;">Patrol</td>
 <td style="text-align: center;">Attack</td>
-<td style="text-align: center;">Attack</td>
-</tr>
-<tr>
-<td style="text-align: center;">3-4</td>
-<td style="text-align: center;">Cover</td>
-<td style="text-align: center;">Charge</td>
 <td style="text-align: center;">Attack</td>
 </tr>
 <tr>
 <td style="text-align: center;">5</td>
+<td style="text-align: center;">Patrol</td>
 <td style="text-align: center;">Cover</td>
-<td style="text-align: center;">Cover</td>
-<td style="text-align: center;">Salvage</td>
+<td style="text-align: center;">Attack</td>
 </tr>
 <tr>
 <td style="text-align: center;">6</td>
-<td style="text-align: center;">Patrol</td>
-<td style="text-align: center;">Charge</td>
+<td style="text-align: center;">Regroup</td>
+<td style="text-align: center;">Attack</td>
 <td style="text-align: center;">Frenzy</td>
 </tr>
 </tbody>
@@ -322,7 +315,7 @@
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">6</td>
 <td style="text-align: center;">4"</td>
-<td style="text-align: left;">Shiv (<code>Bladed</code>, d4, Melee)</td>
+<td style="text-align: left;">Zip Gun (<code>Projectile</code>, d4, Ranged)</td>
 </tr>
 <tr>
 <td style="text-align: center;">2</td>
@@ -355,7 +348,7 @@
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">12</td>
 <td style="text-align: center;">4"</td>
-<td style="text-align: left;">Flame Rig (<code>Energy</code>, d6, Ranged)</td>
+<td style="text-align: left;">Flame Fist (<code>Energy</code>, d6, Melee)</td>
 </tr>
 <tr>
 <td style="text-align: center;">5</td>
@@ -381,7 +374,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Mob Up</strong>: Charge or Attack at <code>+1 DT</code> <code>Combat</code></p>
+<p><strong>Mob Up</strong>: Attack at <code>+1 DT</code> <code>Combat</code></p>
 <p><strong>Behavior</strong></p>
 <table>
 <thead>
@@ -394,27 +387,21 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;">1-2</td>
+<td style="text-align: center;">1-4</td>
 <td style="text-align: center;">Patrol</td>
-<td style="text-align: center;">Charge</td>
 <td style="text-align: center;">Attack</td>
-</tr>
-<tr>
-<td style="text-align: center;">3-4</td>
-<td style="text-align: center;">Regroup</td>
-<td style="text-align: center;">Charge</td>
 <td style="text-align: center;">Attack</td>
 </tr>
 <tr>
 <td style="text-align: center;">5</td>
 <td style="text-align: center;">Patrol</td>
-<td style="text-align: center;">Charge</td>
-<td style="text-align: center;">Frenzy</td>
+<td style="text-align: center;">Mob Up</td>
+<td style="text-align: center;">Mob Up</td>
 </tr>
 <tr>
 <td style="text-align: center;">6</td>
-<td style="text-align: center;">Mob Up</td>
-<td style="text-align: center;">Mob Up</td>
+<td style="text-align: center;">Regroup</td>
+<td style="text-align: center;">Attack</td>
 <td style="text-align: center;">Frenzy</td>
 </tr>
 </tbody>
@@ -459,7 +446,7 @@
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">6</td>
 <td style="text-align: center;">5"</td>
-<td style="text-align: left;">Severed Cable (<code>Bladed</code>, d4, Melee)</td>
+<td style="text-align: left;">Arc Spitter (<code>Energy</code>, d4, Ranged)</td>
 </tr>
 <tr>
 <td style="text-align: center;">2</td>
@@ -531,27 +518,21 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;">1-2</td>
+<td style="text-align: center;">1-4</td>
 <td style="text-align: center;">Patrol</td>
 <td style="text-align: center;">Attack</td>
 <td style="text-align: center;">Attack</td>
 </tr>
 <tr>
-<td style="text-align: center;">3-4</td>
-<td style="text-align: center;">Regroup</td>
-<td style="text-align: center;">Charge</td>
-<td style="text-align: center;">Attack</td>
-</tr>
-<tr>
 <td style="text-align: center;">5</td>
-<td style="text-align: center;">Regroup</td>
+<td style="text-align: center;">Broadcast</td>
+<td style="text-align: center;">Broadcast</td>
 <td style="text-align: center;">Attack</td>
-<td style="text-align: center;">Frenzy</td>
 </tr>
 <tr>
 <td style="text-align: center;">6</td>
-<td style="text-align: center;">Broadcast</td>
-<td style="text-align: center;">Broadcast</td>
+<td style="text-align: center;">Regroup</td>
+<td style="text-align: center;">Attack</td>
 <td style="text-align: center;">Frenzy</td>
 </tr>
 </tbody>
@@ -596,7 +577,7 @@
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">6</td>
 <td style="text-align: center;">6"</td>
-<td style="text-align: left;">Static Talons (<code>Static</code>, d4, Melee)</td>
+<td style="text-align: left;">Arc Bolt (<code>Static</code>, d4, Power)</td>
 </tr>
 <tr>
 <td style="text-align: center;">2</td>
@@ -668,27 +649,21 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;">1-2</td>
-<td style="text-align: center;">Phase</td>
-<td style="text-align: center;">Charge</td>
-<td style="text-align: center;">Attack</td>
-</tr>
-<tr>
-<td style="text-align: center;">3-4</td>
+<td style="text-align: center;">1-4</td>
 <td style="text-align: center;">Patrol</td>
-<td style="text-align: center;">Charge</td>
+<td style="text-align: center;">Attack</td>
 <td style="text-align: center;">Attack</td>
 </tr>
 <tr>
 <td style="text-align: center;">5</td>
 <td style="text-align: center;">Phase</td>
-<td style="text-align: center;">Charge</td>
-<td style="text-align: center;">Frenzy</td>
+<td style="text-align: center;">Phase</td>
+<td style="text-align: center;">Attack</td>
 </tr>
 <tr>
 <td style="text-align: center;">6</td>
-<td style="text-align: center;">Patrol</td>
-<td style="text-align: center;">Charge</td>
+<td style="text-align: center;">Regroup</td>
+<td style="text-align: center;">Attack</td>
 <td style="text-align: center;">Frenzy</td>
 </tr>
 </tbody>
@@ -766,7 +741,7 @@
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">12</td>
 <td style="text-align: center;">3"</td>
-<td style="text-align: left;">Mounted Blaster (<code>Energy</code>, d8, Ranged)</td>
+<td style="text-align: left;">Crushing Claw (<code>Blunt</code>, d8, Melee)</td>
 </tr>
 <tr>
 <td style="text-align: center;">5</td>
@@ -805,27 +780,21 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;">1-2</td>
-<td style="text-align: center;">Wait</td>
-<td style="text-align: center;">Attack</td>
-<td style="text-align: center;">Attack</td>
-</tr>
-<tr>
-<td style="text-align: center;">3-4</td>
+<td style="text-align: center;">1-4</td>
 <td style="text-align: center;">Patrol</td>
-<td style="text-align: center;">Charge</td>
+<td style="text-align: center;">Attack</td>
 <td style="text-align: center;">Attack</td>
 </tr>
 <tr>
 <td style="text-align: center;">5</td>
 <td style="text-align: center;">Wait</td>
+<td style="text-align: center;">Wait</td>
 <td style="text-align: center;">Attack</td>
-<td style="text-align: center;">Frenzy</td>
 </tr>
 <tr>
 <td style="text-align: center;">6</td>
-<td style="text-align: center;">Patrol</td>
-<td style="text-align: center;">Charge</td>
+<td style="text-align: center;">Regroup</td>
+<td style="text-align: center;">Attack</td>
 <td style="text-align: center;">Frenzy</td>
 </tr>
 </tbody>
@@ -870,7 +839,7 @@
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">6</td>
 <td style="text-align: center;">6"</td>
-<td style="text-align: left;">Claws (<code>Bladed</code>, d4, Melee)</td>
+<td style="text-align: left;">Venom Spit (<code>Toxic</code>, d4, Ranged)</td>
 </tr>
 <tr>
 <td style="text-align: center;">2</td>
@@ -942,27 +911,21 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;">1-2</td>
+<td style="text-align: center;">1-4</td>
 <td style="text-align: center;">Patrol</td>
-<td style="text-align: center;">Charge</td>
 <td style="text-align: center;">Attack</td>
-</tr>
-<tr>
-<td style="text-align: center;">3-4</td>
-<td style="text-align: center;">Regroup</td>
-<td style="text-align: center;">Charge</td>
 <td style="text-align: center;">Attack</td>
 </tr>
 <tr>
 <td style="text-align: center;">5</td>
-<td style="text-align: center;">Cover</td>
-<td style="text-align: center;">Cover</td>
+<td style="text-align: center;">Patrol</td>
+<td style="text-align: center;">Regroup</td>
 <td style="text-align: center;">Attack</td>
 </tr>
 <tr>
 <td style="text-align: center;">6</td>
-<td style="text-align: center;">Patrol</td>
-<td style="text-align: center;">Charge</td>
+<td style="text-align: center;">Regroup</td>
+<td style="text-align: center;">Attack</td>
 <td style="text-align: center;">Frenzy</td>
 </tr>
 </tbody>
@@ -997,7 +960,7 @@
 <tr>
 <td style="text-align: center;">1</td>
 <td style="text-align: left;">Shift Drone</td>
-<td style="text-align: center;">10</td>
+<td style="text-align: center;">6</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d10</td>
@@ -1008,13 +971,13 @@
 <tr>
 <td style="text-align: center;">2</td>
 <td style="text-align: left;">Temp</td>
-<td style="text-align: center;">7</td>
+<td style="text-align: center;">5</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d10</td>
 <td style="text-align: center;">8</td>
 <td style="text-align: center;">5"</td>
-<td style="text-align: left;">Box Cutter (<code>Bladed</code>, d4, Melee)</td>
+<td style="text-align: left;">Emergency Flare (<code>Energy</code>, d4, Ranged)</td>
 </tr>
 <tr>
 <td style="text-align: center;">3</td>
@@ -1030,20 +993,20 @@
 <tr>
 <td style="text-align: center;">4</td>
 <td style="text-align: left;">Data Clerk</td>
-<td style="text-align: center;">2</td>
+<td style="text-align: center;">3</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d8</td>
 <td style="text-align: center;">10</td>
 <td style="text-align: center;">5"</td>
-<td style="text-align: left;">Stylus (<code>Bladed</code>, d4, Melee)</td>
+<td style="text-align: left;">Stun Gun (<code>Energy</code>, d4, Ranged)</td>
 </tr>
 <tr>
 <td style="text-align: center;">5</td>
 <td style="text-align: left;">Middle Manager</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">2d6</td>
-<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2d8</td>
+<td style="text-align: center;">2d8</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">10</td>
 <td style="text-align: center;">5"</td>
@@ -1052,9 +1015,9 @@
 <tr>
 <td style="text-align: center;">6</td>
 <td style="text-align: left;">Assistant to the Regional Manager</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">2d6</td>
-<td style="text-align: center;">2d6</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2d10</td>
+<td style="text-align: center;">2d8</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">8</td>
 <td style="text-align: center;">6"</td>
@@ -1076,28 +1039,22 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;">1-2</td>
-<td style="text-align: center;">Patrol</td>
-<td style="text-align: center;">Flee</td>
-<td style="text-align: center;">Flee</td>
-</tr>
-<tr>
-<td style="text-align: center;">3-4</td>
-<td style="text-align: center;">Patrol</td>
+<td style="text-align: center;">1-4</td>
 <td style="text-align: center;">Wait</td>
 <td style="text-align: center;">Wait</td>
+<td style="text-align: center;">Flee</td>
 </tr>
 <tr>
 <td style="text-align: center;">5</td>
-<td style="text-align: center;">Cover</td>
-<td style="text-align: center;">Cover</td>
-<td style="text-align: center;">Flee</td>
+<td style="text-align: center;">Cooperate</td>
+<td style="text-align: center;">Cooperate</td>
+<td style="text-align: center;">Cooperate</td>
 </tr>
 <tr>
 <td style="text-align: center;">6</td>
-<td style="text-align: center;">Cooperate</td>
-<td style="text-align: center;">Cooperate</td>
-<td style="text-align: center;">Cooperate</td>
+<td style="text-align: center;">Flee</td>
+<td style="text-align: center;">Flee</td>
+<td style="text-align: center;">Flee</td>
 </tr>
 </tbody>
 </table>
@@ -1113,28 +1070,22 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;">1-2</td>
-<td style="text-align: center;">Flee</td>
-<td style="text-align: center;">Flee</td>
-<td style="text-align: center;">Flee</td>
-</tr>
-<tr>
-<td style="text-align: center;">3-4</td>
-<td style="text-align: center;">Flee</td>
-<td style="text-align: center;">Cover</td>
+<td style="text-align: center;">1-4</td>
+<td style="text-align: center;">Patrol</td>
+<td style="text-align: center;">Attack</td>
 <td style="text-align: center;">Attack</td>
 </tr>
 <tr>
 <td style="text-align: center;">5</td>
-<td style="text-align: center;">Flee</td>
-<td style="text-align: center;">Flee</td>
-<td style="text-align: center;">Flee</td>
+<td style="text-align: center;">Patrol</td>
+<td style="text-align: center;">Cover</td>
+<td style="text-align: center;">Attack</td>
 </tr>
 <tr>
 <td style="text-align: center;">6</td>
-<td style="text-align: center;">Cover</td>
-<td style="text-align: center;">Cover</td>
-<td style="text-align: center;">Attack</td>
+<td style="text-align: center;">Flee</td>
+<td style="text-align: center;">Flee</td>
+<td style="text-align: center;">Flee</td>
 </tr>
 </tbody>
 </table>

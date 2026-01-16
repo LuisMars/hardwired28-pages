@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hardwired 28 - Quick Reference 0.6.4-beta</title>
-    <meta property="og:title" content="Hardwired 28 - Quick Reference 0.6.4-beta">
+    <title>Hardwired 28 - Quick Reference 0.6.5-beta</title>
+    <meta property="og:title" content="Hardwired 28 - Quick Reference 0.6.5-beta">
     <meta property="og:description" content="Corporate cablepunk skirmish wargame">
     <meta property="og:image" content="http://hardwired28.luismars.com/img/social.png">
     <meta property="og:url" content="http://hardwired28.luismars.com/">
@@ -37,7 +37,7 @@
         <div class="three-column">
             <div class="column">
 <div><h1>Hardwired 28 - Quick Reference</h1>
-<p><em>0.6.4-beta</em></p>
+<p><em>0.6.5-beta</em></p>
 </div>
 <div><h2>Dice Tiers (DT)</h2>
 <p class="dice-tier">2d4 → 2d6 → 2d8 → 2d10 → 2d12</p>
@@ -106,7 +106,7 @@
 <p>Model below max <code>Health</code>.</p>
 </div>
 <div><h2>Knockback</h2>
-<p>Model moves directly away from attacker. Stops at obstacles. Takes fall damage if pushed off edge.</p></div>
+<p>After a hit, attacker may push target directly away. Stops at obstacles. Takes fall damage if pushed off edge.</p></div>
             </div>
 
             <div class="column">
@@ -151,19 +151,15 @@
 </tr>
 <tr>
 <td>Search</td>
-<td><code>Wits</code> vs. 2d6 for <code>Loot</code>. Success: remove marker</td>
+<td><code>Wits</code> vs. 2d6 for <code>Loot Marker</code>. Not while <code>Engaged</code></td>
 </tr>
 <tr>
 <td>Interrogate</td>
 <td><code>Wits</code> vs. <code>Wits</code> for <code>Evidence</code> (+1 <strong>DT</strong> if wounded). Success: remove Coworker</td>
 </tr>
 <tr>
-<td>Loot</td>
-<td>Take item from <code>OoA</code> enemy within 1"</td>
-</tr>
-<tr>
 <td>Cast</td>
-<td><code>Wits</code> vs. <code>Wits</code> (Broadcasters only)</td>
+<td>Offensive: <code>Wits</code> vs. <code>Wits</code>. Support: <code>Wits</code> vs. 2d6</td>
 </tr>
 </tbody>
 </table>
@@ -203,9 +199,9 @@
 <div><h2>Casting</h2>
 <ul>
 <li>Action, LoS, no range limit</li>
-<li><code>Wits</code> vs. <code>Wits</code>, damage direct</li>
-<li><strong>Interference:</strong> cumulative <code>-1</code> per fail, resets on fumble</li>
-<li><strong>Overbroadcast:</strong> <code>-1 DT</code>, +d4 or double effect</li>
+<li>Offensive: <code>Wits</code> vs. target <code>Wits</code></li>
+<li>Support: <code>Wits</code> vs. 2d6 (friendly target)</li>
+<li>Triple+: affects all valid targets within 3"</li>
 </ul></div>
             </div>
 
@@ -405,10 +401,8 @@
 <td style="text-align: left;">Roll twice (ignore 20s)</td>
 </tr>
 </tbody>
-</table></div>
-            </div>
-
-            <div class="column">
+</table>
+</div>
 <div><h2>Interrogate Results</h2>
 <table>
 <thead>
@@ -455,8 +449,10 @@
 <td style="text-align: left;">1 <code>Evidence</code>, +2 <code>Leads</code></td>
 </tr>
 </tbody>
-</table>
-</div>
+</table></div>
+            </div>
+
+            <div class="column">
 <div><h2>Criticals: Bladed</h2>
 <table>
 <thead>
@@ -533,7 +529,7 @@
 <tr>
 <td style="text-align: center;">5</td>
 <td style="text-align: left;">Crippled</td>
-<td style="text-align: left;">-2" movement permanently</td>
+<td style="text-align: left;">-1" <code>Move</code> permanently</td>
 </tr>
 <tr>
 <td style="text-align: center;">6+</td>
@@ -584,10 +580,8 @@
 <td style="text-align: left;"><code>OoA</code>, -2 Injury roll</td>
 </tr>
 </tbody>
-</table></div>
-            </div>
-
-            <div class="column">
+</table>
+</div>
 <div><h2>Criticals: Energy</h2>
 <table>
 <thead>
@@ -616,12 +610,12 @@
 <tr>
 <td style="text-align: center;">4</td>
 <td style="text-align: left;">Nerve Damage</td>
-<td style="text-align: left;">-2" movement permanently</td>
+<td style="text-align: left;">-1" <code>Move</code> permanently</td>
 </tr>
 <tr>
 <td style="text-align: center;">5</td>
 <td style="text-align: left;">Burned Out</td>
-<td style="text-align: left;"><code>-2 DT</code> ranged attacks permanently</td>
+<td style="text-align: left;"><code>-1 DT</code> ranged attacks permanently</td>
 </tr>
 <tr>
 <td style="text-align: center;">6+</td>
@@ -629,8 +623,10 @@
 <td style="text-align: left;"><code>OoA</code>, -2 Injury roll</td>
 </tr>
 </tbody>
-</table>
-</div>
+</table></div>
+            </div>
+
+            <div class="column">
 <div><h2>Criticals: Explosive</h2>
 <table>
 <thead>
@@ -664,7 +660,7 @@
 <tr>
 <td style="text-align: center;">5</td>
 <td style="text-align: left;">Shattered</td>
-<td style="text-align: left;">Movement halved permanently</td>
+<td style="text-align: left;">-1" <code>Move</code> permanently</td>
 </tr>
 <tr>
 <td style="text-align: center;">6+</td>
@@ -745,7 +741,7 @@
 <tr>
 <td style="text-align: center;">4</td>
 <td style="text-align: left;">Logic Crash</td>
-<td style="text-align: left;"><code>-2 DT</code> <code>Wits</code> permanently</td>
+<td style="text-align: left;"><code>-1 DT</code> <code>Wits</code> permanently</td>
 </tr>
 <tr>
 <td style="text-align: center;">5</td>
@@ -758,10 +754,8 @@
 <td style="text-align: left;"><code>OoA</code>, -2 Injury roll</td>
 </tr>
 </tbody>
-</table></div>
-            </div>
-
-            <div class="column">
+</table>
+</div>
 <div><h2>Fumbles: Melee</h2>
 <table>
 <thead>
@@ -803,8 +797,10 @@
 <td style="text-align: left;">Weapon destroyed, take max weapon damage</td>
 </tr>
 </tbody>
-</table>
-</div>
+</table></div>
+            </div>
+
+            <div class="column">
 <div><h2>Fumbles: Ranged</h2>
 <table>
 <thead>
@@ -886,7 +882,107 @@
 <tr>
 <td style="text-align: center;">6+</td>
 <td style="text-align: left;">Broadcast Storm</td>
-<td style="text-align: left;">Forget power permanently, caster and all within 6" take d8 damage</td>
+<td style="text-align: left;">Forget power permanently</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div><h2>Hostile Behavior</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">d6</th>
+<th style="text-align: center;">No LoS</th>
+<th style="text-align: center;">Has LoS</th>
+<th style="text-align: center;">Engaged</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1-4</td>
+<td style="text-align: center;">Patrol</td>
+<td style="text-align: center;">Attack</td>
+<td style="text-align: center;">Attack</td>
+</tr>
+<tr>
+<td style="text-align: center;">5 Scrapers</td>
+<td style="text-align: center;">Patrol</td>
+<td style="text-align: center;">Cover</td>
+<td style="text-align: center;">Attack</td>
+</tr>
+<tr>
+<td style="text-align: center;">5 Automata</td>
+<td style="text-align: center;">Wait</td>
+<td style="text-align: center;">Wait</td>
+<td style="text-align: center;">Attack</td>
+</tr>
+<tr>
+<td style="text-align: center;">5 Wraiths</td>
+<td style="text-align: center;">Phase</td>
+<td style="text-align: center;">Phase</td>
+<td style="text-align: center;">Attack</td>
+</tr>
+<tr>
+<td style="text-align: center;">5 Callers</td>
+<td style="text-align: center;">Broadcast</td>
+<td style="text-align: center;">Broadcast</td>
+<td style="text-align: center;">Attack</td>
+</tr>
+<tr>
+<td style="text-align: center;">5 Feeders</td>
+<td style="text-align: center;">Patrol</td>
+<td style="text-align: center;">Regroup</td>
+<td style="text-align: center;">Attack</td>
+</tr>
+<tr>
+<td style="text-align: center;">5 Crews</td>
+<td style="text-align: center;">Patrol</td>
+<td style="text-align: center;">Mob Up</td>
+<td style="text-align: center;">Mob Up</td>
+</tr>
+<tr>
+<td style="text-align: center;">5 Coworkers</td>
+<td style="text-align: center;">Patrol</td>
+<td style="text-align: center;">Cover</td>
+<td style="text-align: center;">Attack</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">Regroup</td>
+<td style="text-align: center;">Attack</td>
+<td style="text-align: center;">Frenzy</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div><h2>Coworkers (Normal)</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">d6</th>
+<th style="text-align: center;">No LoS</th>
+<th style="text-align: center;">Has LoS</th>
+<th style="text-align: center;">Engaged</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1-4</td>
+<td style="text-align: center;">Wait</td>
+<td style="text-align: center;">Wait</td>
+<td style="text-align: center;">Flee</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">Cooperate</td>
+<td style="text-align: center;">Cooperate</td>
+<td style="text-align: center;">Cooperate</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">Flee</td>
+<td style="text-align: center;">Flee</td>
+<td style="text-align: center;">Flee</td>
 </tr>
 </tbody>
 </table></div>

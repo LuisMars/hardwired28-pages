@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hardwired 28 - Referencia Rápida 0.6.4-beta</title>
-    <meta property="og:title" content="Hardwired 28 - Referencia Rápida 0.6.4-beta">
+    <title>Hardwired 28 - Referencia Rápida 0.6.5-beta</title>
+    <meta property="og:title" content="Hardwired 28 - Referencia Rápida 0.6.5-beta">
     <meta property="og:description" content="Juego de escaramuzas cablepunk corporativo">
     <meta property="og:image" content="http://hardwired28.luismars.com/img/social.png">
     <meta property="og:url" content="http://hardwired28.luismars.com/es/">
@@ -37,7 +37,7 @@
         <div class="three-column">
             <div class="column">
 <div><h1>Hardwired 28 - Referencia Rápida</h1>
-<p><em>0.6.4-beta</em></p>
+<p><em>0.6.5-beta</em></p>
 </div>
 <div><h2>Niveles de Dado (ND)</h2>
 <p class="dice-tier">2d4 → 2d6 → 2d8 → 2d10 → 2d12</p>
@@ -106,7 +106,7 @@
 <p>Miniatura por debajo de su <code>Salud</code> máxima.</p>
 </div>
 <div><h2>Empuje</h2>
-<p>La miniatura se mueve directamente lejos del atacante. Se detiene en obstáculos. Sufre daño de caída si cae por el borde.</p></div>
+<p>Tras impactar, el atacante puede empujar al objetivo. Se detiene en obstáculos. Sufre daño de caída si cae por el borde.</p></div>
             </div>
 
             <div class="column">
@@ -151,19 +151,15 @@
 </tr>
 <tr>
 <td>Buscar</td>
-<td><code>Astucia</code> vs. 2d6 para <code>Botín</code>. Éxito: retira el marcador</td>
+<td><code>Astucia</code> vs. 2d6 para <code>Marcador de Botín</code> (si no está <code>Trabado</code>)</td>
 </tr>
 <tr>
 <td>Interrogar</td>
 <td><code>Astucia</code> vs. <code>Astucia</code> para <code>Pruebas</code> (+1 <strong>ND</strong> si herido). Éxito: retira el Compañero</td>
 </tr>
 <tr>
-<td>Saquear</td>
-<td>Toma un objeto de enemigo <code>FdC</code> a 1"</td>
-</tr>
-<tr>
 <td>Canalizar</td>
-<td><code>Astucia</code> vs. <code>Astucia</code> (solo <code>Emisores</code>)</td>
+<td>Ofensivo: <code>Astucia</code> vs. <code>Astucia</code>. Apoyo: <code>Astucia</code> vs. 2d6</td>
 </tr>
 </tbody>
 </table>
@@ -203,9 +199,9 @@
 <div><h2>Canalización</h2>
 <ul>
 <li>Acción, LdV, sin límite de alcance</li>
-<li><code>Astucia</code> vs. <code>Astucia</code>, daño directo</li>
-<li><strong>Interferencia:</strong> <code>-1</code> acumulativo por fallo, reinicia tras pifia</li>
-<li><strong>Sobreemisión:</strong> <code>-1 ND</code>, +d4 o dobla el efecto</li>
+<li>Ofensivo: <code>Astucia</code> vs. <code>Astucia</code> del objetivo</li>
+<li>Apoyo: <code>Astucia</code> vs. 2d6 (objetivo aliado)</li>
+<li>Triple+: afecta a todos los objetivos válidos a 3"</li>
 </ul></div>
             </div>
 
@@ -405,10 +401,8 @@
 <td style="text-align: left;">Tira dos veces (ignora 20s)</td>
 </tr>
 </tbody>
-</table></div>
-            </div>
-
-            <div class="column">
+</table>
+</div>
 <div><h2>Resultados de Interrogatorio</h2>
 <table>
 <thead>
@@ -455,8 +449,10 @@
 <td style="text-align: left;">1 <code>Prueba</code>, +2 <code>Pistas</code></td>
 </tr>
 </tbody>
-</table>
-</div>
+</table></div>
+            </div>
+
+            <div class="column">
 <div><h2>Críticos: Cortante</h2>
 <table>
 <thead>
@@ -533,7 +529,7 @@
 <tr>
 <td style="text-align: center;">5</td>
 <td style="text-align: left;">Tullido</td>
-<td style="text-align: left;">-2" Mov permanente</td>
+<td style="text-align: left;">-1" <code>Mov</code> permanente</td>
 </tr>
 <tr>
 <td style="text-align: center;">6+</td>
@@ -584,10 +580,8 @@
 <td style="text-align: left;"><code>FdC</code>, -2 a la tirada de Heridas</td>
 </tr>
 </tbody>
-</table></div>
-            </div>
-
-            <div class="column">
+</table>
+</div>
 <div><h2>Críticos: Energía</h2>
 <table>
 <thead>
@@ -616,12 +610,12 @@
 <tr>
 <td style="text-align: center;">4</td>
 <td style="text-align: left;">Daño Neural</td>
-<td style="text-align: left;">-2" Mov permanente</td>
+<td style="text-align: left;">-1" <code>Mov</code> permanente</td>
 </tr>
 <tr>
 <td style="text-align: center;">5</td>
 <td style="text-align: left;">Quemado</td>
-<td style="text-align: left;"><code>-2 ND</code> disparo permanente</td>
+<td style="text-align: left;"><code>-1 ND</code> disparo permanente</td>
 </tr>
 <tr>
 <td style="text-align: center;">6+</td>
@@ -629,8 +623,10 @@
 <td style="text-align: left;"><code>FdC</code>, -2 a la tirada de Heridas</td>
 </tr>
 </tbody>
-</table>
-</div>
+</table></div>
+            </div>
+
+            <div class="column">
 <div><h2>Críticos: Explosivo</h2>
 <table>
 <thead>
@@ -664,7 +660,7 @@
 <tr>
 <td style="text-align: center;">5</td>
 <td style="text-align: left;">Destrozado</td>
-<td style="text-align: left;">Mov a la mitad permanente</td>
+<td style="text-align: left;">-1" <code>Mov</code> permanente</td>
 </tr>
 <tr>
 <td style="text-align: center;">6+</td>
@@ -745,7 +741,7 @@
 <tr>
 <td style="text-align: center;">4</td>
 <td style="text-align: left;">Colapso Lógico</td>
-<td style="text-align: left;"><code>-2 ND</code> <code>Astucia</code> permanente</td>
+<td style="text-align: left;"><code>-1 ND</code> <code>Astucia</code> permanente</td>
 </tr>
 <tr>
 <td style="text-align: center;">5</td>
@@ -758,10 +754,8 @@
 <td style="text-align: left;"><code>FdC</code>, -2 a la tirada de Heridas</td>
 </tr>
 </tbody>
-</table></div>
-            </div>
-
-            <div class="column">
+</table>
+</div>
 <div><h2>Pifias: CC</h2>
 <table>
 <thead>
@@ -803,8 +797,10 @@
 <td style="text-align: left;">Arma destruida, daño máx.</td>
 </tr>
 </tbody>
-</table>
-</div>
+</table></div>
+            </div>
+
+            <div class="column">
 <div><h2>Pifias: Disparo</h2>
 <table>
 <thead>
@@ -886,7 +882,107 @@
 <tr>
 <td style="text-align: center;">6+</td>
 <td style="text-align: left;">Tormenta</td>
-<td style="text-align: left;">Pierde el poder, Emisor y todos a 6" sufren d8</td>
+<td style="text-align: left;">Pierde el poder permanentemente</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div><h2>Comportamiento Hostil</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">d6</th>
+<th style="text-align: center;">Sin LdV</th>
+<th style="text-align: center;">Con LdV</th>
+<th style="text-align: center;">Trabado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1-4</td>
+<td style="text-align: center;">Patrullar</td>
+<td style="text-align: center;">Atacar</td>
+<td style="text-align: center;">Atacar</td>
+</tr>
+<tr>
+<td style="text-align: center;">5 Carroñeros</td>
+<td style="text-align: center;">Patrullar</td>
+<td style="text-align: center;">Cobertura</td>
+<td style="text-align: center;">Atacar</td>
+</tr>
+<tr>
+<td style="text-align: center;">5 Autómatas</td>
+<td style="text-align: center;">Esperar</td>
+<td style="text-align: center;">Esperar</td>
+<td style="text-align: center;">Atacar</td>
+</tr>
+<tr>
+<td style="text-align: center;">5 Espectros</td>
+<td style="text-align: center;">Fase</td>
+<td style="text-align: center;">Fase</td>
+<td style="text-align: center;">Atacar</td>
+</tr>
+<tr>
+<td style="text-align: center;">5 Invocadores</td>
+<td style="text-align: center;">Emitir</td>
+<td style="text-align: center;">Emitir</td>
+<td style="text-align: center;">Atacar</td>
+</tr>
+<tr>
+<td style="text-align: center;">5 Parásitos</td>
+<td style="text-align: center;">Patrullar</td>
+<td style="text-align: center;">Reagrupar</td>
+<td style="text-align: center;">Atacar</td>
+</tr>
+<tr>
+<td style="text-align: center;">5 Bandas</td>
+<td style="text-align: center;">Patrullar</td>
+<td style="text-align: center;">Jauría</td>
+<td style="text-align: center;">Jauría</td>
+</tr>
+<tr>
+<td style="text-align: center;">5 Compañeros</td>
+<td style="text-align: center;">Patrullar</td>
+<td style="text-align: center;">Cobertura</td>
+<td style="text-align: center;">Atacar</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">Reagrupar</td>
+<td style="text-align: center;">Atacar</td>
+<td style="text-align: center;">Frenesí</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div><h2>Compañeros (Normal)</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">d6</th>
+<th style="text-align: center;">Sin LdV</th>
+<th style="text-align: center;">Con LdV</th>
+<th style="text-align: center;">Trabado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1-4</td>
+<td style="text-align: center;">Esperar</td>
+<td style="text-align: center;">Esperar</td>
+<td style="text-align: center;">Huir</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">Cooperar</td>
+<td style="text-align: center;">Cooperar</td>
+<td style="text-align: center;">Cooperar</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">Huir</td>
+<td style="text-align: center;">Huir</td>
+<td style="text-align: center;">Huir</td>
 </tr>
 </tbody>
 </table></div>

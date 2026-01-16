@@ -7,7 +7,7 @@
     {"roll": 1, "result": "Signal Burn", "effect": "+d6 damage"},
     {"roll": 2, "result": "Frequency Terror", "effect": "`Flee` toward board edge"},
     {"roll": 3, "result": "System Drain", "effect": "`-1 DT` `Combat` permanently"},
-    {"roll": 4, "result": "Logic Crash", "effect": "`-2 DT` `Wits` permanently"},
+    {"roll": 4, "result": "Logic Crash", "effect": "`-1 DT` `Wits` permanently"},
     {"roll": 5, "result": "Hijacked", "effect": "Enemy controls next activation"},
     {"roll": "6+", "result": "Total Corruption", "effect": "`OoA`, -2 Injury roll"}
   ]

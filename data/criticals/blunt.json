@@ -8,7 +8,7 @@
     {"roll": 2, "result": "Stunned", "effect": "Lose next activation"},
     {"roll": 3, "result": "Rattled", "effect": "`-1 DT` `Defense` permanently"},
     {"roll": 4, "result": "Concussed", "effect": "`-1 DT` `Wits` permanently"},
-    {"roll": 5, "result": "Crippled", "effect": "-2\" movement permanently"},
+    {"roll": 5, "result": "Crippled", "effect": "-1\" `Move` permanently"},
     {"roll": "6+", "result": "Crushed", "effect": "`OoA`, -2 Injury roll"}
   ]
 }

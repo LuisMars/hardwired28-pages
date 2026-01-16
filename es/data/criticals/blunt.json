@@ -9,7 +9,7 @@
     {"roll": 2, "result": "Aturdido", "effect": "Pierde la siguiente activación"},
     {"roll": 3, "result": "Trastornado", "effect": "`-1 ND` `Defensa` permanente"},
     {"roll": 4, "result": "Conmocionado", "effect": "`-1 ND` `Astucia` permanente"},
-    {"roll": 5, "result": "Tullido", "effect": "-2\" Mov permanente"},
+    {"roll": 5, "result": "Tullido", "effect": "-1\" `Mov` permanente"},
     {"roll": "6+", "result": "Aplastado", "effect": "`FdC`, -2 a la tirada de Heridas"}
   ]
 }

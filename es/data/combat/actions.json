@@ -10,9 +10,8 @@
     {"action": "`Destrabarse`", "effect": "Sal de `Trabado` sin penalización"},
     {"action": "`Apuntar`", "effect": "Declara objetivo. Tiene `-1 ND` `Defensa` contra tu próximo disparo (se pierde si te mueves o recibes daño)"},
     {"action": "`Interactuar`", "effect": "A 1\". Recoge un objetivo o un arma caída"},
-    {"action": "`Buscar`", "effect": "A 1\" de un `Marcador de Botín`. `Astucia` vs. 2d6"},
+    {"action": "`Buscar`", "effect": "A 1\" de un `Marcador de Botín`. `Astucia` vs. 2d6 (si no está `Trabado`)"},
     {"action": "`Interrogar`", "effect": "A 1\" de un Compañero. `Astucia` vs. `Astucia` (`+1 ND` si el Compañero está herido)"},
-    {"action": "`Saquear`", "effect": "A 1\". Recoge un objeto de un enemigo `Fuera de Combate`"},
     {"action": "`Canalizar`", "effect": "`Astucia` vs. `Astucia` o 2d6 (solo `Emisores`)"}
   ]
 }

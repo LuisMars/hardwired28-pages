@@ -9,9 +9,8 @@
     {"action": "`Disengage`", "effect": "Leave melee safely."},
     {"action": "`Aim`", "effect": "Declare target. `+1 DT` `Combat` on your next shot (lost if moved or damaged)"},
     {"action": "`Interact`", "effect": "Within 1\". Grab objective or pick up dropped weapon"},
-    {"action": "`Search`", "effect": "Within 1\" of `Loot Marker`. `Wits` vs. 2d6"},
+    {"action": "`Search`", "effect": "Within 1\" of `Loot Marker`. `Wits` vs. 2d6. Not while `Engaged`"},
     {"action": "`Interrogate`", "effect": "Within 1\" of Coworker. `Wits` vs. `Wits` (`+1 DT` if wounded)"},
-    {"action": "`Loot`", "effect": "Within 1\". Take one item from `Out of Action` enemy"},
     {"action": "`Cast`", "effect": "`Wits` vs. target `Wits` or 2d6 (Broadcasters only)"}
   ]
 }

@@ -71,7 +71,7 @@
       "name": "Sword",
       "type": "`Bladed`",
       "damage": "d6",
-      "special": "`+1 DT` when `Riposting`",
+      "special": "Re-roll 1s when `Riposting`",
       "cost": 10
     },
     {
@@ -132,6 +132,14 @@
     },
     {
       "roll": 15,
+      "name": "Saber",
+      "type": "`Bladed`",
+      "damage": "d10",
+      "special": "Re-roll 1s and 2s",
+      "cost": 19
+    },
+    {
+      "roll": 16,
       "name": "Gauntlet",
       "type": "`Blunt`",
       "damage": "d10",
@@ -139,19 +147,11 @@
       "cost": 21
     },
     {
-      "roll": 16,
+      "roll": 17,
       "name": "Plague Fist",
       "type": "`Toxic`",
       "damage": "d12",
       "special": "Re-roll 1s, +1 damage vs. wounded",
-      "cost": 22
-    },
-    {
-      "roll": 17,
-      "name": "Saber",
-      "type": "`Bladed`",
-      "damage": "d10",
-      "special": "Re-roll 1s and 2s, `+1 DT` when `Riposting`",
       "cost": 22
     },
     {

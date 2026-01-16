@@ -8,7 +8,7 @@
     {"roll": 1, "result": "Quemadura de Señal", "effect": "+d6 de daño"},
     {"roll": 2, "result": "Terror de Frecuencia", "effect": "`Huida` hacia el borde del tablero"},
     {"roll": 3, "result": "Drenaje de Sistema", "effect": "`-1 ND` `Combate` permanente"},
-    {"roll": 4, "result": "Colapso Lógico", "effect": "`-2 ND` `Astucia` permanente"},
+    {"roll": 4, "result": "Colapso Lógico", "effect": "`-1 ND` `Astucia` permanente"},
     {"roll": 5, "result": "Secuestrado", "effect": "Enemigo controla la siguiente activación"},
     {"roll": "6+", "result": "Corrupción Total", "effect": "`FdC`, -2 a la tirada de Heridas"}
   ]
