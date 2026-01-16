@@ -127,9 +127,9 @@
             <li class="toc-h2"><a href="#activation_1">Activation</a></li>
             <li class="toc-h2"><a href="#situation">Situation</a></li>
             <li class="toc-h2"><a href="#actions_1">Actions</a></li>
-            <li class="toc-h2"><a href="#random-direction">Random Direction</a></li>
             <li class="toc-h2"><a href="#spawning-hostiles">Spawning Hostiles</a></li>
             <li class="toc-h2"><a href="#unit-type-tiers">Unit Type Tiers</a></li>
+            <li class="toc-h2"><a href="#random-direction">Random Direction</a></li>
             <li class="toc-h2"><a href="#scrapers">Scrapers</a></li>
             <li class="toc-h2"><a href="#feral-crews">Feral Crews</a></li>
             <li class="toc-h2"><a href="#wave-callers">Wave Callers</a></li>
@@ -190,7 +190,7 @@
 
 
 <h1 id="hardwired-28_1">Hardwired 28</h1>
-<p><em>0.6.5-beta</em> by LuisMars</p>
+<p><em>0.6.6-beta</em> by LuisMars</p>
 <h2 id="the-great-complex">The Great Complex</h2>
 <p>A vertical megastructure three kilometers tall. Cables hang from every surface. They bundle into trunks thicker than bodies, snake through walls, coil underfoot. The Complex was meant to be paradise. Now it decays.</p>
 <p>Wired connection is sacred. Wireless is heresy. Since the Tethering, wireless has meant excommunication. Debts are inherited. Children are born subscribed.</p>
@@ -1291,7 +1291,7 @@
 <tr>
 <td style="text-align: center;">7</td>
 <td style="text-align: left;">Wellness</td>
-<td style="text-align: left;">Restore d6 <code>Health</code> to one model, remove DoT effects</td>
+<td style="text-align: left;">Restore d4 <code>Health</code> to one model during its activation</td>
 </tr>
 <tr>
 <td style="text-align: center;">8</td>
@@ -2172,15 +2172,12 @@
 </ul>
 
 
-<h2 id="random-direction">Random Direction</h2>
-<p>Roll d8 (compass), d12 (clock), or scatter dice. Move that direction.</p>
 <h2 id="spawning-hostiles">Spawning Hostiles</h2>
 <p>When a scenario spawns hostiles:<br />
-1. Roll d6 for faction<br />
-2. Roll d2 for unit type within tier (see scenario for tier)<br />
-3. Spawn the number shown in unit's Spawn column<br />
-4. Add one token to the bag for this spawn group<br />
-5. Each unit type spawned is a separate group with its own token</p>
+1. Roll d6 for faction, d2 for unit type within tier<br />
+2. Check Spawn column (single: 1 group/1 token, split: 2 groups/2 tokens)<br />
+3. Place on edge per scenario, as close to center as possible, 1"+ apart<br />
+4. Each group activates separately</p>
 
 
 <h2 id="unit-type-tiers">Unit Type Tiers</h2>
@@ -2208,6 +2205,8 @@
 </tbody>
 </table>
 <p>Scenarios specify which tier to use based on spawn frequency.</p>
+<h2 id="random-direction">Random Direction</h2>
+<p>Roll d8 (compass), d12 (clock), the acute angle of a d10, or scatter dice. Move that direction.</p>
 
 
 
@@ -2243,7 +2242,7 @@
 <tr>
 <td style="text-align: center;">1</td>
 <td style="text-align: left;">Gutter Runner</td>
-<td style="text-align: center;">8</td>
+<td style="text-align: center;">4+4</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d4</td>
@@ -2254,7 +2253,7 @@
 <tr>
 <td style="text-align: center;">2</td>
 <td style="text-align: left;">Cable Rat</td>
-<td style="text-align: center;">6</td>
+<td style="text-align: center;">2+2</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d4</td>
@@ -2374,7 +2373,7 @@
 <tr>
 <td style="text-align: center;">1</td>
 <td style="text-align: left;">Runt</td>
-<td style="text-align: center;">8</td>
+<td style="text-align: center;">4+4</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d4</td>
@@ -2385,7 +2384,7 @@
 <tr>
 <td style="text-align: center;">2</td>
 <td style="text-align: left;">Bruiser</td>
-<td style="text-align: center;">6</td>
+<td style="text-align: center;">2+2</td>
 <td style="text-align: center;">2d8</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d4</td>
@@ -2505,7 +2504,7 @@
 <tr>
 <td style="text-align: center;">1</td>
 <td style="text-align: left;">Initiate</td>
-<td style="text-align: center;">10</td>
+<td style="text-align: center;">4+4</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d4</td>
@@ -2516,7 +2515,7 @@
 <tr>
 <td style="text-align: center;">2</td>
 <td style="text-align: left;">Antenna-Grafted</td>
-<td style="text-align: center;">7</td>
+<td style="text-align: center;">4+4</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d4</td>
@@ -2570,7 +2569,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Broadcast</strong>: Count allies within 3". Spawn 1 Static Wraith of that type (1 ally = Flicker, 2 = Drift, etc.). Once per round, reroll if already used.</p>
+<p><strong>Summon</strong>: Count the largest group of friendly models (Wave Callers and Static Wraiths) within 1". If 3+, spawn that many Flickers minus 2, more than 1" apart from each other. Once per round.</p>
 <p><strong>Behavior</strong></p>
 <table>
 <thead>
@@ -2590,8 +2589,8 @@
 </tr>
 <tr>
 <td style="text-align: center;">5</td>
-<td style="text-align: center;">Broadcast</td>
-<td style="text-align: center;">Broadcast</td>
+<td style="text-align: center;">Summon</td>
+<td style="text-align: center;">Summon</td>
 <td style="text-align: center;">Attack</td>
 </tr>
 <tr>
@@ -2636,7 +2635,7 @@
 <tr>
 <td style="text-align: center;">1</td>
 <td style="text-align: left;">Flicker</td>
-<td style="text-align: center;">8</td>
+<td style="text-align: center;">4+4</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d4</td>
@@ -2647,7 +2646,7 @@
 <tr>
 <td style="text-align: center;">2</td>
 <td style="text-align: left;">Drift</td>
-<td style="text-align: center;">6</td>
+<td style="text-align: center;">2+2</td>
 <td style="text-align: center;">2d8</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d6</td>
@@ -2767,7 +2766,7 @@
 <tr>
 <td style="text-align: center;">1</td>
 <td style="text-align: left;">Maintenance Swarm</td>
-<td style="text-align: center;">8</td>
+<td style="text-align: center;">4+4</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d4</td>
@@ -2778,7 +2777,7 @@
 <tr>
 <td style="text-align: center;">2</td>
 <td style="text-align: left;">Security Drone</td>
-<td style="text-align: center;">6</td>
+<td style="text-align: center;">2+2</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d4</td>
@@ -2898,7 +2897,7 @@
 <tr>
 <td style="text-align: center;">1</td>
 <td style="text-align: left;">Reaper</td>
-<td style="text-align: center;">8</td>
+<td style="text-align: center;">4+4</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d4</td>
@@ -2909,7 +2908,7 @@
 <tr>
 <td style="text-align: center;">2</td>
 <td style="text-align: left;">Larva</td>
-<td style="text-align: center;">6</td>
+<td style="text-align: center;">2+2</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d6</td>
@@ -3025,7 +3024,7 @@
 <tr>
 <td style="text-align: center;">1</td>
 <td style="text-align: left;">Shift Drone</td>
-<td style="text-align: center;">6</td>
+<td style="text-align: center;">2+2</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d10</td>
@@ -3036,7 +3035,7 @@
 <tr>
 <td style="text-align: center;">2</td>
 <td style="text-align: left;">Temp</td>
-<td style="text-align: center;">5</td>
+<td style="text-align: center;">2+2</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d10</td>
@@ -3090,7 +3089,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Cooperate</strong>: During the next round, <strong>Interrogate</strong> auto-succeeds, roll result table.<br />
+<p><strong>Cooperate</strong>: During the next round, <strong>Interrogate</strong> gains <code>+1 DT</code>.<br />
 <strong>Hostile</strong>: When attacked, mark this Coworker. Hostile Coworkers use the Attacked table.</p>
 <p><strong>Normal</strong></p>
 <table>
@@ -3296,27 +3295,27 @@
 <tr>
 <td style="text-align: center;">2</td>
 <td style="text-align: left;">Decoys</td>
-<td style="text-align: left;">Half are fake. Placing player decides. Reveal on <code>Search</code></td>
+<td style="text-align: left;"><code>+1 DT</code> to <code>Search</code>. Half are fake. Placing player decides. Reveal on <code>Search</code></td>
 </tr>
 <tr>
 <td style="text-align: center;">3</td>
-<td style="text-align: left;">Locked</td>
-<td style="text-align: left;">2 consecutive activations adjacent to unlock. Attack or move breaks sequence</td>
+<td style="text-align: left;">Drop Zone</td>
+<td style="text-align: left;"><code>+1 DT</code> to <code>Search</code>. Place delivery points instead of <code>Loot Markers</code>. At each round start, 1 <code>Loot Marker</code> drops at a random point</td>
 </tr>
 <tr>
 <td style="text-align: center;">4</td>
 <td style="text-align: left;">Heavy</td>
-<td style="text-align: left;">All <code>Loot Markers</code> are Heavy. Needs 2 friendly models within 1" to <code>Search</code></td>
+<td style="text-align: left;"><code>-1 DT</code> to <code>Search</code>. All <code>Loot Markers</code> are Heavy. Needs 2 friendly models within 1" to <code>Search</code></td>
 </tr>
 <tr>
 <td style="text-align: center;">5</td>
-<td style="text-align: left;">Drop Zone</td>
-<td style="text-align: left;">Place delivery points instead of <code>Loot Markers</code>. At each round start, 1 <code>Loot Marker</code> drops at a random point</td>
+<td style="text-align: left;">Locked</td>
+<td style="text-align: left;"><code>-2 DT</code> to <code>Search</code>. 2 consecutive activations adjacent to unlock. Attack or move breaks sequence</td>
 </tr>
 <tr>
 <td style="text-align: center;">6</td>
 <td style="text-align: left;">Extraction</td>
-<td style="text-align: left;">Carry off board to score. No Performance Review</td>
+<td style="text-align: left;"><code>-2 DT</code> to <code>Search</code>. Carry off board to score. No Performance Review</td>
 </tr>
 </tbody>
 </table>
@@ -3337,28 +3336,28 @@
 </tr>
 <tr>
 <td style="text-align: center;">2</td>
-<td style="text-align: left;">Panicked</td>
-<td style="text-align: left;">Always use Flee behavior at half <code>Move</code> (ignore AI roll)</td>
+<td style="text-align: left;">Informant</td>
+<td style="text-align: left;"><code>+2 DT</code> to <code>Interrogate</code>. Worth 1 <code>Evidence</code> + 1 <code>Lead</code>. Reroll 0 results</td>
 </tr>
 <tr>
 <td style="text-align: center;">3</td>
-<td style="text-align: left;">Escort</td>
-<td style="text-align: left;">Can't <code>Interrogate</code> on spot. Carry to your edge to score</td>
+<td style="text-align: left;">Bribed</td>
+<td style="text-align: left;"><code>+1 DT</code> to <code>Interrogate</code>. Pay 15 subs: auto-succeed (still roll result table)</td>
 </tr>
 <tr>
 <td style="text-align: center;">4</td>
-<td style="text-align: left;">Hostile</td>
-<td style="text-align: left;">Start marked Hostile (use Atk columns)</td>
+<td style="text-align: left;">Panicked</td>
+<td style="text-align: left;"><code>-1 DT</code> to <code>Interrogate</code>. Always use Flee behavior at half <code>Move</code> (ignore AI roll)</td>
 </tr>
 <tr>
 <td style="text-align: center;">5</td>
-<td style="text-align: left;">Informant</td>
-<td style="text-align: left;">Worth 1 <code>Evidence</code> + 1 <code>Lead</code>. Reroll 0 results</td>
+<td style="text-align: left;">Escort</td>
+<td style="text-align: left;"><code>-1 DT</code> to <code>Interrogate</code>. Can't <code>Interrogate</code> on spot. Carry to your edge to score</td>
 </tr>
 <tr>
 <td style="text-align: center;">6</td>
-<td style="text-align: left;">Bribed</td>
-<td style="text-align: left;">Pay 15 subs: auto-succeed (still roll result table)</td>
+<td style="text-align: left;">Hostile</td>
+<td style="text-align: left;"><code>-2 DT</code> to <code>Interrogate</code>. Start marked Hostile (use Atk columns)</td>
 </tr>
 </tbody>
 </table>
@@ -3547,7 +3546,7 @@
 <h4 id="deployment">Deployment</h4>
 <p>Standard.</p>
 <h4 id="threats">Threats</h4>
-<p><strong>Round 3:</strong> Roll Hostile faction table (<code>Swarm</code> tier). They spawn on a random edge.</p>
+<p><strong>Round 3:</strong> Roll Hostile faction table (<code>Swarm</code> tier). They spawn on a random edge not used for player deployment.</p>
 <blockquote>
 <p>"Sector 7 defaulted before I was born. My parents defaulted here. Their debt is mine now."<br />
 <strong>Receivable Resident</strong></p>
@@ -3568,7 +3567,7 @@
 <h4 id="deployment_1">Deployment</h4>
 <p>Standard.</p>
 <h4 id="threats_1">Threats</h4>
-<p><strong>Rounds 3, 5:</strong> Roll Hostile faction table (<code>Normal</code> tier). They spawn on a random edge.</p>
+<p><strong>Rounds 3, 5:</strong> Roll Hostile faction table (<code>Normal</code> tier). They spawn on a random edge not used for player deployment.</p>
 <blockquote>
 <p>"Resistance will add to your balance."<br />
 <strong>Toll Collector final notice</strong></p>
@@ -3589,7 +3588,7 @@
 <h4 id="deployment_2">Deployment</h4>
 <p>Standard.</p>
 <h4 id="threats_2">Threats</h4>
-<p><strong>Rounds 2, 4, 6:</strong> Roll Hostile faction table (<code>Elite</code> tier). They spawn from center.</p>
+<p><strong>Rounds 2, 4, 6:</strong> Roll Hostile faction table (<code>Elite</code> tier). They spawn within 3" of center.</p>
 <h4 id="special">Special</h4>
 <p>At game end, Relic holder gains +1 <code>Evidence</code> + 2 <code>Leads</code>.</p>
 <blockquote>
@@ -3614,7 +3613,7 @@
 <h4 id="deployment_3">Deployment</h4>
 <p>Aggressor picks an edge and deploys first. Defender deploys on the opposite edge.</p>
 <h4 id="threats_3">Threats</h4>
-<p><strong>Round 2:</strong> Roll Hostile faction table (<code>Swarm</code> tier). They spawn on a random edge.</p>
+<p><strong>Round 2:</strong> Roll Hostile faction table (<code>Swarm</code> tier). They spawn on a random edge not used for player deployment.</p>
 <h4 id="special_1">Special</h4>
 <p>Hostiles ignore Defender until Defender uses <code>Search</code> or <code>Interrogate</code>, or until Round 3.</p>
 <blockquote>
@@ -3637,7 +3636,7 @@
 <h4 id="deployment_4">Deployment</h4>
 <p>Defender within 6" of center. Aggressor picks an edge and deploys on that edge.</p>
 <h4 id="threats_4">Threats</h4>
-<p><strong>Rounds 3, 5:</strong> Roll Hostile faction table (<code>Normal</code> tier). They spawn on a random edge.</p>
+<p><strong>Rounds 3, 5:</strong> Roll Hostile faction table (<code>Normal</code> tier). They spawn on a random edge not used by Aggressor.</p>
 <h4 id="special_2">Special</h4>
 <p>Defender places 3 terrain pieces before deployment.</p>
 <blockquote>
@@ -3659,7 +3658,7 @@
 <h4 id="deployment_5">Deployment</h4>
 <p>Defender deploys all models within 6" of center. Aggressor deploys on opposite corners.</p>
 <h4 id="threats_5">Threats</h4>
-<p><strong>Rounds 2, 4, 6:</strong> Roll Hostile faction table (<code>Elite</code> tier). They spawn on a random edge.</p>
+<p><strong>Rounds 2, 4, 6:</strong> Roll Hostile faction table (<code>Elite</code> tier). They spawn on a random unused edge.</p>
 <h4 id="special_3">Special</h4>
 <p>Hostiles target Aggressor models until Round 3.</p>
 <blockquote>
@@ -3685,7 +3684,7 @@
 <h4 id="deployment_6">Deployment</h4>
 <p>Defender places 2 barricades within 6" of center. Aggressor picks an edge and deploys on that edge. Then Defender deploys within 6" of center. Aggressor may then redeploy d3 models.</p>
 <h4 id="threats_6">Threats</h4>
-<p><strong>Round 4:</strong> Roll Hostile faction table (<code>Swarm</code> tier). They spawn on a random edge.</p>
+<p><strong>Round 4:</strong> Roll Hostile faction table (<code>Swarm</code> tier). They spawn on a random edge not used by Aggressor.</p>
 <blockquote>
 <p>"Dying in public space incurs a cleanup fee charged to your estate."<br />
 <strong>Public Safety Notice</strong></p>
@@ -3706,7 +3705,7 @@
 <h4 id="deployment_7">Deployment</h4>
 <p>Defender within 6" of center. Aggressor picks an edge and deploys on that edge.</p>
 <h4 id="threats_7">Threats</h4>
-<p><strong>Rounds 3, 5:</strong> Roll Hostile faction table (<code>Normal</code> tier). They spawn on a random edge.</p>
+<p><strong>Rounds 3, 5:</strong> Roll Hostile faction table (<code>Normal</code> tier). They spawn on a random edge not used by Aggressor.</p>
 <h4 id="special_4">Special</h4>
 <p>Hostiles ignore Defender unless Defender has the Relic or until Round 4. At game end, Relic holder gains +1 <code>Evidence</code> + 2 <code>Leads</code>. Leaving the board with the Relic does not trigger Performance Review.</p>
 <blockquote>
@@ -3729,7 +3728,7 @@
 <h4 id="deployment_8">Deployment</h4>
 <p>Defender within 6" of center. Aggressor deploys on any edge.</p>
 <h4 id="threats_8">Threats</h4>
-<p><strong>Rounds 2, 4, 6:</strong> Roll Hostile faction table (<code>Elite</code> tier). They spawn on a random edge.</p>
+<p><strong>Rounds 2, 4, 6:</strong> Roll Hostile faction table (<code>Elite</code> tier). They spawn on a random edge not used by Aggressor.</p>
 <h4 id="special_5">Special</h4>
 <p>Defender's <code>Boss</code> gets <code>+1 DT</code> <code>Defense</code>. Hostiles target Aggressor models. If <code>Boss</code> survives to game end, Defender gains +1 <code>Evidence</code>.</p>
 <blockquote>

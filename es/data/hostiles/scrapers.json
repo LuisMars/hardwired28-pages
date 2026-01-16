@@ -7,8 +7,8 @@
     "align": ["center", "left", "center", "center", "center", "center", "center", "center", "left"],
     "display_columns": ["d6", "Nombre", "#", "COM", "DEF", "AST", "PV", "MOV", "Arma"],
     "items": [
-      {"roll": 1, "name": "Corredor de Alcantarilla", "spawn": "8", "combat": "2d6", "defense": "2d4", "wits": "2d4", "health": 6, "move": "5\"", "weapon": "Pistola Casera (`Proyectil`, d4, Disparo)"},
-      {"roll": 2, "name": "Rata de Cable", "spawn": "6", "combat": "2d6", "defense": "2d6", "wits": "2d4", "health": 8, "move": "4\"", "weapon": "Cable Afilado (`Cortante`, d4, CC)"},
+      {"roll": 1, "name": "Corredor de Alcantarilla", "spawn": "4+4", "combat": "2d6", "defense": "2d4", "wits": "2d4", "health": 6, "move": "5\"", "weapon": "Pistola Casera (`Proyectil`, d4, Disparo)"},
+      {"roll": 2, "name": "Rata de Cable", "spawn": "2+2", "combat": "2d6", "defense": "2d6", "wits": "2d4", "health": 8, "move": "4\"", "weapon": "Cable Afilado (`Cortante`, d4, CC)"},
       {"roll": 3, "name": "Rebuscador", "spawn": "3", "combat": "2d4", "defense": "2d4", "wits": "2d6", "health": 10, "move": "5\"", "weapon": "Lanzabasura (`Proyectil`, d4, Disparo)"},
       {"roll": 4, "name": "Capataz", "spawn": "2", "combat": "2d8", "defense": "2d6", "wits": "2d4", "health": 12, "move": "5\"", "weapon": "Cadena Motorizada (`Contundente`, d6, CC)"},
       {"roll": 5, "name": "Emisor Rebelde", "spawn": "1", "combat": "2d6", "defense": "2d4", "wits": "2d8", "health": 12, "move": "5\"", "weapon": "Estallido Estático (`Emisión`, d6, Poder)"},

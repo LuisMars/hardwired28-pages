@@ -5,10 +5,10 @@
   "align": ["center", "left", "left"],
   "items": [
     {"roll": 1, "name": "Standard", "effect": "Normal `Interrogate`"},
-    {"roll": 2, "name": "Panicked", "effect": "Always use Flee behavior at half `Move` (ignore AI roll)"},
-    {"roll": 3, "name": "Escort", "effect": "Can't `Interrogate` on spot. Carry to your edge to score"},
-    {"roll": 4, "name": "Hostile", "effect": "Start marked Hostile (use Atk columns)"},
-    {"roll": 5, "name": "Informant", "effect": "Worth 1 `Evidence` + 1 `Lead`. Reroll 0 results"},
-    {"roll": 6, "name": "Bribed", "effect": "Pay 15 subs: auto-succeed (still roll result table)"}
+    {"roll": 2, "name": "Informant", "effect": "`+2 DT` to `Interrogate`. Worth 1 `Evidence` + 1 `Lead`. Reroll 0 results"},
+    {"roll": 3, "name": "Bribed", "effect": "`+1 DT` to `Interrogate`. Pay 15 subs: auto-succeed (still roll result table)"},
+    {"roll": 4, "name": "Panicked", "effect": "`-1 DT` to `Interrogate`. Always use Flee behavior at half `Move` (ignore AI roll)"},
+    {"roll": 5, "name": "Escort", "effect": "`-1 DT` to `Interrogate`. Can't `Interrogate` on spot. Carry to your edge to score"},
+    {"roll": 6, "name": "Hostile", "effect": "`-2 DT` to `Interrogate`. Start marked Hostile (use Atk columns)"}
   ]
 }

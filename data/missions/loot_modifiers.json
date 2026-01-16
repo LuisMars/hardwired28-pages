@@ -5,10 +5,10 @@
   "align": ["center", "left", "left"],
   "items": [
     {"roll": 1, "name": "Standard", "effect": "Normal `Search`"},
-    {"roll": 2, "name": "Decoys", "effect": "Half are fake. Placing player decides. Reveal on `Search`"},
-    {"roll": 3, "name": "Locked", "effect": "2 consecutive activations adjacent to unlock. Attack or move breaks sequence"},
-    {"roll": 4, "name": "Heavy", "effect": "All `Loot Markers` are Heavy. Needs 2 friendly models within 1\" to `Search`"},
-    {"roll": 5, "name": "Drop Zone", "effect": "Place delivery points instead of `Loot Markers`. At each round start, 1 `Loot Marker` drops at a random point"},
-    {"roll": 6, "name": "Extraction", "effect": "Carry off board to score. No Performance Review"}
+    {"roll": 2, "name": "Decoys", "effect": "`+1 DT` to `Search`. Half are fake. Placing player decides. Reveal on `Search`"},
+    {"roll": 3, "name": "Drop Zone", "effect": "`+1 DT` to `Search`. Place delivery points instead of `Loot Markers`. At each round start, 1 `Loot Marker` drops at a random point"},
+    {"roll": 4, "name": "Heavy", "effect": "`-1 DT` to `Search`. All `Loot Markers` are Heavy. Needs 2 friendly models within 1\" to `Search`"},
+    {"roll": 5, "name": "Locked", "effect": "`-2 DT` to `Search`. 2 consecutive activations adjacent to unlock. Attack or move breaks sequence"},
+    {"roll": 6, "name": "Extraction", "effect": "`-2 DT` to `Search`. Carry off board to score. No Performance Review"}
   ]
 }

@@ -11,7 +11,7 @@
     {"roll": "4", "name": "Extra", "effect": "Una miniatura tiene dos acciones"},
     {"roll": "5", "name": "Finiquito", "effect": "Un ataque inflige el daño máximo"},
     {"roll": "6", "name": "Sinergia", "effect": "Tras activar una miniatura, activa otra miniatura sin activar a 6\" de ella"},
-    {"roll": "7", "name": "Bienestar", "effect": "Restaura d6 `Salud`, elimina efectos de daño continuo"},
+    {"roll": "7", "name": "Bienestar", "effect": "Restaura d4 `Salud` a una miniatura durante su activación"},
     {"roll": "8", "name": "Excedente", "effect": "Tira dos veces, ignora 8s"}
   ]
 }

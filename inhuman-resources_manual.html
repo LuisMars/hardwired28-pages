@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hardwired 28 - Inhuman Resources 0.6.5-beta</title>
-    <meta property="og:title" content="Hardwired 28 - Inhuman Resources 0.6.5-beta">
+    <title>Hardwired 28 - Inhuman Resources 0.6.6-beta</title>
+    <meta property="og:title" content="Hardwired 28 - Inhuman Resources 0.6.6-beta">
     <meta property="og:description" content="Corporate cablepunk skirmish wargame">
     <meta property="og:image" content="http://hardwired28.luismars.com/img/social.png">
     <meta property="og:url" content="http://hardwired28.luismars.com/">
@@ -49,9 +49,9 @@
             <li class="toc-h2"><a href="#activation">Activation</a></li>
             <li class="toc-h2"><a href="#situation">Situation</a></li>
             <li class="toc-h2"><a href="#actions">Actions</a></li>
-            <li class="toc-h2"><a href="#random-direction">Random Direction</a></li>
             <li class="toc-h2"><a href="#spawning-hostiles">Spawning Hostiles</a></li>
             <li class="toc-h2"><a href="#unit-type-tiers">Unit Type Tiers</a></li>
+            <li class="toc-h2"><a href="#random-direction">Random Direction</a></li>
             <li class="toc-h2"><a href="#scrapers">Scrapers</a></li>
             <li class="toc-h2"><a href="#feral-crews">Feral Crews</a></li>
             <li class="toc-h2"><a href="#wave-callers">Wave Callers</a></li>
@@ -107,15 +107,12 @@
 </ul>
 
 
-<h2 id="random-direction">Random Direction</h2>
-<p>Roll d8 (compass), d12 (clock), or scatter dice. Move that direction.</p>
 <h2 id="spawning-hostiles">Spawning Hostiles</h2>
 <p>When a scenario spawns hostiles:<br />
-1. Roll d6 for faction<br />
-2. Roll d2 for unit type within tier (see scenario for tier)<br />
-3. Spawn the number shown in unit's Spawn column<br />
-4. Add one token to the bag for this spawn group<br />
-5. Each unit type spawned is a separate group with its own token</p>
+1. Roll d6 for faction, d2 for unit type within tier<br />
+2. Check Spawn column (single: 1 group/1 token, split: 2 groups/2 tokens)<br />
+3. Place on edge per scenario, as close to center as possible, 1"+ apart<br />
+4. Each group activates separately</p>
 
 
 <h2 id="unit-type-tiers">Unit Type Tiers</h2>
@@ -143,6 +140,8 @@
 </tbody>
 </table>
 <p>Scenarios specify which tier to use based on spawn frequency.</p>
+<h2 id="random-direction">Random Direction</h2>
+<p>Roll d8 (compass), d12 (clock), the acute angle of a d10, or scatter dice. Move that direction.</p>
 
 
 
@@ -178,7 +177,7 @@
 <tr>
 <td style="text-align: center;">1</td>
 <td style="text-align: left;">Gutter Runner</td>
-<td style="text-align: center;">8</td>
+<td style="text-align: center;">4+4</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d4</td>
@@ -189,7 +188,7 @@
 <tr>
 <td style="text-align: center;">2</td>
 <td style="text-align: left;">Cable Rat</td>
-<td style="text-align: center;">6</td>
+<td style="text-align: center;">2+2</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d4</td>
@@ -309,7 +308,7 @@
 <tr>
 <td style="text-align: center;">1</td>
 <td style="text-align: left;">Runt</td>
-<td style="text-align: center;">8</td>
+<td style="text-align: center;">4+4</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d4</td>
@@ -320,7 +319,7 @@
 <tr>
 <td style="text-align: center;">2</td>
 <td style="text-align: left;">Bruiser</td>
-<td style="text-align: center;">6</td>
+<td style="text-align: center;">2+2</td>
 <td style="text-align: center;">2d8</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d4</td>
@@ -440,7 +439,7 @@
 <tr>
 <td style="text-align: center;">1</td>
 <td style="text-align: left;">Initiate</td>
-<td style="text-align: center;">10</td>
+<td style="text-align: center;">4+4</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d4</td>
@@ -451,7 +450,7 @@
 <tr>
 <td style="text-align: center;">2</td>
 <td style="text-align: left;">Antenna-Grafted</td>
-<td style="text-align: center;">7</td>
+<td style="text-align: center;">4+4</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d4</td>
@@ -505,7 +504,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Broadcast</strong>: Count allies within 3". Spawn 1 Static Wraith of that type (1 ally = Flicker, 2 = Drift, etc.). Once per round, reroll if already used.</p>
+<p><strong>Summon</strong>: Count the largest group of friendly models (Wave Callers and Static Wraiths) within 1". If 3+, spawn that many Flickers minus 2, more than 1" apart from each other. Once per round.</p>
 <p><strong>Behavior</strong></p>
 <table>
 <thead>
@@ -525,8 +524,8 @@
 </tr>
 <tr>
 <td style="text-align: center;">5</td>
-<td style="text-align: center;">Broadcast</td>
-<td style="text-align: center;">Broadcast</td>
+<td style="text-align: center;">Summon</td>
+<td style="text-align: center;">Summon</td>
 <td style="text-align: center;">Attack</td>
 </tr>
 <tr>
@@ -571,7 +570,7 @@
 <tr>
 <td style="text-align: center;">1</td>
 <td style="text-align: left;">Flicker</td>
-<td style="text-align: center;">8</td>
+<td style="text-align: center;">4+4</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d4</td>
@@ -582,7 +581,7 @@
 <tr>
 <td style="text-align: center;">2</td>
 <td style="text-align: left;">Drift</td>
-<td style="text-align: center;">6</td>
+<td style="text-align: center;">2+2</td>
 <td style="text-align: center;">2d8</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d6</td>
@@ -702,7 +701,7 @@
 <tr>
 <td style="text-align: center;">1</td>
 <td style="text-align: left;">Maintenance Swarm</td>
-<td style="text-align: center;">8</td>
+<td style="text-align: center;">4+4</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d4</td>
@@ -713,7 +712,7 @@
 <tr>
 <td style="text-align: center;">2</td>
 <td style="text-align: left;">Security Drone</td>
-<td style="text-align: center;">6</td>
+<td style="text-align: center;">2+2</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d4</td>
@@ -833,7 +832,7 @@
 <tr>
 <td style="text-align: center;">1</td>
 <td style="text-align: left;">Reaper</td>
-<td style="text-align: center;">8</td>
+<td style="text-align: center;">4+4</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d4</td>
@@ -844,7 +843,7 @@
 <tr>
 <td style="text-align: center;">2</td>
 <td style="text-align: left;">Larva</td>
-<td style="text-align: center;">6</td>
+<td style="text-align: center;">2+2</td>
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d6</td>
@@ -960,7 +959,7 @@
 <tr>
 <td style="text-align: center;">1</td>
 <td style="text-align: left;">Shift Drone</td>
-<td style="text-align: center;">6</td>
+<td style="text-align: center;">2+2</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d10</td>
@@ -971,7 +970,7 @@
 <tr>
 <td style="text-align: center;">2</td>
 <td style="text-align: left;">Temp</td>
-<td style="text-align: center;">5</td>
+<td style="text-align: center;">2+2</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">2d10</td>
@@ -1025,7 +1024,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Cooperate</strong>: During the next round, <strong>Interrogate</strong> auto-succeeds, roll result table.<br />
+<p><strong>Cooperate</strong>: During the next round, <strong>Interrogate</strong> gains <code>+1 DT</code>.<br />
 <strong>Hostile</strong>: When attacked, mark this Coworker. Hostile Coworkers use the Attacked table.</p>
 <p><strong>Normal</strong></p>
 <table>

@@ -7,8 +7,8 @@
     "align": ["center", "left", "center", "center", "center", "center", "center", "center", "left"],
     "display_columns": ["d6", "Name", "#", "COM", "DEF", "WIT", "HP", "MOV", "Weapon"],
     "items": [
-      {"roll": 1, "name": "Reaper", "spawn": "8", "combat": "2d6", "defense": "2d4", "wits": "2d4", "health": 6, "move": "6\"", "weapon": "Venom Spit (`Toxic`, d4, Ranged)"},
-      {"roll": 2, "name": "Larva", "spawn": "6", "combat": "2d6", "defense": "2d4", "wits": "2d6", "health": 8, "move": "4\"", "weapon": "Feeder Tendrils (`Toxic`, d6, Melee)"},
+      {"roll": 1, "name": "Reaper", "spawn": "4+4", "combat": "2d6", "defense": "2d4", "wits": "2d4", "health": 6, "move": "6\"", "weapon": "Venom Spit (`Toxic`, d4, Ranged)"},
+      {"roll": 2, "name": "Larva", "spawn": "2+2", "combat": "2d6", "defense": "2d4", "wits": "2d6", "health": 8, "move": "4\"", "weapon": "Feeder Tendrils (`Toxic`, d6, Melee)"},
       {"roll": 3, "name": "Stalker", "spawn": "3", "combat": "2d8", "defense": "2d6", "wits": "2d4", "health": 10, "move": "4\"", "weapon": "Talons (`Bladed`, d6, Melee)"},
       {"roll": 4, "name": "Lure", "spawn": "2", "combat": "2d4", "defense": "2d4", "wits": "2d10", "health": 12, "move": "4\"", "weapon": "Mind Spike (`Static`, d6, Power)"},
       {"roll": 5, "name": "Feeder", "spawn": "1", "combat": "2d10", "defense": "2d6", "wits": "2d4", "health": 12, "move": "5\"", "weapon": "Drain Tubes (`Toxic`, d8, Melee)"},

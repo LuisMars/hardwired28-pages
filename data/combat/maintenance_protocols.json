@@ -10,7 +10,7 @@
     {"roll": "4", "name": "Overtime", "effect": "One model takes two actions"},
     {"roll": "5", "name": "Severance", "effect": "One attack deals max weapon damage"},
     {"roll": "6", "name": "Synergy", "effect": "After activating a model, activate an unactivated model within 6\" of it"},
-    {"roll": "7", "name": "Wellness", "effect": "Restore d6 `Health` to one model, remove DoT effects"},
+    {"roll": "7", "name": "Wellness", "effect": "Restore d4 `Health` to one model during its activation"},
     {"roll": "8", "name": "Surplus", "effect": "Roll twice, ignoring 8s"}
   ]
 }

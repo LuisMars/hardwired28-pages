@@ -5,10 +5,10 @@
   "align": ["center", "left", "left"],
   "items": [
     {"roll": 1, "name": "Estándar", "effect": "`Buscar` normal"},
-    {"roll": 2, "name": "Señuelos", "effect": "La mitad son falsos. El jugador que coloca decide. Se revela al `Buscar`"},
-    {"roll": 3, "name": "Cerrado", "effect": "2 activaciones consecutivas adyacente para desbloquear. Atacar o moverse rompe la secuencia"},
-    {"roll": 4, "name": "Pesado", "effect": "Todos los `Marcadores de Botín` son Pesados. Necesita 2 miniaturas aliadas a 1\" para `Buscar`"},
-    {"roll": 5, "name": "Entrega", "effect": "Coloca puntos de entrega en lugar de `Marcadores de Botín`. Al inicio de cada ronda, cae 1 `Marcador de Botín` en un punto aleatorio"},
-    {"roll": 6, "name": "Extracción", "effect": "Llevar fuera del tablero para puntuar. Sin Evaluación de Rendimiento"}
+    {"roll": 2, "name": "Señuelos", "effect": "`+1 ND` al `Buscar`. La mitad son falsos. El jugador que coloca decide. Se revela al `Buscar`"},
+    {"roll": 3, "name": "Entrega", "effect": "`+1 ND` al `Buscar`. Coloca puntos de entrega en lugar de `Marcadores de Botín`. Al inicio de cada ronda, cae 1 `Marcador de Botín` en un punto aleatorio"},
+    {"roll": 4, "name": "Pesado", "effect": "`-1 ND` al `Buscar`. Todos los `Marcadores de Botín` son Pesados. Necesita 2 miniaturas aliadas a 1\" para `Buscar`"},
+    {"roll": 5, "name": "Cerrado", "effect": "`-2 ND` al `Buscar`. 2 activaciones consecutivas adyacente para desbloquear. Atacar o moverse rompe la secuencia"},
+    {"roll": 6, "name": "Extracción", "effect": "`-2 ND` al `Buscar`. Llevar fuera del tablero para puntuar. Sin Evaluación de Rendimiento"}
   ]
 }
