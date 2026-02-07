@@ -1,0 +1,14 @@
+{
+  "table_name": "Tactical Advantages",
+  "source": "3_01_campaign.md",
+  "columns": ["d6", "Advantage"],
+  "align": ["center", "left"],
+  "items": [
+    {"roll": "1", "advantage": "Defender deploys last (after all Aggressor models)"},
+    {"roll": "2", "advantage": "Hostiles target Aggressor until Round 3"},
+    {"roll": "3", "advantage": "Defender's `Boss` gets `+1 DT` `Defense` this mission"},
+    {"roll": "4", "advantage": "Defender draws first Activation Token in Round 1"},
+    {"roll": "5", "advantage": "First hostile spawn delayed by 1 round"},
+    {"roll": "6", "advantage": "One Defender model starts with a free `Search` (roll immediately, keep result)"}
+  ]
+}

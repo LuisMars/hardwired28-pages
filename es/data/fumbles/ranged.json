@@ -1,15 +1,51 @@
 {
   "table_name": "Pifia Disparo",
-  "source": "06_fumbles.md",
-  "columns": ["d6", "Result", "Effect"],
-  "align": ["center", "left", "left"],
-  "display_columns": ["d6", "Resultado", "Efecto"],
+  "source": "1_07_fumbles.md",
+  "columns": [
+    "d6",
+    "Result",
+    "Effect"
+  ],
+  "align": [
+    "center",
+    "left",
+    "left"
+  ],
+  "display_columns": [
+    "d6",
+    "Resultado",
+    "Efecto"
+  ],
   "items": [
-    {"roll": 1, "result": "Encasquillada", "effect": "Pierde activación"},
-    {"roll": 2, "result": "Desalineada", "effect": "`-1 ND` próx. ataque"},
-    {"roll": 3, "result": "Retroceso", "effect": "Sufre su daño"},
-    {"roll": 4, "result": "Fuego Amigo", "effect": "Golpea aliado a 6\" (si no, sufre daño)"},
-    {"roll": 5, "result": "Soltada", "effect": "Suelta arma, sufre su daño"},
-    {"roll": "6+", "result": "Explosión", "effect": "Arma destruida, daño máx."}
+    {
+      "roll": 1,
+      "result": "Encasquillada",
+      "effect": "Pierde activación"
+    },
+    {
+      "roll": 2,
+      "result": "Desalineada",
+      "effect": "`-1 ND` próx. ataque"
+    },
+    {
+      "roll": 3,
+      "result": "Retroceso",
+      "effect": "Sufre su daño"
+    },
+    {
+      "roll": 4,
+      "result": "Fuego Amigo",
+      "effect": "Golpea aliado a 6\" (si no, sufre daño)"
+    },
+    {
+      "roll": 5,
+      "result": "Soltada",
+      "effect": "Suelta arma, sufre su daño"
+    },
+    {
+      "roll": "6+",
+      "result": "Explosión",
+      "effect": "Arma destruida, daño máx."
+    }
   ]
 }

@@ -1,15 +1,60 @@
 {
   "table_name": "Armadura Pesada",
-  "source": "03_equipment.md",
-  "columns": ["d6", "Armor", "Special", "Cost"],
-  "align": ["center", "left", "left", "right"],
-  "display_columns": ["d6", "Armadura", "Especial", "Coste"],
+  "source": "1_03_equipment.md",
+  "columns": [
+    "d6",
+    "Armor",
+    "Special",
+    "Cost"
+  ],
+  "align": [
+    "center",
+    "left",
+    "left",
+    "right"
+  ],
+  "display_columns": [
+    "d6",
+    "Armadura",
+    "Especial",
+    "Coste"
+  ],
   "items": [
-    {"roll": 1, "name": "Coraza Pesada", "special": "-", "cost": 12},
-    {"roll": 2, "name": "Armaz\u00f3n Industrial", "special": "-1\" `Mov`, Repite 1s en `Defensa`", "cost": 14},
-    {"roll": 3, "name": "Traje B\u00fanker", "special": "-2\" `Mov`, Repite 1s y 2s en `Defensa`", "cost": 14},
-    {"roll": 4, "name": "Blindaje de Combate", "special": "Repite 1s en `Defensa`", "cost": 16},
-    {"roll": 5, "name": "Exoesqueleto de Asalto", "special": "Repite 1s y 2s en `Defensa`", "cost": 18},
-    {"roll": 6, "name": "Blindaje Fortaleza", "special": "Repite 1s, 2s y 3s en `Defensa`", "cost": 20}
+    {
+      "roll": 1,
+      "name": "Coraza Pesada",
+      "special": "-",
+      "cost": 12
+    },
+    {
+      "roll": 2,
+      "name": "Armazón Industrial",
+      "special": "-1\" `Mov`, Repite 1s en `Defensa`",
+      "cost": 14
+    },
+    {
+      "roll": 3,
+      "name": "Traje Búnker",
+      "special": "-2\" `Mov`, Repite 1s y 2s en `Defensa`",
+      "cost": 14
+    },
+    {
+      "roll": 4,
+      "name": "Blindaje de Combate",
+      "special": "Repite 1s en `Defensa`",
+      "cost": 16
+    },
+    {
+      "roll": 5,
+      "name": "Exoesqueleto de Asalto",
+      "special": "Repite 1s y 2s en `Defensa`",
+      "cost": 18
+    },
+    {
+      "roll": 6,
+      "name": "Blindaje Fortaleza",
+      "special": "Repite 1s, 2s y 3s en `Defensa`",
+      "cost": 20
+    }
   ]
 }

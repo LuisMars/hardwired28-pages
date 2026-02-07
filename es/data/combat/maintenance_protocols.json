@@ -1,17 +1,61 @@
 {
   "table_name": "Bendiciones Corporativas",
-  "source": "04_combat.md",
-  "columns": ["d8", "Blessing", "Effect"],
-  "align": ["center", "left", "left"],
-  "display_columns": ["d8", "Bendición", "Efecto"],
+  "source": "1_04_combat.md",
+  "columns": [
+    "d8",
+    "Blessing",
+    "Effect"
+  ],
+  "align": [
+    "center",
+    "left",
+    "left"
+  ],
+  "display_columns": [
+    "d8",
+    "Bendición",
+    "Efecto"
+  ],
   "items": [
-    {"roll": "1", "name": "Denegada", "effect": "Sin bendición"},
-    {"roll": "2", "name": "Repetición", "effect": "Repite cualquier dado"},
-    {"roll": "3", "name": "Impulso", "effect": "`+1 ND` a una tirada"},
-    {"roll": "4", "name": "Extra", "effect": "Una miniatura tiene dos acciones"},
-    {"roll": "5", "name": "Finiquito", "effect": "Un ataque inflige el daño máximo"},
-    {"roll": "6", "name": "Sinergia", "effect": "Tras activar una miniatura, activa otra miniatura sin activar a 6\" de ella"},
-    {"roll": "7", "name": "Bienestar", "effect": "Restaura d4 `Salud` a una miniatura durante su activación"},
-    {"roll": "8", "name": "Excedente", "effect": "Tira dos veces, ignora 8s"}
+    {
+      "roll": "1",
+      "name": "Denegada",
+      "effect": "Sin bendición"
+    },
+    {
+      "roll": "2",
+      "name": "Repetición",
+      "effect": "Repite cualquier dado"
+    },
+    {
+      "roll": "3",
+      "name": "Impulso",
+      "effect": "`+1 ND` a una tirada"
+    },
+    {
+      "roll": "4",
+      "name": "Extra",
+      "effect": "Una miniatura tiene dos acciones"
+    },
+    {
+      "roll": "5",
+      "name": "Finiquito",
+      "effect": "Un ataque inflige el daño máximo"
+    },
+    {
+      "roll": "6",
+      "name": "Sinergia",
+      "effect": "Tras activar una miniatura, activa otra miniatura sin activar a 6\" de ella"
+    },
+    {
+      "roll": "7",
+      "name": "Bienestar",
+      "effect": "Restaura d4 `Salud` a una miniatura durante su activación"
+    },
+    {
+      "roll": "8",
+      "name": "Excedente",
+      "effect": "Tira dos veces, ignora 8s"
+    }
   ]
 }

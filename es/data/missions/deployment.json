@@ -1,0 +1,14 @@
+{
+  "table_name": "Despliegue",
+  "source": "3_01_campaign.md",
+  "columns": ["d6", "Tipo", "Regla"],
+  "align": ["center", "left", "left"],
+  "items": [
+    {"roll": "1", "name": "Estándar", "effect": "Bordes opuestos", "map": "zone rect top 0.5 blue \"Aggressor\"\nzone rect bottom 0.5 red \"Defender\""},
+    {"roll": "2", "name": "Flanqueado", "effect": "Mismo borde, esquinas opuestas", "map": "zone box 0 20 4 24 blue \"Aggressor\"\nzone box 20 20 24 24 red \"Defender\""},
+    {"roll": "3", "name": "Esquinas", "effect": "Esquinas opuestas", "map": "zone box 0 0 4 4 blue \"Aggressor\"\nzone box 20 20 24 24 red \"Defender\""},
+    {"roll": "4", "name": "Dividido", "effect": "El Agresor se reparte entre dos bordes adyacentes, el Defensor despliega en la esquina opuesta", "map": "zone rect top 0.5 blue \"Aggressor\"\nzone rect right 0.5 blue \"Aggressor\"\nzone box 0 20 4 24 red \"Defender\""},
+    {"roll": "5", "name": "Centro", "effect": "El Defensor despliega a 3\" del centro, el Agresor elige borde", "map": "area circle center 3 red \"Defender\"\nzone rect top 0.5 blue \"Aggressor\""},
+    {"roll": "6", "name": "Fuego Cruzado", "effect": "Las 4 esquinas. El Agresor elige primero, luego alternan", "map": "zone box 0 0 4 4 blue \"Aggressor\"\nzone box 20 20 24 24 blue \"Aggressor\"\nzone box 20 0 24 4 red \"Defender\"\nzone box 0 20 4 24 red \"Defender\""}
+  ]
+}

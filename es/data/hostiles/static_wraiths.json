@@ -1,28 +1,148 @@
 {
   "table_name": "Espectros de Estática",
-  "source": "07_hostiles.md",
+  "source": "2_01_hostiles.md",
   "special_rule": "**Fase**: Teletransporte d6\" en dirección aleatoria. Se detiene en el borde de la mesa.",
   "units": {
-    "columns": ["d6", "Name", "Spawn", "Combat", "Defense", "Wits", "Health", "Move", "Weapon"],
-    "align": ["center", "left", "center", "center", "center", "center", "center", "center", "left"],
-    "display_columns": ["d6", "Nombre", "#", "COM", "DEF", "AST", "PV", "MOV", "Arma"],
+    "columns": [
+      "d6",
+      "Name",
+      "Spawn",
+      "Combat",
+      "Defense",
+      "Wits",
+      "Health",
+      "Move",
+      "Weapon"
+    ],
+    "align": [
+      "center",
+      "left",
+      "center",
+      "center",
+      "center",
+      "center",
+      "center",
+      "center",
+      "left"
+    ],
+    "display_columns": [
+      "d6",
+      "Nombre",
+      "#",
+      "COM",
+      "DEF",
+      "AST",
+      "PV",
+      "MOV",
+      "Arma"
+    ],
     "items": [
-      {"roll": 1, "name": "Parpadeo", "spawn": "4+4", "combat": "2d6", "defense": "2d4", "wits": "2d4", "health": 6, "move": "6\"", "weapon": "Rayo de Arco (`Estático`, d4, Poder)"},
-      {"roll": 2, "name": "Deriva", "spawn": "2+2", "combat": "2d8", "defense": "2d6", "wits": "2d6", "health": 8, "move": "6\"", "weapon": "Garras de Fase (`Estático`, d6, CC)"},
-      {"roll": 3, "name": "Eco", "spawn": "3", "combat": "2d6", "defense": "2d4", "wits": "2d8", "health": 10, "move": "4\"", "weapon": "Llama de Señal (`Estático`, d6, Poder)"},
-      {"roll": 4, "name": "Interferencia", "spawn": "2", "combat": "2d6", "defense": "2d8", "wits": "2d4", "health": 12, "move": "3\"", "weapon": "Puños de Distorsión (`Estático`, d6, CC)"},
-      {"roll": 5, "name": "Descarga", "spawn": "1", "combat": "2d10", "defense": "2d6", "wits": "2d4", "health": 12, "move": "5\"", "weapon": "Hoja de Frecuencia (`Estático`, d8, CC)"},
-      {"roll": 6, "name": "Emisor", "spawn": "1", "combat": "2d8", "defense": "2d6", "wits": "2d4", "health": 14, "move": "4\"", "weapon": "Garras de Onda (`Estático`, d8, CC)"}
+      {
+        "roll": 1,
+        "name": "Parpadeo",
+        "spawn": "4+4",
+        "combat": "2d6",
+        "defense": "2d4",
+        "wits": "2d4",
+        "health": 6,
+        "move": "6\"",
+        "weapon": "Rayo de Arco (`Estático`, d4, Poder)"
+      },
+      {
+        "roll": 2,
+        "name": "Deriva",
+        "spawn": "2+2",
+        "combat": "2d8",
+        "defense": "2d6",
+        "wits": "2d6",
+        "health": 8,
+        "move": "6\"",
+        "weapon": "Garras de Fase (`Estático`, d6, CC)"
+      },
+      {
+        "roll": 3,
+        "name": "Eco",
+        "spawn": "3",
+        "combat": "2d6",
+        "defense": "2d4",
+        "wits": "2d8",
+        "health": 10,
+        "move": "4\"",
+        "weapon": "Llama de Señal (`Estático`, d6, Poder)"
+      },
+      {
+        "roll": 4,
+        "name": "Interferencia",
+        "spawn": "2",
+        "combat": "2d6",
+        "defense": "2d8",
+        "wits": "2d4",
+        "health": 12,
+        "move": "3\"",
+        "weapon": "Puños de Distorsión (`Estático`, d6, CC)"
+      },
+      {
+        "roll": 5,
+        "name": "Descarga",
+        "spawn": "1",
+        "combat": "2d10",
+        "defense": "2d6",
+        "wits": "2d4",
+        "health": 12,
+        "move": "5\"",
+        "weapon": "Hoja de Frecuencia (`Estático`, d8, CC)"
+      },
+      {
+        "roll": 6,
+        "name": "Emisor",
+        "spawn": "1",
+        "combat": "2d8",
+        "defense": "2d6",
+        "wits": "2d4",
+        "health": 14,
+        "move": "4\"",
+        "weapon": "Pulso de Onda (`Estático`, d8, Poder)"
+      }
     ]
   },
   "behavior": {
-    "columns": ["d6", "No LoS", "Has LoS", "Engaged"],
-    "align": ["center", "center", "center", "center"],
-    "display_columns": ["d6", "Sin LdV", "Con LdV", "Trabado"],
+    "columns": [
+      "d6",
+      "No LoS",
+      "Has LoS",
+      "Engaged"
+    ],
+    "align": [
+      "center",
+      "center",
+      "center",
+      "center"
+    ],
+    "display_columns": [
+      "d6",
+      "Sin LdV",
+      "Con LdV",
+      "Trabado"
+    ],
     "items": [
-      {"roll": "1-4", "no_los": "Patrullar", "has_los": "Atacar", "engaged": "Atacar"},
-      {"roll": "5", "no_los": "Fase", "has_los": "Fase", "engaged": "Atacar"},
-      {"roll": "6", "no_los": "Reagrupar", "has_los": "Atacar", "engaged": "Frenesí"}
+      {
+        "roll": "1-4",
+        "no_los": "Patrullar",
+        "has_los": "Atacar",
+        "engaged": "Atacar"
+      },
+      {
+        "roll": "5",
+        "no_los": "Fase",
+        "has_los": "Fase",
+        "engaged": "Atacar"
+      },
+      {
+        "roll": "6",
+        "no_los": "Reagrupar",
+        "has_los": "Atacar",
+        "engaged": "Frenesí"
+      }
     ]
   }
 }

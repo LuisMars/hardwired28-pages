@@ -1,0 +1,14 @@
+{
+  "table_name": "Timing de Hostiles",
+  "source": "3_01_campaign.md",
+  "columns": ["d6", "Timing", "Apariciones"],
+  "align": ["center", "left", "left"],
+  "items": [
+    {"roll": "1", "name": "Temprano", "effect": "Ronda 1 (tier `Enjambre`), Ronda 2 (tier `Normal`)", "spawns": [{"round": 1, "tier": "swarm"}, {"round": 2, "tier": "normal"}]},
+    {"roll": "2", "name": "Estándar", "effect": "Ronda 2 (tier `Normal`), Ronda 4 (tier `Élite`)", "spawns": [{"round": 2, "tier": "normal"}, {"round": 4, "tier": "elite"}]},
+    {"roll": "3", "name": "Tardío", "effect": "Ronda 3 (tier `Enjambre`), Ronda 5 (tier `Enjambre`)", "spawns": [{"round": 3, "tier": "swarm"}, {"round": 5, "tier": "swarm"}]},
+    {"roll": "4", "name": "Oleadas", "effect": "Ronda 1 (tier `Normal`), Ronda 4 (tier `Élite`)", "spawns": [{"round": 1, "tier": "normal"}, {"round": 4, "tier": "elite"}]},
+    {"roll": "5", "name": "Oleada", "effect": "Ronda 2 (tier `Normal` y tier `Élite`)", "spawns": [{"round": 2, "tier": "normal"}, {"round": 2, "tier": "elite"}]},
+    {"roll": "6", "name": "Emboscada", "effect": "Ronda 1 (tier `Élite`), Ronda 3 (tier `Normal`)", "spawns": [{"round": 1, "tier": "elite"}, {"round": 3, "tier": "normal"}]}
+  ]
+}

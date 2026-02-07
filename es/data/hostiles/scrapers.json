@@ -1,28 +1,148 @@
 {
   "table_name": "Carroñeros",
-  "source": "07_hostiles.md",
+  "source": "2_01_hostiles.md",
   "special_rule": "**Oportunistas**: `+1 ND` `Combate` contra objetivos heridos",
   "units": {
-    "columns": ["d6", "Name", "Spawn", "Combat", "Defense", "Wits", "Health", "Move", "Weapon"],
-    "align": ["center", "left", "center", "center", "center", "center", "center", "center", "left"],
-    "display_columns": ["d6", "Nombre", "#", "COM", "DEF", "AST", "PV", "MOV", "Arma"],
+    "columns": [
+      "d6",
+      "Name",
+      "Spawn",
+      "Combat",
+      "Defense",
+      "Wits",
+      "Health",
+      "Move",
+      "Weapon"
+    ],
+    "align": [
+      "center",
+      "left",
+      "center",
+      "center",
+      "center",
+      "center",
+      "center",
+      "center",
+      "left"
+    ],
+    "display_columns": [
+      "d6",
+      "Nombre",
+      "#",
+      "COM",
+      "DEF",
+      "AST",
+      "PV",
+      "MOV",
+      "Arma"
+    ],
     "items": [
-      {"roll": 1, "name": "Corredor de Alcantarilla", "spawn": "4+4", "combat": "2d6", "defense": "2d4", "wits": "2d4", "health": 6, "move": "5\"", "weapon": "Pistola Casera (`Proyectil`, d4, Disparo)"},
-      {"roll": 2, "name": "Rata de Cable", "spawn": "2+2", "combat": "2d6", "defense": "2d6", "wits": "2d4", "health": 8, "move": "4\"", "weapon": "Cable Afilado (`Cortante`, d4, CC)"},
-      {"roll": 3, "name": "Rebuscador", "spawn": "3", "combat": "2d4", "defense": "2d4", "wits": "2d6", "health": 10, "move": "5\"", "weapon": "Lanzabasura (`Proyectil`, d4, Disparo)"},
-      {"roll": 4, "name": "Capataz", "spawn": "2", "combat": "2d8", "defense": "2d6", "wits": "2d4", "health": 12, "move": "5\"", "weapon": "Cadena Motorizada (`Contundente`, d6, CC)"},
-      {"roll": 5, "name": "Emisor Rebelde", "spawn": "1", "combat": "2d6", "defense": "2d4", "wits": "2d8", "health": 12, "move": "5\"", "weapon": "Estallido Estático (`Emisión`, d6, Poder)"},
-      {"roll": 6, "name": "Cobrador", "spawn": "1", "combat": "2d8", "defense": "2d6", "wits": "2d8", "health": 14, "move": "5\"", "weapon": "Lanzador de Embargo (`Explosivo`, d6, Disparo)"}
+      {
+        "roll": 1,
+        "name": "Corredor de Alcantarilla",
+        "spawn": "4+4",
+        "combat": "2d6",
+        "defense": "2d4",
+        "wits": "2d4",
+        "health": 6,
+        "move": "5\"",
+        "weapon": "Pistola Casera (`Proyectil`, d4, Disparo)"
+      },
+      {
+        "roll": 2,
+        "name": "Rata de Cable",
+        "spawn": "2+2",
+        "combat": "2d6",
+        "defense": "2d6",
+        "wits": "2d4",
+        "health": 8,
+        "move": "4\"",
+        "weapon": "Cable Afilado (`Cortante`, d4, CC)"
+      },
+      {
+        "roll": 3,
+        "name": "Rebuscador",
+        "spawn": "3",
+        "combat": "2d4",
+        "defense": "2d4",
+        "wits": "2d6",
+        "health": 10,
+        "move": "5\"",
+        "weapon": "Lanzabasura (`Proyectil`, d4, Disparo)"
+      },
+      {
+        "roll": 4,
+        "name": "Capataz",
+        "spawn": "2",
+        "combat": "2d8",
+        "defense": "2d6",
+        "wits": "2d4",
+        "health": 12,
+        "move": "5\"",
+        "weapon": "Cadena Motorizada (`Contundente`, d6, CC)"
+      },
+      {
+        "roll": 5,
+        "name": "Emisor Rebelde",
+        "spawn": "1",
+        "combat": "2d6",
+        "defense": "2d4",
+        "wits": "2d8",
+        "health": 12,
+        "move": "5\"",
+        "weapon": "Estallido Estático (`Emisión`, d6, Poder)"
+      },
+      {
+        "roll": 6,
+        "name": "Cobrador",
+        "spawn": "1",
+        "combat": "2d8",
+        "defense": "2d6",
+        "wits": "2d8",
+        "health": 14,
+        "move": "5\"",
+        "weapon": "Garra de Embargo (`Contundente`, d6, CC)"
+      }
     ]
   },
   "behavior": {
-    "columns": ["d6", "No LoS", "Has LoS", "Engaged"],
-    "align": ["center", "center", "center", "center"],
-    "display_columns": ["d6", "Sin LdV", "Con LdV", "Trabado"],
+    "columns": [
+      "d6",
+      "No LoS",
+      "Has LoS",
+      "Engaged"
+    ],
+    "align": [
+      "center",
+      "center",
+      "center",
+      "center"
+    ],
+    "display_columns": [
+      "d6",
+      "Sin LdV",
+      "Con LdV",
+      "Trabado"
+    ],
     "items": [
-      {"roll": "1-4", "no_los": "Patrullar", "has_los": "Atacar", "engaged": "Atacar"},
-      {"roll": "5", "no_los": "Patrullar", "has_los": "Cobertura", "engaged": "Atacar"},
-      {"roll": "6", "no_los": "Reagrupar", "has_los": "Atacar", "engaged": "Frenesí"}
+      {
+        "roll": "1-4",
+        "no_los": "Patrullar",
+        "has_los": "Atacar",
+        "engaged": "Atacar"
+      },
+      {
+        "roll": "5",
+        "no_los": "Patrullar",
+        "has_los": "Cobertura",
+        "engaged": "Atacar"
+      },
+      {
+        "roll": "6",
+        "no_los": "Reagrupar",
+        "has_los": "Atacar",
+        "engaged": "Frenesí"
+      }
     ]
   }
 }

@@ -1,0 +1,15 @@
+{
+  "table_name": "Ventajas de Preparación",
+  "source": "3_01_campaign.md",
+  "columns": ["d6", "Advantage"],
+  "align": ["center", "left"],
+  "display_columns": ["d6", "Ventaja"],
+  "items": [
+    {"roll": "1", "advantage": "Redespliega una miniatura del Agresor a una posición válida"},
+    {"roll": "2", "advantage": "Elige borde de despliegue primero"},
+    {"roll": "3", "advantage": "El Defensor elige ubicación de aparición de hostiles"},
+    {"roll": "4", "advantage": "Coloca 2 piezas de terreno antes del despliegue"},
+    {"roll": "5", "advantage": "El Defensor coloca todos los `Marcadores de Botín` (ignora reglas normales)"},
+    {"roll": "6", "advantage": "Coloca todos los Compañeros (ignora reglas normales de colocación)"}
+  ]
+}

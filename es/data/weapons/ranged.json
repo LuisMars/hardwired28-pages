@@ -1,29 +1,190 @@
 {
   "table_name": "Armas de Disparo",
-  "source": "03_equipment.md",
-  "columns": ["d20", "Weapon", "Type", "Damage", "Special", "Cost"],
-  "align": ["center", "left", "center", "center", "left", "right"],
-  "display_columns": ["d20", "Arma", "Tipo", "Da\u00f1o", "Especial", "Coste"],
+  "source": "1_03_equipment.md",
+  "columns": [
+    "d20",
+    "Weapon",
+    "Type",
+    "Damage",
+    "Special",
+    "Cost"
+  ],
+  "align": [
+    "center",
+    "left",
+    "center",
+    "center",
+    "left",
+    "right"
+  ],
+  "display_columns": [
+    "d20",
+    "Arma",
+    "Tipo",
+    "Daño",
+    "Especial",
+    "Coste"
+  ],
   "items": [
-    {"roll": 1, "name": "Grapadora", "type": "`Proyectil`", "damage": "2", "special": "Alcance m\u00e1x. 6\"", "cost": 1},
-    {"roll": 2, "name": "Pistola", "type": "`Proyectil`", "damage": "d4", "special": "`-1 ND` m\u00e1s all\u00e1 de 6\"", "cost": 2},
-    {"roll": 3, "name": "Aguja", "type": "`T\u00f3xico`", "damage": "d4", "special": "+1 da\u00f1o vs. herido", "cost": 4},
-    {"roll": 4, "name": "Pistola de Arco", "type": "`Est\u00e1tico`", "damage": "d4", "special": "Sin pifias", "cost": 5},
-    {"roll": 5, "name": "Dardos", "type": "`T\u00f3xico`", "damage": "d6", "special": "`-1 ND` en la siguiente activaci\u00f3n", "cost": 9},
-    {"roll": 6, "name": "L\u00e1ser", "type": "`Energ\u00eda`", "damage": "d6", "special": "`+1 ND` si no se movi\u00f3", "cost": 9},
-    {"roll": 7, "name": "Pistola Frag", "type": "`Explosivo`", "damage": "d6", "special": "+1 vs. blindado", "cost": 9},
-    {"roll": 8, "name": "Aullador", "type": "`Emisi\u00f3n`", "damage": "d6", "special": "Ignora cobertura", "cost": 11},
-    {"roll": 9, "name": "Carabina", "type": "`Proyectil`", "damage": "d8", "special": "Repite 1s", "cost": 13},
-    {"roll": 10, "name": "Lanzallamas", "type": "`Energ\u00eda`", "damage": "d8", "special": "Ignora cobertura", "cost": 15},
-    {"roll": 11, "name": "S\u00f3nica", "type": "`Emisi\u00f3n`", "damage": "d8", "special": "`+1 ND` vs. herido", "cost": 15},
-    {"roll": 12, "name": "Tesla", "type": "`Est\u00e1tico`", "damage": "d8", "special": "Impacta a la miniatura m\u00e1s cercana a 2\" del objetivo", "cost": 15},
-    {"roll": 13, "name": "Criofusor", "type": "`T\u00f3xico`", "damage": "d10", "special": "Ignora cobertura", "cost": 19},
-    {"roll": 14, "name": "Escopeta", "type": "`Proyectil`", "damage": "d10", "special": "Repite 1s, Empuje 1\"", "cost": 19},
-    {"roll": 15, "name": "Lanzagranadas", "type": "`Explosivo`", "damage": "d10", "special": "Repite 1s, +1 vs. blindado", "cost": 19},
-    {"roll": 16, "name": "Ca\u00f1\u00f3n de Arco", "type": "`Est\u00e1tico`", "damage": "d10", "special": "Repite 1s, tambi\u00e9n impacta a las 2 miniaturas m\u00e1s cercanas a 2\" del objetivo", "cost": 21},
-    {"roll": 17, "name": "Ca\u00f1\u00f3n de Lamento", "type": "`Emisi\u00f3n`", "damage": "d12", "special": "Repite 1s, Empuje 2\"", "cost": 25},
-    {"roll": 18, "name": "Proyector de Plasma", "type": "`Energ\u00eda`", "damage": "d12", "special": "Ignora cobertura, +1 vs. blindado", "cost": 25},
-    {"roll": 19, "name": "Rifle", "type": "`Energ\u00eda`", "damage": "d12", "special": "Repite 1s y 2s, Sobrecarga: `-1 ND` por da\u00f1o m\u00e1x.", "cost": 25},
-    {"roll": 20, "name": "Lanzamisiles", "type": "`Explosivo`", "damage": "d12", "special": "Repite 1s y 2s, +2 vs. blindado", "cost": 27}
+    {
+      "roll": 1,
+      "name": "Grapadora",
+      "type": "`Proyectil`",
+      "damage": "2",
+      "special": "Alcance máx. 6\"",
+      "cost": 1
+    },
+    {
+      "roll": 2,
+      "name": "Pistola",
+      "type": "`Proyectil`",
+      "damage": "d4",
+      "special": "`-1 ND` más allá de 6\"",
+      "cost": 2
+    },
+    {
+      "roll": 3,
+      "name": "Aguja",
+      "type": "`Tóxico`",
+      "damage": "d4",
+      "special": "+1 daño vs. herido",
+      "cost": 4
+    },
+    {
+      "roll": 4,
+      "name": "Pistola de Arco",
+      "type": "`Estático`",
+      "damage": "d4",
+      "special": "Sin pifias",
+      "cost": 5
+    },
+    {
+      "roll": 5,
+      "name": "Dardos",
+      "type": "`Tóxico`",
+      "damage": "d6",
+      "special": "`-1 ND` en la siguiente activación",
+      "cost": 9
+    },
+    {
+      "roll": 6,
+      "name": "Pistola Frag",
+      "type": "`Explosivo`",
+      "damage": "d6",
+      "special": "+1 vs. blindado",
+      "cost": 9
+    },
+    {
+      "roll": 7,
+      "name": "Láser",
+      "type": "`Energía`",
+      "damage": "d6",
+      "special": "`+1 ND` si no se movió",
+      "cost": 9
+    },
+    {
+      "roll": 8,
+      "name": "Aullador",
+      "type": "`Emisión`",
+      "damage": "d6",
+      "special": "Ignora cobertura",
+      "cost": 11
+    },
+    {
+      "roll": 9,
+      "name": "Carabina",
+      "type": "`Proyectil`",
+      "damage": "d8",
+      "special": "Repite 1s",
+      "cost": 13
+    },
+    {
+      "roll": 10,
+      "name": "Lanzallamas",
+      "type": "`Energía`",
+      "damage": "d8",
+      "special": "Ignora cobertura",
+      "cost": 15
+    },
+    {
+      "roll": 11,
+      "name": "Sónica",
+      "type": "`Emisión`",
+      "damage": "d8",
+      "special": "`+1 ND` vs. herido",
+      "cost": 15
+    },
+    {
+      "roll": 12,
+      "name": "Tesla",
+      "type": "`Estático`",
+      "damage": "d8",
+      "special": "Impacta a la miniatura más cercana a 2\" del objetivo",
+      "cost": 15
+    },
+    {
+      "roll": 13,
+      "name": "Criofusor",
+      "type": "`Tóxico`",
+      "damage": "d10",
+      "special": "Ignora cobertura",
+      "cost": 19
+    },
+    {
+      "roll": 14,
+      "name": "Lanzagranadas",
+      "type": "`Explosivo`",
+      "damage": "d10",
+      "special": "Repite 1s, +1 vs. blindado",
+      "cost": 19
+    },
+    {
+      "roll": 15,
+      "name": "Escopeta",
+      "type": "`Proyectil`",
+      "damage": "d10",
+      "special": "Repite 1s, Empuje 1\"",
+      "cost": 19
+    },
+    {
+      "roll": 16,
+      "name": "Cañón de Arco",
+      "type": "`Estático`",
+      "damage": "d10",
+      "special": "Repite 1s, también impacta a las 2 miniaturas más cercanas a 2\" del objetivo",
+      "cost": 21
+    },
+    {
+      "roll": 17,
+      "name": "Proyector de Plasma",
+      "type": "`Energía`",
+      "damage": "d12",
+      "special": "Ignora cobertura, +1 vs. blindado",
+      "cost": 25
+    },
+    {
+      "roll": 18,
+      "name": "Rifle",
+      "type": "`Energía`",
+      "damage": "d12",
+      "special": "Repite 1s y 2s, Sobrecarga: `-1 ND` por daño máx.",
+      "cost": 25
+    },
+    {
+      "roll": 19,
+      "name": "Cañón de Lamento",
+      "type": "`Emisión`",
+      "damage": "d12",
+      "special": "Repite 1s, Empuje 2\"",
+      "cost": 25
+    },
+    {
+      "roll": 20,
+      "name": "Lanzamisiles",
+      "type": "`Explosivo`",
+      "damage": "d12",
+      "special": "Repite 1s y 2s, +2 vs. blindado",
+      "cost": 27
+    }
   ]
 }

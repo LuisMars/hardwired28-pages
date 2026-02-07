@@ -1,0 +1,10 @@
+{
+  "table_name": "Merit Sources",
+  "source": "3_10_postgame.md",
+  "columns": ["Source", "Merits", "Who"],
+  "align": ["left", "center", "left"],
+  "items": [
+    {"source": "Enemy player model `Out of Action`", "merits": "1", "who": "Model that scored the kill"},
+    {"source": "Enemy `Boss` `Out of Action`", "merits": "+1", "who": "Model that scored the kill"}
+  ]
+}

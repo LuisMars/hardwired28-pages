@@ -1,14 +1,46 @@
 {
   "table_name": "`Bladed` Critical",
-  "source": "05_criticals.md",
-  "columns": ["d6", "Result", "Effect"],
-  "align": ["center", "left", "left"],
+  "source": "1_06_criticals.md",
+  "columns": [
+    "d6",
+    "Result",
+    "Effect"
+  ],
+  "align": [
+    "center",
+    "left",
+    "left"
+  ],
   "items": [
-    {"roll": 1, "result": "Gash", "effect": "+d4 damage"},
-    {"roll": 2, "result": "Bleed", "effect": "2 damage per activation this game (doesn't stack)"},
-    {"roll": 3, "result": "Hamstrung", "effect": "-1\" movement permanently"},
-    {"roll": 4, "result": "Disarmed", "effect": "Drop weapon (at model's position)"},
-    {"roll": 5, "result": "Maimed", "effect": "`-1 DT` `Combat` permanently"},
-    {"roll": "6+", "result": "Severed", "effect": "`OoA`, -2 Injury roll"}
+    {
+      "roll": 1,
+      "result": "Gash",
+      "effect": "+d4 damage"
+    },
+    {
+      "roll": 2,
+      "result": "Bleed",
+      "effect": "2 damage per activation this game (doesn't stack)"
+    },
+    {
+      "roll": 3,
+      "result": "Hamstrung",
+      "effect": "-1\" movement permanently"
+    },
+    {
+      "roll": 4,
+      "result": "Disarmed",
+      "effect": "Drop weapon (at model's position)"
+    },
+    {
+      "roll": 5,
+      "result": "Maimed",
+      "effect": "`-1 DT` `Combat` permanently"
+    },
+    {
+      "roll": "6+",
+      "result": "Severed",
+      "effect": "`OoA`, -2 Injury roll"
+    }
   ]
 }

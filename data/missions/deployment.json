@@ -1,0 +1,14 @@
+{
+  "table_name": "Deployment",
+  "source": "3_01_campaign.md",
+  "columns": ["d6", "Type", "Rule"],
+  "align": ["center", "left", "left"],
+  "items": [
+    {"roll": "1", "name": "Standard", "effect": "Opposing edges", "map": "zone rect top 0.5 blue \"Aggressor\"\nzone rect bottom 0.5 red \"Defender\""},
+    {"roll": "2", "name": "Flanked", "effect": "Same edge, opposite corners", "map": "zone box 0 20 4 24 blue \"Aggressor\"\nzone box 20 20 24 24 red \"Defender\""},
+    {"roll": "3", "name": "Corners", "effect": "Opposing corners", "map": "zone box 0 0 4 4 blue \"Aggressor\"\nzone box 20 20 24 24 red \"Defender\""},
+    {"roll": "4", "name": "Split", "effect": "Aggressor splits between two adjacent edges, Defender deploys in opposing corner", "map": "zone rect top 0.5 blue \"Aggressor\"\nzone rect right 0.5 blue \"Aggressor\"\nzone box 0 20 4 24 red \"Defender\""},
+    {"roll": "5", "name": "Center", "effect": "Defender deploys within 3\" of center, Aggressor picks edge", "map": "area circle center 3 red \"Defender\"\nzone rect top 0.5 blue \"Aggressor\""},
+    {"roll": "6", "name": "Crossfire", "effect": "All 4 corners. Aggressor picks first, then alternate", "map": "zone box 0 0 4 4 blue \"Aggressor\"\nzone box 20 20 24 24 blue \"Aggressor\"\nzone box 20 0 24 4 red \"Defender\"\nzone box 0 20 4 24 red \"Defender\""}
+  ]
+}

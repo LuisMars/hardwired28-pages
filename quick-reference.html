@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hardwired 28 - Quick Reference 0.6.6-beta</title>
-    <meta property="og:title" content="Hardwired 28 - Quick Reference 0.6.6-beta">
+    <title>Hardwired 28 - Quick Reference 0.7.0-beta</title>
+    <meta property="og:title" content="Hardwired 28 - Quick Reference 0.7.0-beta">
     <meta property="og:description" content="Corporate cablepunk skirmish wargame">
     <meta property="og:image" content="http://hardwired28.luismars.com/img/social.png">
     <meta property="og:url" content="http://hardwired28.luismars.com/">
@@ -27,6 +27,7 @@
                 <a href="print">Print</a>
                 <a href="quick-reference" class="current">Quick Reference</a>
                 <a href="builder/index">Squad Builder</a>
+                <a href="scenario/index">Scenarios</a>
                 <a href="es/quick-reference">Castellano</a>
             </div>
         </div>
@@ -37,7 +38,7 @@
         <div class="three-column">
             <div class="column">
 <div><h1>Hardwired 28 - Quick Reference</h1>
-<p><em>0.6.6-beta</em></p>
+<p><em>0.7.0-beta</em></p>
 </div>
 <div><h2>Dice Tiers (DT)</h2>
 <p class="dice-tier">2d4 → 2d6 → 2d8 → 2d10 → 2d12</p>
@@ -113,9 +114,9 @@
 <div><h2>Each Round</h2>
 <ol>
 <li>Roll <strong>Corporate Blessings</strong> (d8 three times)</li>
-<li>Add one token per model not <code>OoA</code> to bag</li>
+<li>Add one token per model to bag</li>
 <li>Draw a token: that faction activates one model (Hostiles/Coworkers: AI table)</li>
-<li>All models <code>OoA</code>: discard token</li>
+<li>All models <code>OoA</code>: discard token (Hostile and Coworker tokens stay in bag)</li>
 <li>Each activation: <strong>Move + Action</strong> OR <strong>Action + Move</strong></li>
 <li>Repeat from 3 until bag is empty</li>
 </ol>
@@ -138,7 +139,7 @@
 <td>Move a second time</td>
 </tr>
 <tr>
-<td>Disengage</td>
+<td><code>Disengage</code></td>
 <td>Leave <code>Engaged</code> safely</td>
 </tr>
 <tr>
@@ -167,7 +168,7 @@
 <div><h2>Melee Engagement</h2>
 <ul>
 <li>Within 1" of enemy: <code>Engaged</code></li>
-<li>Leaving without Disengage: free attack at -1 <strong>DT</strong></li>
+<li>Leaving without <code>Disengage</code>: free attack at -1 <strong>DT</strong></li>
 <li>No melee weapon: use Fallback Melee</li>
 </ul>
 </div>
@@ -209,9 +210,9 @@
 <div><h2>Attack Resolution</h2>
 <ol>
 <li>Declare target and weapon</li>
-<li>Melee: defender chooses <code>Defense</code> or <strong>Riposte</strong></li>
-<li>Both roll: <strong>Combat DT</strong> vs. <strong>Defense DT</strong> (If <strong>Riposte</strong>: roll <code>Combat</code> at -1 <strong>DT</strong>)</li>
-<li>Higher wins (lower <strong>DT</strong> wins ties). Hit: roll damage. <strong>Riposte</strong> wins: defender also deals damage</li>
+<li>Melee: defender chooses <code>Defense</code> or <code>Riposte</code></li>
+<li>Both roll: <strong>Combat DT</strong> vs. <strong>Defense DT</strong> (If <code>Riposte</code>: roll <code>Combat</code> at -1 <strong>DT</strong>)</li>
+<li>Higher wins (lower <strong>DT</strong> wins ties). Hit: roll damage. <code>Riposte</code> wins: defender also deals damage</li>
 </ol>
 </div>
 <div><h2>Damage</h2>
@@ -235,7 +236,7 @@
 <li><strong>Attacker moved:</strong> -1 <strong>DT Combat</strong></li>
 <li><strong>Target used Move Again:</strong> -1 <strong>DT Combat</strong></li>
 <li><strong>Into melee:</strong> -1 <strong>DT</strong>, miss hits random model within 1" (not target), fumble is Critical against it</li>
-<li><strong>Ranged:</strong> No range limits, no <strong>Riposte</strong></li>
+<li><strong>Ranged:</strong> No range limits, no <code>Riposte</code></li>
 </ul>
 </div>
 <div><h2>Grenades</h2>
@@ -386,7 +387,7 @@
 </tr>
 <tr>
 <td style="text-align: center;">17</td>
-<td style="text-align: left;">1 <code>Evidence</code></td>
+<td style="text-align: left;">1 <code>Merit</code></td>
 </tr>
 <tr>
 <td style="text-align: center;">18</td>
@@ -446,7 +447,7 @@
 <tr>
 <td style="text-align: center;">8</td>
 <td style="text-align: left;">Full Disclosure</td>
-<td style="text-align: left;">1 <code>Evidence</code>, +2 <code>Leads</code></td>
+<td style="text-align: left;">1 <code>Merit</code></td>
 </tr>
 </tbody>
 </table></div>
@@ -970,7 +971,7 @@
 <td style="text-align: center;">1-4</td>
 <td style="text-align: center;">Wait</td>
 <td style="text-align: center;">Wait</td>
-<td style="text-align: center;">Flee</td>
+<td style="text-align: center;">Wait</td>
 </tr>
 <tr>
 <td style="text-align: center;">5</td>
@@ -980,8 +981,8 @@
 </tr>
 <tr>
 <td style="text-align: center;">6</td>
-<td style="text-align: center;">Flee</td>
-<td style="text-align: center;">Flee</td>
+<td style="text-align: center;">Patrol</td>
+<td style="text-align: center;">Patrol</td>
 <td style="text-align: center;">Flee</td>
 </tr>
 </tbody>

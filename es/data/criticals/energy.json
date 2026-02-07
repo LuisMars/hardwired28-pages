@@ -1,15 +1,51 @@
 {
   "table_name": "Crítico `Energía`",
-  "source": "05_criticals.md",
-  "columns": ["d6", "Result", "Effect"],
-  "align": ["center", "left", "left"],
-  "display_columns": ["d6", "Resultado", "Efecto"],
+  "source": "1_06_criticals.md",
+  "columns": [
+    "d6",
+    "Result",
+    "Effect"
+  ],
+  "align": [
+    "center",
+    "left",
+    "left"
+  ],
+  "display_columns": [
+    "d6",
+    "Resultado",
+    "Efecto"
+  ],
   "items": [
-    {"roll": 1, "result": "Chamuscado", "effect": "+d4 de daño"},
-    {"roll": 2, "result": "Armadura Fundida", "effect": "Armadura -1 nivel permanente (Pesada→Media→Ligera→ destruida)"},
-    {"roll": 3, "result": "Cegado", "effect": "`-1 ND` `Combate` permanente"},
-    {"roll": 4, "result": "Daño Neural", "effect": "-1\" `Mov` permanente"},
-    {"roll": 5, "result": "Quemado", "effect": "`-1 ND` disparo permanente"},
-    {"roll": "6+", "result": "Sobrecargado", "effect": "`FdC`, -2 a la tirada de Heridas"}
+    {
+      "roll": 1,
+      "result": "Chamuscado",
+      "effect": "+d4 de daño"
+    },
+    {
+      "roll": 2,
+      "result": "Armadura Fundida",
+      "effect": "Armadura -1 nivel permanente (Pesada→Media→Ligera→ destruida)"
+    },
+    {
+      "roll": 3,
+      "result": "Cegado",
+      "effect": "`-1 ND` `Combate` permanente"
+    },
+    {
+      "roll": 4,
+      "result": "Daño Neural",
+      "effect": "-1\" `Mov` permanente"
+    },
+    {
+      "roll": 5,
+      "result": "Quemado",
+      "effect": "`-1 ND` disparo permanente"
+    },
+    {
+      "roll": "6+",
+      "result": "Sobrecargado",
+      "effect": "`FdC`, -2 a la tirada de Heridas"
+    }
   ]
 }

@@ -1,12 +1,36 @@
 {
   "table_name": "Movimiento Vertical",
-  "source": "04_combat.md",
-  "columns": ["Action", "Cost", "Notes"],
-  "align": ["left", "center", "left"],
-  "display_columns": ["Acción", "Coste", "Notas"],
+  "source": "1_04_combat.md",
+  "columns": [
+    "Action",
+    "Cost",
+    "Notes"
+  ],
+  "align": [
+    "left",
+    "center",
+    "left"
+  ],
+  "display_columns": [
+    "Acción",
+    "Coste",
+    "Notas"
+  ],
   "items": [
-    {"action": "Escalar", "cost": "2\" por 1\" vertical", "notes": "Superficie escalable"},
-    {"action": "Saltar hueco", "cost": "1\" por 1\" horiz.", "notes": "Máx. 2\""},
-    {"action": "Saltar abajo", "cost": "Gratis", "notes": "Daño caída si > 3\""}
+    {
+      "action": "Escalar",
+      "cost": "2\" por 1\" vertical",
+      "notes": "Superficie escalable"
+    },
+    {
+      "action": "Saltar hueco",
+      "cost": "1\" por 1\" horiz.",
+      "notes": "Máx. 2\""
+    },
+    {
+      "action": "Saltar abajo",
+      "cost": "Gratis",
+      "notes": "Daño caída si > 3\""
+    }
   ]
 }

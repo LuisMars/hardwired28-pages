@@ -1,0 +1,14 @@
+{
+  "table_name": "Hostile Timing",
+  "source": "3_01_campaign.md",
+  "columns": ["d6", "Timing", "Spawns"],
+  "align": ["center", "left", "left"],
+  "items": [
+    {"roll": "1", "name": "Early", "effect": "Round 1 (`Swarm` tier), Round 2 (`Normal` tier)", "spawns": [{"round": 1, "tier": "swarm"}, {"round": 2, "tier": "normal"}]},
+    {"roll": "2", "name": "Standard", "effect": "Round 2 (`Normal` tier), Round 4 (`Elite` tier)", "spawns": [{"round": 2, "tier": "normal"}, {"round": 4, "tier": "elite"}]},
+    {"roll": "3", "name": "Late", "effect": "Round 3 (`Swarm` tier), Round 5 (`Swarm` tier)", "spawns": [{"round": 3, "tier": "swarm"}, {"round": 5, "tier": "swarm"}]},
+    {"roll": "4", "name": "Waves", "effect": "Round 1 (`Normal` tier), Round 4 (`Elite` tier)", "spawns": [{"round": 1, "tier": "normal"}, {"round": 4, "tier": "elite"}]},
+    {"roll": "5", "name": "Surge", "effect": "Round 2 (`Normal` tier and `Elite` tier)", "spawns": [{"round": 2, "tier": "normal"}, {"round": 2, "tier": "elite"}]},
+    {"roll": "6", "name": "Ambush", "effect": "Round 1 (`Elite` tier), Round 3 (`Normal` tier)", "spawns": [{"round": 1, "tier": "elite"}, {"round": 3, "tier": "normal"}]}
+  ]
+}

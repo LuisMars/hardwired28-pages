@@ -1,0 +1,14 @@
+{
+  "table_name": "Coworker Setup",
+  "source": "3_01_campaign.md",
+  "columns": ["d6", "Setup"],
+  "align": ["center", "left"],
+  "items": [
+    {"roll": "1", "setup": "`Swarm` tier, within 6\" of center", "tier": "swarm", "map": "area circle center 6 green \"Coworker zone\""},
+    {"roll": "2", "setup": "`Swarm` tier, random board edge", "tier": "swarm", "map": ""},
+    {"roll": "3", "setup": "`Normal` tier, 4\"+ from center (not more than 8\")", "tier": "normal", "map": "area ring center 4 8 green \"Coworker zone\""},
+    {"roll": "4", "setup": "`Elite` tier, alternate placing anywhere (6\"+ from edges)", "tier": "elite", "map": "area box 6 6 18 18 green \"Coworker zone\""},
+    {"roll": "5", "setup": "`Normal` tier, within 3\" of any `Loot Marker` (no markers: center)", "tier": "normal", "map": ""},
+    {"roll": "6", "setup": "`Elite` tier, within 3\" of center", "tier": "elite", "map": "area circle center 3 green \"Coworker zone\""}
+  ]
+}

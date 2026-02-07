@@ -1,0 +1,21 @@
+{
+  "table_name": "Misión",
+  "source": "3_01_campaign.md",
+  "columns": ["d12", "Mission"],
+  "align": ["center", "left"],
+  "display_columns": ["d12", "Misión"],
+  "items": [
+    {"roll": "1", "mission": "Extracción", "file": "3_03_extraction.md"},
+    {"roll": "2", "mission": "Control", "file": "3_04_control.md"},
+    {"roll": "3", "mission": "Cuadrantes", "file": "3_05_quadrants.md"},
+    {"roll": "4", "mission": "Embargo", "file": "3_06_seizure.md"},
+    {"roll": "5", "mission": "Asesinato", "file": "3_07_assassination.md"},
+    {"roll": "6", "mission": "Avance", "file": "3_08_breakthrough.md"},
+    {"roll": "7", "mission": "Triangulación", "file": "3_09_triangulation.md"},
+    {"roll": "8", "mission": "Sabotaje", "file": "3_10_sabotage.md"},
+    {"roll": "9", "mission": "Atraco", "file": "3_11_heist.md"},
+    {"roll": "10", "mission": "Enlace", "file": "3_12_uplink.md"},
+    {"roll": "11", "mission": "Bloqueo", "file": "3_13_lockdown.md"},
+    {"roll": "12", "mission": "Escolta", "file": "3_13b_escort.md"}
+  ]
+}

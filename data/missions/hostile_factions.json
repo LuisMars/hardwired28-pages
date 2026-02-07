@@ -1,14 +1,44 @@
 {
   "table_name": "Hostile Type",
-  "source": "09_campaign.md",
-  "columns": ["d6", "Faction"],
-  "align": ["center", "left"],
+  "source": "3_01_campaign.md",
+  "columns": [
+    "d6",
+    "Faction"
+  ],
+  "align": [
+    "center",
+    "left"
+  ],
   "items": [
-    {"roll": 1, "faction": "Scrapers"},
-    {"roll": 2, "faction": "Feral Crews"},
-    {"roll": 3, "faction": "Wave Callers"},
-    {"roll": 4, "faction": "Static Wraiths"},
-    {"roll": 5, "faction": "Feral Automata"},
-    {"roll": 6, "faction": "Cable Feeders"}
+    {
+      "roll": 1,
+      "faction": "Scrapers",
+      "file": "hostiles/scrapers.json"
+    },
+    {
+      "roll": 2,
+      "faction": "Feral Crews",
+      "file": "hostiles/feral_crews.json"
+    },
+    {
+      "roll": 3,
+      "faction": "Wave Callers",
+      "file": "hostiles/wave_callers.json"
+    },
+    {
+      "roll": 4,
+      "faction": "Static Wraiths",
+      "file": "hostiles/static_wraiths.json"
+    },
+    {
+      "roll": 5,
+      "faction": "Feral Automata",
+      "file": "hostiles/feral_automata.json"
+    },
+    {
+      "roll": 6,
+      "faction": "Cable Feeders",
+      "file": "hostiles/cable_feeders.json"
+    }
   ]
 }

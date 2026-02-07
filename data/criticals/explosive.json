@@ -1,14 +1,46 @@
 {
   "table_name": "`Explosive` Critical",
-  "source": "05_criticals.md",
-  "columns": ["d6", "Result", "Effect"],
-  "align": ["center", "left", "left"],
+  "source": "1_06_criticals.md",
+  "columns": [
+    "d6",
+    "Result",
+    "Effect"
+  ],
+  "align": [
+    "center",
+    "left",
+    "left"
+  ],
   "items": [
-    {"roll": 1, "result": "Shrapnel", "effect": "+d6 damage"},
-    {"roll": 2, "result": "Shell Shocked", "effect": "Lose next activation"},
-    {"roll": 3, "result": "Disoriented", "effect": "`-1 DT` `Wits` permanently"},
-    {"roll": 4, "result": "Blown Back", "effect": "Move d6\" directly away from attacker"},
-    {"roll": 5, "result": "Shattered", "effect": "-1\" `Move` permanently"},
-    {"roll": "6+", "result": "Devastated", "effect": "`OoA`, -2 Injury roll"}
+    {
+      "roll": 1,
+      "result": "Shrapnel",
+      "effect": "+d6 damage"
+    },
+    {
+      "roll": 2,
+      "result": "Shell Shocked",
+      "effect": "Lose next activation"
+    },
+    {
+      "roll": 3,
+      "result": "Disoriented",
+      "effect": "`-1 DT` `Wits` permanently"
+    },
+    {
+      "roll": 4,
+      "result": "Blown Back",
+      "effect": "Move d6\" directly away from attacker"
+    },
+    {
+      "roll": 5,
+      "result": "Shattered",
+      "effect": "-1\" `Move` permanently"
+    },
+    {
+      "roll": "6+",
+      "result": "Devastated",
+      "effect": "`OoA`, -2 Injury roll"
+    }
   ]
 }

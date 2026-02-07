@@ -1,16 +1,56 @@
 {
   "table_name": "Corporate Blessings",
-  "source": "04_combat.md",
-  "columns": ["d8", "Blessing", "Effect"],
-  "align": ["center", "left", "left"],
+  "source": "1_04_combat.md",
+  "columns": [
+    "d8",
+    "Blessing",
+    "Effect"
+  ],
+  "align": [
+    "center",
+    "left",
+    "left"
+  ],
   "items": [
-    {"roll": "1", "name": "Denied", "effect": "No blessing"},
-    {"roll": "2", "name": "Reroll", "effect": "Reroll a single die"},
-    {"roll": "3", "name": "Boost", "effect": "`+1 DT` to one roll"},
-    {"roll": "4", "name": "Overtime", "effect": "One model takes two actions"},
-    {"roll": "5", "name": "Severance", "effect": "One attack deals max weapon damage"},
-    {"roll": "6", "name": "Synergy", "effect": "After activating a model, activate an unactivated model within 6\" of it"},
-    {"roll": "7", "name": "Wellness", "effect": "Restore d4 `Health` to one model during its activation"},
-    {"roll": "8", "name": "Surplus", "effect": "Roll twice, ignoring 8s"}
+    {
+      "roll": "1",
+      "name": "Denied",
+      "effect": "No blessing"
+    },
+    {
+      "roll": "2",
+      "name": "Reroll",
+      "effect": "Reroll a single die"
+    },
+    {
+      "roll": "3",
+      "name": "Boost",
+      "effect": "`+1 DT` to one roll"
+    },
+    {
+      "roll": "4",
+      "name": "Overtime",
+      "effect": "One model takes two actions"
+    },
+    {
+      "roll": "5",
+      "name": "Severance",
+      "effect": "One attack deals max weapon damage"
+    },
+    {
+      "roll": "6",
+      "name": "Synergy",
+      "effect": "After activating a model, activate an unactivated model within 6\" of it"
+    },
+    {
+      "roll": "7",
+      "name": "Wellness",
+      "effect": "Restore d4 `Health` to one model during its activation"
+    },
+    {
+      "roll": "8",
+      "name": "Surplus",
+      "effect": "Roll twice, ignoring 8s"
+    }
   ]
 }

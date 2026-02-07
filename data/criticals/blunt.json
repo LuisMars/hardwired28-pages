@@ -1,14 +1,46 @@
 {
   "table_name": "`Blunt` Critical",
-  "source": "05_criticals.md",
-  "columns": ["d6", "Result", "Effect"],
-  "align": ["center", "left", "left"],
+  "source": "1_06_criticals.md",
+  "columns": [
+    "d6",
+    "Result",
+    "Effect"
+  ],
+  "align": [
+    "center",
+    "left",
+    "left"
+  ],
   "items": [
-    {"roll": 1, "result": "Bruised", "effect": "+d4 damage"},
-    {"roll": 2, "result": "Stunned", "effect": "Lose next activation"},
-    {"roll": 3, "result": "Rattled", "effect": "`-1 DT` `Defense` permanently"},
-    {"roll": 4, "result": "Concussed", "effect": "`-1 DT` `Wits` permanently"},
-    {"roll": 5, "result": "Crippled", "effect": "-1\" `Move` permanently"},
-    {"roll": "6+", "result": "Crushed", "effect": "`OoA`, -2 Injury roll"}
+    {
+      "roll": 1,
+      "result": "Bruised",
+      "effect": "+d4 damage"
+    },
+    {
+      "roll": 2,
+      "result": "Stunned",
+      "effect": "Lose next activation"
+    },
+    {
+      "roll": 3,
+      "result": "Rattled",
+      "effect": "`-1 DT` `Defense` permanently"
+    },
+    {
+      "roll": 4,
+      "result": "Concussed",
+      "effect": "`-1 DT` `Wits` permanently"
+    },
+    {
+      "roll": 5,
+      "result": "Crippled",
+      "effect": "-1\" `Move` permanently"
+    },
+    {
+      "roll": "6+",
+      "result": "Crushed",
+      "effect": "`OoA`, -2 Injury roll"
+    }
   ]
 }

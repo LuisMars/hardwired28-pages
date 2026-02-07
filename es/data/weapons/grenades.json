@@ -1,15 +1,60 @@
 {
   "table_name": "Granadas",
-  "source": "03_equipment.md",
-  "columns": ["d6", "Weapon", "Effect", "Cost"],
-  "align": ["center", "left", "left", "right"],
-  "display_columns": ["d6", "Granada", "Efecto", "Coste"],
+  "source": "1_03_equipment.md",
+  "columns": [
+    "d6",
+    "Weapon",
+    "Effect",
+    "Cost"
+  ],
+  "align": [
+    "center",
+    "left",
+    "left",
+    "right"
+  ],
+  "display_columns": [
+    "d6",
+    "Granada",
+    "Efecto",
+    "Coste"
+  ],
   "items": [
-    {"roll": 1, "name": "Humo", "effect": "1 daño, deja columna de humo bloqueando LdV hasta la siguiente ronda", "cost": 8},
-    {"roll": 2, "name": "Flash", "effect": "1 daño, `-1 ND` siguiente activación", "cost": 10},
-    {"roll": 3, "name": "Gas", "effect": "d6 daño `Tóxico`", "cost": 10},
-    {"roll": 4, "name": "PEM", "effect": "d6 daño `Estático`, `-1 ND` siguiente activación", "cost": 12},
-    {"roll": 5, "name": "Frag", "effect": "d8 daño `Explosivo`", "cost": 14},
-    {"roll": 6, "name": "Incendiaria", "effect": "d6 daño `Energía`, ignora cobertura", "cost": 14}
+    {
+      "roll": 1,
+      "name": "Humo",
+      "effect": "1 daño, deja columna de humo bloqueando LdV hasta la siguiente ronda",
+      "cost": 8
+    },
+    {
+      "roll": 2,
+      "name": "Flash",
+      "effect": "1 daño, `-1 ND` siguiente activación",
+      "cost": 10
+    },
+    {
+      "roll": 3,
+      "name": "Gas",
+      "effect": "d6 daño `Tóxico`",
+      "cost": 10
+    },
+    {
+      "roll": 4,
+      "name": "PEM",
+      "effect": "d6 daño `Estático`, `-1 ND` siguiente activación",
+      "cost": 12
+    },
+    {
+      "roll": 5,
+      "name": "Frag",
+      "effect": "d8 daño `Explosivo`",
+      "cost": 14
+    },
+    {
+      "roll": 6,
+      "name": "Incendiaria",
+      "effect": "d6 daño `Energía`, ignora cobertura",
+      "cost": 14
+    }
   ]
 }

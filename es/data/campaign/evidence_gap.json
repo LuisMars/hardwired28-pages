@@ -1,0 +1,12 @@
+{
+  "table_name": "Ventajas por Brecha de Pruebas",
+  "source": "3_01_campaign.md",
+  "columns": ["Gap", "Advantages"],
+  "align": ["center", "left"],
+  "display_columns": ["Brecha", "Ventajas"],
+  "items": [
+    {"gap": "0-1", "advantages": "Ninguna"},
+    {"gap": "2-3", "advantages": "Tira 1 de Preparación + 1 Táctica"},
+    {"gap": "4+", "advantages": "Tira 1 de Preparación + 1 Táctica + 1 de cualquiera"}
+  ]
+}

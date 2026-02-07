@@ -1,15 +1,48 @@
 {
   "table_name": "Tipo de Hostil",
-  "source": "09_campaign.md",
-  "columns": ["d6", "Faction"],
-  "align": ["center", "left"],
-  "display_columns": ["d6", "Facción"],
+  "source": "3_01_campaign.md",
+  "columns": [
+    "d6",
+    "Faction"
+  ],
+  "align": [
+    "center",
+    "left"
+  ],
+  "display_columns": [
+    "d6",
+    "Facción"
+  ],
   "items": [
-    {"roll": 1, "faction": "Carroñeros"},
-    {"roll": 2, "faction": "Bandas Salvajes"},
-    {"roll": 3, "faction": "Invocadores de Onda"},
-    {"roll": 4, "faction": "Espectros de Estática"},
-    {"roll": 5, "faction": "Autómatas Salvajes"},
-    {"roll": 6, "faction": "Parásitos de Cable"}
+    {
+      "roll": 1,
+      "faction": "Carroñeros",
+      "file": "hostiles/scrapers.json"
+    },
+    {
+      "roll": 2,
+      "faction": "Bandas Salvajes",
+      "file": "hostiles/feral_crews.json"
+    },
+    {
+      "roll": 3,
+      "faction": "Invocadores de Onda",
+      "file": "hostiles/wave_callers.json"
+    },
+    {
+      "roll": 4,
+      "faction": "Espectros de Estática",
+      "file": "hostiles/static_wraiths.json"
+    },
+    {
+      "roll": 5,
+      "faction": "Autómatas Salvajes",
+      "file": "hostiles/feral_automata.json"
+    },
+    {
+      "roll": 6,
+      "faction": "Parásitos de Cable",
+      "file": "hostiles/cable_feeders.json"
+    }
   ]
 }

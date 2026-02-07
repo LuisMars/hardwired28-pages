@@ -1,0 +1,11 @@
+{
+  "table_name": "Evidence Gap Advantages",
+  "source": "3_01_campaign.md",
+  "columns": ["Gap", "Advantages"],
+  "align": ["center", "left"],
+  "items": [
+    {"gap": "0-1", "advantages": "None"},
+    {"gap": "2-3", "advantages": "Roll 1 Setup + 1 Tactical"},
+    {"gap": "4+", "advantages": "Roll 1 Setup + 1 Tactical + 1 from either"}
+  ]
+}

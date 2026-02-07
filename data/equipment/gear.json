@@ -1,16 +1,66 @@
 {
   "table_name": "Gear",
-  "source": "03_equipment.md",
-  "columns": ["d8", "Item", "Effect", "Cost"],
-  "align": ["center", "left", "left", "right"],
+  "source": "1_03_equipment.md",
+  "columns": [
+    "d8",
+    "Item",
+    "Effect",
+    "Cost"
+  ],
+  "align": [
+    "center",
+    "left",
+    "left",
+    "right"
+  ],
   "items": [
-    {"roll": 1, "name": "Mask", "effect": "`+1 DT` `Defense` vs. Toxic", "cost": 6},
-    {"roll": 2, "name": "Scanner", "effect": "`+1 DT` `Wits` for `Search`", "cost": 8},
-    {"roll": 3, "name": "Scope", "effect": "`+1 DT` ranged attacks beyond 12\"", "cost": 8},
-    {"roll": 4, "name": "Camo", "effect": "`+1 DT` `Defense` in cover", "cost": 10},
-    {"roll": 5, "name": "Peripheral Sensors", "effect": "`+1 DT` `Defense` when `Engaged` with 2+ enemies", "cost": 10},
-    {"roll": 6, "name": "Mag Boots", "effect": "Ignore Knockback", "cost": 10},
-    {"roll": 7, "name": "Grapple", "effect": "Ignore climbing costs, move up to 3\" vertical", "cost": 12},
-    {"roll": 8, "name": "Inhibitor", "effect": "Ignore free attacks when leaving engagement", "cost": 12}
+    {
+      "roll": 1,
+      "name": "Mask",
+      "effect": "`+1 DT` `Defense` vs. Toxic",
+      "cost": 6
+    },
+    {
+      "roll": 2,
+      "name": "Scanner",
+      "effect": "`+1 DT` `Wits` for `Search`",
+      "cost": 8
+    },
+    {
+      "roll": 3,
+      "name": "Scope",
+      "effect": "`+1 DT` ranged attacks beyond 12\"",
+      "cost": 8
+    },
+    {
+      "roll": 4,
+      "name": "Camo",
+      "effect": "`+1 DT` `Defense` in cover",
+      "cost": 10
+    },
+    {
+      "roll": 5,
+      "name": "Peripheral Sensors",
+      "effect": "`+1 DT` `Defense` when `Engaged` with 2+ enemies",
+      "cost": 10
+    },
+    {
+      "roll": 6,
+      "name": "Mag Boots",
+      "effect": "Ignore Knockback",
+      "cost": 10
+    },
+    {
+      "roll": 7,
+      "name": "Grapple",
+      "effect": "Ignore climbing costs, move up to 3\" vertical",
+      "cost": 12
+    },
+    {
+      "roll": 8,
+      "name": "Inhibitor",
+      "effect": "Ignore free attacks when leaving engagement",
+      "cost": 12
+    }
   ]
 }

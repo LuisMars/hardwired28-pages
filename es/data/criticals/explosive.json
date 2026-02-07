@@ -1,15 +1,51 @@
 {
   "table_name": "Crítico `Explosivo`",
-  "source": "05_criticals.md",
-  "columns": ["d6", "Result", "Effect"],
-  "align": ["center", "left", "left"],
-  "display_columns": ["d6", "Resultado", "Efecto"],
+  "source": "1_06_criticals.md",
+  "columns": [
+    "d6",
+    "Result",
+    "Effect"
+  ],
+  "align": [
+    "center",
+    "left",
+    "left"
+  ],
+  "display_columns": [
+    "d6",
+    "Resultado",
+    "Efecto"
+  ],
   "items": [
-    {"roll": 1, "result": "Metralla", "effect": "+d6 de daño"},
-    {"roll": 2, "result": "Shock", "effect": "Pierde la siguiente activación"},
-    {"roll": 3, "result": "Desorientado", "effect": "`-1 ND` `Astucia` permanente"},
-    {"roll": 4, "result": "Derribado", "effect": "Se aleja d6\" del atacante"},
-    {"roll": 5, "result": "Destrozado", "effect": "-1\" `Mov` permanente"},
-    {"roll": "6+", "result": "Devastado", "effect": "`FdC`, -2 a la tirada de Heridas"}
+    {
+      "roll": 1,
+      "result": "Metralla",
+      "effect": "+d6 de daño"
+    },
+    {
+      "roll": 2,
+      "result": "Shock",
+      "effect": "Pierde la siguiente activación"
+    },
+    {
+      "roll": 3,
+      "result": "Desorientado",
+      "effect": "`-1 ND` `Astucia` permanente"
+    },
+    {
+      "roll": 4,
+      "result": "Derribado",
+      "effect": "Se aleja d6\" del atacante"
+    },
+    {
+      "roll": 5,
+      "result": "Destrozado",
+      "effect": "-1\" `Mov` permanente"
+    },
+    {
+      "roll": "6+",
+      "result": "Devastado",
+      "effect": "`FdC`, -2 a la tirada de Heridas"
+    }
   ]
 }

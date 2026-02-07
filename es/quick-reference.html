@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hardwired 28 - Referencia Rápida 0.6.6-beta</title>
-    <meta property="og:title" content="Hardwired 28 - Referencia Rápida 0.6.6-beta">
+    <title>Hardwired 28 - Referencia Rápida 0.7.0-beta</title>
+    <meta property="og:title" content="Hardwired 28 - Referencia Rápida 0.7.0-beta">
     <meta property="og:description" content="Juego de escaramuzas cablepunk corporativo">
     <meta property="og:image" content="http://hardwired28.luismars.com/img/social.png">
     <meta property="og:url" content="http://hardwired28.luismars.com/es/">
@@ -27,6 +27,7 @@
                 <a href="print">Imprimir</a>
                 <a href="quick-reference" class="current">Referencia Rápida</a>
                 <a href="builder/index">Creador de Plantillas</a>
+                <a href="scenario/index">Escenarios</a>
                 <a href="../quick-reference">English</a>
             </div>
         </div>
@@ -37,7 +38,7 @@
         <div class="three-column">
             <div class="column">
 <div><h1>Hardwired 28 - Referencia Rápida</h1>
-<p><em>0.6.6-beta</em></p>
+<p><em>0.7.0-beta</em></p>
 </div>
 <div><h2>Niveles de Dado (ND)</h2>
 <p class="dice-tier">2d4 → 2d6 → 2d8 → 2d10 → 2d12</p>
@@ -97,7 +98,7 @@
 <p>Muévete hasta tu valor de <code>Movimiento</code> en pulgadas.</p>
 </div>
 <div><h2>Medir</h2>
-<p>Mide de borde de peana a borde de peana.</p>
+<p>Mide del borde de la peana al borde de la peana.</p>
 </div>
 <div><h2>Línea de Visión</h2>
 <p>Debes ver el cuerpo del objetivo (piernas, torso, cabeza). Brazos y armas no cuentan.</p>
@@ -113,9 +114,9 @@
 <div><h2>Cada Ronda</h2>
 <ol>
 <li>Tira <strong>Bendiciones Corporativas</strong> (d8 tres veces)</li>
-<li>Añade una ficha por cada miniatura que no esté <code>FdC</code> a la bolsa</li>
+<li>Añade una ficha por cada miniatura a la bolsa</li>
 <li>Saca una ficha: esa facción activa una miniatura (Hostiles/Compañeros: tabla IA)</li>
-<li>Todas <code>FdC</code>: descarta la ficha</li>
+<li>Todas <code>FdC</code>: descarta la ficha (fichas de Hostiles y Compañeros permanecen en la bolsa)</li>
 <li>Cada activación: <strong>Movimiento + Acción</strong> O <strong>Acción + Movimiento</strong></li>
 <li>Repite desde el 3 hasta vaciar la bolsa</li>
 </ol>
@@ -138,7 +139,7 @@
 <td>Muévete una segunda vez</td>
 </tr>
 <tr>
-<td>Destrabarse</td>
+<td><code>Destrabarse</code></td>
 <td>Abandona <code>Trabado</code> de forma segura</td>
 </tr>
 <tr>
@@ -209,9 +210,9 @@
 <div><h2>Resolución de Ataque</h2>
 <ol>
 <li>Declara objetivo y arma</li>
-<li>CC: el defensor elige <code>Defensa</code> o <strong>Respuesta</strong></li>
-<li>Ambos tiran: <strong>Combate ND</strong> vs. <strong>Defensa ND</strong> (Si <strong>Respuesta</strong>: tira <code>Combate</code> a -1 <strong>ND</strong>)</li>
-<li>El más alto gana (<strong>ND</strong> inferior gana empates). Impacto: tira el daño. Si <strong>Respuesta</strong> gana: el defensor también inflige daño</li>
+<li>CC: el defensor elige <code>Defensa</code> o <code>Contraataque</code></li>
+<li>Ambos tiran: <strong>Combate ND</strong> vs. <strong>Defensa ND</strong> (Si <code>Contraataque</code>: tira <code>Combate</code> a -1 <strong>ND</strong>)</li>
+<li>El más alto gana (<strong>ND</strong> inferior gana empates). Impacto: tira el daño. Si <code>Contraataque</code> gana: el defensor también inflige daño</li>
 </ol>
 </div>
 <div><h2>Daño</h2>
@@ -235,12 +236,12 @@
 <li><strong>Atacante se movió:</strong> -1 <strong>ND Combate</strong></li>
 <li><strong>Objetivo usó Mover de Nuevo:</strong> -1 <strong>ND Combate</strong></li>
 <li><strong>Hacia CC:</strong> -1 <strong>ND</strong>, fallo impacta miniatura aleatoria a 1" (no al objetivo), pifia es Crítico contra ella</li>
-<li><strong>Disparo:</strong> Sin límite de alcance, sin <strong>Respuesta</strong></li>
+<li><strong>Disparo:</strong> Sin límite de alcance, sin <code>Contraataque</code></li>
 </ul>
 </div>
 <div><h2>Granadas</h2>
 <ul>
-<li>Lanza a punto a 6" (acción). Un uso.</li>
+<li>Lanza a un punto a 6" (acción). Un uso.</li>
 <li>Tira <code>Combate</code> vs 2d6. Fallo: dispersa d6". Doble: a tus pies.</li>
 <li>Radio 3" impacta a todos. Tira daño por separado.</li>
 </ul>
@@ -386,7 +387,7 @@
 </tr>
 <tr>
 <td style="text-align: center;">17</td>
-<td style="text-align: left;">1 <code>Prueba</code></td>
+<td style="text-align: left;">1 <code>Mérito</code></td>
 </tr>
 <tr>
 <td style="text-align: center;">18</td>
@@ -446,7 +447,7 @@
 <tr>
 <td style="text-align: center;">8</td>
 <td style="text-align: left;">Revelación</td>
-<td style="text-align: left;">1 <code>Prueba</code>, +2 <code>Pistas</code></td>
+<td style="text-align: left;">1 <code>Mérito</code></td>
 </tr>
 </tbody>
 </table></div>
@@ -970,7 +971,7 @@
 <td style="text-align: center;">1-4</td>
 <td style="text-align: center;">Esperar</td>
 <td style="text-align: center;">Esperar</td>
-<td style="text-align: center;">Huir</td>
+<td style="text-align: center;">Esperar</td>
 </tr>
 <tr>
 <td style="text-align: center;">5</td>
@@ -980,8 +981,8 @@
 </tr>
 <tr>
 <td style="text-align: center;">6</td>
-<td style="text-align: center;">Huir</td>
-<td style="text-align: center;">Huir</td>
+<td style="text-align: center;">Patrullar</td>
+<td style="text-align: center;">Patrullar</td>
 <td style="text-align: center;">Huir</td>
 </tr>
 </tbody>
