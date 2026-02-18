@@ -1,0 +1,15 @@
+{
+  "table_name": "Ventajas Tácticas",
+  "source": "3_01_campaign.md",
+  "columns": ["d6", "Advantage"],
+  "align": ["center", "left"],
+  "display_columns": ["d6", "Ventaja"],
+  "items": [
+    {"roll": "1", "advantage": "El Defensor despliega último (tras todas las del Agresor)"},
+    {"roll": "2", "advantage": "Los hostiles atacan al Agresor hasta la Ronda 3"},
+    {"roll": "3", "advantage": "El `Jefe` del Defensor recibe `+1 ND` `Defensa` esta misión"},
+    {"roll": "4", "advantage": "El Defensor extrae la primera Ficha de Activación en Ronda 1"},
+    {"roll": "5", "advantage": "La primera aparición de hostiles se retrasa 1 ronda"},
+    {"roll": "6", "advantage": "Una miniatura del Defensor empieza con `Buscar` gratis (tira ya, conserva resultado)"}
+  ]
+}

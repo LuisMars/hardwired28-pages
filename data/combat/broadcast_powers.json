@@ -1,14 +1,66 @@
 {
   "table_name": "Broadcast Powers",
-  "source": "04a_broadcast_powers.md",
-  "columns": ["d6", "Power", "Effect"],
-  "align": ["center", "left", "left"],
+  "source": "1_05_broadcast_powers.md",
+  "columns": [
+    "d8",
+    "Power",
+    "Type",
+    "Effect"
+  ],
+  "align": [
+    "center",
+    "left",
+    "left",
+    "left"
+  ],
   "items": [
-    {"roll": 1, "power": "Static Burst", "effect": "d8 Broadcast damage, ignores armor"},
-    {"roll": 2, "power": "Resonance Push", "effect": "Push target d6\" in any direction"},
-    {"roll": 3, "power": "Signal Jam", "effect": "`-1 DT` all rolls until next activation"},
-    {"roll": 4, "power": "Neural Trap", "effect": "Target takes d6 damage if it moves next activation"},
-    {"roll": 5, "power": "Weapon Lock", "effect": "Target drops one weapon"},
-    {"roll": 6, "power": "Mind Lash", "effect": "Target attacks nearest model (friend or foe)"}
+    {
+      "roll": 1,
+      "power": "Signal Jam",
+      "type": "Offensive",
+      "effect": "`-1 DT` all rolls until next activation"
+    },
+    {
+      "roll": 2,
+      "power": "Weapon Lock",
+      "type": "Offensive",
+      "effect": "Target drops one weapon"
+    },
+    {
+      "roll": 3,
+      "power": "Neural Trap",
+      "type": "Offensive",
+      "effect": "d6 damage (ignores armor) if target moves next activation"
+    },
+    {
+      "roll": 4,
+      "power": "Resonance Push",
+      "type": "Offensive",
+      "effect": "Push target d6\" in any direction"
+    },
+    {
+      "roll": 5,
+      "power": "Force Field",
+      "type": "Support",
+      "effect": "`+2 DT` `Defense` vs. ranged until next activation"
+    },
+    {
+      "roll": 6,
+      "power": "Focus",
+      "type": "Support",
+      "effect": "Add 2 Activation Tokens for target to the bag"
+    },
+    {
+      "roll": 7,
+      "power": "Swap",
+      "type": "Support",
+      "effect": "Switch positions with target (caster sees both, within 12\")"
+    },
+    {
+      "roll": 8,
+      "power": "Ping",
+      "type": "Support",
+      "effect": "Target ignores cover and sees through walls until next activation"
+    }
   ]
 }

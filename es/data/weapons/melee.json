@@ -1,29 +1,190 @@
 {
   "table_name": "Armas Cuerpo a Cuerpo",
-  "source": "03_equipment.md",
-  "columns": ["d20", "Weapon", "Type", "Damage", "Special", "Cost"],
-  "align": ["center", "left", "center", "center", "left", "right"],
-  "display_columns": ["d20", "Arma", "Tipo", "Da\u00f1o", "Especial", "Coste"],
+  "source": "1_03_equipment.md",
+  "columns": [
+    "d20",
+    "Weapon",
+    "Type",
+    "Damage",
+    "Special",
+    "Cost"
+  ],
+  "align": [
+    "center",
+    "left",
+    "center",
+    "center",
+    "left",
+    "right"
+  ],
+  "display_columns": [
+    "d20",
+    "Arma",
+    "Tipo",
+    "Daño",
+    "Especial",
+    "Coste"
+  ],
   "items": [
-    {"roll": 1, "name": "Pu\u00f1o Americano", "type": "`Contundente`", "damage": "2", "special": "", "cost": 2},
-    {"roll": 2, "name": "Cuchillo", "type": "`Cortante`", "damage": "d4", "special": "", "cost": 3},
-    {"roll": 3, "name": "Punz\u00f3n", "type": "`T\u00f3xico`", "damage": "d4", "special": "+1 da\u00f1o vs. herido", "cost": 4},
-    {"roll": 4, "name": "Aguij\u00f3n", "type": "`Energ\u00eda`", "damage": "d4", "special": "`-1 ND` en la siguiente activaci\u00f3n", "cost": 5},
-    {"roll": 5, "name": "Inyector", "type": "`T\u00f3xico`", "damage": "d6", "special": "Repite 1s", "cost": 9},
-    {"roll": 6, "name": "Maza", "type": "`Contundente`", "damage": "d6", "special": "Empuje 1\"", "cost": 9},
-    {"roll": 7, "name": "Espada", "type": "`Cortante`", "damage": "d6", "special": "Repite 1s en `Respuesta`", "cost": 10},
-    {"roll": 8, "name": "L\u00e1tigo de Cable", "type": "`Est\u00e1tico`", "damage": "d6", "special": "Alcance 2\"", "cost": 11},
-    {"roll": 9, "name": "Aturdidor", "type": "`Energ\u00eda`", "damage": "d8", "special": "`-1 ND` en la siguiente activaci\u00f3n", "cost": 13},
-    {"roll": 10, "name": "Machete", "type": "`Cortante`", "damage": "d8", "special": "Repite 1s", "cost": 13},
-    {"roll": 11, "name": "Est\u00e1tica", "type": "`Est\u00e1tico`", "damage": "d8", "special": "`+1 ND` vs. herido", "cost": 15},
-    {"roll": 12, "name": "Martillo", "type": "`Contundente`", "damage": "d8", "special": "Repite 1s, Empuje 1\"", "cost": 15},
-    {"roll": 13, "name": "Hoja \u00c1cida", "type": "`T\u00f3xico`", "damage": "d10", "special": "+1 vs. blindado", "cost": 17},
-    {"roll": 14, "name": "Garra de Arco", "type": "`Est\u00e1tico`", "damage": "d10", "special": "Repite 1s, +1 a la tirada de Cr\u00edtico", "cost": 19},
-    {"roll": 15, "name": "Sable", "type": "`Cortante`", "damage": "d10", "special": "Repite 1s y 2s", "cost": 19},
-    {"roll": 16, "name": "Guantelete", "type": "`Contundente`", "damage": "d10", "special": "Repite 1s y 2s, Empuje 1\"", "cost": 21},
-    {"roll": 17, "name": "Pu\u00f1o Plaga", "type": "`T\u00f3xico`", "damage": "d12", "special": "Repite 1s, +1 da\u00f1o vs. herido", "cost": 22},
-    {"roll": 18, "name": "Mazo de Choque", "type": "`Est\u00e1tico`", "damage": "d12", "special": "Repite 1s, Empuje 2\"", "cost": 25},
-    {"roll": 19, "name": "Motosierra", "type": "`Cortante`", "damage": "d12", "special": "Repite 1s y 2s, +2 vs. blindado", "cost": 27},
-    {"roll": 20, "name": "Pu\u00f1o de Poder", "type": "`Energ\u00eda`", "damage": "d12", "special": "Repite 1s y 2s, Empuje 2\"", "cost": 27}
+    {
+      "roll": 1,
+      "name": "Puño Americano",
+      "type": "`Contundente`",
+      "damage": "2",
+      "special": "",
+      "cost": 2
+    },
+    {
+      "roll": 2,
+      "name": "Cuchillo",
+      "type": "`Cortante`",
+      "damage": "d4",
+      "special": "",
+      "cost": 3
+    },
+    {
+      "roll": 3,
+      "name": "Punzón",
+      "type": "`Tóxico`",
+      "damage": "d4",
+      "special": "+1 daño vs. herido",
+      "cost": 4
+    },
+    {
+      "roll": 4,
+      "name": "Aguijón",
+      "type": "`Energía`",
+      "damage": "d4",
+      "special": "`-1 ND` en la siguiente activación",
+      "cost": 5
+    },
+    {
+      "roll": 5,
+      "name": "Inyector",
+      "type": "`Tóxico`",
+      "damage": "d6",
+      "special": "Repite 1s",
+      "cost": 9
+    },
+    {
+      "roll": 6,
+      "name": "Maza",
+      "type": "`Contundente`",
+      "damage": "d6",
+      "special": "Empuje 1\"",
+      "cost": 9
+    },
+    {
+      "roll": 7,
+      "name": "Espada",
+      "type": "`Cortante`",
+      "damage": "d6",
+      "special": "Repite 1s en `Contraataque`",
+      "cost": 10
+    },
+    {
+      "roll": 8,
+      "name": "Látigo de Cable",
+      "type": "`Estático`",
+      "damage": "d6",
+      "special": "Alcance 2\"",
+      "cost": 11
+    },
+    {
+      "roll": 9,
+      "name": "Aturdidor",
+      "type": "`Energía`",
+      "damage": "d8",
+      "special": "`-1 ND` en la siguiente activación",
+      "cost": 13
+    },
+    {
+      "roll": 10,
+      "name": "Machete",
+      "type": "`Cortante`",
+      "damage": "d8",
+      "special": "Repite 1s",
+      "cost": 13
+    },
+    {
+      "roll": 11,
+      "name": "Estática",
+      "type": "`Estático`",
+      "damage": "d8",
+      "special": "`+1 ND` vs. herido",
+      "cost": 15
+    },
+    {
+      "roll": 12,
+      "name": "Martillo",
+      "type": "`Contundente`",
+      "damage": "d8",
+      "special": "Repite 1s, Empuje 1\"",
+      "cost": 15
+    },
+    {
+      "roll": 13,
+      "name": "Hoja Ácida",
+      "type": "`Tóxico`",
+      "damage": "d10",
+      "special": "+1 vs. blindado",
+      "cost": 17
+    },
+    {
+      "roll": 14,
+      "name": "Garra de Arco",
+      "type": "`Estático`",
+      "damage": "d10",
+      "special": "Repite 1s, +1 a la tirada de Crítico",
+      "cost": 19
+    },
+    {
+      "roll": 15,
+      "name": "Sable",
+      "type": "`Cortante`",
+      "damage": "d10",
+      "special": "Repite 1s y 2s",
+      "cost": 19
+    },
+    {
+      "roll": 16,
+      "name": "Guantelete",
+      "type": "`Contundente`",
+      "damage": "d10",
+      "special": "Repite 1s y 2s, Empuje 1\"",
+      "cost": 21
+    },
+    {
+      "roll": 17,
+      "name": "Puño Plaga",
+      "type": "`Tóxico`",
+      "damage": "d12",
+      "special": "Repite 1s, +1 daño vs. herido",
+      "cost": 22
+    },
+    {
+      "roll": 18,
+      "name": "Mazo de Choque",
+      "type": "`Estático`",
+      "damage": "d12",
+      "special": "Repite 1s, Empuje 2\"",
+      "cost": 25
+    },
+    {
+      "roll": 19,
+      "name": "Motosierra",
+      "type": "`Cortante`",
+      "damage": "d12",
+      "special": "Repite 1s y 2s, +2 vs. blindado",
+      "cost": 27
+    },
+    {
+      "roll": 20,
+      "name": "Puño de Poder",
+      "type": "`Energía`",
+      "damage": "d12",
+      "special": "Repite 1s y 2s, Empuje 2\"",
+      "cost": 27
+    }
   ]
 }

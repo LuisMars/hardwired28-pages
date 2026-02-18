@@ -1,15 +1,51 @@
 {
   "table_name": "Crítico `Contundente`",
-  "source": "05_criticals.md",
-  "columns": ["d6", "Result", "Effect"],
-  "align": ["center", "left", "left"],
-  "display_columns": ["d6", "Resultado", "Efecto"],
+  "source": "1_06_criticals.md",
+  "columns": [
+    "d6",
+    "Result",
+    "Effect"
+  ],
+  "align": [
+    "center",
+    "left",
+    "left"
+  ],
+  "display_columns": [
+    "d6",
+    "Resultado",
+    "Efecto"
+  ],
   "items": [
-    {"roll": 1, "result": "Magullado", "effect": "+d4 de daño"},
-    {"roll": 2, "result": "Aturdido", "effect": "Pierde la siguiente activación"},
-    {"roll": 3, "result": "Trastornado", "effect": "`-1 ND` `Defensa` permanente"},
-    {"roll": 4, "result": "Conmocionado", "effect": "`-1 ND` `Astucia` permanente"},
-    {"roll": 5, "result": "Tullido", "effect": "-1\" `Mov` permanente"},
-    {"roll": "6+", "result": "Aplastado", "effect": "`FdC`, -2 a la tirada de Heridas"}
+    {
+      "roll": 1,
+      "result": "Magullado",
+      "effect": "+d4 de daño"
+    },
+    {
+      "roll": 2,
+      "result": "Aturdido",
+      "effect": "Pierde la siguiente activación"
+    },
+    {
+      "roll": 3,
+      "result": "Trastornado",
+      "effect": "`-1 ND` `Defensa` permanente"
+    },
+    {
+      "roll": 4,
+      "result": "Conmocionado",
+      "effect": "`-1 ND` `Astucia` permanente"
+    },
+    {
+      "roll": 5,
+      "result": "Tullido",
+      "effect": "-1\" `Mov` permanente"
+    },
+    {
+      "roll": "6+",
+      "result": "Aplastado",
+      "effect": "`FdC`, -2 a la tirada de Heridas"
+    }
   ]
 }

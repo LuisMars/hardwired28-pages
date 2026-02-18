@@ -1,15 +1,60 @@
 {
   "table_name": "Cibernética",
-  "source": "03_equipment.md",
-  "columns": ["d6", "Cybernetic", "Effect", "Cost"],
-  "align": ["center", "left", "left", "right"],
-  "display_columns": ["d6", "Cibernético", "Efecto", "Coste"],
+  "source": "1_03_equipment.md",
+  "columns": [
+    "d6",
+    "Cybernetic",
+    "Effect",
+    "Cost"
+  ],
+  "align": [
+    "center",
+    "left",
+    "left",
+    "right"
+  ],
+  "display_columns": [
+    "d6",
+    "Cibernético",
+    "Efecto",
+    "Coste"
+  ],
   "items": [
-    {"roll": 1, "name": "Regenerador", "effect": "Ignora \"Pierde próxima partida\"", "cost": 5},
-    {"roll": 2, "name": "Pierna", "effect": "+1\" `Mov`", "cost": 8},
-    {"roll": 3, "name": "Puntería", "effect": "`+1 ND` `Combate`", "cost": 10},
-    {"roll": 4, "name": "Reflejos", "effect": "`+1 ND` `Defensa`", "cost": 10},
-    {"roll": 5, "name": "Procesador", "effect": "`+1 ND` `Astucia`", "cost": 10},
-    {"roll": 6, "name": "Órganos", "effect": "+1 `Salud` máxima", "cost": 12}
+    {
+      "roll": 1,
+      "name": "Regenerador",
+      "effect": "Ignora \"Pierde próxima partida\"",
+      "cost": 5
+    },
+    {
+      "roll": 2,
+      "name": "Pierna",
+      "effect": "+1\" `Mov`",
+      "cost": 8
+    },
+    {
+      "roll": 3,
+      "name": "Puntería",
+      "effect": "`+1 ND` `Combate`",
+      "cost": 10
+    },
+    {
+      "roll": 4,
+      "name": "Reflejos",
+      "effect": "`+1 ND` `Defensa`",
+      "cost": 10
+    },
+    {
+      "roll": 5,
+      "name": "Procesador",
+      "effect": "`+1 ND` `Astucia`",
+      "cost": 10
+    },
+    {
+      "roll": 6,
+      "name": "Órganos",
+      "effect": "+1 `Salud` máxima",
+      "cost": 12
+    }
   ]
 }

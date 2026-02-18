@@ -1,14 +1,46 @@
 {
   "table_name": "Ranged Fumble",
-  "source": "06_fumbles.md",
-  "columns": ["d6", "Result", "Effect"],
-  "align": ["center", "left", "left"],
+  "source": "1_07_fumbles.md",
+  "columns": [
+    "d6",
+    "Result",
+    "Effect"
+  ],
+  "align": [
+    "center",
+    "left",
+    "left"
+  ],
   "items": [
-    {"roll": 1, "result": "Jammed", "effect": "Lose next activation"},
-    {"roll": 2, "result": "Misaligned", "effect": "`-1 DT` next attack"},
-    {"roll": 3, "result": "Backfire", "effect": "Take weapon damage"},
-    {"roll": 4, "result": "Friendly Fire", "effect": "Hit ally within 6\" (or take weapon damage)"},
-    {"roll": 5, "result": "Dropped", "effect": "Drop weapon, take weapon damage"},
-    {"roll": "6+", "result": "Exploded", "effect": "Weapon destroyed, take max weapon damage"}
+    {
+      "roll": 1,
+      "result": "Jammed",
+      "effect": "Lose next activation"
+    },
+    {
+      "roll": 2,
+      "result": "Misaligned",
+      "effect": "`-1 DT` next attack"
+    },
+    {
+      "roll": 3,
+      "result": "Backfire",
+      "effect": "Take weapon damage"
+    },
+    {
+      "roll": 4,
+      "result": "Friendly Fire",
+      "effect": "Hit ally within 6\" (or take weapon damage)"
+    },
+    {
+      "roll": 5,
+      "result": "Dropped",
+      "effect": "Drop weapon, take weapon damage"
+    },
+    {
+      "roll": "6+",
+      "result": "Exploded",
+      "effect": "Weapon destroyed, take max weapon damage"
+    }
   ]
 }

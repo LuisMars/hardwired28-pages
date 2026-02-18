@@ -14,8 +14,8 @@
     <link rel="stylesheet" href="../../style-base.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/rpg-awesome@0.2.0/css/rpg-awesome.min.css">
-    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -80,7 +80,10 @@
             <button class="app-menu__toggle" type="button" onclick="toggleMenu()" aria-label="Menú"></button>
             <div class="app-menu__links">
                 <a href="../rulebook">Reglamento</a>
+                <a href="../print">Imprimir</a>
                 <a href="../quick-reference">Referencia Rápida</a>
+                <a href="./" class="current">Creador de Plantillas</a>
+                <a href="../scenario/">Escenarios</a>
                 <a href="../../builder/">English</a>
             </div>
         </div>
@@ -107,11 +110,10 @@
                 })
                 .then(code => {
                     const script = document.createElement('script');
-                    if (isBabel) {
-                        script.type = 'text/babel';
-                        script.setAttribute('data-type', 'module');
-                    }
-                    script.textContent = code;
+                    const body = isBabel
+                        ? Babel.transform(code, { presets: ['react'] }).code
+                        : code;
+                    script.textContent = '(function(){' + body + '})();';
                     document.body.appendChild(script);
                     return code;
                 });
@@ -137,7 +139,8 @@
             fetchJson('../data/equipment/cybernetics.json'),
             // Warbands
             fetchJson('../data/warbands/archetypes.json'),
-            fetchJson('../data/combat/broadcast_powers.json'),
+            fetchJson('../data/combat/broadcast_offensive.json'),
+            fetchJson('../data/combat/broadcast_support.json'),
             // Criticals (8)
             fetchJson('../data/criticals/bladed.json'),
             fetchJson('../data/criticals/blunt.json'),
@@ -176,7 +179,7 @@
                 fallback, melee, ranged, grenades,
                 armorLight, armorMedium, armorHeavy,
                 consumables, gear, cybernetics,
-                archetypes, powers,
+                archetypes, powersOffensive, powersSupport,
                 critBladed, critBlunt, critProjectile, critEnergy, critExplosive, critToxic, critStatic,
                 fumbleMelee, fumbleRanged, fumbleBroadcast,
                 hostCoworkers, hostScrapers, hostFeralCrews, hostWaveCallers, hostStaticWraiths, hostFeralAutomata, hostCableFeeders,
@@ -220,7 +223,7 @@
                     GEAR: (gear?.items || []).map(addId('gear')),
                     CYBERNETICS: (cybernetics?.items || []).map(addId('cyber')),
                     GRENADES: (grenades?.items || []).map(addId('grenade')),
-                    POWERS: (powers?.items || []).map(addId('power')),
+                    POWERS: [...(powersOffensive?.items || []), ...(powersSupport?.items || [])].map(addId('power')),
                     ARCHETYPES: archetypesObj,
                     // Reference tables
                     CRITICALS: {
@@ -251,8 +254,7 @@
             .then(() => loadScript('../../warband-ui/panels.jsx?v=' + Date.now(), true))
             .then(() => loadScript('../../warband-builder.jsx?v=' + Date.now(), true))
             .then(() => {
-                // Transform all Babel scripts
-                Babel.transformScriptTags();
+                // Scripts already transformed inline during loadScript
             })
             .catch(err => {
                 document.getElementById('root').innerHTML =

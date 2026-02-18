@@ -1,27 +1,142 @@
 {
   "table_name": "Feral Automata",
-  "source": "07_hostiles.md",
+  "source": "2_01_hostiles.md",
   "special_rule": "**Reboot**: When goes `Out of Action`, roll d6. On 6, return with d6 `Health`.",
   "units": {
-    "columns": ["d6", "Name", "Spawn", "Combat", "Defense", "Wits", "Health", "Move", "Weapon"],
-    "align": ["center", "left", "center", "center", "center", "center", "center", "center", "left"],
-    "display_columns": ["d6", "Name", "#", "COM", "DEF", "WIT", "HP", "MOV", "Weapon"],
+    "columns": [
+      "d6",
+      "Name",
+      "Spawn",
+      "Combat",
+      "Defense",
+      "Wits",
+      "Health",
+      "Move",
+      "Weapon"
+    ],
+    "align": [
+      "center",
+      "left",
+      "center",
+      "center",
+      "center",
+      "center",
+      "center",
+      "center",
+      "left"
+    ],
+    "display_columns": [
+      "d6",
+      "Name",
+      "#",
+      "COM",
+      "DEF",
+      "WIT",
+      "HP",
+      "MOV",
+      "Weapon"
+    ],
     "items": [
-      {"roll": 1, "name": "Maintenance Swarm", "spawn": "4+4", "combat": "2d4", "defense": "2d4", "wits": "2d4", "health": 6, "move": "6\"", "weapon": "Cutting Mandibles (`Bladed`, d4, Melee)"},
-      {"roll": 2, "name": "Security Drone", "spawn": "2+2", "combat": "2d6", "defense": "2d6", "wits": "2d4", "health": 8, "move": "4\"", "weapon": "Pulse Carbine (`Energy`, d6, Ranged)"},
-      {"roll": 3, "name": "Targeting Unit", "spawn": "3", "combat": "2d6", "defense": "2d6", "wits": "2d8", "health": 10, "move": "4\"", "weapon": "Neural Lance (`Energy`, d8, Ranged)"},
-      {"roll": 4, "name": "Heavy Unit", "spawn": "2", "combat": "2d8", "defense": "2d8", "wits": "2d4", "health": 12, "move": "3\"", "weapon": "Crushing Claw (`Blunt`, d8, Melee)"},
-      {"roll": 5, "name": "Hunter-Killer", "spawn": "1", "combat": "2d8", "defense": "2d6", "wits": "2d6", "health": 12, "move": "6\"", "weapon": "Shredder Blades (`Bladed`, d6, Melee)"},
-      {"roll": 6, "name": "Defense Platform", "spawn": "1", "combat": "2d10", "defense": "2d6", "wits": "2d4", "health": 14, "move": "3\"", "weapon": "Arc Scythe (`Energy`, d10, Melee)"}
+      {
+        "roll": 1,
+        "name": "Maintenance Swarm",
+        "spawn": "4+4",
+        "combat": "2d4",
+        "defense": "2d4",
+        "wits": "2d4",
+        "health": 6,
+        "move": "6\"",
+        "weapon": "Cutting Mandibles (`Bladed`, d4, Melee)"
+      },
+      {
+        "roll": 2,
+        "name": "Security Drone",
+        "spawn": "2+2",
+        "combat": "2d6",
+        "defense": "2d6",
+        "wits": "2d4",
+        "health": 8,
+        "move": "4\"",
+        "weapon": "Pulse Carbine (`Energy`, d6, Ranged)"
+      },
+      {
+        "roll": 3,
+        "name": "Targeting Unit",
+        "spawn": "3",
+        "combat": "2d6",
+        "defense": "2d6",
+        "wits": "2d8",
+        "health": 10,
+        "move": "4\"",
+        "weapon": "Neural Lance (`Energy`, d8, Ranged)"
+      },
+      {
+        "roll": 4,
+        "name": "Heavy Unit",
+        "spawn": "2",
+        "combat": "2d8",
+        "defense": "2d8",
+        "wits": "2d4",
+        "health": 12,
+        "move": "3\"",
+        "weapon": "Crushing Claw (`Blunt`, d8, Melee)"
+      },
+      {
+        "roll": 5,
+        "name": "Hunter-Killer",
+        "spawn": "1",
+        "combat": "2d8",
+        "defense": "2d6",
+        "wits": "2d6",
+        "health": 12,
+        "move": "6\"",
+        "weapon": "Shredder Blades (`Bladed`, d6, Melee)"
+      },
+      {
+        "roll": 6,
+        "name": "Defense Platform",
+        "spawn": "1",
+        "combat": "2d10",
+        "defense": "2d6",
+        "wits": "2d4",
+        "health": 14,
+        "move": "3\"",
+        "weapon": "Arc Cannon (`Energy`, d10, Ranged)"
+      }
     ]
   },
   "behavior": {
-    "columns": ["d6", "No LoS", "Has LoS", "Engaged"],
-    "align": ["center", "center", "center", "center"],
+    "columns": [
+      "d6",
+      "No LoS",
+      "Has LoS",
+      "Engaged"
+    ],
+    "align": [
+      "center",
+      "center",
+      "center",
+      "center"
+    ],
     "items": [
-      {"roll": "1-4", "no_los": "Patrol", "has_los": "Attack", "engaged": "Attack"},
-      {"roll": "5", "no_los": "Wait", "has_los": "Wait", "engaged": "Attack"},
-      {"roll": "6", "no_los": "Regroup", "has_los": "Attack", "engaged": "Frenzy"}
+      {
+        "roll": "1-4",
+        "no_los": "Patrol",
+        "has_los": "Attack",
+        "engaged": "Attack"
+      },
+      {
+        "roll": "5",
+        "no_los": "Wait",
+        "has_los": "Wait",
+        "engaged": "Attack"
+      },
+      {
+        "roll": "6",
+        "no_los": "Regroup",
+        "has_los": "Attack",
+        "engaged": "Frenzy"
+      }
     ]
   }
 }

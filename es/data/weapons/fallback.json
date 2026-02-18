@@ -1,22 +1,37 @@
 {
   "table_name": "Combate Improvisado",
-  "source": "03_equipment.md",
-  "columns": ["Weapon", "Type", "Damage", "Special"],
-  "align": ["left", "center", "center", "left"],
-  "display_columns": ["Arma", "Tipo", "Daño", "Especial"],
+  "source": "1_03_equipment.md",
+  "columns": [
+    "Weapon",
+    "Type",
+    "Damage",
+    "Special"
+  ],
+  "align": [
+    "left",
+    "center",
+    "center",
+    "left"
+  ],
+  "display_columns": [
+    "Arma",
+    "Tipo",
+    "Daño",
+    "Especial"
+  ],
   "items": [
     {
       "name": "Desarmado",
       "type": "`Contundente`",
       "damage": "1",
-      "special": "`-2 ND` `Combate`, sin `Respuesta`, siempre disponible",
+      "special": "`-2 ND` `Combate`, sin `Contraataque`, siempre disponible",
       "cost": 0
     },
     {
       "name": "Improvisada",
       "type": "`Contundente`",
       "damage": "d4",
-      "special": "`-2 ND` `Combate`, sin `Respuesta`, culatazos",
+      "special": "`-2 ND` `Combate`, sin `Contraataque`, culatazos",
       "cost": 0
     }
   ]

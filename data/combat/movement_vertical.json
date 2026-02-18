@@ -1,11 +1,31 @@
 {
   "table_name": "Vertical Movement",
-  "source": "04_combat.md",
-  "columns": ["Action", "Cost", "Notes"],
-  "align": ["left", "center", "left"],
+  "source": "1_04_combat.md",
+  "columns": [
+    "Action",
+    "Cost",
+    "Notes"
+  ],
+  "align": [
+    "left",
+    "center",
+    "left"
+  ],
   "items": [
-    {"action": "Climb", "cost": "2\" per 1\" vertical", "notes": "Requires climbable surface"},
-    {"action": "Jump gap", "cost": "1\" per 1\" horizontal", "notes": "Max 2\""},
-    {"action": "Jump down", "cost": "Free", "notes": "Fall damage if > 3\""}
+    {
+      "action": "Climb",
+      "cost": "2\" per 1\" vertical",
+      "notes": "Requires climbable surface"
+    },
+    {
+      "action": "Jump gap",
+      "cost": "1\" per 1\" horizontal",
+      "notes": "Max 2\""
+    },
+    {
+      "action": "Jump down",
+      "cost": "Free",
+      "notes": "Fall damage if > 3\""
+    }
   ]
 }

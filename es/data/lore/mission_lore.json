@@ -1,0 +1,455 @@
+{
+  "templates": {
+    "default": [
+      "{{pick:hook}} {{pick:scene}} {{pick:faction_presence}} {{pick:timing_line}} {{pick:loot_line}} {{pick:coworker_state}} {{pick:objective_line}} {{pick:deployment_line}} {{pick:final}}"
+    ],
+    "Extraction": [
+      "{{pick:hook}} {{pick:scene}} {{pick:faction_presence}} {{pick:timing_line}} {{pick:loot_line}} {{pick:coworker_state}} {{pick:extraction_objective}} {{pick:deployment_line}} {{pick:final}}"
+    ],
+    "Assassination": [
+      "{{pick:hook}} {{pick:scene}} {{pick:faction_presence}} {{pick:timing_line}} {{pick:loot_line}} {{pick:coworker_state}} {{pick:assassination_objective}} {{pick:deployment_line}} {{pick:final}}"
+    ],
+    "Control": [
+      "{{pick:hook}} {{pick:scene}} {{pick:faction_presence}} {{pick:timing_line}} {{pick:loot_line}} {{pick:coworker_state}} {{pick:control_objective}} {{pick:deployment_line}} {{pick:final}}"
+    ],
+    "Sabotage": [
+      "{{pick:hook}} {{pick:scene}} {{pick:faction_presence}} {{pick:timing_line}} {{pick:loot_line}} {{pick:coworker_state}} {{pick:sabotage_objective}} {{pick:deployment_line}} {{pick:final}}"
+    ],
+    "Heist": [
+      "{{pick:hook}} {{pick:scene}} {{pick:faction_presence}} {{pick:timing_line}} {{pick:loot_line}} {{pick:coworker_state}} {{pick:heist_objective}} {{pick:deployment_line}} {{pick:final}}"
+    ],
+    "Breakthrough": [
+      "{{pick:hook}} {{pick:scene}} {{pick:faction_presence}} {{pick:timing_line}} {{pick:loot_line}} {{pick:coworker_state}} {{pick:breakthrough_objective}} {{pick:deployment_line}} {{pick:final}}"
+    ],
+    "Escort": [
+      "{{pick:hook}} {{pick:scene}} {{pick:faction_presence}} {{pick:timing_line}} {{pick:loot_line}} {{pick:coworker_state}} {{pick:escort_objective}} {{pick:deployment_line}} {{pick:final}}"
+    ],
+    "Uplink": [
+      "{{pick:hook}} {{pick:scene}} {{pick:faction_presence}} {{pick:timing_line}} {{pick:loot_line}} {{pick:coworker_state}} {{pick:uplink_objective}} {{pick:deployment_line}} {{pick:final}}"
+    ],
+    "Quadrants": [
+      "{{pick:hook}} {{pick:scene}} {{pick:faction_presence}} {{pick:timing_line}} {{pick:loot_line}} {{pick:coworker_state}} {{pick:quadrants_objective}} {{pick:deployment_line}} {{pick:final}}"
+    ],
+    "Seizure": [
+      "{{pick:hook}} {{pick:scene}} {{pick:faction_presence}} {{pick:timing_line}} {{pick:loot_line}} {{pick:coworker_state}} {{pick:seizure_objective}} {{pick:deployment_line}} {{pick:final}}"
+    ],
+    "Triangulation": [
+      "{{pick:hook}} {{pick:scene}} {{pick:faction_presence}} {{pick:timing_line}} {{pick:loot_line}} {{pick:coworker_state}} {{pick:triangulation_objective}} {{pick:deployment_line}} {{pick:final}}"
+    ],
+    "Lockdown": [
+      "{{pick:hook}} {{pick:scene}} {{pick:faction_presence}} {{pick:timing_line}} {{pick:loot_line}} {{pick:coworker_state}} {{pick:lockdown_objective}} {{pick:deployment_line}} {{pick:final}}"
+    ]
+  },
+  "pools": {
+
+    "hook": [
+      "{{pick:source}} {{pick:delivered}} {{pick:contract_noun}} al {{pick:dead_drop}} de tu equipo.",
+      "{{pick:time_ref}}, {{pick:source}} {{pick:contact_verb}} con {{pick:contract_noun}}.",
+      "El briefing fue {{pick:brevity}}: {{pick:sector}}, {{pick:urgency}}.",
+      "{{pick:someone}} subió coordenadas a vuestro {{pick:dead_drop}}. {{pick:no_sender}}.",
+      "La voz corrió por la {{pick:network}}: {{pick:rumor}}."
+    ],
+    "source": [
+      "Un gestor", "Tu contacto", "Un relé desconocido", "Un temporizador de hombre muerto", "Un ping cifrado",
+      "Una frecuencia empalmada", "Un fantasma de mantenimiento"
+    ],
+    "delivered": [
+      "envió", "dejó", "enrutó", "quemó", "marcó"
+    ],
+    "contact_verb": [
+      "hizo ping", "resurgió", "rompió el silencio", "envió una ráfaga", "volvió a estar en línea"
+    ],
+    "contract_noun": [
+      "un contrato", "órdenes nuevas", "un trabajo", "un paquete objetivo", "curro", "un encargo urgente"
+    ],
+    "dead_drop": [
+      "buzón muerto", "relé ciego", "búfer de mantenimiento", "caché de intersección", "canal frío"
+    ],
+    "brevity": [
+      "de tres palabras", "de una línea", "una sola coordenada", "apenas una frase"
+    ],
+    "urgency": [
+      "ya, id", "sin demora", "el reloj corre", "ventana cerrándose"
+    ],
+    "someone": [
+      "Alguien", "Un nodo desconocido", "Un contacto quemado", "Un gestor desmantelado"
+    ],
+    "no_sender": [
+      "Sin remitente", "Origen borrado", "Dirección de retorno: nula", "El rastro no lleva a ningún sitio"
+    ],
+    "network": [
+      "intersección", "cable local", "red de mantenimiento", "canal de subnivel", "frecuencia del corredor"
+    ],
+    "rumor": [
+      "{{pick:rumor_subject}} {{pick:rumor_verb}} {{pick:rumor_location}}",
+      "la {{pick:infrastructure}} en {{pick:sector}} {{pick:rumor_state}}",
+      "{{pick:faction_agent}} {{pick:rumor_verb}} {{pick:rumor_location}}"
+    ],
+    "rumor_subject": [
+      "algo valioso", "una señal", "una carga abandonada", "hardware no autorizado",
+      "un caché de mantenimiento", "una emisión sin licencia"
+    ],
+    "rumor_verb": [
+      "apareció en", "fue detectado cerca de", "surgió en", "se activó en", "fue marcado en"
+    ],
+    "rumor_location": [
+      "{{pick:sector}}", "la {{pick:infrastructure}} cerca de {{pick:sector}}",
+      "los niveles inferiores", "un tramo condenado de {{pick:sector}}"
+    ],
+    "rumor_state": [
+      "se apagó", "emite en frecuencia abierta", "ha sido comprometida",
+      "dejó de responder", "está ventilando atmósfera"
+    ],
+    "faction_agent": [
+      "un {{faction}} {{pick:hostile_role}}", "una patrulla de {{faction}}",
+      "{{faction}} {{pick:hostile_role_plural}}"
+    ],
+    "hostile_role": [
+      "explorador", "patrulla", "equipo de salvamento", "avanzadilla", "partida de avance"
+    ],
+    "hostile_role_plural": [
+      "exploradores", "avanzadillas", "salvadores", "operativos", "rezagados"
+    ],
+
+    "scene": [
+      "{{pick:sector}} lleva {{pick:scene_state}} {{pick:time_period}}. {{pick:ambient_detail}}",
+      "La {{pick:infrastructure}} {{pick:scene_verb}} {{pick:scene_descriptor}}. {{pick:ambient_detail}}",
+      "{{pick:ambient_detail}} {{pick:ambient_detail_2}}"
+    ],
+    "scene_state": [
+      "a oscuras", "desconectado", "en cuarentena", "abandonado", "funcionando al rojo"
+    ],
+    "scene_verb": [
+      "huele a", "está inundada de", "resuena con", "zumba con", "apesta a"
+    ],
+    "scene_descriptor": [
+      "ozono y sangre vieja", "escorrentía de refrigerante", "quejido de servos", "descarga estática",
+      "aislamiento quemado", "aire reciclado que ha sido reciclado demasiadas veces"
+    ],
+    "ambient_detail": [
+      "La iluminación de emergencia lo tiñe todo de {{pick:color}}.",
+      "La condensación gotea de los mazos de cables.",
+      "El aire sabe a {{pick:taste}}.",
+      "Visibilidad: {{pick:visibility}}.",
+      "El suelo está {{pick:floor_state}}."
+    ],
+    "ambient_detail_2": [
+      "Los registros de mantenimiento están {{pick:log_state}}.",
+      "Alcance de comunicaciones: {{pick:comms_range}}.",
+      "La temperatura está {{pick:temp_state}}.",
+      "Integridad estructural: {{pick:structural}}."
+    ],
+    "color": ["rojo", "ámbar", "verde enfermizo", "azul intermitente", "naranja de emergencia"],
+    "taste": ["cobre", "polímero quemado", "nada reciclada", "ozono", "óxido"],
+    "visibility": ["escasa", "al largo del brazo", "cincuenta metros con suerte", "nula pasada la intersección"],
+    "floor_state": ["mojado", "combado", "cubierto de aislamiento arrancado", "resbaladizo de refrigerante", "enrejado y oxidándose"],
+    "log_state": ["en blanco", "corruptos", "con seis meses de retraso", "mintiendo"],
+    "comms_range": ["solo cable", "corto alcance", "degradado", "bloqueado pasada la primera intersección"],
+    "temp_state": ["bajando", "subiendo", "inestable", "incorrecta para este nivel"],
+    "structural": ["comprometida", "aguantando", "cuestionable", "no preguntes"],
+    "time_period": ["semanas", "meses", "más de lo que nadie admite", "exactamente un turno"],
+
+    "faction_presence": [
+      "{{if:factionKey=scrapers}}{{pick:scrapers_presence}}{{/if}}{{if:factionKey=feral_crews}}{{pick:feral_crews_presence}}{{/if}}{{if:factionKey=wave_callers}}{{pick:wave_callers_presence}}{{/if}}{{if:factionKey=static_wraiths}}{{pick:static_wraiths_presence}}{{/if}}{{if:factionKey=feral_automata}}{{pick:feral_automata_presence}}{{/if}}{{if:factionKey=cable_feeders}}{{pick:cable_feeders_presence}}{{/if}}"
+    ],
+    "scrapers_presence": [
+      "{{pick:scraper_evidence}} {{pick:scraper_behavior}}",
+      "Los Carroñeros {{pick:scraper_arrival}}. {{pick:scraper_behavior}}"
+    ],
+    "scraper_evidence": [
+      "Pilas de chatarra bloquean el {{pick:passage}}.", "Cortes frescos en las carcasas de cable.",
+      "Marcas de Carroñeros en las paredes.", "Conductos arrancados por todas partes.",
+      "Lo bueno ya no está."
+    ],
+    "scraper_behavior": [
+      "Están arrancando todo lo que no está soldado.",
+      "Se les oye {{pick:scraper_sound}} {{pick:direction}}.",
+      "Trabajan rápido y no comparten.",
+      "Esperadles luchando por cualquier cosa con valor de reventa."
+    ],
+    "scraper_arrival": [
+      "llegaron primero", "llevan aquí días", "ya están atrincherados",
+      "reclamaron este tramo el ciclo pasado"
+    ],
+    "scraper_sound": [
+      "cortando", "arrancando", "arrastrando chatarra", "discutiendo sobre derechos de salvamento"
+    ],
+    "feral_crews_presence": [
+      "{{pick:crew_evidence}} {{pick:crew_behavior}}",
+      "Una Banda Salvaje {{pick:crew_arrival}}. {{pick:crew_behavior}}"
+    ],
+    "crew_evidence": [
+      "Grafitis marcan el {{pick:passage}}.", "Pintura fresca, sangre fresca en las paredes.",
+      "Hogueras de centinela aún humeando en la intersección.", "Marcas territoriales cada veinte metros.",
+      "Olor a hogueras y violencia."
+    ],
+    "crew_behavior": [
+      "Controlan este tramo. Los peajes se pagan con dientes.",
+      "No están negociando.",
+      "Centinelas descuidados, pero armados y cabreados.",
+      "Luchan por territorio como si fuera lo único que importa. Lo es."
+    ],
+    "crew_arrival": [
+      "ha reclamado este territorio", "tiene el perímetro cerrado", "controla cada intersección",
+      "se movió aquí cuando la última banda fue eliminada"
+    ],
+    "wave_callers_presence": [
+      "{{pick:wave_evidence}} {{pick:wave_behavior}}",
+      "Invocadores de Onda. {{pick:wave_evidence}} {{pick:wave_behavior}}"
+    ],
+    "wave_evidence": [
+      "El aire vibra con {{pick:wave_signal}}.", "Tu conexión cableada tartamudea.",
+      "Las comunicaciones están {{pick:comms_state}} cerca de la {{pick:infrastructure}}.",
+      "Voces fantasma en cada frecuencia.", "Hardware sin licencia emitiendo abiertamente."
+    ],
+    "wave_signal": [
+      "frecuencias sin licencia", "herejía de banda abierta", "inalámbrico crudo", "una onda portadora que no debería existir"
+    ],
+    "comms_state": [
+      "bloqueadas", "degradadas", "llenas de señales fantasma", "inutilizables"
+    ],
+    "wave_behavior": [
+      "La herejía de la emisión abierta llena el corredor como una niebla.",
+      "Convierten la señal en arma. Mantente en el cable.",
+      "Esperad interferencias, inhibición y cosas que cabalgan las frecuencias.",
+      "Tus instrumentos te mentirán en su territorio."
+    ],
+    "static_wraiths_presence": [
+      "{{pick:wraith_evidence}} {{pick:wraith_behavior}}",
+      "Espectros de Estática. {{pick:wraith_evidence}} {{pick:wraith_behavior}}"
+    ],
+    "wraith_evidence": [
+      "Las luces parpadean en un patrón que no es aleatorio.",
+      "Las sombras se doblan donde no deberían.",
+      "Tu señal se corta. Por un fotograma, algo está {{pick:wraith_position}}.",
+      "La temperatura cae cerca de la {{pick:infrastructure}}.",
+      "Carga estática en cada superficie."
+    ],
+    "wraith_position": [
+      "detrás de ti", "en la pared", "donde nadie debería estar", "más cerca que antes"
+    ],
+    "wraith_behavior": [
+      "La intersección se siente mal. Fíate de esa sensación.",
+      "Se alimentan de la corriente. No uséis las líneas muertas.",
+      "No los veréis hasta que sea tarde. Nadie los ve.",
+      "Tus instrumentos dicen que la zona está vacía. Tus instrumentos mienten."
+    ],
+    "feral_automata_presence": [
+      "{{pick:automata_evidence}} {{pick:automata_behavior}}",
+      "Autómatas Salvajes. {{pick:automata_evidence}} {{pick:automata_behavior}}"
+    ],
+    "automata_evidence": [
+      "Un dron de mantenimiento se sacude en la esquina. Luego otro.",
+      "El zumbido de servos resuena desde {{pick:direction}}.",
+      "Una unidad de limpieza se arrastra, chasis abollado, ópticas {{pick:optic_state}}.",
+      "Las máquinas aquí dejaron de obedecer hace {{pick:time_period}}.",
+      "Patrones de patrulla sin lógica. Solo depredación."
+    ],
+    "optic_state": [
+      "en rojo vivo", "parpadeando", "fijas en ti", "apagadas menos una"
+    ],
+    "automata_behavior": [
+      "Patrullan en patrones que no tienen sentido para nada vivo.",
+      "Hardware renegado. Ningún código de anulación os ayudará aquí.",
+      "No os odian. Simplemente no os reconocen como autorizados.",
+      "Rápidos, incansables, y ejecutando protocolos de mantenimiento corruptos."
+    ],
+    "cable_feeders_presence": [
+      "{{pick:feeder_evidence}} {{pick:feeder_behavior}}",
+      "Parásitos de Cable. {{pick:feeder_evidence}} {{pick:feeder_behavior}}"
+    ],
+    "feeder_evidence": [
+      "Los cables se mueven.",
+      "Aislamiento arrancado en {{pick:feeder_range}} en cada dirección.",
+      "Un nido de biomasa de cable bloquea el {{pick:passage}} principal. Pulsa.",
+      "Los parásitos se han infiltrado por las paredes.",
+      "Los cables se retuercen bajo los pies."
+    ],
+    "feeder_range": [
+      "veinte metros", "todo el subnivel", "hasta donde llega la luz"
+    ],
+    "feeder_behavior": [
+      "No tropecéis. No toquéis cable pelado.",
+      "Están royendo la columna vertebral. Se les oye.",
+      "Crecen más rápido de lo que mantenimiento puede cortar.",
+      "La biomasa está caliente. No debería estar caliente."
+    ],
+
+    "timing_line": [
+      "{{if:timing=Early}}Ya están aquí. Ya desplegados.{{/if}}{{if:timing=Standard}}Tenéis un momento para prepararos antes de que lleguen.{{/if}}{{if:timing=Late}}Los hostiles llegan tarde. Eso debería preocuparos más.{{/if}}{{if:timing=Waves}}Vienen en oleadas. Cada una peor que la anterior.{{/if}}{{if:timing=Surge}}Todo golpea a la vez. Sin escalada, fuerza total desde el inicio.{{/if}}{{if:timing=Ambush}}El primer contacto será en sus términos, no en los vuestros.{{/if}}"
+    ],
+
+    "loot_line": [
+      "{{pick:loot_state}} {{pick:loot_mod_line}}"
+    ],
+    "loot_state": [
+      "{{if:loot=Scattered}}Cachés de suministros por toda la zona. Alguien se fue con prisa.{{/if}}{{if:loot=None}}Nada que saquear. Solo la misión.{{/if}}{{if:loot=Central Cache}}Todo lo que vale está apilado en el centro. Conveniente y sospechoso.{{/if}}{{if:loot=Edge Stash}}Suministros escondidos en el perímetro.{{/if}}{{if:loot=Trail}}Equipo tirado a lo largo de la línea central. Migas o cebo.{{/if}}{{if:loot=Heavy Drop}}Una cápsula de carga reventada. Salvamento por todas partes.{{/if}}"
+    ],
+    "loot_mod_line": [
+      "{{if:lootMod=Standard}}Protocolos de salvamento estándar.{{/if}}{{if:lootMod=Decoys}}La mitad son señuelos. Tiempo perdido, peso perdido.{{/if}}{{if:lootMod=Timed}}La carga tiene temporizador. Agarradla antes de que se bloquee.{{/if}}{{if:lootMod=Heavy}}El salvamento pesa. Moverlo os ralentizará.{{/if}}{{if:lootMod=Trapped}}Los cachés están trampeados. Comprobad antes de agarrar.{{/if}}{{if:lootMod=Contaminated}}El salvamento está contaminado. Manipulad con cuidado o no manipuléis.{{/if}}"
+    ],
+
+    "coworker_state": [
+      "{{if:coworkerMod=Standard}}Compañeros locales en la zona. Protocolos estándar.{{/if}}{{if:coworkerMod=Skittish}}Los compañeros de aquí están nerviosos. Un ruido fuerte y salen corriendo.{{/if}}{{if:coworkerMod=Buddy System}}Los compañeros van juntos. Listos.{{/if}}{{if:coworkerMod=Grudge Holder}}Los locales guardan rencor. Cruzadlos una vez.{{/if}}{{if:coworkerMod=Talkative}}Los compañeros hablan. Podría ser útil, podría atraer atención.{{/if}}{{if:coworkerMod=Claustrophobic}}Los compañeros están tensos. Los espacios cerrados les provocan pánico.{{/if}}"
+    ],
+
+    "time_ref": [
+      "el ciclo pasado", "el incidente", "la sobrecarga", "que alguien tiró del cable equivocado",
+      "que mantenimiento dejó de aparecer"
+    ],
+    "passage": ["corredor", "intersección", "túnel de acceso", "conducto de servicio", "paso"],
+    "direction": ["todas direcciones", "abajo", "el otro lado", "más adentro", "arriba"],
+    "infrastructure": [
+      "estación de relé", "caja de empalme", "acoplamiento de energía", "bahía de mantenimiento",
+      "tronco de cable", "nodo de distribución", "chimenea de ventilación", "esclusa de carga"
+    ],
+    "sector": [
+      "Sector 7-Alfa", "Sector 12-Kappa", "Sector 3-Nulo", "Theta Profundo",
+      "Subnivel 19-Sigma", "Intersección 4-Rho", "Corredor 88-Oeste", "Nodo Epsilon",
+      "Sector 6-Delta", "Nivel 41-Tau"
+    ],
+
+    "objective_line": [
+      "El equipo necesita {{pick:generic_task}} antes de que {{pick:window_closes}}.",
+      "El objetivo es {{pick:objective_quality}}. {{pick:generic_imperative}}."
+    ],
+    "generic_task": [
+      "asegurar la zona", "completar el contrato", "entrar y salir",
+      "acabar el trabajo", "hacer aquello por lo que os pagan"
+    ],
+    "generic_imperative": [
+      "Moved rápido", "No os pongáis creativos", "Seguid el plan", "Adaptaos o morid"
+    ],
+    "window_closes": [
+      "se cierre la ventana", "los hostiles se reagrupen", "lleguen refuerzos", "la situación se deteriore más"
+    ],
+    "objective_quality": [
+      "sencillo sobre el papel", "simple en teoría", "bastante claro", "feo pero definido"
+    ],
+
+    "extraction_objective": [
+      "El paquete está en algún lugar de la zona. Dos equipos, un premio. {{pick:extraction_rule}}.",
+      "Agarrad el activo y extraed. {{pick:extraction_rule}}.",
+      "Trabajo de recuperación. {{pick:extraction_rule}}."
+    ],
+    "extraction_rule": [
+      "Quien lo saque primero se lo queda",
+      "Velocidad sobre potencia de fuego",
+      "El otro equipo recibió el mismo ping"
+    ],
+    "assassination_objective": [
+      "Un nombre en el contrato. {{pick:assassination_rule}}.",
+      "Orden de eliminación. {{pick:assassination_rule}}.",
+      "El objetivo está marcado. {{pick:assassination_rule}}."
+    ],
+    "assassination_rule": [
+      "El pago se libera cuando deje de respirar",
+      "Confirmad la eliminación o el contrato se anula",
+      "Limpia si es posible, sucia si es necesario"
+    ],
+    "control_objective": [
+      "Tres nodos de relé. Mantenedlos. {{pick:control_rule}}.",
+      "Disputa territorial. Los nodos son todo. {{pick:control_rule}}.",
+      "Reclamad los relés. Defended los relés. {{pick:control_rule}}."
+    ],
+    "control_rule": [
+      "No podéis mantener los tres sin dividir el equipo",
+      "Cada nodo que perdéis es ancho de banda para el enemigo",
+      "El hardware es viejo. Se desconecta si nadie lo vigila"
+    ],
+    "sabotage_objective": [
+      "Tres cajas de empalme. Cargadlas, voladlas, salid. {{pick:sabotage_rule}}.",
+      "Trabajo de demolición. {{pick:sabotage_rule}}.",
+      "Colocad las cargas y mantened posición hasta la detonación. {{pick:sabotage_rule}}."
+    ],
+    "sabotage_rule": [
+      "Las cargas tardan en colocarse",
+      "Si desactivan aunque sea una, la operación fracasa",
+      "Dividirse es inevitable"
+    ],
+    "heist_objective": [
+      "Marcadores de botín por todas partes. Agarrad lo que podáis cargar. {{pick:heist_rule}}.",
+      "Romped y agarrad. {{pick:heist_rule}}.",
+      "El equipo con más salvamento gana. {{pick:heist_rule}}."
+    ],
+    "heist_rule": [
+      "Cada marcador que cogéis os ralentiza",
+      "No seáis codiciosos",
+      "Velocidad o carga. Elegid"
+    ],
+    "breakthrough_objective": [
+      "El único camino es a través. {{pick:breakthrough_rule}}.",
+      "Atravesad la línea enemiga. {{pick:breakthrough_rule}}.",
+      "La salida está al otro lado. {{pick:breakthrough_rule}}."
+    ],
+    "breakthrough_rule": [
+      "La velocidad importa más que las bajas",
+      "Cada modelo que cruce cuenta",
+      "El enemigo sabe que venís"
+    ],
+    "escort_objective": [
+      "El VIP espera. Llevadlo a extracción. {{pick:escort_rule}}.",
+      "Servicio de escolta. {{pick:escort_rule}}.",
+      "Proteged el activo, cruzadlo. {{pick:escort_rule}}."
+    ],
+    "escort_rule": [
+      "El VIP se mueve a su ritmo",
+      "Todo en esta zona lo quiere muerto",
+      "No puede correr"
+    ],
+    "uplink_objective": [
+      "Tres amplificadores de señal necesitan activación. {{pick:uplink_rule}}.",
+      "Arrancad la antena y mantened la señal. {{pick:uplink_rule}}.",
+      "La red necesita esta conexión. {{pick:uplink_rule}}."
+    ],
+    "uplink_rule": [
+      "Cada nodo tarda. Tiempo que el enemigo usará contra vosotros",
+      "La señal necesita los tres nodos",
+      "Cada activación es una baliza"
+    ],
+    "quadrants_objective": [
+      "La zona está dividida en cuatro sectores. Controladlos. {{pick:quadrants_rule}}.",
+      "Control de cuadrantes. Repartid el equipo por la zona. {{pick:quadrants_rule}}."
+    ],
+    "quadrants_rule": [
+      "No podéis estar en todas partes a la vez",
+      "Cuerpos sobre el terreno ganan esto",
+      "El enemigo solo necesita negaros dos"
+    ],
+    "seizure_objective": [
+      "Un objetivo, centro de la zona. Tomadlo y mantenedlo. {{pick:seizure_rule}}.",
+      "Trabajo de captura. El objetivo está en medio. {{pick:seizure_rule}}."
+    ],
+    "seizure_rule": [
+      "La posesión es la única ley que importa aquí",
+      "Quien lo tenga al final gana",
+      "Llegar es fácil. Quedarse es el problema"
+    ],
+    "triangulation_objective": [
+      "Tres puntos de señal forman un triángulo. Activadlos en secuencia. {{pick:triangulation_rule}}.",
+      "Protocolo de triangulación. Tres nodos, orden específico. {{pick:triangulation_rule}}."
+    ],
+    "triangulation_rule": [
+      "La secuencia importa. Si os equivocáis, empezáis de nuevo",
+      "Cada nodo revela el siguiente",
+      "El enemigo puede interrumpir la secuencia controlando cualquier nodo"
+    ],
+    "lockdown_objective": [
+      "Sellad la zona. Cerrad cada acceso. {{pick:lockdown_rule}}.",
+      "Protocolo de confinamiento. Cerradlo todo. {{pick:lockdown_rule}}."
+    ],
+    "lockdown_rule": [
+      "Cada puerta sin sellar es una entrada para el enemigo",
+      "Cerrad y mantened. Así de simple. Así de difícil",
+      "La zona tiene demasiados accesos para un solo equipo"
+    ],
+
+    "deployment_line": [
+      "{{if:deployment=Standard}}Vectores de aproximación estándar.{{/if}}{{if:deployment=Flanked}}Entrada por el mismo borde. Hombro con hombro.{{/if}}{{if:deployment=Corners}}Despliegue diagonal. Líneas de visión largas.{{/if}}{{if:deployment=Split}}Entrada dividida.{{/if}}{{if:deployment=Center}}El Defensor controla el centro.{{/if}}{{if:deployment=Crossfire}}Cuatro puntos de entrada.{{/if}}"
+    ],
+    "final": [
+      "Mantened el cable.", "El contador de suscripción sigue corriendo.", "La desconexión no es una opción.",
+      "No hay segundas oportunidades.", "Hacedlo.", "Moved.", "No muráis en horario de empresa."
+    ]
+  }
+}

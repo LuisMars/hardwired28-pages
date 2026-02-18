@@ -1,16 +1,96 @@
 {
   "table_name": "Contract Types",
-  "source": "02_warbands.md",
-  "columns": ["Contract Type", "Health", "Move", "Weapons", "Max Armor", "Special", "Max"],
-  "align": ["left", "center", "center", "center", "center", "left", "center"],
+  "source": "1_02_warbands.md",
+  "columns": [
+    "Contract Type",
+    "Health",
+    "Move",
+    "Weapons",
+    "Max Armor",
+    "Special",
+    "Max"
+  ],
+  "align": [
+    "left",
+    "center",
+    "center",
+    "center",
+    "center",
+    "left",
+    "center"
+  ],
   "items": [
-    {"contract_type": "`Boss`", "health": "16", "move": "4\"", "weapons": "Both", "max_armor": "Heavy", "special": "`+1 DT` to one attribute", "max": "*"},
-    {"contract_type": "`Brute`", "health": "14", "move": "3\"", "weapons": "Melee", "max_armor": "Heavy", "special": "+1 melee damage, ignores armor move penalty", "max": "2"},
-    {"contract_type": "`Veteran`", "health": "13", "move": "4\"", "weapons": "Both", "max_armor": "Medium", "special": "`+1 DT` `Defense` below half `Health`", "max": "2"},
-    {"contract_type": "`Gunner`", "health": "14", "move": "4\"", "weapons": "Ranged", "max_armor": "Medium", "special": "Ignores move penalty when shooting", "max": "2"},
-    {"contract_type": "`Scout`", "health": "12", "move": "5\"", "weapons": "Both", "max_armor": "Light", "special": "Free `Disengage`, `Move` 3\" after deployment", "max": "2"},
-    {"contract_type": "`Zealot`", "health": "12", "move": "5\"", "weapons": "Melee", "max_armor": "Light", "special": "+2\" Move if ending `Engaged`, `+1 DT` `Combat` vs. 2+ enemies", "max": "2"},
-    {"contract_type": "`Agent`", "health": "14", "move": "4\"", "weapons": "Both", "max_armor": "Light", "special": "Re-roll failed `Wits` tests", "max": "2"},
-    {"contract_type": "`Broadcaster`", "health": "14", "move": "4\"", "weapons": "Melee", "max_armor": "Light", "special": "Can `Cast`", "max": "1"}
+    {
+      "contract_type": "`Boss`",
+      "health": "16",
+      "move": "4\"",
+      "weapons": "Both",
+      "max_armor": "Heavy",
+      "special": "`+1 DT` to one attribute",
+      "max": "*"
+    },
+    {
+      "contract_type": "`Brute`",
+      "health": "14",
+      "move": "3\"",
+      "weapons": "Melee",
+      "max_armor": "Heavy",
+      "special": "+1 melee damage, ignores armor move penalty",
+      "max": "2"
+    },
+    {
+      "contract_type": "`Veteran`",
+      "health": "13",
+      "move": "4\"",
+      "weapons": "Both",
+      "max_armor": "Medium",
+      "special": "`+1 DT` `Defense` below half `Health`",
+      "max": "2"
+    },
+    {
+      "contract_type": "`Gunner`",
+      "health": "14",
+      "move": "4\"",
+      "weapons": "Ranged",
+      "max_armor": "Medium",
+      "special": "Ignores move penalty when shooting",
+      "max": "2"
+    },
+    {
+      "contract_type": "`Scout`",
+      "health": "12",
+      "move": "5\"",
+      "weapons": "Both",
+      "max_armor": "Light",
+      "special": "Free `Disengage`, `Move` 3\" after deployment",
+      "max": "2"
+    },
+    {
+      "contract_type": "`Zealot`",
+      "health": "12",
+      "move": "5\"",
+      "weapons": "Melee",
+      "max_armor": "Light",
+      "special": "+2\" Move if ending `Engaged`, `+1 DT` `Combat` vs. 2+ enemies",
+      "max": "2"
+    },
+    {
+      "contract_type": "`Agent`",
+      "health": "14",
+      "move": "4\"",
+      "weapons": "Both",
+      "max_armor": "Light",
+      "special": "Re-roll failed `Wits` tests",
+      "max": "2"
+    },
+    {
+      "contract_type": "`Broadcaster`",
+      "health": "14",
+      "move": "4\"",
+      "weapons": "Melee",
+      "max_armor": "Light",
+      "special": "Can `Cast`",
+      "max": "1"
+    }
   ]
 }

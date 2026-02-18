@@ -1,8 +1,18 @@
 {
   "table_name": "Improvised Combat",
-  "source": "03_equipment.md",
-  "columns": ["Weapon", "Type", "Damage", "Special"],
-  "align": ["left", "center", "center", "left"],
+  "source": "1_03_equipment.md",
+  "columns": [
+    "Weapon",
+    "Type",
+    "Damage",
+    "Special"
+  ],
+  "align": [
+    "left",
+    "center",
+    "center",
+    "left"
+  ],
   "items": [
     {
       "name": "Unarmed",

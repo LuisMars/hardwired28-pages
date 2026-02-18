@@ -1,14 +1,46 @@
 {
   "table_name": "`Broadcast` Fumble",
-  "source": "06_fumbles.md",
-  "columns": ["d6", "Result", "Effect"],
-  "align": ["center", "left", "left"],
+  "source": "1_07_fumbles.md",
+  "columns": [
+    "d6",
+    "Result",
+    "Effect"
+  ],
+  "align": [
+    "center",
+    "left",
+    "left"
+  ],
   "items": [
-    {"roll": 1, "result": "Static Overload", "effect": "Caster loses next activation"},
-    {"roll": 2, "result": "Interference", "effect": "`-1 DT` next cast"},
-    {"roll": 3, "result": "Feedback", "effect": "Caster takes d4 damage"},
-    {"roll": 4, "result": "Wave Bounce", "effect": "Ally within 6\" takes d4 damage (or caster if none)"},
-    {"roll": 5, "result": "Frequency Lock", "effect": "Cannot cast this power this scenario, take d4 damage"},
-    {"roll": "6+", "result": "Broadcast Storm", "effect": "Forget power permanently"}
+    {
+      "roll": 1,
+      "result": "Static Overload",
+      "effect": "Caster loses next activation"
+    },
+    {
+      "roll": 2,
+      "result": "Interference",
+      "effect": "`-1 DT` next cast"
+    },
+    {
+      "roll": 3,
+      "result": "Feedback",
+      "effect": "Caster takes d4 damage"
+    },
+    {
+      "roll": 4,
+      "result": "Wave Bounce",
+      "effect": "Ally within 6\" takes d4 damage (or caster if none)"
+    },
+    {
+      "roll": 5,
+      "result": "Frequency Lock",
+      "effect": "Cannot cast this power this scenario, take d4 damage"
+    },
+    {
+      "roll": "6+",
+      "result": "Broadcast Storm",
+      "effect": "Forget power permanently"
+    }
   ]
 }

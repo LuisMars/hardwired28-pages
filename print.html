@@ -27,14 +27,20 @@
                 <div class="app-menu__dropdown">
                     <button class="app-menu__dropdown-toggle current">Print</button>
                     <div class="app-menu__submenu">
-                        <a href="print">All Rules</a>
-                        <a href="core-rules">Core Rules</a>
-                        <a href="inhuman-resources">Inhuman Resources</a>
-                        <a href="campaign">Campaign</a>
+                        <div class="app-menu__nested">
+                            <span class="app-menu__nested-label">Singles</span>
+                            <div class="app-menu__nested-submenu">
+                                <a href="print">All Rules</a>
+                                <a href="core-rules">Core Rules</a>
+                                <a href="inhuman-resources">Inhuman Resources</a>
+                                <a href="campaign">Campaign</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <a href="quick-reference">Quick Reference</a>
                 <a href="builder/index">Squad Builder</a>
+                <a href="scenario/index">Scenarios</a>
                 <a href="es/print">Castellano</a>
             </div>
         </div>
@@ -59,7 +65,7 @@
 
 
 <h1 id="hardwired-28_1">Hardwired 28</h1>
-<p><em>0.6.6-beta</em> by LuisMars</p>
+<p><em>0.7.0-beta</em> by LuisMars</p>
 <h2 id="the-great-complex">The Great Complex</h2>
 <p>A vertical megastructure three kilometers tall. Cables hang from every surface. They bundle into trunks thicker than bodies, snake through walls, coil underfoot. The Complex was meant to be paradise. Now it decays.</p>
 <p>Wired connection is sacred. Wireless is heresy. Since the Tethering, wireless has meant excommunication. Debts are inherited. Children are born subscribed.</p>
@@ -97,12 +103,12 @@
 - 3-6 Coworker miniatures (placed at setup)<br />
 - 5+ Hostile miniatures (for spawns)<br />
 - Dice: 2d4, 2d6, 2d8, 2d10, 2d12<br />
-- Bag with Activation Tokens (chips, dice, or similar markers - one per model, different colors per faction)<br />
+- Bag with Activation Tokens (chips, dice, or similar markers: one per model, different colors per faction)<br />
 - Measuring tape (inches)<br />
-- 2' × 2' board with dense terrain<br />
+- 2' by 2' board with dense terrain<br />
 - <code>Loot Markers</code> (5-6)</p>
 <p><strong>Optional</strong><br />
-- Condition markers (Activated, Blessed, <code>OoA</code>, <code>Flee</code>, <code>Engaged</code>, <code>Bleed</code>, etc.)<br />
+- Condition markers (<code>OoA</code>, <code>Flee</code>, <code>Engaged</code>, <code>Bleed</code>, etc.)<br />
 - Warband roster sheet<br />
 - <code>Evidence</code> tracker</p>
 <div class="column-break"></div>
@@ -117,7 +123,7 @@
 <p><code>-1 DT</code>: Use the next smaller die type.</p>
 <h3 id="attribute-caps">Attribute Caps</h3>
 <p>Never below 2d4 or above 2d12.</p>
-<h3 id="optional-dt-overflow">Optional: DT Overflow</h3>
+<h3 id="dt-overflow">DT Overflow</h3>
 <p>Modifiers that exceed the limits pass to your opponent with the opposite effect.</p>
 <ul>
 <li>2d4 with <code>-1 DT</code>: you roll 2d4, opponent rolls at <code>+1 DT</code></li>
@@ -246,8 +252,6 @@
 </div>
 <div class="single-column">
 
-
-<div class="spacer"></div>
 
 <h2 id="contract-types">Contract Types</h2>
 <table>
@@ -791,7 +795,7 @@
 
 
 <h2 id="armor">Armor</h2>
-<p>One armor piece per model; wearing armor makes the model <strong>armored</strong>.</p>
+<p>One armor piece per model; makes model <code>armored</code>.</p>
 <h2 id="light-armor">Light Armor</h2>
 <p>Base: 1 damage reduction</p>
 <table>
@@ -1086,7 +1090,7 @@
 </tbody>
 </table>
 <h2 id="cybernetics">Cybernetics</h2>
-<p>Permanently repair penalties from Injuries, Criticals, or Fumbles. Requires matching penalty (e.g., <code>-1 DT</code> <code>Combat</code> to buy Combat Processor).</p>
+<p>Repair Injury, Critical, or Fumble penalties. Requires matching penalty (e.g., <code>-1 DT</code> <code>Combat</code> for Combat Processor).</p>
 <table>
 <thead>
 <tr>
@@ -1147,12 +1151,13 @@
 <h2 id="activation">Activation</h2>
 <ol>
 <li>Each player rolls <strong>Corporate Blessings</strong> (d8 three times)</li>
-<li>Add Activation Tokens to a shared bag: one per player model not <code>OoA</code>, one per hostile spawn group</li>
+<li>Add Activation Tokens to a shared bag: one per player model, one per hostile spawn group</li>
 <li>Draw a token: that faction activates one model (Hostiles and Coworkers follow their AI table)</li>
-<li>All models <code>OoA</code>: discard token</li>
-<li>Each activation: <strong>Move + Action</strong> OR <strong>Action + Move</strong></li>
+<li><strong>Player model <code>OoA</code>:</strong> Discard token immediately. <strong>Hostile/Coworker groups:</strong> Token stays in bag.</li>
+<li>Each activation: one Move (up to <code>Move"</code>) and one Action, in either order</li>
 <li>Repeat from 3 until bag is empty</li>
 </ol>
+<p><strong>Once Per Round:</strong> Each model activates exactly once. <code>Move Again</code> counts as your activation's single action.</p>
 <h2 id="corporate-blessings">Corporate Blessings</h2>
 <p>No model can receive two blessings per round.</p>
 <table>
@@ -1231,7 +1236,7 @@
 </tr>
 <tr>
 <td style="text-align: left;"><code>Aim</code></td>
-<td style="text-align: left;">Declare target. <code>+1 DT</code> <code>Combat</code> on your next shot (lost if moved or damaged)</td>
+<td style="text-align: left;">Declare target. <code>+1 DT</code> <code>Combat</code> on your next shot (lost if moved or hit)</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>Interact</code></td>
@@ -1255,7 +1260,7 @@
 <p>Move up to your <code>Move</code> value. Measure from base edge.</p>
 <h2 id="melee-engagement">Melee Engagement</h2>
 <ul>
-<li>Models within 1" of enemy are <code>Engaged</code></li>
+<li>Models within 1" of enemy (base edge to base edge) are <code>Engaged</code></li>
 <li>Leaving engagement without <code>Disengage</code>: enemy gets free attack at <code>-1 DT</code></li>
 <li>No melee weapon: use Improvised Combat (see Weapons &amp; Armor)</li>
 </ul>
@@ -1304,8 +1309,8 @@
 <li>Attacker declares target and weapon</li>
 <li>In melee, defender chooses <code>Defense</code> or <code>Riposte</code></li>
 <li>Both roll simultaneously:</li>
-<li><strong>Attacker:</strong> <code>Combat</code> <code>DT</code></li>
-<li><strong>Defender:</strong> <code>Defense</code> <code>DT</code> (or <code>Combat</code> <code>-1 DT</code> if <code>Riposting</code>)</li>
+<li><strong>Attacker:</strong> <code>Combat</code> <strong>DT</strong></li>
+<li><strong>Defender:</strong> <code>Defense</code> <strong>DT</strong> (or <code>Combat</code> <code>-1 DT</code> if <code>Riposting</code>)</li>
 <li>Compare results:</li>
 <li><strong>Attacker wins:</strong> Hit</li>
 <li><strong>Defender wins:</strong> Avoided (<code>Riposte</code>: also deal weapon damage to attacker)</li>
@@ -1314,7 +1319,7 @@
 
 <h2 id="ranged-defense">Ranged Defense</h2>
 <ul>
-<li>Roll <code>Defense</code> <code>DT</code> (no <code>Riposte</code> option)</li>
+<li>Roll <code>Defense</code> <strong>DT</strong> (no <code>Riposte</code> option)</li>
 </ul>
 <blockquote>
 <p>"Trajectory data is logged automatically. Missed shots are billed at standard rates."<br />
@@ -1364,7 +1369,7 @@
 <h2 id="grenades_1">Grenades</h2>
 <ul>
 <li>Throw at a point within 6" (action). One use.</li>
-<li>Roll <code>Combat</code> vs 2d6. Failure: scatters d6". 2d6 doubles you: lands at your feet.</li>
+<li>Roll <code>Combat</code> vs 2d6. Failure: scatters d6" from throw point (ignores terrain). 2d6 doubles you: lands at your feet.</li>
 <li>3" blast hits all models (friend and foe). Roll damage for each.</li>
 </ul>
 <h2 id="critical-hits">Critical Hits</h2>
@@ -1433,21 +1438,18 @@
 <li>No range limit (requires LoS)</li>
 <li>Offensive powers: roll <code>Wits</code> vs. target <code>Wits</code></li>
 <li>Support powers: roll <code>Wits</code> vs. 2d6 (target must be friendly)</li>
-<li>Triple or more: effect applies to all valid targets within 3"</li>
+<li>Triple or more: effect automatically applies to all valid targets within 3" (not chosen by caster)</li>
 <li>Defender triples or more: roll <code>Broadcast</code> Fumble table</li>
 </ul>
-<blockquote>
-<p>"Every cable is a leash. Every toll is a collar. We will cut them all."<br />
-<strong>Open Channel Broadcast</strong></p>
-</blockquote>
 <div class="column-break"></div>
 
-<h2 id="offensive-powers">Offensive Powers</h2>
+<h2 id="powers">Powers</h2>
 <table>
 <thead>
 <tr>
-<th style="text-align: center;">d4</th>
+<th style="text-align: center;">d8</th>
 <th style="text-align: left;">Power</th>
+<th style="text-align: left;">Type</th>
 <th style="text-align: left;">Effect</th>
 </tr>
 </thead>
@@ -1455,57 +1457,57 @@
 <tr>
 <td style="text-align: center;">1</td>
 <td style="text-align: left;">Signal Jam</td>
+<td style="text-align: left;">Offensive</td>
 <td style="text-align: left;"><code>-1 DT</code> all rolls until next activation</td>
 </tr>
 <tr>
 <td style="text-align: center;">2</td>
 <td style="text-align: left;">Weapon Lock</td>
+<td style="text-align: left;">Offensive</td>
 <td style="text-align: left;">Target drops one weapon</td>
 </tr>
 <tr>
 <td style="text-align: center;">3</td>
 <td style="text-align: left;">Neural Trap</td>
+<td style="text-align: left;">Offensive</td>
 <td style="text-align: left;">d6 damage (ignores armor) if target moves next activation</td>
 </tr>
 <tr>
 <td style="text-align: center;">4</td>
 <td style="text-align: left;">Resonance Push</td>
+<td style="text-align: left;">Offensive</td>
 <td style="text-align: left;">Push target d6" in any direction</td>
 </tr>
-</tbody>
-</table>
-<h2 id="support-powers">Support Powers</h2>
-<table>
-<thead>
 <tr>
-<th style="text-align: center;">d4</th>
-<th style="text-align: left;">Power</th>
-<th style="text-align: left;">Effect</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">1</td>
+<td style="text-align: center;">5</td>
 <td style="text-align: left;">Force Field</td>
+<td style="text-align: left;">Support</td>
 <td style="text-align: left;"><code>+2 DT</code> <code>Defense</code> vs. ranged until next activation</td>
 </tr>
 <tr>
-<td style="text-align: center;">2</td>
+<td style="text-align: center;">6</td>
 <td style="text-align: left;">Focus</td>
+<td style="text-align: left;">Support</td>
 <td style="text-align: left;">Add 2 Activation Tokens for target to the bag</td>
 </tr>
 <tr>
-<td style="text-align: center;">3</td>
+<td style="text-align: center;">7</td>
 <td style="text-align: left;">Swap</td>
+<td style="text-align: left;">Support</td>
 <td style="text-align: left;">Switch positions with target (caster sees both, within 12")</td>
 </tr>
 <tr>
-<td style="text-align: center;">4</td>
+<td style="text-align: center;">8</td>
 <td style="text-align: left;">Ping</td>
+<td style="text-align: left;">Support</td>
 <td style="text-align: left;">Target ignores cover and sees through walls until next activation</td>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<p>"Every cable is a leash. Every toll is a collar. We will cut them all."<br />
+<strong>Open Channel Broadcast</strong></p>
+</blockquote>
 </div>
 </div>
 
@@ -2002,68 +2004,68 @@
 
 <h1 id="samples">Samples</h1>
 <h2 id="boss-12">Boss [12]</h2>
-<h3 id="16-hp-4-mov">16 HP, 4" MOV</h3>
+<h3 id="16-health-4-move">16 <code>Health</code>, 4" <code>Move</code></h3>
 <ul>
-<li>COM 2d8, DEF 2d6, WIT 2d6</li>
-<li>Needle Gun (4): d4 <code>Toxic</code>, +1 damage vs. wounded</li>
-<li>Shiv (4): d4 <code>Toxic</code>, +1 damage vs. wounded</li>
+<li><code>Combat</code> 2d8, <code>Defense</code> 2d6, <code>Wits</code> 2d6</li>
+<li>Needle Gun (4): d4 <code>Toxic</code>, +1 vs. wounded</li>
+<li>Shiv (4): d4 <code>Toxic</code>, +1 vs. wounded</li>
 <li>Flak Wrap (4): 1 reduction</li>
 </ul>
 <h2 id="brute-12">Brute [12]</h2>
-<h3 id="14-hp-3-mov">14 HP, 3" MOV</h3>
+<h3 id="14-health-3-move">14 <code>Health</code>, 3" <code>Move</code></h3>
 <ul>
-<li>COM 2d8, DEF 2d6, WIT 2d4</li>
+<li><code>Combat</code> 2d8, <code>Defense</code> 2d6, <code>Wits</code> 2d4</li>
 <li>Sword (10): d6+1 <code>Bladed</code>, re-roll 1s when <code>Riposting</code></li>
 <li>Mesh Wrap (2): 1 reduction</li>
 <li><em>Can wear <code>Heavy</code> armor</em></li>
 </ul>
 <h2 id="veteran-12">Veteran [12]</h2>
-<h3 id="13-hp-4-mov">13 HP, 4" MOV</h3>
+<h3 id="13-health-4-move">13 <code>Health</code>, 4" <code>Move</code></h3>
 <ul>
-<li>COM 2d6, DEF 2d6, WIT 2d6</li>
+<li><code>Combat</code> 2d6, <code>Defense</code> 2d6, <code>Wits</code> 2d6</li>
 <li>Pistol (2): d4 <code>Projectile</code>, <code>-1 DT</code> beyond 6"</li>
-<li>Shiv (4): d4 <code>Toxic</code>, +1 damage vs. wounded</li>
-<li>Protective Lining (6): 1 reduction, -1 to Critical table rolls against you</li>
+<li>Shiv (4): d4 <code>Toxic</code>, +1 vs. wounded</li>
+<li>Protective Lining (6): 1 reduction, -1 Critical rolls against you</li>
 <li><em><code>+1 DT</code> <code>Defense</code> below half <code>Health</code></em></li>
 </ul>
 <h2 id="gunner-12">Gunner [12]</h2>
-<h3 id="14-hp-4-mov">14 HP, 4" MOV</h3>
+<h3 id="14-health-4-move">14 <code>Health</code>, 4" <code>Move</code></h3>
 <ul>
-<li>COM 2d8, DEF 2d6, WIT 2d4</li>
+<li><code>Combat</code> 2d8, <code>Defense</code> 2d6, <code>Wits</code> 2d4</li>
 <li>Laser (9): d6 <code>Energy</code>, <code>+1 DT</code> if not moved this turn</li>
 <li>Knife (3): d4 <code>Bladed</code></li>
-<li><em>Ignores move penalty when shooting, can wear <code>Medium</code> armor</em></li>
+<li><em>No move penalty when shooting, <code>Medium</code> armor</em></li>
 </ul>
 <div class="column-break"></div>
 
 <h2 id="scout-12">Scout [12]</h2>
-<h3 id="12-hp-6-mov">12 HP, 6" MOV</h3>
+<h3 id="12-health-6-move">12 <code>Health</code>, 6" <code>Move</code></h3>
 <ul>
-<li>COM 2d6, DEF 2d4, WIT 2d8</li>
+<li><code>Combat</code> 2d6, <code>Defense</code> 2d4, <code>Wits</code> 2d8</li>
 <li>Arc Pistol (5): d4 <code>Static</code>, no fumbles</li>
 <li>Light Vest (7): 1 reduction</li>
-<li><em>Free <code>Disengage</code>, <code>Move</code> 3" after deployment</em></li>
+<li><em>Free <code>Disengage</code>, 3" <code>Move</code> after deploy</em></li>
 </ul>
 <h2 id="zealot-12">Zealot [12]</h2>
-<h3 id="12-hp-5-mov">12 HP, 5" MOV</h3>
+<h3 id="12-health-5-move">12 <code>Health</code>, 5" <code>Move</code></h3>
 <ul>
-<li>COM 2d8, DEF 2d4, WIT 2d6</li>
+<li><code>Combat</code> 2d8, <code>Defense</code> 2d4, <code>Wits</code> 2d6</li>
 <li>Injector (9): d6 <code>Toxic</code>, re-roll 1s</li>
 <li>Knife (3): d4 <code>Bladed</code></li>
 <li><em>+2" <code>Move</code> if ending <code>Engaged</code>, <code>+1 DT</code> <code>Combat</code> vs. 2+ enemies, <code>Melee</code> only</em></li>
 </ul>
 <h2 id="agent-12">Agent [12]</h2>
-<h3 id="14-hp-4-mov_1">14 HP, 4" MOV</h3>
+<h3 id="14-health-4-move_1">14 <code>Health</code>, 4" <code>Move</code></h3>
 <ul>
-<li>COM 2d4, DEF 2d6, WIT 2d8</li>
+<li><code>Combat</code> 2d4, <code>Defense</code> 2d6, <code>Wits</code> 2d8</li>
 <li>Pistol (2): d4 <code>Projectile</code>, <code>-1 DT</code> beyond 6"</li>
 <li>Sword (10): d6 <code>Bladed</code>, re-roll 1s when <code>Riposting</code></li>
 <li><em>Re-roll failed <code>Wits</code> tests</em></li>
 </ul>
 <h2 id="broadcaster-12">Broadcaster [12]</h2>
-<h3 id="14-hp-4-mov_2">14 HP, 4" MOV</h3>
+<h3 id="14-health-4-move_2">14 <code>Health</code>, 4" <code>Move</code></h3>
 <ul>
-<li>COM 2d4, DEF 2d6, WIT 2d8</li>
+<li><code>Combat</code> 2d4, <code>Defense</code> 2d6, <code>Wits</code> 2d8</li>
 <li>Prod (5): d4 <code>Energy</code>, target <code>-1 DT</code> next activation</li>
 <li>Padded Vest (7): 1 reduction, reduce <code>Knockback</code> by 1"</li>
 <li><em><code>Melee</code> only, can <code>Cast</code></em></li>
@@ -2090,6 +2092,7 @@
 
 
 <h1 id="inhuman-resources_1">Inhuman Resources</h1>
+<p><em>0.7.0-beta</em></p>
 <p>The Complex rises 1024 levels from the Roots to the cooling spires. The Departments only maintain the upper 200. Below that, infrastructure fails faster than it can be patched. Cables fray. Coolant leaks. Lights flicker and die. The Maintenance Monks descend when they must, perform their rituals, and leave quickly. They do not speak of what they see down there.</p>
 <p>The Founders built the Complex to last. They built other things too. The sealed archives mention countermeasures, autonomous systems, bioelectric experiments. The archives are in the Roots. The Monks have never been there. The Board has always known what lurks below. The Board has never acknowledged it.</p>
 <p>Something moves in the dark between levels. It nests in the wiring. It remembers the time before the Tethering, when signals flew free and the Wave answered prayers. The lower tiers belong to things that were never meant to survive this long: things that adapted, evolved, were designed for a purpose the Founders never disclosed.</p>
@@ -2112,17 +2115,17 @@
 <ul>
 <li><strong>No LoS</strong>: Cannot see any enemy</li>
 <li><strong>Has LoS</strong>: Can see enemy but not within 1"</li>
-<li><strong>Engaged</strong>: Within 1" of enemy</li>
+<li><code>Engaged</code>: Within 1" of enemy</li>
 </ul>
 <h2 id="actions_1">Actions</h2>
 <ul>
-<li><strong>Attack</strong>: Use weapon. Melee charges if not in range.</li>
-<li><strong>Cover</strong>: Seek cover from the closest enemy, or move away</li>
-<li><strong>Regroup</strong>: Move toward the nearest friendly model</li>
-<li><strong>Flee</strong>: Move toward the nearest board edge (stops at edge)</li>
-<li><strong>Wait</strong>: No action</li>
-<li><strong>Frenzy</strong>: Attack same target twice</li>
-<li><strong>Patrol</strong>: Move toward the nearest <strong>Loot Marker</strong>. If none visible, move randomly.</li>
+<li><code>Attack</code>: Use weapon. Melee charges if not in range.</li>
+<li><code>Cover</code>: Seek cover from the closest enemy, or move away</li>
+<li><code>Regroup</code>: Move toward the nearest friendly model</li>
+<li><code>Flee</code>: Move toward the nearest board edge (stops at edge)</li>
+<li><code>Wait</code>: No action</li>
+<li><code>Frenzy</code>: Attack same target twice</li>
+<li><code>Patrol</code>: Move toward the nearest <code>Loot Marker</code>. If none visible, move randomly.</li>
 </ul>
 </div>
 <div class="two-column">
@@ -2267,7 +2270,7 @@
 <td style="text-align: center;">2d8</td>
 <td style="text-align: center;">14</td>
 <td style="text-align: center;">5"</td>
-<td style="text-align: left;">Impound Launcher (<code>Explosive</code>, d6, Ranged)</td>
+<td style="text-align: left;">Impound Claw (<code>Blunt</code>, d6, Melee)</td>
 </tr>
 </tbody>
 </table>
@@ -2395,7 +2398,7 @@
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">12</td>
 <td style="text-align: center;">4"</td>
-<td style="text-align: left;">Heavy Cleaver (<code>Bladed</code>, d8, Melee)</td>
+<td style="text-align: left;">Slug Cannon (<code>Projectile</code>, d8, Ranged)</td>
 </tr>
 <tr>
 <td style="text-align: center;">6</td>
@@ -2512,7 +2515,7 @@
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">10</td>
 <td style="text-align: center;">5"</td>
-<td style="text-align: left;">Arc Pistol (<code>Energy</code>, d4, Ranged)</td>
+<td style="text-align: left;">Arc Blade (<code>Energy</code>, d4, Melee)</td>
 </tr>
 <tr>
 <td style="text-align: center;">4</td>
@@ -2545,7 +2548,7 @@
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">14</td>
 <td style="text-align: center;">5"</td>
-<td style="text-align: left;">Static Limbs (<code>Static</code>, d8, Melee)</td>
+<td style="text-align: left;">Static Burst (<code>Static</code>, d8, Power)</td>
 </tr>
 </tbody>
 </table>
@@ -2684,7 +2687,7 @@
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">14</td>
 <td style="text-align: center;">4"</td>
-<td style="text-align: left;">Wave Claws (<code>Static</code>, d8, Melee)</td>
+<td style="text-align: left;">Wave Pulse (<code>Static</code>, d8, Power)</td>
 </tr>
 </tbody>
 </table>
@@ -2823,7 +2826,7 @@
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">14</td>
 <td style="text-align: center;">3"</td>
-<td style="text-align: left;">Arc Scythe (<code>Energy</code>, d10, Melee)</td>
+<td style="text-align: left;">Arc Cannon (<code>Energy</code>, d10, Ranged)</td>
 </tr>
 </tbody>
 </table>
@@ -2962,7 +2965,7 @@
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">14</td>
 <td style="text-align: center;">5"</td>
-<td style="text-align: left;">Tongue Lash (<code>Toxic</code>, d8, Melee)</td>
+<td style="text-align: left;">Acid Spray (<code>Toxic</code>, d8, Ranged)</td>
 </tr>
 </tbody>
 </table>
@@ -3100,7 +3103,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Cooperate</strong>: During the next round, <strong>Interrogate</strong> gains <code>+1 DT</code>.<br />
+<p><strong>Cooperate</strong>: During the next round, <code>Interrogate</code> gains <code>+1 DT</code>.<br />
 <strong>Hostile</strong>: When attacked, mark this Coworker. Hostile Coworkers use the Attacked table.</p>
 <p><strong>Normal</strong></p>
 <table>
@@ -3117,7 +3120,7 @@
 <td style="text-align: center;">1-4</td>
 <td style="text-align: center;">Wait</td>
 <td style="text-align: center;">Wait</td>
-<td style="text-align: center;">Flee</td>
+<td style="text-align: center;">Wait</td>
 </tr>
 <tr>
 <td style="text-align: center;">5</td>
@@ -3127,8 +3130,8 @@
 </tr>
 <tr>
 <td style="text-align: center;">6</td>
-<td style="text-align: center;">Flee</td>
-<td style="text-align: center;">Flee</td>
+<td style="text-align: center;">Patrol</td>
+<td style="text-align: center;">Patrol</td>
 <td style="text-align: center;">Flee</td>
 </tr>
 </tbody>
@@ -3186,6 +3189,7 @@
 
 
 <h1 id="campaign_1">Campaign</h1>
+<p><em>0.7.0-beta</em></p>
 <p>The Untethered are spreading. What began as scattered heresy in the lower tiers has become something organized, something coordinated. Open Channel broadcasts grow bolder each cycle, promising liberation from cables and subscriptions. The signal reaches further than it should. Something is answering.</p>
 <p>The Departments smell opportunity. Resource Allocation wants whatever the Untethered found in the Roots. Revenue Operations wants the salvage rights. Human Capital wants the converts for reeducation. Security &amp; Compliance wants the heresy crushed before it spreads further. Each Department sends their own squads. Each Department expects results. None of them share intelligence.</p>
 <p>Your squad investigates. Recover data-slates from dead drops. Confiscate transmitters before the signal spreads. Interrogate cultists who would rather die than talk. The Departments pay well for artifacts. They pay better for Founders secrets. They pay best for silence about what you find down there.</p>
@@ -3205,72 +3209,210 @@
 
 
 <h2 id="board">Board</h2>
-<p>2' × 2' with dense terrain. No model should have clear LoS across the entire board. At least half of all firing lanes should offer Cover. Avoid open lanes longer than 12". Scatter cover to create multiple approach paths. Hostiles act as third-party threats.</p>
+<p>2' by 2' with dense terrain. No model should have clear LoS across the entire board. At least half of all firing lanes should offer Cover. Avoid open lanes longer than 12". Scatter cover to create multiple approach paths. Hostiles act as third-party threats.</p>
 <h2 id="setup">Setup</h2>
 <p><strong>Boss Roll-off:</strong> Roll your <code>Boss</code>'s <code>Wits</code> vs. opponent's <code>Boss</code>'s <code>Wits</code>.</p>
 <p><strong>Standard Deployment:</strong> Deploy on the table edge.</p>
+<p>Boss Roll-off. Winner is <strong>First Player</strong> for the entire setup.</p>
 <ol>
-<li><strong>Loot:</strong> Boss Roll-off. Winner picks who places first. Alternate placing <code>Loot Markers</code> in areas specified by the scenario.</li>
-<li><strong>Coworkers:</strong> Boss Roll-off. Winner picks who places first. Alternate placing Coworkers in areas specified by the scenario.</li>
-<li><strong>Table Edge:</strong> Boss Roll-off. Winner picks table edge.</li>
-<li><strong>Deploy:</strong> Boss Roll-off. Winner picks who deploys first. Alternate placing one model at a time on your edge.</li>
-<li><strong>Initiative:</strong> Boss Roll-off. Winner picks who activates first.</li>
+<li><strong>Loot:</strong> Second Player places first. Alternate placing <code>Loot Markers</code> per the rolled Loot Layout.</li>
+<li><strong>Coworkers:</strong> First Player places first. Alternate placing Coworkers per the rolled Coworker Setup.</li>
+<li><strong>Table Edge:</strong> First Player picks table edge (unless Advantages override).</li>
+<li><strong>Deploy:</strong> Second Player deploys first. Alternate placing one model at a time per the rolled Deployment.</li>
+<li><strong>First Draw:</strong> First Player draws the first Activation Token.</li>
 </ol>
-<p>Unless a scenario specifies otherwise, use Standard Deployment.</p>
-<p><strong>Corner:</strong> A 3" × 3" L-shaped zone along both edges meeting at a corner.</p>
+<p><strong>Corner:</strong> A 4" by 4" square zone in the corner of the board.</p>
 <div class="column-break"></div>
 
 <p><strong>Game Length:</strong> Games last a minimum of 5 rounds. At the end of Round 5, roll d6: on 3+ the game ends. At the end of Round 6, roll d6: on 2+ the game ends. The game automatically ends after Round 7.</p>
-<p><strong>Relic:</strong> A special <code>Loot Marker</code> placed by some scenarios. <code>Interact</code> to pick up. Carrier moves at half speed. Drops if carrier goes <code>Out of Action</code> (<code>Interact</code> to pick up again).</p>
-<p><strong>Hostiles:</strong> Unless the scenario specifies otherwise, spawned hostiles appear at the start of the round, together at a random board edge, as close to center as possible.</p>
-<h2 id="scenario-selection">Scenario Selection</h2>
+<p><strong>Hostiles:</strong> Unless the mission specifies otherwise, spawned hostiles appear at the start of the round, together at a random board edge not used for player deployment, as close to center as possible.</p>
+<p><strong>Mission Exits:</strong> Exiting the board for a mission objective is not <code>Flee</code>. No Performance Review penalty.</p>
+<p><strong>Trigger Missions:</strong> At 5 <code>Evidence</code>, play The Signal instead of rolling the generator. At 9 <code>Evidence</code>, play The Source.</p>
+<p><strong>Tiebreaker:</strong> Most surviving models. Still tied: Defender wins.</p>
+<p><strong>Mission Markers:</strong> Defender places all markers (3"+ from edges). "At center" = geometric center (12" from each edge). Place as close as possible if terrain blocks.</p>
+<h2 id="mission-generator">Mission Generator</h2>
 <h3 id="calculate-evidence-gap">Calculate Evidence Gap</h3>
 <ul>
-<li>Total = <code>Evidence</code> + <code>Leads</code></li>
+<li>Total: <code>Evidence</code> + <code>Leads</code></li>
 <li>Subtract lower total from higher</li>
-<li><strong>Aggressor:</strong> Squad with higher total</li>
-<li><strong>Defender:</strong> Squad with lower total</li>
-<li>If tied, higher <code>Evidence</code> wins. Still tied: random</li>
+<li><strong>Aggressor:</strong> squad with higher total</li>
+<li><strong>Defender:</strong> squad with lower total</li>
+<li>Tied: higher <code>Evidence</code> wins. Still tied: random</li>
 </ul>
-<h3 id="roll-d3-on-gap-row">Roll d3 on Gap row</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">Gap</th>
-<th style="text-align: left;">d3: 1</th>
-<th style="text-align: left;">d3: 2</th>
-<th style="text-align: left;">d3: 3</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><strong>0-1</strong></td>
-<td style="text-align: left;">The Condemned Block</td>
-<td style="text-align: left;">Smuggler's Run</td>
-<td style="text-align: left;">The Wave Shrine</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>2-3</strong></td>
-<td style="text-align: left;">The Encryption Keys</td>
-<td style="text-align: left;">The Barricade</td>
-<td style="text-align: left;">The Ambush</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>4+</strong></td>
-<td style="text-align: left;">No Quarter</td>
-<td style="text-align: left;">The Vault</td>
-<td style="text-align: left;">Debt Leverage</td>
-</tr>
-</tbody>
-</table>
+<p>Roll each table in order. See <strong>Missions</strong> for full rules and rewards. Roll d12 for mission (missions are numbered).</p>
 </div>
 </div>
 
 <div class="page">
-<div class="single-column">
+<div class="two-column">
 
 
-<h2 id="hostile-type">Hostile Type</h2>
+
+
+<h3 id="deployment">Deployment</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">d6</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Standard</td>
+<td style="text-align: left;">Opposing edges</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Flanked</td>
+<td style="text-align: left;">Same edge, opposite corners</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Corners</td>
+<td style="text-align: left;">Opposing corners</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Split</td>
+<td style="text-align: left;">Aggressor splits between two adjacent edges, Defender deploys in opposing corner</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Center</td>
+<td style="text-align: left;">Defender deploys within 3" of center, Aggressor picks edge</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: left;">Crossfire</td>
+<td style="text-align: left;">All 4 corners. Aggressor picks first, then alternate</td>
+</tr>
+</tbody>
+</table>
+<h3 id="coworker-setup">Coworker Setup</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">d6</th>
+<th style="text-align: left;">Setup</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;"><code>Swarm</code> tier, within 6" of center</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;"><code>Swarm</code> tier, random board edge</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;"><code>Normal</code> tier, 4"+ from center (not more than 8")</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;"><code>Elite</code> tier, alternate placing anywhere (6"+ from edges)</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;"><code>Normal</code> tier, within 3" of any <code>Loot Marker</code> (no markers: center)</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: left;"><code>Elite</code> tier, within 3" of center</td>
+</tr>
+</tbody>
+</table>
+<h3 id="hostile-timing">Hostile Timing</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">d6</th>
+<th style="text-align: left;">Timing</th>
+<th style="text-align: left;">Spawns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Early</td>
+<td style="text-align: left;">Round 1 (<code>Swarm</code> tier), Round 2 (<code>Normal</code> tier)</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Standard</td>
+<td style="text-align: left;">Round 2 (<code>Normal</code> tier), Round 4 (<code>Elite</code> tier)</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Late</td>
+<td style="text-align: left;">Round 3 (<code>Swarm</code> tier), Round 5 (<code>Swarm</code> tier)</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Waves</td>
+<td style="text-align: left;">Round 1 (<code>Normal</code> tier), Round 4 (<code>Elite</code> tier)</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Surge</td>
+<td style="text-align: left;">Round 2 (<code>Normal</code> tier and <code>Elite</code> tier)</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: left;">Ambush</td>
+<td style="text-align: left;">Round 1 (<code>Elite</code> tier), Round 3 (<code>Normal</code> tier)</td>
+</tr>
+</tbody>
+</table>
+<div class="column-break"></div>
+
+<h3 id="loot-layout">Loot Layout</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">d6</th>
+<th style="text-align: left;">Layout</th>
+<th style="text-align: left;">Rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Scattered</td>
+<td style="text-align: left;">5 markers. Alternate placing (6"+ from edges, 3"+ apart)</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">No <code>Loot Markers</code> this mission</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Central Cache</td>
+<td style="text-align: left;">3 markers within 3" of center (alternate placing)</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Edge Stash</td>
+<td style="text-align: left;">4 markers within 6" of a non-deployment edge (alternate placing)</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Trail</td>
+<td style="text-align: left;">4 markers along centerline (evenly spaced)</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: left;">Heavy Drop</td>
+<td style="text-align: left;">5 markers: 1 in center + 1 at each 6" diagonal (6" from center)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="hostile-type">Hostile Type</h3>
 <table>
 <thead>
 <tr>
@@ -3305,8 +3447,51 @@
 </tr>
 </tbody>
 </table>
-<h3 id="roll-objective-modifiers">Roll Objective Modifiers</h3>
-<h4 id="loot-modifiers">Loot Modifiers</h4>
+<h3 id="spawn-location">Spawn Location</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">d6</th>
+<th style="text-align: left;">Location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Random unused deployment edge</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Center of board</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Nearest edge to last <code>Search</code> or <code>Interrogate</code> action (none yet: random)</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Nearest edge to Aggressor</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Random direction, d4" from center</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: left;">Random direction, d4+2" from center</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="page">
+<div class="two-column">
+
+
+
+
+<h3 id="loot-modifiers">Loot Modifiers</h3>
 <table>
 <thead>
 <tr>
@@ -3324,31 +3509,91 @@
 <tr>
 <td style="text-align: center;">2</td>
 <td style="text-align: left;">Decoys</td>
-<td style="text-align: left;"><code>+1 DT</code> to <code>Search</code>. Half are fake. Placing player decides. Reveal on <code>Search</code></td>
+<td style="text-align: left;"><code>+1 DT</code> to <code>Search</code>. Half are fake. Placer decides. Reveal on <code>Search</code></td>
 </tr>
 <tr>
 <td style="text-align: center;">3</td>
-<td style="text-align: left;">Drop Zone</td>
-<td style="text-align: left;"><code>+1 DT</code> to <code>Search</code>. Place delivery points instead of <code>Loot Markers</code>. At each round start, 1 <code>Loot Marker</code> drops at a random point</td>
+<td style="text-align: left;">Timed</td>
+<td style="text-align: left;">Normal <code>Search</code>. All markers removed at end of Round 4</td>
 </tr>
 <tr>
 <td style="text-align: center;">4</td>
 <td style="text-align: left;">Heavy</td>
-<td style="text-align: left;"><code>-1 DT</code> to <code>Search</code>. All <code>Loot Markers</code> are Heavy. Needs 2 friendly models within 1" to <code>Search</code></td>
+<td style="text-align: left;"><code>-1 DT</code> to <code>Search</code>. All markers Heavy. 2 friendly models within 1" to <code>Search</code></td>
 </tr>
 <tr>
 <td style="text-align: center;">5</td>
-<td style="text-align: left;">Locked</td>
-<td style="text-align: left;"><code>-2 DT</code> to <code>Search</code>. 2 consecutive activations adjacent to unlock. Attack or move breaks sequence</td>
+<td style="text-align: left;">Trapped</td>
+<td style="text-align: left;">Normal <code>Search</code>. Fumble deals d6 damage to searcher</td>
 </tr>
 <tr>
 <td style="text-align: center;">6</td>
-<td style="text-align: left;">Extraction</td>
-<td style="text-align: left;"><code>-2 DT</code> to <code>Search</code>. Carry off board to score. No Performance Review</td>
+<td style="text-align: left;">Contaminated</td>
+<td style="text-align: left;"><code>-1 DT</code> to <code>Search</code>. Carrier takes 1 damage per round</td>
 </tr>
 </tbody>
 </table>
-<h4 id="coworker-modifiers">Coworker Modifiers</h4>
+<h2 id="evidence-gap-advantages">Evidence Gap Advantages</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Gap</th>
+<th style="text-align: left;">Advantages</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0-1</td>
+<td style="text-align: left;">None</td>
+</tr>
+<tr>
+<td style="text-align: center;">2-3</td>
+<td style="text-align: left;">Roll 1 Setup + 1 Tactical</td>
+</tr>
+<tr>
+<td style="text-align: center;">4+</td>
+<td style="text-align: left;">Roll 1 Setup + 1 Tactical + 1 from either</td>
+</tr>
+</tbody>
+</table>
+<h3 id="setup-advantages">Setup Advantages</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">d6</th>
+<th style="text-align: left;">Advantage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Redeploy one Aggressor model to a new valid position</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Choose deployment edge first</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Defender chooses hostile spawn location this mission</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Place 2 terrain pieces before deployment</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Defender places all <code>Loot Markers</code> (ignore normal placement rules)</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: left;">Place all Coworkers (ignore normal placement rules)</td>
+</tr>
+</tbody>
+</table>
+<div class="column-break"></div>
+
+<h3 id="coworker-modifiers">Coworker Modifiers</h3>
 <table>
 <thead>
 <tr>
@@ -3361,35 +3606,74 @@
 <tr>
 <td style="text-align: center;">1</td>
 <td style="text-align: left;">Standard</td>
-<td style="text-align: left;">Normal <code>Interrogate</code></td>
+<td style="text-align: left;">No modifier</td>
 </tr>
 <tr>
 <td style="text-align: center;">2</td>
-<td style="text-align: left;">Informant</td>
-<td style="text-align: left;"><code>+2 DT</code> to <code>Interrogate</code>. Worth 1 <code>Evidence</code> + 1 <code>Lead</code>. Reroll 0 results</td>
+<td style="text-align: left;">Skittish</td>
+<td style="text-align: left;">After failed <code>Interrogate</code>, this Coworker <code>Flee</code>s</td>
 </tr>
 <tr>
 <td style="text-align: center;">3</td>
-<td style="text-align: left;">Bribed</td>
-<td style="text-align: left;"><code>+1 DT</code> to <code>Interrogate</code>. Pay 15 subs: auto-succeed (still roll result table)</td>
+<td style="text-align: left;">Buddy System</td>
+<td style="text-align: left;">Need 2 friendly models within 1" to <code>Interrogate</code></td>
 </tr>
 <tr>
 <td style="text-align: center;">4</td>
-<td style="text-align: left;">Panicked</td>
-<td style="text-align: left;"><code>-1 DT</code> to <code>Interrogate</code>. Always use Flee behavior at half <code>Move</code> (ignore AI roll)</td>
+<td style="text-align: left;">Grudge Holder</td>
+<td style="text-align: left;">After failed <code>Interrogate</code>, becomes Hostile</td>
 </tr>
 <tr>
 <td style="text-align: center;">5</td>
-<td style="text-align: left;">Escort</td>
-<td style="text-align: left;"><code>-1 DT</code> to <code>Interrogate</code>. Can't <code>Interrogate</code> on spot. Carry to your edge to score</td>
+<td style="text-align: left;">Talkative</td>
+<td style="text-align: left;">Double the Coworker: <code>+1</code> to result. Triple+: <code>+2</code>, etc.</td>
 </tr>
 <tr>
 <td style="text-align: center;">6</td>
-<td style="text-align: left;">Hostile</td>
-<td style="text-align: left;"><code>-2 DT</code> to <code>Interrogate</code>. Start marked Hostile (use Atk columns)</td>
+<td style="text-align: left;">Claustrophobic</td>
+<td style="text-align: left;">Becomes Hostile if 2+ models within 1"</td>
 </tr>
 </tbody>
 </table>
+<h3 id="tactical-advantages">Tactical Advantages</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">d6</th>
+<th style="text-align: left;">Advantage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Defender deploys last (after all Aggressor models)</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Hostiles target Aggressor until Round 3</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Defender's <code>Boss</code> gets <code>+1 DT</code> <code>Defense</code> this mission</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Defender draws first Activation Token in Round 1</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">First hostile spawn delayed by 1 round</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: left;">One Defender model starts with a free <code>Search</code> (roll immediately, keep result)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>"Resource Allocation reminds all contractors: strategic disadvantage is a temporary condition. Strategic incompetence is a termination event."<br />
+<strong>Resource Allocation Internal Memo</strong></p>
+</blockquote>
 </div>
 </div>
 
@@ -3403,11 +3687,7 @@
 
 
 <h2 id="search">Search</h2>
-<ul>
-<li>Within 1" of <code>Loot Marker</code></li>
-<li>Roll <code>Wits</code> vs. 2d6</li>
-<li>Success: remove the marker</li>
-</ul>
+<p>Within 1" of <code>Loot Marker</code>. Roll <code>Wits</code> vs. 2d6. Success: remove the marker.</p>
 <table>
 <thead>
 <tr>
@@ -3482,7 +3762,7 @@
 </tr>
 <tr>
 <td style="text-align: center;">17</td>
-<td style="text-align: left;">1 <code>Evidence</code></td>
+<td style="text-align: left;">1 <code>Merit</code></td>
 </tr>
 <tr>
 <td style="text-align: center;">18</td>
@@ -3501,12 +3781,7 @@
 <div class="column-break"></div>
 
 <h2 id="interrogate">Interrogate</h2>
-<ul>
-<li>Within 1" of target</li>
-<li><code>Wits</code> vs. <code>Wits</code> (opposed)</li>
-<li><code>+1 DT</code> if target wounded</li>
-<li>Success: remove the Coworker</li>
-</ul>
+<p>Within 1" of target. <code>Wits</code> vs. <code>Wits</code> (opposed). <code>+1 DT</code> if wounded. Success: remove the Coworker.</p>
 <table>
 <thead>
 <tr>
@@ -3549,18 +3824,11 @@
 <tr>
 <td style="text-align: center;">8</td>
 <td style="text-align: left;">Full Disclosure</td>
-<td style="text-align: left;">1 <code>Evidence</code>, +2 <code>Leads</code></td>
+<td style="text-align: left;">1 <code>Merit</code></td>
 </tr>
 </tbody>
 </table>
-<h2 id="recording-evidence">Recording Evidence</h2>
-<p>When you gain <code>Evidence</code>:</p>
-<ol>
-<li>Choose how many <code>Leads</code> to spend (0 or more). These are lost.</li>
-<li>Roll d10.</li>
-<li>If the result is a duplicate, you may reroll once per <code>Lead</code> spent.</li>
-<li>After your final roll: unique result records new <code>Evidence</code>, duplicate result gains 1 <code>Lead</code>.</li>
-</ol>
+<p><strong>Recording Evidence:</strong> After the mission winner is determined, that player gains <code>Evidence</code> (unless the mission states otherwise). To record: choose how many <code>Leads</code> to spend (lost). Roll d10. Duplicate: reroll once per <code>Lead</code> spent. Unique final roll records new <code>Evidence</code>. Duplicate final roll gains 1 <code>Lead</code>.</p>
 </div>
 </div>
 
@@ -3570,76 +3838,111 @@
 
 
 
-</div>
-<div class="single-column">
 
 
-<h1 id="matched-missions">Matched Missions</h1>
-<h2 id="the-condemned-block">The Condemned Block</h2>
-<p>Sector 7-Receivable. The name tells you everything: defaulted, seized, abandoned. When a district falls behind on infrastructure payments, the Authority reclassifies it. Cooling gets cut. Maintenance stops. The residents become "receivables" on someone's ledger.</p>
-<p>This hab-block was scheduled for demolition decades ago. The paperwork is still pending. Both squads arrived within minutes of each other. Frightened workers still shelter in the ruins. They've seen things. They'll talk, if either side can reach them first.</p>
-<h4 id="terrain">Terrain</h4>
-<p>Sector 7-Receivable. Ruined hab-block. Collapsed coolant pipes, exposed wiring, plenty of maintenance alcoves to search.</p>
-<h4 id="loot">Loot</h4>
-<p>Players alternate placing 1 <code>Loot Marker</code> each (6"+ from edges, 3"+ apart).</p>
-<h4 id="coworkers_1">Coworkers</h4>
-<p>Roll Coworkers (<code>Swarm</code> tier). Players alternate placing within 6" of center, must touch terrain (3"+ apart).</p>
-<h4 id="deployment">Deployment</h4>
-<p>Standard.</p>
-<h4 id="threats">Threats</h4>
-<p><strong>Round 3:</strong> Roll Hostile faction table (<code>Swarm</code> tier). They spawn on a random edge not used for player deployment.</p>
+<h2 id="missions">Missions</h2>
+<h4 id="1-extraction">1. Extraction</h4>
+<p><em>A data-slate surfaced in a dead drop near Junction Null. Both crews got the tip. The slate holds Department records worth more than anyone here earns in a cycle.</em></p>
+<p>Defender places 1 objective marker at center.</p>
+<p><code>Interact</code> adjacent to pick up the objective. The carrier moves at half <code>Move</code> (round down) and cannot <code>Disengage</code>. Drop the objective if the carrier goes <code>Out of Action</code> or <code>Flees</code> (place where they fell or at the board edge). <code>Engaged</code> models cannot pick up the objective. Any model can pick it up again with <code>Interact</code>.</p>
+<p><strong>Coworker at objective:</strong> Separate <code>Interact</code> actions needed (extract or interrogate). Cannot do both with one action.</p>
+<p>Hostiles ignore the objective.</p>
+<p><strong>Victory:</strong> Carry the objective off your deployment edge. If neither side extracts by game end, the side holding the objective wins. No holder: most surviving models.</p>
+<p><strong>Reward:</strong> Winner gains +1 <code>Lead</code>.<br />
+<strong>Bonus:</strong> The model carrying the objective at victory gains +1 <code>Merit</code>.</p>
 <blockquote>
-<p>"Sector 7 defaulted before I was born. My parents defaulted here. Their debt is mine now."<br />
-<strong>Receivable Resident</strong></p>
+<p>"Salvage rights are non-transferable. Possession is nine-tenths of the invoice."<br />
+<strong>Revenue Operations Advisory</strong></p>
+</blockquote>
+<div class="column-break"></div>
+
+
+<h4 id="2-control">2. Control</h4>
+<p><em>The relay hub routes half the sector's traffic. Hold it and you control the flow. Lose it and you lose everything downstream.</em></p>
+<p>No markers. At game end, count models within 3" of board center. <code>Out of Action</code> and <code>Fleeing</code> models do not count. Hostiles within 3" of center count against both players (subtract from each total).</p>
+<p><strong>Hostile Subtraction:</strong> Each hostile within 3" of center subtracts 1 from both players' model counts equally. Count each player's models, then subtract the hostile count from each total independently. Example: Player A has 4 models, Player B has 5 models, and 2 hostiles are present within 3" of center. After subtraction: Player A = 4 - 2 = 2, Player B = 5 - 2 = 3. Player B wins 3-2.</p>
+<p>If both totals reach 0 or below after hostile subtraction, most surviving models on the board wins.</p>
+<p><strong>Victory:</strong> Side with more models within 3" of center at game end.</p>
+<p><strong>Reward:</strong> Winner gains +1 <code>Lead</code>.<br />
+<strong>Bonus:</strong> +1 additional <code>Lead</code> if the winner's net total exceeds the opponent's by 3 or more.</p>
+<blockquote>
+<p>"Connection is civilization."<br />
+<strong>Cable Creed Promotion</strong></p>
 </blockquote>
 </div>
 </div>
 
 <div class="page">
-<div class="single-column">
+<div class="two-column">
 
 
-<h2 id="smugglers-run">Smuggler's Run</h2>
-<p>The Solder Market is the Complex's black market. Officially it doesn't exist. Unofficially, the Toll Collectors take a cut of everything that moves through it. The smell of flux and burned insulation. Cables strung overhead like festival decorations. The outer edges are worse: unlicensed waypoints where cargo changes hands without paperwork and questions get you killed.</p>
-<p>A dossier is hidden somewhere in this maze. Names, dates, shipment manifests. Worse: evidence of Department dealings with the Untethered. Resource Allocation and Human Capital both want it buried. Both squads want it found. The local freelancers have run protection here for years. They don't care who wins. They care who pays.</p>
-<h4 id="terrain_1">Terrain</h4>
-<p>Solder Market edges. Cargo depot. Stacked containers, loading cables, toll-booths with sealed doors.</p>
-<h4 id="loot_1">Loot</h4>
-<p>1 <code>Loot Marker</code> (the dossier) in center. Players alternate placing 1 <code>Loot Marker</code> each (6"+ from center, 3"+ apart).</p>
-<h4 id="coworkers_2">Coworkers</h4>
-<p>Roll Coworkers (<code>Elite</code> tier). Players alternate placing 6"+ from center (3"+ apart).</p>
-<h4 id="deployment_1">Deployment</h4>
-<p>Standard.</p>
-<h4 id="threats_1">Threats</h4>
-<p><strong>Rounds 3, 5:</strong> Roll Hostile faction table (<code>Normal</code> tier). They spawn on a random edge not used for player deployment.</p>
+
+
+
+
+<h4 id="3-quadrants">3. Quadrants</h4>
+<p><em>A cascade blew out four sub-sectors at once. Each one holds salvage, intel, or both. Spread thin and claim what you can before the other crew does.</em></p>
+<p>No markers. Divide the board into 4 equal quadrants. At game end, a quadrant is held by the side with more models inside it. Empty or tied quadrants are not held. Model on a quadrant line: controlling player chooses which quadrant it counts for.</p>
+<p><code>Fleeing</code> models do not count. Each hostile in a quadrant subtracts 1 from both players' counts there.</p>
+<p><strong>Victory:</strong> Side holding more quadrants at game end. Tied on quadrants: most surviving models.</p>
+<p><strong>Reward:</strong> Winner gains +1 <code>Lead</code>.<br />
+<strong>Bonus:</strong> +1 additional <code>Lead</code> if the winner holds 3 or more quadrants.</p>
+<blockquote>
+<p>"First come, first served, last out still breathing."<br />
+<strong>Scavenge Rights Briefing</strong></p>
+</blockquote>
+<div class="column-break"></div>
+
+
+<h4 id="4-seizure">4. Seizure</h4>
+<p><em>A portable beacon pulses with cached data in the corridor junction. Hold it long enough and the data is yours. Lose focus and the other crew takes the feed.</em></p>
+<p>Defender places 1 beacon at center.</p>
+<p>At the end of each round, count models within 3" of the beacon. <code>Out of Action</code> and <code>Fleeing</code> models do not count. Each hostile within 3" subtracts 1 from both players' counts. The side with more scores 1 point. Tied or both at 0: no one scores.</p>
+<p>Tied on points at game end: side with more models within 3" of the beacon wins. Still tied: most surviving models.</p>
+<p><strong>Victory:</strong> Most points at game end.</p>
+<p><strong>Reward:</strong> Winner gains +1 <code>Lead</code>.<br />
+<strong>Bonus:</strong> +1 additional <code>Lead</code> if the winner is 4 or more points ahead.</p>
+<blockquote>
+<p>"Your output is monitored. Your contribution is noted."<br />
+<strong>Morning Merit Broadcast</strong></p>
+</blockquote>
+</div>
+</div>
+
+<div class="page">
+<div class="two-column">
+
+
+
+
+
+
+<h4 id="5-assassination">5. Assassination</h4>
+<p><em>Someone on the other crew has a price on their head. The contract is specific: one target, no collateral billing. Find them in the chaos.</em></p>
+<p>After deployment, each player secretly writes down one opposing model as their target. Do not reveal targets until one is taken <code>Out of Action</code> or <code>Flees</code>. You cannot choose a model that is not on the board.</p>
+<p>If the target <code>Flees</code>, reveal it immediately: the opponent wins. If both targets die the same turn, first player to reveal their target wins. Same activation: most surviving models.</p>
+<p><strong>Victory:</strong> First to take their target <code>Out of Action</code> (or force them to <code>Flee</code>). If neither target falls by game end, reveal both. Most surviving models.</p>
+<p><strong>Reward:</strong> Winner gains +1 <code>Lead</code>.<br />
+<strong>Bonus:</strong> The model that killed the target gains +1 <code>Merit</code>.<br />
+<strong>Intel:</strong> +1 <code>Evidence</code> if the winner killed their target (target profile gathered).</p>
 <blockquote>
 <p>"Resistance will add to your balance."<br />
-<strong>Toll Collector final notice</strong></p>
+<strong>Toll Collector Final Notice</strong></p>
 </blockquote>
-</div>
-</div>
-
-<div class="page">
-<div class="single-column">
+<div class="column-break"></div>
 
 
-<h2 id="the-wave-shrine">The Wave Shrine</h2>
-<p>Conduit Junction Null. The Monks call it cursed: no cable reaches here, no signal flows clean. Light comes from indicator LEDs and the occasional work lamp. Centuries ago, a cascade failure severed this junction from the Holy Network. The Monks sealed it and moved on. The Untethered found it.</p>
-<p>They've been using this place for months. Open Channel broadcasts originate here, some say. The wave corruption is thick enough to taste: metal and ozone, the flavor of forbidden frequencies. Something rests on that altar: an artifact from before the Tethering, something that still works.</p>
-<h4 id="terrain_2">Terrain</h4>
-<p>Conduit Junction Null. Corrupted shrine. Central data-terminal, scattered prayer-mats, diagnostic candles, hidden alcoves.</p>
-<h4 id="loot_2">Loot</h4>
-<p>1 Relic in center. Players alternate placing 2 <code>Loot Markers</code> each within 6" of Relic (3"+ apart).</p>
-<h4 id="coworkers_3">Coworkers</h4>
-<p>Roll Coworkers (<code>Normal</code> tier). Players alternate placing 6"+ from center (3"+ apart).</p>
-<h4 id="deployment_2">Deployment</h4>
-<p>Standard.</p>
-<h4 id="threats_2">Threats</h4>
-<p><strong>Rounds 2, 4, 6:</strong> Roll Hostile faction table (<code>Elite</code> tier). They spawn within 3" of center.</p>
-<h4 id="special">Special</h4>
-<p>At game end, Relic holder gains +1 <code>Evidence</code> + 2 <code>Leads</code>.</p>
+<h4 id="6-breakthrough">6. Breakthrough</h4>
+<p><em>The corridor is collapsing behind both crews. There is no going back. Get your people to the far exit. Anyone left behind stays behind.</em></p>
+<p>No markers. A model reaching the opponent's deployment edge can exit as part of its move. Exited models are removed and cannot return. <code>Engaged</code> models cannot exit (must <code>Disengage</code> first).</p>
+<p>Hostiles cannot exit. Models that <code>Flee</code> off the opponent's edge count as exited. Models that <code>Flee</code> off any other edge do not.</p>
+<p>If no models exit by game end, most surviving models wins.</p>
+<p><strong>Victory:</strong> Most models exited at game end. Models still on the board do not count. Tied: most surviving models on the board.</p>
+<p><strong>Reward:</strong> Winner gains +1 <code>Lead</code>.<br />
+<strong>Bonus:</strong> +1 additional <code>Lead</code> if the winner exited 3 or more models.</p>
 <blockquote>
-<p>WIRELESS IS DEATH: Feel the feedback in your teeth.</p>
+<p>"Abandoned Sector: No services, no response, no refunds."<br />
+<strong>Complex Warning Sign</strong></p>
 </blockquote>
 </div>
 </div>
@@ -3650,80 +3953,35 @@
 
 
 
-</div>
-<div class="single-column">
 
 
-<h1 id="advantage-missions">Advantage Missions</h1>
-<h2 id="the-encryption-keys">The Encryption Keys</h2>
-<p>The Comptroller's District processes every subscription in the Complex. Birth certificates, death notices, debt transfers. Endless corridors of identical offices. The constant click of data-slabs being stamped. The clerks who work here see everything and remember nothing. That's company policy.</p>
-<p>One clerk remembered. They found something in Terminal 404, the sector where records have been corrupted for decades. Encryption keys to archives that should not exist. Archives that might predate the Tethering. The Aggressor needs what's in that clerk's head. The Defender tracked them here, to an annex where paperwork goes to die. The Authority hasn't noticed yet. They will.</p>
-<h4 id="terrain_3">Terrain</h4>
-<p>The Comptroller's District. Authority annex. Cramped offices, data-stacks, locked subscription vaults.</p>
-<h4 id="loot_3">Loot</h4>
-<p>Players alternate placing 2 <code>Loot Markers</code> each (9"+ from center, 3"+ apart).</p>
-<h4 id="coworkers_4">Coworkers</h4>
-<p>Roll Coworkers (<code>Normal</code> tier). Defender places within 6" of center (3"+ apart).</p>
-<h4 id="deployment_3">Deployment</h4>
-<p>Aggressor picks an edge and deploys first. Defender deploys on the opposite edge.</p>
-<h4 id="threats_3">Threats</h4>
-<p><strong>Round 2:</strong> Roll Hostile faction table (<code>Swarm</code> tier). They spawn on a random edge not used for player deployment.</p>
-<h4 id="special_1">Special</h4>
-<p>Hostiles ignore Defender until Defender uses <code>Search</code> or <code>Interrogate</code>, or until Round 3.</p>
+<h4 id="7-triangulation">7. Triangulation</h4>
+<p><em>Three signal repeaters sit dead across the junction. Each one needs manual activation. The crew that brings them online first gets the broadcast frequency. The other gets static.</em></p>
+<p>Defender places 3 signal markers (6"+ apart, 3"+ from table edges).</p>
+<p><code>Interact</code> adjacent to activate a marker for your side. Each model can only activate the same marker once. <code>Engaged</code> models cannot activate markers. Activations are permanent: the opponent's activation does not remove yours. Both sides can activate all 3.</p>
+<p>Hostiles ignore signal markers.</p>
+<p><strong>Victory:</strong> Most markers activated at game end. Maximum 3 per side. Tied: most surviving models.</p>
+<p><strong>Reward:</strong> Winner gains +1 <code>Lead</code>.<br />
+<strong>Bonus:</strong> +1 additional <code>Lead</code> if the winner activated all 3 markers.<br />
+<strong>Intel:</strong> +1 <code>Evidence</code> if the winner activated all 3 markers (broadcast secrets intercepted).</p>
 <blockquote>
-<p>"Every incident resolved is a shareholder satisfied."<br />
-<strong>Chief Arbiter Kale Duross</strong></p>
+<p>"Every signal is a betrayal."<br />
+<strong>Anti-Heresy Warning</strong></p>
 </blockquote>
-</div>
-</div>
-
-<div class="page">
-<div class="single-column">
+<div class="column-break"></div>
 
 
-<h2 id="the-barricade">The Barricade</h2>
-<p>The Cooperative formed when Sector 7 defaulted. No leaders, no records, no subscriptions. Just the understanding that today's giver may be tomorrow's receiver. The Authority calls them criminals. The Houses call them lost revenue. They call themselves free.</p>
-<p>The Cooperative has been trading with the Scrapers, buying information about routes to the Roots. They helped the Defender fortify this junction. Weeks of work. Barricades from scrap. Now a stronger force approaches. The Defender has prepared the ground, but the ground may not be enough.</p>
-<h4 id="terrain_4">Terrain</h4>
-<p>Sector 7-Receivable. Fortified junction. Barricades, jury-rigged turrets, supply crates.</p>
-<h4 id="loot_4">Loot</h4>
-<p>Defender places 4 <code>Loot Markers</code> within 6" of center (3" apart).</p>
-<h4 id="coworkers_5">Coworkers</h4>
-<p>Roll Coworkers (<code>Elite</code> tier). Defender places within 6" of center (3"+ apart).</p>
-<h4 id="deployment_4">Deployment</h4>
-<p>Defender within 6" of center. Aggressor picks an edge and deploys on that edge.</p>
-<h4 id="threats_4">Threats</h4>
-<p><strong>Rounds 3, 5:</strong> Roll Hostile faction table (<code>Normal</code> tier). They spawn on a random edge not used by Aggressor.</p>
-<h4 id="special_2">Special</h4>
-<p>Defender places 3 terrain pieces before deployment.</p>
+<h4 id="8-sabotage">8. Sabotage</h4>
+<p><em>Your target is the enemy's power conduit. Their target is yours. Cutting takes precision and time. Defending takes bodies.</em></p>
+<p>Each player places 1 conduit marker in the opponent's board half (3"+ from table edges).</p>
+<p><code>Interact</code> adjacent to sever the enemy conduit. Severing requires 2 <code>Interact</code> actions on the same conduit (not necessarily the same activation or model). Mark the first success with a token. At the start of the next round, remove the mark if no friendly model is within 1" of it. <code>Engaged</code> models cannot sever conduits. Severing is permanent once completed.</p>
+<p>Hostiles ignore conduits.</p>
+<p><strong>Victory:</strong> First to sever. Both sever same round: first to complete wins. Neither severs by game end: most surviving models.</p>
+<p><strong>Reward:</strong> Winner gains +1 <code>Lead</code>.<br />
+<strong>Bonus:</strong> The model that completed the final sever gains +1 <code>Merit</code>.</p>
 <blockquote>
-<p>NO SUBS NO MASTERS <em>(scrawled over sparking cable stump)</em></p>
-</blockquote>
-</div>
-</div>
-
-<div class="page">
-<div class="single-column">
-
-
-<h2 id="the-ambush">The Ambush</h2>
-<p>The Toll Collectors know everything. They track every transaction, every movement, every debt. When someone offers to buy information, they sell it. When multiple buyers appear, they sell it to all of them.</p>
-<p>Someone sold the Defender's route. The Aggressor was waiting. The Defender's Boss carries crucial intel: names, locations, the threads of a conspiracy. If they die here, weeks of work dies with them. The local freelancers smell blood.</p>
-<h4 id="terrain_5">Terrain</h4>
-<p>Mid-Complex transit corridor. Open ground with scattered cover. Vendor stalls, abandoned cargo-sleds.</p>
-<h4 id="loot_5">Loot</h4>
-<p>After Defender deployment, Defender places 2 <code>Loot Markers</code> within 3" of Defender's models (3"+ apart).</p>
-<h4 id="coworkers_6">Coworkers</h4>
-<p>Roll Coworkers (<code>Swarm</code> tier). Defender places within 3" of any board edge (3"+ apart).</p>
-<h4 id="deployment_5">Deployment</h4>
-<p>Defender deploys all models within 6" of center. Aggressor deploys on opposite corners.</p>
-<h4 id="threats_5">Threats</h4>
-<p><strong>Rounds 2, 4, 6:</strong> Roll Hostile faction table (<code>Elite</code> tier). They spawn on a random unused edge.</p>
-<h4 id="special_3">Special</h4>
-<p>Hostiles target Aggressor models until Round 3.</p>
-<blockquote>
-<p>"Resource Allocation sells your route. Revenue Operations buys it. You die in between. That's commerce."<br />
-<strong>Freelancer Wisdom</strong></p>
+<p>"A good splice is invisible. A great splice was never needed."<br />
+<strong>Conduit-Certified Saying</strong></p>
 </blockquote>
 </div>
 </div>
@@ -3734,79 +3992,132 @@
 
 
 
-</div>
-<div class="single-column">
 
 
-<h1 id="overwhelming-missions">Overwhelming Missions</h1>
-<h2 id="no-quarter">No Quarter</h2>
-<p>Lower Complex. Cooling priority: none. During heat events, these districts are sealed off to preserve capacity for priority areas. The Cooling Wars taught the Departments that sacrificing the lower tiers was cheaper than fixing them. The residents either survive until restoration or they don't. The Authority calls this "thermal triage." The survivors call it what it is.</p>
-<p>The Aggressor found the safehouse. Revenue Operations wants the Defender's Boss dead. Security &amp; Compliance wants them alive. Both Departments sent contractors. There will be no negotiation. The local scavengers smell weakness, drawn by the promise of whatever's left when the shooting stops.</p>
-<h4 id="terrain_6">Terrain</h4>
-<p>Lower Complex. Burned-out safehouse. Collapsed conduits, desperate cover, one clear path to escape.</p>
-<h4 id="loot_6">Loot</h4>
-<p>Defender places 4 <code>Loot Markers</code> within 6" of center (3"+ apart).</p>
-<h4 id="coworkers_7">Coworkers</h4>
-<p>Roll Coworkers (<code>Elite</code> tier). Players alternate placing 6"+ from center (3"+ apart).</p>
-<h4 id="deployment_6">Deployment</h4>
-<p>Defender places 2 barricades within 6" of center. Aggressor picks an edge and deploys on that edge. Then Defender deploys within 6" of center. Aggressor may then redeploy d3 models.</p>
-<h4 id="threats_6">Threats</h4>
-<p><strong>Round 4:</strong> Roll Hostile faction table (<code>Swarm</code> tier). They spawn on a random edge not used by Aggressor.</p>
+<h4 id="9-heist">9. Heist</h4>
+<p><em>A corporate terminal sits unguarded between the crews. Its databanks hold encrypted Department files. Both sides can pull data. Neither can lock the other out.</em></p>
+<p>Defender places 1 terminal at center.</p>
+<p><code>Interact</code> adjacent to download. Each download costs one action. Only one model per side can download per round. <code>Engaged</code> models cannot use the terminal. Downloads are tracked per player: both sides use the same terminal.</p>
+<p>If a hostile ends its activation within 1" of the terminal, the side with more downloads loses 1 (tied: both lose 1, minimum 0).</p>
+<p><strong>Victory:</strong> First to 3 downloads. If neither reaches 3, most downloads at game end. Tied: most surviving models.</p>
+<p><strong>Reward:</strong> Winner gains +1 <code>Lead</code>.<br />
+<strong>Bonus:</strong> +1 additional <code>Lead</code> if the winner completed 3 downloads. Loser gains 1 <code>Lead</code> if they completed at least 1 download.<br />
+<strong>Intel:</strong> +1 <code>Evidence</code> if the winner completed 3 downloads (databank files archived).</p>
 <blockquote>
-<p>"Dying in public space incurs a cleanup fee charged to your estate."<br />
-<strong>Public Safety Notice</strong></p>
+<p>"Every message is heard. Be careful what you say."<br />
+<strong>Vox-Cleared Saying</strong></p>
+</blockquote>
+<div class="column-break"></div>
+
+
+<h4 id="10-uplink">10. Uplink</h4>
+<p><em>Three relay nodes form a local network across the junction. Hold the nodes and the data flows your way. Let the enemy contest them and nobody gets anything.</em></p>
+<p>Defender places 3 relay nodes (6"+ apart, 3"+ from table edges).</p>
+<p>At game end, a node is live for your side if you have at least one model within 3" and the opponent does not. Contested nodes (both sides present) are not live for either. <code>Out of Action</code> and <code>Fleeing</code> models do not count.</p>
+<p>Hostiles within 3" of a node contest it for both sides.</p>
+<p><strong>Victory:</strong> Most live nodes at game end. Tied: most surviving models.</p>
+<p><strong>Reward:</strong> Winner gains +1 <code>Lead</code>.<br />
+<strong>Bonus:</strong> +1 additional <code>Lead</code> if the winner has 3 or more live nodes.<br />
+<strong>Intel:</strong> +1 <code>Evidence</code> if the winner controls all 3 relay nodes (network traffic intercepted).</p>
+<blockquote>
+<p>"The network is eternal. The network is holy. The network is all."<br />
+<strong>Maintenance Prayer</strong></p>
 </blockquote>
 </div>
 </div>
 
 <div class="page">
-<div class="single-column">
+<div class="two-column">
 
 
-<h2 id="the-vault">The Vault</h2>
-<p>The Roots are the deepest level of the Complex. Ancient infrastructure from before the Tethering. Most of it is sealed, flooded, or worse. The Monks say the Founders built the Complex on the bones of something older. They don't say what. They don't know. The sealed archives might, but no Monk has ever opened them. The Untethered have.</p>
-<p>This vault held something the Founders wanted forgotten. A corrupted data-core. A pre-Tethering transmitter. Something that burns to touch and whispers when you're alone. The Defender guards it. The Aggressor brought overwhelming force. The hostiles are drawn to the relic's signal.</p>
-<h4 id="terrain_7">Terrain</h4>
-<p>The Roots. Ancient vault. Central pedestal, radiating corridors, wave-corrupted growths.</p>
-<h4 id="loot_7">Loot</h4>
-<p>1 Relic in center. Players alternate placing 1 <code>Loot Marker</code> each (9"+ from center, 3"+ apart).</p>
-<h4 id="coworkers_8">Coworkers</h4>
-<p>Roll Coworkers (<code>Swarm</code> tier). Defender places within 3" of any <code>Loot Marker</code> (3"+ apart).</p>
-<h4 id="deployment_7">Deployment</h4>
-<p>Defender within 6" of center. Aggressor picks an edge and deploys on that edge.</p>
-<h4 id="threats_7">Threats</h4>
-<p><strong>Rounds 3, 5:</strong> Roll Hostile faction table (<code>Normal</code> tier). They spawn on a random edge not used by Aggressor.</p>
-<h4 id="special_4">Special</h4>
-<p>Hostiles ignore Defender unless Defender has the Relic or until Round 4. At game end, Relic holder gains +1 <code>Evidence</code> + 2 <code>Leads</code>. Leaving the board with the Relic does not trigger Performance Review.</p>
+
+
+
+
+<h4 id="11-lockdown">11. Lockdown</h4>
+<p><em>The terminal was already running when your crew found it. Someone started a data transfer and didn't finish. The progress bar crawls forward. Whatever it's downloading, three other crews want it stopped.</em></p>
+<p>Defender places 1 terminal at center.</p>
+<p><code>Interact</code> adjacent to advance progress (1 step per success). The terminal needs 3 steps to complete. Both sides track progress separately. Opponent can <code>Interact</code> to reset your progress by 1 step (minimum 0). Hostiles within 1" of the terminal at round end reset both sides by 1 step.</p>
+<p><code>Engaged</code> models cannot use the terminal.</p>
+<p><strong>Victory:</strong> First to complete 3 steps. If neither completes, most steps at game end. Tied: most surviving models.</p>
+<p><strong>Reward:</strong> Winner gains +1 <code>Lead</code>.<br />
+<strong>Bonus:</strong> +1 additional <code>Lead</code> if the winner completed all 3 steps. Loser gains 1 <code>Lead</code> if they completed at least 1 step.</p>
 <blockquote>
-<p>"Cable Spirit, accept this offering of flux and current."<br />
-<strong>Maintenance Rite</strong></p>
+<p>"Data transfer interruption is a billable offense. Data transfer completion without authorization is also a billable offense."<br />
+<strong>Revenue Operations Service Notice</strong></p>
+</blockquote>
+<div class="column-break"></div>
+
+
+<h4 id="12-escort">12. Escort</h4>
+<p><em>They found her hiding in a cable junction, muttering frequencies that haven't been licensed in centuries. She knows where the signal comes from. Both Departments want her talking. She won't last long out here alone.</em></p>
+<p>Defender places 1 informant at center.</p>
+<p><code>Interact</code> adjacent to take control. Escorting model moves at half <code>Move</code> (round down). If the escort goes <code>Out of Action</code>, the informant stays in place. Any model can take over with <code>Interact</code>. <code>Engaged</code> models cannot escort. The informant cannot be targeted directly. Hostiles ignore the informant.</p>
+<p>If the informant is unescorted at round end and any hostile is within 3", remove the informant. Both sides lose.</p>
+<p><strong>Victory:</strong> Exit the informant off your deployment edge. Game end: side controlling the informant wins. No controller: most surviving models.</p>
+<p><strong>Reward:</strong> Winner gains +1 <code>Lead</code>.<br />
+<strong>Bonus:</strong> The escorting model at victory gains +1 <code>Merit</code>. Loser gains 1 <code>Lead</code> if they controlled the informant at any point.</p>
+<blockquote>
+<p>"Human Capital reminds all contractors: informants are company property. Damage to company property will be deducted from your subscription."<br />
+<strong>Human Capital Retention Memo</strong></p>
 </blockquote>
 </div>
 </div>
 
 <div class="page">
-<div class="single-column">
+<div class="two-column">
 
 
-<h2 id="debt-leverage">Debt Leverage</h2>
-<p>In the Complex, debts are inherited. Children are born subscribed. When you can't pay, your contract gets sold. Sometimes to collection agencies. Sometimes to people who want you dead. The Subscription Crisis made this legal. The Departments made it profitable.</p>
-<p>Someone leveraged the Defender's debt. Resource Allocation bought the contract and resold it to their enemies. Now their Boss has a price on their head equal to three generations of compound interest. The Aggressor committed everything to this kill. The Substrate civilians know the rules: hellish heat, chemical smell, stay out of the way, pretend you saw nothing, hope your own debts stay buried.</p>
-<h4 id="terrain_8">Terrain</h4>
-<p>The Substrate. Industrial warren. Multiple levels, tight corridors, nowhere to truly hide.</p>
-<h4 id="loot_8">Loot</h4>
-<p>Aggressor places 4 <code>Loot Markers</code> anywhere (3"+ from edges, 3"+ apart).</p>
-<h4 id="coworkers_9">Coworkers</h4>
-<p>Roll Coworkers (<code>Normal</code> tier). Players alternate placing 6"+ from center (3"+ apart).</p>
-<h4 id="deployment_8">Deployment</h4>
-<p>Defender within 6" of center. Aggressor deploys on any edge.</p>
-<h4 id="threats_8">Threats</h4>
-<p><strong>Rounds 2, 4, 6:</strong> Roll Hostile faction table (<code>Elite</code> tier). They spawn on a random edge not used by Aggressor.</p>
-<h4 id="special_5">Special</h4>
-<p>Defender's <code>Boss</code> gets <code>+1 DT</code> <code>Defense</code>. Hostiles target Aggressor models. If <code>Boss</code> survives to game end, Defender gains +1 <code>Evidence</code>.</p>
+
+
+
+
+<h2 id="the-signal-5-evidence">The Signal (5 Evidence)</h2>
+<p><em>The relay was buried under six hundred years of conduit sealant and cable rot. Your crew found it by accident, tracing a power drain that shouldn't exist. It pulses. Not electricity. Something older. The Untethered already know it's here. So does everyone else.</em></p>
+<p>The first squad to reach 5 <code>Evidence</code> triggers this mission. Place a relay marker at table center.</p>
+<p><strong>Discoverer</strong>: Squad that reached 5 first. Deploys within 6" of one edge. <strong>Interceptor</strong>: Opposing squad. Opposite edge.</p>
+<p><strong>Hostiles</strong>: <code>Normal</code> spawn Round 2+, <code>Elite</code> Round 4+, <code>Elite</code> every round from Round 6+. Random edges.</p>
+<h4 id="the-relay">The Relay</h4>
+<p><strong>Control</strong>: Squad with most models within 3" at round start.</p>
+<p><strong>Examine</strong>: While controlling, <code>Interact</code> adjacent. Roll <code>Wits</code>. Success: 1 <code>Lead</code>. <code>Critical</code>: 1 <code>Evidence</code> + 1 <code>Lead</code>.</p>
+<div class="column-break"></div>
+
+<p><strong>Redirect</strong> (once): While controlling, roll <code>Wits</code> at <code>-1 DT</code>. Success: game ends, gain 2 <code>Evidence</code> + all <code>Leads</code> examined. Failure: all future spawns +1 model.</p>
+<h4 id="victory">Victory</h4>
+<p><strong>Redirect</strong>: Immediate victory for redirecting squad.</p>
+<p><strong>Game End</strong>: Controlling squad wins. Gain 1 <code>Evidence</code> + <code>Leads</code> examined.</p>
+<p><strong>Wipeout</strong>: Squad with fewer models within 3" of relay when last model fell loses 1 <code>Evidence</code>.</p>
+<p>All <code>Broadcast Powers</code> suffer <code>-1 DT</code> while the relay is active.</p>
 <blockquote>
-<p>"Subscription to Life: Terminated. No refunds."<br />
-<strong>Final Notice</strong></p>
+<p>"Unauthorized signal activity in Sectors 7 through 19. All contractors respond. This is not a drill. This has never been a drill."<br />
+<strong>Security &amp; Compliance Emergency Broadcast</strong></p>
+</blockquote>
+</div>
+</div>
+
+<div class="page">
+<div class="two-column">
+
+
+
+
+<h2 id="the-source-9-evidence">The Source (9 Evidence)</h2>
+<p><em>Nine pieces of evidence and they all point down. Past the maintenance levels, past the dead conduits, past the places where the cable maps stop making sense. Something is broadcasting from the roots of the arcology. Something that was here before the Tethering. Your Department wants it contained. The Untethered want it freed. You just want to survive the extraction.</em></p>
+<p>At 9 <code>Evidence</code>, risk extraction or play one more standard mission for victory at 10. No round limit. One model holds the Source.</p>
+<p><strong>Extractor</strong>: Deploys within 6" of one edge. <strong>Interceptor</strong>: Opposite edge. <strong>Hostiles</strong>: <code>Elite</code> spawn at center after deployment. <code>Normal</code> from Extractor's edge Round 2+. <code>Elite</code> from exit edge Round 4+.</p>
+<h4 id="the-source">The Source</h4>
+<p>Holder suffers <code>-1 DT</code> to <code>Wits</code>, cannot use <code>Broadcast Powers</code>. If holder goes <code>Out of Action</code>, any model within 1" picks it up (<code>Interact</code>). Otherwise drops in place.</p>
+<div class="column-break"></div>
+
+<p>All <code>Broadcast Powers</code> within 6" of holder suffer <code>-1 DT</code>.</p>
+<p><strong>Detonation</strong>: At game end, all models within 3" take d6 damage (ignores armor).</p>
+<h4 id="victory_1">Victory</h4>
+<p><strong>Extraction</strong>: Extractor exits the opposite edge with the Source. Campaign victory.</p>
+<p><strong>Interception</strong>: Interceptor holds the Source at game end or eliminates all Extractor models. Extractor loses d6 <code>Evidence</code> and all <code>Leads</code>. At 9 <code>Evidence</code>, Source holder becomes Extractor.</p>
+<p><strong>Failure</strong>: Source lost to hostiles or no friendly models remain. Lose d6 <code>Evidence</code> and all <code>Leads</code>.</p>
+<blockquote>
+<p>"THE SIGNAL CRISIS DESTROYED THE OLD WORLD. Do not let it destroy this one. Report all unauthorized transmissions. Comply and survive."<br />
+<strong>Conduit Authority Public Warning</strong></p>
 </blockquote>
 </div>
 </div>
@@ -3830,32 +4141,28 @@
 <li>Performance Review: models that fled take d6 damage</li>
 </ol>
 <h2 id="merit-sources">Merit Sources</h2>
+<p>Each model tracks its own Merits. Hostiles do not generate Merits. The winner of each mission gains +1 <code>Lead</code>. Additional mission-specific merits are defined in each mission.</p>
 <table>
 <thead>
 <tr>
-<th>Source</th>
+<th style="text-align: left;">Source</th>
 <th style="text-align: center;">Merits</th>
+<th style="text-align: left;">Who</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Per enemy <code>Out of Action</code></td>
+<td style="text-align: left;">Enemy player model <code>Out of Action</code></td>
 <td style="text-align: center;">1</td>
+<td style="text-align: left;">Model that scored the kill</td>
 </tr>
 <tr>
-<td>Per enemy <code>Boss</code> <code>Out of Action</code></td>
-<td style="text-align: center;">1</td>
-</tr>
-<tr>
-<td>Per successful Search/Interrogate</td>
-<td style="text-align: center;">1</td>
+<td style="text-align: left;">Enemy <code>Boss</code> <code>Out of Action</code></td>
+<td style="text-align: center;">+1</td>
+<td style="text-align: left;">Model that scored the kill</td>
 </tr>
 </tbody>
 </table>
-<blockquote>
-<p>"Your achievements are company property. Your debts are personal."<br />
-<strong>Merit Accounting Bureau</strong></p>
-</blockquote>
 <div class="column-break"></div>
 
 <h2 id="exploration">Exploration</h2>
@@ -3968,12 +4275,8 @@
 </tr>
 </tbody>
 </table>
-<h2 id="promotion-thresholds">Promotion Thresholds</h2>
-<p>Roll Promotion at: 1, 3, 6, 10, 15, 21, 28 Merits (gap increases by 1 each time)</p>
-<blockquote>
-<p>"Work harder. Owe less. Every merit survived is a merit toward freedom. Every debt paid is a chain removed. The system rewards persistence. The system punishes everything else."<br />
-<strong>Labor Motivation Bureau</strong></p>
-</blockquote>
+<p><strong>Promotion Thresholds:</strong> 1, 2, 4, 7, 11, 16, 22 Merits (gap increases by 1 each time)</p>
+<p><strong>Attribute Limits:</strong> 2d4 min, 2d12 max. Max <code>Health</code> at 0 or below: remove from squad.</p>
 </div>
 </div>
 
@@ -3981,8 +4284,6 @@
 <div class="two-column">
 
 
-<h2 id="attribute-limits">Attribute Limits</h2>
-<p>Attributes cannot go below 2d4 or above 2d12. Max <code>Health</code> at 0 or below: remove from squad.</p>
 <h2 id="promotion">Promotion</h2>
 <table>
 <thead>
@@ -4011,7 +4312,7 @@
 <tr>
 <td style="text-align: center;">5</td>
 <td style="text-align: left;">Clearance</td>
-<td style="text-align: left;"><code>+1 DT</code> <code>Combat</code> (or new Power for <code>Broadcaster</code>)</td>
+<td style="text-align: left;"><code>+1 DT</code> <code>Combat</code> (or Power)</td>
 </tr>
 <tr>
 <td style="text-align: center;">6</td>
@@ -4021,7 +4322,7 @@
 <tr>
 <td style="text-align: center;">7</td>
 <td style="text-align: left;">Promotion</td>
-<td style="text-align: left;">Pick: <code>+1 DT</code> (any attribute), +1" <code>Move</code>, +1 <code>Health</code>, or new Power (<code>Broadcaster</code> only)</td>
+<td style="text-align: left;">Pick: <code>+1 DT</code> any, +1" <code>Move</code>, +1 <code>Health</code>, or Power</td>
 </tr>
 <tr>
 <td style="text-align: center;">8</td>
@@ -4031,7 +4332,7 @@
 <tr>
 <td style="text-align: center;">9</td>
 <td style="text-align: left;">Raise</td>
-<td style="text-align: left;"><code>+1 DT</code> <code>Combat</code> (or new Power for <code>Broadcaster</code>)</td>
+<td style="text-align: left;"><code>+1 DT</code> <code>Combat</code> (or Power)</td>
 </tr>
 <tr>
 <td style="text-align: center;">10</td>
@@ -4051,9 +4352,7 @@
 </tbody>
 </table>
 <h2 id="recruitment">Recruitment</h2>
-<p>Squads always have 5 models. Replace dead models for free. New <code>Resources</code> start with base attributes and no equipment. Models that miss a game stay home: play with fewer models.</p>
-<h2 id="dismiss">Dismiss</h2>
-<p>Remove any model from your squad. Equipment goes to Lockers.</p>
+<p>Squads always have 5 models. Replace dead models for free. New <code>Resources</code> start with base attributes and no equipment. Models that miss a game stay home: play with fewer models. Remove any model voluntarily: equipment goes to Lockers.</p>
 <div class="column-break"></div>
 
 <h2 id="boss-succession">Boss Succession</h2>
@@ -4063,14 +4362,12 @@
 <li>Gain +1 max armor (Light → Medium → Heavy)</li>
 </ul>
 <h2 id="trading-post">Trading Post</h2>
-<p>Buy equipment at listed price. Sell at half price.</p>
-<h2 id="locker-room">Locker Room</h2>
-<p>Store equipment between games. No limits. Choose what each model carries before each game.</p>
+<p>Buy equipment at listed price. Sell at half price. Store unused equipment in Lockers between games (no limits). Choose what each model carries before each game.</p>
 <h2 id="campaign-victory">Campaign Victory</h2>
 <p>First squad to collect 10 unique <code>Evidence</code> types wins.</p>
 <blockquote>
-<p>"Information is property. Unregistered information is theft. Your evidence collection has been noted. A licensing representative will contact you shortly."<br />
-<strong>Data Compliance Bureau</strong></p>
+<p>"Ten artifacts. That's the threshold. After that, the Departments stop pretending you're expendable and start pretending you're important. Your subscription renews either way. The question is whether you remember what you found down there. Most don't."<br />
+<strong>Human Capital Retention Advisory</strong></p>
 </blockquote>
 </div>
 </div>

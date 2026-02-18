@@ -1,16 +1,46 @@
 {
   "table_name": "Actions",
-  "source": "04_combat.md",
-  "columns": ["Action", "Effect"],
-  "align": ["left", "left"],
+  "source": "1_04_combat.md",
+  "columns": [
+    "Action",
+    "Effect"
+  ],
+  "align": [
+    "left",
+    "left"
+  ],
   "items": [
-    {"action": "`Attack`", "effect": "`Combat` vs. `Defense`, deal weapon damage"},
-    {"action": "`Move Again`", "effect": "Take a second move"},
-    {"action": "`Disengage`", "effect": "Leave melee safely."},
-    {"action": "`Aim`", "effect": "Declare target. `+1 DT` `Combat` on your next shot (lost if moved or damaged)"},
-    {"action": "`Interact`", "effect": "Within 1\". Grab objective or pick up dropped weapon"},
-    {"action": "`Search`", "effect": "Within 1\" of `Loot Marker`. `Wits` vs. 2d6. Not while `Engaged`"},
-    {"action": "`Interrogate`", "effect": "Within 1\" of Coworker. `Wits` vs. `Wits` (`+1 DT` if wounded)"},
-    {"action": "`Cast`", "effect": "`Wits` vs. target `Wits` or 2d6 (Broadcasters only)"}
+    {
+      "action": "`Attack`",
+      "effect": "`Combat` vs. `Defense`, deal weapon damage"
+    },
+    {
+      "action": "`Move Again`",
+      "effect": "Take a second move"
+    },
+    {
+      "action": "`Disengage`",
+      "effect": "Leave melee safely."
+    },
+    {
+      "action": "`Aim`",
+      "effect": "Declare target. `+1 DT` `Combat` on your next shot (lost if moved or hit)"
+    },
+    {
+      "action": "`Interact`",
+      "effect": "Within 1\". Grab objective or pick up dropped weapon"
+    },
+    {
+      "action": "`Search`",
+      "effect": "Within 1\" of `Loot Marker`. `Wits` vs. 2d6. Not while `Engaged`"
+    },
+    {
+      "action": "`Interrogate`",
+      "effect": "Within 1\" of Coworker. `Wits` vs. `Wits` (`+1 DT` if wounded)"
+    },
+    {
+      "action": "`Cast`",
+      "effect": "`Wits` vs. target `Wits` or 2d6 (Broadcasters only)"
+    }
   ]
 }

@@ -1,27 +1,142 @@
 {
   "table_name": "Scrapers",
-  "source": "07_hostiles.md",
+  "source": "2_01_hostiles.md",
   "special_rule": "**Opportunists**: `+1 DT` `Combat` vs wounded targets",
   "units": {
-    "columns": ["d6", "Name", "Spawn", "Combat", "Defense", "Wits", "Health", "Move", "Weapon"],
-    "align": ["center", "left", "center", "center", "center", "center", "center", "center", "left"],
-    "display_columns": ["d6", "Name", "#", "COM", "DEF", "WIT", "HP", "MOV", "Weapon"],
+    "columns": [
+      "d6",
+      "Name",
+      "Spawn",
+      "Combat",
+      "Defense",
+      "Wits",
+      "Health",
+      "Move",
+      "Weapon"
+    ],
+    "align": [
+      "center",
+      "left",
+      "center",
+      "center",
+      "center",
+      "center",
+      "center",
+      "center",
+      "left"
+    ],
+    "display_columns": [
+      "d6",
+      "Name",
+      "#",
+      "COM",
+      "DEF",
+      "WIT",
+      "HP",
+      "MOV",
+      "Weapon"
+    ],
     "items": [
-      {"roll": 1, "name": "Gutter Runner", "spawn": "4+4", "combat": "2d6", "defense": "2d4", "wits": "2d4", "health": 6, "move": "5\"", "weapon": "Zip Gun (`Projectile`, d4, Ranged)"},
-      {"roll": 2, "name": "Cable Rat", "spawn": "2+2", "combat": "2d6", "defense": "2d6", "wits": "2d4", "health": 8, "move": "4\"", "weapon": "Sharpened Cable (`Bladed`, d4, Melee)"},
-      {"roll": 3, "name": "Picker", "spawn": "3", "combat": "2d4", "defense": "2d4", "wits": "2d6", "health": 10, "move": "5\"", "weapon": "Junk Launcher (`Projectile`, d4, Ranged)"},
-      {"roll": 4, "name": "Pit Boss", "spawn": "2", "combat": "2d8", "defense": "2d6", "wits": "2d4", "health": 12, "move": "5\"", "weapon": "Power Chain (`Blunt`, d6, Melee)"},
-      {"roll": 5, "name": "Rogue Broadcaster", "spawn": "1", "combat": "2d6", "defense": "2d4", "wits": "2d8", "health": 12, "move": "5\"", "weapon": "Static Burst (`Broadcast`, d6, Power)"},
-      {"roll": 6, "name": "Repo Man", "spawn": "1", "combat": "2d8", "defense": "2d6", "wits": "2d8", "health": 14, "move": "5\"", "weapon": "Impound Launcher (`Explosive`, d6, Ranged)"}
+      {
+        "roll": 1,
+        "name": "Gutter Runner",
+        "spawn": "4+4",
+        "combat": "2d6",
+        "defense": "2d4",
+        "wits": "2d4",
+        "health": 6,
+        "move": "5\"",
+        "weapon": "Zip Gun (`Projectile`, d4, Ranged)"
+      },
+      {
+        "roll": 2,
+        "name": "Cable Rat",
+        "spawn": "2+2",
+        "combat": "2d6",
+        "defense": "2d6",
+        "wits": "2d4",
+        "health": 8,
+        "move": "4\"",
+        "weapon": "Sharpened Cable (`Bladed`, d4, Melee)"
+      },
+      {
+        "roll": 3,
+        "name": "Picker",
+        "spawn": "3",
+        "combat": "2d4",
+        "defense": "2d4",
+        "wits": "2d6",
+        "health": 10,
+        "move": "5\"",
+        "weapon": "Junk Launcher (`Projectile`, d4, Ranged)"
+      },
+      {
+        "roll": 4,
+        "name": "Pit Boss",
+        "spawn": "2",
+        "combat": "2d8",
+        "defense": "2d6",
+        "wits": "2d4",
+        "health": 12,
+        "move": "5\"",
+        "weapon": "Power Chain (`Blunt`, d6, Melee)"
+      },
+      {
+        "roll": 5,
+        "name": "Rogue Broadcaster",
+        "spawn": "1",
+        "combat": "2d6",
+        "defense": "2d4",
+        "wits": "2d8",
+        "health": 12,
+        "move": "5\"",
+        "weapon": "Static Burst (`Broadcast`, d6, Power)"
+      },
+      {
+        "roll": 6,
+        "name": "Repo Man",
+        "spawn": "1",
+        "combat": "2d8",
+        "defense": "2d6",
+        "wits": "2d8",
+        "health": 14,
+        "move": "5\"",
+        "weapon": "Impound Claw (`Blunt`, d6, Melee)"
+      }
     ]
   },
   "behavior": {
-    "columns": ["d6", "No LoS", "Has LoS", "Engaged"],
-    "align": ["center", "center", "center", "center"],
+    "columns": [
+      "d6",
+      "No LoS",
+      "Has LoS",
+      "Engaged"
+    ],
+    "align": [
+      "center",
+      "center",
+      "center",
+      "center"
+    ],
     "items": [
-      {"roll": "1-4", "no_los": "Patrol", "has_los": "Attack", "engaged": "Attack"},
-      {"roll": "5", "no_los": "Patrol", "has_los": "Cover", "engaged": "Attack"},
-      {"roll": "6", "no_los": "Regroup", "has_los": "Attack", "engaged": "Frenzy"}
+      {
+        "roll": "1-4",
+        "no_los": "Patrol",
+        "has_los": "Attack",
+        "engaged": "Attack"
+      },
+      {
+        "roll": "5",
+        "no_los": "Patrol",
+        "has_los": "Cover",
+        "engaged": "Attack"
+      },
+      {
+        "roll": "6",
+        "no_los": "Regroup",
+        "has_los": "Attack",
+        "engaged": "Frenzy"
+      }
     ]
   }
 }

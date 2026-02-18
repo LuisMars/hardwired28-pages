@@ -1,11 +1,26 @@
 {
   "table_name": "Valores",
-  "source": "02_warbands.md",
-  "columns": ["Value", "Use"],
-  "align": ["left", "left"],
-  "display_columns": ["Valor", "Uso"],
+  "source": "1_02_warbands.md",
+  "columns": [
+    "Value",
+    "Use"
+  ],
+  "align": [
+    "left",
+    "left"
+  ],
+  "display_columns": [
+    "Valor",
+    "Uso"
+  ],
   "items": [
-    {"value": "`Salud`", "use": "Daño hasta `Fuera de Combate`"},
-    {"value": "`Movimiento`", "use": "Distancia por activación (pulgadas)"}
+    {
+      "value": "`Salud`",
+      "use": "Daño hasta `Fuera de Combate`"
+    },
+    {
+      "value": "`Movimiento`",
+      "use": "Distancia por activación (pulgadas)"
+    }
   ]
 }

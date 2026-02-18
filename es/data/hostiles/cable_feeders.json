@@ -1,28 +1,148 @@
 {
   "table_name": "Parásitos de Cable",
-  "source": "07_hostiles.md",
+  "source": "2_01_hostiles.md",
   "special_rule": "**Consumir**: Si el objetivo queda `Fuera de Combate`, restaura d6 `Salud`.",
   "units": {
-    "columns": ["d6", "Name", "Spawn", "Combat", "Defense", "Wits", "Health", "Move", "Weapon"],
-    "align": ["center", "left", "center", "center", "center", "center", "center", "center", "left"],
-    "display_columns": ["d6", "Nombre", "#", "COM", "DEF", "AST", "PV", "MOV", "Arma"],
+    "columns": [
+      "d6",
+      "Name",
+      "Spawn",
+      "Combat",
+      "Defense",
+      "Wits",
+      "Health",
+      "Move",
+      "Weapon"
+    ],
+    "align": [
+      "center",
+      "left",
+      "center",
+      "center",
+      "center",
+      "center",
+      "center",
+      "center",
+      "left"
+    ],
+    "display_columns": [
+      "d6",
+      "Nombre",
+      "#",
+      "COM",
+      "DEF",
+      "AST",
+      "PV",
+      "MOV",
+      "Arma"
+    ],
     "items": [
-      {"roll": 1, "name": "Segador", "spawn": "4+4", "combat": "2d6", "defense": "2d4", "wits": "2d4", "health": 6, "move": "6\"", "weapon": "Escupitajo Venenoso (`Tóxico`, d4, Disparo)"},
-      {"roll": 2, "name": "Larva", "spawn": "2+2", "combat": "2d6", "defense": "2d4", "wits": "2d6", "health": 8, "move": "4\"", "weapon": "Zarcillos de Succión (`Tóxico`, d6, CC)"},
-      {"roll": 3, "name": "Acechador", "spawn": "3", "combat": "2d8", "defense": "2d6", "wits": "2d4", "health": 10, "move": "4\"", "weapon": "Zarpas (`Cortante`, d6, CC)"},
-      {"roll": 4, "name": "Señuelo", "spawn": "2", "combat": "2d4", "defense": "2d4", "wits": "2d10", "health": 12, "move": "4\"", "weapon": "Púa Mental (`Estático`, d6, Poder)"},
-      {"roll": 5, "name": "Succionador", "spawn": "1", "combat": "2d10", "defense": "2d6", "wits": "2d4", "health": 12, "move": "5\"", "weapon": "Tubos de Drenaje (`Tóxico`, d8, CC)"},
-      {"roll": 6, "name": "Agonista", "spawn": "1", "combat": "2d10", "defense": "2d6", "wits": "2d6", "health": 14, "move": "5\"", "weapon": "Lengüetazo (`Tóxico`, d8, CC)"}
+      {
+        "roll": 1,
+        "name": "Segador",
+        "spawn": "4+4",
+        "combat": "2d6",
+        "defense": "2d4",
+        "wits": "2d4",
+        "health": 6,
+        "move": "6\"",
+        "weapon": "Escupitajo Venenoso (`Tóxico`, d4, Disparo)"
+      },
+      {
+        "roll": 2,
+        "name": "Larva",
+        "spawn": "2+2",
+        "combat": "2d6",
+        "defense": "2d4",
+        "wits": "2d6",
+        "health": 8,
+        "move": "4\"",
+        "weapon": "Zarcillos de Succión (`Tóxico`, d6, CC)"
+      },
+      {
+        "roll": 3,
+        "name": "Acechador",
+        "spawn": "3",
+        "combat": "2d8",
+        "defense": "2d6",
+        "wits": "2d4",
+        "health": 10,
+        "move": "4\"",
+        "weapon": "Zarpas (`Cortante`, d6, CC)"
+      },
+      {
+        "roll": 4,
+        "name": "Señuelo",
+        "spawn": "2",
+        "combat": "2d4",
+        "defense": "2d4",
+        "wits": "2d10",
+        "health": 12,
+        "move": "4\"",
+        "weapon": "Púa Mental (`Estático`, d6, Poder)"
+      },
+      {
+        "roll": 5,
+        "name": "Succionador",
+        "spawn": "1",
+        "combat": "2d10",
+        "defense": "2d6",
+        "wits": "2d4",
+        "health": 12,
+        "move": "5\"",
+        "weapon": "Tubos de Drenaje (`Tóxico`, d8, CC)"
+      },
+      {
+        "roll": 6,
+        "name": "Agonista",
+        "spawn": "1",
+        "combat": "2d10",
+        "defense": "2d6",
+        "wits": "2d6",
+        "health": 14,
+        "move": "5\"",
+        "weapon": "Rociada Ácida (`Tóxico`, d8, Disparo)"
+      }
     ]
   },
   "behavior": {
-    "columns": ["d6", "No LoS", "Has LoS", "Engaged"],
-    "align": ["center", "center", "center", "center"],
-    "display_columns": ["d6", "Sin LdV", "Con LdV", "Trabado"],
+    "columns": [
+      "d6",
+      "No LoS",
+      "Has LoS",
+      "Engaged"
+    ],
+    "align": [
+      "center",
+      "center",
+      "center",
+      "center"
+    ],
+    "display_columns": [
+      "d6",
+      "Sin LdV",
+      "Con LdV",
+      "Trabado"
+    ],
     "items": [
-      {"roll": "1-4", "no_los": "Patrullar", "has_los": "Atacar", "engaged": "Atacar"},
-      {"roll": "5", "no_los": "Patrullar", "has_los": "Reagrupar", "engaged": "Atacar"},
-      {"roll": "6", "no_los": "Reagrupar", "has_los": "Atacar", "engaged": "Frenesí"}
+      {
+        "roll": "1-4",
+        "no_los": "Patrullar",
+        "has_los": "Atacar",
+        "engaged": "Atacar"
+      },
+      {
+        "roll": "5",
+        "no_los": "Patrullar",
+        "has_los": "Reagrupar",
+        "engaged": "Atacar"
+      },
+      {
+        "roll": "6",
+        "no_los": "Reagrupar",
+        "has_los": "Atacar",
+        "engaged": "Frenesí"
+      }
     ]
   }
 }

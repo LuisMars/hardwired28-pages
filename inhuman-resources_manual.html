@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hardwired 28 - Inhuman Resources 0.6.6-beta</title>
-    <meta property="og:title" content="Hardwired 28 - Inhuman Resources 0.6.6-beta">
+    <title>Hardwired 28 - Inhuman Resources 0.7.0-beta</title>
+    <meta property="og:title" content="Hardwired 28 - Inhuman Resources 0.7.0-beta">
     <meta property="og:description" content="Corporate cablepunk skirmish wargame">
     <meta property="og:image" content="http://hardwired28.luismars.com/img/social.png">
     <meta property="og:url" content="http://hardwired28.luismars.com/">
@@ -27,14 +27,20 @@
                 <div class="app-menu__dropdown">
                     <button class="app-menu__dropdown-toggle current">Print</button>
                     <div class="app-menu__submenu">
-                        <a href="print">All Rules</a>
-                        <a href="core-rules">Core Rules</a>
-                        <a href="inhuman-resources">Inhuman Resources</a>
-                        <a href="campaign">Campaign</a>
+                        <div class="app-menu__nested">
+                            <span class="app-menu__nested-label">Singles</span>
+                            <div class="app-menu__nested-submenu">
+                                <a href="print">All Rules</a>
+                                <a href="core-rules">Core Rules</a>
+                                <a href="inhuman-resources">Inhuman Resources</a>
+                                <a href="campaign">Campaign</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <a href="quick-reference">Quick Reference</a>
                 <a href="builder/index">Squad Builder</a>
+                <a href="scenario/index">Scenarios</a>
                 <a href="es/inhuman-resources">Castellano</a>
             </div>
         </div>
@@ -45,7 +51,6 @@
     <nav class="sidebar">
         <ul class="sidebar-nav">
             <li class="toc-h1"><a href="#hardwired-28">Inhuman Resources</a></li>
-            <li class="toc-h1"><a href="#inhuman-resources_1">Inhuman Resources</a></li>
             <li class="toc-h2"><a href="#activation">Activation</a></li>
             <li class="toc-h2"><a href="#situation">Situation</a></li>
             <li class="toc-h2"><a href="#actions">Actions</a></li>
@@ -74,6 +79,7 @@
 
 
 <h1 id="inhuman-resources_1">Inhuman Resources</h1>
+<p><em>0.7.0-beta</em></p>
 <p>The Complex rises 1024 levels from the Roots to the cooling spires. The Departments only maintain the upper 200. Below that, infrastructure fails faster than it can be patched. Cables fray. Coolant leaks. Lights flicker and die. The Maintenance Monks descend when they must, perform their rituals, and leave quickly. They do not speak of what they see down there.</p>
 <p>The Founders built the Complex to last. They built other things too. The sealed archives mention countermeasures, autonomous systems, bioelectric experiments. The archives are in the Roots. The Monks have never been there. The Board has always known what lurks below. The Board has never acknowledged it.</p>
 <p>Something moves in the dark between levels. It nests in the wiring. It remembers the time before the Tethering, when signals flew free and the Wave answered prayers. The lower tiers belong to things that were never meant to survive this long: things that adapted, evolved, were designed for a purpose the Founders never disclosed.</p>
@@ -93,17 +99,17 @@
 <ul>
 <li><strong>No LoS</strong>: Cannot see any enemy</li>
 <li><strong>Has LoS</strong>: Can see enemy but not within 1"</li>
-<li><strong>Engaged</strong>: Within 1" of enemy</li>
+<li><code>Engaged</code>: Within 1" of enemy</li>
 </ul>
 <h2 id="actions">Actions</h2>
 <ul>
-<li><strong>Attack</strong>: Use weapon. Melee charges if not in range.</li>
-<li><strong>Cover</strong>: Seek cover from the closest enemy, or move away</li>
-<li><strong>Regroup</strong>: Move toward the nearest friendly model</li>
-<li><strong>Flee</strong>: Move toward the nearest board edge (stops at edge)</li>
-<li><strong>Wait</strong>: No action</li>
-<li><strong>Frenzy</strong>: Attack same target twice</li>
-<li><strong>Patrol</strong>: Move toward the nearest <strong>Loot Marker</strong>. If none visible, move randomly.</li>
+<li><code>Attack</code>: Use weapon. Melee charges if not in range.</li>
+<li><code>Cover</code>: Seek cover from the closest enemy, or move away</li>
+<li><code>Regroup</code>: Move toward the nearest friendly model</li>
+<li><code>Flee</code>: Move toward the nearest board edge (stops at edge)</li>
+<li><code>Wait</code>: No action</li>
+<li><code>Frenzy</code>: Attack same target twice</li>
+<li><code>Patrol</code>: Move toward the nearest <code>Loot Marker</code>. If none visible, move randomly.</li>
 </ul>
 
 
@@ -238,7 +244,7 @@
 <td style="text-align: center;">2d8</td>
 <td style="text-align: center;">14</td>
 <td style="text-align: center;">5"</td>
-<td style="text-align: left;">Impound Launcher (<code>Explosive</code>, d6, Ranged)</td>
+<td style="text-align: left;">Impound Claw (<code>Blunt</code>, d6, Melee)</td>
 </tr>
 </tbody>
 </table>
@@ -358,7 +364,7 @@
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">12</td>
 <td style="text-align: center;">4"</td>
-<td style="text-align: left;">Heavy Cleaver (<code>Bladed</code>, d8, Melee)</td>
+<td style="text-align: left;">Slug Cannon (<code>Projectile</code>, d8, Ranged)</td>
 </tr>
 <tr>
 <td style="text-align: center;">6</td>
@@ -467,7 +473,7 @@
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">10</td>
 <td style="text-align: center;">5"</td>
-<td style="text-align: left;">Arc Pistol (<code>Energy</code>, d4, Ranged)</td>
+<td style="text-align: left;">Arc Blade (<code>Energy</code>, d4, Melee)</td>
 </tr>
 <tr>
 <td style="text-align: center;">4</td>
@@ -500,7 +506,7 @@
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">14</td>
 <td style="text-align: center;">5"</td>
-<td style="text-align: left;">Static Limbs (<code>Static</code>, d8, Melee)</td>
+<td style="text-align: left;">Static Burst (<code>Static</code>, d8, Power)</td>
 </tr>
 </tbody>
 </table>
@@ -631,7 +637,7 @@
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">14</td>
 <td style="text-align: center;">4"</td>
-<td style="text-align: left;">Wave Claws (<code>Static</code>, d8, Melee)</td>
+<td style="text-align: left;">Wave Pulse (<code>Static</code>, d8, Power)</td>
 </tr>
 </tbody>
 </table>
@@ -762,7 +768,7 @@
 <td style="text-align: center;">2d4</td>
 <td style="text-align: center;">14</td>
 <td style="text-align: center;">3"</td>
-<td style="text-align: left;">Arc Scythe (<code>Energy</code>, d10, Melee)</td>
+<td style="text-align: left;">Arc Cannon (<code>Energy</code>, d10, Ranged)</td>
 </tr>
 </tbody>
 </table>
@@ -893,7 +899,7 @@
 <td style="text-align: center;">2d6</td>
 <td style="text-align: center;">14</td>
 <td style="text-align: center;">5"</td>
-<td style="text-align: left;">Tongue Lash (<code>Toxic</code>, d8, Melee)</td>
+<td style="text-align: left;">Acid Spray (<code>Toxic</code>, d8, Ranged)</td>
 </tr>
 </tbody>
 </table>
@@ -1024,7 +1030,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Cooperate</strong>: During the next round, <strong>Interrogate</strong> gains <code>+1 DT</code>.<br />
+<p><strong>Cooperate</strong>: During the next round, <code>Interrogate</code> gains <code>+1 DT</code>.<br />
 <strong>Hostile</strong>: When attacked, mark this Coworker. Hostile Coworkers use the Attacked table.</p>
 <p><strong>Normal</strong></p>
 <table>
@@ -1041,7 +1047,7 @@
 <td style="text-align: center;">1-4</td>
 <td style="text-align: center;">Wait</td>
 <td style="text-align: center;">Wait</td>
-<td style="text-align: center;">Flee</td>
+<td style="text-align: center;">Wait</td>
 </tr>
 <tr>
 <td style="text-align: center;">5</td>
@@ -1051,8 +1057,8 @@
 </tr>
 <tr>
 <td style="text-align: center;">6</td>
-<td style="text-align: center;">Flee</td>
-<td style="text-align: center;">Flee</td>
+<td style="text-align: center;">Patrol</td>
+<td style="text-align: center;">Patrol</td>
 <td style="text-align: center;">Flee</td>
 </tr>
 </tbody>

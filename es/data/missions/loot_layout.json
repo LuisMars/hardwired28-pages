@@ -1,0 +1,52 @@
+{
+  "table_name": "Disposición de Botín",
+  "source": "3_01_campaign.md",
+  "columns": [
+    "d6",
+    "Disposición",
+    "Regla"
+  ],
+  "align": [
+    "center",
+    "left",
+    "left"
+  ],
+  "items": [
+    {
+      "roll": "1",
+      "name": "Disperso",
+      "effect": "5 marcadores. Alternad colocando (6\"+ de bordes, 3\"+ de separación)",
+      "map": "area box 6 6 18 18 yellow \"Zona Botín\""
+    },
+    {
+      "roll": "2",
+      "name": "Ninguno",
+      "effect": "Sin `Marcadores de Botín` esta misión",
+      "map": ""
+    },
+    {
+      "roll": "3",
+      "name": "Alijo Central",
+      "effect": "3 marcadores a 3\" del centro (alternad colocando)",
+      "map": "area circle center 3 yellow \"Zona Botín\""
+    },
+    {
+      "roll": "4",
+      "name": "Reserva de Borde",
+      "effect": "4 marcadores a 6\" de un borde sin despliegue (alternad colocando)",
+      "map": "area box 0 0 6 24 yellow \"Zona Botín\""
+    },
+    {
+      "roll": "5",
+      "name": "Sendero",
+      "effect": "4 marcadores a lo largo de la línea central (espaciados uniformemente)",
+      "map": "obj 4.8 12 \"1\"\nobj 9.6 12 \"2\"\nobj 14.4 12 \"3\"\nobj 19.2 12 \"4\"\nmeasure 0 12 4.8 12\nmeasure 4.8 12 9.6 12\nmeasure 9.6 12 14.4 12\nmeasure 14.4 12 19.2 12\nmeasure 19.2 12 24 12"
+    },
+    {
+      "roll": "6",
+      "name": "Carga Pesada",
+      "effect": "5 marcadores: 1 en el centro + 1 en cada diagonal a 6\" (6\" del centro)",
+      "map": "obj 12 12 \"1\"\nobj 7.8 7.8 \"2\"\nobj 16.2 7.8 \"3\"\nobj 7.8 16.2 \"4\"\nobj 16.2 16.2 \"5\"\nmeasure 12 12 7.8 7.8\nmeasure 12 12 16.2 7.8\nmeasure 12 12 7.8 16.2\nmeasure 12 12 16.2 16.2"
+    }
+  ]
+}

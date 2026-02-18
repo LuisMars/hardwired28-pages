@@ -1,0 +1,14 @@
+{
+  "table_name": "Setup Advantages",
+  "source": "3_01_campaign.md",
+  "columns": ["d6", "Advantage"],
+  "align": ["center", "left"],
+  "items": [
+    {"roll": "1", "advantage": "Redeploy one Aggressor model to a new valid position"},
+    {"roll": "2", "advantage": "Choose deployment edge first"},
+    {"roll": "3", "advantage": "Defender chooses hostile spawn location this mission"},
+    {"roll": "4", "advantage": "Place 2 terrain pieces before deployment"},
+    {"roll": "5", "advantage": "Defender places all `Loot Markers` (ignore normal placement rules)"},
+    {"roll": "6", "advantage": "Place all Coworkers (ignore normal placement rules)"}
+  ]
+}

@@ -421,8 +421,9 @@ table, pre, blockquote {
 }
 
 @media print {
-    .file-indicator {
-        display: none;
+    .file-indicator,
+    .page-fill-badge {
+        display: none !important;
     }
 }
 

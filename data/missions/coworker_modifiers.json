@@ -1,14 +1,46 @@
 {
   "table_name": "Coworker Modifiers",
-  "source": "09_campaign.md",
-  "columns": ["d6", "Modifier", "Effect"],
-  "align": ["center", "left", "left"],
+  "source": "3_01_campaign.md",
+  "columns": [
+    "d6",
+    "Modifier",
+    "Effect"
+  ],
+  "align": [
+    "center",
+    "left",
+    "left"
+  ],
   "items": [
-    {"roll": 1, "name": "Standard", "effect": "Normal `Interrogate`"},
-    {"roll": 2, "name": "Informant", "effect": "`+2 DT` to `Interrogate`. Worth 1 `Evidence` + 1 `Lead`. Reroll 0 results"},
-    {"roll": 3, "name": "Bribed", "effect": "`+1 DT` to `Interrogate`. Pay 15 subs: auto-succeed (still roll result table)"},
-    {"roll": 4, "name": "Panicked", "effect": "`-1 DT` to `Interrogate`. Always use Flee behavior at half `Move` (ignore AI roll)"},
-    {"roll": 5, "name": "Escort", "effect": "`-1 DT` to `Interrogate`. Can't `Interrogate` on spot. Carry to your edge to score"},
-    {"roll": 6, "name": "Hostile", "effect": "`-2 DT` to `Interrogate`. Start marked Hostile (use Atk columns)"}
+    {
+      "roll": 1,
+      "name": "Standard",
+      "effect": "No modifier"
+    },
+    {
+      "roll": 2,
+      "name": "Skittish",
+      "effect": "After failed `Interrogate`, this Coworker `Flee`s"
+    },
+    {
+      "roll": 3,
+      "name": "Buddy System",
+      "effect": "Need 2 friendly models within 1\" to `Interrogate`"
+    },
+    {
+      "roll": 4,
+      "name": "Grudge Holder",
+      "effect": "After failed `Interrogate`, becomes Hostile"
+    },
+    {
+      "roll": 5,
+      "name": "Talkative",
+      "effect": "Double the Coworker: `+1` to result. Triple+: `+2`, etc."
+    },
+    {
+      "roll": 6,
+      "name": "Claustrophobic",
+      "effect": "Becomes Hostile if 2+ models within 1\""
+    }
   ]
 }

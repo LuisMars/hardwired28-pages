@@ -1,6 +1,6 @@
 {
   "table_name": "Heavy Armor",
-  "source": "03_equipment.md",
+  "source": "1_03_equipment.md",
   "columns": [
     "d6",
     "Armor",

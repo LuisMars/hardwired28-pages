@@ -1,12 +1,30 @@
 {
   "table_name": "Atributos",
-  "source": "02_warbands.md",
-  "columns": ["Attribute", "Use"],
-  "align": ["left", "left"],
-  "display_columns": ["Atributo", "Uso"],
+  "source": "1_02_warbands.md",
+  "columns": [
+    "Attribute",
+    "Use"
+  ],
+  "align": [
+    "left",
+    "left"
+  ],
+  "display_columns": [
+    "Atributo",
+    "Uso"
+  ],
   "items": [
-    {"attribute": "`Combate`", "use": "Las tiradas de ataque"},
-    {"attribute": "`Defensa`", "use": "Resistir ataques"},
-    {"attribute": "`Astucia`", "use": "**Buscar**, **Interrogar**, las tiradas de tecnología"}
+    {
+      "attribute": "`Combate`",
+      "use": "Las tiradas de ataque"
+    },
+    {
+      "attribute": "`Defensa`",
+      "use": "Resistir ataques"
+    },
+    {
+      "attribute": "`Astucia`",
+      "use": "**Buscar**, **Interrogar**, las tiradas de tecnología"
+    }
   ]
 }

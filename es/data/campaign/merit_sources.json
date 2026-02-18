@@ -1,0 +1,11 @@
+{
+  "table_name": "Fuentes de Mérito",
+  "source": "3_10_postgame.md",
+  "columns": ["Source", "Merits", "Who"],
+  "align": ["left", "center", "left"],
+  "display_columns": ["Fuente", "Méritos", "Quién"],
+  "items": [
+    {"source": "Miniatura enemiga `Fuera de Combate`", "merits": "1", "who": "Miniatura que causó la baja"},
+    {"source": "`Jefe` enemigo `Fuera de Combate`", "merits": "+1", "who": "Miniatura que causó la baja"}
+  ]
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="corporate">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hardwired 28 - Generador de Escenario</title>
+    <script>document.documentElement.dataset.theme = 'corporate';</script>
+    <meta property="og:title" content="Hardwired 28 - Generador de Escenario">
+    <meta property="og:description" content="Juego de escaramuzas cablepunk corporativo">
+    <meta property="og:image" content="http://hardwired28.luismars.com/img/social.png">
+    <meta property="og:url" content="http://hardwired28.luismars.com/es/scenario/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="../../style-base.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { margin: 0; }
+        code {
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            background-color: #f0f0f0;
+            padding: 1px 3px;
+            border-radius: 2px;
+        }
+        .loading { display: flex; justify-content: center; align-items: center; height: 100vh; background: #F1F5F9; color: #1E293B; font-size: 1.5rem; }
+        [data-theme="zorn"] .loading { background: #1a1a2e; color: #fff; }
+        [data-theme="hallucination"] .loading { background: #212121; color: #fff; }
+    </style>
+</head>
+<body class="has-app-menu">
+    <nav class="app-menu" data-theme="corporate" data-open="false" aria-label="Navegación">
+        <div class="app-menu__inner">
+            <a class="app-menu__brand" href="../">Hardwired 28</a>
+            <button class="app-menu__toggle" type="button" onclick="toggleMenu()" aria-label="Menú"></button>
+            <div class="app-menu__links">
+                <a href="../rulebook">Reglamento</a>
+                <a href="../print">Imprimir</a>
+                <a href="../quick-reference">Referencia Rápida</a>
+                <a href="../builder/">Creador de Plantillas</a>
+                <a href="./" class="current">Escenarios</a>
+                <a href="../../scenario/">English</a>
+            </div>
+        </div>
+    </nav>
+    <div id="root"><div class="loading">Cargando Generador de Escenario...</div></div>
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('.app-menu');
+            if (!nav) return;
+            nav.dataset.open = nav.dataset.open === 'true' ? 'false' : 'true';
+        }
+    </script>
+
+    <script>
+        window.SCENARIO_DATA = null;
+        window.LOCALE = 'es';
+
+        const fetchJson = url => fetch(url).then(r => r.ok ? r.json() : null).catch(() => null);
+
+        // Try ES data first, fall back to shared EN data
+        function fetchLocaleJson(path) {
+            return fetchJson(`../data/${path}`)
+                .then(data => data || fetchJson(`../../data/${path}`));
+        }
+
+        Promise.all([
+            // Mission tables
+            fetchLocaleJson('missions/mission_table.json'),
+            fetchLocaleJson('missions/mission_descriptions.json'),
+            fetchLocaleJson('missions/deployment.json'),
+            fetchLocaleJson('missions/coworker_setup.json'),
+            fetchLocaleJson('missions/coworker_modifiers.json'),
+            fetchLocaleJson('missions/hostile_timing.json'),
+            fetchLocaleJson('missions/hostile_factions.json'),
+            fetchLocaleJson('missions/loot_layout.json'),
+            fetchLocaleJson('missions/loot_modifiers.json'),
+            fetchLocaleJson('missions/spawn_location.json'),
+            // Campaign advantage tables
+            fetchLocaleJson('campaign/evidence_gap.json'),
+            fetchLocaleJson('campaign/setup_advantages.json'),
+            fetchLocaleJson('campaign/tactical_advantages.json'),
+            // Hostile faction data + coworkers
+            fetchLocaleJson('hostiles/scrapers.json'),
+            fetchLocaleJson('hostiles/feral_crews.json'),
+            fetchLocaleJson('hostiles/wave_callers.json'),
+            fetchLocaleJson('hostiles/static_wraiths.json'),
+            fetchLocaleJson('hostiles/feral_automata.json'),
+            fetchLocaleJson('hostiles/cable_feeders.json'),
+            fetchLocaleJson('hostiles/coworkers.json'),
+            // Lore templates
+            fetchLocaleJson('lore/mission_lore.json'),
+        ])
+        .then(([
+            missionTable, missionDescriptions,
+            deployment, coworkerSetup, coworkerModifiers,
+            hostileTiming, hostileFactions, lootLayout, lootModifiers, spawnLocation,
+            evidenceGap, setupAdvantages, tacticalAdvantages,
+            scrapers, feralCrews, waveCallers, staticWraiths, feralAutomata, cableFeeders, coworkers,
+            loreData,
+        ]) => {
+            const factionData = {
+                'hostiles/scrapers.json': scrapers,
+                'hostiles/feral_crews.json': feralCrews,
+                'hostiles/wave_callers.json': waveCallers,
+                'hostiles/static_wraiths.json': staticWraiths,
+                'hostiles/feral_automata.json': feralAutomata,
+                'hostiles/cable_feeders.json': cableFeeders,
+            };
+            // Attach pre-built descriptions to mission table items
+            (missionTable?.items || []).forEach(item => {
+                if (item.file && missionDescriptions?.[item.file]) {
+                    item.description = missionDescriptions[item.file];
+                }
+            });
+            window.SCENARIO_DATA = {
+                missionTable, deployment, coworkerSetup, coworkerModifiers,
+                hostileTiming, hostileFactions, lootLayout, lootModifiers, spawnLocation,
+                evidenceGap, setupAdvantages, tacticalAdvantages,
+                factionData, coworkers, loreData,
+            };
+        })
+        .then(() => {
+            const cacheBust = '?v=' + Date.now();
+            return fetch('../../scenario-generator.jsx' + cacheBust)
+                .then(r => r.text())
+                .then(code => {
+                    const transformed = Babel.transform(code, { presets: ['react'] }).code;
+                    const script = document.createElement('script');
+                    script.textContent = transformed;
+                    document.body.appendChild(script);
+                });
+        })
+        .catch(err => {
+            document.getElementById('root').innerHTML =
+                '<div class="loading" style="flex-direction:column;"><div>Error al cargar el generador</div><div style="font-size:0.8rem;margin-top:1rem;">' + err.message + '</div></div>';
+            console.error(err);
+        });
+    </script>
+</body>
+</html>

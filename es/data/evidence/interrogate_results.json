@@ -1,16 +1,56 @@
 {
   "table_name": "Resultados de Interrogatorio",
-  "source": "08_evidence.md",
-  "columns": ["2d4", "Result", "Effect"],
-  "align": ["center", "left", "left"],
-  "display_columns": ["2d4", "Resultado", "Efecto"],
+  "source": "3_02_evidence.md",
+  "columns": [
+    "2d4",
+    "Result",
+    "Effect"
+  ],
+  "align": [
+    "center",
+    "left",
+    "left"
+  ],
+  "display_columns": [
+    "2d4",
+    "Resultado",
+    "Efecto"
+  ],
   "items": [
-    {"roll": 2, "result": "Datos Falsos", "effect": "Pierde 1 `Prueba`"},
-    {"roll": 3, "result": "Desvío", "effect": "Nada"},
-    {"roll": 4, "result": "Soborno", "effect": "10 subs"},
-    {"roll": 5, "result": "Rumor", "effect": "1 `Pista`"},
-    {"roll": 6, "result": "Coopera", "effect": "1 `Prueba`"},
-    {"roll": 7, "result": "Hablador", "effect": "1 `Prueba`, +1 `Pista`"},
-    {"roll": 8, "result": "Revelación", "effect": "1 `Prueba`, +2 `Pistas`"}
+    {
+      "roll": 2,
+      "result": "Datos Falsos",
+      "effect": "Pierde 1 `Prueba`"
+    },
+    {
+      "roll": 3,
+      "result": "Desvío",
+      "effect": "Nada"
+    },
+    {
+      "roll": 4,
+      "result": "Soborno",
+      "effect": "10 subs"
+    },
+    {
+      "roll": 5,
+      "result": "Rumor",
+      "effect": "1 `Pista`"
+    },
+    {
+      "roll": 6,
+      "result": "Coopera",
+      "effect": "1 `Prueba`"
+    },
+    {
+      "roll": 7,
+      "result": "Hablador",
+      "effect": "1 `Prueba`, +1 `Pista`"
+    },
+    {
+      "roll": 8,
+      "result": "Revelación",
+      "effect": "1 `Mérito`"
+    }
   ]
 }

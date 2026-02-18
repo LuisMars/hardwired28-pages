@@ -1,14 +1,46 @@
 {
   "table_name": "`Projectile` Critical",
-  "source": "05_criticals.md",
-  "columns": ["d6", "Result", "Effect"],
-  "align": ["center", "left", "left"],
+  "source": "1_06_criticals.md",
+  "columns": [
+    "d6",
+    "Result",
+    "Effect"
+  ],
+  "align": [
+    "center",
+    "left",
+    "left"
+  ],
   "items": [
-    {"roll": 1, "result": "Grazed", "effect": "+d4 damage"},
-    {"roll": 2, "result": "Punctured", "effect": "2 damage per activation (doesn't stack)"},
-    {"roll": 3, "result": "Staggered", "effect": "`-1 DT` `Defense` permanently"},
-    {"roll": 4, "result": "Shot Through", "effect": "Drop weapon (at model's position)"},
-    {"roll": 5, "result": "Riddled", "effect": "`-1 DT` all attributes permanently"},
-    {"roll": "6+", "result": "Gutshot", "effect": "`OoA`, -2 Injury roll"}
+    {
+      "roll": 1,
+      "result": "Grazed",
+      "effect": "+d4 damage"
+    },
+    {
+      "roll": 2,
+      "result": "Punctured",
+      "effect": "2 damage per activation (doesn't stack)"
+    },
+    {
+      "roll": 3,
+      "result": "Staggered",
+      "effect": "`-1 DT` `Defense` permanently"
+    },
+    {
+      "roll": 4,
+      "result": "Shot Through",
+      "effect": "Drop weapon (at model's position)"
+    },
+    {
+      "roll": 5,
+      "result": "Riddled",
+      "effect": "`-1 DT` all attributes permanently"
+    },
+    {
+      "roll": "6+",
+      "result": "Gutshot",
+      "effect": "`OoA`, -2 Injury roll"
+    }
   ]
 }

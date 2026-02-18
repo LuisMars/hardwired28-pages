@@ -1,0 +1,54 @@
+{
+  "table_name": "Preparación de Compañeros",
+  "source": "3_01_campaign.md",
+  "columns": [
+    "d6",
+    "Setup"
+  ],
+  "align": [
+    "center",
+    "left"
+  ],
+  "display_columns": [
+    "d6",
+    "Preparación"
+  ],
+  "items": [
+    {
+      "roll": "1",
+      "setup": "Tier `Enjambre`, a 6\" del centro",
+      "tier": "swarm",
+      "map": "area circle center 6 green \"Zona Compañeros\""
+    },
+    {
+      "roll": "2",
+      "setup": "Tier `Enjambre`, borde aleatorio",
+      "tier": "swarm",
+      "map": ""
+    },
+    {
+      "roll": "3",
+      "setup": "Tier `Normal`, 4\"+ del centro (no más de 8\")",
+      "tier": "normal",
+      "map": "area ring center 4 8 green \"Zona Compañeros\""
+    },
+    {
+      "roll": "4",
+      "setup": "Tier `Élite`, alternad colocando en cualquier lugar (6\"+ de bordes)",
+      "tier": "elite",
+      "map": "area box 6 6 18 18 green \"Zona Compañeros\""
+    },
+    {
+      "roll": "5",
+      "setup": "Tier `Normal`, a 3\" de cualquier `Marcador de Botín` (sin marcadores: centro)",
+      "tier": "normal",
+      "map": ""
+    },
+    {
+      "roll": "6",
+      "setup": "Tier `Élite`, a 3\" del centro",
+      "tier": "elite",
+      "map": "area circle center 3 green \"Zona Compañeros\""
+    }
+  ]
+}

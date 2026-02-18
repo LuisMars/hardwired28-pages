@@ -1,10 +1,22 @@
 {
   "table_name": "Values",
-  "source": "02_warbands.md",
-  "columns": ["Value", "Use"],
-  "align": ["left", "left"],
+  "source": "1_02_warbands.md",
+  "columns": [
+    "Value",
+    "Use"
+  ],
+  "align": [
+    "left",
+    "left"
+  ],
   "items": [
-    {"value": "`Health`", "use": "Damage until `Out of Action`"},
-    {"value": "`Move`", "use": "Distance per activation (inches)"}
+    {
+      "value": "`Health`",
+      "use": "Damage until `Out of Action`"
+    },
+    {
+      "value": "`Move`",
+      "use": "Distance per activation (inches)"
+    }
   ]
 }

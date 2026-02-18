@@ -1,14 +1,51 @@
 {
   "table_name": "Modificadores de Compañeros",
-  "source": "09_campaign.md",
-  "columns": ["d6", "Modificador", "Efecto"],
-  "align": ["center", "left", "left"],
+  "source": "3_01_campaign.md",
+  "columns": [
+    "d6",
+    "Modifier",
+    "Effect"
+  ],
+  "align": [
+    "center",
+    "left",
+    "left"
+  ],
+  "display_columns": [
+    "d6",
+    "Modificador",
+    "Efecto"
+  ],
   "items": [
-    {"roll": 1, "name": "Estándar", "effect": "`Interrogar` normal"},
-    {"roll": 2, "name": "Informante", "effect": "`+2 ND` al `Interrogar`. Vale 1 `Prueba` + 1 `Pista`. Repite resultados de 0"},
-    {"roll": 3, "name": "Sobornado", "effect": "`+1 ND` al `Interrogar`. Paga 15 subs: éxito automático (aún tira tabla de resultado)"},
-    {"roll": 4, "name": "Aterrorizado", "effect": "`-1 ND` al `Interrogar`. Siempre usa comportamiento Huir a mitad de `Movimiento` (ignora la tirada de IA)"},
-    {"roll": 5, "name": "Escolta", "effect": "`-1 ND` al `Interrogar`. No se puede `Interrogar` in situ. Llevar a tu borde para puntuar"},
-    {"roll": 6, "name": "Hostil", "effect": "`-2 ND` al `Interrogar`. Empieza marcado como Hostil (usa columnas Atq)"}
+    {
+      "roll": 1,
+      "name": "Estándar",
+      "effect": "Sin modificador"
+    },
+    {
+      "roll": 2,
+      "name": "Asustadizo",
+      "effect": "Tras `Interrogar` fallido, este Compañero `Huye`"
+    },
+    {
+      "roll": 3,
+      "name": "Sistema de Compañeros",
+      "effect": "Necesita 2 modelos amigos a 1\" para `Interrogar`"
+    },
+    {
+      "roll": 4,
+      "name": "Rencoroso",
+      "effect": "Tras `Interrogar` fallido, se vuelve Hostil"
+    },
+    {
+      "roll": 5,
+      "name": "Hablador",
+      "effect": "Duplicar al Compañero: `+1` al resultado. Triple+: `+2`, etc."
+    },
+    {
+      "roll": 6,
+      "name": "Claustrofóbico",
+      "effect": "Se vuelve Hostil si hay 2+ modelos a 1\""
+    }
   ]
 }

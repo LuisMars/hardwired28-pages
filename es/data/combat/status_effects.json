@@ -1,11 +1,26 @@
 {
   "table_name": "Estados",
-  "source": "04_combat.md",
-  "columns": ["Status", "Effect"],
-  "align": ["left", "left"],
-  "display_columns": ["Estado", "Efecto"],
+  "source": "1_04_combat.md",
+  "columns": [
+    "Status",
+    "Effect"
+  ],
+  "align": [
+    "left",
+    "left"
+  ],
+  "display_columns": [
+    "Estado",
+    "Efecto"
+  ],
   "items": [
-    {"status": "`Fuera de Combate`", "effect": "`Salud` a 0 o menos. No puede actuar. Tira en Heridas tras partida"},
-    {"status": "**Huida**", "effect": "Mueve al máximo hacia borde más cercano. No puede actuar. Sale si llega al borde. Repite `Astucia` vs. 2d6 cada activación para recuperar."}
+    {
+      "status": "`Fuera de Combate`",
+      "effect": "`Salud` a 0 o menos. No puede actuar. Tira en Heridas tras partida"
+    },
+    {
+      "status": "**Huida**",
+      "effect": "Mueve al máximo hacia borde más cercano. No puede actuar. Sale si llega al borde. Repite `Astucia` vs. 2d6 cada activación para recuperar."
+    }
   ]
 }

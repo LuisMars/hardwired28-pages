@@ -1,0 +1,48 @@
+{
+  "table_name": "Ubicación de Aparición",
+  "source": "3_01_campaign.md",
+  "columns": [
+    "d6",
+    "Location"
+  ],
+  "align": [
+    "center",
+    "left"
+  ],
+  "display_columns": [
+    "d6",
+    "Ubicación"
+  ],
+  "items": [
+    {
+      "roll": "1",
+      "location": "Borde de despliegue no usado aleatorio",
+      "map": "spawn left red"
+    },
+    {
+      "roll": "2",
+      "location": "Centro del tablero",
+      "map": "spawn center red"
+    },
+    {
+      "roll": "3",
+      "location": "Borde más cercano a la última acción `Registrar` o `Interrogar` (si no hay: aleatorio)",
+      "map": ""
+    },
+    {
+      "roll": "4",
+      "location": "Borde más cercano al Agresor",
+      "map": ""
+    },
+    {
+      "roll": "5",
+      "location": "Dirección aleatoria, a d4\" del centro",
+      "map": "area circle center 4 orange \"Zona Aparición\""
+    },
+    {
+      "roll": "6",
+      "location": "Dirección aleatoria, a d4+2\" del centro",
+      "map": "area circle center 6 orange \"Zona Aparición\""
+    }
+  ]
+}

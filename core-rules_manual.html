@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hardwired 28 - Core Rules 0.6.6-beta</title>
-    <meta property="og:title" content="Hardwired 28 - Core Rules 0.6.6-beta">
+    <title>Hardwired 28 - Core Rules 0.7.0-beta</title>
+    <meta property="og:title" content="Hardwired 28 - Core Rules 0.7.0-beta">
     <meta property="og:description" content="Corporate cablepunk skirmish wargame">
     <meta property="og:image" content="http://hardwired28.luismars.com/img/social.png">
     <meta property="og:url" content="http://hardwired28.luismars.com/">
@@ -27,14 +27,20 @@
                 <div class="app-menu__dropdown">
                     <button class="app-menu__dropdown-toggle current">Print</button>
                     <div class="app-menu__submenu">
-                        <a href="print">All Rules</a>
-                        <a href="core-rules">Core Rules</a>
-                        <a href="inhuman-resources">Inhuman Resources</a>
-                        <a href="campaign">Campaign</a>
+                        <div class="app-menu__nested">
+                            <span class="app-menu__nested-label">Singles</span>
+                            <div class="app-menu__nested-submenu">
+                                <a href="print">All Rules</a>
+                                <a href="core-rules">Core Rules</a>
+                                <a href="inhuman-resources">Inhuman Resources</a>
+                                <a href="campaign">Campaign</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <a href="quick-reference">Quick Reference</a>
                 <a href="builder/index">Squad Builder</a>
+                <a href="scenario/index">Scenarios</a>
                 <a href="es/core-rules">Castellano</a>
             </div>
         </div>
@@ -57,7 +63,7 @@
             <li class="toc-h3"><a href="#opposed-rolls">Opposed rolls</a></li>
             <li class="toc-h3"><a href="#dice-tiers-dt">Dice Tiers (DT)</a></li>
             <li class="toc-h3"><a href="#attribute-caps">Attribute Caps</a></li>
-            <li class="toc-h3"><a href="#optional-dt-overflow">Optional: DT Overflow</a></li>
+            <li class="toc-h3"><a href="#dt-overflow">DT Overflow</a></li>
             <li class="toc-h1"><a href="#personnel-allocation">Personnel Allocation</a></li>
             <li class="toc-h2"><a href="#attributes">Attributes</a></li>
             <li class="toc-h3"><a href="#technician">Technician</a></li>
@@ -99,8 +105,7 @@
             <li class="toc-h2"><a href="#leaving-the-board">Leaving the Board</a></li>
             <li class="toc-h1"><a href="#broadcast-powers">Broadcast Powers</a></li>
             <li class="toc-h2"><a href="#casting">Casting</a></li>
-            <li class="toc-h2"><a href="#offensive-powers">Offensive Powers</a></li>
-            <li class="toc-h2"><a href="#support-powers">Support Powers</a></li>
+            <li class="toc-h2"><a href="#powers">Powers</a></li>
             <li class="toc-h1"><a href="#critical-tables">Critical Tables</a></li>
             <li class="toc-h2"><a href="#bladed-critical">Bladed Critical</a></li>
             <li class="toc-h2"><a href="#blunt-critical">Blunt Critical</a></li>
@@ -115,21 +120,21 @@
             <li class="toc-h2"><a href="#broadcast-fumble">Broadcast Fumble</a></li>
             <li class="toc-h1"><a href="#samples">Samples</a></li>
             <li class="toc-h2"><a href="#boss-12">Boss [12]</a></li>
-            <li class="toc-h3"><a href="#16-hp-4-mov">16 HP, 4" MOV</a></li>
+            <li class="toc-h3"><a href="#16-health-4-move">16 Health, 4" Move</a></li>
             <li class="toc-h2"><a href="#brute-12">Brute [12]</a></li>
-            <li class="toc-h3"><a href="#14-hp-3-mov">14 HP, 3" MOV</a></li>
+            <li class="toc-h3"><a href="#14-health-3-move">14 Health, 3" Move</a></li>
             <li class="toc-h2"><a href="#veteran-12">Veteran [12]</a></li>
-            <li class="toc-h3"><a href="#13-hp-4-mov">13 HP, 4" MOV</a></li>
+            <li class="toc-h3"><a href="#13-health-4-move">13 Health, 4" Move</a></li>
             <li class="toc-h2"><a href="#gunner-12">Gunner [12]</a></li>
-            <li class="toc-h3"><a href="#14-hp-4-mov">14 HP, 4" MOV</a></li>
+            <li class="toc-h3"><a href="#14-health-4-move">14 Health, 4" Move</a></li>
             <li class="toc-h2"><a href="#scout-12">Scout [12]</a></li>
-            <li class="toc-h3"><a href="#12-hp-6-mov">12 HP, 6" MOV</a></li>
+            <li class="toc-h3"><a href="#12-health-6-move">12 Health, 6" Move</a></li>
             <li class="toc-h2"><a href="#zealot-12">Zealot [12]</a></li>
-            <li class="toc-h3"><a href="#12-hp-5-mov">12 HP, 5" MOV</a></li>
+            <li class="toc-h3"><a href="#12-health-5-move">12 Health, 5" Move</a></li>
             <li class="toc-h2"><a href="#agent-12">Agent [12]</a></li>
-            <li class="toc-h3"><a href="#14-hp-4-mov_1">14 HP, 4" MOV</a></li>
+            <li class="toc-h3"><a href="#14-health-4-move_1">14 Health, 4" Move</a></li>
             <li class="toc-h2"><a href="#broadcaster-12">Broadcaster [12]</a></li>
-            <li class="toc-h3"><a href="#14-hp-4-mov_2">14 HP, 4" MOV</a></li>
+            <li class="toc-h3"><a href="#14-health-4-move_2">14 Health, 4" Move</a></li>
         </ul>
     </nav>
     <div class="sidebar-overlay" onclick="toggleSidebar()"></div>
@@ -145,7 +150,7 @@
 
 
 <h1 id="hardwired-28_1">Hardwired 28</h1>
-<p><em>0.6.6-beta</em> by LuisMars</p>
+<p><em>0.7.0-beta</em> by LuisMars</p>
 <h2 id="the-great-complex">The Great Complex</h2>
 <p>A vertical megastructure three kilometers tall. Cables hang from every surface. They bundle into trunks thicker than bodies, snake through walls, coil underfoot. The Complex was meant to be paradise. Now it decays.</p>
 <p>Wired connection is sacred. Wireless is heresy. Since the Tethering, wireless has meant excommunication. Debts are inherited. Children are born subscribed.</p>
@@ -178,12 +183,12 @@
 - 3-6 Coworker miniatures (placed at setup)<br />
 - 5+ Hostile miniatures (for spawns)<br />
 - Dice: 2d4, 2d6, 2d8, 2d10, 2d12<br />
-- Bag with Activation Tokens (chips, dice, or similar markers - one per model, different colors per faction)<br />
+- Bag with Activation Tokens (chips, dice, or similar markers: one per model, different colors per faction)<br />
 - Measuring tape (inches)<br />
-- 2' × 2' board with dense terrain<br />
+- 2' by 2' board with dense terrain<br />
 - <code>Loot Markers</code> (5-6)</p>
 <p><strong>Optional</strong><br />
-- Condition markers (Activated, Blessed, <code>OoA</code>, <code>Flee</code>, <code>Engaged</code>, <code>Bleed</code>, etc.)<br />
+- Condition markers (<code>OoA</code>, <code>Flee</code>, <code>Engaged</code>, <code>Bleed</code>, etc.)<br />
 - Warband roster sheet<br />
 - <code>Evidence</code> tracker</p>
 
@@ -198,7 +203,7 @@
 <p><code>-1 DT</code>: Use the next smaller die type.</p>
 <h3 id="attribute-caps">Attribute Caps</h3>
 <p>Never below 2d4 or above 2d12.</p>
-<h3 id="optional-dt-overflow">Optional: DT Overflow</h3>
+<h3 id="dt-overflow">DT Overflow</h3>
 <p>Modifiers that exceed the limits pass to your opponent with the opposite effect.</p>
 <ul>
 <li>2d4 with <code>-1 DT</code>: you roll 2d4, opponent rolls at <code>+1 DT</code></li>
@@ -316,8 +321,6 @@
 <p><strong>Gear and consumables:</strong> no restrictions.</p>
 <p><code>Broadcasters</code> pick one starting Power from the list.</p>
 
-
-<div class="spacer"></div>
 
 <h2 id="contract-types">Contract Types</h2>
 <table>
@@ -848,7 +851,7 @@
 
 
 <h2 id="armor">Armor</h2>
-<p>One armor piece per model; wearing armor makes the model <strong>armored</strong>.</p>
+<p>One armor piece per model; makes model <code>armored</code>.</p>
 <h2 id="light-armor">Light Armor</h2>
 <p>Base: 1 damage reduction</p>
 <table>
@@ -1140,7 +1143,7 @@
 </tbody>
 </table>
 <h2 id="cybernetics">Cybernetics</h2>
-<p>Permanently repair penalties from Injuries, Criticals, or Fumbles. Requires matching penalty (e.g., <code>-1 DT</code> <code>Combat</code> to buy Combat Processor).</p>
+<p>Repair Injury, Critical, or Fumble penalties. Requires matching penalty (e.g., <code>-1 DT</code> <code>Combat</code> for Combat Processor).</p>
 <table>
 <thead>
 <tr>
@@ -1196,12 +1199,13 @@
 <h2 id="activation">Activation</h2>
 <ol>
 <li>Each player rolls <strong>Corporate Blessings</strong> (d8 three times)</li>
-<li>Add Activation Tokens to a shared bag: one per player model not <code>OoA</code>, one per hostile spawn group</li>
+<li>Add Activation Tokens to a shared bag: one per player model, one per hostile spawn group</li>
 <li>Draw a token: that faction activates one model (Hostiles and Coworkers follow their AI table)</li>
-<li>All models <code>OoA</code>: discard token</li>
-<li>Each activation: <strong>Move + Action</strong> OR <strong>Action + Move</strong></li>
+<li><strong>Player model <code>OoA</code>:</strong> Discard token immediately. <strong>Hostile/Coworker groups:</strong> Token stays in bag.</li>
+<li>Each activation: one Move (up to <code>Move"</code>) and one Action, in either order</li>
 <li>Repeat from 3 until bag is empty</li>
 </ol>
+<p><strong>Once Per Round:</strong> Each model activates exactly once. <code>Move Again</code> counts as your activation's single action.</p>
 <h2 id="corporate-blessings">Corporate Blessings</h2>
 <p>No model can receive two blessings per round.</p>
 <table>
@@ -1280,7 +1284,7 @@
 </tr>
 <tr>
 <td style="text-align: left;"><code>Aim</code></td>
-<td style="text-align: left;">Declare target. <code>+1 DT</code> <code>Combat</code> on your next shot (lost if moved or damaged)</td>
+<td style="text-align: left;">Declare target. <code>+1 DT</code> <code>Combat</code> on your next shot (lost if moved or hit)</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>Interact</code></td>
@@ -1304,7 +1308,7 @@
 <p>Move up to your <code>Move</code> value. Measure from base edge.</p>
 <h2 id="melee-engagement">Melee Engagement</h2>
 <ul>
-<li>Models within 1" of enemy are <code>Engaged</code></li>
+<li>Models within 1" of enemy (base edge to base edge) are <code>Engaged</code></li>
 <li>Leaving engagement without <code>Disengage</code>: enemy gets free attack at <code>-1 DT</code></li>
 <li>No melee weapon: use Improvised Combat (see Weapons &amp; Armor)</li>
 </ul>
@@ -1348,8 +1352,8 @@
 <li>Attacker declares target and weapon</li>
 <li>In melee, defender chooses <code>Defense</code> or <code>Riposte</code></li>
 <li>Both roll simultaneously:</li>
-<li><strong>Attacker:</strong> <code>Combat</code> <code>DT</code></li>
-<li><strong>Defender:</strong> <code>Defense</code> <code>DT</code> (or <code>Combat</code> <code>-1 DT</code> if <code>Riposting</code>)</li>
+<li><strong>Attacker:</strong> <code>Combat</code> <strong>DT</strong></li>
+<li><strong>Defender:</strong> <code>Defense</code> <strong>DT</strong> (or <code>Combat</code> <code>-1 DT</code> if <code>Riposting</code>)</li>
 <li>Compare results:</li>
 <li><strong>Attacker wins:</strong> Hit</li>
 <li><strong>Defender wins:</strong> Avoided (<code>Riposte</code>: also deal weapon damage to attacker)</li>
@@ -1358,7 +1362,7 @@
 
 <h2 id="ranged-defense">Ranged Defense</h2>
 <ul>
-<li>Roll <code>Defense</code> <code>DT</code> (no <code>Riposte</code> option)</li>
+<li>Roll <code>Defense</code> <strong>DT</strong> (no <code>Riposte</code> option)</li>
 </ul>
 <blockquote>
 <p>"Trajectory data is logged automatically. Missed shots are billed at standard rates."<br />
@@ -1403,7 +1407,7 @@
 <h2 id="grenades_1">Grenades</h2>
 <ul>
 <li>Throw at a point within 6" (action). One use.</li>
-<li>Roll <code>Combat</code> vs 2d6. Failure: scatters d6". 2d6 doubles you: lands at your feet.</li>
+<li>Roll <code>Combat</code> vs 2d6. Failure: scatters d6" from throw point (ignores terrain). 2d6 doubles you: lands at your feet.</li>
 <li>3" blast hits all models (friend and foe). Roll damage for each.</li>
 </ul>
 <h2 id="critical-hits">Critical Hits</h2>
@@ -1467,21 +1471,18 @@
 <li>No range limit (requires LoS)</li>
 <li>Offensive powers: roll <code>Wits</code> vs. target <code>Wits</code></li>
 <li>Support powers: roll <code>Wits</code> vs. 2d6 (target must be friendly)</li>
-<li>Triple or more: effect applies to all valid targets within 3"</li>
+<li>Triple or more: effect automatically applies to all valid targets within 3" (not chosen by caster)</li>
 <li>Defender triples or more: roll <code>Broadcast</code> Fumble table</li>
 </ul>
-<blockquote>
-<p>"Every cable is a leash. Every toll is a collar. We will cut them all."<br />
-<strong>Open Channel Broadcast</strong></p>
-</blockquote>
 
 
-<h2 id="offensive-powers">Offensive Powers</h2>
+<h2 id="powers">Powers</h2>
 <table>
 <thead>
 <tr>
-<th style="text-align: center;">d4</th>
+<th style="text-align: center;">d8</th>
 <th style="text-align: left;">Power</th>
+<th style="text-align: left;">Type</th>
 <th style="text-align: left;">Effect</th>
 </tr>
 </thead>
@@ -1489,57 +1490,57 @@
 <tr>
 <td style="text-align: center;">1</td>
 <td style="text-align: left;">Signal Jam</td>
+<td style="text-align: left;">Offensive</td>
 <td style="text-align: left;"><code>-1 DT</code> all rolls until next activation</td>
 </tr>
 <tr>
 <td style="text-align: center;">2</td>
 <td style="text-align: left;">Weapon Lock</td>
+<td style="text-align: left;">Offensive</td>
 <td style="text-align: left;">Target drops one weapon</td>
 </tr>
 <tr>
 <td style="text-align: center;">3</td>
 <td style="text-align: left;">Neural Trap</td>
+<td style="text-align: left;">Offensive</td>
 <td style="text-align: left;">d6 damage (ignores armor) if target moves next activation</td>
 </tr>
 <tr>
 <td style="text-align: center;">4</td>
 <td style="text-align: left;">Resonance Push</td>
+<td style="text-align: left;">Offensive</td>
 <td style="text-align: left;">Push target d6" in any direction</td>
 </tr>
-</tbody>
-</table>
-<h2 id="support-powers">Support Powers</h2>
-<table>
-<thead>
 <tr>
-<th style="text-align: center;">d4</th>
-<th style="text-align: left;">Power</th>
-<th style="text-align: left;">Effect</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">1</td>
+<td style="text-align: center;">5</td>
 <td style="text-align: left;">Force Field</td>
+<td style="text-align: left;">Support</td>
 <td style="text-align: left;"><code>+2 DT</code> <code>Defense</code> vs. ranged until next activation</td>
 </tr>
 <tr>
-<td style="text-align: center;">2</td>
+<td style="text-align: center;">6</td>
 <td style="text-align: left;">Focus</td>
+<td style="text-align: left;">Support</td>
 <td style="text-align: left;">Add 2 Activation Tokens for target to the bag</td>
 </tr>
 <tr>
-<td style="text-align: center;">3</td>
+<td style="text-align: center;">7</td>
 <td style="text-align: left;">Swap</td>
+<td style="text-align: left;">Support</td>
 <td style="text-align: left;">Switch positions with target (caster sees both, within 12")</td>
 </tr>
 <tr>
-<td style="text-align: center;">4</td>
+<td style="text-align: center;">8</td>
 <td style="text-align: left;">Ping</td>
+<td style="text-align: left;">Support</td>
 <td style="text-align: left;">Target ignores cover and sees through walls until next activation</td>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<p>"Every cable is a leash. Every toll is a collar. We will cut them all."<br />
+<strong>Open Channel Broadcast</strong></p>
+</blockquote>
 
 
 
@@ -2016,68 +2017,68 @@
 
 <h1 id="samples">Samples</h1>
 <h2 id="boss-12">Boss [12]</h2>
-<h3 id="16-hp-4-mov">16 HP, 4" MOV</h3>
+<h3 id="16-health-4-move">16 <code>Health</code>, 4" <code>Move</code></h3>
 <ul>
-<li>COM 2d8, DEF 2d6, WIT 2d6</li>
-<li>Needle Gun (4): d4 <code>Toxic</code>, +1 damage vs. wounded</li>
-<li>Shiv (4): d4 <code>Toxic</code>, +1 damage vs. wounded</li>
+<li><code>Combat</code> 2d8, <code>Defense</code> 2d6, <code>Wits</code> 2d6</li>
+<li>Needle Gun (4): d4 <code>Toxic</code>, +1 vs. wounded</li>
+<li>Shiv (4): d4 <code>Toxic</code>, +1 vs. wounded</li>
 <li>Flak Wrap (4): 1 reduction</li>
 </ul>
 <h2 id="brute-12">Brute [12]</h2>
-<h3 id="14-hp-3-mov">14 HP, 3" MOV</h3>
+<h3 id="14-health-3-move">14 <code>Health</code>, 3" <code>Move</code></h3>
 <ul>
-<li>COM 2d8, DEF 2d6, WIT 2d4</li>
+<li><code>Combat</code> 2d8, <code>Defense</code> 2d6, <code>Wits</code> 2d4</li>
 <li>Sword (10): d6+1 <code>Bladed</code>, re-roll 1s when <code>Riposting</code></li>
 <li>Mesh Wrap (2): 1 reduction</li>
 <li><em>Can wear <code>Heavy</code> armor</em></li>
 </ul>
 <h2 id="veteran-12">Veteran [12]</h2>
-<h3 id="13-hp-4-mov">13 HP, 4" MOV</h3>
+<h3 id="13-health-4-move">13 <code>Health</code>, 4" <code>Move</code></h3>
 <ul>
-<li>COM 2d6, DEF 2d6, WIT 2d6</li>
+<li><code>Combat</code> 2d6, <code>Defense</code> 2d6, <code>Wits</code> 2d6</li>
 <li>Pistol (2): d4 <code>Projectile</code>, <code>-1 DT</code> beyond 6"</li>
-<li>Shiv (4): d4 <code>Toxic</code>, +1 damage vs. wounded</li>
-<li>Protective Lining (6): 1 reduction, -1 to Critical table rolls against you</li>
+<li>Shiv (4): d4 <code>Toxic</code>, +1 vs. wounded</li>
+<li>Protective Lining (6): 1 reduction, -1 Critical rolls against you</li>
 <li><em><code>+1 DT</code> <code>Defense</code> below half <code>Health</code></em></li>
 </ul>
 <h2 id="gunner-12">Gunner [12]</h2>
-<h3 id="14-hp-4-mov">14 HP, 4" MOV</h3>
+<h3 id="14-health-4-move">14 <code>Health</code>, 4" <code>Move</code></h3>
 <ul>
-<li>COM 2d8, DEF 2d6, WIT 2d4</li>
+<li><code>Combat</code> 2d8, <code>Defense</code> 2d6, <code>Wits</code> 2d4</li>
 <li>Laser (9): d6 <code>Energy</code>, <code>+1 DT</code> if not moved this turn</li>
 <li>Knife (3): d4 <code>Bladed</code></li>
-<li><em>Ignores move penalty when shooting, can wear <code>Medium</code> armor</em></li>
+<li><em>No move penalty when shooting, <code>Medium</code> armor</em></li>
 </ul>
 
 
 <h2 id="scout-12">Scout [12]</h2>
-<h3 id="12-hp-6-mov">12 HP, 6" MOV</h3>
+<h3 id="12-health-6-move">12 <code>Health</code>, 6" <code>Move</code></h3>
 <ul>
-<li>COM 2d6, DEF 2d4, WIT 2d8</li>
+<li><code>Combat</code> 2d6, <code>Defense</code> 2d4, <code>Wits</code> 2d8</li>
 <li>Arc Pistol (5): d4 <code>Static</code>, no fumbles</li>
 <li>Light Vest (7): 1 reduction</li>
-<li><em>Free <code>Disengage</code>, <code>Move</code> 3" after deployment</em></li>
+<li><em>Free <code>Disengage</code>, 3" <code>Move</code> after deploy</em></li>
 </ul>
 <h2 id="zealot-12">Zealot [12]</h2>
-<h3 id="12-hp-5-mov">12 HP, 5" MOV</h3>
+<h3 id="12-health-5-move">12 <code>Health</code>, 5" <code>Move</code></h3>
 <ul>
-<li>COM 2d8, DEF 2d4, WIT 2d6</li>
+<li><code>Combat</code> 2d8, <code>Defense</code> 2d4, <code>Wits</code> 2d6</li>
 <li>Injector (9): d6 <code>Toxic</code>, re-roll 1s</li>
 <li>Knife (3): d4 <code>Bladed</code></li>
 <li><em>+2" <code>Move</code> if ending <code>Engaged</code>, <code>+1 DT</code> <code>Combat</code> vs. 2+ enemies, <code>Melee</code> only</em></li>
 </ul>
 <h2 id="agent-12">Agent [12]</h2>
-<h3 id="14-hp-4-mov_1">14 HP, 4" MOV</h3>
+<h3 id="14-health-4-move_1">14 <code>Health</code>, 4" <code>Move</code></h3>
 <ul>
-<li>COM 2d4, DEF 2d6, WIT 2d8</li>
+<li><code>Combat</code> 2d4, <code>Defense</code> 2d6, <code>Wits</code> 2d8</li>
 <li>Pistol (2): d4 <code>Projectile</code>, <code>-1 DT</code> beyond 6"</li>
 <li>Sword (10): d6 <code>Bladed</code>, re-roll 1s when <code>Riposting</code></li>
 <li><em>Re-roll failed <code>Wits</code> tests</em></li>
 </ul>
 <h2 id="broadcaster-12">Broadcaster [12]</h2>
-<h3 id="14-hp-4-mov_2">14 HP, 4" MOV</h3>
+<h3 id="14-health-4-move_2">14 <code>Health</code>, 4" <code>Move</code></h3>
 <ul>
-<li>COM 2d4, DEF 2d6, WIT 2d8</li>
+<li><code>Combat</code> 2d4, <code>Defense</code> 2d6, <code>Wits</code> 2d8</li>
 <li>Prod (5): d4 <code>Energy</code>, target <code>-1 DT</code> next activation</li>
 <li>Padded Vest (7): 1 reduction, reduce <code>Knockback</code> by 1"</li>
 <li><em><code>Melee</code> only, can <code>Cast</code></em></li>

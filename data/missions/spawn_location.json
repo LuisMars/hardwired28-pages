@@ -1,0 +1,14 @@
+{
+  "table_name": "Spawn Location",
+  "source": "3_01_campaign.md",
+  "columns": ["d6", "Location"],
+  "align": ["center", "left"],
+  "items": [
+    {"roll": "1", "location": "Random unused deployment edge", "map": "spawn left red"},
+    {"roll": "2", "location": "Center of board", "map": "spawn center red"},
+    {"roll": "3", "location": "Nearest edge to last `Search` or `Interrogate` action (none yet: random)", "map": ""},
+    {"roll": "4", "location": "Nearest edge to Aggressor", "map": ""},
+    {"roll": "5", "location": "Random direction, d4\" from center", "map": "area circle center 4 orange \"Spawn zone\""},
+    {"roll": "6", "location": "Random direction, d4+2\" from center", "map": "area circle center 6 orange \"Spawn zone\""}
+  ]
+}

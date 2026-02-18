@@ -1,6 +1,6 @@
 {
   "table_name": "Melee Weapons",
-  "source": "03_equipment.md",
+  "source": "1_03_equipment.md",
   "columns": [
     "d20",
     "Weapon",

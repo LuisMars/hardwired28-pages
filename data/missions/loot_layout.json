@@ -1,0 +1,14 @@
+{
+  "table_name": "Loot Layout",
+  "source": "3_01_campaign.md",
+  "columns": ["d6", "Layout", "Rule"],
+  "align": ["center", "left", "left"],
+  "items": [
+    {"roll": "1", "name": "Scattered", "effect": "5 markers. Alternate placing (6\"+ from edges, 3\"+ apart)", "map": "area box 6 6 18 18 yellow \"Loot area\""},
+    {"roll": "2", "name": "None", "effect": "No `Loot Markers` this mission", "map": ""},
+    {"roll": "3", "name": "Central Cache", "effect": "3 markers within 3\" of center (alternate placing)", "map": "area circle center 3 yellow \"Loot area\""},
+    {"roll": "4", "name": "Edge Stash", "effect": "4 markers within 6\" of a non-deployment edge (alternate placing)", "map": "area box 0 0 6 24 yellow \"Loot area\""},
+    {"roll": "5", "name": "Trail", "effect": "4 markers along centerline (evenly spaced)", "map": "obj 4.8 12 \"1\"\nobj 9.6 12 \"2\"\nobj 14.4 12 \"3\"\nobj 19.2 12 \"4\"\nmeasure 0 12 4.8 12\nmeasure 4.8 12 9.6 12\nmeasure 9.6 12 14.4 12\nmeasure 14.4 12 19.2 12\nmeasure 19.2 12 24 12"},
+    {"roll": "6", "name": "Heavy Drop", "effect": "5 markers: 1 in center + 1 at each 6\" diagonal (6\" from center)", "map": "obj 12 12 \"1\"\nobj 7.8 7.8 \"2\"\nobj 16.2 7.8 \"3\"\nobj 7.8 16.2 \"4\"\nobj 16.2 16.2 \"5\"\nmeasure 12 12 7.8 7.8\nmeasure 12 12 16.2 7.8\nmeasure 12 12 7.8 16.2\nmeasure 12 12 16.2 16.2"}
+  ]
+}

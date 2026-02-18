@@ -1,15 +1,51 @@
 {
   "table_name": "Interrogate Results",
-  "source": "08_evidence.md",
-  "columns": ["2d4", "Result", "Effect"],
-  "align": ["center", "left", "left"],
+  "source": "3_02_evidence.md",
+  "columns": [
+    "2d4",
+    "Result",
+    "Effect"
+  ],
+  "align": [
+    "center",
+    "left",
+    "left"
+  ],
   "items": [
-    {"roll": 2, "result": "False Data", "effect": "Lose 1 `Evidence`"},
-    {"roll": 3, "result": "Misdirection", "effect": "Nothing"},
-    {"roll": 4, "result": "Bribe Offer", "effect": "10 subs"},
-    {"roll": 5, "result": "Rumor", "effect": "1 `Lead`"},
-    {"roll": 6, "result": "Cooperates", "effect": "1 `Evidence`"},
-    {"roll": 7, "result": "Talkative", "effect": "1 `Evidence`, +1 `Lead`"},
-    {"roll": 8, "result": "Full Disclosure", "effect": "1 `Evidence`, +2 `Leads`"}
+    {
+      "roll": 2,
+      "result": "False Data",
+      "effect": "Lose 1 `Evidence`"
+    },
+    {
+      "roll": 3,
+      "result": "Misdirection",
+      "effect": "Nothing"
+    },
+    {
+      "roll": 4,
+      "result": "Bribe Offer",
+      "effect": "10 subs"
+    },
+    {
+      "roll": 5,
+      "result": "Rumor",
+      "effect": "1 `Lead`"
+    },
+    {
+      "roll": 6,
+      "result": "Cooperates",
+      "effect": "1 `Evidence`"
+    },
+    {
+      "roll": 7,
+      "result": "Talkative",
+      "effect": "1 `Evidence`, +1 `Lead`"
+    },
+    {
+      "roll": 8,
+      "result": "Full Disclosure",
+      "effect": "1 `Merit`"
+    }
   ]
 }

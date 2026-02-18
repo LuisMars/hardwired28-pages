@@ -1,20 +1,76 @@
 {
   "table_name": "Ascenso",
-  "source": "10_postgame.md",
-  "columns": ["2d6", "Result", "Effect"],
-  "align": ["center", "left", "left"],
-  "display_columns": ["2d6", "Resultado", "Efecto"],
+  "source": "3_10_postgame.md",
+  "columns": [
+    "2d6",
+    "Result",
+    "Effect"
+  ],
+  "align": [
+    "center",
+    "left",
+    "left"
+  ],
+  "display_columns": [
+    "2d6",
+    "Resultado",
+    "Efecto"
+  ],
   "items": [
-    {"roll": "2", "result": "Degradación", "effect": "`-1 ND` al atributo más bajo"},
-    {"roll": "3", "result": "Prima", "effect": "+1 `Salud` máx."},
-    {"roll": "4", "result": "Traslado", "effect": "+1\" `Mov`"},
-    {"roll": "5", "result": "Autorización", "effect": "`+1 ND` `Combate` (o nuevo Poder para `Emisor`)"},
-    {"roll": "6", "result": "Cobertura", "effect": "`+1 ND` `Defensa`"},
-    {"roll": "7", "result": "Promoción", "effect": "Elige: `+1 ND` (cualquier atributo), +1\" `Mov`, +1 `Salud`, o nuevo Poder (solo `Emisor`)"},
-    {"roll": "8", "result": "Formación", "effect": "`+1 ND` `Astucia`"},
-    {"roll": "9", "result": "Aumento", "effect": "`+1 ND` `Combate` (o nuevo Poder para `Emisor`)"},
-    {"roll": "10", "result": "Beneficios", "effect": "+2 `Salud` máx."},
-    {"roll": "11", "result": "Reubicación", "effect": "+2\" `Mov`"},
-    {"roll": "12", "result": "Vía Rápida", "effect": "`+1 ND` a dos atributos diferentes"}
+    {
+      "roll": "2",
+      "result": "Degradación",
+      "effect": "`-1 ND` al atributo más bajo"
+    },
+    {
+      "roll": "3",
+      "result": "Prima",
+      "effect": "+1 `Salud` máx."
+    },
+    {
+      "roll": "4",
+      "result": "Traslado",
+      "effect": "+1\" `Mov`"
+    },
+    {
+      "roll": "5",
+      "result": "Autorización",
+      "effect": "`+1 ND` `Combate` (o Poder)"
+    },
+    {
+      "roll": "6",
+      "result": "Cobertura",
+      "effect": "`+1 ND` `Defensa`"
+    },
+    {
+      "roll": "7",
+      "result": "Promoción",
+      "effect": "Elige: `+1 ND` cualquiera, +1\" `Mov`, +1 `Salud`, o Poder"
+    },
+    {
+      "roll": "8",
+      "result": "Formación",
+      "effect": "`+1 ND` `Astucia`"
+    },
+    {
+      "roll": "9",
+      "result": "Aumento",
+      "effect": "`+1 ND` `Combate` (o Poder)"
+    },
+    {
+      "roll": "10",
+      "result": "Beneficios",
+      "effect": "+2 `Salud` máx."
+    },
+    {
+      "roll": "11",
+      "result": "Reubicación",
+      "effect": "+2\" `Mov`"
+    },
+    {
+      "roll": "12",
+      "result": "Vía Rápida",
+      "effect": "`+1 ND` a dos atributos diferentes"
+    }
   ]
 }

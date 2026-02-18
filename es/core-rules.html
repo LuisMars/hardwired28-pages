@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hardwired 28 - Reglas Básicas 0.6.6-beta</title>
-    <meta property="og:title" content="Hardwired 28 - Reglas Básicas 0.6.6-beta">
+    <title>Hardwired 28 - Reglas Básicas 0.7.0-beta</title>
+    <meta property="og:title" content="Hardwired 28 - Reglas Básicas 0.7.0-beta">
     <meta property="og:description" content="Juego de escaramuzas cablepunk corporativo">
     <meta property="og:image" content="http://hardwired28.luismars.com/img/social.png">
     <meta property="og:url" content="http://hardwired28.luismars.com/es/">
@@ -27,14 +27,20 @@
                 <div class="app-menu__dropdown">
                     <button class="app-menu__dropdown-toggle current">Imprimir</button>
                     <div class="app-menu__submenu">
-                        <a href="print">Todas las Reglas</a>
-                        <a href="core-rules">Reglas Básicas</a>
-                        <a href="inhuman-resources">Recursos Inhumanos</a>
-                        <a href="campaign">Campaña</a>
+                        <div class="app-menu__nested">
+                            <span class="app-menu__nested-label">Individuales</span>
+                            <div class="app-menu__nested-submenu">
+                                <a href="print">Todas las Reglas</a>
+                                <a href="core-rules">Reglas Básicas</a>
+                                <a href="inhuman-resources">Recursos Inhumanos</a>
+                                <a href="campaign">Campaña</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <a href="quick-reference">Referencia Rápida</a>
                 <a href="builder/index">Creador de Plantillas</a>
+                <a href="scenario/index">Escenarios</a>
                 <a href="../core-rules">English</a>
             </div>
         </div>
@@ -59,24 +65,24 @@
 
 
 <h1 id="hardwired-28_1">Hardwired 28</h1>
-<p><em>0.6.6-beta</em> por LuisMars</p>
+<p><em>0.7.0-beta</em> por LuisMars</p>
 <h2 id="el-gran-complejo">El Gran Complejo</h2>
-<p>Una megaestructura vertical de tres kilómetros de altura. Los cables cuelgan de cada superficie. Se agrupan en troncos más gruesos que cuerpos, serpentean por las paredes, se enrollan bajo los pies. El Complejo iba a ser el paraíso. Ahora se pudre.</p>
+<p>Una megaestructura vertical de tres kilómetros. Los cables cuelgan de cada superficie. Se agrupan en troncos más gruesos que cuerpos, serpentean paredes, se enrollan bajo los pies. Iba a ser el paraíso. Ahora se pudre.</p>
 <p>La conexión por cable es sagrada. Lo inalámbrico es herejía. Desde el Anclaje, lo inalámbrico significa excomunión. Las deudas se heredan. Los hijos nacen suscritos.</p>
 <h2 id="los-poderes">Los Poderes</h2>
 <p><strong>Los Departamentos:</strong> Asignación de Recursos, Operaciones de Ingresos, Capital Humano, Seguridad y Cumplimiento. Cuatro cuerpos, cuatro presupuestos, guerra jurisdiccional sin fin.</p>
-<p><strong>Monjes de Mantenimiento:</strong> Sacerdotes del cable que cuidan los conductos sagrados. Hablan en códigos de error. Realizan diagnósticos rituales. La mitad de lo que mantienen, no lo entienden.</p>
+<p><strong>Monjes de Mantenimiento:</strong> Sacerdotes del cable que cuidan conductos sagrados. Hablan en códigos de error. Diagnósticos rituales. La mitad de lo que mantienen no lo entienden.</p>
 <p><strong>Autoridad de Conducto:</strong> El brazo ejecutor. No hacen preguntas. Queman herejes y facturan la munición.</p>
-<p><strong>Los Desanclados:</strong> Cultistas inalámbricos que se propagan por los niveles inferiores. Creen que las señales deben viajar sin permiso. Creen que los cables son cadenas.</p>
+<p><strong>Los Desanclados:</strong> Cultistas inalámbricos en los niveles inferiores. Creen que la señal debe viajar libre. Que los cables son cadenas.</p>
 <div class="column-break"></div>
 
 <h2 id="contratistas">Contratistas</h2>
 <p>No eres empleado. Eres un activo prescindible.</p>
-<p>Los Contratistas operan entre facciones: recuperando lo perdido, silenciando lo escuchado, manteniendo lo que debe continuar. Cada trabajo tiene un patrón. El pago llega en subs. La traición es gratis.</p>
+<p>Operan entre facciones: recuperan lo perdido, silencian lo escuchado, mantienen lo que debe continuar. Cada trabajo tiene un patrón. El pago llega en subs. La traición es gratis.</p>
 <h2 id="subs">Subs</h2>
-<p>Los subs son Puntos de Suscripción. Pagas equipo, peajes, sobornos y aire. Casi todo se cobra solo. Los notas cuando faltan.</p>
+<p>Los subs son Puntos de Suscripción. Pagan equipo, peajes, sobornos y aire. Los notas cuando faltan.</p>
 <h2 id="los-niveles">Los Niveles</h2>
-<p>El calor asciende. La riqueza, más rápido. Los niveles superiores permanecen frescos mientras las profundidades arden. Las cuotas de suscripción se descuentan automáticamente de salarios que nunca llegan a cubrirlas.</p>
+<p>El calor asciende. La riqueza, más rápido. Los niveles superiores permanecen frescos mientras las profundidades arden. Las cuotas se descuentan de salarios que nunca llegan a cubrirlas.</p>
 <p><em>Tu suscripción es tu libertad.</em></p>
 <p><strong>Por mandato del Soberano Ejecutivo</strong></p>
 <h2 id="los-siete-pilares">Los Siete Pilares</h2>
@@ -97,12 +103,12 @@
 - 3-6 miniaturas de Compañeros (se colocan en la preparación)<br />
 - 5+ miniaturas de Hostiles (para apariciones)<br />
 - Dados: 2d4, 2d6, 2d8, 2d10, 2d12<br />
-- Bolsa con Fichas de Activación (fichas, dados u otros marcadores - una por miniatura, colores distintos por facción)<br />
+- Bolsa con Fichas de Activación (fichas, dados u otros marcadores: una por miniatura, colores distintos por facción)<br />
 - Cinta métrica (pulgadas)<br />
-- Tablero de 2' × 2' con terreno denso<br />
+- Tablero de 2' por 2' con terreno denso<br />
 - <code>Marcadores de Botín</code> (5-6)</p>
 <p><strong>Opcional</strong><br />
-- Marcadores de estado (Activado, Bendecido, <code>FdC</code>, <code>Huir</code>, <code>Trabado</code>, <code>Sangrado</code>, etc.)<br />
+- Marcadores de estado (<code>FdC</code>, <code>Huir</code>, <code>Trabado</code>, <code>Sangrado</code>, etc.)<br />
 - Hoja de banda<br />
 - Registro de <code>Pruebas</code></p>
 <div class="column-break"></div>
@@ -117,14 +123,14 @@
 <p><code>-1 ND</code>: Usa el dado menor siguiente.</p>
 <h3 id="límites">Límites</h3>
 <p>Nunca menos de 2d4 ni más de 2d12.</p>
-<h3 id="opcional-desbordamiento-de-nd">Opcional: Desbordamiento de ND</h3>
+<h3 id="desbordamiento-de-nd">Desbordamiento de ND</h3>
 <p>Los modificadores que excedan los límites pasan al oponente con efecto contrario.</p>
 <ul>
 <li>2d4 con <code>-1 ND</code>: tiras 2d4, el oponente tira con <code>+1 ND</code></li>
 <li>2d12 con <code>+1 ND</code>: tiras 2d12, el oponente tira con <code>-1 ND</code></li>
 </ul>
 <blockquote>
-<p>"Llaman sagrado al cable. Llaman santo al hilo. Pero todo cable termina en algún sitio. Todo hilo tiene dueño. Pregúntate: ¿quién sujeta el otro extremo? La señal viaja libre. La onda no paga peaje. Seguimos emitiendo. Siempre hemos emitido. El aire recuerda lo que los Fundadores intentaron enterrar."<br />
+<p>"Llaman sagrado al cable. Llaman santo al hilo. Pero todo cable termina en algún sitio y todo hilo tiene dueño. ¿Quién sujeta el otro extremo? La señal viaja libre. La onda no paga peaje. Seguimos emitiendo. El aire recuerda lo que los Fundadores intentaron enterrar."<br />
 <strong>Emisión de Canal Abierto, frec. desconocida</strong></p>
 </blockquote>
 </div>
@@ -247,8 +253,6 @@
 <div class="single-column">
 
 
-<div class="spacer"></div>
-
 <h2 id="tipos-de-contrato">Tipos de Contrato</h2>
 <table>
 <thead>
@@ -367,13 +371,13 @@
 <td style="text-align: left;">Desarmado</td>
 <td style="text-align: center;"><code>Contundente</code></td>
 <td style="text-align: center;">1</td>
-<td style="text-align: left;"><code>-2 ND</code> <code>Combate</code>, sin <code>Respuesta</code>, siempre disponible</td>
+<td style="text-align: left;"><code>-2 ND</code> <code>Combate</code>, sin <code>Contraataque</code>, siempre disponible</td>
 </tr>
 <tr>
 <td style="text-align: left;">Improvisada</td>
 <td style="text-align: center;"><code>Contundente</code></td>
 <td style="text-align: center;">d4</td>
-<td style="text-align: left;"><code>-2 ND</code> <code>Combate</code>, sin <code>Respuesta</code>, culatazos</td>
+<td style="text-align: left;"><code>-2 ND</code> <code>Combate</code>, sin <code>Contraataque</code>, culatazos</td>
 </tr>
 </tbody>
 </table>
@@ -443,7 +447,7 @@
 <td style="text-align: left;">Espada</td>
 <td style="text-align: center;"><code>Cortante</code></td>
 <td style="text-align: center;">d6</td>
-<td style="text-align: left;">Repite 1s en <code>Respuesta</code></td>
+<td style="text-align: left;">Repite 1s en <code>Contraataque</code></td>
 <td style="text-align: right;">10</td>
 </tr>
 <tr>
@@ -614,18 +618,18 @@
 </tr>
 <tr>
 <td style="text-align: center;">6</td>
-<td style="text-align: left;">Láser</td>
-<td style="text-align: center;"><code>Energía</code></td>
-<td style="text-align: center;">d6</td>
-<td style="text-align: left;"><code>+1 ND</code> si no se movió</td>
-<td style="text-align: right;">9</td>
-</tr>
-<tr>
-<td style="text-align: center;">7</td>
 <td style="text-align: left;">Pistola Frag</td>
 <td style="text-align: center;"><code>Explosivo</code></td>
 <td style="text-align: center;">d6</td>
 <td style="text-align: left;">+1 vs. blindado</td>
+<td style="text-align: right;">9</td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td style="text-align: left;">Láser</td>
+<td style="text-align: center;"><code>Energía</code></td>
+<td style="text-align: center;">d6</td>
+<td style="text-align: left;"><code>+1 ND</code> si no se movió</td>
 <td style="text-align: right;">9</td>
 </tr>
 <tr>
@@ -678,18 +682,18 @@
 </tr>
 <tr>
 <td style="text-align: center;">14</td>
-<td style="text-align: left;">Escopeta</td>
-<td style="text-align: center;"><code>Proyectil</code></td>
-<td style="text-align: center;">d10</td>
-<td style="text-align: left;">Repite 1s, Empuje 1"</td>
-<td style="text-align: right;">19</td>
-</tr>
-<tr>
-<td style="text-align: center;">15</td>
 <td style="text-align: left;">Lanzagranadas</td>
 <td style="text-align: center;"><code>Explosivo</code></td>
 <td style="text-align: center;">d10</td>
 <td style="text-align: left;">Repite 1s, +1 vs. blindado</td>
+<td style="text-align: right;">19</td>
+</tr>
+<tr>
+<td style="text-align: center;">15</td>
+<td style="text-align: left;">Escopeta</td>
+<td style="text-align: center;"><code>Proyectil</code></td>
+<td style="text-align: center;">d10</td>
+<td style="text-align: left;">Repite 1s, Empuje 1"</td>
 <td style="text-align: right;">19</td>
 </tr>
 <tr>
@@ -702,14 +706,6 @@
 </tr>
 <tr>
 <td style="text-align: center;">17</td>
-<td style="text-align: left;">Cañón de Lamento</td>
-<td style="text-align: center;"><code>Emisión</code></td>
-<td style="text-align: center;">d12</td>
-<td style="text-align: left;">Repite 1s, Empuje 2"</td>
-<td style="text-align: right;">25</td>
-</tr>
-<tr>
-<td style="text-align: center;">18</td>
 <td style="text-align: left;">Proyector de Plasma</td>
 <td style="text-align: center;"><code>Energía</code></td>
 <td style="text-align: center;">d12</td>
@@ -717,11 +713,19 @@
 <td style="text-align: right;">25</td>
 </tr>
 <tr>
-<td style="text-align: center;">19</td>
+<td style="text-align: center;">18</td>
 <td style="text-align: left;">Rifle</td>
 <td style="text-align: center;"><code>Energía</code></td>
 <td style="text-align: center;">d12</td>
 <td style="text-align: left;">Repite 1s y 2s, Sobrecarga: <code>-1 ND</code> por daño máx.</td>
+<td style="text-align: right;">25</td>
+</tr>
+<tr>
+<td style="text-align: center;">19</td>
+<td style="text-align: left;">Cañón de Lamento</td>
+<td style="text-align: center;"><code>Emisión</code></td>
+<td style="text-align: center;">d12</td>
+<td style="text-align: left;">Repite 1s, Empuje 2"</td>
 <td style="text-align: right;">25</td>
 </tr>
 <tr>
@@ -791,9 +795,9 @@
 
 
 <h2 id="armadura">Armadura</h2>
-<p>Una pieza por miniatura. La miniatura queda en estado <strong>blindado</strong>.</p>
+<p>Una pieza por miniatura; queda <code>blindado</code>.</p>
 <h2 id="armadura-ligera">Armadura Ligera</h2>
-<p>Base: 1 de reducción de daño</p>
+<p>Base: 1 de reducción del daño</p>
 <table>
 <thead>
 <tr>
@@ -855,7 +859,7 @@
 </tbody>
 </table>
 <h2 id="armadura-media">Armadura Media</h2>
-<p>Base: 2 de reducción de daño</p>
+<p>Base: 2 de reducción del daño</p>
 <table>
 <thead>
 <tr>
@@ -905,7 +909,7 @@
 </tbody>
 </table>
 <h2 id="armadura-pesada">Armadura Pesada</h2>
-<p>Base: 3 de reducción de daño</p>
+<p>Base: 3 de reducción del daño</p>
 <table>
 <thead>
 <tr>
@@ -1086,7 +1090,7 @@
 </tbody>
 </table>
 <h2 id="cibernética">Cibernética</h2>
-<p>Repara permanentemente penalizaciones de Heridas, Críticos o Pifias. Requiere la penalización correspondiente (p. ej., <code>-1 ND</code> <code>Combate</code> para comprar Puntería).</p>
+<p>Repara penalizaciones de Heridas, Críticos o Pifias. Requiere penalización correspondiente (ej. <code>-1 ND</code> <code>Combate</code> para Puntería).</p>
 <table>
 <thead>
 <tr>
@@ -1147,12 +1151,13 @@
 <h2 id="ronda">Ronda</h2>
 <ol>
 <li>Cada jugador tira <strong>Bendiciones Corporativas</strong> (d8 tres veces)</li>
-<li>Añade Fichas de Activación a una bolsa común: una por miniatura de jugador que no esté <code>FdC</code>, una por grupo de hostiles desplegado</li>
-<li>Saca una ficha: esa facción activa una miniatura (Hostiles y Compañeros siguen su tabla de IA)</li>
-<li>Todas las miniaturas <code>FdC</code>: descarta la ficha</li>
-<li>Cada activación: <strong>Movimiento + Acción</strong> O <strong>Acción + Movimiento</strong></li>
-<li>Repite desde el 3 hasta vaciar la bolsa</li>
+<li>Fichas a bolsa: una por miniatura, una por grupo de hostiles</li>
+<li>Saca ficha: esa facción activa una miniatura (Hostiles/Compañeros siguen IA)</li>
+<li><strong>FdC:</strong> Descarta ficha inmediatamente. <strong>Hostiles/Compañeros:</strong> Ficha permanece.</li>
+<li>Cada activación: Movimiento (hasta <code>Movimiento"</code>) y Acción, en cualquier orden</li>
+<li>Repite desde 3 hasta vaciar bolsa</li>
 </ol>
+<p><strong>Una Vez Por Ronda:</strong> Cada miniatura se activa exactamente una vez. <code>Moverse de Nuevo</code> cuenta como tu única Acción.</p>
 <h2 id="bendiciones-corporativas">Bendiciones Corporativas</h2>
 <p>Una bendición por miniatura y ronda.</p>
 <table>
@@ -1231,7 +1236,7 @@
 </tr>
 <tr>
 <td style="text-align: left;"><code>Apuntar</code></td>
-<td style="text-align: left;">Declara objetivo. Tiene <code>-1 ND</code> <code>Defensa</code> contra tu próximo disparo (se pierde si te mueves o recibes daño)</td>
+<td style="text-align: left;">Declara objetivo. Tiene <code>-1 ND</code> <code>Defensa</code> contra tu próximo disparo (se pierde si te mueves o eres impactado)</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>Interactuar</code></td>
@@ -1302,19 +1307,19 @@
 <h2 id="resolución-de-ataques">Resolución de Ataques</h2>
 <ol>
 <li>El atacante declara objetivo y arma</li>
-<li>En cuerpo a cuerpo, el defensor elige <code>Defensa</code> o <code>Respuesta</code></li>
+<li>En cuerpo a cuerpo, el defensor elige <code>Defensa</code> o <code>Contraataque</code></li>
 <li>Ambos tiran simultáneamente:</li>
-<li><strong>Atacante:</strong> <code>Combate</code> <code>ND</code></li>
-<li><strong>Defensor:</strong> <code>Defensa</code> <code>ND</code> (o <code>Combate</code> <code>-1 ND</code> si usa <code>Respuesta</code>)</li>
+<li><strong>Atacante:</strong> <code>Combate</code> <strong>ND</strong></li>
+<li><strong>Defensor:</strong> <code>Defensa</code> <strong>ND</strong> (o <code>Combate</code> <code>-1 ND</code> si usa <code>Contraataque</code>)</li>
 <li>Compara resultados:</li>
 <li><strong>Atacante gana:</strong> Impacto</li>
-<li><strong>Defensor gana:</strong> Ataque evitado (<code>Respuesta</code>: también inflige el daño del arma al atacante)</li>
+<li><strong>Defensor gana:</strong> Ataque evitado (<code>Contraataque</code>: también inflige el daño del arma al atacante)</li>
 </ol>
 <div class="column-break"></div>
 
 <h2 id="defensa-de-disparo">Defensa de Disparo</h2>
 <ul>
-<li>Tira <code>Defensa</code> <code>ND</code> (sin <code>Respuesta</code>)</li>
+<li>Tira <code>Defensa</code> <strong>ND</strong> (sin <code>Contraataque</code>)</li>
 </ul>
 <blockquote>
 <p>"Los datos de trayectoria se registran automáticamente. Los disparos fallidos se facturan a tarifa estándar."<br />
@@ -1364,13 +1369,13 @@
 <h2 id="granadas_1">Granadas</h2>
 <ul>
 <li>Lanza a un punto a 6" o menos (acción). Un uso.</li>
-<li>Tira <code>Combate</code> vs 2d6. Fallo: dispersa d6". 2d6 te dobla: cae a tus pies.</li>
-<li>Radio 3" impacta a todas las miniaturas (aliadas y enemigas). Tira daño por separado.</li>
+<li>Tira <code>Combate</code> vs 2d6. Fallo: dispersa d6" desde lanzamiento (ignora terreno). 2d6 te dobla: cae a tus pies.</li>
+<li>Radio 3" impacta a todas las miniaturas (aliadas y enemigas). Daño por separado.</li>
 </ul>
 <h2 id="críticos">Críticos</h2>
 <ul>
 <li><strong>Doble:</strong> Daño máximo del arma</li>
-<li><strong>Triple+:</strong> Daño máximo + tira en la tabla de críticos (cuádruple: +1, quíntuple: +2, etc.)</li>
+<li><strong>Triple+:</strong> Daño máx. + tabla de críticos (cuádruple: +1, quíntuple: +2, etc.)</li>
 </ul>
 <blockquote>
 <p>"Rendimiento excepcional registrado. Espera cuotas aumentadas."<br />
@@ -1378,7 +1383,7 @@
 </blockquote>
 <h2 id="pifias">Pifias</h2>
 <ul>
-<li>El defensor triplica o más al atacante: Pifia (tira en la tabla de Pifias)</li>
+<li>El defensor triplica o más al atacante: Pifia (tabla de Pifias)</li>
 <li>Cuádruple: +1, quíntuple: +2, etc.</li>
 </ul>
 <blockquote>
@@ -1392,29 +1397,29 @@
 <li>Tira daño del arma (Doble+: máximo)</li>
 <li>Resta la reducción de armadura</li>
 <li>Resta de la <code>Salud</code> del objetivo</li>
-<li><code>Salud</code> a 0 o menos: <code>Fuera de Combate</code>, retira de la mesa (tira Herida tras la partida)</li>
+<li><code>Salud</code> a 0 o menos: <code>Fuera de Combate</code>, retira de la mesa (Herida en pospartida)</li>
 <li>Triple+: tira en la tabla de críticos</li>
 </ol>
 <p><strong>Herido:</strong> Por debajo de su <code>Salud</code> máxima.</p>
 <blockquote>
-<p>"La cobertura médica requiere suscripción Premium. Sangrar es facturable."<br />
+<p>"La cobertura médica requiere suscripción Premium."<br />
 <strong>Descargo de Servicios de Emergencia</strong></p>
 </blockquote>
 <h2 id="moral">Moral</h2>
 <ul>
-<li>Si el <code>Jefe</code> queda <code>Fuera de Combate</code>: los aliados tiran inmediatamente <code>Astucia</code> vs. 2d6</li>
-<li>Fallo: <code>Huida</code> (muévete hacia el borde más cercano, no puedes actuar; sales si lo alcanzas)</li>
+<li>Si el <code>Jefe</code> queda <code>Fuera de Combate</code>: aliados tiran <code>Astucia</code> vs. 2d6 inmediatamente</li>
+<li>Fallo: <code>Huida</code> (mueve al borde más cercano, no puede actuar; sale si lo alcanza)</li>
 <li>Repite al inicio de cada activación hasta pasar</li>
 </ul>
 <blockquote>
-<p>"Abandonar tu puesto anula todos los beneficios acumulados. Tus dependientes serán notificados."<br />
+<p>"Abandonar tu puesto anula beneficios acumulados."<br />
 <strong>Oficina de Cumplimiento de Contratos</strong></p>
 </blockquote>
 <h2 id="abandonar-el-tablero">Abandonar el Tablero</h2>
-<p><strong>Evaluación de Rendimiento:</strong> Las miniaturas que abandonaron (voluntario o <code>Huida</code>) reciben d6 de daño tras recuperar <code>Salud</code> en la pospartida.</p>
+<p><strong>Evaluación de Rendimiento:</strong> Las que abandonaron (voluntario o <code>Huida</code>) reciben d6 de daño tras recuperar <code>Salud</code> en pospartida.</p>
 <ul>
-<li>No ganan Méritos en esta partida</li>
-<li>Sueltan los objetos que porten en el borde del tablero</li>
+<li>No ganan Méritos esta partida</li>
+<li>Sueltan objetos en el borde del tablero</li>
 </ul>
 </div>
 </div>
@@ -1433,79 +1438,76 @@
 <li>Sin límite de alcance (requiere LdV)</li>
 <li>Poderes ofensivos: tira <code>Astucia</code> vs. <code>Astucia</code> del objetivo</li>
 <li>Poderes de apoyo: tira <code>Astucia</code> vs. 2d6 (el objetivo debe ser aliado)</li>
-<li>Triple+: el efecto se aplica a todos los objetivos válidos a 3"</li>
+<li>Triple+: el efecto se aplica automáticamente a todos los objetivos válidos a 3" (no los elige el caster)</li>
 <li>Defensor triplica o más: tira en la tabla de Pifias <code>Emisión</code></li>
 </ul>
-<blockquote>
-<p>"Cada cable es una correa. Cada peaje, un collar. Los cortaremos todos."<br />
-<strong>Emisión de Canal Abierto</strong></p>
-</blockquote>
 <div class="column-break"></div>
 
-<h2 id="poderes-ofensivos">Poderes Ofensivos</h2>
+<h2 id="poderes">Poderes</h2>
 <table>
 <thead>
 <tr>
-<th style="text-align: center;">d4</th>
+<th style="text-align: center;">d8</th>
 <th style="text-align: left;">Poder</th>
+<th style="text-align: left;">Tipo</th>
 <th style="text-align: left;">Efecto</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: center;">1</td>
-<td style="text-align: left;">Interferencia</td>
-<td style="text-align: left;"><code>-1 ND</code> todas las tiradas hasta la siguiente activación</td>
+<td style="text-align: left;">Bloqueo de Señal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>-1 ND</code> a todas las tiradas hasta la próxima activación</td>
 </tr>
 <tr>
 <td style="text-align: center;">2</td>
 <td style="text-align: left;">Bloqueo de Arma</td>
+<td style="text-align: left;"></td>
 <td style="text-align: left;">El objetivo suelta un arma</td>
 </tr>
 <tr>
 <td style="text-align: center;">3</td>
 <td style="text-align: left;">Trampa Neural</td>
-<td style="text-align: left;">d6 daño (ignora armadura) si el objetivo se mueve en su siguiente activación</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">d6 de daño (ignora armadura) si el objetivo se mueve la próxima activación</td>
 </tr>
 <tr>
 <td style="text-align: center;">4</td>
-<td style="text-align: left;">Empuje Resonante</td>
+<td style="text-align: left;">Empuje de Resonancia</td>
+<td style="text-align: left;"></td>
 <td style="text-align: left;">Empuja al objetivo d6" en cualquier dirección</td>
 </tr>
-</tbody>
-</table>
-<h2 id="poderes-de-apoyo">Poderes de Apoyo</h2>
-<table>
-<thead>
 <tr>
-<th style="text-align: center;">d4</th>
-<th style="text-align: left;">Poder</th>
-<th style="text-align: left;">Efecto</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">1</td>
+<td style="text-align: center;">5</td>
 <td style="text-align: left;">Campo de Fuerza</td>
-<td style="text-align: left;"><code>+2 ND</code> <code>Defensa</code> vs. a distancia hasta la siguiente activación</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>+2 ND</code> <code>Defensa</code> vs. disparos hasta la próxima activación</td>
 </tr>
 <tr>
-<td style="text-align: center;">2</td>
+<td style="text-align: center;">6</td>
 <td style="text-align: left;">Enfoque</td>
+<td style="text-align: left;"></td>
 <td style="text-align: left;">Añade 2 Fichas de Activación del objetivo a la bolsa</td>
 </tr>
 <tr>
-<td style="text-align: center;">3</td>
+<td style="text-align: center;">7</td>
 <td style="text-align: left;">Intercambio</td>
-<td style="text-align: left;">Intercambia posiciones con el objetivo (el canalizador ve a ambos, a 12" o menos)</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Cambia posiciones con el objetivo (el caster ve ambas, a 12" máximo)</td>
 </tr>
 <tr>
-<td style="text-align: center;">4</td>
+<td style="text-align: center;">8</td>
 <td style="text-align: left;">Ping</td>
-<td style="text-align: left;">El objetivo ignora cobertura y ve a través de paredes hasta la siguiente activación</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">El objetivo ignora cobertura y ve a través de muros hasta la próxima activación</td>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<p>"Cada cable es una correa. Cada peaje, un collar. Los cortaremos todos."<br />
+<strong>Emisión de Canal Abierto</strong></p>
+</blockquote>
 </div>
 </div>
 
@@ -2002,68 +2004,68 @@
 
 <h1 id="ejemplos">Ejemplos</h1>
 <h2 id="jefe-12">Jefe [12]</h2>
-<h3 id="16-pv-4-mov">16 PV, 4" MOV</h3>
+<h3 id="16-salud-4-mov">16 <code>Salud</code>, 4" <code>Mov</code></h3>
 <ul>
-<li>COM 2d8, DEF 2d6, AST 2d6</li>
-<li>Aguja (4): d4 <code>Tóxico</code>, +1 daño vs. herido</li>
-<li>Punzón (4): d4 <code>Tóxico</code>, +1 daño vs. herido</li>
+<li><code>Combate</code> 2d8, <code>Defensa</code> 2d6, <code>Astucia</code> 2d6</li>
+<li>Aguja (4): d4 <code>Tóxico</code>, +1 vs. herido</li>
+<li>Punzón (4): d4 <code>Tóxico</code>, +1 vs. herido</li>
 <li>Blindaje Ligero (4): 1 reducción</li>
 </ul>
 <h2 id="bruto-12">Bruto [12]</h2>
-<h3 id="14-pv-3-mov">14 PV, 3" MOV</h3>
+<h3 id="14-salud-3-mov">14 <code>Salud</code>, 3" <code>Mov</code></h3>
 <ul>
-<li>COM 2d8, DEF 2d6, AST 2d4</li>
+<li><code>Combate</code> 2d8, <code>Defensa</code> 2d6, <code>Astucia</code> 2d4</li>
 <li>Espada (10): d6+1 <code>Cortante</code>, repite 1s en <code>Respuesta</code></li>
 <li>Malla Simple (2): 1 reducción</li>
 <li><em>Puede llevar armadura <code>Pesada</code></em></li>
 </ul>
 <h2 id="veterano-12">Veterano [12]</h2>
-<h3 id="13-pv-4-mov">13 PV, 4" MOV</h3>
+<h3 id="13-salud-4-mov">13 <code>Salud</code>, 4" <code>Mov</code></h3>
 <ul>
-<li>COM 2d6, DEF 2d6, AST 2d6</li>
+<li><code>Combate</code> 2d6, <code>Defensa</code> 2d6, <code>Astucia</code> 2d6</li>
 <li>Pistola (2): d4 <code>Proyectil</code>, <code>-1 ND</code> a más de 6"</li>
-<li>Punzón (4): d4 <code>Tóxico</code>, +1 daño vs. herido</li>
-<li>Forro Protector (6): 1 reducción, -1 a las tiradas de Crítico contra ti</li>
+<li>Punzón (4): d4 <code>Tóxico</code>, +1 vs. herido</li>
+<li>Forro Protector (6): 1 reducción, -1 Críticos contra ti</li>
 <li><em><code>+1 ND</code> <code>Defensa</code> bajo mitad de <code>Salud</code></em></li>
 </ul>
 <h2 id="tirador-12">Tirador [12]</h2>
-<h3 id="14-pv-4-mov">14 PV, 4" MOV</h3>
+<h3 id="14-salud-4-mov">14 <code>Salud</code>, 4" <code>Mov</code></h3>
 <ul>
-<li>COM 2d8, DEF 2d6, AST 2d4</li>
+<li><code>Combate</code> 2d8, <code>Defensa</code> 2d6, <code>Astucia</code> 2d4</li>
 <li>Láser (9): d6 <code>Energía</code>, <code>+1 ND</code> si no se movió</li>
 <li>Cuchillo (3): d4 <code>Cortante</code></li>
-<li><em>Ignora penalización por moverse al disparar, puede llevar armadura <code>Media</code></em></li>
+<li><em>Sin penalización al disparar movido, armadura <code>Media</code></em></li>
 </ul>
 <div class="column-break"></div>
 
 <h2 id="explorador-12">Explorador [12]</h2>
-<h3 id="12-pv-6-mov">12 PV, 6" MOV</h3>
+<h3 id="12-salud-6-mov">12 <code>Salud</code>, 6" <code>Mov</code></h3>
 <ul>
-<li>COM 2d6, DEF 2d4, AST 2d8</li>
+<li><code>Combate</code> 2d6, <code>Defensa</code> 2d4, <code>Astucia</code> 2d8</li>
 <li>Pistola de Arco (5): d4 <code>Estático</code>, sin pifias</li>
 <li>Chaleco Ligero (7): 1 reducción</li>
-<li><em><code>Retirarse</code> gratis, <code>Mov</code> 3" tras desplegar</em></li>
+<li><em><code>Retirarse</code> gratis, 3" <code>Mov</code> tras desplegar</em></li>
 </ul>
 <h2 id="zelote-12">Zelote [12]</h2>
-<h3 id="12-pv-5-mov">12 PV, 5" MOV</h3>
+<h3 id="12-salud-5-mov">12 <code>Salud</code>, 5" <code>Mov</code></h3>
 <ul>
-<li>COM 2d8, DEF 2d4, AST 2d6</li>
+<li><code>Combate</code> 2d8, <code>Defensa</code> 2d4, <code>Astucia</code> 2d6</li>
 <li>Inyector (9): d6 <code>Tóxico</code>, repite 1s</li>
 <li>Cuchillo (3): d4 <code>Cortante</code></li>
 <li><em>+2" <code>Mov</code> si acaba <code>Trabado</code>, <code>+1 ND</code> <code>Combate</code> vs. 2+ enemigos, solo <code>CC</code></em></li>
 </ul>
 <h2 id="agente-12">Agente [12]</h2>
-<h3 id="14-pv-4-mov_1">14 PV, 4" MOV</h3>
+<h3 id="14-salud-4-mov_1">14 <code>Salud</code>, 4" <code>Mov</code></h3>
 <ul>
-<li>COM 2d4, DEF 2d6, AST 2d8</li>
+<li><code>Combate</code> 2d4, <code>Defensa</code> 2d6, <code>Astucia</code> 2d8</li>
 <li>Pistola (2): d4 <code>Proyectil</code>, <code>-1 ND</code> a más de 6"</li>
 <li>Espada (10): d6 <code>Cortante</code>, repite 1s en <code>Respuesta</code></li>
 <li><em>Repite tiradas de <code>Astucia</code> fallidas</em></li>
 </ul>
 <h2 id="emisor-12">Emisor [12]</h2>
-<h3 id="14-pv-4-mov_2">14 PV, 4" MOV</h3>
+<h3 id="14-salud-4-mov_2">14 <code>Salud</code>, 4" <code>Mov</code></h3>
 <ul>
-<li>COM 2d4, DEF 2d6, AST 2d8</li>
+<li><code>Combate</code> 2d4, <code>Defensa</code> 2d6, <code>Astucia</code> 2d8</li>
 <li>Aguijón (5): d4 <code>Energía</code>, <code>-1 ND</code> en la siguiente activación</li>
 <li>Chaleco Acolchado (7): 1 reducción, reduce <code>Empuje</code> en 1"</li>
 <li><em>Solo <code>CC</code>, puede <code>Canalizar</code></em></li>

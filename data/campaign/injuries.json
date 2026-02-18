@@ -1,18 +1,66 @@
 {
   "table_name": "Injuries",
-  "source": "10_postgame.md",
-  "columns": ["2d6", "Result", "Effect"],
-  "align": ["center", "left", "left"],
+  "source": "3_10_postgame.md",
+  "columns": [
+    "2d6",
+    "Result",
+    "Effect"
+  ],
+  "align": [
+    "center",
+    "left",
+    "left"
+  ],
   "items": [
-    {"roll": "3 or less", "result": "Terminated", "effect": "Remove from squad"},
-    {"roll": "4", "result": "Degraded", "effect": "-1 max `Health`"},
-    {"roll": "5", "result": "Scrambled", "effect": "`-1 DT` `Wits`"},
-    {"roll": "6", "result": "Exposed", "effect": "`-1 DT` `Defense`"},
-    {"roll": "7", "result": "Scarred", "effect": "No effect"},
-    {"roll": "8", "result": "Diminished", "effect": "`-1 DT` `Combat`"},
-    {"roll": "9", "result": "Hobbled", "effect": "-1\" `Move`"},
-    {"roll": "10", "result": "Sidelined", "effect": "Miss next game"},
-    {"roll": "11", "result": "Glitch", "effect": "+1 Merit"},
-    {"roll": "12", "result": "Reviewed", "effect": "Free Promotion roll"}
+    {
+      "roll": "3 or less",
+      "result": "Terminated",
+      "effect": "Remove from squad"
+    },
+    {
+      "roll": "4",
+      "result": "Degraded",
+      "effect": "-1 max `Health`"
+    },
+    {
+      "roll": "5",
+      "result": "Scrambled",
+      "effect": "`-1 DT` `Wits`"
+    },
+    {
+      "roll": "6",
+      "result": "Exposed",
+      "effect": "`-1 DT` `Defense`"
+    },
+    {
+      "roll": "7",
+      "result": "Scarred",
+      "effect": "No effect"
+    },
+    {
+      "roll": "8",
+      "result": "Diminished",
+      "effect": "`-1 DT` `Combat`"
+    },
+    {
+      "roll": "9",
+      "result": "Hobbled",
+      "effect": "-1\" `Move`"
+    },
+    {
+      "roll": "10",
+      "result": "Sidelined",
+      "effect": "Miss next game"
+    },
+    {
+      "roll": "11",
+      "result": "Glitch",
+      "effect": "+1 Merit"
+    },
+    {
+      "roll": "12",
+      "result": "Reviewed",
+      "effect": "Free Promotion roll"
+    }
   ]
 }

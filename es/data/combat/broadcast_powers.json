@@ -1,15 +1,66 @@
 {
   "table_name": "Poderes de Emisión",
-  "source": "04a_broadcast_powers.md",
-  "columns": ["d6", "Power", "Effect"],
-  "align": ["center", "left", "left"],
-  "display_columns": ["d6", "Poder", "Efecto"],
+  "source": "es/1_05_broadcast_powers.md",
+  "columns": [
+    "d8",
+    "Poder",
+    "Tipo",
+    "Efecto"
+  ],
+  "align": [
+    "center",
+    "left",
+    "left",
+    "left"
+  ],
   "items": [
-    {"roll": 1, "power": "Estallido Estático", "effect": "d8 daño `Emisión`, ignora armadura"},
-    {"roll": 2, "power": "Empuje Resonante", "effect": "Empuja al objetivo d6\" en cualquier dirección"},
-    {"roll": 3, "power": "Bloqueo de Señal", "effect": "`-1 ND` a todas las tiradas hasta la siguiente activación"},
-    {"roll": 4, "power": "Trampa Neural", "effect": "El objetivo recibe d6 de daño si se mueve en su siguiente activación"},
-    {"roll": 5, "power": "Bloqueo de Arma", "effect": "El objetivo suelta un arma"},
-    {"roll": 6, "power": "Latigazo Mental", "effect": "El objetivo ataca a la miniatura más cercana (aliada o enemiga)"}
+    {
+      "roll": 1,
+      "power": "Bloqueo de Señal",
+      "type": "Ofensivo",
+      "effect": "`-1 ND` a todas las tiradas hasta la próxima activación"
+    },
+    {
+      "roll": 2,
+      "power": "Bloqueo de Arma",
+      "type": "Ofensivo",
+      "effect": "El objetivo suelta un arma"
+    },
+    {
+      "roll": 3,
+      "power": "Trampa Neural",
+      "type": "Ofensivo",
+      "effect": "d6 de daño (ignora armadura) si el objetivo se mueve la próxima activación"
+    },
+    {
+      "roll": 4,
+      "power": "Empuje de Resonancia",
+      "type": "Ofensivo",
+      "effect": "Empuja al objetivo d6\" en cualquier dirección"
+    },
+    {
+      "roll": 5,
+      "power": "Campo de Fuerza",
+      "type": "Apoyo",
+      "effect": "`+2 ND` `Defensa` vs. disparos hasta la próxima activación"
+    },
+    {
+      "roll": 6,
+      "power": "Enfoque",
+      "type": "Apoyo",
+      "effect": "Añade 2 Fichas de Activación del objetivo a la bolsa"
+    },
+    {
+      "roll": 7,
+      "power": "Intercambio",
+      "type": "Apoyo",
+      "effect": "Cambia posiciones con el objetivo (el caster ve ambas, a 12\" máximo)"
+    },
+    {
+      "roll": 8,
+      "power": "Ping",
+      "type": "Apoyo",
+      "effect": "El objetivo ignora cobertura y ve a través de muros hasta la próxima activación"
+    }
   ]
 }

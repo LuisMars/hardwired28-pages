@@ -1,15 +1,51 @@
 {
   "table_name": "Pifia CC",
-  "source": "06_fumbles.md",
-  "columns": ["d6", "Result", "Effect"],
-  "align": ["center", "left", "left"],
-  "display_columns": ["d6", "Resultado", "Efecto"],
+  "source": "1_07_fumbles.md",
+  "columns": [
+    "d6",
+    "Result",
+    "Effect"
+  ],
+  "align": [
+    "center",
+    "left",
+    "left"
+  ],
+  "display_columns": [
+    "d6",
+    "Resultado",
+    "Efecto"
+  ],
   "items": [
-    {"roll": 1, "result": "Tropezón", "effect": "Pierde activación"},
-    {"roll": 2, "result": "Desequilibrio", "effect": "`-1 ND` próx. defensa"},
-    {"roll": 3, "result": "Autolesión", "effect": "Sufre su daño"},
-    {"roll": 4, "result": "Golpe Errante", "effect": "Golpea aliado a 1\" (si no, sufre daño)"},
-    {"roll": 5, "result": "Soltada", "effect": "Suelta arma, sufre su daño"},
-    {"roll": "6+", "result": "Destrozada", "effect": "Arma destruida, daño máx."}
+    {
+      "roll": 1,
+      "result": "Tropezón",
+      "effect": "Pierde activación"
+    },
+    {
+      "roll": 2,
+      "result": "Desequilibrio",
+      "effect": "`-1 ND` próx. defensa"
+    },
+    {
+      "roll": 3,
+      "result": "Autolesión",
+      "effect": "Sufre su daño"
+    },
+    {
+      "roll": 4,
+      "result": "Golpe Errante",
+      "effect": "Golpea aliado a 1\" (si no, sufre daño)"
+    },
+    {
+      "roll": 5,
+      "result": "Soltada",
+      "effect": "Suelta arma, sufre su daño"
+    },
+    {
+      "roll": "6+",
+      "result": "Destrozada",
+      "effect": "Arma destruida, daño máx."
+    }
   ]
 }
