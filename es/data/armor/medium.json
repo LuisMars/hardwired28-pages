@@ -40,14 +40,14 @@
     },
     {
       "roll": 4,
-      "name": "Blindaje Reforzado",
-      "special": "Repite 1s y 2s en `Defensa`",
+      "name": "Equipo de Asalto",
+      "special": "+2\" `Mov`",
       "cost": 14
     },
     {
       "roll": 5,
-      "name": "Equipo de Asalto",
-      "special": "+2\" `Mov`",
+      "name": "Blindaje Reforzado",
+      "special": "Repite 1s y 2s en `Defensa`",
       "cost": 14
     },
     {

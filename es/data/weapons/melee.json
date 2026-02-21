@@ -92,14 +92,6 @@
     },
     {
       "roll": 9,
-      "name": "Aturdidor",
-      "type": "`Energía`",
-      "damage": "d8",
-      "special": "`-1 ND` en la siguiente activación",
-      "cost": 13
-    },
-    {
-      "roll": 10,
       "name": "Machete",
       "type": "`Cortante`",
       "damage": "d8",
@@ -107,19 +99,27 @@
       "cost": 13
     },
     {
-      "roll": 11,
-      "name": "Estática",
-      "type": "`Estático`",
+      "roll": 10,
+      "name": "Aturdidor",
+      "type": "`Energía`",
       "damage": "d8",
-      "special": "`+1 ND` vs. herido",
-      "cost": 15
+      "special": "`-1 ND` en la siguiente activación",
+      "cost": 13
     },
     {
-      "roll": 12,
+      "roll": 11,
       "name": "Martillo",
       "type": "`Contundente`",
       "damage": "d8",
       "special": "Repite 1s, Empuje 1\"",
+      "cost": 15
+    },
+    {
+      "roll": 12,
+      "name": "Estática",
+      "type": "`Estático`",
+      "damage": "d8",
+      "special": "`+1 ND` vs. herido",
       "cost": 15
     },
     {

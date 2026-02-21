@@ -28,14 +28,14 @@
     },
     {
       "roll": 2,
-      "name": "Armazón Industrial",
-      "special": "-1\" `Mov`, Repite 1s en `Defensa`",
+      "name": "Traje Búnker",
+      "special": "-2\" `Mov`, Repite 1s y 2s en `Defensa`",
       "cost": 14
     },
     {
       "roll": 3,
-      "name": "Traje Búnker",
-      "special": "-2\" `Mov`, Repite 1s y 2s en `Defensa`",
+      "name": "Armazón Industrial",
+      "special": "-1\" `Mov`, Repite 1s en `Defensa`",
       "cost": 14
     },
     {

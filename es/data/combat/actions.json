@@ -28,7 +28,7 @@
     },
     {
       "action": "`Apuntar`",
-      "effect": "Declara objetivo. Tiene `-1 ND` `Defensa` contra tu próximo disparo (se pierde si te mueves o eres impactado)"
+      "effect": "Declara objetivo. `+1 ND` `Combate` en tu próximo disparo (se pierde si te mueves o eres impactado)"
     },
     {
       "action": "`Interactuar`",

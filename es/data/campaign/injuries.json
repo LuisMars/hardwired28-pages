@@ -55,7 +55,7 @@
     {
       "roll": "10",
       "result": "En Reserva",
-      "effect": "Pierde próxima partida"
+      "effect": "No juega la próxima partida"
     },
     {
       "roll": "11",

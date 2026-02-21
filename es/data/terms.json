@@ -5,7 +5,7 @@
   "dice_system": ["ND"],
   "conditions": ["Fuera de Combate", "Huida", "Trabado", "herido", "blindado", "sin blindaje"],
   "roles": ["Jefe", "Recurso"],
-  "actions": ["Buscar", "Interrogar", "Atacar", "Apuntar", "Destrabarse", "Interactuar", "Saquear", "Moverse de Nuevo", "Respuesta"],
+  "actions": ["Buscar", "Interrogar", "Atacar", "Apuntar", "Destrabarse", "Interactuar", "Saquear", "Moverse de Nuevo", "Contraataque"],
   "objects": ["Marcador de Botín", "Prueba", "Reliquia"],
   "weapon_types": ["Cortante", "Contundente", "Proyectil", "Energía", "Explosivo", "Tóxico", "Estático", "Emisión"],
   "weapon_abilities": ["Empuje", "Repite 1s", "Repite 1s y 2s", "Ignora cobertura", "Sin pifias", "Sobrecarga"],

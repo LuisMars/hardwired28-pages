@@ -30,17 +30,17 @@
     {
       "roll": 3,
       "result": "Retroceso",
-      "effect": "Sufre su daño"
+      "effect": "Recibe daño del arma"
     },
     {
       "roll": 4,
       "result": "Fuego Amigo",
-      "effect": "Golpea aliado a 6\" (si no, sufre daño)"
+      "effect": "Golpea aliado a 6\" (si no, recibe daño del arma)"
     },
     {
       "roll": 5,
-      "result": "Soltada",
-      "effect": "Suelta arma, sufre su daño"
+      "result": "Arma Soltada",
+      "effect": "Suelta arma, recibe daño del arma"
     },
     {
       "roll": "6+",

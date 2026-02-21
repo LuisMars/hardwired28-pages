@@ -23,7 +23,7 @@
     {
       "roll": 1,
       "name": "Regenerador",
-      "effect": "Ignora \"Pierde próxima partida\"",
+      "effect": "Ignora \"No juega la próxima partida\"",
       "cost": 5
     },
     {

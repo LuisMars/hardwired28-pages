@@ -40,14 +40,14 @@
     },
     {
       "roll": 4,
-      "name": "Chaleco Acolchado",
-      "special": "Reduce `Empuje` en 1\"",
+      "name": "Chaleco Ligero",
+      "special": "+1\" `Mov`",
       "cost": 7
     },
     {
       "roll": 5,
-      "name": "Chaleco Ligero",
-      "special": "+1\" `Mov`",
+      "name": "Chaleco Acolchado",
+      "special": "Reduce `Empuje` en 1\"",
       "cost": 7
     },
     {
