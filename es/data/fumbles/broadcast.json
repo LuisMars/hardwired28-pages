@@ -20,7 +20,7 @@
     {
       "roll": 1,
       "result": "Sobrecarga",
-      "effect": "Emisor pierde activación"
+      "effect": "Emisor pierde la siguiente activación"
     },
     {
       "roll": 2,

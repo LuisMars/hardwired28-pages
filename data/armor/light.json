@@ -1,6 +1,8 @@
 {
   "table_name": "Light Armor",
   "source": "1_03_equipment.md",
+  "tier": "Light",
+  "reduction": 1,
   "columns": [
     "d8",
     "Armor",

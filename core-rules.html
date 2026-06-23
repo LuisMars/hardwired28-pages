@@ -3,13 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hardwired 28 - Core Rules 0.7.1-beta</title>
-    <meta property="og:title" content="Hardwired 28 - Core Rules 0.7.1-beta">
+    <title>Hardwired 28 - Core Rules 0.7.2-beta</title>
+    <meta property="og:title" content="Hardwired 28 - Core Rules 0.7.2-beta">
     <meta property="og:description" content="Corporate cablepunk skirmish wargame">
-    <meta property="og:image" content="http://hardwired28.luismars.com/img/social.png">
-    <meta property="og:url" content="http://hardwired28.luismars.com/">
+    <meta property="og:image" content="https://hardwired28.luismars.com/img/social.png">
+    <meta property="og:url" content="https://hardwired28.luismars.com/core-rules.html">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="description" content="Hardwired 28 is a cablepunk skirmish wargame: lead a corporate squad through a collapsing arcology where wired connection is sacred and wireless is heresy.">
+    <link rel="canonical" href="https://hardwired28.luismars.com/core-rules.html">
+    <link rel="alternate" hreflang="en" href="https://hardwired28.luismars.com/core-rules.html">
+    <link rel="alternate" hreflang="es" href="https://hardwired28.luismars.com/es/core-rules.html">
+    <link rel="alternate" hreflang="x-default" href="https://hardwired28.luismars.com/core-rules.html">
+    <meta name="twitter:title" content="Hardwired 28 - Core Rules 0.7.2-beta">
+    <meta name="twitter:description" content="Hardwired 28 is a cablepunk skirmish wargame: lead a corporate squad through a collapsing arcology where wired connection is sacred and wireless is heresy.">
+    <meta name="twitter:image" content="https://hardwired28.luismars.com/img/social.png">
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+    <script data-goatcounter="https://hardwired28.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -65,7 +75,7 @@
 
 
 <h1 id="hardwired-28_1">Hardwired 28</h1>
-<p><em>0.7.1-beta</em> by LuisMars</p>
+<p><em>0.7.2-beta</em> by LuisMars</p>
 <h2 id="the-great-complex">The Great Complex</h2>
 <p>A vertical megastructure three kilometers tall. Cables hang from every surface. They bundle into trunks thicker than bodies, snake through walls, coil underfoot. The Complex was meant to be paradise. Now it decays.</p>
 <p>Wired connection is sacred. Wireless is heresy. Since the Tethering, wireless has meant excommunication. Debts are inherited. Children are born subscribed.</p>
@@ -1090,7 +1100,7 @@
 </tbody>
 </table>
 <h2 id="cybernetics">Cybernetics</h2>
-<p>Repair Injury, Critical, or Fumble penalties. Requires matching penalty (e.g., <code>-1 DT</code> <code>Combat</code> for Combat Processor).</p>
+<p>Repair Injury, Critical, or Fumble penalties. Requires matching penalty (e.g., <code>-1 DT</code> <code>Combat</code> for Targeting).</p>
 <table>
 <thead>
 <tr>
@@ -1298,7 +1308,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Falling:</strong> d6 damage per full 3" fallen (first 3" free). 5" deals 1d6, 6" deals 2d6.</p>
+<p><strong>Falling:</strong> No damage for the first 3". Beyond that, take 1d6 for every 3" fallen, rounding up (4 to 6" deals 1d6, 7 to 9" deals 2d6, 10 to 12" deals 3d6).</p>
 <p><strong>Knockback:</strong> After a hit, attacker may push target directly away. Fall damage applies if pushed off edge. Stops at obstacles.</p>
 <blockquote>
 <p>"Dying in public space incurs a cleanup fee charged to your estate."<br />
@@ -1328,8 +1338,8 @@
 <h2 id="shooting-into-melee">Shooting Into Melee</h2>
 <ul>
 <li><code>-1 DT</code> <code>Combat</code></li>
-<li>Miss hits random model within 1" of target (excluding target)</li>
-<li>Fumble is a Critical against that model</li>
+<li>On a miss (the defender wins), hit a random model within 1" of the target (excluding the target)</li>
+<li>On a Fumble (the defender triples your total), that model takes a Critical</li>
 </ul>
 <blockquote>
 <p>"Collateral damage liability transfers to the firing party. Aim carefully."<br />
@@ -1364,7 +1374,7 @@
 <ul>
 <li>Attacker moved this activation: <code>-1 DT</code> <code>Combat</code></li>
 </ul>
-<p>Stacks with Cover and Shooting into Melee.</p>
+<p>Stacks with <code>Cover</code> and Shooting into Melee.</p>
 <h2 id="grenades_1">Grenades</h2>
 <ul>
 <li>Throw at a point within 6" (action). One use.</li>
@@ -1433,12 +1443,12 @@
 <p>Licensed Broadcasters pay steep fees and submit to monitoring. The Untethered refuse. They broadcast without paying, spread without subscription. The Authority calls them terrorists. The Monks call them plague. The Untethered call themselves free.</p>
 <h2 id="casting">Casting</h2>
 <ul>
-<li>Action to cast (once per activation)</li>
+<li>Action to <code>Cast</code> (once per activation)</li>
 <li>No range limit (requires LoS)</li>
 <li>Offensive powers: roll <code>Wits</code> vs. target <code>Wits</code></li>
 <li>Support powers: roll <code>Wits</code> vs. 2d6 (target must be friendly)</li>
-<li>Triple or more: effect automatically applies to all valid targets within 3" (not chosen by caster)</li>
-<li>Defender triples or more: roll <code>Broadcast</code> Fumble table</li>
+<li>Win by triple or more: the effect also applies to all valid targets within 3" of the target (<code>Focus</code> and <code>Swap</code> always affect only their chosen target)</li>
+<li>Defender wins by triple or more: roll <code>Broadcast</code> Fumble table</li>
 </ul>
 <div class="column-break"></div>
 
@@ -1516,7 +1526,7 @@
 
 
 <h1 id="critical-tables">Critical Tables</h1>
-<p>When you double the target, deal max weapon damage. When you triple or more, deal max damage and roll on the appropriate critical table. The weapon type determines which table. Quadruple adds +1, quintuple adds +2, and so on.</p>
+<p>When your total is at least double the target's, deal max weapon damage. When it is triple or more, deal max damage and roll on the appropriate critical table. The weapon type determines which table. Quadruple adds +1, quintuple adds +2, and so on.</p>
 <blockquote>
 <p>The body breaks in predictable ways. The Splicer-Surgeons catalogued every failure mode, every rupture point, every way flesh surrenders to force. They published their findings. Now everyone knows exactly how much damage they're causing.</p>
 </blockquote>
@@ -1685,7 +1695,7 @@
 <tr>
 <td style="text-align: center;">2</td>
 <td style="text-align: left;">Slag Armor</td>
-<td style="text-align: left;">Armor reduced one tier permanently (Heavy→Medium→Light→ Destroyed)</td>
+<td style="text-align: left;">Armor reduced one tier permanently (Heavy to Medium to Light to Destroyed)</td>
 </tr>
 <tr>
 <td style="text-align: center;">3</td>

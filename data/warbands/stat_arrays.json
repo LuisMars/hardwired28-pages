@@ -1,0 +1,10 @@
+{
+  "table_name": "Stat Arrays",
+  "source": "1_02_warbands.md",
+  "columns": ["Array", "Dice"],
+  "align": ["left", "center"],
+  "items": [
+    {"key": "Technician", "name": "Technician", "strong": "2d8", "base": "2d6", "weak": "2d4", "dice": "2d4 / 2d6 / 2d8"},
+    {"key": "Operative", "name": "Operative", "strong": "2d6", "base": "2d6", "weak": "2d6", "dice": "2d6 / 2d6 / 2d6"}
+  ]
+}

@@ -24,7 +24,7 @@
     },
     {
       "roll": 2,
-      "result": "Shock",
+      "result": "Aturdido por explosión",
       "effect": "Pierde la siguiente activación"
     },
     {
@@ -34,8 +34,8 @@
     },
     {
       "roll": 4,
-      "result": "Derribado",
-      "effect": "Se aleja d6\" del atacante"
+      "result": "Empujado",
+      "effect": "Se aleja d6\" en línea recta del atacante"
     },
     {
       "roll": 5,

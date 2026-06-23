@@ -3,13 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hardwired 28</title>
-    <meta property="og:title" content="Hardwired 28">
+    <title>Hardwired 28 - Rulebook 0.7.2-beta</title>
+    <meta property="og:title" content="Hardwired 28 - Rulebook 0.7.2-beta">
     <meta property="og:description" content="Corporate cablepunk skirmish wargame">
-    <meta property="og:image" content="http://hardwired28.luismars.com/img/social.png">
-    <meta property="og:url" content="http://hardwired28.luismars.com/">
+    <meta property="og:image" content="https://hardwired28.luismars.com/img/social.png">
+    <meta property="og:url" content="https://hardwired28.luismars.com/print.html">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="description" content="Hardwired 28 is a cablepunk skirmish wargame: lead a corporate squad through a collapsing arcology where wired connection is sacred and wireless is heresy.">
+    <link rel="canonical" href="https://hardwired28.luismars.com/print.html">
+    <link rel="alternate" hreflang="en" href="https://hardwired28.luismars.com/print.html">
+    <link rel="alternate" hreflang="es" href="https://hardwired28.luismars.com/es/print.html">
+    <link rel="alternate" hreflang="x-default" href="https://hardwired28.luismars.com/print.html">
+    <meta name="twitter:title" content="Hardwired 28 - Rulebook 0.7.2-beta">
+    <meta name="twitter:description" content="Hardwired 28 is a cablepunk skirmish wargame: lead a corporate squad through a collapsing arcology where wired connection is sacred and wireless is heresy.">
+    <meta name="twitter:image" content="https://hardwired28.luismars.com/img/social.png">
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+    <script data-goatcounter="https://hardwired28.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -65,7 +75,7 @@
 
 
 <h1 id="hardwired-28_1">Hardwired 28</h1>
-<p><em>0.7.1-beta</em> by LuisMars</p>
+<p><em>0.7.2-beta</em> by LuisMars</p>
 <h2 id="the-great-complex">The Great Complex</h2>
 <p>A vertical megastructure three kilometers tall. Cables hang from every surface. They bundle into trunks thicker than bodies, snake through walls, coil underfoot. The Complex was meant to be paradise. Now it decays.</p>
 <p>Wired connection is sacred. Wireless is heresy. Since the Tethering, wireless has meant excommunication. Debts are inherited. Children are born subscribed.</p>
@@ -1090,7 +1100,7 @@
 </tbody>
 </table>
 <h2 id="cybernetics">Cybernetics</h2>
-<p>Repair Injury, Critical, or Fumble penalties. Requires matching penalty (e.g., <code>-1 DT</code> <code>Combat</code> for Combat Processor).</p>
+<p>Repair Injury, Critical, or Fumble penalties. Requires matching penalty (e.g., <code>-1 DT</code> <code>Combat</code> for Targeting).</p>
 <table>
 <thead>
 <tr>
@@ -1298,7 +1308,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Falling:</strong> d6 damage per full 3" fallen (first 3" free). 5" deals 1d6, 6" deals 2d6.</p>
+<p><strong>Falling:</strong> No damage for the first 3". Beyond that, take 1d6 for every 3" fallen, rounding up (4 to 6" deals 1d6, 7 to 9" deals 2d6, 10 to 12" deals 3d6).</p>
 <p><strong>Knockback:</strong> After a hit, attacker may push target directly away. Fall damage applies if pushed off edge. Stops at obstacles.</p>
 <blockquote>
 <p>"Dying in public space incurs a cleanup fee charged to your estate."<br />
@@ -1328,8 +1338,8 @@
 <h2 id="shooting-into-melee">Shooting Into Melee</h2>
 <ul>
 <li><code>-1 DT</code> <code>Combat</code></li>
-<li>Miss hits random model within 1" of target (excluding target)</li>
-<li>Fumble is a Critical against that model</li>
+<li>On a miss (the defender wins), hit a random model within 1" of the target (excluding the target)</li>
+<li>On a Fumble (the defender triples your total), that model takes a Critical</li>
 </ul>
 <blockquote>
 <p>"Collateral damage liability transfers to the firing party. Aim carefully."<br />
@@ -1364,7 +1374,7 @@
 <ul>
 <li>Attacker moved this activation: <code>-1 DT</code> <code>Combat</code></li>
 </ul>
-<p>Stacks with Cover and Shooting into Melee.</p>
+<p>Stacks with <code>Cover</code> and Shooting into Melee.</p>
 <h2 id="grenades_1">Grenades</h2>
 <ul>
 <li>Throw at a point within 6" (action). One use.</li>
@@ -1433,12 +1443,12 @@
 <p>Licensed Broadcasters pay steep fees and submit to monitoring. The Untethered refuse. They broadcast without paying, spread without subscription. The Authority calls them terrorists. The Monks call them plague. The Untethered call themselves free.</p>
 <h2 id="casting">Casting</h2>
 <ul>
-<li>Action to cast (once per activation)</li>
+<li>Action to <code>Cast</code> (once per activation)</li>
 <li>No range limit (requires LoS)</li>
 <li>Offensive powers: roll <code>Wits</code> vs. target <code>Wits</code></li>
 <li>Support powers: roll <code>Wits</code> vs. 2d6 (target must be friendly)</li>
-<li>Triple or more: effect automatically applies to all valid targets within 3" (not chosen by caster)</li>
-<li>Defender triples or more: roll <code>Broadcast</code> Fumble table</li>
+<li>Win by triple or more: the effect also applies to all valid targets within 3" of the target (<code>Focus</code> and <code>Swap</code> always affect only their chosen target)</li>
+<li>Defender wins by triple or more: roll <code>Broadcast</code> Fumble table</li>
 </ul>
 <div class="column-break"></div>
 
@@ -1516,7 +1526,7 @@
 
 
 <h1 id="critical-tables">Critical Tables</h1>
-<p>When you double the target, deal max weapon damage. When you triple or more, deal max damage and roll on the appropriate critical table. The weapon type determines which table. Quadruple adds +1, quintuple adds +2, and so on.</p>
+<p>When your total is at least double the target's, deal max weapon damage. When it is triple or more, deal max damage and roll on the appropriate critical table. The weapon type determines which table. Quadruple adds +1, quintuple adds +2, and so on.</p>
 <blockquote>
 <p>The body breaks in predictable ways. The Splicer-Surgeons catalogued every failure mode, every rupture point, every way flesh surrenders to force. They published their findings. Now everyone knows exactly how much damage they're causing.</p>
 </blockquote>
@@ -1685,7 +1695,7 @@
 <tr>
 <td style="text-align: center;">2</td>
 <td style="text-align: left;">Slag Armor</td>
-<td style="text-align: left;">Armor reduced one tier permanently (Heavy→Medium→Light→ Destroyed)</td>
+<td style="text-align: left;">Armor reduced one tier permanently (Heavy to Medium to Light to Destroyed)</td>
 </tr>
 <tr>
 <td style="text-align: center;">3</td>
@@ -2091,7 +2101,7 @@
 
 
 <h1 id="inhuman-resources_1">Inhuman Resources</h1>
-<p><em>0.7.1-beta</em></p>
+<p><em>0.7.2-beta</em></p>
 <p>The Complex rises 1024 levels from the Roots to the cooling spires. The Departments only maintain the upper 200. Below that, infrastructure fails faster than it can be patched. Cables fray. Coolant leaks. Lights flicker and die. The Maintenance Monks descend when they must, perform their rituals, and leave quickly. They do not speak of what they see down there.</p>
 <p>The Founders built the Complex to last. They built other things too. The sealed archives mention countermeasures, autonomous systems, bioelectric experiments. The archives are in the Roots. The Monks have never been there. The Board has always known what lurks below. The Board has never acknowledged it.</p>
 <p>Something moves in the dark between levels. It nests in the wiring. It remembers the time before the Tethering, when signals flew free and the Wave answered prayers. The lower tiers belong to things that were never meant to survive this long: things that adapted, evolved, were designed for a purpose the Founders never disclosed.</p>
@@ -2126,6 +2136,7 @@
 <li><code>Frenzy</code>: Target the enemy with the best chance to hit. Attack twice.</li>
 <li><code>Patrol</code>: Move toward the nearest <code>Loot Marker</code>. If none visible, move randomly.</li>
 </ul>
+<p>Some behaviors reference a faction's special rule (see each faction). Cross-faction spawns reference the named faction's table.</p>
 </div>
 <div class="two-column">
 
@@ -3188,7 +3199,7 @@
 
 
 <h1 id="campaign_1">Campaign</h1>
-<p><em>0.7.1-beta</em></p>
+<p><em>0.7.2-beta</em></p>
 <p>The Untethered are spreading. What began as scattered heresy in the lower tiers has become something organized, something coordinated. Open Channel broadcasts grow bolder each cycle, promising liberation from cables and subscriptions. The signal reaches further than it should. Something is answering.</p>
 <p>The Departments smell opportunity. Resource Allocation wants whatever the Untethered found in the Roots. Revenue Operations wants the salvage rights. Human Capital wants the converts for reeducation. Security &amp; Compliance wants the heresy crushed before it spreads further. Each Department sends their own squads. Each Department expects results. None of them share intelligence.</p>
 <p>Your squad investigates. Recover data-slates from dead drops. Confiscate transmitters before the signal spreads. Interrogate cultists who would rather die than talk. The Departments pay well for artifacts. They pay better for Founders secrets. They pay best for silence about what you find down there.</p>
@@ -3228,7 +3239,7 @@
 <p><strong>Mission Exits:</strong> Exiting the board for a mission objective is not <code>Flee</code>. No Performance Review penalty.</p>
 <p><strong>Trigger Missions:</strong> At 5 <code>Evidence</code>, play The Signal instead of rolling the generator. At 9 <code>Evidence</code>, play The Source.</p>
 <p><strong>Tiebreaker:</strong> Most surviving models. Still tied: Defender wins.</p>
-<p><strong>Mission Markers:</strong> Defender places all markers (3"+ from edges). "At center" = geometric center (12" from each edge). Place as close as possible if terrain blocks.</p>
+<p><strong>Mission Markers:</strong> Defender places all markers (3"+ from edges). "At center" means the geometric center (12" from each edge). Place as close as possible if terrain blocks.</p>
 <h2 id="mission-generator">Mission Generator</h2>
 <h3 id="calculate-evidence-gap">Calculate Evidence Gap</h3>
 <ul>
@@ -3859,7 +3870,7 @@
 <h4 id="2-control">2. Control</h4>
 <p><em>The relay hub routes half the sector's traffic. Hold it and you control the flow. Lose it and you lose everything downstream.</em></p>
 <p>No markers. At game end, count models within 3" of board center. <code>Out of Action</code> and <code>Fleeing</code> models do not count. Hostiles within 3" of center count against both players (subtract from each total).</p>
-<p><strong>Hostile Subtraction:</strong> Each hostile within 3" of center subtracts 1 from both players' model counts equally. Count each player's models, then subtract the hostile count from each total independently. Example: Player A has 4 models, Player B has 5 models, and 2 hostiles are present within 3" of center. After subtraction: Player A = 4 - 2 = 2, Player B = 5 - 2 = 3. Player B wins 3-2.</p>
+<p><strong>Hostile Subtraction:</strong> Each hostile within 3" of center subtracts 1 from both players' model counts equally. Count each player's models, then subtract the hostile count from each total independently. Example: with 2 hostiles within 3" of center, Player A has 4 models minus 2 hostiles, leaving 2. Player B has 5 minus 2, leaving 3. Player B wins three to two.</p>
 <p>If both totals reach 0 or below after hostile subtraction, most surviving models on the board wins.</p>
 <p><strong>Victory:</strong> Side with more models within 3" of center at game end.</p>
 <p><strong>Reward:</strong> Winner gains +1 <code>Lead</code>.<br />
@@ -4103,7 +4114,7 @@
 <h2 id="the-source-9-evidence">The Source (9 Evidence)</h2>
 <p><em>Nine pieces of evidence and they all point down. Past the maintenance levels, past the dead conduits, past the places where the cable maps stop making sense. Something is broadcasting from the roots of the arcology. Something that was here before the Tethering. Your Department wants it contained. The Untethered want it freed. You just want to survive the extraction.</em></p>
 <p>At 9 <code>Evidence</code>, risk extraction or play one more standard mission for victory at 10. No round limit. One model holds the Source.</p>
-<p><strong>Extractor</strong>: Deploys within 6" of one edge. <strong>Interceptor</strong>: Opposite edge. <strong>Hostiles</strong>: <code>Elite</code> spawn at center after deployment. <code>Normal</code> from Extractor's edge Round 2+. <code>Elite</code> from exit edge Round 4+.</p>
+<p><strong>Extractor</strong>: Deploys within 6" of one edge. <strong>Interceptor</strong>: Opposite edge. <strong>Hostiles</strong>: <code>Elite</code> spawn at center after deployment. <code>Normal</code> from Extractor's edge Round 2+. <code>Elite</code> from opposite edge Round 4+.</p>
 <h4 id="the-source">The Source</h4>
 <p>Holder suffers <code>-1 DT</code> to <code>Wits</code>, cannot use <code>Broadcast Powers</code>. If holder goes <code>Out of Action</code>, any model within 1" picks it up (<code>Interact</code>). Otherwise drops in place.</p>
 <div class="column-break"></div>
@@ -4128,10 +4139,10 @@
 
 <h1 id="post-game-sequence">Post-Game Sequence</h1>
 <ol>
-<li>Log Merits</li>
+<li>Log <code>Merits</code></li>
 <li>Exploration phase</li>
 <li><code>Out of Action</code> models roll Injury</li>
-<li>Check Merit thresholds for Promotion rolls</li>
+<li>Check <code>Merit</code> thresholds for Promotion rolls</li>
 <li>Buy/sell equipment at Trading Post</li>
 <li>Dismiss models (optional)</li>
 <li>Replace dead models (free)</li>
@@ -4140,7 +4151,7 @@
 <li>Performance Review: models that fled take d6 damage</li>
 </ol>
 <h2 id="merit-sources">Merit Sources</h2>
-<p>Each model tracks its own Merits. Hostiles do not generate Merits. The winner of each mission gains +1 <code>Lead</code>. Additional mission-specific merits are defined in each mission.</p>
+<p>Each model tracks its own <code>Merits</code>. Hostiles do not generate <code>Merits</code>. The winner of each mission gains +1 <code>Lead</code>. Additional mission-specific <code>Merits</code> are defined in each mission.</p>
 <table>
 <thead>
 <tr>
@@ -4274,7 +4285,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Promotion Thresholds:</strong> 1, 2, 4, 7, 11, 16, 22 Merits (gap increases by 1 each time)</p>
+<p><strong>Promotion Thresholds:</strong> 1, 2, 4, 7, 11, 16, 22 <code>Merits</code> (gap increases by 1 each time)</p>
 <p><strong>Attribute Limits:</strong> 2d4 min, 2d12 max. Max <code>Health</code> at 0 or below: remove from squad.</p>
 </div>
 </div>
@@ -4358,7 +4369,7 @@
 <p>If <code>Boss</code> dies, promote a <code>Resource</code>. They keep their contract type but become the Boss for morale. Pick one:</p>
 <ul>
 <li>Gain <strong>Both</strong> weapon access</li>
-<li>Gain +1 max armor (Light → Medium → Heavy)</li>
+<li>Gain +1 max armor (from Light to Medium to Heavy)</li>
 </ul>
 <h2 id="trading-post">Trading Post</h2>
 <p>Buy equipment at listed price. Sell at half price. Store unused equipment in Lockers between games (no limits). Choose what each model carries before each game.</p>

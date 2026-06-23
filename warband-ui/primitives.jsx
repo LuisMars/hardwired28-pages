@@ -753,8 +753,8 @@ const BlankModelBackCard = ({ cardSize = DEFAULT_CARD_SIZE }) => {
   const availableWidth = size.width - (padNum * 2) - cardBorder;
   const squaresPerRow = Math.floor(availableWidth / sqNum);
 
-  // Merit thresholds: triangular numbers (per rules)
-  const meritThresholds = [1, 3, 6, 10, 15, 21, 28];
+  // Merit thresholds: promotion thresholds (per rules)
+  const meritThresholds = window.H28_UTILS.promotionThresholds(7);
 
   // Helper to render squares in rows
   const renderSquareRows = (total, isHighlight) => {

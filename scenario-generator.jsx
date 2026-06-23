@@ -1460,10 +1460,14 @@ function ScenarioGenerator() {
                          // Regenerate advantages based on new advantage count
                          const newResults = { ...results };
                          if (newAdvantageCount >= 2) {
-                           const r1 = rollDie(6);
-                           const r2 = rollDie(6);
-                           newResults.setupAdvantage = { roll: r1, item: findByRoll(data.setupAdvantages, r1) };
-                           newResults.tacticalAdvantage = { roll: r2, item: findByRoll(data.tacticalAdvantages, r2) };
+                           if (!newResults.setupAdvantage) {
+                             const r1 = rollDie(6);
+                             newResults.setupAdvantage = { roll: r1, item: findByRoll(data.setupAdvantages, r1) };
+                           }
+                           if (!newResults.tacticalAdvantage) {
+                             const r2 = rollDie(6);
+                             newResults.tacticalAdvantage = { roll: r2, item: findByRoll(data.tacticalAdvantages, r2) };
+                           }
                          } else {
                            delete newResults.setupAdvantage;
                            delete newResults.tacticalAdvantage;
@@ -1471,9 +1475,11 @@ function ScenarioGenerator() {
                          }
 
                          if (newAdvantageCount >= 3) {
-                           const bonusTable = Math.random() < 0.5 ? data.setupAdvantages : data.tacticalAdvantages;
-                           const r = rollDie(6);
-                           newResults.bonusAdvantage = { roll: r, item: findByRoll(bonusTable, r), isSetup: bonusTable === data.setupAdvantages };
+                           if (!newResults.bonusAdvantage) {
+                             const bonusTable = Math.random() < 0.5 ? data.setupAdvantages : data.tacticalAdvantages;
+                             const r = rollDie(6);
+                             newResults.bonusAdvantage = { roll: r, item: findByRoll(bonusTable, r), isSetup: bonusTable === data.setupAdvantages };
+                           }
                          } else if (newResults.bonusAdvantage) {
                            delete newResults.bonusAdvantage;
                          }

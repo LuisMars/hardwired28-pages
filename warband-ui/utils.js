@@ -486,6 +486,28 @@ const generateModelName = () => {
   return `${first} ${last}`;
 };
 
+// Resolve the base stat die for a model from STAT_ARRAYS data (single source of truth)
+const getBaseStatDie = (model, stat) => {
+  const arrays = (window.WARBAND_DATA && window.WARBAND_DATA.STAT_ARRAYS) || [];
+  const arr = arrays.find(a => a.key === model.statArray) || arrays.find(a => a.name === model.statArray);
+  if (!arr) return '2d6';
+  if (model.technicianStat === stat) return arr.strong;
+  if (model.technicianWeakStat === stat) return arr.weak;
+  return arr.base;
+};
+
+// Promotion thresholds per rulebook 3_15: 1, 2, 4, 7, 11, 16, 22, ... (gap increases by 1 each time)
+const countPromotions = (xp) => {
+  let count = 0, threshold = 1, step = 1;
+  while ((xp || 0) >= threshold) { count++; threshold += step; step++; }
+  return count;
+};
+const promotionThresholds = (n) => {
+  const out = []; let threshold = 1, step = 1;
+  for (let i = 0; i < n; i++) { out.push(threshold); threshold += step; step++; }
+  return out;
+};
+
 // Export to window for access by other modules
 window.H28_UTILS = {
   // Localization
@@ -513,9 +535,12 @@ window.H28_UTILS = {
   getCyberneticHealthMod,
   getCyberneticMoveMod,
   addDamageBonus,
+  getBaseStatDie,
   markdownToHtml,
   stripMarkdown,
   // Name generators
   generateWarbandName,
   generateModelName,
+  countPromotions,
+  promotionThresholds,
 };

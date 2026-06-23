@@ -20,7 +20,7 @@
     {
       "roll": 1,
       "result": "Tropezón",
-      "effect": "Pierde activación"
+      "effect": "Pierde la siguiente activación"
     },
     {
       "roll": 2,
@@ -45,7 +45,7 @@
     {
       "roll": "6+",
       "result": "Destrozada",
-      "effect": "Arma destruida, daño máx."
+      "effect": "Arma destruida, daño máximo del arma"
     }
   ]
 }

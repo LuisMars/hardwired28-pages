@@ -3,19 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script data-goatcounter="https://hardwired28.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
     <title>Hardwired 28 - Generador de Escenario</title>
     <script>document.documentElement.dataset.theme = 'corporate';</script>
+    <meta name="description" content="Genera una misión aleatoria de Hardwired 28: despliegue, objetivos, hostiles y botín para el juego de escaramuzas cablepunk.">
+    <link rel="icon" type="image/svg+xml" href="../../img/favicon.svg">
+    <link rel="canonical" href="https://hardwired28.luismars.com/es/scenario/">
+    <link rel="alternate" hreflang="en" href="https://hardwired28.luismars.com/scenario/">
+    <link rel="alternate" hreflang="es" href="https://hardwired28.luismars.com/es/scenario/">
+    <link rel="alternate" hreflang="x-default" href="https://hardwired28.luismars.com/scenario/">
     <meta property="og:title" content="Hardwired 28 - Generador de Escenario">
     <meta property="og:description" content="Juego de escaramuzas cablepunk corporativo">
-    <meta property="og:image" content="http://hardwired28.luismars.com/img/social.png">
-    <meta property="og:url" content="http://hardwired28.luismars.com/es/scenario/">
+    <meta property="og:image" content="https://hardwired28.luismars.com/img/social.png">
+    <meta property="og:url" content="https://hardwired28.luismars.com/es/scenario/">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Hardwired 28 - Generador de Escenario">
+    <meta name="twitter:description" content="Genera una misión aleatoria de Hardwired 28: despliegue, objetivos, hostiles y botín para el juego de escaramuzas cablepunk.">
+    <meta name="twitter:image" content="https://hardwired28.luismars.com/img/social.png">
     <link rel="stylesheet" href="../../style-base.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone@7/babel.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { margin: 0; }
@@ -128,7 +138,7 @@
             return fetch('../../scenario-generator.jsx' + cacheBust)
                 .then(r => r.text())
                 .then(code => {
-                    const transformed = Babel.transform(code, { presets: ['react'] }).code;
+                    const transformed = Babel.transform(code, { presets: [['react', { runtime: 'classic' }]] }).code;
                     const script = document.createElement('script');
                     script.textContent = transformed;
                     document.body.appendChild(script);

@@ -6,7 +6,7 @@ const { useState, useMemo, useEffect } = React;
 const { Icon, ModeSelector } = window.H28_PRIMITIVES;
 const { ModelCard } = window.H28_MODEL_CARD;
 const { StashPanel, LeadsCounter, EvidenceTracker, CardPrintView } = window.H28_PANELS;
-const { t, generateWarbandName, generateModelName, getLocale } = window.H28_UTILS;
+const { t, generateWarbandName, generateModelName, getLocale, countPromotions, promotionThresholds, getHealthModFromModifiers, getCyberneticHealthMod } = window.H28_UTILS;
 
 // LocalStorage keys (per locale)
 const STORAGE_KEY = `h28-warbands-${getLocale()}`;
@@ -42,9 +42,9 @@ function WarbandSheet() {
     combatMod: 0,
     defenseMod: 0,
     witsMod: 0,
-    baseHealth: 8,
-    currentHealth: 8,
-    baseMove: 6,
+    baseHealth: (DATA.BASE?.health ?? 8),
+    currentHealth: (DATA.BASE?.health ?? 8),
+    baseMove: (DATA.BASE?.move ?? 6),
     equipment: [],
     modifiers: [],
     power: null,
@@ -57,12 +57,12 @@ function WarbandSheet() {
   const createWarband = () => ({
     id: generateId(),
     name: '',
-    subs: 60,
+    subs: (DATA.BASE?.budget ?? 60),
     leaderDead: false,
     evidence: [],
     leads: 0,
     stash: [],
-    models: Array(5).fill(null).map(() => createModel()),
+    models: Array(DATA.BASE?.squad_size ?? 5).fill(null).map(() => createModel()),
   });
 
   // Load all warbands from localStorage
@@ -167,7 +167,7 @@ function WarbandSheet() {
       const model = prev.models[i];
       const equipment = model.equipment || [];
       const newStash = [...prev.stash, ...equipment.filter(e => !e.used)];
-      const removingLeader = model.archetype === 'Leader';
+      const removingLeader = (ARCHETYPES?.[model.archetype]?.max === '*');
       const newModel = createModel();
       const models = [...prev.models];
       models[i] = newModel;
@@ -681,12 +681,6 @@ function WarbandSheet() {
 
         {/* Play Mode Summary */}
         {mode === 'play' && (() => {
-          // Triangular number thresholds: 1, 3, 6, 10, 15, 21, 28, 36, 45, 55...
-          const countPromotions = (xp) => {
-            let count = 0, threshold = 1, step = 2;
-            while (xp >= threshold) { count++; threshold += step; step++; }
-            return count;
-          };
           const totalMerits = warband.models.reduce((sum, m) => sum + (m.xp || 0), 0);
           const totalPromotions = warband.models.reduce((sum, m) => sum + countPromotions(m.xp || 0), 0);
           const spentPromotions = warband.models.reduce((sum, m) => sum + (m.levelUpsSpent || 0), 0);
@@ -745,7 +739,7 @@ function WarbandSheet() {
             <span><strong className="wb-text-primary">{t('turn')}:</strong> {t('turnDesc')}</span>
             <span><strong className="wb-text-primary">{t('crit')}:</strong> {t('critDesc')}</span>
             <span><strong className="wb-text-primary">{t('fumble')}:</strong> {t('fumbleDesc')}</span>
-            <span><strong className="wb-text-primary">{t('merits')}:</strong> 1 → 3 → 6 → 10 → 15 → 21 → 28</span>
+            <span><strong className="wb-text-primary">{t('merits')}:</strong> {promotionThresholds(7).join(' → ')}</span>
           </div>
         </div>
 
@@ -777,8 +771,28 @@ function WarbandSheet() {
                   reader.onload = (ev) => {
                     try {
                       const imported = JSON.parse(ev.target?.result);
-                      // Add ID if missing, preserve current warband's ID
-                      setWarband({ ...imported, id: warband.id });
+                      if (!imported || typeof imported !== 'object') throw new Error('not an object');
+                      // Normalize to exactly 5 model slots, each with all required fields.
+                      const sourceModels = Array.isArray(imported.models) ? imported.models : [];
+                      const models = Array(DATA.BASE?.squad_size ?? 5).fill(null).map((_, idx) => {
+                        const base = createModel();
+                        const src = sourceModels[idx];
+                        if (!src || typeof src !== 'object') return base;
+                        const merged = { ...base, ...src };
+                        // Coerce array/collection fields that must never be missing.
+                        if (!Array.isArray(merged.equipment)) merged.equipment = [];
+                        if (!Array.isArray(merged.modifiers)) merged.modifiers = [];
+                        return merged;
+                      });
+                      // Preserve current warband's ID, coerce required warband fields.
+                      setWarband({
+                        ...createWarband(),
+                        ...imported,
+                        id: warband.id,
+                        models,
+                        stash: Array.isArray(imported.stash) ? imported.stash : [],
+                        evidence: Array.isArray(imported.evidence) ? imported.evidence : [],
+                      });
                     } catch { alert('Invalid file'); }
                   };
                   reader.readAsText(file);
@@ -803,12 +817,12 @@ function WarbandSheet() {
                 setWarband({
                   ...warband,
                   name: '',
-                  subs: 60,
+                  subs: (DATA.BASE?.budget ?? 60),
                   leaderDead: false,
                   evidence: [],
                   leads: 0,
                   stash: [],
-                  models: Array(5).fill(null).map(() => createModel()),
+                  models: Array(DATA.BASE?.squad_size ?? 5).fill(null).map(() => createModel()),
                 });
               }
             }}
@@ -844,18 +858,18 @@ function WarbandSheet() {
               {warband.models.filter(m => m.archetype).map((model, i) => {
                 const arch = ARCHETYPES[model.archetype];
                 const baseHealth = model.baseHealth || 8;
-                const healthMod = arch?.healthMod || 0;
-                const maxHealth = baseHealth + healthMod;
+                const healthMod = getHealthModFromModifiers(model.modifiers);
+                const cyberHealthMod = getCyberneticHealthMod(model.equipment);
+                const maxHealth = baseHealth + healthMod + cyberHealthMod;
                 const baseMove = model.baseMove || 6;
                 const armor = (model.equipment || []).find(e => e.id?.includes('armor') || e.name?.toLowerCase().includes('armor'));
                 const weapons = (model.equipment || []).filter(e =>
                   e.id?.includes('melee') || e.id?.includes('ranged') ||
                   e.damage || e.name?.toLowerCase().includes('weapon')
                 );
-                const statArray = model.statArray === 'Specialist' || model.statArray === 'Technician';
-                const getCom = () => statArray ? (model.technicianStat === 'combat' ? '2d8' : model.technicianWeakStat === 'combat' ? '2d4' : '2d6') : '2d6';
-                const getDef = () => statArray ? (model.technicianStat === 'defense' ? '2d8' : model.technicianWeakStat === 'defense' ? '2d4' : '2d6') : '2d6';
-                const getWit = () => statArray ? (model.technicianStat === 'wits' ? '2d8' : model.technicianWeakStat === 'wits' ? '2d4' : '2d6') : '2d6';
+                const getCom = () => window.H28_UTILS.getBaseStatDie(model, 'combat');
+                const getDef = () => window.H28_UTILS.getBaseStatDie(model, 'defense');
+                const getWit = () => window.H28_UTILS.getBaseStatDie(model, 'wits');
 
                 return (
                   <div

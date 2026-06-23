@@ -36,7 +36,7 @@
     },
     {
       "action": "`Buscar`",
-      "effect": "A 1\" de un `Marcador de Botín`. `Astucia` vs. 2d6 (si no está `Trabado`)"
+      "effect": "A 1\" de un `Marcador de Botín`. `Astucia` vs. 2d6. No mientras esté `Trabado`."
     },
     {
       "action": "`Interrogar`",

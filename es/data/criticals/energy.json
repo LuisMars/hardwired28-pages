@@ -25,7 +25,7 @@
     {
       "roll": 2,
       "result": "Armadura Fundida",
-      "effect": "Armadura -1 nivel permanente (Pesada→Media→Ligera→ destruida)"
+      "effect": "Armadura -1 nivel permanente (de Pesada a Media a Ligera a destruida)"
     },
     {
       "roll": 3,
@@ -40,7 +40,7 @@
     {
       "roll": 5,
       "result": "Quemado",
-      "effect": "`-1 ND` disparo permanente"
+      "effect": "`-1 ND` a ataques a distancia permanente"
     },
     {
       "roll": "6+",

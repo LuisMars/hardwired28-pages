@@ -116,7 +116,7 @@
     },
     {
       "roll": 12,
-      "name": "Estática",
+      "name": "Hoja Estática",
       "type": "`Estático`",
       "damage": "d8",
       "special": "`+1 ND` vs. herido",

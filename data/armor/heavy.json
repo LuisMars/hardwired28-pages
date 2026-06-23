@@ -1,6 +1,8 @@
 {
   "table_name": "Heavy Armor",
   "source": "1_03_equipment.md",
+  "tier": "Heavy",
+  "reduction": 3,
   "columns": [
     "d6",
     "Armor",

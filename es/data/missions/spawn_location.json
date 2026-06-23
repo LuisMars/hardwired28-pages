@@ -26,7 +26,7 @@
     },
     {
       "roll": "3",
-      "location": "Borde más cercano a la última acción `Registrar` o `Interrogar` (si no hay: aleatorio)",
+      "location": "Borde más cercano a la última acción `Buscar` o `Interrogar` (si no hay: aleatorio)",
       "map": ""
     },
     {

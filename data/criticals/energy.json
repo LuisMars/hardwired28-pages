@@ -20,7 +20,7 @@
     {
       "roll": 2,
       "result": "Slag Armor",
-      "effect": "Armor reduced one tier permanently (Heavy→Medium→Light→ Destroyed)"
+      "effect": "Armor reduced one tier permanently (Heavy to Medium to Light to Destroyed)"
     },
     {
       "roll": 3,

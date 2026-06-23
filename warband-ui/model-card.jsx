@@ -11,14 +11,7 @@ const {
 
 // Stat display and modification row
 const StatRow = ({ model, onChange, mode, archetypes }) => {
-  const getBase = (stat) => {
-    if (model.statArray === 'Technician') {
-      if (model.technicianStat === stat) return '2d8';
-      if (model.technicianWeakStat === stat) return '2d4';
-      return '2d6';
-    }
-    return '2d6'; // Operative: all 2d6
-  };
+  const getBase = (stat) => window.H28_UTILS.getBaseStatDie(model, stat);
 
   const StatCell = ({ stat, iconName, label }) => {
     const base = getBase(stat);
@@ -253,8 +246,6 @@ const EquipmentSection = ({ model, onChange, onAddToStash, mode, subs, onBuy, as
     maxArmor = isLight ? 'Medium' : isMedium ? 'Heavy' : 'Heavy';
   }
 
-  const rangedDmgBonus = arch?.special?.includes('+1 ranged dmg') ? 1 : 0;
-
   const equipment = model.equipment || [];
   const melee = equipment.filter(e => getItemType(e.id) === 'melee');
   const ranged = equipment.filter(e => getItemType(e.id) === 'ranged');
@@ -364,7 +355,6 @@ const EquipmentSection = ({ model, onChange, onAddToStash, mode, subs, onBuy, as
         <div className="flex items-center justify-between mb-1">
           <span className="text-xs font-semibold wb-text-muted">
             <Icon name="melee" className="mr-1" />{t('weapons')}
-            {rangedDmgBonus > 0 && <span className="wb-text-primary ml-1">(+{rangedDmgBonus} {t('ranged').toLowerCase()})</span>}
           </span>
           {canEdit && !(canMelee && canRanged) && (
             <button
@@ -399,7 +389,7 @@ const EquipmentSection = ({ model, onChange, onAddToStash, mode, subs, onBuy, as
               onRemove={canEdit ? () => removeItem(item.id) : null}
               onToStash={() => toStash(item)}
               showActions={canEdit || mode === 'edit'}
-              damageBonus={rangedDmgBonus}
+              damageBonus={0}
             />
           ))}
           {melee.length === 0 && ranged.length === 0 && (
@@ -490,10 +480,9 @@ const ModifiersSection = ({ model, onChange, mode }) => {
   const modifiers = model.modifiers || [];
   const canEdit = mode === 'edit' || mode === 'build';
 
-  // Calculate unused promotions for this model (triangular thresholds: 1, 3, 6, 10, 15, 21, 28, 36...)
+  // Calculate unused promotions for this model (rulebook thresholds: 1, 2, 4, 7, 11, 16, 22)
   const xp = model.xp || 0;
-  let earnedPromotions = 0, threshold = 1, step = 2;
-  while (xp >= threshold) { earnedPromotions++; threshold += step; step++; }
+  const earnedPromotions = window.H28_UTILS.countPromotions(xp);
   const spentPromotions = model.levelUpsSpent || 0;
   const unusedPromotions = Math.max(0, earnedPromotions - spentPromotions);
 
@@ -900,8 +889,9 @@ const ModelCard = ({ model, onChange, onFire, mode, subs, onSpend, onAddToStash,
           <span className="text-xs wb-text-muted">
             {t('next')}: {(() => {
               const xp = model.xp || 0;
-              let threshold = 1, step = 2;
-              while (xp >= threshold) { threshold += step; step++; }
+              const earned = window.H28_UTILS.countPromotions(xp);
+              let threshold = xp;
+              while (window.H28_UTILS.countPromotions(threshold) <= earned) threshold++;
               return threshold;
             })()}
           </span>

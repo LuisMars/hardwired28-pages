@@ -1,6 +1,8 @@
 {
   "table_name": "Medium Armor",
   "source": "1_03_equipment.md",
+  "tier": "Medium",
+  "reduction": 2,
   "columns": [
     "d6",
     "Armor",

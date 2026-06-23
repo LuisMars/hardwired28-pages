@@ -3,20 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script data-goatcounter="https://hardwired28.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
     <title>Hardwired 28 - Squad Builder</title>
     <script>document.documentElement.dataset.theme = localStorage.getItem('wb-theme') || 'corporate';</script>
+    <meta name="description" content="Build and theory-craft your Hardwired 28 squad: pick contract types, spend your subs on weapons, armor and gear, and print model cards. A cablepunk skirmish wargame.">
+    <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+    <link rel="canonical" href="https://hardwired28.luismars.com/builder/">
+    <link rel="alternate" hreflang="en" href="https://hardwired28.luismars.com/builder/">
+    <link rel="alternate" hreflang="es" href="https://hardwired28.luismars.com/es/builder/">
+    <link rel="alternate" hreflang="x-default" href="https://hardwired28.luismars.com/builder/">
     <meta property="og:title" content="Hardwired 28 - Squad Builder">
     <meta property="og:description" content="Corporate cablepunk skirmish wargame">
-    <meta property="og:image" content="http://hardwired28.luismars.com/img/social.png">
-    <meta property="og:url" content="http://hardwired28.luismars.com/builder/">
+    <meta property="og:image" content="https://hardwired28.luismars.com/img/social.png">
+    <meta property="og:url" content="https://hardwired28.luismars.com/builder/">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Hardwired 28 - Squad Builder">
+    <meta name="twitter:description" content="Build and theory-craft your Hardwired 28 squad: pick contract types, spend your subs on weapons, armor and gear, and print model cards. A cablepunk skirmish wargame.">
+    <meta name="twitter:image" content="https://hardwired28.luismars.com/img/social.png">
     <link rel="stylesheet" href="../style-base.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/rpg-awesome@0.2.0/css/rpg-awesome.min.css">
-    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone@7/babel.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { margin: 0; }
@@ -107,7 +117,7 @@
                 .then(code => {
                     const script = document.createElement('script');
                     const body = isBabel
-                        ? Babel.transform(code, { presets: ['react'] }).code
+                        ? Babel.transform(code, { presets: [['react', { runtime: 'classic' }]] }).code
                         : code;
                     script.textContent = '(function(){' + body + '})();';
                     document.body.appendChild(script);
@@ -135,8 +145,9 @@
             fetchJson('../data/equipment/cybernetics.json'),
             // Warbands
             fetchJson('../data/warbands/archetypes.json'),
-            fetchJson('../data/combat/broadcast_offensive.json'),
-            fetchJson('../data/combat/broadcast_support.json'),
+            fetchJson('../data/warbands/stat_arrays.json'),
+            fetchJson('../data/warbands/base_values.json'),
+            fetchJson('../data/combat/broadcast_powers.json'),
             // Criticals (8)
             fetchJson('../data/criticals/bladed.json'),
             fetchJson('../data/criticals/blunt.json'),
@@ -175,7 +186,7 @@
                 fallback, melee, ranged, grenades,
                 armorLight, armorMedium, armorHeavy,
                 consumables, gear, cybernetics,
-                archetypes, powersOffensive, powersSupport,
+                archetypes, statArrays, baseValues, broadcastPowers,
                 critBladed, critBlunt, critProjectile, critEnergy, critExplosive, critToxic, critStatic,
                 fumbleMelee, fumbleRanged, fumbleBroadcast,
                 hostCoworkers, hostScrapers, hostFeralCrews, hostWaveCallers, hostStaticWraiths, hostFeralAutomata, hostCableFeeders,
@@ -211,16 +222,19 @@
                     MELEE_WEAPONS: (melee?.items || []).map(addId('melee')),
                     RANGED_WEAPONS: (ranged?.items || []).map(addId('ranged')),
                     ARMOR: [
-                        ...(armorLight?.items || []).map(i => ({ ...i, tier: 'Light', reduction: 1 })),
-                        ...(armorMedium?.items || []).map(i => ({ ...i, tier: 'Medium', reduction: 2 })),
-                        ...(armorHeavy?.items || []).map(i => ({ ...i, tier: 'Heavy', reduction: 3 })),
+                        ...(armorLight?.items || []).map(i => ({ ...i, tier: armorLight?.tier, reduction: armorLight?.reduction })),
+                        ...(armorMedium?.items || []).map(i => ({ ...i, tier: armorMedium?.tier, reduction: armorMedium?.reduction })),
+                        ...(armorHeavy?.items || []).map(i => ({ ...i, tier: armorHeavy?.tier, reduction: armorHeavy?.reduction })),
                     ].map(addId('armor')),
                     CONSUMABLES: (consumables?.items || []).map(addId('cons')),
                     GEAR: (gear?.items || []).map(addId('gear')),
                     CYBERNETICS: (cybernetics?.items || []).map(addId('cyber')),
                     GRENADES: (grenades?.items || []).map(addId('grenade')),
-                    POWERS: [...(powersOffensive?.items || []), ...(powersSupport?.items || [])].map(addId('power')),
+                    OFFENSIVE_POWERS: (broadcastPowers?.items || []).filter(p => p.type === 'Offensive' || p.type === 'Ofensivo').map(addId('power')),
+                    SUPPORT_POWERS: (broadcastPowers?.items || []).filter(p => p.type === 'Support' || p.type === 'Apoyo').map(addId('power')),
                     ARCHETYPES: archetypesObj,
+                    STAT_ARRAYS: statArrays?.items || [],
+                    BASE: baseValues || { health: 8, move: 6, squad_size: 5, budget: 60 },
                     // Reference tables
                     CRITICALS: {
                         bladed: critBladed, blunt: critBlunt, projectile: critProjectile, energy: critEnergy,
