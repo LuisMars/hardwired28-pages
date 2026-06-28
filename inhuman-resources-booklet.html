@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Hardwired 28 - Inhuman Resources 0.7.2-beta</title>
-<meta content="Hardwired 28 - Inhuman Resources 0.7.2-beta" property="og:title"/>
+<title>Hardwired 28: Inhuman Resources 0.7.3-beta</title>
+<meta content="Hardwired 28: Inhuman Resources 0.7.3-beta" property="og:title"/>
 <meta content="Corporate cablepunk skirmish wargame" property="og:description"/>
 <meta content="https://hardwired28.luismars.com/img/social.png" property="og:image"/>
 <meta content="https://hardwired28.luismars.com/inhuman-resources.html" property="og:url"/>
@@ -15,15 +15,16 @@
 <link href="https://hardwired28.luismars.com/inhuman-resources.html" hreflang="en" rel="alternate"/>
 <link href="https://hardwired28.luismars.com/es/inhuman-resources.html" hreflang="es" rel="alternate"/>
 <link href="https://hardwired28.luismars.com/inhuman-resources.html" hreflang="x-default" rel="alternate"/>
-<meta content="Hardwired 28 - Inhuman Resources 0.7.2-beta" name="twitter:title"/>
+<meta content="Hardwired 28: Inhuman Resources 0.7.3-beta" name="twitter:title"/>
 <meta content="Hardwired 28 is a cablepunk skirmish wargame: lead a corporate squad through a collapsing arcology where wired connection is sacred and wireless is heresy." name="twitter:description"/>
 <meta content="https://hardwired28.luismars.com/img/social.png" name="twitter:image"/>
 <link href="img/favicon.svg" rel="icon" type="image/svg+xml"/>
 <script async="" data-goatcounter="https://hardwired28.goatcounter.com/count" src="//gc.zgo.at/count.js"></script>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet"/>
+<link href="normalize.css" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&amp;family=Work+Sans:wght@300;400;500;600&amp;family=Montserrat:wght@600;700;800;900&amp;family=PT+Serif:wght@400;700&amp;family=Ubuntu+Mono&amp;display=swap" rel="stylesheet"/>
+<link href="style-base.css" rel="stylesheet"/>
 <link href="style.css" rel="stylesheet"/>
 <style>
 /* Override page size to A4 landscape */
@@ -159,24 +160,26 @@
 <a class="app-menu__brand" href="./">Hardwired 28</a>
 <button aria-label="Menu" class="app-menu__toggle" onclick="toggleMenu()" type="button"></button>
 <div class="app-menu__links">
-<a href="rulebook">Rulebook</a>
+<a class="app-menu__cta" href="first-game">First Game</a>
+<a href="rulebook">Rules</a>
 <div class="app-menu__dropdown">
-<button class="app-menu__dropdown-toggle current">Print</button>
+<button class="app-menu__dropdown-toggle">Print</button>
 <div class="app-menu__submenu">
-<div class="app-menu__nested">
-<span class="app-menu__nested-label">Singles</span>
-<div class="app-menu__nested-submenu">
+<a href="quick-reference">Quick Reference</a>
 <a href="print">All Rules</a>
 <a href="core-rules">Core Rules</a>
 <a href="inhuman-resources">Inhuman Resources</a>
 <a href="campaign">Campaign</a>
 </div>
 </div>
-</div>
-</div>
-<a href="quick-reference">Quick Reference</a>
+<div class="app-menu__dropdown">
+<button class="app-menu__dropdown-toggle">Tools</button>
+<div class="app-menu__submenu">
 <a href="builder/index">Squad Builder</a>
 <a href="scenario/index">Scenarios</a>
+</div>
+</div>
+<a href="feedback">Feedback</a>
 <a href="es/inhuman-resources">Castellano</a>
 </div>
 </div>
@@ -353,11 +356,13 @@
     <div class="imposed-left"><div class="page page-even" data-page-number="2">
 <div class="two-column">
 <h1 id="inhuman-resources_1">Inhuman Resources</h1>
-<p><em>0.7.2-beta</em></p>
+<p><em>0.7.3-beta</em></p>
+<p><em>Open Distribution Statute: <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></em></p>
 <p>The Complex rises 1024 levels from the Roots to the cooling spires. The Departments only maintain the upper 200. Below that, infrastructure fails faster than it can be patched. Cables fray. Coolant leaks. Lights flicker and die. The Maintenance Monks descend when they must, perform their rituals, and leave quickly. They do not speak of what they see down there.</p>
 <p>The Founders built the Complex to last. They built other things too. The sealed archives mention countermeasures, autonomous systems, bioelectric experiments. The archives are in the Roots. The Monks have never been there. The Board has always known what lurks below. The Board has never acknowledged it.</p>
-<p>Something moves in the dark between levels. It nests in the wiring. It remembers the time before the Tethering, when signals flew free and the Wave answered prayers. The lower tiers belong to things that were never meant to survive this long: things that adapted, evolved, were designed for a purpose the Founders never disclosed.</p>
-<p>Every expedition into the depths encounters them. Every recovery team files the same report: losses acceptable, mission parameters adjusted, recommend sealing the junction. The Departments call them externalities. The accountants call them acceptable shrinkage. The survivors call them something else entirely.</p>
+<p>Something moves in the dark between levels. It nests in the wiring. It remembers the time before the Tethering, when signals flew free and the Wave answered prayers. The lower tiers belong to things that were never meant to survive this long: things that adapted and evolved, designed for a purpose the Founders never disclosed.</p>
+<div class="column-break"></div>
+<p>Every expedition into the depths encounters them. Every recovery team files the same report: losses acceptable, mission parameters adjusted, recommend sealing the junction. The Departments call them externalities. The accountants call them acceptable shrinkage. The survivors don't call them anything. They don't come back.</p>
 <p>Heat rises from the Roots. The cooling spires above draw it upward through a thousand levels, creating a thermal gradient the Founders weaponized. The wealthy stay cold. The poor sweat. The lowest tiers cook. Anything living down there has adapted to temperatures that would kill an unaugmented human in hours. Contractors descend anyway. Salvage contracts pay triple below level 400. Debt recovery missions offer hazard bonuses. The Departments need what the Founders left behind. They send expendable assets to retrieve it. They call the losses acceptable.</p>
 <blockquote>
 <p>THE DEPTHS CONTAIN ASSETS NOT YET ALLOCATED. Recovery authorized. Casualties expected.<br/>
@@ -490,8 +495,8 @@
 <div class="two-column">
 <h2 id="cable-feeders">Cable Feeders</h2>
 <p>Parasites. They nest between power conduits, feeding on bioelectrical signals. The Founders' sealed archives mention "bioelectric countermeasures." The Monks say they evolved naturally. The archives are in the Roots. The Monks have never been there. The Board knows what the Founders created. The Board has always known. Some weapons were never meant to be turned off.</p>
-<p>They hunt in silence. They prefer isolated targets. When they feed, they drain everything: nervous system, implants, the current running through your cables. They are drawn to the warmth of living current, to the hum of active electronics, to the pulse of bioelectric signatures. Some believe they were engineered to hunt the Untethered, to consume anyone transmitting without authorization. Others believe they are what happens when flesh meets wire for too long, when the boundary between organism and infrastructure dissolves. The truth is in the Roots. The truth is sealed.</p>
-<p>Reapers are the smallest, fast and numerous, claws shredding through armor to reach the current beneath. Larvae are patient, feeder tendrils draining victims slowly while toxins paralyze. Stalkers track prey through the dark, talons designed to open cable housings and bodies alike. Lures project false signals, mind spikes drawing victims toward ambush sites. Feeders are the mature hunters, drain tubes pulling the life from anything they touch. And the Agonists: massive, ancient, intelligent. They coordinate hunts. They remember what they consume, what they were made for.</p>
+<p>They hunt in silence. They prefer isolated targets. When they feed, they drain everything: nervous system, implants, the current running through your cables. They hunt warmth: living current, active electronics. Anything that hums. Some believe they were engineered to hunt the Untethered, to consume anyone transmitting without authorization. Others believe they are what happens when flesh meets wire for too long, when the boundary between organism and infrastructure dissolves. The truth is in the Roots. The truth is sealed.</p>
+<p>Reapers are the smallest and fastest, swarming in packs, claws shredding through armor to reach the current beneath. Larvae are patient, feeder tendrils draining victims slowly while toxins paralyze. Stalkers track prey through the dark, talons designed to open cable housings and bodies alike. Lures project false signals, mind spikes drawing victims toward ambush sites. Feeders are the mature hunters, drain tubes pulling the life from anything they touch. And the Agonists: massive, ancient, intelligent. They coordinate hunts. They remember what they consume, what they were made for.</p>
 <p>The Scrapers say there are bigger ones in the deep Roots. Ones that feed on whole crews. Ones that have been feeding since the Founders. The Authority recommends sealing any junction where Feeders are confirmed. The Authority does not explain what happens if you don't. The Authority does not explain why some sealed junctions are marked with warnings older than the Authority itself.</p>
 <blockquote>
 <p>"Sector 7 sweep complete. No survivors. Recommend sealing the junction permanently."<br/>
@@ -565,8 +570,8 @@
 <h2 id="scrapers">Scrapers</h2>
 <p>Outsourced asset recovery. Subcontracted compliance enforcement. Third-party resource reallocation. After seven layers of shell companies, nobody knows what the original contract said. The Scrapers might have been legitimate once: repo crews, maintenance teams, infrastructure auditors. The paperwork degraded. The chain of command dissolved. Now they take what looks valuable and bill someone.</p>
 <p>They live where infrastructure failed: the cable-choked depths where maintenance stopped generations ago. Subscription collectors don't descend past Tier 7. Toll booths rust unopened. The Departments wrote off these levels as "unrecoverable assets" and sealed the access shafts. The Scrapers unsealed them. They always do.</p>
-<p>Some have been down to the Roots. Some have seen what the Founders left behind: clean machines that still work, sealed vaults that hum with power, corridors where the lights respond to movement. They trade that knowledge carefully. They don't talk about the other things. The things that move down there. The things that remember.</p>
-<p>Gutter Runners scout the upper depths, mapping safe routes through collapsing infrastructure. Cable Rats fight over junction boxes, stripping copper from the walls. Pickers catalog salvage with obsessive precision, knowing which components fetch premium prices. The Pit Bosses run operations with brutal efficiency: every gram of copper accounted for, every deserter made example of. Their Rogue Broadcasters tap forbidden frequencies, trading signal-secrets with the Untethered, listening for whispers from the deep. Their Repo Men carry impound launchers designed to disable and capture. Equipment is profit. People are equipment.</p>
+<p>Some have been down to the Roots. Some have seen what the Founders left behind: clean machines that still work. Sealed vaults that still hum. Corridors where the lights still answer movement. They trade that knowledge carefully. They don't talk about the other things. The things that move down there. The things that remember.</p>
+<p>Gutter Runners scout the upper depths, mapping safe routes through collapsing infrastructure. Cable Rats fight over junction boxes, stripping copper from the walls. Pickers catalog salvage with obsessive precision, knowing which components fetch premium prices. The Pit Bosses run operations cold: every gram of copper accounted for, every deserter made example of. Their Rogue Broadcasters tap forbidden frequencies, trading signal-secrets with the Untethered, listening for whispers from the deep. Their Repo Men carry impound launchers designed to disable and capture. Equipment is profit. People are equipment.</p>
 <p>The Departments consider them vermin. The Toll Collectors consider them competition. The Cooperative considers them trading partners, when desperation allows. Everyone underestimates them. The Scrapers remember everything they've seen in the depths. They're waiting for the right buyer. They're always waiting.</p>
 <blockquote>
 <p>"Your gear becomes my gear. Nothing personal."<br/>
@@ -699,8 +704,8 @@
 <div class="two-column">
 <h2 id="feral-automata">Feral Automata</h2>
 <p>Machines that forgot their purpose. They run programs written for a Complex that no longer exists, protecting assets that rusted away centuries ago. Their design predates the Tethering. The Founders built them to last. They lasted too long. Clean lines. Smooth casings. No patches. The Monks call them holy. The Untethered call them proof that the old ways worked. The Authority calls them malfunctions.</p>
-<p>Their authorization codes are six hundred years out of date. They do not recognize current credentials. They do not recognize current humans. Their definition of "intruder" includes everyone alive today. Their definition of "authorized personnel" matches no living signature. They patrol routes through infrastructure that has collapsed, guard doorways that lead to empty shafts, protect assets that dissolved into rust generations ago. Their programming is perfect. Their context is gone.</p>
-<p>Maintenance Swarms scuttle through conduits, cutting mandibles still sharp after centuries. Security Drones hover on whisper-quiet thrusters, pulse carbines tracking any movement. Targeting Units coordinate attacks with machine precision, neural lances striking bioelectric systems with surgical accuracy. Heavy Units anchor defensive positions, mounted blasters covering kill zones that haven't changed since the Founders drew them. Hunter-Killers pursue targets through the depths, shredder blades designed for enemies that died long ago. And the Defense Platforms: the largest, most dangerous, still executing protection protocols for vaults the Authority pretends don't exist.</p>
+<p>Their authorization codes are six hundred years out of date. They do not recognize current credentials. They do not recognize current humans. Their definition of "intruder" includes everyone alive today. Their definition of "authorized personnel" matches no living signature. They patrol collapsed infrastructure. They guard doorways to empty shafts. The assets they protect rusted away generations ago. Their programming is perfect. Their context is gone.</p>
+<p>Maintenance Swarms scuttle through conduits, cutting mandibles still sharp after centuries. Security Drones hover on whisper-quiet thrusters, pulse carbines tracking any movement. Targeting Units coordinate attacks with machine precision, neural lances striking bioelectric systems where they're weakest. Heavy Units anchor defensive positions, mounted blasters covering kill zones that haven't changed since the Founders drew them. Hunter-Killers pursue targets through the depths, shredder blades designed for enemies that died long ago. And the Defense Platforms: the largest, most dangerous, still executing protection protocols for vaults the Authority pretends don't exist.</p>
 <p>When damaged, they shut down. Then the backup systems activate. Then they stand up again. The Monks leave offerings at their patrol routes: fresh solder, premium cables, prayers etched in copper. The machines do not acknowledge this. The machines do not acknowledge anything. They simply continue. Have a productive day.</p>
 <blockquote>
 <p>"INTRUDER DETECTED. LETHAL FORCE AUTHORIZED. HAVE A PRODUCTIVE DAY."<br/>
@@ -834,7 +839,7 @@
 <h2 id="feral-crews">Feral Crews</h2>
 <p>Defaulted workers who refused collection. Their contracts were sold, resold, and eventually written off as unrecoverable losses. The Departments stopped sending collectors after the third massacre. Now they roam the lower tiers in loud, aggressive gangs, holding territory the corporations abandoned. Trespass is answered with violence. There is no negotiation. There is no payment plan.</p>
 <p>Their skin is green. Generations of drinking leaked coolant changed them. Water is subscription-only; coolant drips free from the upper tier cooling systems. Their ancestors drank what was available. Now they drink it by choice, paint themselves with it, weld trophies to weapons, mark their sectors with torn debt notices. The green marks them as something the subscription system cannot touch. The green marks them as free.</p>
-<p>Runts swarm in packs, screaming through corridors, overwhelming targets with numbers. Bruisers carve through armor with cleavers forged from industrial cutting equipment. Gunners and Torches provide covering fire with slug guns and jury-rigged flame rigs salvaged from maintenance levels. The Heavies are walking slabs of muscle and metal, carrying weapons too large for normal humans. And then there are the Bosses: massive, scarred leaders who earned their position through violence and hold it through worse. When a Boss calls the charge, every green body in earshot follows.</p>
+<p>Runts swarm in packs. They scream through corridors and overwhelm with numbers. Bruisers carve through armor with cleavers forged from industrial cutting equipment. Gunners and Torches provide covering fire with slug guns and jury-rigged flame rigs salvaged from maintenance levels. The Heavies are walking slabs of muscle and metal, carrying weapons too large for normal humans. And then there are the Bosses: massive, scarred leaders who earned their position through violence and hold it through worse. When a Boss calls the charge, every green body in earshot follows.</p>
 <p>When one charges, they all charge. Together they are a wall of screaming metal. The Departments pretend they don't exist. The Departments are wrong. What the corporations call feral, the Crews call home. They will die before they go back to subscription. Most of them already have.</p>
 <blockquote>
 <p>"Sector's ours. Die somewhere else."<br/>
@@ -966,7 +971,7 @@
     <div class="imposed-left"><div class="page page-even" data-page-number="10">
 <div class="two-column">
 <h2 id="static-wraiths">Static Wraiths</h2>
-<p>Signal entities. Corrupted data given form. Echoes of transmissions that should not exist. They appeared after the Signal Crisis and have never stopped. The Founders knew what they were. That knowledge died with them. Or was buried. The Board has always known. The cables are not just for profit. They are for silence.</p>
+<p>Signal entities. Corrupted data given form. Echoes of transmissions that should not exist. They appeared after the Signal Crisis and have never stopped. The Founders knew what they were. That knowledge died with them. Or was buried. The Board has always known. The cables keep the air silent. That was always the point.</p>
 <p>They phase through walls, flicker between moments, appear where they should not be. Killing one disperses it temporarily. The signal always returns. Some believe they are ghosts of the wireless age, echoes of a network that spanned the Complex before the Tethering. Others say they are something older, something that existed in the static before humanity learned to transmit. The Wave Callers believe they are messengers from the Wave Divine. The Maintenance Monks believe they are punishment for wireless heresy. Both groups are terrified of them.</p>
 <p>Flickers are the smallest, barely coherent, darting through electronics and leaving corruption in their wake. Drifts manifest more fully, phase claws tearing through armor that should protect against physical threats. Echoes project signal flames that burn without heat, damaging the bioelectric signatures of the living. Interference entities are dense knots of static that distort reality around them. Surges cut through matter with frequency blades tuned to disrupt molecular bonds. And the Broadcast: massive amalgamations of signal and malice, rumored to be Wave Callers who achieved union with the static, or what remains of them after the Wave answered.</p>
 <p>The Scrapers say they've seen them in the Roots, clustered around equipment that still works, waiting. They say the oldest ones hover near sealed vaults, near doors that haven't opened since the Founders. They say if you listen carefully, you can hear them transmitting. No one has survived long enough to decode their message.</p>

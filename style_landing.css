@@ -1,6 +1,5 @@
 /* Hardwired 28 - Landing Page Stylesheet */
 /* Modern corporate - professional, clean, institutional content */
-@import url('style-base.css');
 
 html, body {
     overflow-x: hidden;
@@ -169,6 +168,7 @@ body.has-app-menu {
     background: var(--corp-red);
     color: #fff;
     padding: 0.75rem 2rem;
+    border: 2px solid transparent;
     border-radius: 4px;
     font-family: var(--font-heading);
     font-weight: 700;
@@ -185,6 +185,20 @@ body.has-app-menu {
     background: #b91c1c;
     transform: translateY(-2px);
     text-decoration: none;
+}
+
+.landing-content .hero .hero-cta + .hero-cta {
+    margin-left: 0.6rem;
+}
+
+.landing-content .hero .hero-cta--secondary {
+    background: transparent;
+    border-color: rgba(255,255,255,0.85);
+    box-shadow: none;
+}
+
+.landing-content .hero .hero-cta--secondary:hover {
+    background: rgba(255,255,255,0.14);
 }
 
 /* Responsive hero */
@@ -278,14 +292,15 @@ body.has-app-menu {
     color: var(--corp-dark);
 }
 
-/* Links - understated but visible */
+/* Links - brand blue, clearly clickable without underlines */
 .landing-content a {
-    color: var(--corp-accent);
+    color: var(--corp-blue);
     text-decoration: none;
 }
 
 .landing-content a:hover {
-    text-decoration: underline;
+    color: #1d4ed8;
+    text-decoration: none;
 }
 
 /* Strong links (primary CTAs) */
@@ -347,7 +362,7 @@ body.has-app-menu {
 .landing-content table td:first-child {
     font-family: 'Courier New', monospace;
     font-weight: 600;
-    color: var(--corp-gray);
+    color: var(--corp-dark);
     width: 2.5em;
     text-align: right;
     padding-right: 0.75em;
@@ -454,7 +469,7 @@ body.has-app-menu {
 }
 
 .landing-content .link-card a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 /* Stretch link to cover entire card */
@@ -623,3 +638,202 @@ body.has-app-menu {
         text-decoration: underline;
     }
 }
+
+/* ============================================================
+   First Game page (.page-first-game) - onboarding-specific UI
+   ============================================================ */
+
+/* Fix: the landing "lede" rule greys the first paragraphs; keep readable here */
+.page-first-game .landing-content > h1:first-of-type + p,
+.page-first-game .landing-content > h1:first-of-type + p + p {
+    color: var(--corp-dark);
+    font-size: 1.05rem;
+}
+
+/* Body links in the primary color, not dark slate */
+.page-first-game .landing-content a {
+    color: var(--corp-blue);
+}
+.page-first-game .landing-content a:hover {
+    text-decoration: none;
+}
+
+/* Behavior tables: equal-width columns */
+.page-first-game .landing-content table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+/* Behavior tables need their column labels (No LoS / Has LoS / Engaged) */
+.page-first-game .landing-content table thead {
+    display: table-header-group;
+}
+.page-first-game .landing-content table th {
+    background: var(--corp-slate);
+    color: #fff;
+    padding: 0.5em 0.6em;
+    text-align: center;
+    font-family: var(--font-heading);
+    font-size: 0.76rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+.page-first-game .landing-content table td {
+    text-align: center;
+}
+
+/* Behavior table: keep the d6 column on one line with room to breathe */
+.page-first-game .landing-content table th:first-child,
+.page-first-game .landing-content table td:first-child {
+    white-space: nowrap;
+    text-align: center;
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
+}
+.page-first-game .landing-content table td:first-child {
+    font-size: 1em;
+}
+
+.page-first-game .landing-content h2 {
+    margin-top: 2.5rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 2px solid var(--corp-border);
+}
+
+/* Callout / aside boxes */
+.fg-note {
+    background: var(--corp-paper);
+    border: 1px solid var(--corp-border);
+    border-left: 4px solid var(--corp-slate);
+    border-radius: 6px;
+    padding: 0.9rem 1.1rem;
+    margin: 1.25rem 0;
+}
+.fg-note--tip { border-left-color: var(--corp-blue); }
+.fg-note--heresy { border-left-color: var(--corp-red); background: #fef2f2; font-style: italic; }
+.fg-note p:first-child { margin-top: 0; }
+.fg-note p:last-child { margin-bottom: 0; }
+.fg-note__label {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--corp-gray);
+    margin-bottom: 0.35rem;
+}
+
+/* "What you need" checklist */
+.fg-checklist { list-style: none; padding-left: 0; margin: 1rem 0; }
+.fg-checklist li { position: relative; padding-left: 1.7rem; margin: 0.4rem 0; }
+.fg-checklist li::before {
+    content: "\25A2";
+    position: absolute;
+    left: 0;
+    color: var(--corp-slate);
+    font-weight: 700;
+}
+
+/* Card grids */
+.fg-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+.fg-cards--2col {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+@media (max-width: 560px) {
+    .fg-cards--2col {
+        grid-template-columns: 1fr;
+    }
+}
+.fg-card {
+    border: 1px solid var(--corp-border);
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+}
+.fg-card__head {
+    background: var(--corp-slate);
+    color: #fff;
+    padding: 0.55rem 0.85rem;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    line-height: 1.2;
+}
+.fg-card__head small {
+    display: block;
+    font-weight: 500;
+    font-size: 0.72rem;
+    text-transform: none;
+    letter-spacing: 0;
+    opacity: 0.85;
+}
+.fg-card--enemy .fg-card__head { background: #7f1d1d; }
+.fg-card--coworker .fg-card__head { background: #166534; }
+.fg-card__body { padding: 0.7rem 0.85rem; }
+
+/* Compact stat strip */
+.fg-statline { display: flex; flex-wrap: wrap; gap: 0.3rem; margin: 0 0 0.5rem; }
+.fg-statline span {
+    background: var(--corp-light);
+    border-radius: 4px;
+    padding: 0.15rem 0.45rem;
+    font-size: 0.78rem;
+    white-space: nowrap;
+}
+.fg-statline b { font-family: var(--font-heading); letter-spacing: 0.03em; }
+
+/* Unit rows inside a squad card */
+.fg-unit { padding: 0.45rem 0; border-top: 1px solid var(--corp-light); }
+.fg-unit:first-child { border-top: none; }
+.fg-unit__name { font-family: var(--font-heading); font-weight: 800; text-transform: uppercase; font-size: 0.85rem; }
+.fg-unit__cost { font-weight: 500; font-size: 0.72rem; color: var(--corp-gray); text-transform: none; letter-spacing: 0; }
+.fg-unit__gear { font-size: 0.8rem; color: var(--corp-gray); }
+.fg-unit__gear code { color: var(--corp-dark); }
+
+/* Board diagram */
+.fg-board { max-width: 380px; margin: 1.25rem auto; }
+.fg-board figcaption { text-align: center; font-size: 0.8rem; color: var(--corp-gray); margin-top: 0.4rem; }
+
+/* Two-option choice */
+.fg-choice { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin: 1.25rem 0; }
+.fg-choice > div { border: 1px solid var(--corp-border); border-radius: 8px; padding: 0.9rem 1rem; background: #fff; }
+.fg-choice h4 { margin: 0 0 0.4rem; font-family: var(--font-heading); }
+
+/* Worked-turn numbered steps */
+.fg-steps { counter-reset: fgstep; list-style: none; padding-left: 0; }
+.fg-steps > li {
+    counter-increment: fgstep;
+    position: relative;
+    padding: 0.55rem 0 0.55rem 2.8rem;
+    border-top: 1px solid var(--corp-light);
+    min-height: 1.8rem;
+}
+.fg-steps > li:first-child { border-top: none; }
+.fg-steps > li::before {
+    content: counter(fgstep);
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    width: 1.8rem;
+    height: 1.8rem;
+    background: var(--corp-slate);
+    color: #fff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-family: var(--font-heading);
+    font-weight: 800;
+}
+
+
+/* A11y: prose links distinguishable beyond color (no underline) */
+.landing-content p a, .landing-content li a { font-weight: 700; }

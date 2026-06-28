@@ -1,6 +1,5 @@
 /* Hardwired 28 - Quick Reference Stylesheet */
 /* Landscape A4, 3-column, dense layout */
-@import url('style-base.css');
 
 html, body {
     overflow-x: hidden;
@@ -217,6 +216,12 @@ td:last-child {
 }
 
 /* Print */
+/* Links render black with no underline inside the rules pages (header/nav and landing keep normal links) */
+.page a {
+    color: #000 !important;
+    text-decoration: none !important;
+}
+
 @media print {
     * {
         -webkit-print-color-adjust: exact;

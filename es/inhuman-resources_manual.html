@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hardwired 28 - Recursos Inhumanos 0.7.2-beta</title>
-    <meta property="og:title" content="Hardwired 28 - Recursos Inhumanos 0.7.2-beta">
+    <title>Hardwired 28: Recursos Inhumanos 0.7.3-beta</title>
+    <meta property="og:title" content="Hardwired 28: Recursos Inhumanos 0.7.3-beta">
     <meta property="og:description" content="Juego de escaramuzas cablepunk corporativo">
     <meta property="og:image" content="https://hardwired28.luismars.com/img/social.png">
     <meta property="og:url" content="https://hardwired28.luismars.com/es/inhuman-resources_manual.html">
@@ -15,15 +15,16 @@
     <link rel="alternate" hreflang="en" href="https://hardwired28.luismars.com/inhuman-resources_manual.html">
     <link rel="alternate" hreflang="es" href="https://hardwired28.luismars.com/es/inhuman-resources_manual.html">
     <link rel="alternate" hreflang="x-default" href="https://hardwired28.luismars.com/inhuman-resources_manual.html">
-    <meta name="twitter:title" content="Hardwired 28 - Recursos Inhumanos 0.7.2-beta">
+    <meta name="twitter:title" content="Hardwired 28: Recursos Inhumanos 0.7.3-beta">
     <meta name="twitter:description" content="Hardwired 28 es un juego de escaramuzas cablepunk: dirige una escuadra corporativa por una arcologia en ruinas donde la conexion por cable es sagrada y lo inalambrico es herejia.">
     <meta name="twitter:image" content="https://hardwired28.luismars.com/img/social.png">
     <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
     <script data-goatcounter="https://hardwired28.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="../normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Work+Sans:wght@300;400;500;600&family=Montserrat:wght@600;700;800;900&family=PT+Serif:wght@400;700&family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style-base.css">
     <link rel="stylesheet" href="../style_manual.css">
 </head>
 <body class="has-app-menu">
@@ -33,24 +34,26 @@
             <a class="app-menu__brand" href="./">Hardwired 28</a>
             <button class="app-menu__toggle" type="button" onclick="toggleMenu()" aria-label="Menú"></button>
             <div class="app-menu__links">
-                <a href="rulebook">Reglamento</a>
+                <a href="first-game" class="app-menu__cta">Primera Partida</a>
+                <a href="rulebook">Reglas</a>
                 <div class="app-menu__dropdown">
-                    <button class="app-menu__dropdown-toggle current">Imprimir</button>
+                    <button class="app-menu__dropdown-toggle">Imprimir</button>
                     <div class="app-menu__submenu">
-                        <div class="app-menu__nested">
-                            <span class="app-menu__nested-label">Individuales</span>
-                            <div class="app-menu__nested-submenu">
-                                <a href="print">Todas las Reglas</a>
-                                <a href="core-rules">Reglas Básicas</a>
-                                <a href="inhuman-resources">Recursos Inhumanos</a>
-                                <a href="campaign">Campaña</a>
-                            </div>
-                        </div>
+                        <a href="quick-reference">Referencia Rápida</a>
+                        <a href="print">Todas las Reglas</a>
+                        <a href="core-rules">Reglas Básicas</a>
+                        <a href="inhuman-resources">Recursos Inhumanos</a>
+                        <a href="campaign">Campaña</a>
                     </div>
                 </div>
-                <a href="quick-reference">Referencia Rápida</a>
-                <a href="builder/index">Creador de Plantillas</a>
-                <a href="scenario/index">Escenarios</a>
+                <div class="app-menu__dropdown">
+                    <button class="app-menu__dropdown-toggle">Herramientas</button>
+                    <div class="app-menu__submenu">
+                        <a href="builder/index">Creador de Plantillas</a>
+                        <a href="scenario/index">Escenarios</a>
+                    </div>
+                </div>
+                <a href="feedback">Comentarios</a>
                 <a href="../inhuman-resources">English</a>
             </div>
         </div>
@@ -65,8 +68,8 @@
             <li class="toc-h2"><a href="#situación">Situación</a></li>
             <li class="toc-h2"><a href="#acciones">Acciones</a></li>
             <li class="toc-h2"><a href="#desplegar-hostiles">Desplegar Hostiles</a></li>
-            <li class="toc-h2"><a href="#niveles-de-unidad">Niveles de Unidad</a></li>
-            <li class="toc-h2"><a href="#dirección-aleatoria">Dirección Aleatoria</a></li>
+            <li class="toc-h2"><a href="#niveles-de-unidad">Niveles de unidad</a></li>
+            <li class="toc-h2"><a href="#dirección-aleatoria">Dirección aleatoria</a></li>
             <li class="toc-h2"><a href="#carroñeros">Carroñeros</a></li>
             <li class="toc-h2"><a href="#bandas-salvajes">Bandas Salvajes</a></li>
             <li class="toc-h2"><a href="#invocadores-de-onda">Invocadores de Onda</a></li>
@@ -89,10 +92,13 @@
 
 
 <h1 id="recursos-inhumanos_1">Recursos Inhumanos</h1>
-<p><em>0.7.2-beta</em></p>
+<p><em>0.7.3-beta</em></p>
+<p><em>Distribución Abierta: <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">CC BY-SA 4.0</a></em></p>
 <p>El Complejo se eleva 1024 niveles desde las Raíces hasta las agujas de refrigeración. Los Departamentos solo mantienen los 200 superiores. Por debajo, la infraestructura falla más rápido de lo que se repara. Los cables se deshilachan. El refrigerante gotea. Las luces parpadean y mueren. Los Monjes de Mantenimiento descienden cuando deben, realizan sus rituales y se van rápido. No hablan de lo que ven.</p>
 <p>Los Fundadores construyeron el Complejo para durar. También construyeron otras cosas. Los archivos sellados mencionan contramedidas, sistemas autónomos, experimentos bioeléctricos. Los archivos están en las Raíces. Los Monjes nunca han estado allí. La Junta siempre ha sabido lo que acecha abajo. Nunca lo ha reconocido.</p>
 <p>Algo se mueve en la oscuridad entre niveles. Anida en el cableado. Recuerda el tiempo anterior al Anclaje, cuando las señales volaban libres y la Onda respondía a las plegarias. Los niveles inferiores pertenecen a cosas que nunca debieron sobrevivir tanto: se adaptaron, evolucionaron, fueron diseñadas para un propósito que los Fundadores nunca revelaron.</p>
+
+
 <p>Cada expedición las encuentra. Cada informe dice lo mismo: pérdidas aceptables, parámetros ajustados, sellar la unión. Los Departamentos las llaman externalidades. Los contables, merma aceptable. Los supervivientes tienen otro nombre.</p>
 <p>El calor sube desde las Raíces. Las agujas de refrigeración lo aspiran a través de mil niveles, un gradiente térmico que los Fundadores convirtieron en arma. Los ricos permanecen fríos. Los pobres sudan. Los niveles más bajos se cuecen. Lo que sobrevive allá abajo se ha adaptado a temperaturas letales para un humano sin aumentos. Los contratistas descienden de todos modos. Salvamento paga el triple bajo el nivel 400. Las misiones de deudas ofrecen bonificación de riesgo. Los Departamentos necesitan lo que los Fundadores dejaron. Envían activos prescindibles. Pérdidas aceptables.</p>
 <blockquote>
@@ -132,7 +138,7 @@
 4. Cada grupo se activa por separado</p>
 
 
-<h2 id="niveles-de-unidad">Niveles de Unidad</h2>
+<h2 id="niveles-de-unidad">Niveles de unidad</h2>
 <p>Cada facción tiene 6 tipos de unidad agrupados en niveles:</p>
 <table>
 <thead>
@@ -157,7 +163,7 @@
 </tbody>
 </table>
 <p>Los escenarios especifican qué nivel usar según la frecuencia de aparición.</p>
-<h2 id="dirección-aleatoria">Dirección Aleatoria</h2>
+<h2 id="dirección-aleatoria">Dirección aleatoria</h2>
 <p>Tira d8 (brújula), d12 (reloj), el ángulo agudo de un d10 o dado de dispersión. Mueve en esa dirección.</p>
 
 
@@ -166,7 +172,7 @@
 <p>Recuperación de activos externalizada. Cumplimiento subcontratado. Recolocación de recursos de terceros. Siete capas de empresas pantalla después, nadie sabe qué decía el contrato original. Quizá fueron legítimos: equipos de embargo, cuadrillas de mantenimiento, auditores. El papeleo se degradó. La cadena de mando se disolvió. Ahora se llevan lo que parece valioso y facturan a alguien.</p>
 <p>Viven donde la infraestructura falló: profundidades atestadas de cables donde el mantenimiento cesó hace generaciones. Los cobradores no bajan del Nivel 7. Los peajes se oxidan sin abrir. Los Departamentos los catalogaron como "activos irrecuperables" y sellaron accesos. Los Carroñeros los abrieron. Siempre lo hacen.</p>
 <p>Algunos han bajado a las Raíces. Han visto lo que los Fundadores dejaron: máquinas que aún funcionan, cámaras selladas que zumban, pasillos donde las luces responden al movimiento. Comercian ese conocimiento con cuidado. No hablan de las otras cosas. Las que se mueven. Las que recuerdan.</p>
-<p>Los Corredores de Alcantarilla exploran las profundidades superiores, cartografiando rutas entre infraestructura colapsada. Las Ratas de Cable luchan por cajas de empalme, arrancando cobre de las paredes. Los Rebuscadores catalogan salvamento con precisión obsesiva: saben qué componentes obtienen mejores precios. Los Capataces dirigen con eficiencia brutal: cada gramo de cobre contabilizado, cada desertor convertido en ejemplo. Sus Emisores Rebeldes sintonizan frecuencias prohibidas, traficando con los Desanclados, escuchando susurros de las profundidades. Sus Cobradores llevan lanzadores de embargo: incapacitar y capturar. El equipo es beneficio. La gente es equipo.</p>
+<p>Los Corredores de Alcantarilla exploran las profundidades superiores, cartografiando rutas entre infraestructura colapsada. Las Ratas de Cable luchan por cajas de empalme y arrancan cobre de las paredes. Los Rebuscadores catalogan salvamento con precisión obsesiva: saben qué componentes obtienen mejores precios. Los Capataces dirigen con frialdad: cada gramo de cobre contabilizado, cada desertor convertido en ejemplo. Sus Emisores Rebeldes sintonizan frecuencias prohibidas, trafican con los Desanclados y escuchan susurros de las profundidades. Sus Cobradores llevan lanzadores de embargo: incapacitar y capturar. El equipo es beneficio. La gente es equipo.</p>
 <p>Los Departamentos los consideran alimañas. Los Cobradores de Peaje, competencia. La Cooperativa, socios comerciales cuando la desesperación lo permite. Todos los subestiman. Los Carroñeros recuerdan todo lo que han visto en las profundidades. Esperan al comprador adecuado. Siempre están esperando.</p>
 <blockquote>
 <p>"Tu equipo se convierte en mi equipo. Nada personal."<br />
@@ -297,7 +303,7 @@
 <h2 id="bandas-salvajes">Bandas Salvajes</h2>
 <p>Trabajadores morosos que rechazaron la recaudación. Contratos vendidos, revendidos y dados por pérdidas irrecuperables. Los Departamentos dejaron de enviar cobradores tras la tercera masacre. Vagan por los niveles inferiores en bandas ruidosas, controlando territorio que las corporaciones abandonaron. La intrusión se paga con violencia. No hay negociación. No hay plan de pagos.</p>
 <p>Su piel es verde. Generaciones de beber refrigerante filtrado los transformaron. El agua requiere suscripción; el refrigerante gotea gratis desde los sistemas de enfriamiento superiores. Sus ancestros bebieron lo que había. Ahora lo beben por elección, se pintan con él, sueldan trofeos a armas, marcan sectores con avisos de deuda arrancados. El verde los marca como algo que el sistema de suscripciones no puede tocar. El verde los marca como libres.</p>
-<p>Las Crías atacan en manadas, gritando por los pasillos, abrumando con números. Los Matones atraviesan armaduras con cuchillas de equipo de corte industrial. Tiradores y Antorchas proporcionan fuego de cobertura con pistolas de proyectiles y lanzallamas improvisados. Los Pesados son moles de músculo y metal, portando armas demasiado grandes para humanos normales. Y los Jefes: líderes masivos y cicatrizados que ganaron su posición con violencia y la mantienen con algo peor. Cuando un Jefe ordena la carga, todo cuerpo verde al alcance del oído le sigue.</p>
+<p>Las Crías atacan en manadas: gritan por los pasillos y abruman con su número. Los Matones atraviesan armaduras con cuchillas de equipo de corte industrial. Tiradores y Antorchas proporcionan fuego de cobertura con pistolas de proyectiles y lanzallamas improvisados. Los Pesados son moles de músculo y metal que cargan armas demasiado grandes para humanos normales. Y los Jefes: líderes masivos y cicatrizados que ganaron su posición con violencia y la mantienen con algo peor. Cuando un Jefe ordena la carga, todo cuerpo verde al alcance del oído le sigue.</p>
 <p>Cuando uno carga, todos cargan. Juntos son un muro de metal chillante. Los Departamentos fingen que no existen. Se equivocan. Lo que las corporaciones llaman salvaje, las Bandas lo llaman hogar. Morirán antes de volver a la suscripción. La mayoría ya lo han hecho.</p>
 <blockquote>
 <p>"El sector es nuestro. Muere en otro lado."<br />
@@ -428,7 +434,7 @@
 <h2 id="invocadores-de-onda">Invocadores de Onda</h2>
 <p>Cultistas inalámbricos. Creen que la Onda Divina cubrirá el Complejo, liberando a todos de cables y suscripciones. El aire no debería tener peajes. Los datos quieren ser libres. Los cables son cadenas, no conexiones. En algún lugar, de algún modo, las señales pueden viajar sin permiso. Los Fundadores lo sabían. Lo temían. Los cables nunca fueron solo por beneficio.</p>
 <p>Canal Abierto los coordina: una voz en frecuencias que no deberían existir, emitiendo desde algún lugar que la Autoridad nunca ha encontrado. Algunos dicen que Canal Abierto es una persona. Otros que es una señal que piensa. Otros que es lo que los Fundadores sellaron en las Raíces, y que por fin ha despertado. El rumor más peligroso: que pueden llegar más allá del propio Complejo. Que hay algo ahí fuera escuchando.</p>
-<p>Los Iniciados llevan cables cortados como marca de su rechazo, aprendiendo los himnos de la estática. Los Injertados de Antena han fusionado transmisores en su carne, recibiendo frecuencias que ningún humano base percibe. Los Conversos son Técnicos que vieron demasiado, oyeron susurros en frecuencias equivocadas, cortaron sus cables y siguieron caminando. Los Sacerdotes de Frecuencia dirigen rituales, sobrecargando sistemas con estática de oración hasta que algo responde. Los Campeones de Señal lideran con hojas de resonancia que alteran la electrónica con cada golpe. Y los Receptáculos: aquellos que se abrieron a la Onda Divina, sus cuerpos ahora canales para algo que nunca debió caminar.</p>
+<p>Los Iniciados llevan cables cortados como marca de su rechazo y aprenden los himnos de la estática. Los Injertados de Antena han fusionado transmisores en su carne y reciben frecuencias que ningún humano base percibe. Los Conversos son Técnicos que vieron demasiado, oyeron susurros en frecuencias equivocadas, cortaron sus cables y siguieron caminando. Los Sacerdotes de Frecuencia dirigen rituales y sobrecargan los sistemas con estática de oración hasta que algo responde. Los Campeones de Señal lideran con hojas de resonancia que alteran la electrónica con cada golpe. Y los Receptáculos: aquellos que se abrieron a la Onda Divina, sus cuerpos ahora canales para algo que nunca debió caminar.</p>
 <p>Cuantos más Invocadores se reúnen, más fuerte es la señal. Cuando suficientes cantan al unísono, la estática responde. Algo se abre paso cuando emiten. Algo hambriento. La Autoridad del Conducto no hace preguntas. Simplemente quema. Pero la señal siempre vuelve. Canal Abierto siempre está escuchando.</p>
 <blockquote>
 <p>"Cada cable, una correa. Cada suscripción, una cadena. Los cortaremos todos."<br />
@@ -557,9 +563,9 @@
 
 
 <h2 id="espectros-de-estática">Espectros de Estática</h2>
-<p>Entidades de señal. Datos corruptos que cobran forma. Ecos de transmisiones que no deberían existir. Aparecieron tras la Crisis de Señal y nunca han parado. Los Fundadores sabían lo que eran. Ese conocimiento murió con ellos. O fue enterrado. La Junta siempre lo ha sabido. Los cables no son solo para el beneficio. Son para el silencio.</p>
+<p>Entidades de señal. Datos corruptos que cobran forma. Ecos de transmisiones que no deberían existir. Aparecieron tras la Crisis de Señal y nunca han parado. Los Fundadores sabían lo que eran. Ese conocimiento murió con ellos. O fue enterrado. La Junta siempre lo ha sabido. Los cables mantienen el aire en silencio. Esa fue siempre la intención.</p>
 <p>Atraviesan muros, parpadean entre momentos, aparecen donde no deberían. Matar a uno lo dispersa temporalmente. La señal siempre vuelve. Algunos creen que son fantasmas de la era inalámbrica, ecos de la red que cubría el Complejo antes del Anclaje. Otros dicen que son algo más antiguo, algo en la estática antes de que la humanidad aprendiera a transmitir. Los Invocadores de Onda creen que son mensajeros de la Onda Divina. Los Monjes de Mantenimiento creen que son castigo por la herejía inalámbrica. Ambos grupos les temen.</p>
-<p>Los Parpadeos son los más pequeños, apenas coherentes, dejando corrupción a su paso. Las Derivas se manifiestan más plenamente, garras de fase desgarrando armaduras que deberían proteger contra lo físico. Los Ecos proyectan llamas de señal que queman sin calor, dañando firmas bioeléctricas. Las Interferencias son nudos de estática que distorsionan la realidad a su alrededor. Las Descargas cortan materia con hojas de frecuencia que alteran enlaces moleculares. Y los Emisores: amalgamaciones de señal y malicia, presuntamente Invocadores que lograron fundirse con la estática, o lo que queda de ellos tras responder la Onda.</p>
+<p>Los Parpadeos son los más pequeños, apenas coherentes, y dejan corrupción a su paso. Las Derivas se manifiestan más plenamente, garras de fase desgarrando armaduras que deberían proteger contra lo físico. Los Ecos proyectan llamas de señal que queman sin calor y dañan firmas bioeléctricas. Las Interferencias son nudos de estática que distorsionan la realidad a su alrededor. Las Descargas cortan materia con hojas de frecuencia que alteran enlaces moleculares. Y los Emisores: amalgamaciones de señal y malicia, presuntamente Invocadores que lograron fundirse con la estática, o lo que queda de ellos tras responder la Onda.</p>
 <p>Los Carroñeros dicen haberlos visto en las Raíces, agrupados alrededor de equipos que aún funcionan, esperando. Dicen que los más antiguos flotan cerca de cámaras selladas, de puertas que no se han abierto desde la época de los Fundadores. Si escuchas con atención, puedes oírlos transmitir. Nadie ha sobrevivido lo suficiente para decodificar su mensaje.</p>
 <blockquote>
 <p>"¿Lo oyes? La estática habla. Sabe tu nombre."<br />
@@ -690,7 +696,7 @@
 <h2 id="autómatas-salvajes">Autómatas Salvajes</h2>
 <p>Máquinas que olvidaron su propósito. Ejecutan programas para un Complejo que ya no existe, protegiendo activos oxidados hace siglos. Anteriores al Anclaje. Los Fundadores los construyeron para durar. Duraron demasiado. Líneas limpias. Carcasas lisas. Sin parches. Los Monjes los llaman sagrados. Los Desanclados los llaman prueba de que los viejos métodos funcionaban. La Autoridad los llama fallos.</p>
 <p>Sus códigos de autorización tienen seiscientos años. No reconocen credenciales actuales. No reconocen humanos actuales. "Intruso" incluye a todos los que viven hoy. "Personal autorizado" no coincide con ninguna firma viva. Patrullan infraestructura colapsada, guardan puertas que dan a pozos vacíos, protegen activos disueltos en óxido hace generaciones. Su programación es perfecta. Su contexto ha desaparecido.</p>
-<p>Los Enjambres de Mantenimiento se arrastran por conductos, mandíbulas aún afiladas tras siglos. Los Drones de Seguridad flotan en propulsores silenciosos, carabinas de pulso rastreando cualquier movimiento. Las Unidades de Objetivo coordinan con precisión mecánica, lanzas neurales golpeando sistemas bioeléctricos. Las Unidades Pesadas anclan posiciones, blásteres montados cubriendo zonas de muerte que los Fundadores diseñaron. Los Cazadores-Asesinos persiguen objetivos por las profundidades, hojas trituradoras para enemigos que murieron hace mucho. Y las Plataformas de Defensa: las más grandes, las más peligrosas, ejecutando protocolos para bóvedas que la Autoridad finge que no existen.</p>
+<p>Los Enjambres de Mantenimiento se arrastran por conductos, mandíbulas aún afiladas tras siglos. Los Drones de Seguridad flotan en propulsores silenciosos, carabinas de pulso que rastrean cualquier movimiento. Las Unidades de Objetivo coordinan con precisión mecánica, lanzas neurales que golpean los sistemas bioeléctricos donde son más débiles. Las Unidades Pesadas anclan posiciones, blásteres montados que cubren zonas de muerte diseñadas por los Fundadores. Los Cazadores-Asesinos persiguen objetivos por las profundidades, hojas trituradoras para enemigos que murieron hace mucho. Y las Plataformas de Defensa: las más grandes, las más peligrosas, que ejecutan protocolos para bóvedas que la Autoridad finge que no existen.</p>
 <p>Cuando se dañan, se apagan. Los sistemas de respaldo se activan. Se levantan de nuevo. Los Monjes dejan ofrendas en sus rutas: soldadura fresca, cables de primera, oraciones en cobre. Las máquinas no lo reconocen. Las máquinas no reconocen nada. Simplemente continúan. Ten un día productivo.</p>
 <blockquote>
 <p>"INTRUSO DETECTADO. FUERZA LETAL AUTORIZADA. TEN UN DÍA PRODUCTIVO."<br />
@@ -821,7 +827,7 @@
 <h2 id="parásitos-de-cable">Parásitos de Cable</h2>
 <p>Parásitos. Anidan entre conductos de energía, alimentándose de señales bioeléctricas. Los archivos sellados mencionan "contramedidas bioeléctricas". Los Monjes dicen que evolucionaron naturalmente. Los archivos están en las Raíces. Los Monjes nunca han estado allí. La Junta sabe lo que los Fundadores crearon. Algunas armas nunca debieron apagarse.</p>
 <p>Cazan en silencio. Prefieren objetivos aislados. Cuando se alimentan, drenan todo: sistema nervioso, implantes, la corriente de tus cables. Les atrae el calor de la corriente, el zumbido de la electrónica activa, el pulso bioeléctrico. Algunos creen que fueron diseñados para cazar Desanclados, consumir a cualquiera que transmitiera sin autorización. Otros creen que son lo que ocurre cuando la carne se encuentra con el cable demasiado tiempo, cuando la frontera entre organismo e infraestructura desaparece. La verdad está en las Raíces. La verdad está sellada.</p>
-<p>Los Segadores son los más pequeños, rápidos y numerosos, garras que desgarran armadura para alcanzar la corriente. Las Larvas son pacientes, zarcillos drenando víctimas mientras las toxinas paralizan. Los Acechadores rastrean en la oscuridad, zarpas que abren carcasas de cables y cuerpos por igual. Los Señuelos proyectan señales falsas, púas mentales que atraen víctimas hacia emboscadas. Los Succionadores son cazadores maduros, tubos de drenaje arrancando la vida de todo lo que tocan. Y los Agonistas: masivos, antiguos, inteligentes. Coordinan cacerías. Recuerdan lo que consumen.</p>
+<p>Los Segadores son los más pequeños y rápidos, atacan en enjambre, garras que desgarran armadura para alcanzar la corriente. Las Larvas son pacientes, zarcillos que drenan a las víctimas mientras las toxinas paralizan. Los Acechadores rastrean en la oscuridad, zarpas que abren carcasas de cables y cuerpos por igual. Los Señuelos proyectan señales falsas, púas mentales que atraen víctimas hacia emboscadas. Los Succionadores son cazadores maduros, tubos de drenaje que arrancan la vida de todo lo que tocan. Y los Agonistas: masivos, antiguos, inteligentes. Coordinan cacerías. Recuerdan lo que consumen.</p>
 <p>Los Carroñeros dicen que hay mayores en las Raíces profundas. Se alimentan de equipos enteros. Llevan haciéndolo desde la época de los Fundadores. La Autoridad recomienda sellar cualquier unión donde se confirmen Parásitos. No explica qué pasa si no lo haces. No explica por qué algunas uniones selladas tienen advertencias más antiguas que la propia Autoridad.</p>
 <blockquote>
 <p>"Barrido del Sector 7 completo. Sin supervivientes. Recomiendo sellar la unión permanentemente."<br />

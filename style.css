@@ -1,5 +1,4 @@
 /* Hardwired 28 - A5 Print Stylesheet */
-@import url('style-base.css');
 
 html, body {
     overflow-x: hidden;
@@ -316,6 +315,12 @@ h4 + p + p + p {
     }
 }
 
+/* Links render black with no underline inside the rules pages (header/nav and landing keep normal links) */
+.page a {
+    color: #000 !important;
+    text-decoration: none !important;
+}
+
 /* Column layouts */
 .single-column {
     column-count: 1 !important;
@@ -518,7 +523,7 @@ table, pre, blockquote {
 
 .index-h1 a:hover,
 .index-h2 a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .index-page::after {

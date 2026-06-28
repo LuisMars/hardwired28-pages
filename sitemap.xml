@@ -66,6 +66,22 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://hardwired28.luismars.com/first-game.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hardwired28.luismars.com/first-game.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://hardwired28.luismars.com/es/first-game.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hardwired28.luismars.com/first-game.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hardwired28.luismars.com/es/first-game.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hardwired28.luismars.com/first-game.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://hardwired28.luismars.com/es/first-game.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hardwired28.luismars.com/first-game.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://hardwired28.luismars.com/core-rules.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://hardwired28.luismars.com/core-rules.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://hardwired28.luismars.com/es/core-rules.html"/>

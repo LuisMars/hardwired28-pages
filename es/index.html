@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hardwired 28 - Juego de Escaramuzas Cablepunk</title>
-    <meta property="og:title" content="Hardwired 28 - Juego de Escaramuzas Cablepunk">
+    <title>Hardwired 28: Juego de Escaramuzas Cablepunk</title>
+    <meta property="og:title" content="Hardwired 28: Juego de Escaramuzas Cablepunk">
     <meta property="og:description" content="Juego de escaramuzas cablepunk corporativo">
     <meta property="og:image" content="https://hardwired28.luismars.com/img/social.png">
     <meta property="og:url" content="https://hardwired28.luismars.com/es/">
@@ -15,51 +15,68 @@
     <link rel="alternate" hreflang="en" href="https://hardwired28.luismars.com/">
     <link rel="alternate" hreflang="es" href="https://hardwired28.luismars.com/es/">
     <link rel="alternate" hreflang="x-default" href="https://hardwired28.luismars.com/">
-    <meta name="twitter:title" content="Hardwired 28 - Juego de Escaramuzas Cablepunk">
+    <meta name="twitter:title" content="Hardwired 28: Juego de Escaramuzas Cablepunk">
     <meta name="twitter:description" content="Hardwired 28 es un juego de escaramuzas cablepunk: dirige una escuadra corporativa por una arcologia en ruinas donde la conexion por cable es sagrada y lo inalambrico es herejia.">
     <meta name="twitter:image" content="https://hardwired28.luismars.com/img/social.png">
     <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
     <script data-goatcounter="https://hardwired28.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="../normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Work+Sans:wght@300;400;500;600&family=Montserrat:wght@600;700;800;900&family=PT+Serif:wght@400;700&family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link rel="preload" as="image" href="../img/cover_cables.webp" fetchpriority="high">
+    <link rel="stylesheet" href="../style-base.css">
     <link rel="stylesheet" href="../style_landing.css">
 </head>
-<body class="has-app-menu landing-page">
+<body class="has-app-menu landing-page page-landing">
     
     <nav class="app-menu" data-theme="corporate" data-open="false" aria-label="Navigation">
         <div class="app-menu__inner">
             <a class="app-menu__brand" href="./">Hardwired 28</a>
             <button class="app-menu__toggle" type="button" onclick="toggleMenu()" aria-label="Menú"></button>
             <div class="app-menu__links">
-                <a href="rulebook">Reglamento</a>
-                <a href="print">Imprimir</a>
-                <a href="quick-reference">Referencia Rápida</a>
-                <a href="builder/index">Creador de Plantillas</a>
-                <a href="scenario/index">Escenarios</a>
+                <a href="first-game" class="app-menu__cta">Primera Partida</a>
+                <a href="rulebook">Reglas</a>
+                <div class="app-menu__dropdown">
+                    <button class="app-menu__dropdown-toggle">Imprimir</button>
+                    <div class="app-menu__submenu">
+                        <a href="quick-reference">Referencia Rápida</a>
+                        <a href="print">Todas las Reglas</a>
+                        <a href="core-rules">Reglas Básicas</a>
+                        <a href="inhuman-resources">Recursos Inhumanos</a>
+                        <a href="campaign">Campaña</a>
+                    </div>
+                </div>
+                <div class="app-menu__dropdown">
+                    <button class="app-menu__dropdown-toggle">Herramientas</button>
+                    <div class="app-menu__submenu">
+                        <a href="builder/index">Creador de Plantillas</a>
+                        <a href="scenario/index">Escenarios</a>
+                    </div>
+                </div>
+                <a href="feedback">Comentarios</a>
                 <a href="../index">English</a>
             </div>
         </div>
     </nav>
 
-    <div class="landing-content">
+    <main class="landing-content">
 <!-- LTeX: language=es -->
-<div class="hero" style="background-image: url(../img/cover_cables.jpg);">
+<div class="hero" style="background-image: url(../img/cover_cables.webp);">
 <h1 id="hardwired-28">Hardwired 28</h1>
 <p><em>Juego de escaramuzas cablepunk para miniaturas de 28 mm.</em></p>
 <p>Construye tu banda. Navega el Complejo. Mantente conectado.</p>
 <p><strong>Distribución pública autorizada. Sin ajuste de suscripción.</strong></p>
-<p><a class="hero-cta" href="rulebook">Leer las Reglas</a></p>
+<p><a class="hero-cta" href="first-game">Juega tu Primera Partida</a> <a class="hero-cta hero-cta--secondary" href="rulebook">Leer las Reglas</a></p>
 </div>
 <h2 id="el-complejo">El Complejo</h2>
 <p>Una megaestructura vertical de tres kilómetros de altura. Cables cuelgan de cada superficie. La conexión por cable es sagrada. Lo inalámbrico es herejía.</p>
 <p>Los Departamentos controlan todo: Asignación de Recursos, Operaciones de Ingresos, Capital Humano, Seguridad y Cumplimiento. Bajo ellos, la deuda de suscripción pasa de padres a hijos. Los trabajadores nacen debiendo.</p>
-<p>No sois empleados. Sois contratistas: peones prescindibles que operan entre facciones, recuperando lo perdido, silenciando lo escuchado.</p>
+<p>No eres empleado. Eres contratista: peón prescindible que opera entre facciones, recupera lo perdido y silencia lo escuchado.</p>
 <blockquote>
 <p><em>Aviso: El Complejo no asume responsabilidad por lesiones, muerte o pérdida de activos durante operaciones de campo. Contratistas sin cobertura premium asumen todos los costes médicos.</em></p>
 </blockquote>
-<h2 id="recursos-disponibles">Recursos Disponibles</h2>
+<h2 id="recursos-disponibles">Recursos disponibles</h2>
 <div class="cta-section">
 <div class="grid grid-cols-3">
 <div class="link-card">
@@ -79,7 +96,7 @@ Consulta rápida</p>
 <blockquote>
 <p><em>Recordatorio: La participación en misiones es voluntaria. El rechazo reiterado será anotado en tu expediente.</em></p>
 </blockquote>
-<h2 id="especificaciones-del-contrato">Especificaciones del Contrato</h2>
+<h2 id="especificaciones-del-contrato">Especificaciones del contrato</h2>
 <div class="grid grid-cols-2">
 <div class="link-card">
 <p><a href="rulebook#resolución-de-ataques"><strong>Combate Cableado</strong></a>
@@ -106,7 +123,7 @@ Misiones generadas con eventos clave a medida que la investigación avanza.</p>
 Sintoniza la señal. Obtén habilidades. A riesgo de corrupción.</p>
 </div>
 </div>
-<h2 id="amenazas-documentadas">Amenazas Documentadas</h2>
+<h2 id="amenazas-documentadas">Amenazas documentadas</h2>
 <p>El Complejo engendra amenazas. Algunas fueron trabajadores. Otras nunca fueron humanas.</p>
 <div class="grid grid-cols-2">
 <div class="link-card">
@@ -137,7 +154,7 @@ Parásitos bioeléctricos atraídos por el calor de la corriente viva</p>
 <blockquote>
 <p><em>Nota del Departamento de Seguridad: Los encuentros con entidades no catalogadas deben reportarse inmediatamente. El silencio es complicidad.</em></p>
 </blockquote>
-<h2 id="documentación-autorizada">Documentación Autorizada</h2>
+<h2 id="documentación-autorizada">Documentación autorizada</h2>
 <p>Documentación oficial en formato A5. Imprime con Ctrl+P / Cmd+P, usa <a href="https://nashhigh.itch.io/zinearranger">Zine Arranger</a> para formato folleto. Tres secciones o compendio completo.</p>
 <div class="grid grid-cols-2">
 <div class="link-card">
@@ -213,12 +230,15 @@ Imprime tarjetas de referencia para equipamiento, enemigos y tablas.</p>
 </tr>
 </tbody>
 </table>
-<h2 id="revisión-del-documento">Revisión del Documento</h2>
-<p><strong>REF: HW28-0.7.2-beta</strong> | Distribución Pública | Aprobado para Difusión Externa</p>
+<h2 id="comentarios">Comentarios</h2>
+<p>¿Jugaste una partida? <strong><a href="feedback">Cuéntanos qué tal</a></strong>. Dos minutos, sin cuenta. ¿Un error técnico? Abre una incidencia en el <a href="https://github.com/LuisMars/hardwired28-pages/issues">rastreador público</a>.</p>
+<h2 id="revisión-del-documento">Revisión del documento</h2>
+<p><strong>REF: HW28-0.7.3-beta</strong> | Distribución Pública | Aprobado para Difusión Externa</p>
 <p><em>Este documento ha sido revisado por el Departamento de Operaciones de Ingresos. Modificaciones no autorizadas resultarán en ajuste de suscripción.</em></p>
 <p><em>Clasificación: PÚBLICO | Retención: PERMANENTE</em></p>
+<p><em>Distribución Abierta: licencia <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">CC BY-SA 4.0</a>. El nombre y el sello de Hardwired 28 son propiedad de la Compañía.</em></p>
 <p><em><a href="../">English version</a></em> · <em>Creado por LuisMars</em></p>
-    </div>
+    </main>
     
     <script>
         function toggleMenu() {

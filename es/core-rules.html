@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hardwired 28 - Reglas Básicas 0.7.2-beta</title>
-    <meta property="og:title" content="Hardwired 28 - Reglas Básicas 0.7.2-beta">
+    <title>Hardwired 28: Reglas Básicas 0.7.3-beta</title>
+    <meta property="og:title" content="Hardwired 28: Reglas Básicas 0.7.3-beta">
     <meta property="og:description" content="Juego de escaramuzas cablepunk corporativo">
     <meta property="og:image" content="https://hardwired28.luismars.com/img/social.png">
     <meta property="og:url" content="https://hardwired28.luismars.com/es/core-rules.html">
@@ -15,15 +15,16 @@
     <link rel="alternate" hreflang="en" href="https://hardwired28.luismars.com/core-rules.html">
     <link rel="alternate" hreflang="es" href="https://hardwired28.luismars.com/es/core-rules.html">
     <link rel="alternate" hreflang="x-default" href="https://hardwired28.luismars.com/core-rules.html">
-    <meta name="twitter:title" content="Hardwired 28 - Reglas Básicas 0.7.2-beta">
+    <meta name="twitter:title" content="Hardwired 28: Reglas Básicas 0.7.3-beta">
     <meta name="twitter:description" content="Hardwired 28 es un juego de escaramuzas cablepunk: dirige una escuadra corporativa por una arcologia en ruinas donde la conexion por cable es sagrada y lo inalambrico es herejia.">
     <meta name="twitter:image" content="https://hardwired28.luismars.com/img/social.png">
     <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
     <script data-goatcounter="https://hardwired28.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="../normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Work+Sans:wght@300;400;500;600&family=Montserrat:wght@600;700;800;900&family=PT+Serif:wght@400;700&family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style-base.css">
     <link rel="stylesheet" href="../style.css">
 </head>
 <body class="booklet-mode has-app-menu">
@@ -33,24 +34,26 @@
             <a class="app-menu__brand" href="./">Hardwired 28</a>
             <button class="app-menu__toggle" type="button" onclick="toggleMenu()" aria-label="Menú"></button>
             <div class="app-menu__links">
-                <a href="rulebook">Reglamento</a>
+                <a href="first-game" class="app-menu__cta">Primera Partida</a>
+                <a href="rulebook">Reglas</a>
                 <div class="app-menu__dropdown">
-                    <button class="app-menu__dropdown-toggle current">Imprimir</button>
+                    <button class="app-menu__dropdown-toggle">Imprimir</button>
                     <div class="app-menu__submenu">
-                        <div class="app-menu__nested">
-                            <span class="app-menu__nested-label">Individuales</span>
-                            <div class="app-menu__nested-submenu">
-                                <a href="print">Todas las Reglas</a>
-                                <a href="core-rules">Reglas Básicas</a>
-                                <a href="inhuman-resources">Recursos Inhumanos</a>
-                                <a href="campaign">Campaña</a>
-                            </div>
-                        </div>
+                        <a href="quick-reference">Referencia Rápida</a>
+                        <a href="print">Todas las Reglas</a>
+                        <a href="core-rules">Reglas Básicas</a>
+                        <a href="inhuman-resources">Recursos Inhumanos</a>
+                        <a href="campaign">Campaña</a>
                     </div>
                 </div>
-                <a href="quick-reference">Referencia Rápida</a>
-                <a href="builder/index">Creador de Plantillas</a>
-                <a href="scenario/index">Escenarios</a>
+                <div class="app-menu__dropdown">
+                    <button class="app-menu__dropdown-toggle">Herramientas</button>
+                    <div class="app-menu__submenu">
+                        <a href="builder/index">Creador de Plantillas</a>
+                        <a href="scenario/index">Escenarios</a>
+                    </div>
+                </div>
+                <a href="feedback">Comentarios</a>
                 <a href="../core-rules">English</a>
             </div>
         </div>
@@ -75,11 +78,12 @@
 
 
 <h1 id="hardwired-28_1">Hardwired 28</h1>
-<p><em>0.7.2-beta</em> por LuisMars</p>
+<p><em>0.7.3-beta</em> por LuisMars</p>
+<p><em>Distribución Abierta: <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">CC BY-SA 4.0</a></em></p>
 <h2 id="el-gran-complejo">El Gran Complejo</h2>
 <p>Una megaestructura vertical de tres kilómetros. Los cables cuelgan de cada superficie. Se agrupan en troncos más gruesos que cuerpos, serpentean paredes, se enrollan bajo los pies. Iba a ser el paraíso. Ahora se pudre.</p>
 <p>La conexión por cable es sagrada. Lo inalámbrico es herejía. Desde el Anclaje, lo inalámbrico significa excomunión. Las deudas se heredan. Los hijos nacen suscritos.</p>
-<h2 id="los-poderes">Los Poderes</h2>
+<h2 id="los-poderes">Los poderes</h2>
 <p><strong>Los Departamentos:</strong> Asignación de Recursos, Operaciones de Ingresos, Capital Humano, Seguridad y Cumplimiento. Cuatro cuerpos, cuatro presupuestos, guerra jurisdiccional sin fin.</p>
 <p><strong>Monjes de Mantenimiento:</strong> Sacerdotes del cable que cuidan conductos sagrados. Hablan en códigos de error. Diagnósticos rituales. La mitad de lo que mantienen no lo entienden.</p>
 <p><strong>Autoridad de Conducto:</strong> El brazo ejecutor. No hacen preguntas. Queman herejes y facturan la munición.</p>
@@ -91,7 +95,7 @@
 <p>Operan entre facciones: recuperan lo perdido, silencian lo escuchado, mantienen lo que debe continuar. Cada trabajo tiene un patrón. El pago llega en subs. La traición es gratis.</p>
 <h2 id="subs">Subs</h2>
 <p>Los subs son Puntos de Suscripción. Pagan equipo, peajes, sobornos y aire. Los notas cuando faltan.</p>
-<h2 id="los-niveles">Los Niveles</h2>
+<h2 id="los-niveles">Los niveles</h2>
 <p>El calor asciende. La riqueza, más rápido. Los niveles superiores permanecen frescos mientras las profundidades arden. Las cuotas se descuentan de salarios que nunca llegan a cubrirlas.</p>
 <p><em>Tu suscripción es tu libertad.</em></p>
 <p><strong>Por mandato del Soberano Ejecutivo</strong></p>
@@ -107,7 +111,7 @@
 <h2 id="miniaturas">Miniaturas</h2>
 <p>Este juego está pensado para miniaturas de 28 mm. Cualquier miniatura entre 28 mm y 32 mm sirve. Las peanas entre 25 mm y 32 mm son compatibles.</p>
 <p>Usa las miniaturas que tengas. Conviértelas. Construye ejecutores corporativos con kits de ciencia ficción. Monta cultistas envueltos en cables con piezas de fantasía. Usa miniaturas alternativas sin problema. La miniatura representa lo que tú digas. No hay respuestas incorrectas.</p>
-<h2 id="qué-necesitas">Qué Necesitas</h2>
+<h2 id="qué-necesitas">Qué necesitas</h2>
 <p><strong>Requerido</strong><br />
 - 5 miniaturas por banda (1 <code>Jefe</code>, 4 <code>Recursos</code>)<br />
 - 3-6 miniaturas de Compañeros (se colocan en la preparación)<br />
@@ -123,7 +127,7 @@
 - Registro de <code>Pruebas</code></p>
 <div class="column-break"></div>
 
-<h2 id="mecánicas-básicas">Mecánicas Básicas</h2>
+<h2 id="mecánicas-básicas">Mecánicas básicas</h2>
 <p>Tira 2 dados y suma los resultados.</p>
 <h3 id="tiradas-enfrentadas">Tiradas enfrentadas</h3>
 <p>Ambos jugadores tiran a la vez. Gana el total mayor. <strong>ND</strong> inferior gana empates. Mismo <strong>ND</strong>: repite.</p>
@@ -156,7 +160,7 @@
 <div class="single-column">
 
 
-<h1 id="asignación-de-personal">Asignación de Personal</h1>
+<h1 id="asignación-de-personal">Asignación de personal</h1>
 <p>5 miniaturas. 1 <code>Jefe</code>, 4 <code>Recursos</code>. Cada una elige un tipo de contrato.</p>
 </div>
 <div class="two-column">
@@ -263,7 +267,7 @@
 <div class="single-column">
 
 
-<h2 id="tipos-de-contrato">Tipos de Contrato</h2>
+<h2 id="tipos-de-contrato">Tipos de contrato</h2>
 <table>
 <thead>
 <tr>
@@ -319,7 +323,7 @@
 <td style="text-align: center;">5"</td>
 <td style="text-align: center;">Ambas</td>
 <td style="text-align: center;">Ligera</td>
-<td style="text-align: left;"><code>Retirarse</code> gratis, avanza 3" tras desplegar</td>
+<td style="text-align: left;"><code>Destrabarse</code> gratis, avanza 3" tras desplegar</td>
 <td style="text-align: center;">2</td>
 </tr>
 <tr>
@@ -366,7 +370,7 @@
 
 
 <h1 id="armas-y-armadura">Armas y Armadura</h1>
-<h2 id="combate-improvisado">Combate Improvisado</h2>
+<h2 id="combate-improvisado">Combate improvisado</h2>
 <table>
 <thead>
 <tr>
@@ -391,7 +395,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="armas-cuerpo-a-cuerpo">Armas Cuerpo a Cuerpo</h2>
+<h2 id="armas-cuerpo-a-cuerpo">Armas cuerpo a cuerpo</h2>
 <table>
 <thead>
 <tr>
@@ -573,7 +577,7 @@
 <div class="single-column">
 
 
-<h2 id="armas-de-disparo">Armas de Disparo</h2>
+<h2 id="armas-de-disparo">Armas de disparo</h2>
 <table>
 <thead>
 <tr>
@@ -1268,7 +1272,7 @@
 </table>
 <h2 id="movimiento">Movimiento</h2>
 <p>Muévete hasta tu valor de <code>Movimiento</code>. Mide desde el borde de la peana.</p>
-<h2 id="combate-cuerpo-a-cuerpo">Combate Cuerpo a Cuerpo</h2>
+<h2 id="combate-cuerpo-a-cuerpo">Combate cuerpo a cuerpo</h2>
 <ul>
 <li>A 1" de un enemigo: <code>Trabado</code></li>
 <li>Salir sin <code>Destrabarse</code>: el enemigo ataca gratis a <code>-1 ND</code></li>
@@ -1281,7 +1285,7 @@
 <div class="two-column">
 
 
-<h2 id="movimiento-vertical">Movimiento Vertical</h2>
+<h2 id="movimiento-vertical">Movimiento vertical</h2>
 <table>
 <thead>
 <tr>
@@ -1314,7 +1318,7 @@
 <p>"Morir en espacio público conlleva una tarifa de limpieza cargada a tu patrimonio."<br />
 <strong>Aviso de Seguridad Pública</strong></p>
 </blockquote>
-<h2 id="resolución-de-ataques">Resolución de Ataques</h2>
+<h2 id="resolución-de-ataques">Resolución de ataques</h2>
 <ol>
 <li>El atacante declara objetivo y arma</li>
 <li>En cuerpo a cuerpo, el defensor elige <code>Defensa</code> o <code>Contraataque</code></li>
@@ -1335,7 +1339,7 @@
 <p>"Los datos de trayectoria se registran automáticamente. Los disparos fallidos se facturan a tarifa estándar."<br />
 <strong>Manual de Entrenamiento Balístico</strong></p>
 </blockquote>
-<h2 id="disparo-al-cuerpo-a-cuerpo">Disparo al Cuerpo a Cuerpo</h2>
+<h2 id="disparo-al-cuerpo-a-cuerpo">Disparo al cuerpo a cuerpo</h2>
 <ul>
 <li><code>-1 ND</code> <code>Combate</code></li>
 <li>Un fallo (gana el defensor) impacta a una miniatura aleatoria a 1" del objetivo (excluyendo al objetivo)</li>
@@ -1424,7 +1428,7 @@
 <p>"Abandonar tu puesto anula beneficios acumulados. Se notificará a tus dependientes."<br />
 <strong>Oficina de Cumplimiento de Contratos</strong></p>
 </blockquote>
-<h2 id="abandonar-el-tablero">Abandonar el Tablero</h2>
+<h2 id="abandonar-el-tablero">Abandonar el tablero</h2>
 <p><strong>Evaluación de Rendimiento:</strong> Las que abandonaron (voluntario o <code>Huida</code>) reciben d6 de daño tras recuperar <code>Salud</code> en pospartida.</p>
 <ul>
 <li>No ganan Méritos esta partida</li>
@@ -2053,7 +2057,7 @@
 <li><code>Combate</code> 2d6, <code>Defensa</code> 2d4, <code>Astucia</code> 2d8</li>
 <li>Pistola de Arco (5): d4 <code>Estático</code>, sin pifias</li>
 <li>Chaleco Ligero (7): 1 reducción</li>
-<li><em><code>Retirarse</code> gratis, 3" <code>Mov</code> tras desplegar</em></li>
+<li><em><code>Destrabarse</code> gratis, 3" <code>Mov</code> tras desplegar</em></li>
 </ul>
 <h2 id="zelote-12">Zelote [12]</h2>
 <h3 id="12-salud-5-mov">12 <code>Salud</code>, 5" <code>Mov</code></h3>

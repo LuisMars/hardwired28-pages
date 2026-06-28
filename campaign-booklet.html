@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Hardwired 28 - Campaign 0.7.2-beta</title>
-<meta content="Hardwired 28 - Campaign 0.7.2-beta" property="og:title"/>
+<title>Hardwired 28: Campaign 0.7.3-beta</title>
+<meta content="Hardwired 28: Campaign 0.7.3-beta" property="og:title"/>
 <meta content="Corporate cablepunk skirmish wargame" property="og:description"/>
 <meta content="https://hardwired28.luismars.com/img/social.png" property="og:image"/>
 <meta content="https://hardwired28.luismars.com/campaign.html" property="og:url"/>
@@ -15,15 +15,16 @@
 <link href="https://hardwired28.luismars.com/campaign.html" hreflang="en" rel="alternate"/>
 <link href="https://hardwired28.luismars.com/es/campaign.html" hreflang="es" rel="alternate"/>
 <link href="https://hardwired28.luismars.com/campaign.html" hreflang="x-default" rel="alternate"/>
-<meta content="Hardwired 28 - Campaign 0.7.2-beta" name="twitter:title"/>
+<meta content="Hardwired 28: Campaign 0.7.3-beta" name="twitter:title"/>
 <meta content="Hardwired 28 is a cablepunk skirmish wargame: lead a corporate squad through a collapsing arcology where wired connection is sacred and wireless is heresy." name="twitter:description"/>
 <meta content="https://hardwired28.luismars.com/img/social.png" name="twitter:image"/>
 <link href="img/favicon.svg" rel="icon" type="image/svg+xml"/>
 <script async="" data-goatcounter="https://hardwired28.goatcounter.com/count" src="//gc.zgo.at/count.js"></script>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet"/>
+<link href="normalize.css" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&amp;family=Work+Sans:wght@300;400;500;600&amp;family=Montserrat:wght@600;700;800;900&amp;family=PT+Serif:wght@400;700&amp;family=Ubuntu+Mono&amp;display=swap" rel="stylesheet"/>
+<link href="style-base.css" rel="stylesheet"/>
 <link href="style.css" rel="stylesheet"/>
 <style>
 /* Override page size to A4 landscape */
@@ -159,24 +160,26 @@
 <a class="app-menu__brand" href="./">Hardwired 28</a>
 <button aria-label="Menu" class="app-menu__toggle" onclick="toggleMenu()" type="button"></button>
 <div class="app-menu__links">
-<a href="rulebook">Rulebook</a>
+<a class="app-menu__cta" href="first-game">First Game</a>
+<a href="rulebook">Rules</a>
 <div class="app-menu__dropdown">
-<button class="app-menu__dropdown-toggle current">Print</button>
+<button class="app-menu__dropdown-toggle">Print</button>
 <div class="app-menu__submenu">
-<div class="app-menu__nested">
-<span class="app-menu__nested-label">Singles</span>
-<div class="app-menu__nested-submenu">
+<a href="quick-reference">Quick Reference</a>
 <a href="print">All Rules</a>
 <a href="core-rules">Core Rules</a>
 <a href="inhuman-resources">Inhuman Resources</a>
 <a href="campaign">Campaign</a>
 </div>
 </div>
-</div>
-</div>
-<a href="quick-reference">Quick Reference</a>
+<div class="app-menu__dropdown">
+<button class="app-menu__dropdown-toggle">Tools</button>
+<div class="app-menu__submenu">
 <a href="builder/index">Squad Builder</a>
 <a href="scenario/index">Scenarios</a>
+</div>
+</div>
+<a href="feedback">Feedback</a>
 <a href="es/campaign">Castellano</a>
 </div>
 </div>
@@ -282,8 +285,9 @@
     <div class="imposed-left"><div class="page page-even" data-page-number="2">
 <div class="two-column">
 <h1 id="campaign_1">Campaign</h1>
-<p><em>0.7.2-beta</em></p>
-<p>The Untethered are spreading. What began as scattered heresy in the lower tiers has become something organized, something coordinated. Open Channel broadcasts grow bolder each cycle, promising liberation from cables and subscriptions. The signal reaches further than it should. Something is answering.</p>
+<p><em>0.7.3-beta</em></p>
+<p><em>Open Distribution Statute: <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></em></p>
+<p>The Untethered are spreading. What began as scattered heresy in the lower tiers has become coordinated, cell by cell. Open Channel broadcasts grow bolder each cycle, promising liberation from cables and subscriptions. The signal reaches further than it should. Something is answering.</p>
 <p>The Departments smell opportunity. Resource Allocation wants whatever the Untethered found in the Roots. Revenue Operations wants the salvage rights. Human Capital wants the converts for reeducation. Security &amp; Compliance wants the heresy crushed before it spreads further. Each Department sends their own squads. Each Department expects results. None of them share intelligence.</p>
 <p>Your squad investigates. Recover data-slates from dead drops. Confiscate transmitters before the signal spreads. Interrogate cultists who would rather die than talk. The Departments pay well for artifacts. They pay better for Founders secrets. They pay best for silence about what you find down there.</p>
 <div class="column-break"></div>
@@ -487,13 +491,15 @@
 <li><strong>First Draw:</strong> First Player draws the first Activation Token.</li>
 </ol>
 <p><strong>Corner:</strong> A 4" by 4" square zone in the corner of the board.</p>
+<p><strong>Game Length:</strong> Minimum 5 rounds. End of Round 5, roll d6: ends on 3+. End of Round 6: ends on 2+. Ends automatically after Round 7.</p>
 <div class="column-break"></div>
-<p><strong>Game Length:</strong> Games last a minimum of 5 rounds. At the end of Round 5, roll d6: on 3+ the game ends. At the end of Round 6, roll d6: on 2+ the game ends. The game automatically ends after Round 7.</p>
-<p><strong>Hostiles:</strong> Unless the mission specifies otherwise, spawned hostiles appear at the start of the round, together at a random board edge not used for player deployment, as close to center as possible.</p>
+<p><strong>Hostiles:</strong> Unless a mission says otherwise, spawned hostiles arrive at round start on a random non-deployment edge, as close to center as possible.</p>
 <p><strong>Mission Exits:</strong> Exiting the board for a mission objective is not <code>Flee</code>. No Performance Review penalty.</p>
 <p><strong>Trigger Missions:</strong> At 5 <code>Evidence</code>, play The Signal instead of rolling the generator. At 9 <code>Evidence</code>, play The Source.</p>
 <p><strong>Tiebreaker:</strong> Most surviving models. Still tied: Defender wins.</p>
 <p><strong>Mission Markers:</strong> Defender places all markers (3"+ from edges). "At center" means the geometric center (12" from each edge). Place as close as possible if terrain blocks.</p>
+<p><strong>Placement order:</strong> Place objectives first; a <code>Loot Marker</code>, Coworker, or Hostile within 1" of one shifts to the nearest clear spot so objectives stay reachable.</p>
+<p><strong>Deployment edge:</strong> the table edge you deploy along; with no edge (Center), use the nearest board edge.</p>
 <h2 id="mission-generator">Mission Generator</h2>
 <h3 id="calculate-evidence-gap">Calculate Evidence Gap</h3>
 <ul>
@@ -774,8 +780,8 @@
 <h4 id="11-lockdown">11. Lockdown</h4>
 <p><em>The terminal was already running when your crew found it. Someone started a data transfer and didn't finish. The progress bar crawls forward. Whatever it's downloading, three other crews want it stopped.</em></p>
 <p>Defender places 1 terminal at center.</p>
-<p><code>Interact</code> adjacent to advance progress (1 step per success). The terminal needs 3 steps to complete. Both sides track progress separately. Opponent can <code>Interact</code> to reset your progress by 1 step (minimum 0). Hostiles within 1" of the terminal at round end reset both sides by 1 step.</p>
-<p><code>Engaged</code> models cannot use the terminal.</p>
+<p><code>Interact</code> adjacent to advance progress (1 step per success). The terminal needs 3 steps to complete. Both sides track progress separately. Opponent can <code>Interact</code> to set your progress back 1 step (minimum 0). One <code>Interact</code> either advances your own progress or sets an opponent back, not both.</p>
+<p><code>Engaged</code> models cannot use the terminal. Hostiles ignore the terminal.</p>
 <p><strong>Victory:</strong> First to complete 3 steps. If neither completes, most steps at game end. Tied: most surviving models.</p>
 <p><strong>Reward:</strong> Winner gains +1 <code>Lead</code>.<br/>
 <strong>Bonus:</strong> +1 additional <code>Lead</code> if the winner completed all 3 steps. Loser gains 1 <code>Lead</code> if they completed at least 1 step.</p>
@@ -787,8 +793,8 @@
 <h4 id="12-escort">12. Escort</h4>
 <p><em>They found her hiding in a cable junction, muttering frequencies that haven't been licensed in centuries. She knows where the signal comes from. Both Departments want her talking. She won't last long out here alone.</em></p>
 <p>Defender places 1 informant at center.</p>
-<p><code>Interact</code> adjacent to take control. Escorting model moves at half <code>Move</code> (round down). If the escort goes <code>Out of Action</code>, the informant stays in place. Any model can take over with <code>Interact</code>. <code>Engaged</code> models cannot escort. The informant cannot be targeted directly. Hostiles ignore the informant.</p>
-<p>If the informant is unescorted at round end and any hostile is within 3", remove the informant. Both sides lose.</p>
+<p><code>Interact</code> adjacent to take control. Escorting model moves at half <code>Move</code> (round down). If the escort goes <code>Out of Action</code>, the informant stays in place. Any model can take over with <code>Interact</code>. <code>Engaged</code> models cannot escort. The informant cannot be targeted directly.</p>
+<p>Hostiles ignore the informant.</p>
 <p><strong>Victory:</strong> Exit the informant off your deployment edge. Game end: side controlling the informant wins. No controller: most surviving models.</p>
 <p><strong>Reward:</strong> Winner gains +1 <code>Lead</code>.<br/>
 <strong>Bonus:</strong> The escorting model at victory gains +1 <code>Merit</code>. Loser gains 1 <code>Lead</code> if they controlled the informant at any point.</p>
@@ -1140,7 +1146,7 @@
 <p><em>A corporate terminal sits unguarded between the crews. Its databanks hold encrypted Department files. Both sides can pull data. Neither can lock the other out.</em></p>
 <p>Defender places 1 terminal at center.</p>
 <p><code>Interact</code> adjacent to download. Each download costs one action. Only one model per side can download per round. <code>Engaged</code> models cannot use the terminal. Downloads are tracked per player: both sides use the same terminal.</p>
-<p>If a hostile ends its activation within 1" of the terminal, the side with more downloads loses 1 (tied: both lose 1, minimum 0).</p>
+<p>Hostiles ignore the terminal.</p>
 <p><strong>Victory:</strong> First to 3 downloads. If neither reaches 3, most downloads at game end. Tied: most surviving models.</p>
 <p><strong>Reward:</strong> Winner gains +1 <code>Lead</code>.<br/>
 <strong>Bonus:</strong> +1 additional <code>Lead</code> if the winner completed 3 downloads. Loser gains 1 <code>Lead</code> if they completed at least 1 download.<br/>
@@ -1154,7 +1160,7 @@
 <p><em>Three relay nodes form a local network across the junction. Hold the nodes and the data flows your way. Let the enemy contest them and nobody gets anything.</em></p>
 <p>Defender places 3 relay nodes (6"+ apart, 3"+ from table edges).</p>
 <p>At game end, a node is live for your side if you have at least one model within 3" and the opponent does not. Contested nodes (both sides present) are not live for either. <code>Out of Action</code> and <code>Fleeing</code> models do not count.</p>
-<p>Hostiles within 3" of a node contest it for both sides.</p>
+<p>Hostiles ignore the nodes.</p>
 <p><strong>Victory:</strong> Most live nodes at game end. Tied: most surviving models.</p>
 <p><strong>Reward:</strong> Winner gains +1 <code>Lead</code>.<br/>
 <strong>Bonus:</strong> +1 additional <code>Lead</code> if the winner has 3 or more live nodes.<br/>
@@ -1170,14 +1176,14 @@
     <div class="imposed-left"><div class="page page-even" data-page-number="10">
 <div class="two-column">
 <h4 id="7-triangulation">7. Triangulation</h4>
-<p><em>Three signal repeaters sit dead across the junction. Each one needs manual activation. The crew that brings them online first gets the broadcast frequency. The other gets static.</em></p>
+<p><em>Three signal repeaters sit dead across the junction. Each one needs manual activation. Whoever holds the most when the signal locks gets the broadcast frequency. The other gets static.</em></p>
 <p>Defender places 3 signal markers (6"+ apart, 3"+ from table edges).</p>
-<p><code>Interact</code> adjacent to activate a marker for your side. Each model can only activate the same marker once. <code>Engaged</code> models cannot activate markers. Activations are permanent: the opponent's activation does not remove yours. Both sides can activate all 3.</p>
+<p><code>Interact</code> adjacent to claim a marker for your side. An enemy can <code>Interact</code> to claim it back; a marker stays claimed by the last side to claim it. <code>Engaged</code> models cannot claim markers.</p>
 <p>Hostiles ignore signal markers.</p>
-<p><strong>Victory:</strong> Most markers activated at game end. Maximum 3 per side. Tied: most surviving models.</p>
+<p><strong>Victory:</strong> Most markers held at game end. Tied: most surviving models.</p>
 <p><strong>Reward:</strong> Winner gains +1 <code>Lead</code>.<br/>
-<strong>Bonus:</strong> +1 additional <code>Lead</code> if the winner activated all 3 markers.<br/>
-<strong>Intel:</strong> +1 <code>Evidence</code> if the winner activated all 3 markers (broadcast secrets intercepted).</p>
+<strong>Bonus:</strong> +1 additional <code>Lead</code> if the winner holds all 3 markers.<br/>
+<strong>Intel:</strong> +1 <code>Evidence</code> if the winner holds all 3 markers (broadcast secrets intercepted).</p>
 <blockquote>
 <p>"Every signal is a betrayal."<br/>
 <strong>Anti-Heresy Warning</strong></p>
@@ -1185,7 +1191,7 @@
 <div class="column-break"></div>
 <h4 id="8-sabotage">8. Sabotage</h4>
 <p><em>Your target is the enemy's power conduit. Their target is yours. Cutting takes precision and time. Defending takes bodies.</em></p>
-<p>Each player places 1 conduit marker in the opponent's board half (3"+ from table edges).</p>
+<p>Each player places 1 conduit marker in the opponent's half (the side of the board nearer the opponent's deployment zone), 3"+ from table edges.</p>
 <p><code>Interact</code> adjacent to sever the enemy conduit. Severing requires 2 <code>Interact</code> actions on the same conduit (not necessarily the same activation or model). Mark the first success with a token. At the start of the next round, remove the mark if no friendly model is within 1" of it. <code>Engaged</code> models cannot sever conduits. Severing is permanent once completed.</p>
 <p>Hostiles ignore conduits.</p>
 <p><strong>Victory:</strong> First to sever. Both sever same round: first to complete wins. Neither severs by game end: most surviving models.</p>
@@ -1203,8 +1209,7 @@
 <h4 id="1-extraction">1. Extraction</h4>
 <p><em>A data-slate surfaced in a dead drop near Junction Null. Both crews got the tip. The slate holds Department records worth more than anyone here earns in a cycle.</em></p>
 <p>Defender places 1 objective marker at center.</p>
-<p><code>Interact</code> adjacent to pick up the objective. The carrier moves at half <code>Move</code> (round down) and cannot <code>Disengage</code>. Drop the objective if the carrier goes <code>Out of Action</code> or <code>Flees</code> (place where they fell or at the board edge). <code>Engaged</code> models cannot pick up the objective. Any model can pick it up again with <code>Interact</code>.</p>
-<p><strong>Coworker at objective:</strong> Separate <code>Interact</code> actions needed (extract or interrogate). Cannot do both with one action.</p>
+<p><code>Interact</code> adjacent to pick up the objective. The carrier moves at half <code>Move</code> (round down) and cannot <code>Disengage</code>. Drop the objective if the carrier goes <code>Out of Action</code> or <code>Flees</code> (place where the carrier fell, or at the nearest board edge if it fled off the table). <code>Engaged</code> models cannot pick up the objective. Any model can pick it up again with <code>Interact</code>.</p>
 <p>Hostiles ignore the objective.</p>
 <p><strong>Victory:</strong> Carry the objective off your deployment edge. If neither side extracts by game end, the side holding the objective wins. No holder: most surviving models.</p>
 <p><strong>Reward:</strong> Winner gains +1 <code>Lead</code>.<br/>
@@ -1216,12 +1221,10 @@
 <div class="column-break"></div>
 <h4 id="2-control">2. Control</h4>
 <p><em>The relay hub routes half the sector's traffic. Hold it and you control the flow. Lose it and you lose everything downstream.</em></p>
-<p>No markers. At game end, count models within 3" of board center. <code>Out of Action</code> and <code>Fleeing</code> models do not count. Hostiles within 3" of center count against both players (subtract from each total).</p>
-<p><strong>Hostile Subtraction:</strong> Each hostile within 3" of center subtracts 1 from both players' model counts equally. Count each player's models, then subtract the hostile count from each total independently. Example: with 2 hostiles within 3" of center, Player A has 4 models minus 2 hostiles, leaving 2. Player B has 5 minus 2, leaving 3. Player B wins three to two.</p>
-<p>If both totals reach 0 or below after hostile subtraction, most surviving models on the board wins.</p>
-<p><strong>Victory:</strong> Side with more models within 3" of center at game end.</p>
+<p>No markers. At game end, count models within 3" of board center. <code>Out of Action</code> and <code>Fleeing</code> models do not count. Hostiles ignore the zone.</p>
+<p><strong>Victory:</strong> Side with more models within 3" of center at game end. Tied: most surviving models on the board.</p>
 <p><strong>Reward:</strong> Winner gains +1 <code>Lead</code>.<br/>
-<strong>Bonus:</strong> +1 additional <code>Lead</code> if the winner's net total exceeds the opponent's by 3 or more.</p>
+<strong>Bonus:</strong> +1 additional <code>Lead</code> if the winner's count exceeds the opponent's by 3 or more.</p>
 <blockquote>
 <p>"Connection is civilization."<br/>
 <strong>Cable Creed Promotion</strong></p>
@@ -1235,7 +1238,7 @@
 <h4 id="3-quadrants">3. Quadrants</h4>
 <p><em>A cascade blew out four sub-sectors at once. Each one holds salvage, intel, or both. Spread thin and claim what you can before the other crew does.</em></p>
 <p>No markers. Divide the board into 4 equal quadrants. At game end, a quadrant is held by the side with more models inside it. Empty or tied quadrants are not held. Model on a quadrant line: controlling player chooses which quadrant it counts for.</p>
-<p><code>Fleeing</code> models do not count. Each hostile in a quadrant subtracts 1 from both players' counts there.</p>
+<p><code>Out of Action</code> and <code>Fleeing</code> models do not count. Hostiles ignore the quadrants.</p>
 <p><strong>Victory:</strong> Side holding more quadrants at game end. Tied on quadrants: most surviving models.</p>
 <p><strong>Reward:</strong> Winner gains +1 <code>Lead</code>.<br/>
 <strong>Bonus:</strong> +1 additional <code>Lead</code> if the winner holds 3 or more quadrants.</p>
@@ -1247,7 +1250,7 @@
 <h4 id="4-seizure">4. Seizure</h4>
 <p><em>A portable beacon pulses with cached data in the corridor junction. Hold it long enough and the data is yours. Lose focus and the other crew takes the feed.</em></p>
 <p>Defender places 1 beacon at center.</p>
-<p>At the end of each round, count models within 3" of the beacon. <code>Out of Action</code> and <code>Fleeing</code> models do not count. Each hostile within 3" subtracts 1 from both players' counts. The side with more scores 1 point. Tied or both at 0: no one scores.</p>
+<p>At the end of each round, count models within 3" of the beacon. <code>Out of Action</code> and <code>Fleeing</code> models do not count. The side with more scores 1 point. Tied: no one scores. Hostiles ignore the beacon.</p>
 <p>Tied on points at game end: side with more models within 3" of the beacon wins. Still tied: most surviving models.</p>
 <p><strong>Victory:</strong> Most points at game end.</p>
 <p><strong>Reward:</strong> Winner gains +1 <code>Lead</code>.<br/>
@@ -1263,7 +1266,7 @@
 <h4 id="5-assassination">5. Assassination</h4>
 <p><em>Someone on the other crew has a price on their head. The contract is specific: one target, no collateral billing. Find them in the chaos.</em></p>
 <p>After deployment, each player secretly writes down one opposing model as their target. Do not reveal targets until one is taken <code>Out of Action</code> or <code>Flees</code>. You cannot choose a model that is not on the board.</p>
-<p>If the target <code>Flees</code>, reveal it immediately: the opponent wins. If both targets die the same turn, first player to reveal their target wins. Same activation: most surviving models.</p>
+<p>If both targets fall in the same activation, the player whose model struck first wins. Strictly simultaneous: most surviving models.</p>
 <p><strong>Victory:</strong> First to take their target <code>Out of Action</code> (or force them to <code>Flee</code>). If neither target falls by game end, reveal both. Most surviving models.</p>
 <p><strong>Reward:</strong> Winner gains +1 <code>Lead</code>.<br/>
 <strong>Bonus:</strong> The model that killed the target gains +1 <code>Merit</code>.<br/>
@@ -1275,8 +1278,8 @@
 <div class="column-break"></div>
 <h4 id="6-breakthrough">6. Breakthrough</h4>
 <p><em>The corridor is collapsing behind both crews. There is no going back. Get your people to the far exit. Anyone left behind stays behind.</em></p>
-<p>No markers. A model reaching the opponent's deployment edge can exit as part of its move. Exited models are removed and cannot return. <code>Engaged</code> models cannot exit (must <code>Disengage</code> first).</p>
-<p>Hostiles cannot exit. Models that <code>Flee</code> off the opponent's edge count as exited. Models that <code>Flee</code> off any other edge do not.</p>
+<p>No markers. As part of its move, a model can exit across any board edge touching the opponent's deployment zone (with Center deployment, the edge opposite the Aggressor). Exited models are removed and cannot return. <code>Engaged</code> models cannot exit (must <code>Disengage</code> first).</p>
+<p>Hostiles cannot exit. Models that <code>Flee</code> off an exit edge count as exited; off any other edge they do not.</p>
 <p>If no models exit by game end, most surviving models wins.</p>
 <p><strong>Victory:</strong> Most models exited at game end. Models still on the board do not count. Tied: most surviving models on the board.</p>
 <p><strong>Reward:</strong> Winner gains +1 <code>Lead</code>.<br/>

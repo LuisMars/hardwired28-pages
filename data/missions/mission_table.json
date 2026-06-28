@@ -4,17 +4,17 @@
   "columns": ["d12", "Mission"],
   "align": ["center", "left"],
   "items": [
-    {"roll": "1", "mission": "Extraction", "file": "3_03_extraction.md"},
-    {"roll": "2", "mission": "Control", "file": "3_04_control.md"},
-    {"roll": "3", "mission": "Quadrants", "file": "3_05_quadrants.md"},
-    {"roll": "4", "mission": "Seizure", "file": "3_06_seizure.md"},
+    {"roll": "1", "mission": "Extraction", "file": "3_03_extraction.md", "map": "objective 12 12"},
+    {"roll": "2", "mission": "Control", "file": "3_04_control.md", "map": "area circle center 3 green"},
+    {"roll": "3", "mission": "Quadrants", "file": "3_05_quadrants.md", "map": "area box 0 0 12 12 green\narea box 12 0 24 12 green\narea box 0 12 12 24 green\narea box 12 12 24 24 green"},
+    {"roll": "4", "mission": "Seizure", "file": "3_06_seizure.md", "map": "objective 12 12\narea circle center 3 orange"},
     {"roll": "5", "mission": "Assassination", "file": "3_07_assassination.md"},
     {"roll": "6", "mission": "Breakthrough", "file": "3_08_breakthrough.md"},
-    {"roll": "7", "mission": "Triangulation", "file": "3_09_triangulation.md"},
-    {"roll": "8", "mission": "Sabotage", "file": "3_10_sabotage.md"},
-    {"roll": "9", "mission": "Heist", "file": "3_11_heist.md"},
-    {"roll": "10", "mission": "Uplink", "file": "3_12_uplink.md"},
-    {"roll": "11", "mission": "Lockdown", "file": "3_13_lockdown.md"},
-    {"roll": "12", "mission": "Escort", "file": "3_13b_escort.md"}
+    {"roll": "7", "mission": "Triangulation", "file": "3_09_triangulation.md", "map": "objective 6 8\nobjective 18 8\nobjective 12 16"},
+    {"roll": "8", "mission": "Sabotage", "file": "3_10_sabotage.md", "map": "objective 12 6\nobjective 12 18"},
+    {"roll": "9", "mission": "Heist", "file": "3_11_heist.md", "map": "objective 12 12"},
+    {"roll": "10", "mission": "Uplink", "file": "3_12_uplink.md", "map": "objective 6 8\narea circle 6 8 3 green\nobjective 18 8\narea circle 18 8 3 green\nobjective 12 16\narea circle 12 16 3 green"},
+    {"roll": "11", "mission": "Lockdown", "file": "3_13_lockdown.md", "map": "objective 12 12"},
+    {"roll": "12", "mission": "Escort", "file": "3_13b_escort.md", "map": "objective 12 12"}
   ]
 }

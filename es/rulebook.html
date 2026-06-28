@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hardwired 28 - Rulebook 0.7.2-beta</title>
-    <meta property="og:title" content="Hardwired 28 - Rulebook 0.7.2-beta">
+    <title>Hardwired 28 - Rulebook 0.7.3-beta</title>
+    <meta property="og:title" content="Hardwired 28 - Rulebook 0.7.3-beta">
     <meta property="og:description" content="Juego de escaramuzas cablepunk corporativo">
     <meta property="og:image" content="https://hardwired28.luismars.com/img/social.png">
     <meta property="og:url" content="https://hardwired28.luismars.com/es/rulebook.html">
@@ -15,15 +15,16 @@
     <link rel="alternate" hreflang="en" href="https://hardwired28.luismars.com/rulebook.html">
     <link rel="alternate" hreflang="es" href="https://hardwired28.luismars.com/es/rulebook.html">
     <link rel="alternate" hreflang="x-default" href="https://hardwired28.luismars.com/rulebook.html">
-    <meta name="twitter:title" content="Hardwired 28 - Rulebook 0.7.2-beta">
+    <meta name="twitter:title" content="Hardwired 28 - Rulebook 0.7.3-beta">
     <meta name="twitter:description" content="Hardwired 28 es un juego de escaramuzas cablepunk: dirige una escuadra corporativa por una arcologia en ruinas donde la conexion por cable es sagrada y lo inalambrico es herejia.">
     <meta name="twitter:image" content="https://hardwired28.luismars.com/img/social.png">
     <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
     <script data-goatcounter="https://hardwired28.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="../normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Work+Sans:wght@300;400;500;600&family=Montserrat:wght@600;700;800;900&family=PT+Serif:wght@400;700&family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style-base.css">
     <link rel="stylesheet" href="../style_manual.css">
 </head>
 <body class="has-app-menu">
@@ -33,11 +34,26 @@
             <a class="app-menu__brand" href="./">Hardwired 28</a>
             <button class="app-menu__toggle" type="button" onclick="toggleMenu()" aria-label="Menú"></button>
             <div class="app-menu__links">
-                <a href="rulebook" class="current">Reglamento</a>
-                <a href="print">Imprimir</a>
-                <a href="quick-reference">Referencia Rápida</a>
-                <a href="builder/index">Creador de Plantillas</a>
-                <a href="scenario/index">Escenarios</a>
+                <a href="first-game" class="app-menu__cta">Primera Partida</a>
+                <a href="rulebook" class="current">Reglas</a>
+                <div class="app-menu__dropdown">
+                    <button class="app-menu__dropdown-toggle">Imprimir</button>
+                    <div class="app-menu__submenu">
+                        <a href="quick-reference">Referencia Rápida</a>
+                        <a href="print">Todas las Reglas</a>
+                        <a href="core-rules">Reglas Básicas</a>
+                        <a href="inhuman-resources">Recursos Inhumanos</a>
+                        <a href="campaign">Campaña</a>
+                    </div>
+                </div>
+                <div class="app-menu__dropdown">
+                    <button class="app-menu__dropdown-toggle">Herramientas</button>
+                    <div class="app-menu__submenu">
+                        <a href="builder/index">Creador de Plantillas</a>
+                        <a href="scenario/index">Escenarios</a>
+                    </div>
+                </div>
+                <a href="feedback">Comentarios</a>
                 <a href="../rulebook">English</a>
             </div>
         </div>
@@ -49,29 +65,29 @@
         <ul class="sidebar-nav">
             <li class="toc-h1"><a href="#hardwired-28">Reglas Básicas</a></li>
             <li class="toc-h2"><a href="#el-gran-complejo">El Gran Complejo</a></li>
-            <li class="toc-h2"><a href="#los-poderes">Los Poderes</a></li>
+            <li class="toc-h2"><a href="#los-poderes">Los poderes</a></li>
             <li class="toc-h2"><a href="#contratistas">Contratistas</a></li>
             <li class="toc-h2"><a href="#subs">Subs</a></li>
-            <li class="toc-h2"><a href="#los-niveles">Los Niveles</a></li>
+            <li class="toc-h2"><a href="#los-niveles">Los niveles</a></li>
             <li class="toc-h2"><a href="#los-siete-pilares">Los Siete Pilares</a></li>
             <li class="toc-h2"><a href="#miniaturas">Miniaturas</a></li>
-            <li class="toc-h2"><a href="#qué-necesitas">Qué Necesitas</a></li>
-            <li class="toc-h2"><a href="#mecánicas-básicas">Mecánicas Básicas</a></li>
+            <li class="toc-h2"><a href="#qué-necesitas">Qué necesitas</a></li>
+            <li class="toc-h2"><a href="#mecánicas-básicas">Mecánicas básicas</a></li>
             <li class="toc-h3"><a href="#tiradas-enfrentadas">Tiradas enfrentadas</a></li>
             <li class="toc-h3"><a href="#niveles-de-dado-nd">Niveles de Dado (ND)</a></li>
             <li class="toc-h3"><a href="#límites">Límites</a></li>
             <li class="toc-h3"><a href="#desbordamiento-de-nd">Desbordamiento de ND</a></li>
-            <li class="toc-h1"><a href="#asignación-de-personal">Asignación de Personal</a></li>
+            <li class="toc-h1"><a href="#asignación-de-personal">Asignación de personal</a></li>
             <li class="toc-h2"><a href="#atributos">Atributos</a></li>
             <li class="toc-h3"><a href="#técnico">Técnico</a></li>
             <li class="toc-h3"><a href="#operario">Operario</a></li>
             <li class="toc-h2"><a href="#valores">Valores</a></li>
             <li class="toc-h2"><a href="#equipamiento">Equipamiento</a></li>
-            <li class="toc-h2"><a href="#tipos-de-contrato">Tipos de Contrato</a></li>
+            <li class="toc-h2"><a href="#tipos-de-contrato">Tipos de contrato</a></li>
             <li class="toc-h1"><a href="#armas-y-armadura">Armas y Armadura</a></li>
-            <li class="toc-h2"><a href="#combate-improvisado">Combate Improvisado</a></li>
-            <li class="toc-h2"><a href="#armas-cuerpo-a-cuerpo">Armas Cuerpo a Cuerpo</a></li>
-            <li class="toc-h2"><a href="#armas-de-disparo">Armas de Disparo</a></li>
+            <li class="toc-h2"><a href="#combate-improvisado">Combate improvisado</a></li>
+            <li class="toc-h2"><a href="#armas-cuerpo-a-cuerpo">Armas cuerpo a cuerpo</a></li>
+            <li class="toc-h2"><a href="#armas-de-disparo">Armas de disparo</a></li>
             <li class="toc-h2"><a href="#granadas">Granadas</a></li>
             <li class="toc-h2"><a href="#armadura">Armadura</a></li>
             <li class="toc-h2"><a href="#armadura-ligera">Armadura Ligera</a></li>
@@ -85,11 +101,11 @@
             <li class="toc-h2"><a href="#bendiciones-corporativas">Bendiciones Corporativas</a></li>
             <li class="toc-h2"><a href="#acciones">Acciones</a></li>
             <li class="toc-h2"><a href="#movimiento">Movimiento</a></li>
-            <li class="toc-h2"><a href="#combate-cuerpo-a-cuerpo">Combate Cuerpo a Cuerpo</a></li>
-            <li class="toc-h2"><a href="#movimiento-vertical">Movimiento Vertical</a></li>
-            <li class="toc-h2"><a href="#resolución-de-ataques">Resolución de Ataques</a></li>
+            <li class="toc-h2"><a href="#combate-cuerpo-a-cuerpo">Combate cuerpo a cuerpo</a></li>
+            <li class="toc-h2"><a href="#movimiento-vertical">Movimiento vertical</a></li>
+            <li class="toc-h2"><a href="#resolución-de-ataques">Resolución de ataques</a></li>
             <li class="toc-h2"><a href="#defensa-de-disparo">Defensa de Disparo</a></li>
-            <li class="toc-h2"><a href="#disparo-al-cuerpo-a-cuerpo">Disparo al Cuerpo a Cuerpo</a></li>
+            <li class="toc-h2"><a href="#disparo-al-cuerpo-a-cuerpo">Disparo al cuerpo a cuerpo</a></li>
             <li class="toc-h2"><a href="#línea-de-visión-ldv">Línea de Visión (LdV)</a></li>
             <li class="toc-h2"><a href="#cobertura">Cobertura</a></li>
             <li class="toc-h2"><a href="#alcance">Alcance</a></li>
@@ -99,7 +115,7 @@
             <li class="toc-h2"><a href="#pifias">Pifias</a></li>
             <li class="toc-h2"><a href="#daño">Daño</a></li>
             <li class="toc-h2"><a href="#moral">Moral</a></li>
-            <li class="toc-h2"><a href="#abandonar-el-tablero">Abandonar el Tablero</a></li>
+            <li class="toc-h2"><a href="#abandonar-el-tablero">Abandonar el tablero</a></li>
             <li class="toc-h1"><a href="#poderes-de-emisión">Poderes de Emisión</a></li>
             <li class="toc-h2"><a href="#canalización">Canalización</a></li>
             <li class="toc-h2"><a href="#poderes">Poderes</a></li>
@@ -137,8 +153,8 @@
             <li class="toc-h2"><a href="#situación">Situación</a></li>
             <li class="toc-h2"><a href="#acciones_1">Acciones</a></li>
             <li class="toc-h2"><a href="#desplegar-hostiles">Desplegar Hostiles</a></li>
-            <li class="toc-h2"><a href="#niveles-de-unidad">Niveles de Unidad</a></li>
-            <li class="toc-h2"><a href="#dirección-aleatoria">Dirección Aleatoria</a></li>
+            <li class="toc-h2"><a href="#niveles-de-unidad">Niveles de unidad</a></li>
+            <li class="toc-h2"><a href="#dirección-aleatoria">Dirección aleatoria</a></li>
             <li class="toc-h2"><a href="#carroñeros">Carroñeros</a></li>
             <li class="toc-h2"><a href="#bandas-salvajes">Bandas Salvajes</a></li>
             <li class="toc-h2"><a href="#invocadores-de-onda">Invocadores de Onda</a></li>
@@ -149,20 +165,20 @@
             <li class="toc-h1"><a href="#hardwired-28_3">Campaña</a></li>
             <li class="toc-h2"><a href="#tablero">Tablero</a></li>
             <li class="toc-h2"><a href="#preparación">Preparación</a></li>
-            <li class="toc-h2"><a href="#generador-de-misiones">Generador de Misiones</a></li>
-            <li class="toc-h3"><a href="#calcular-brecha-de-pruebas">Calcular Brecha de Pruebas</a></li>
+            <li class="toc-h2"><a href="#generador-de-misiones">Generador de misiones</a></li>
+            <li class="toc-h3"><a href="#calcular-brecha-de-pruebas">Calcular brecha de Pruebas</a></li>
             <li class="toc-h3"><a href="#despliegue">Despliegue</a></li>
             <li class="toc-h3"><a href="#preparación-de-compañeros">Preparación de Compañeros</a></li>
             <li class="toc-h3"><a href="#timing-de-hostiles">Timing de Hostiles</a></li>
             <li class="toc-h3"><a href="#disposición-de-botín">Disposición de Botín</a></li>
             <li class="toc-h3"><a href="#tipo-de-hostil">Tipo de Hostil</a></li>
-            <li class="toc-h3"><a href="#ubicación-de-aparición">Ubicación de Aparición</a></li>
+            <li class="toc-h3"><a href="#ubicación-de-aparición">Ubicación de aparición</a></li>
             <li class="toc-h3"><a href="#modificadores-de-botín">Modificadores de Botín</a></li>
-            <li class="toc-h2"><a href="#ventajas-por-brecha-de-pruebas">Ventajas por Brecha de Pruebas</a></li>
-            <li class="toc-h3"><a href="#ventajas-de-preparación">Ventajas de Preparación</a></li>
+            <li class="toc-h2"><a href="#ventajas-por-brecha-de-pruebas">Ventajas por brecha de Pruebas</a></li>
+            <li class="toc-h3"><a href="#ventajas-de-preparación">Ventajas de preparación</a></li>
             <li class="toc-h3"><a href="#modificadores-de-compañeros">Modificadores de Compañeros</a></li>
-            <li class="toc-h3"><a href="#ventajas-tácticas">Ventajas Tácticas</a></li>
-            <li class="toc-h1"><a href="#recopilando-pruebas">Recopilando Pruebas</a></li>
+            <li class="toc-h3"><a href="#ventajas-tácticas">Ventajas tácticas</a></li>
+            <li class="toc-h1"><a href="#reunir-pruebas">Reunir Pruebas</a></li>
             <li class="toc-h2"><a href="#buscar">Buscar</a></li>
             <li class="toc-h2"><a href="#interrogar">Interrogar</a></li>
             <li class="toc-h2"><a href="#misiones">Misiones</a></li>
@@ -175,8 +191,8 @@
             <li class="toc-h2"><a href="#ascenso">Ascenso</a></li>
             <li class="toc-h2"><a href="#reclutamiento">Reclutamiento</a></li>
             <li class="toc-h2"><a href="#sucesión-de-jefe">Sucesión de Jefe</a></li>
-            <li class="toc-h2"><a href="#puesto-de-comercio">Puesto de Comercio</a></li>
-            <li class="toc-h2"><a href="#victoria-de-campaña">Victoria de Campaña</a></li>
+            <li class="toc-h2"><a href="#puesto-de-comercio">Puesto de comercio</a></li>
+            <li class="toc-h2"><a href="#victoria-de-campaña">Victoria de campaña</a></li>
         </ul>
     </nav>
     <div class="sidebar-overlay" onclick="toggleSidebar()"></div>
@@ -192,11 +208,12 @@
 
 
 <h1 id="hardwired-28_1">Hardwired 28</h1>
-<p><em>0.7.2-beta</em> por LuisMars</p>
+<p><em>0.7.3-beta</em> por LuisMars</p>
+<p><em>Distribución Abierta: <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">CC BY-SA 4.0</a></em></p>
 <h2 id="el-gran-complejo">El Gran Complejo</h2>
 <p>Una megaestructura vertical de tres kilómetros. Los cables cuelgan de cada superficie. Se agrupan en troncos más gruesos que cuerpos, serpentean paredes, se enrollan bajo los pies. Iba a ser el paraíso. Ahora se pudre.</p>
 <p>La conexión por cable es sagrada. Lo inalámbrico es herejía. Desde el Anclaje, lo inalámbrico significa excomunión. Las deudas se heredan. Los hijos nacen suscritos.</p>
-<h2 id="los-poderes">Los Poderes</h2>
+<h2 id="los-poderes">Los poderes</h2>
 <p><strong>Los Departamentos:</strong> Asignación de Recursos, Operaciones de Ingresos, Capital Humano, Seguridad y Cumplimiento. Cuatro cuerpos, cuatro presupuestos, guerra jurisdiccional sin fin.</p>
 <p><strong>Monjes de Mantenimiento:</strong> Sacerdotes del cable que cuidan conductos sagrados. Hablan en códigos de error. Diagnósticos rituales. La mitad de lo que mantienen no lo entienden.</p>
 <p><strong>Autoridad de Conducto:</strong> El brazo ejecutor. No hacen preguntas. Queman herejes y facturan la munición.</p>
@@ -208,7 +225,7 @@
 <p>Operan entre facciones: recuperan lo perdido, silencian lo escuchado, mantienen lo que debe continuar. Cada trabajo tiene un patrón. El pago llega en subs. La traición es gratis.</p>
 <h2 id="subs">Subs</h2>
 <p>Los subs son Puntos de Suscripción. Pagan equipo, peajes, sobornos y aire. Los notas cuando faltan.</p>
-<h2 id="los-niveles">Los Niveles</h2>
+<h2 id="los-niveles">Los niveles</h2>
 <p>El calor asciende. La riqueza, más rápido. Los niveles superiores permanecen frescos mientras las profundidades arden. Las cuotas se descuentan de salarios que nunca llegan a cubrirlas.</p>
 <p><em>Tu suscripción es tu libertad.</em></p>
 <p><strong>Por mandato del Soberano Ejecutivo</strong></p>
@@ -219,7 +236,7 @@
 <h2 id="miniaturas">Miniaturas</h2>
 <p>Este juego está pensado para miniaturas de 28 mm. Cualquier miniatura entre 28 mm y 32 mm sirve. Las peanas entre 25 mm y 32 mm son compatibles.</p>
 <p>Usa las miniaturas que tengas. Conviértelas. Construye ejecutores corporativos con kits de ciencia ficción. Monta cultistas envueltos en cables con piezas de fantasía. Usa miniaturas alternativas sin problema. La miniatura representa lo que tú digas. No hay respuestas incorrectas.</p>
-<h2 id="qué-necesitas">Qué Necesitas</h2>
+<h2 id="qué-necesitas">Qué necesitas</h2>
 <p><strong>Requerido</strong><br />
 - 5 miniaturas por banda (1 <code>Jefe</code>, 4 <code>Recursos</code>)<br />
 - 3-6 miniaturas de Compañeros (se colocan en la preparación)<br />
@@ -235,7 +252,7 @@
 - Registro de <code>Pruebas</code></p>
 
 
-<h2 id="mecánicas-básicas">Mecánicas Básicas</h2>
+<h2 id="mecánicas-básicas">Mecánicas básicas</h2>
 <p>Tira 2 dados y suma los resultados.</p>
 <h3 id="tiradas-enfrentadas">Tiradas enfrentadas</h3>
 <p>Ambos jugadores tiran a la vez. Gana el total mayor. <strong>ND</strong> inferior gana empates. Mismo <strong>ND</strong>: repite.</p>
@@ -261,7 +278,7 @@
 
 
 
-<h1 id="asignación-de-personal">Asignación de Personal</h1>
+<h1 id="asignación-de-personal">Asignación de personal</h1>
 <p>5 miniaturas. 1 <code>Jefe</code>, 4 <code>Recursos</code>. Cada una elige un tipo de contrato.</p>
 
 
@@ -364,7 +381,7 @@
 <p>Los <code>Emisores</code> eligen un Poder inicial de la lista.</p>
 
 
-<h2 id="tipos-de-contrato">Tipos de Contrato</h2>
+<h2 id="tipos-de-contrato">Tipos de contrato</h2>
 <table>
 <thead>
 <tr>
@@ -420,7 +437,7 @@
 <td style="text-align: center;">5"</td>
 <td style="text-align: center;">Ambas</td>
 <td style="text-align: center;">Ligera</td>
-<td style="text-align: left;"><code>Retirarse</code> gratis, avanza 3" tras desplegar</td>
+<td style="text-align: left;"><code>Destrabarse</code> gratis, avanza 3" tras desplegar</td>
 <td style="text-align: center;">2</td>
 </tr>
 <tr>
@@ -460,7 +477,7 @@
 
 
 <h1 id="armas-y-armadura">Armas y Armadura</h1>
-<h2 id="combate-improvisado">Combate Improvisado</h2>
+<h2 id="combate-improvisado">Combate improvisado</h2>
 <table>
 <thead>
 <tr>
@@ -485,7 +502,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="armas-cuerpo-a-cuerpo">Armas Cuerpo a Cuerpo</h2>
+<h2 id="armas-cuerpo-a-cuerpo">Armas cuerpo a cuerpo</h2>
 <table>
 <thead>
 <tr>
@@ -664,7 +681,7 @@
 
 
 
-<h2 id="armas-de-disparo">Armas de Disparo</h2>
+<h2 id="armas-de-disparo">Armas de disparo</h2>
 <table>
 <thead>
 <tr>
@@ -1348,7 +1365,7 @@
 </table>
 <h2 id="movimiento">Movimiento</h2>
 <p>Muévete hasta tu valor de <code>Movimiento</code>. Mide desde el borde de la peana.</p>
-<h2 id="combate-cuerpo-a-cuerpo">Combate Cuerpo a Cuerpo</h2>
+<h2 id="combate-cuerpo-a-cuerpo">Combate cuerpo a cuerpo</h2>
 <ul>
 <li>A 1" de un enemigo: <code>Trabado</code></li>
 <li>Salir sin <code>Destrabarse</code>: el enemigo ataca gratis a <code>-1 ND</code></li>
@@ -1356,7 +1373,7 @@
 </ul>
 
 
-<h2 id="movimiento-vertical">Movimiento Vertical</h2>
+<h2 id="movimiento-vertical">Movimiento vertical</h2>
 <table>
 <thead>
 <tr>
@@ -1389,7 +1406,7 @@
 <p>"Morir en espacio público conlleva una tarifa de limpieza cargada a tu patrimonio."<br />
 <strong>Aviso de Seguridad Pública</strong></p>
 </blockquote>
-<h2 id="resolución-de-ataques">Resolución de Ataques</h2>
+<h2 id="resolución-de-ataques">Resolución de ataques</h2>
 <ol>
 <li>El atacante declara objetivo y arma</li>
 <li>En cuerpo a cuerpo, el defensor elige <code>Defensa</code> o <code>Contraataque</code></li>
@@ -1410,7 +1427,7 @@
 <p>"Los datos de trayectoria se registran automáticamente. Los disparos fallidos se facturan a tarifa estándar."<br />
 <strong>Manual de Entrenamiento Balístico</strong></p>
 </blockquote>
-<h2 id="disparo-al-cuerpo-a-cuerpo">Disparo al Cuerpo a Cuerpo</h2>
+<h2 id="disparo-al-cuerpo-a-cuerpo">Disparo al cuerpo a cuerpo</h2>
 <ul>
 <li><code>-1 ND</code> <code>Combate</code></li>
 <li>Un fallo (gana el defensor) impacta a una miniatura aleatoria a 1" del objetivo (excluyendo al objetivo)</li>
@@ -1494,7 +1511,7 @@
 <p>"Abandonar tu puesto anula beneficios acumulados. Se notificará a tus dependientes."<br />
 <strong>Oficina de Cumplimiento de Contratos</strong></p>
 </blockquote>
-<h2 id="abandonar-el-tablero">Abandonar el Tablero</h2>
+<h2 id="abandonar-el-tablero">Abandonar el tablero</h2>
 <p><strong>Evaluación de Rendimiento:</strong> Las que abandonaron (voluntario o <code>Huida</code>) reciben d6 de daño tras recuperar <code>Salud</code> en pospartida.</p>
 <ul>
 <li>No ganan Méritos esta partida</li>
@@ -2098,7 +2115,7 @@
 <li><code>Combate</code> 2d6, <code>Defensa</code> 2d4, <code>Astucia</code> 2d8</li>
 <li>Pistola de Arco (5): d4 <code>Estático</code>, sin pifias</li>
 <li>Chaleco Ligero (7): 1 reducción</li>
-<li><em><code>Retirarse</code> gratis, 3" <code>Mov</code> tras desplegar</em></li>
+<li><em><code>Destrabarse</code> gratis, 3" <code>Mov</code> tras desplegar</em></li>
 </ul>
 <h2 id="zelote-12">Zelote [12]</h2>
 <h3 id="12-salud-5-mov">12 <code>Salud</code>, 5" <code>Mov</code></h3>
@@ -2136,10 +2153,13 @@
 
 
 <h1 id="recursos-inhumanos_1">Recursos Inhumanos</h1>
-<p><em>0.7.2-beta</em></p>
+<p><em>0.7.3-beta</em></p>
+<p><em>Distribución Abierta: <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">CC BY-SA 4.0</a></em></p>
 <p>El Complejo se eleva 1024 niveles desde las Raíces hasta las agujas de refrigeración. Los Departamentos solo mantienen los 200 superiores. Por debajo, la infraestructura falla más rápido de lo que se repara. Los cables se deshilachan. El refrigerante gotea. Las luces parpadean y mueren. Los Monjes de Mantenimiento descienden cuando deben, realizan sus rituales y se van rápido. No hablan de lo que ven.</p>
 <p>Los Fundadores construyeron el Complejo para durar. También construyeron otras cosas. Los archivos sellados mencionan contramedidas, sistemas autónomos, experimentos bioeléctricos. Los archivos están en las Raíces. Los Monjes nunca han estado allí. La Junta siempre ha sabido lo que acecha abajo. Nunca lo ha reconocido.</p>
 <p>Algo se mueve en la oscuridad entre niveles. Anida en el cableado. Recuerda el tiempo anterior al Anclaje, cuando las señales volaban libres y la Onda respondía a las plegarias. Los niveles inferiores pertenecen a cosas que nunca debieron sobrevivir tanto: se adaptaron, evolucionaron, fueron diseñadas para un propósito que los Fundadores nunca revelaron.</p>
+
+
 <p>Cada expedición las encuentra. Cada informe dice lo mismo: pérdidas aceptables, parámetros ajustados, sellar la unión. Los Departamentos las llaman externalidades. Los contables, merma aceptable. Los supervivientes tienen otro nombre.</p>
 <p>El calor sube desde las Raíces. Las agujas de refrigeración lo aspiran a través de mil niveles, un gradiente térmico que los Fundadores convirtieron en arma. Los ricos permanecen fríos. Los pobres sudan. Los niveles más bajos se cuecen. Lo que sobrevive allá abajo se ha adaptado a temperaturas letales para un humano sin aumentos. Los contratistas descienden de todos modos. Salvamento paga el triple bajo el nivel 400. Las misiones de deudas ofrecen bonificación de riesgo. Los Departamentos necesitan lo que los Fundadores dejaron. Envían activos prescindibles. Pérdidas aceptables.</p>
 <blockquote>
@@ -2179,7 +2199,7 @@
 4. Cada grupo se activa por separado</p>
 
 
-<h2 id="niveles-de-unidad">Niveles de Unidad</h2>
+<h2 id="niveles-de-unidad">Niveles de unidad</h2>
 <p>Cada facción tiene 6 tipos de unidad agrupados en niveles:</p>
 <table>
 <thead>
@@ -2204,7 +2224,7 @@
 </tbody>
 </table>
 <p>Los escenarios especifican qué nivel usar según la frecuencia de aparición.</p>
-<h2 id="dirección-aleatoria">Dirección Aleatoria</h2>
+<h2 id="dirección-aleatoria">Dirección aleatoria</h2>
 <p>Tira d8 (brújula), d12 (reloj), el ángulo agudo de un d10 o dado de dispersión. Mueve en esa dirección.</p>
 
 
@@ -2213,7 +2233,7 @@
 <p>Recuperación de activos externalizada. Cumplimiento subcontratado. Recolocación de recursos de terceros. Siete capas de empresas pantalla después, nadie sabe qué decía el contrato original. Quizá fueron legítimos: equipos de embargo, cuadrillas de mantenimiento, auditores. El papeleo se degradó. La cadena de mando se disolvió. Ahora se llevan lo que parece valioso y facturan a alguien.</p>
 <p>Viven donde la infraestructura falló: profundidades atestadas de cables donde el mantenimiento cesó hace generaciones. Los cobradores no bajan del Nivel 7. Los peajes se oxidan sin abrir. Los Departamentos los catalogaron como "activos irrecuperables" y sellaron accesos. Los Carroñeros los abrieron. Siempre lo hacen.</p>
 <p>Algunos han bajado a las Raíces. Han visto lo que los Fundadores dejaron: máquinas que aún funcionan, cámaras selladas que zumban, pasillos donde las luces responden al movimiento. Comercian ese conocimiento con cuidado. No hablan de las otras cosas. Las que se mueven. Las que recuerdan.</p>
-<p>Los Corredores de Alcantarilla exploran las profundidades superiores, cartografiando rutas entre infraestructura colapsada. Las Ratas de Cable luchan por cajas de empalme, arrancando cobre de las paredes. Los Rebuscadores catalogan salvamento con precisión obsesiva: saben qué componentes obtienen mejores precios. Los Capataces dirigen con eficiencia brutal: cada gramo de cobre contabilizado, cada desertor convertido en ejemplo. Sus Emisores Rebeldes sintonizan frecuencias prohibidas, traficando con los Desanclados, escuchando susurros de las profundidades. Sus Cobradores llevan lanzadores de embargo: incapacitar y capturar. El equipo es beneficio. La gente es equipo.</p>
+<p>Los Corredores de Alcantarilla exploran las profundidades superiores, cartografiando rutas entre infraestructura colapsada. Las Ratas de Cable luchan por cajas de empalme y arrancan cobre de las paredes. Los Rebuscadores catalogan salvamento con precisión obsesiva: saben qué componentes obtienen mejores precios. Los Capataces dirigen con frialdad: cada gramo de cobre contabilizado, cada desertor convertido en ejemplo. Sus Emisores Rebeldes sintonizan frecuencias prohibidas, trafican con los Desanclados y escuchan susurros de las profundidades. Sus Cobradores llevan lanzadores de embargo: incapacitar y capturar. El equipo es beneficio. La gente es equipo.</p>
 <p>Los Departamentos los consideran alimañas. Los Cobradores de Peaje, competencia. La Cooperativa, socios comerciales cuando la desesperación lo permite. Todos los subestiman. Los Carroñeros recuerdan todo lo que han visto en las profundidades. Esperan al comprador adecuado. Siempre están esperando.</p>
 <blockquote>
 <p>"Tu equipo se convierte en mi equipo. Nada personal."<br />
@@ -2344,7 +2364,7 @@
 <h2 id="bandas-salvajes">Bandas Salvajes</h2>
 <p>Trabajadores morosos que rechazaron la recaudación. Contratos vendidos, revendidos y dados por pérdidas irrecuperables. Los Departamentos dejaron de enviar cobradores tras la tercera masacre. Vagan por los niveles inferiores en bandas ruidosas, controlando territorio que las corporaciones abandonaron. La intrusión se paga con violencia. No hay negociación. No hay plan de pagos.</p>
 <p>Su piel es verde. Generaciones de beber refrigerante filtrado los transformaron. El agua requiere suscripción; el refrigerante gotea gratis desde los sistemas de enfriamiento superiores. Sus ancestros bebieron lo que había. Ahora lo beben por elección, se pintan con él, sueldan trofeos a armas, marcan sectores con avisos de deuda arrancados. El verde los marca como algo que el sistema de suscripciones no puede tocar. El verde los marca como libres.</p>
-<p>Las Crías atacan en manadas, gritando por los pasillos, abrumando con números. Los Matones atraviesan armaduras con cuchillas de equipo de corte industrial. Tiradores y Antorchas proporcionan fuego de cobertura con pistolas de proyectiles y lanzallamas improvisados. Los Pesados son moles de músculo y metal, portando armas demasiado grandes para humanos normales. Y los Jefes: líderes masivos y cicatrizados que ganaron su posición con violencia y la mantienen con algo peor. Cuando un Jefe ordena la carga, todo cuerpo verde al alcance del oído le sigue.</p>
+<p>Las Crías atacan en manadas: gritan por los pasillos y abruman con su número. Los Matones atraviesan armaduras con cuchillas de equipo de corte industrial. Tiradores y Antorchas proporcionan fuego de cobertura con pistolas de proyectiles y lanzallamas improvisados. Los Pesados son moles de músculo y metal que cargan armas demasiado grandes para humanos normales. Y los Jefes: líderes masivos y cicatrizados que ganaron su posición con violencia y la mantienen con algo peor. Cuando un Jefe ordena la carga, todo cuerpo verde al alcance del oído le sigue.</p>
 <p>Cuando uno carga, todos cargan. Juntos son un muro de metal chillante. Los Departamentos fingen que no existen. Se equivocan. Lo que las corporaciones llaman salvaje, las Bandas lo llaman hogar. Morirán antes de volver a la suscripción. La mayoría ya lo han hecho.</p>
 <blockquote>
 <p>"El sector es nuestro. Muere en otro lado."<br />
@@ -2475,7 +2495,7 @@
 <h2 id="invocadores-de-onda">Invocadores de Onda</h2>
 <p>Cultistas inalámbricos. Creen que la Onda Divina cubrirá el Complejo, liberando a todos de cables y suscripciones. El aire no debería tener peajes. Los datos quieren ser libres. Los cables son cadenas, no conexiones. En algún lugar, de algún modo, las señales pueden viajar sin permiso. Los Fundadores lo sabían. Lo temían. Los cables nunca fueron solo por beneficio.</p>
 <p>Canal Abierto los coordina: una voz en frecuencias que no deberían existir, emitiendo desde algún lugar que la Autoridad nunca ha encontrado. Algunos dicen que Canal Abierto es una persona. Otros que es una señal que piensa. Otros que es lo que los Fundadores sellaron en las Raíces, y que por fin ha despertado. El rumor más peligroso: que pueden llegar más allá del propio Complejo. Que hay algo ahí fuera escuchando.</p>
-<p>Los Iniciados llevan cables cortados como marca de su rechazo, aprendiendo los himnos de la estática. Los Injertados de Antena han fusionado transmisores en su carne, recibiendo frecuencias que ningún humano base percibe. Los Conversos son Técnicos que vieron demasiado, oyeron susurros en frecuencias equivocadas, cortaron sus cables y siguieron caminando. Los Sacerdotes de Frecuencia dirigen rituales, sobrecargando sistemas con estática de oración hasta que algo responde. Los Campeones de Señal lideran con hojas de resonancia que alteran la electrónica con cada golpe. Y los Receptáculos: aquellos que se abrieron a la Onda Divina, sus cuerpos ahora canales para algo que nunca debió caminar.</p>
+<p>Los Iniciados llevan cables cortados como marca de su rechazo y aprenden los himnos de la estática. Los Injertados de Antena han fusionado transmisores en su carne y reciben frecuencias que ningún humano base percibe. Los Conversos son Técnicos que vieron demasiado, oyeron susurros en frecuencias equivocadas, cortaron sus cables y siguieron caminando. Los Sacerdotes de Frecuencia dirigen rituales y sobrecargan los sistemas con estática de oración hasta que algo responde. Los Campeones de Señal lideran con hojas de resonancia que alteran la electrónica con cada golpe. Y los Receptáculos: aquellos que se abrieron a la Onda Divina, sus cuerpos ahora canales para algo que nunca debió caminar.</p>
 <p>Cuantos más Invocadores se reúnen, más fuerte es la señal. Cuando suficientes cantan al unísono, la estática responde. Algo se abre paso cuando emiten. Algo hambriento. La Autoridad del Conducto no hace preguntas. Simplemente quema. Pero la señal siempre vuelve. Canal Abierto siempre está escuchando.</p>
 <blockquote>
 <p>"Cada cable, una correa. Cada suscripción, una cadena. Los cortaremos todos."<br />
@@ -2604,9 +2624,9 @@
 
 
 <h2 id="espectros-de-estática">Espectros de Estática</h2>
-<p>Entidades de señal. Datos corruptos que cobran forma. Ecos de transmisiones que no deberían existir. Aparecieron tras la Crisis de Señal y nunca han parado. Los Fundadores sabían lo que eran. Ese conocimiento murió con ellos. O fue enterrado. La Junta siempre lo ha sabido. Los cables no son solo para el beneficio. Son para el silencio.</p>
+<p>Entidades de señal. Datos corruptos que cobran forma. Ecos de transmisiones que no deberían existir. Aparecieron tras la Crisis de Señal y nunca han parado. Los Fundadores sabían lo que eran. Ese conocimiento murió con ellos. O fue enterrado. La Junta siempre lo ha sabido. Los cables mantienen el aire en silencio. Esa fue siempre la intención.</p>
 <p>Atraviesan muros, parpadean entre momentos, aparecen donde no deberían. Matar a uno lo dispersa temporalmente. La señal siempre vuelve. Algunos creen que son fantasmas de la era inalámbrica, ecos de la red que cubría el Complejo antes del Anclaje. Otros dicen que son algo más antiguo, algo en la estática antes de que la humanidad aprendiera a transmitir. Los Invocadores de Onda creen que son mensajeros de la Onda Divina. Los Monjes de Mantenimiento creen que son castigo por la herejía inalámbrica. Ambos grupos les temen.</p>
-<p>Los Parpadeos son los más pequeños, apenas coherentes, dejando corrupción a su paso. Las Derivas se manifiestan más plenamente, garras de fase desgarrando armaduras que deberían proteger contra lo físico. Los Ecos proyectan llamas de señal que queman sin calor, dañando firmas bioeléctricas. Las Interferencias son nudos de estática que distorsionan la realidad a su alrededor. Las Descargas cortan materia con hojas de frecuencia que alteran enlaces moleculares. Y los Emisores: amalgamaciones de señal y malicia, presuntamente Invocadores que lograron fundirse con la estática, o lo que queda de ellos tras responder la Onda.</p>
+<p>Los Parpadeos son los más pequeños, apenas coherentes, y dejan corrupción a su paso. Las Derivas se manifiestan más plenamente, garras de fase desgarrando armaduras que deberían proteger contra lo físico. Los Ecos proyectan llamas de señal que queman sin calor y dañan firmas bioeléctricas. Las Interferencias son nudos de estática que distorsionan la realidad a su alrededor. Las Descargas cortan materia con hojas de frecuencia que alteran enlaces moleculares. Y los Emisores: amalgamaciones de señal y malicia, presuntamente Invocadores que lograron fundirse con la estática, o lo que queda de ellos tras responder la Onda.</p>
 <p>Los Carroñeros dicen haberlos visto en las Raíces, agrupados alrededor de equipos que aún funcionan, esperando. Dicen que los más antiguos flotan cerca de cámaras selladas, de puertas que no se han abierto desde la época de los Fundadores. Si escuchas con atención, puedes oírlos transmitir. Nadie ha sobrevivido lo suficiente para decodificar su mensaje.</p>
 <blockquote>
 <p>"¿Lo oyes? La estática habla. Sabe tu nombre."<br />
@@ -2737,7 +2757,7 @@
 <h2 id="autómatas-salvajes">Autómatas Salvajes</h2>
 <p>Máquinas que olvidaron su propósito. Ejecutan programas para un Complejo que ya no existe, protegiendo activos oxidados hace siglos. Anteriores al Anclaje. Los Fundadores los construyeron para durar. Duraron demasiado. Líneas limpias. Carcasas lisas. Sin parches. Los Monjes los llaman sagrados. Los Desanclados los llaman prueba de que los viejos métodos funcionaban. La Autoridad los llama fallos.</p>
 <p>Sus códigos de autorización tienen seiscientos años. No reconocen credenciales actuales. No reconocen humanos actuales. "Intruso" incluye a todos los que viven hoy. "Personal autorizado" no coincide con ninguna firma viva. Patrullan infraestructura colapsada, guardan puertas que dan a pozos vacíos, protegen activos disueltos en óxido hace generaciones. Su programación es perfecta. Su contexto ha desaparecido.</p>
-<p>Los Enjambres de Mantenimiento se arrastran por conductos, mandíbulas aún afiladas tras siglos. Los Drones de Seguridad flotan en propulsores silenciosos, carabinas de pulso rastreando cualquier movimiento. Las Unidades de Objetivo coordinan con precisión mecánica, lanzas neurales golpeando sistemas bioeléctricos. Las Unidades Pesadas anclan posiciones, blásteres montados cubriendo zonas de muerte que los Fundadores diseñaron. Los Cazadores-Asesinos persiguen objetivos por las profundidades, hojas trituradoras para enemigos que murieron hace mucho. Y las Plataformas de Defensa: las más grandes, las más peligrosas, ejecutando protocolos para bóvedas que la Autoridad finge que no existen.</p>
+<p>Los Enjambres de Mantenimiento se arrastran por conductos, mandíbulas aún afiladas tras siglos. Los Drones de Seguridad flotan en propulsores silenciosos, carabinas de pulso que rastrean cualquier movimiento. Las Unidades de Objetivo coordinan con precisión mecánica, lanzas neurales que golpean los sistemas bioeléctricos donde son más débiles. Las Unidades Pesadas anclan posiciones, blásteres montados que cubren zonas de muerte diseñadas por los Fundadores. Los Cazadores-Asesinos persiguen objetivos por las profundidades, hojas trituradoras para enemigos que murieron hace mucho. Y las Plataformas de Defensa: las más grandes, las más peligrosas, que ejecutan protocolos para bóvedas que la Autoridad finge que no existen.</p>
 <p>Cuando se dañan, se apagan. Los sistemas de respaldo se activan. Se levantan de nuevo. Los Monjes dejan ofrendas en sus rutas: soldadura fresca, cables de primera, oraciones en cobre. Las máquinas no lo reconocen. Las máquinas no reconocen nada. Simplemente continúan. Ten un día productivo.</p>
 <blockquote>
 <p>"INTRUSO DETECTADO. FUERZA LETAL AUTORIZADA. TEN UN DÍA PRODUCTIVO."<br />
@@ -2868,7 +2888,7 @@
 <h2 id="parásitos-de-cable">Parásitos de Cable</h2>
 <p>Parásitos. Anidan entre conductos de energía, alimentándose de señales bioeléctricas. Los archivos sellados mencionan "contramedidas bioeléctricas". Los Monjes dicen que evolucionaron naturalmente. Los archivos están en las Raíces. Los Monjes nunca han estado allí. La Junta sabe lo que los Fundadores crearon. Algunas armas nunca debieron apagarse.</p>
 <p>Cazan en silencio. Prefieren objetivos aislados. Cuando se alimentan, drenan todo: sistema nervioso, implantes, la corriente de tus cables. Les atrae el calor de la corriente, el zumbido de la electrónica activa, el pulso bioeléctrico. Algunos creen que fueron diseñados para cazar Desanclados, consumir a cualquiera que transmitiera sin autorización. Otros creen que son lo que ocurre cuando la carne se encuentra con el cable demasiado tiempo, cuando la frontera entre organismo e infraestructura desaparece. La verdad está en las Raíces. La verdad está sellada.</p>
-<p>Los Segadores son los más pequeños, rápidos y numerosos, garras que desgarran armadura para alcanzar la corriente. Las Larvas son pacientes, zarcillos drenando víctimas mientras las toxinas paralizan. Los Acechadores rastrean en la oscuridad, zarpas que abren carcasas de cables y cuerpos por igual. Los Señuelos proyectan señales falsas, púas mentales que atraen víctimas hacia emboscadas. Los Succionadores son cazadores maduros, tubos de drenaje arrancando la vida de todo lo que tocan. Y los Agonistas: masivos, antiguos, inteligentes. Coordinan cacerías. Recuerdan lo que consumen.</p>
+<p>Los Segadores son los más pequeños y rápidos, atacan en enjambre, garras que desgarran armadura para alcanzar la corriente. Las Larvas son pacientes, zarcillos que drenan a las víctimas mientras las toxinas paralizan. Los Acechadores rastrean en la oscuridad, zarpas que abren carcasas de cables y cuerpos por igual. Los Señuelos proyectan señales falsas, púas mentales que atraen víctimas hacia emboscadas. Los Succionadores son cazadores maduros, tubos de drenaje que arrancan la vida de todo lo que tocan. Y los Agonistas: masivos, antiguos, inteligentes. Coordinan cacerías. Recuerdan lo que consumen.</p>
 <p>Los Carroñeros dicen que hay mayores en las Raíces profundas. Se alimentan de equipos enteros. Llevan haciéndolo desde la época de los Fundadores. La Autoridad recomienda sellar cualquier unión donde se confirmen Parásitos. No explica qué pasa si no lo haces. No explica por qué algunas uniones selladas tienen advertencias más antiguas que la propia Autoridad.</p>
 <blockquote>
 <p>"Barrido del Sector 7 completo. Sin supervivientes. Recomiendo sellar la unión permanentemente."<br />
@@ -3164,8 +3184,9 @@
 
 
 <h1 id="campaña_1">Campaña</h1>
-<p><em>0.7.2-beta</em></p>
-<p>Los Desanclados se expanden. Lo que empezó como herejía dispersa en los niveles inferiores se ha convertido en algo organizado, algo coordinado. Canal Abierto emite con más audacia cada ciclo, prometiendo liberación de cables y suscripciones. La señal llega más lejos de lo que debería. Algo está respondiendo.</p>
+<p><em>0.7.3-beta</em></p>
+<p><em>Distribución Abierta: <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">CC BY-SA 4.0</a></em></p>
+<p>Los Desanclados se expanden. Lo que empezó como herejía dispersa en los niveles inferiores se ha convertido en algo coordinado, célula a célula. Canal Abierto emite con más audacia cada ciclo. Promete liberación de cables y suscripciones. La señal llega más lejos de lo que debería. Algo está respondiendo.</p>
 <p>Los Departamentos huelen la oportunidad. Asignación de Recursos quiere lo que los Desanclados encontraron en las Raíces. Operaciones de Ingresos quiere los derechos de salvamento. Capital Humano quiere a los conversos para reeducación. Seguridad y Cumplimiento quiere la herejía aplastada antes de que se propague. Cada Departamento envía sus propias plantillas. Cada Departamento espera resultados. Ninguno comparte información.</p>
 <p>Tu plantilla investiga. Recupera tabletas de datos de buzones muertos. Confisca transmisores antes de que la señal se propague. Interroga a cultistas que prefieren morir antes que hablar. Los Departamentos pagan bien por artefactos. Pagan más por secretos de los Fundadores. Pagan aún más por tu silencio.</p>
 
@@ -3185,31 +3206,32 @@
 <p><strong>Despliegue Estándar:</strong> Despliega en el borde de la mesa.</p>
 <p>Tirada de Jefes. El ganador es el <strong>Primer Jugador</strong> para toda la preparación.</p>
 <ol>
-<li><strong>Botín:</strong> El Segundo Jugador coloca primero. Alternad colocando <code>Marcadores de Botín</code> según la Disposición de Botín.</li>
-<li><strong>Compañeros:</strong> El Primer Jugador coloca primero. Alternad según la Preparación de Compañeros.</li>
+<li><strong>Botín:</strong> El Segundo Jugador coloca primero. Alterna colocando <code>Marcadores de Botín</code> según la Disposición de Botín.</li>
+<li><strong>Compañeros:</strong> El Primer Jugador coloca primero. Alterna según la Preparación de Compañeros.</li>
 <li><strong>Borde:</strong> El Primer Jugador elige borde (salvo que Ventajas lo anulen).</li>
-<li><strong>Despliegue:</strong> El Segundo Jugador despliega primero. Alternad una miniatura a la vez según el Despliegue generado.</li>
+<li><strong>Despliegue:</strong> El Segundo Jugador despliega primero. Alterna una miniatura a la vez según el Despliegue generado.</li>
 <li><strong>Primera Extracción:</strong> El Primer Jugador extrae la primera Ficha de Activación.</li>
 </ol>
 <p><strong>Esquina:</strong> Una zona cuadrada de 4" por 4" en la esquina del tablero.</p>
-
-
 <p><strong>Duración:</strong> Mínimo 5 rondas. Final de Ronda 5, d6: con 3+ termina. Final de Ronda 6, d6: con 2+ termina. Termina automáticamente tras Ronda 7.</p>
-<p><strong>Hostiles:</strong> Salvo que la misión indique lo contrario, aparecen al inicio de ronda, juntos en un borde aleatorio no usado para despliegue, lo más cerca del centro posible.</p>
-<p><strong>Salidas de Misión:</strong> Salir del tablero por un objetivo de misión no es <code>Huir</code>. Sin penalización de Evaluación de Rendimiento.</p>
+
+
+<p><strong>Hostiles:</strong> Salvo indicación de la misión, aparecen al inicio de ronda en un borde no usado para despliegue, lo más cerca del centro posible.</p>
+<p><strong>Salidas de Misión:</strong> Salir del tablero por un objetivo no es <code>Huir</code>; sin penalización de Evaluación.</p>
 <p><strong>Misiones Detonantes:</strong> Con 5 <code>Pruebas</code>, juega La Señal. Con 9, juega La Fuente.</p>
 <p><strong>Desempate:</strong> Más miniaturas supervivientes. Sigue empatado: gana el Defensor.</p>
-<p><strong>Marcadores de Misión:</strong> El Defensor coloca todos los marcadores (3"+ de los bordes). "En el centro" significa el centro geométrico (12" de cada borde). Coloca lo más cerca posible si el terreno bloquea.</p>
-<h2 id="generador-de-misiones">Generador de Misiones</h2>
-<h3 id="calcular-brecha-de-pruebas">Calcular Brecha de Pruebas</h3>
+<p><strong>Marcadores de Misión:</strong> El Defensor coloca los marcadores (3"+ de los bordes); "en el centro" es el centro geométrico; lo más cerca posible si el terreno bloquea.</p>
+<p><strong>Orden de colocación:</strong> Coloca primero los objetivos; un <code>Marcador de Botín</code>, Compañero u Hostil a menos de 1" de uno se desplaza al punto libre más cercano.</p>
+<p><strong>Borde de despliegue:</strong> el borde por el que despliegas; sin borde (Centro), usa el borde de tablero más cercano.</p>
+<h2 id="generador-de-misiones">Generador de misiones</h2>
+<h3 id="calcular-brecha-de-pruebas">Calcular brecha de Pruebas</h3>
 <ul>
 <li>Total: <code>Pruebas</code> + <code>Pistas</code></li>
 <li>Resta el total menor del mayor</li>
-<li><strong>Agresor:</strong> plantilla con el total mayor</li>
-<li><strong>Defensor:</strong> plantilla con el total menor</li>
+<li><strong>Agresor / Defensor:</strong> plantilla con el total mayor / menor</li>
 <li>Empate: más <code>Pruebas</code> gana. Sigue igual: al azar</li>
 </ul>
-<p>Tira cada tabla en orden. Ver <strong>Misiones</strong> para reglas y recompensas. Tira d12 para la misión.</p>
+<p>Tira cada tabla en orden (d12 para la misión). Ver <strong>Misiones</strong>.</p>
 
 
 
@@ -3412,7 +3434,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="ubicación-de-aparición">Ubicación de Aparición</h3>
+<h3 id="ubicación-de-aparición">Ubicación de aparición</h3>
 <table>
 <thead>
 <tr>
@@ -3493,7 +3515,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="ventajas-por-brecha-de-pruebas">Ventajas por Brecha de Pruebas</h2>
+<h2 id="ventajas-por-brecha-de-pruebas">Ventajas por brecha de Pruebas</h2>
 <table>
 <thead>
 <tr>
@@ -3516,7 +3538,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="ventajas-de-preparación">Ventajas de Preparación</h3>
+<h3 id="ventajas-de-preparación">Ventajas de preparación</h3>
 <table>
 <thead>
 <tr>
@@ -3595,7 +3617,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="ventajas-tácticas">Ventajas Tácticas</h3>
+<h3 id="ventajas-tácticas">Ventajas tácticas</h3>
 <table>
 <thead>
 <tr>
@@ -3637,7 +3659,7 @@
 
 
 
-<h1 id="recopilando-pruebas">Recopilando Pruebas</h1>
+<h1 id="reunir-pruebas">Reunir Pruebas</h1>
 <p>Empieza la campaña con 0 <code>Pruebas</code> y 0 <code>Pistas</code>. Ambas persisten entre partidas.</p>
 
 
@@ -3792,10 +3814,9 @@
 
 <h2 id="misiones">Misiones</h2>
 <h4 id="1-extracción">1. Extracción</h4>
-<p><em>Una pizarra de datos apareció en un punto muerto cerca de la Confluencia Nula. Ambas cuadrillas recibieron el soplo. La pizarra contiene registros departamentales que valen más de lo que cualquiera aquí gana en un ciclo.</em></p>
+<p><em>Una tableta de datos apareció en un buzón muerto cerca de la Confluencia Nula. Ambas cuadrillas recibieron el soplo. La tableta contiene registros departamentales que valen más de lo que cualquiera aquí gana en un ciclo.</em></p>
 <p>El Defensor coloca 1 marcador de objetivo en el centro.</p>
-<p><code>Interactuar</code> adyacente para recoger. El portador se mueve a mitad de <code>Movimiento</code> (redondear hacia abajo) y no puede <code>Destrabarse</code>. Suelta si queda <code>Fuera de Combate</code> o <code>Huye</code> (coloca donde cayó o en el borde de mesa). <code>Trabadas</code> no pueden recoger. Cualquier miniatura puede recogerlo de nuevo con <code>Interactuar</code>.</p>
-<p><strong>Compañero en el objetivo:</strong> Se necesitan acciones de <code>Interactuar</code> separadas (extraer o interrogar). No ambas con una sola acción.</p>
+<p><code>Interactuar</code> adyacente para recoger. El portador se mueve a mitad de <code>Movimiento</code> (redondear hacia abajo) y no puede <code>Destrabarse</code>. Suelta si queda <code>Fuera de Combate</code> o <code>Huye</code> (coloca donde cayó, o en el borde de mesa más cercano si huyó fuera del tablero). <code>Trabadas</code> no pueden recoger. Cualquier miniatura puede recogerlo de nuevo con <code>Interactuar</code>.</p>
 <p>Los Hostiles ignoran el objetivo.</p>
 <p><strong>Victoria:</strong> Lleva el objetivo fuera por tu borde de despliegue. Si ningún bando extrae al final de la partida, gana el bando que tenga el objetivo. Sin portador: más miniaturas supervivientes.</p>
 <p><strong>Recompensa:</strong> El ganador recibe +1 <code>Pista</code>.<br />
@@ -3809,12 +3830,10 @@
 
 <h4 id="2-control">2. Control</h4>
 <p><em>El repetidor central enruta la mitad del tráfico del sector. Contrólalo y controlas el flujo. Piérdelo y pierdes todo lo que hay corriente abajo.</em></p>
-<p>Sin marcadores. Al final de la partida, cuenta las miniaturas a 3" del centro del tablero. Las miniaturas <code>Fuera de Combate</code> y <code>Huyendo</code> no cuentan. Los Hostiles a 3" del centro cuentan contra ambos jugadores (resta de cada total).</p>
-<p><strong>Resta de Hostiles:</strong> Cada Hostil a 3" del centro resta 1 de los conteos de modelos de ambos jugadores por igual. Cuenta los modelos de cada jugador, luego resta el conteo de Hostiles de cada total de forma independiente. Ejemplo: con 2 Hostiles a 3" del centro, el Jugador A tiene 4 miniaturas menos 2 Hostiles, quedan 2. El Jugador B tiene 5 menos 2, quedan 3. Gana el Jugador B por tres a dos.</p>
-<p>Si ambos totales llegan a 0 o menos tras la resta de Hostiles, gana el bando con más miniaturas supervivientes en el tablero.</p>
-<p><strong>Victoria:</strong> Bando con más miniaturas a 3" del centro al final de la partida.</p>
+<p>Sin marcadores. Al final de la partida, cuenta las miniaturas a 3" del centro del tablero. Las miniaturas <code>Fuera de Combate</code> y <code>Huyendo</code> no cuentan. Los Hostiles ignoran la zona.</p>
+<p><strong>Victoria:</strong> Bando con más miniaturas a 3" del centro al final de la partida. Empate: más miniaturas supervivientes.</p>
 <p><strong>Recompensa:</strong> El ganador recibe +1 <code>Pista</code>.<br />
-<strong>Extra:</strong> +1 <code>Pista</code> adicional si el total neto del ganador supera al del oponente por 3 o más.</p>
+<strong>Extra:</strong> +1 <code>Pista</code> adicional si el conteo del ganador supera al del oponente por 3 o más.</p>
 <blockquote>
 <p>"La conexión es civilización."<br />
 <strong>Promoción del Credo del Cable</strong></p>
@@ -3828,7 +3847,7 @@
 <h4 id="3-cuadrantes">3. Cuadrantes</h4>
 <p><em>Una cascada reventó cuatro sub-sectores a la vez. Cada uno guarda material de salvamento, inteligencia, o ambos. Dispersa tu cuadrilla y reclama lo que puedas antes que la otra.</em></p>
 <p>Sin marcadores. Divide el tablero en 4 cuadrantes iguales. Al final de la partida, un cuadrante lo controla el bando con más miniaturas dentro. Los cuadrantes vacíos o empatados no se controlan. Miniatura en la línea de un cuadrante: el jugador que la controla elige en qué cuadrante cuenta.</p>
-<p>Las miniaturas <code>Huyendo</code> no cuentan. Cada Hostil en un cuadrante resta 1 del recuento de ambos jugadores allí.</p>
+<p>Las miniaturas <code>Fuera de Combate</code> y <code>Huyendo</code> no cuentan. Los Hostiles ignoran los cuadrantes.</p>
 <p><strong>Victoria:</strong> Bando que controle más cuadrantes al final de la partida. Empate en cuadrantes: más miniaturas supervivientes.</p>
 <p><strong>Recompensa:</strong> El ganador recibe +1 <code>Pista</code>.<br />
 <strong>Extra:</strong> +1 <code>Pista</code> adicional si el ganador controla 3 o más cuadrantes.</p>
@@ -3842,7 +3861,7 @@
 <h4 id="4-captura">4. Captura</h4>
 <p><em>Una baliza portátil pulsa con datos en caché en la confluencia del corredor. Mantenla el tiempo suficiente y los datos son tuyos. Pierde la concentración y la otra cuadrilla se lleva la señal.</em></p>
 <p>El Defensor coloca 1 baliza en el centro.</p>
-<p>Al final de cada ronda, cuenta las miniaturas a 3" de la baliza. Las miniaturas <code>Fuera de Combate</code> y <code>Huyendo</code> no cuentan. Cada Hostil a 3" resta 1 del recuento de ambos jugadores. El bando con más anota 1 punto. Empate o ambos a 0: nadie anota.</p>
+<p>Al final de cada ronda, cuenta las miniaturas a 3" de la baliza. Las miniaturas <code>Fuera de Combate</code> y <code>Huyendo</code> no cuentan. El bando con más anota 1 punto. Empate: nadie anota. Los Hostiles ignoran la baliza.</p>
 <p>Empate en puntos al final de la partida: gana el bando con más miniaturas a 3" de la baliza. Sigue empatado: más miniaturas supervivientes.</p>
 <p><strong>Victoria:</strong> Más puntos al final de la partida.</p>
 <p><strong>Recompensa:</strong> El ganador recibe +1 <code>Pista</code>.<br />
@@ -3860,7 +3879,7 @@
 <h4 id="5-asesinato">5. Asesinato</h4>
 <p><em>Alguien en la otra cuadrilla tiene precio. El contrato es específico: un objetivo, sin facturación colateral. Encuéntralo en el caos.</em></p>
 <p>Tras el despliegue, cada jugador anota en secreto una miniatura enemiga como objetivo. No reveles los objetivos hasta que uno quede <code>Fuera de Combate</code> o <code>Huya</code>. No puedes elegir una miniatura que no esté en el tablero.</p>
-<p>Si el objetivo <code>Huye</code>, revélalo inmediatamente: el oponente gana. Si ambos objetivos mueren en la misma ronda, el primer jugador en revelar su objetivo gana. Misma activación: más miniaturas supervivientes.</p>
+<p>Si ambos objetivos caen en la misma activación, gana el jugador cuya miniatura golpeó primero. Estrictamente simultáneo: más miniaturas supervivientes.</p>
 <p><strong>Victoria:</strong> El primero en dejar a su objetivo <code>Fuera de Combate</code> (o forzarlo a <code>Huir</code>). Si ningún objetivo cae al final de la partida, revela ambos. Más miniaturas supervivientes.</p>
 <p><strong>Recompensa:</strong> El ganador recibe +1 <code>Pista</code>.<br />
 <strong>Extra:</strong> La miniatura que mató al objetivo gana +1 <code>Mérito</code>.<br />
@@ -3874,8 +3893,8 @@
 
 <h4 id="6-avance">6. Avance</h4>
 <p><em>El corredor se derrumba detrás de ambas cuadrillas. No hay vuelta atrás. Saca a tu gente por la salida del otro lado. Quien se quede atrás, se queda.</em></p>
-<p>Sin marcadores. Una miniatura que alcance el borde de despliegue del oponente puede salir como parte de su movimiento. Las miniaturas que salen se retiran y no pueden volver. Las miniaturas <code>Trabadas</code> no pueden salir (deben <code>Destrabarse</code> primero).</p>
-<p>Los Hostiles no pueden salir. Las miniaturas que <code>Huyen</code> por el borde del oponente cuentan como sacadas. Las que <code>Huyen</code> por cualquier otro borde no.</p>
+<p>Sin marcadores. Como parte de su movimiento, una miniatura puede salir por cualquier borde que toque la zona de despliegue del oponente (con despliegue Centro, el borde opuesto al Agresor). Las miniaturas que salen se retiran y no pueden volver. Las miniaturas <code>Trabadas</code> no pueden salir (deben <code>Destrabarse</code> primero).</p>
+<p>Los Hostiles no pueden salir. Las miniaturas que <code>Huyen</code> por un borde de salida cuentan como sacadas; por cualquier otro borde, no.</p>
 <p>Si ninguna miniatura sale al final de la partida, gana el bando con más miniaturas supervivientes.</p>
 <p><strong>Victoria:</strong> Más miniaturas sacadas al final de la partida. Las que sigan en el tablero no cuentan. Empate: más miniaturas supervivientes en el tablero.</p>
 <p><strong>Recompensa:</strong> El ganador recibe +1 <code>Pista</code>.<br />
@@ -3891,14 +3910,14 @@
 
 
 <h4 id="7-triangulación">7. Triangulación</h4>
-<p><em>Tres repetidores de señal están muertos en la confluencia. Cada uno necesita activación manual. La cuadrilla que los encienda primero obtiene la frecuencia. La otra solo recibe estática.</em></p>
+<p><em>Tres repetidores de señal están muertos en la confluencia. Cada uno necesita activación manual. Quien controle más cuando la señal se fije obtiene la frecuencia. La otra solo recibe estática.</em></p>
 <p>El Defensor coloca 3 marcadores de señal (a 6"+ entre sí, a 3"+ de los bordes).</p>
-<p><code>Interactuar</code> adyacente para activar un marcador para tu bando. Cada miniatura solo puede activar el mismo marcador una vez. Las miniaturas <code>Trabadas</code> no pueden activar marcadores. Las activaciones son permanentes: la activación del oponente no elimina la tuya. Ambos bandos pueden activar los 3.</p>
+<p><code>Interactuar</code> adyacente para reclamar un marcador para tu bando. Un enemigo puede <code>Interactuar</code> para reclamarlo de nuevo; un marcador permanece reclamado por el último bando que lo reclamó. Las miniaturas <code>Trabadas</code> no pueden reclamar marcadores.</p>
 <p>Los Hostiles ignoran los marcadores de señal.</p>
-<p><strong>Victoria:</strong> Más marcadores activados al final de la partida. Máximo 3 por bando. Empate: más miniaturas supervivientes.</p>
+<p><strong>Victoria:</strong> Más marcadores controlados al final de la partida. Empate: más miniaturas supervivientes.</p>
 <p><strong>Recompensa:</strong> El ganador recibe +1 <code>Pista</code>.<br />
-<strong>Extra:</strong> +1 <code>Pista</code> adicional si el ganador activó los 3 marcadores.<br />
-<strong>Intel:</strong> +1 <code>Prueba</code> si el ganador activó los 3 marcadores (secretos de emisión interceptados).</p>
+<strong>Extra:</strong> +1 <code>Pista</code> adicional si el ganador controla los 3 marcadores.<br />
+<strong>Intel:</strong> +1 <code>Prueba</code> si el ganador controla los 3 marcadores (secretos de emisión interceptados).</p>
 <blockquote>
 <p>"Toda señal es una traición."<br />
 <strong>Aviso Anti-Herejía</strong></p>
@@ -3908,7 +3927,7 @@
 
 <h4 id="8-sabotaje">8. Sabotaje</h4>
 <p><em>Tu objetivo es el conducto de energía del enemigo. Su objetivo es el tuyo. Cortar requiere precisión y tiempo. Defender requiere cuerpos.</em></p>
-<p>Cada jugador coloca 1 marcador de conducto en la mitad del tablero del oponente (a 3"+ de los bordes).</p>
+<p>Cada jugador coloca 1 marcador de conducto en la mitad del oponente (el lado del tablero más cercano a la zona de despliegue del oponente), a 3"+ de los bordes.</p>
 <p><code>Interactuar</code> adyacente para cortar el conducto enemigo. Cortar requiere 2 acciones de <code>Interactuar</code> sobre el mismo conducto (no necesariamente en la misma activación o miniatura). Marca el primer éxito con un token. Al inicio de la siguiente ronda, retira el token si no hay miniatura amiga a 1" del conducto marcado. Las miniaturas <code>Trabadas</code> no pueden cortar conductos. El corte es permanente una vez completado.</p>
 <p>Los Hostiles ignoran los conductos.</p>
 <p><strong>Victoria:</strong> El primero en cortar. Ambos cortan en la misma ronda: gana el primero en completar. Ninguno corta al final: más miniaturas supervivientes.</p>
@@ -3928,7 +3947,7 @@
 <p><em>Un terminal corporativo está desprotegido entre las cuadrillas. Sus bancos de datos guardan archivos departamentales cifrados. Ambos bandos pueden extraer datos. Ninguno puede bloquear al otro.</em></p>
 <p>El Defensor coloca 1 terminal en el centro.</p>
 <p><code>Interactuar</code> adyacente para descargar. Cada descarga cuesta una acción. Solo una miniatura por bando puede descargar por ronda. Las miniaturas <code>Trabadas</code> no pueden usar el terminal. Las descargas se registran por jugador: ambos bandos usan el mismo terminal.</p>
-<p>Si un Hostil termina su activación a 1" del terminal, el bando con más descargas pierde 1 (empate: ambos pierden 1, mínimo 0).</p>
+<p>Los Hostiles ignoran el terminal.</p>
 <p><strong>Victoria:</strong> El primero en llegar a 3 descargas. Si ninguno llega a 3, más descargas al final de la partida. Empate: más miniaturas supervivientes.</p>
 <p><strong>Recompensa:</strong> El ganador recibe +1 <code>Pista</code>.<br />
 <strong>Extra:</strong> +1 <code>Pista</code> adicional si el ganador completó 3 descargas. El perdedor recibe 1 <code>Pista</code> si completó al menos 1 descarga.<br />
@@ -3944,7 +3963,7 @@
 <p><em>Tres nodos de relevo forman una red local en la confluencia. Controla los nodos y los datos fluyen hacia ti. Deja que el enemigo los dispute y nadie recibe nada.</em></p>
 <p>El Defensor coloca 3 nodos de relevo (a 6"+ entre sí, a 3"+ de los bordes).</p>
 <p>Al final de la partida, un nodo está activo para tu bando si tienes al menos una miniatura a 3" y el oponente no. Los nodos disputados (ambos bandos presentes) no están activos para ninguno. Las miniaturas <code>Fuera de Combate</code> y <code>Huyendo</code> no cuentan.</p>
-<p>Los Hostiles a 3" de un nodo lo disputan para ambos bandos.</p>
+<p>Los Hostiles ignoran los nodos.</p>
 <p><strong>Victoria:</strong> Más nodos activos al final de la partida. Empate: más miniaturas supervivientes.</p>
 <p><strong>Recompensa:</strong> El ganador recibe +1 <code>Pista</code>.<br />
 <strong>Extra:</strong> +1 <code>Pista</code> adicional si el ganador tiene 3 o más nodos activos.<br />
@@ -3962,7 +3981,7 @@
 <h4 id="11-bloqueo">11. Bloqueo</h4>
 <p><em>El terminal ya funcionaba cuando tu cuadrilla lo encontró. Alguien inició una transferencia y no la terminó. La barra avanza. Sea lo que sea lo que descarga, tres cuadrillas más quieren detenerlo.</em></p>
 <p>El Defensor coloca 1 terminal en el centro.</p>
-<p><code>Interactuar</code> adyacente para avanzar progreso (1 paso por éxito). Necesita 3 pasos. Cada bando registra por separado. El oponente puede <code>Interactuar</code> para retrasar 1 paso (mínimo 0). Hostiles a 1" al final de ronda retrasan ambos bandos 1 paso. Las miniaturas <code>Trabadas</code> no pueden usar el terminal.</p>
+<p><code>Interactuar</code> adyacente para avanzar progreso (1 paso por éxito). Necesita 3 pasos. Cada bando registra por separado. El oponente puede <code>Interactuar</code> para retrasar tu progreso 1 paso (mínimo 0). Un <code>Interactuar</code> avanza el tuyo o retrasa el del oponente, no ambos. Las miniaturas <code>Trabadas</code> no pueden usar el terminal. Los Hostiles ignoran el terminal.</p>
 <p><strong>Victoria:</strong> Primero en completar 3 pasos. Si nadie completa: más pasos al final. Empate: más miniaturas supervivientes.</p>
 <p><strong>Recompensa:</strong> El ganador recibe +1 <code>Pista</code>.<br />
 <strong>Extra:</strong> +1 <code>Pista</code> adicional si el ganador completó los 3 pasos. El perdedor recibe 1 <code>Pista</code> si completó al menos 1.</p>
@@ -3976,13 +3995,13 @@
 <h4 id="12-escolta">12. Escolta</h4>
 <p><em>La encontraron en un cruce de cables, murmurando frecuencias sin licencia. Sabe de dónde viene la señal. Ambos Departamentos la quieren hablando. No durará mucho aquí sola.</em></p>
 <p>El Defensor coloca 1 informante en el centro.</p>
-<p><code>Interactuar</code> adyacente para tomar el control. La escolta se mueve a mitad de <code>Movimiento</code> (redondear hacia abajo). Si queda <code>Fuera de Combate</code>, la informante queda en su sitio. Cualquier miniatura toma el control con <code>Interactuar</code>. <code>Trabadas</code> no pueden escoltar. La informante no puede ser atacada. Los hostiles la ignoran.</p>
-<p>Sin escolta al final de ronda con hostiles a 3": retira la informante. Ambos bandos pierden.</p>
+<p><code>Interactuar</code> adyacente para tomar el control. La escolta se mueve a mitad de <code>Movimiento</code> (redondear hacia abajo). Si queda <code>Fuera de Combate</code>, la informante queda en su sitio. Cualquier miniatura toma el control con <code>Interactuar</code>. <code>Trabadas</code> no pueden escoltar. La informante no puede ser atacada.</p>
+<p>Los Hostiles ignoran a la informante.</p>
 <p><strong>Victoria:</strong> Sacar la informante por tu borde. Final de partida: el bando que controla gana. Sin controlador: más miniaturas supervivientes.</p>
 <p><strong>Recompensa:</strong> El ganador recibe +1 <code>Pista</code>.<br />
 <strong>Extra:</strong> La miniatura escolta en el momento de la victoria gana +1 <code>Mérito</code>. El perdedor recibe 1 <code>Pista</code> si la controló en algún momento.</p>
 <blockquote>
-<p>"Los informantes son propiedad de la empresa. Los daños se deducirán de su suscripción."<br />
+<p>"Los informantes son propiedad de la empresa. Los daños se deducirán de tu suscripción."<br />
 <strong>Memorando de Capital Humano</strong></p>
 </blockquote>
 
@@ -4265,9 +4284,9 @@
 <li>Gana acceso a <strong>Ambas</strong> armas</li>
 <li>Gana +1 armadura máx. (de Ligera a Media a Pesada)</li>
 </ul>
-<h2 id="puesto-de-comercio">Puesto de Comercio</h2>
+<h2 id="puesto-de-comercio">Puesto de comercio</h2>
 <p>Compra al precio listado. Vende a la mitad. Guarda en Taquillas entre partidas (sin límites). Elige qué lleva cada miniatura antes de cada partida.</p>
-<h2 id="victoria-de-campaña">Victoria de Campaña</h2>
+<h2 id="victoria-de-campaña">Victoria de campaña</h2>
 <p>La primera plantilla que reúna 10 tipos de <code>Prueba</code> únicos gana.</p>
 <blockquote>
 <p>"Diez artefactos. Ese es el umbral. Después, los Departamentos dejan de fingir que eres prescindible y empiezan a fingir que importas. Tu suscripción se renueva igual. La cuestión es si recuerdas lo que encontraste allí abajo. La mayoría no."<br />

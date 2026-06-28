@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Hardwired 28 - Campaña 0.7.2-beta</title>
-<meta content="Hardwired 28 - Campaña 0.7.2-beta" property="og:title"/>
+<title>Hardwired 28: Campaña 0.7.3-beta</title>
+<meta content="Hardwired 28: Campaña 0.7.3-beta" property="og:title"/>
 <meta content="Juego de escaramuzas cablepunk corporativo" property="og:description"/>
 <meta content="https://hardwired28.luismars.com/img/social.png" property="og:image"/>
 <meta content="https://hardwired28.luismars.com/es/campaign.html" property="og:url"/>
@@ -15,15 +15,16 @@
 <link href="https://hardwired28.luismars.com/campaign.html" hreflang="en" rel="alternate"/>
 <link href="https://hardwired28.luismars.com/es/campaign.html" hreflang="es" rel="alternate"/>
 <link href="https://hardwired28.luismars.com/campaign.html" hreflang="x-default" rel="alternate"/>
-<meta content="Hardwired 28 - Campaña 0.7.2-beta" name="twitter:title"/>
+<meta content="Hardwired 28: Campaña 0.7.3-beta" name="twitter:title"/>
 <meta content="Hardwired 28 es un juego de escaramuzas cablepunk: dirige una escuadra corporativa por una arcologia en ruinas donde la conexion por cable es sagrada y lo inalambrico es herejia." name="twitter:description"/>
 <meta content="https://hardwired28.luismars.com/img/social.png" name="twitter:image"/>
 <link href="../img/favicon.svg" rel="icon" type="image/svg+xml"/>
 <script async="" data-goatcounter="https://hardwired28.goatcounter.com/count" src="//gc.zgo.at/count.js"></script>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet"/>
+<link href="../normalize.css" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&amp;family=Work+Sans:wght@300;400;500;600&amp;family=Montserrat:wght@600;700;800;900&amp;family=PT+Serif:wght@400;700&amp;family=Ubuntu+Mono&amp;display=swap" rel="stylesheet"/>
+<link href="../style-base.css" rel="stylesheet"/>
 <link href="../style.css" rel="stylesheet"/>
 <style>
 /* Override page size to A4 landscape */
@@ -159,24 +160,26 @@
 <a class="app-menu__brand" href="./">Hardwired 28</a>
 <button aria-label="Menú" class="app-menu__toggle" onclick="toggleMenu()" type="button"></button>
 <div class="app-menu__links">
-<a href="rulebook">Reglamento</a>
+<a class="app-menu__cta" href="first-game">Primera Partida</a>
+<a href="rulebook">Reglas</a>
 <div class="app-menu__dropdown">
-<button class="app-menu__dropdown-toggle current">Imprimir</button>
+<button class="app-menu__dropdown-toggle">Imprimir</button>
 <div class="app-menu__submenu">
-<div class="app-menu__nested">
-<span class="app-menu__nested-label">Individuales</span>
-<div class="app-menu__nested-submenu">
+<a href="quick-reference">Referencia Rápida</a>
 <a href="print">Todas las Reglas</a>
 <a href="core-rules">Reglas Básicas</a>
 <a href="inhuman-resources">Recursos Inhumanos</a>
 <a href="campaign">Campaña</a>
 </div>
 </div>
-</div>
-</div>
-<a href="quick-reference">Referencia Rápida</a>
+<div class="app-menu__dropdown">
+<button class="app-menu__dropdown-toggle">Herramientas</button>
+<div class="app-menu__submenu">
 <a href="builder/index">Creador de Plantillas</a>
 <a href="scenario/index">Escenarios</a>
+</div>
+</div>
+<a href="feedback">Comentarios</a>
 <a href="../campaign">English</a>
 </div>
 </div>
@@ -261,9 +264,9 @@
 <li>Gana acceso a <strong>Ambas</strong> armas</li>
 <li>Gana +1 armadura máx. (de Ligera a Media a Pesada)</li>
 </ul>
-<h2 id="puesto-de-comercio">Puesto de Comercio</h2>
+<h2 id="puesto-de-comercio">Puesto de comercio</h2>
 <p>Compra al precio listado. Vende a la mitad. Guarda en Taquillas entre partidas (sin límites). Elige qué lleva cada miniatura antes de cada partida.</p>
-<h2 id="victoria-de-campaña">Victoria de Campaña</h2>
+<h2 id="victoria-de-campaña">Victoria de campaña</h2>
 <p>La primera plantilla que reúna 10 tipos de <code>Prueba</code> únicos gana.</p>
 <blockquote>
 <p>"Diez artefactos. Ese es el umbral. Después, los Departamentos dejan de fingir que eres prescindible y empiezan a fingir que importas. Tu suscripción se renueva igual. La cuestión es si recuerdas lo que encontraste allí abajo. La mayoría no."<br/>
@@ -282,8 +285,9 @@
     <div class="imposed-left"><div class="page page-even" data-page-number="2">
 <div class="two-column">
 <h1 id="campaña_1">Campaña</h1>
-<p><em>0.7.2-beta</em></p>
-<p>Los Desanclados se expanden. Lo que empezó como herejía dispersa en los niveles inferiores se ha convertido en algo organizado, algo coordinado. Canal Abierto emite con más audacia cada ciclo, prometiendo liberación de cables y suscripciones. La señal llega más lejos de lo que debería. Algo está respondiendo.</p>
+<p><em>0.7.3-beta</em></p>
+<p><em>Distribución Abierta: <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">CC BY-SA 4.0</a></em></p>
+<p>Los Desanclados se expanden. Lo que empezó como herejía dispersa en los niveles inferiores se ha convertido en algo coordinado, célula a célula. Canal Abierto emite con más audacia cada ciclo. Promete liberación de cables y suscripciones. La señal llega más lejos de lo que debería. Algo está respondiendo.</p>
 <p>Los Departamentos huelen la oportunidad. Asignación de Recursos quiere lo que los Desanclados encontraron en las Raíces. Operaciones de Ingresos quiere los derechos de salvamento. Capital Humano quiere a los conversos para reeducación. Seguridad y Cumplimiento quiere la herejía aplastada antes de que se propague. Cada Departamento envía sus propias plantillas. Cada Departamento espera resultados. Ninguno comparte información.</p>
 <p>Tu plantilla investiga. Recupera tabletas de datos de buzones muertos. Confisca transmisores antes de que la señal se propague. Interroga a cultistas que prefieren morir antes que hablar. Los Departamentos pagan bien por artefactos. Pagan más por secretos de los Fundadores. Pagan aún más por tu silencio.</p>
 <div class="column-break"></div>
@@ -480,30 +484,31 @@
 <p><strong>Despliegue Estándar:</strong> Despliega en el borde de la mesa.</p>
 <p>Tirada de Jefes. El ganador es el <strong>Primer Jugador</strong> para toda la preparación.</p>
 <ol>
-<li><strong>Botín:</strong> El Segundo Jugador coloca primero. Alternad colocando <code>Marcadores de Botín</code> según la Disposición de Botín.</li>
-<li><strong>Compañeros:</strong> El Primer Jugador coloca primero. Alternad según la Preparación de Compañeros.</li>
+<li><strong>Botín:</strong> El Segundo Jugador coloca primero. Alterna colocando <code>Marcadores de Botín</code> según la Disposición de Botín.</li>
+<li><strong>Compañeros:</strong> El Primer Jugador coloca primero. Alterna según la Preparación de Compañeros.</li>
 <li><strong>Borde:</strong> El Primer Jugador elige borde (salvo que Ventajas lo anulen).</li>
-<li><strong>Despliegue:</strong> El Segundo Jugador despliega primero. Alternad una miniatura a la vez según el Despliegue generado.</li>
+<li><strong>Despliegue:</strong> El Segundo Jugador despliega primero. Alterna una miniatura a la vez según el Despliegue generado.</li>
 <li><strong>Primera Extracción:</strong> El Primer Jugador extrae la primera Ficha de Activación.</li>
 </ol>
 <p><strong>Esquina:</strong> Una zona cuadrada de 4" por 4" en la esquina del tablero.</p>
-<div class="column-break"></div>
 <p><strong>Duración:</strong> Mínimo 5 rondas. Final de Ronda 5, d6: con 3+ termina. Final de Ronda 6, d6: con 2+ termina. Termina automáticamente tras Ronda 7.</p>
-<p><strong>Hostiles:</strong> Salvo que la misión indique lo contrario, aparecen al inicio de ronda, juntos en un borde aleatorio no usado para despliegue, lo más cerca del centro posible.</p>
-<p><strong>Salidas de Misión:</strong> Salir del tablero por un objetivo de misión no es <code>Huir</code>. Sin penalización de Evaluación de Rendimiento.</p>
+<div class="column-break"></div>
+<p><strong>Hostiles:</strong> Salvo indicación de la misión, aparecen al inicio de ronda en un borde no usado para despliegue, lo más cerca del centro posible.</p>
+<p><strong>Salidas de Misión:</strong> Salir del tablero por un objetivo no es <code>Huir</code>; sin penalización de Evaluación.</p>
 <p><strong>Misiones Detonantes:</strong> Con 5 <code>Pruebas</code>, juega La Señal. Con 9, juega La Fuente.</p>
 <p><strong>Desempate:</strong> Más miniaturas supervivientes. Sigue empatado: gana el Defensor.</p>
-<p><strong>Marcadores de Misión:</strong> El Defensor coloca todos los marcadores (3"+ de los bordes). "En el centro" significa el centro geométrico (12" de cada borde). Coloca lo más cerca posible si el terreno bloquea.</p>
-<h2 id="generador-de-misiones">Generador de Misiones</h2>
-<h3 id="calcular-brecha-de-pruebas">Calcular Brecha de Pruebas</h3>
+<p><strong>Marcadores de Misión:</strong> El Defensor coloca los marcadores (3"+ de los bordes); "en el centro" es el centro geométrico; lo más cerca posible si el terreno bloquea.</p>
+<p><strong>Orden de colocación:</strong> Coloca primero los objetivos; un <code>Marcador de Botín</code>, Compañero u Hostil a menos de 1" de uno se desplaza al punto libre más cercano.</p>
+<p><strong>Borde de despliegue:</strong> el borde por el que despliegas; sin borde (Centro), usa el borde de tablero más cercano.</p>
+<h2 id="generador-de-misiones">Generador de misiones</h2>
+<h3 id="calcular-brecha-de-pruebas">Calcular brecha de Pruebas</h3>
 <ul>
 <li>Total: <code>Pruebas</code> + <code>Pistas</code></li>
 <li>Resta el total menor del mayor</li>
-<li><strong>Agresor:</strong> plantilla con el total mayor</li>
-<li><strong>Defensor:</strong> plantilla con el total menor</li>
+<li><strong>Agresor / Defensor:</strong> plantilla con el total mayor / menor</li>
 <li>Empate: más <code>Pruebas</code> gana. Sigue igual: al azar</li>
 </ul>
-<p>Tira cada tabla en orden. Ver <strong>Misiones</strong> para reglas y recompensas. Tira d12 para la misión.</p>
+<p>Tira cada tabla en orden (d12 para la misión). Ver <strong>Misiones</strong>.</p>
 </div>
 </div></div>
 </div>
@@ -707,7 +712,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="ubicación-de-aparición">Ubicación de Aparición</h3>
+<h3 id="ubicación-de-aparición">Ubicación de aparición</h3>
 <table>
 <thead>
 <tr>
@@ -774,7 +779,7 @@
 <h4 id="11-bloqueo">11. Bloqueo</h4>
 <p><em>El terminal ya funcionaba cuando tu cuadrilla lo encontró. Alguien inició una transferencia y no la terminó. La barra avanza. Sea lo que sea lo que descarga, tres cuadrillas más quieren detenerlo.</em></p>
 <p>El Defensor coloca 1 terminal en el centro.</p>
-<p><code>Interactuar</code> adyacente para avanzar progreso (1 paso por éxito). Necesita 3 pasos. Cada bando registra por separado. El oponente puede <code>Interactuar</code> para retrasar 1 paso (mínimo 0). Hostiles a 1" al final de ronda retrasan ambos bandos 1 paso. Las miniaturas <code>Trabadas</code> no pueden usar el terminal.</p>
+<p><code>Interactuar</code> adyacente para avanzar progreso (1 paso por éxito). Necesita 3 pasos. Cada bando registra por separado. El oponente puede <code>Interactuar</code> para retrasar tu progreso 1 paso (mínimo 0). Un <code>Interactuar</code> avanza el tuyo o retrasa el del oponente, no ambos. Las miniaturas <code>Trabadas</code> no pueden usar el terminal. Los Hostiles ignoran el terminal.</p>
 <p><strong>Victoria:</strong> Primero en completar 3 pasos. Si nadie completa: más pasos al final. Empate: más miniaturas supervivientes.</p>
 <p><strong>Recompensa:</strong> El ganador recibe +1 <code>Pista</code>.<br/>
 <strong>Extra:</strong> +1 <code>Pista</code> adicional si el ganador completó los 3 pasos. El perdedor recibe 1 <code>Pista</code> si completó al menos 1.</p>
@@ -786,13 +791,13 @@
 <h4 id="12-escolta">12. Escolta</h4>
 <p><em>La encontraron en un cruce de cables, murmurando frecuencias sin licencia. Sabe de dónde viene la señal. Ambos Departamentos la quieren hablando. No durará mucho aquí sola.</em></p>
 <p>El Defensor coloca 1 informante en el centro.</p>
-<p><code>Interactuar</code> adyacente para tomar el control. La escolta se mueve a mitad de <code>Movimiento</code> (redondear hacia abajo). Si queda <code>Fuera de Combate</code>, la informante queda en su sitio. Cualquier miniatura toma el control con <code>Interactuar</code>. <code>Trabadas</code> no pueden escoltar. La informante no puede ser atacada. Los hostiles la ignoran.</p>
-<p>Sin escolta al final de ronda con hostiles a 3": retira la informante. Ambos bandos pierden.</p>
+<p><code>Interactuar</code> adyacente para tomar el control. La escolta se mueve a mitad de <code>Movimiento</code> (redondear hacia abajo). Si queda <code>Fuera de Combate</code>, la informante queda en su sitio. Cualquier miniatura toma el control con <code>Interactuar</code>. <code>Trabadas</code> no pueden escoltar. La informante no puede ser atacada.</p>
+<p>Los Hostiles ignoran a la informante.</p>
 <p><strong>Victoria:</strong> Sacar la informante por tu borde. Final de partida: el bando que controla gana. Sin controlador: más miniaturas supervivientes.</p>
 <p><strong>Recompensa:</strong> El ganador recibe +1 <code>Pista</code>.<br/>
 <strong>Extra:</strong> La miniatura escolta en el momento de la victoria gana +1 <code>Mérito</code>. El perdedor recibe 1 <code>Pista</code> si la controló en algún momento.</p>
 <blockquote>
-<p>"Los informantes son propiedad de la empresa. Los daños se deducirán de su suscripción."<br/>
+<p>"Los informantes son propiedad de la empresa. Los daños se deducirán de tu suscripción."<br/>
 <strong>Memorando de Capital Humano</strong></p>
 </blockquote>
 </div>
@@ -841,7 +846,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="ventajas-por-brecha-de-pruebas">Ventajas por Brecha de Pruebas</h2>
+<h2 id="ventajas-por-brecha-de-pruebas">Ventajas por brecha de Pruebas</h2>
 <table>
 <thead>
 <tr>
@@ -864,7 +869,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="ventajas-de-preparación">Ventajas de Preparación</h3>
+<h3 id="ventajas-de-preparación">Ventajas de preparación</h3>
 <table>
 <thead>
 <tr>
@@ -942,7 +947,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="ventajas-tácticas">Ventajas Tácticas</h3>
+<h3 id="ventajas-tácticas">Ventajas tácticas</h3>
 <table>
 <thead>
 <tr>
@@ -987,7 +992,7 @@
 <div class="sheet" data-sheet="3" data-side="back">
     <div class="imposed-left"><div class="page page-even" data-page-number="6">
 <div class="two-column">
-<h1 id="recopilando-pruebas">Recopilando Pruebas</h1>
+<h1 id="reunir-pruebas">Reunir Pruebas</h1>
 <p>Empieza la campaña con 0 <code>Pruebas</code> y 0 <code>Pistas</code>. Ambas persisten entre partidas.</p>
 <h2 id="buscar">Buscar</h2>
 <p>A 1" de un <code>Marcador de Botín</code>. Tira <code>Astucia</code> vs. 2d6. Éxito: retira el marcador.</p>
@@ -1139,7 +1144,7 @@
 <p><em>Un terminal corporativo está desprotegido entre las cuadrillas. Sus bancos de datos guardan archivos departamentales cifrados. Ambos bandos pueden extraer datos. Ninguno puede bloquear al otro.</em></p>
 <p>El Defensor coloca 1 terminal en el centro.</p>
 <p><code>Interactuar</code> adyacente para descargar. Cada descarga cuesta una acción. Solo una miniatura por bando puede descargar por ronda. Las miniaturas <code>Trabadas</code> no pueden usar el terminal. Las descargas se registran por jugador: ambos bandos usan el mismo terminal.</p>
-<p>Si un Hostil termina su activación a 1" del terminal, el bando con más descargas pierde 1 (empate: ambos pierden 1, mínimo 0).</p>
+<p>Los Hostiles ignoran el terminal.</p>
 <p><strong>Victoria:</strong> El primero en llegar a 3 descargas. Si ninguno llega a 3, más descargas al final de la partida. Empate: más miniaturas supervivientes.</p>
 <p><strong>Recompensa:</strong> El ganador recibe +1 <code>Pista</code>.<br/>
 <strong>Extra:</strong> +1 <code>Pista</code> adicional si el ganador completó 3 descargas. El perdedor recibe 1 <code>Pista</code> si completó al menos 1 descarga.<br/>
@@ -1153,7 +1158,7 @@
 <p><em>Tres nodos de relevo forman una red local en la confluencia. Controla los nodos y los datos fluyen hacia ti. Deja que el enemigo los dispute y nadie recibe nada.</em></p>
 <p>El Defensor coloca 3 nodos de relevo (a 6"+ entre sí, a 3"+ de los bordes).</p>
 <p>Al final de la partida, un nodo está activo para tu bando si tienes al menos una miniatura a 3" y el oponente no. Los nodos disputados (ambos bandos presentes) no están activos para ninguno. Las miniaturas <code>Fuera de Combate</code> y <code>Huyendo</code> no cuentan.</p>
-<p>Los Hostiles a 3" de un nodo lo disputan para ambos bandos.</p>
+<p>Los Hostiles ignoran los nodos.</p>
 <p><strong>Victoria:</strong> Más nodos activos al final de la partida. Empate: más miniaturas supervivientes.</p>
 <p><strong>Recompensa:</strong> El ganador recibe +1 <code>Pista</code>.<br/>
 <strong>Extra:</strong> +1 <code>Pista</code> adicional si el ganador tiene 3 o más nodos activos.<br/>
@@ -1169,14 +1174,14 @@
     <div class="imposed-left"><div class="page page-even" data-page-number="10">
 <div class="two-column">
 <h4 id="7-triangulación">7. Triangulación</h4>
-<p><em>Tres repetidores de señal están muertos en la confluencia. Cada uno necesita activación manual. La cuadrilla que los encienda primero obtiene la frecuencia. La otra solo recibe estática.</em></p>
+<p><em>Tres repetidores de señal están muertos en la confluencia. Cada uno necesita activación manual. Quien controle más cuando la señal se fije obtiene la frecuencia. La otra solo recibe estática.</em></p>
 <p>El Defensor coloca 3 marcadores de señal (a 6"+ entre sí, a 3"+ de los bordes).</p>
-<p><code>Interactuar</code> adyacente para activar un marcador para tu bando. Cada miniatura solo puede activar el mismo marcador una vez. Las miniaturas <code>Trabadas</code> no pueden activar marcadores. Las activaciones son permanentes: la activación del oponente no elimina la tuya. Ambos bandos pueden activar los 3.</p>
+<p><code>Interactuar</code> adyacente para reclamar un marcador para tu bando. Un enemigo puede <code>Interactuar</code> para reclamarlo de nuevo; un marcador permanece reclamado por el último bando que lo reclamó. Las miniaturas <code>Trabadas</code> no pueden reclamar marcadores.</p>
 <p>Los Hostiles ignoran los marcadores de señal.</p>
-<p><strong>Victoria:</strong> Más marcadores activados al final de la partida. Máximo 3 por bando. Empate: más miniaturas supervivientes.</p>
+<p><strong>Victoria:</strong> Más marcadores controlados al final de la partida. Empate: más miniaturas supervivientes.</p>
 <p><strong>Recompensa:</strong> El ganador recibe +1 <code>Pista</code>.<br/>
-<strong>Extra:</strong> +1 <code>Pista</code> adicional si el ganador activó los 3 marcadores.<br/>
-<strong>Intel:</strong> +1 <code>Prueba</code> si el ganador activó los 3 marcadores (secretos de emisión interceptados).</p>
+<strong>Extra:</strong> +1 <code>Pista</code> adicional si el ganador controla los 3 marcadores.<br/>
+<strong>Intel:</strong> +1 <code>Prueba</code> si el ganador controla los 3 marcadores (secretos de emisión interceptados).</p>
 <blockquote>
 <p>"Toda señal es una traición."<br/>
 <strong>Aviso Anti-Herejía</strong></p>
@@ -1184,7 +1189,7 @@
 <div class="column-break"></div>
 <h4 id="8-sabotaje">8. Sabotaje</h4>
 <p><em>Tu objetivo es el conducto de energía del enemigo. Su objetivo es el tuyo. Cortar requiere precisión y tiempo. Defender requiere cuerpos.</em></p>
-<p>Cada jugador coloca 1 marcador de conducto en la mitad del tablero del oponente (a 3"+ de los bordes).</p>
+<p>Cada jugador coloca 1 marcador de conducto en la mitad del oponente (el lado del tablero más cercano a la zona de despliegue del oponente), a 3"+ de los bordes.</p>
 <p><code>Interactuar</code> adyacente para cortar el conducto enemigo. Cortar requiere 2 acciones de <code>Interactuar</code> sobre el mismo conducto (no necesariamente en la misma activación o miniatura). Marca el primer éxito con un token. Al inicio de la siguiente ronda, retira el token si no hay miniatura amiga a 1" del conducto marcado. Las miniaturas <code>Trabadas</code> no pueden cortar conductos. El corte es permanente una vez completado.</p>
 <p>Los Hostiles ignoran los conductos.</p>
 <p><strong>Victoria:</strong> El primero en cortar. Ambos cortan en la misma ronda: gana el primero en completar. Ninguno corta al final: más miniaturas supervivientes.</p>
@@ -1200,10 +1205,9 @@
 <div class="two-column">
 <h2 id="misiones">Misiones</h2>
 <h4 id="1-extracción">1. Extracción</h4>
-<p><em>Una pizarra de datos apareció en un punto muerto cerca de la Confluencia Nula. Ambas cuadrillas recibieron el soplo. La pizarra contiene registros departamentales que valen más de lo que cualquiera aquí gana en un ciclo.</em></p>
+<p><em>Una tableta de datos apareció en un buzón muerto cerca de la Confluencia Nula. Ambas cuadrillas recibieron el soplo. La tableta contiene registros departamentales que valen más de lo que cualquiera aquí gana en un ciclo.</em></p>
 <p>El Defensor coloca 1 marcador de objetivo en el centro.</p>
-<p><code>Interactuar</code> adyacente para recoger. El portador se mueve a mitad de <code>Movimiento</code> (redondear hacia abajo) y no puede <code>Destrabarse</code>. Suelta si queda <code>Fuera de Combate</code> o <code>Huye</code> (coloca donde cayó o en el borde de mesa). <code>Trabadas</code> no pueden recoger. Cualquier miniatura puede recogerlo de nuevo con <code>Interactuar</code>.</p>
-<p><strong>Compañero en el objetivo:</strong> Se necesitan acciones de <code>Interactuar</code> separadas (extraer o interrogar). No ambas con una sola acción.</p>
+<p><code>Interactuar</code> adyacente para recoger. El portador se mueve a mitad de <code>Movimiento</code> (redondear hacia abajo) y no puede <code>Destrabarse</code>. Suelta si queda <code>Fuera de Combate</code> o <code>Huye</code> (coloca donde cayó, o en el borde de mesa más cercano si huyó fuera del tablero). <code>Trabadas</code> no pueden recoger. Cualquier miniatura puede recogerlo de nuevo con <code>Interactuar</code>.</p>
 <p>Los Hostiles ignoran el objetivo.</p>
 <p><strong>Victoria:</strong> Lleva el objetivo fuera por tu borde de despliegue. Si ningún bando extrae al final de la partida, gana el bando que tenga el objetivo. Sin portador: más miniaturas supervivientes.</p>
 <p><strong>Recompensa:</strong> El ganador recibe +1 <code>Pista</code>.<br/>
@@ -1215,12 +1219,10 @@
 <div class="column-break"></div>
 <h4 id="2-control">2. Control</h4>
 <p><em>El repetidor central enruta la mitad del tráfico del sector. Contrólalo y controlas el flujo. Piérdelo y pierdes todo lo que hay corriente abajo.</em></p>
-<p>Sin marcadores. Al final de la partida, cuenta las miniaturas a 3" del centro del tablero. Las miniaturas <code>Fuera de Combate</code> y <code>Huyendo</code> no cuentan. Los Hostiles a 3" del centro cuentan contra ambos jugadores (resta de cada total).</p>
-<p><strong>Resta de Hostiles:</strong> Cada Hostil a 3" del centro resta 1 de los conteos de modelos de ambos jugadores por igual. Cuenta los modelos de cada jugador, luego resta el conteo de Hostiles de cada total de forma independiente. Ejemplo: con 2 Hostiles a 3" del centro, el Jugador A tiene 4 miniaturas menos 2 Hostiles, quedan 2. El Jugador B tiene 5 menos 2, quedan 3. Gana el Jugador B por tres a dos.</p>
-<p>Si ambos totales llegan a 0 o menos tras la resta de Hostiles, gana el bando con más miniaturas supervivientes en el tablero.</p>
-<p><strong>Victoria:</strong> Bando con más miniaturas a 3" del centro al final de la partida.</p>
+<p>Sin marcadores. Al final de la partida, cuenta las miniaturas a 3" del centro del tablero. Las miniaturas <code>Fuera de Combate</code> y <code>Huyendo</code> no cuentan. Los Hostiles ignoran la zona.</p>
+<p><strong>Victoria:</strong> Bando con más miniaturas a 3" del centro al final de la partida. Empate: más miniaturas supervivientes.</p>
 <p><strong>Recompensa:</strong> El ganador recibe +1 <code>Pista</code>.<br/>
-<strong>Extra:</strong> +1 <code>Pista</code> adicional si el total neto del ganador supera al del oponente por 3 o más.</p>
+<strong>Extra:</strong> +1 <code>Pista</code> adicional si el conteo del ganador supera al del oponente por 3 o más.</p>
 <blockquote>
 <p>"La conexión es civilización."<br/>
 <strong>Promoción del Credo del Cable</strong></p>
@@ -1234,7 +1236,7 @@
 <h4 id="3-cuadrantes">3. Cuadrantes</h4>
 <p><em>Una cascada reventó cuatro sub-sectores a la vez. Cada uno guarda material de salvamento, inteligencia, o ambos. Dispersa tu cuadrilla y reclama lo que puedas antes que la otra.</em></p>
 <p>Sin marcadores. Divide el tablero en 4 cuadrantes iguales. Al final de la partida, un cuadrante lo controla el bando con más miniaturas dentro. Los cuadrantes vacíos o empatados no se controlan. Miniatura en la línea de un cuadrante: el jugador que la controla elige en qué cuadrante cuenta.</p>
-<p>Las miniaturas <code>Huyendo</code> no cuentan. Cada Hostil en un cuadrante resta 1 del recuento de ambos jugadores allí.</p>
+<p>Las miniaturas <code>Fuera de Combate</code> y <code>Huyendo</code> no cuentan. Los Hostiles ignoran los cuadrantes.</p>
 <p><strong>Victoria:</strong> Bando que controle más cuadrantes al final de la partida. Empate en cuadrantes: más miniaturas supervivientes.</p>
 <p><strong>Recompensa:</strong> El ganador recibe +1 <code>Pista</code>.<br/>
 <strong>Extra:</strong> +1 <code>Pista</code> adicional si el ganador controla 3 o más cuadrantes.</p>
@@ -1246,7 +1248,7 @@
 <h4 id="4-captura">4. Captura</h4>
 <p><em>Una baliza portátil pulsa con datos en caché en la confluencia del corredor. Mantenla el tiempo suficiente y los datos son tuyos. Pierde la concentración y la otra cuadrilla se lleva la señal.</em></p>
 <p>El Defensor coloca 1 baliza en el centro.</p>
-<p>Al final de cada ronda, cuenta las miniaturas a 3" de la baliza. Las miniaturas <code>Fuera de Combate</code> y <code>Huyendo</code> no cuentan. Cada Hostil a 3" resta 1 del recuento de ambos jugadores. El bando con más anota 1 punto. Empate o ambos a 0: nadie anota.</p>
+<p>Al final de cada ronda, cuenta las miniaturas a 3" de la baliza. Las miniaturas <code>Fuera de Combate</code> y <code>Huyendo</code> no cuentan. El bando con más anota 1 punto. Empate: nadie anota. Los Hostiles ignoran la baliza.</p>
 <p>Empate en puntos al final de la partida: gana el bando con más miniaturas a 3" de la baliza. Sigue empatado: más miniaturas supervivientes.</p>
 <p><strong>Victoria:</strong> Más puntos al final de la partida.</p>
 <p><strong>Recompensa:</strong> El ganador recibe +1 <code>Pista</code>.<br/>
@@ -1262,7 +1264,7 @@
 <h4 id="5-asesinato">5. Asesinato</h4>
 <p><em>Alguien en la otra cuadrilla tiene precio. El contrato es específico: un objetivo, sin facturación colateral. Encuéntralo en el caos.</em></p>
 <p>Tras el despliegue, cada jugador anota en secreto una miniatura enemiga como objetivo. No reveles los objetivos hasta que uno quede <code>Fuera de Combate</code> o <code>Huya</code>. No puedes elegir una miniatura que no esté en el tablero.</p>
-<p>Si el objetivo <code>Huye</code>, revélalo inmediatamente: el oponente gana. Si ambos objetivos mueren en la misma ronda, el primer jugador en revelar su objetivo gana. Misma activación: más miniaturas supervivientes.</p>
+<p>Si ambos objetivos caen en la misma activación, gana el jugador cuya miniatura golpeó primero. Estrictamente simultáneo: más miniaturas supervivientes.</p>
 <p><strong>Victoria:</strong> El primero en dejar a su objetivo <code>Fuera de Combate</code> (o forzarlo a <code>Huir</code>). Si ningún objetivo cae al final de la partida, revela ambos. Más miniaturas supervivientes.</p>
 <p><strong>Recompensa:</strong> El ganador recibe +1 <code>Pista</code>.<br/>
 <strong>Extra:</strong> La miniatura que mató al objetivo gana +1 <code>Mérito</code>.<br/>
@@ -1274,8 +1276,8 @@
 <div class="column-break"></div>
 <h4 id="6-avance">6. Avance</h4>
 <p><em>El corredor se derrumba detrás de ambas cuadrillas. No hay vuelta atrás. Saca a tu gente por la salida del otro lado. Quien se quede atrás, se queda.</em></p>
-<p>Sin marcadores. Una miniatura que alcance el borde de despliegue del oponente puede salir como parte de su movimiento. Las miniaturas que salen se retiran y no pueden volver. Las miniaturas <code>Trabadas</code> no pueden salir (deben <code>Destrabarse</code> primero).</p>
-<p>Los Hostiles no pueden salir. Las miniaturas que <code>Huyen</code> por el borde del oponente cuentan como sacadas. Las que <code>Huyen</code> por cualquier otro borde no.</p>
+<p>Sin marcadores. Como parte de su movimiento, una miniatura puede salir por cualquier borde que toque la zona de despliegue del oponente (con despliegue Centro, el borde opuesto al Agresor). Las miniaturas que salen se retiran y no pueden volver. Las miniaturas <code>Trabadas</code> no pueden salir (deben <code>Destrabarse</code> primero).</p>
+<p>Los Hostiles no pueden salir. Las miniaturas que <code>Huyen</code> por un borde de salida cuentan como sacadas; por cualquier otro borde, no.</p>
 <p>Si ninguna miniatura sale al final de la partida, gana el bando con más miniaturas supervivientes.</p>
 <p><strong>Victoria:</strong> Más miniaturas sacadas al final de la partida. Las que sigan en el tablero no cuentan. Empate: más miniaturas supervivientes en el tablero.</p>
 <p><strong>Recompensa:</strong> El ganador recibe +1 <code>Pista</code>.<br/>

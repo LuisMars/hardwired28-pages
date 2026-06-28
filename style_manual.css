@@ -1,5 +1,4 @@
 /* Hardwired 28 - Online Manual Stylesheet */
-@import url('style-base.css');
 
 html, body {
     overflow-x: hidden;
@@ -365,4 +364,13 @@ pre {
     .mobile-toc-btn:hover {
         background: #1D4ED8;
     }
+}
+
+/* Reading-content links: brand blue, matches the landing (no underline) */
+.content a {
+    color: var(--color-corporate);
+    text-decoration: none;
+}
+.content a:hover {
+    color: #1d4ed8;
 }

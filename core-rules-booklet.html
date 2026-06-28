@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Hardwired 28 - Core Rules 0.7.2-beta</title>
-<meta content="Hardwired 28 - Core Rules 0.7.2-beta" property="og:title"/>
+<title>Hardwired 28: Core Rules 0.7.3-beta</title>
+<meta content="Hardwired 28: Core Rules 0.7.3-beta" property="og:title"/>
 <meta content="Corporate cablepunk skirmish wargame" property="og:description"/>
 <meta content="https://hardwired28.luismars.com/img/social.png" property="og:image"/>
 <meta content="https://hardwired28.luismars.com/core-rules.html" property="og:url"/>
@@ -15,15 +15,16 @@
 <link href="https://hardwired28.luismars.com/core-rules.html" hreflang="en" rel="alternate"/>
 <link href="https://hardwired28.luismars.com/es/core-rules.html" hreflang="es" rel="alternate"/>
 <link href="https://hardwired28.luismars.com/core-rules.html" hreflang="x-default" rel="alternate"/>
-<meta content="Hardwired 28 - Core Rules 0.7.2-beta" name="twitter:title"/>
+<meta content="Hardwired 28: Core Rules 0.7.3-beta" name="twitter:title"/>
 <meta content="Hardwired 28 is a cablepunk skirmish wargame: lead a corporate squad through a collapsing arcology where wired connection is sacred and wireless is heresy." name="twitter:description"/>
 <meta content="https://hardwired28.luismars.com/img/social.png" name="twitter:image"/>
 <link href="img/favicon.svg" rel="icon" type="image/svg+xml"/>
 <script async="" data-goatcounter="https://hardwired28.goatcounter.com/count" src="//gc.zgo.at/count.js"></script>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet"/>
+<link href="normalize.css" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&amp;family=Work+Sans:wght@300;400;500;600&amp;family=Montserrat:wght@600;700;800;900&amp;family=PT+Serif:wght@400;700&amp;family=Ubuntu+Mono&amp;display=swap" rel="stylesheet"/>
+<link href="style-base.css" rel="stylesheet"/>
 <link href="style.css" rel="stylesheet"/>
 <style>
 /* Override page size to A4 landscape */
@@ -159,24 +160,26 @@
 <a class="app-menu__brand" href="./">Hardwired 28</a>
 <button aria-label="Menu" class="app-menu__toggle" onclick="toggleMenu()" type="button"></button>
 <div class="app-menu__links">
-<a href="rulebook">Rulebook</a>
+<a class="app-menu__cta" href="first-game">First Game</a>
+<a href="rulebook">Rules</a>
 <div class="app-menu__dropdown">
-<button class="app-menu__dropdown-toggle current">Print</button>
+<button class="app-menu__dropdown-toggle">Print</button>
 <div class="app-menu__submenu">
-<div class="app-menu__nested">
-<span class="app-menu__nested-label">Singles</span>
-<div class="app-menu__nested-submenu">
+<a href="quick-reference">Quick Reference</a>
 <a href="print">All Rules</a>
 <a href="core-rules">Core Rules</a>
 <a href="inhuman-resources">Inhuman Resources</a>
 <a href="campaign">Campaign</a>
 </div>
 </div>
-</div>
-</div>
-<a href="quick-reference">Quick Reference</a>
+<div class="app-menu__dropdown">
+<button class="app-menu__dropdown-toggle">Tools</button>
+<div class="app-menu__submenu">
 <a href="builder/index">Squad Builder</a>
 <a href="scenario/index">Scenarios</a>
+</div>
+</div>
+<a href="feedback">Feedback</a>
 <a href="es/core-rules">Castellano</a>
 </div>
 </div>
@@ -265,7 +268,8 @@
     <div class="imposed-left"><div class="page page-even" data-page-number="2">
 <div class="two-column">
 <h1 id="hardwired-28_1">Hardwired 28</h1>
-<p><em>0.7.2-beta</em> by LuisMars</p>
+<p><em>0.7.3-beta</em> by LuisMars</p>
+<p><em>Open Distribution Statute: <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></em></p>
 <h2 id="the-great-complex">The Great Complex</h2>
 <p>A vertical megastructure three kilometers tall. Cables hang from every surface. They bundle into trunks thicker than bodies, snake through walls, coil underfoot. The Complex was meant to be paradise. Now it decays.</p>
 <p>Wired connection is sacred. Wireless is heresy. Since the Tethering, wireless has meant excommunication. Debts are inherited. Children are born subscribed.</p>
@@ -277,7 +281,7 @@
 <div class="column-break"></div>
 <h2 id="contractors">Contractors</h2>
 <p>You are not employees. You are deniable assets.</p>
-<p>Contractors operate between factions: retrieving what was lost, silencing what was heard, maintaining what must continue. Every job has a patron. Payment comes in subs. Betrayal comes free.</p>
+<p>Contractors operate between factions. They retrieve what was lost and silence what was heard. Every job has a patron. Payment comes in subs. Betrayal comes free.</p>
 <h2 id="subs">Subs</h2>
 <p>Subs are Subscription Points. They pay for gear, tolls, bribes, and air. Most charges are automatic. You notice subs when you are short.</p>
 <h2 id="the-tiers">The Tiers</h2>
@@ -618,7 +622,7 @@
 <div class="two-column">
 <h2 id="miniatures">Miniatures</h2>
 <p>This game is meant to be used with 28 mm miniatures. Anything in the 28 mm to 32 mm range works. Models on bases between 25 mm and 32 mm are fully compatible.</p>
-<p>Use whatever models you have. Convert them. Kitbash corporate enforcers from sci-fi kits. Build cable-wrapped cultists from fantasy bits. Proxy freely. The model represents what you say it represents. There are no wrong answers.</p>
+<p>Use whatever models you have. Convert them. Kitbash corporate enforcers from sci-fi kits. Build cable-wrapped cultists from fantasy bits. Proxy freely. The model represents what you say it represents.</p>
 <h2 id="what-youll-need">What You'll Need</h2>
 <p><strong>Required</strong><br/>
 - 5 miniatures per squad (1 <code>Boss</code>, 4 <code>Resources</code>)<br/>

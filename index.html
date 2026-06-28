@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hardwired 28 - Cablepunk Skirmish Game</title>
-    <meta property="og:title" content="Hardwired 28 - Cablepunk Skirmish Game">
+    <title>Hardwired 28: Cablepunk Skirmish Game</title>
+    <meta property="og:title" content="Hardwired 28: Cablepunk Skirmish Game">
     <meta property="og:description" content="Corporate cablepunk skirmish wargame">
     <meta property="og:image" content="https://hardwired28.luismars.com/img/social.png">
     <meta property="og:url" content="https://hardwired28.luismars.com/">
@@ -15,46 +15,63 @@
     <link rel="alternate" hreflang="en" href="https://hardwired28.luismars.com/">
     <link rel="alternate" hreflang="es" href="https://hardwired28.luismars.com/es/">
     <link rel="alternate" hreflang="x-default" href="https://hardwired28.luismars.com/">
-    <meta name="twitter:title" content="Hardwired 28 - Cablepunk Skirmish Game">
+    <meta name="twitter:title" content="Hardwired 28: Cablepunk Skirmish Game">
     <meta name="twitter:description" content="Hardwired 28 is a cablepunk skirmish wargame: lead a corporate squad through a collapsing arcology where wired connection is sacred and wireless is heresy.">
     <meta name="twitter:image" content="https://hardwired28.luismars.com/img/social.png">
     <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
     <script data-goatcounter="https://hardwired28.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Work+Sans:wght@300;400;500;600&family=Montserrat:wght@600;700;800;900&family=PT+Serif:wght@400;700&family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link rel="preload" as="image" href="img/cover_cables.webp" fetchpriority="high">
+    <link rel="stylesheet" href="style-base.css">
     <link rel="stylesheet" href="style_landing.css">
 </head>
-<body class="has-app-menu landing-page">
+<body class="has-app-menu landing-page page-landing">
     
     <nav class="app-menu" data-theme="corporate" data-open="false" aria-label="Navigation">
         <div class="app-menu__inner">
             <a class="app-menu__brand" href="./">Hardwired 28</a>
             <button class="app-menu__toggle" type="button" onclick="toggleMenu()" aria-label="Menu"></button>
             <div class="app-menu__links">
-                <a href="rulebook">Rulebook</a>
-                <a href="print">Print</a>
-                <a href="quick-reference">Quick Reference</a>
-                <a href="builder/index">Squad Builder</a>
-                <a href="scenario/index">Scenarios</a>
+                <a href="first-game" class="app-menu__cta">First Game</a>
+                <a href="rulebook">Rules</a>
+                <div class="app-menu__dropdown">
+                    <button class="app-menu__dropdown-toggle">Print</button>
+                    <div class="app-menu__submenu">
+                        <a href="quick-reference">Quick Reference</a>
+                        <a href="print">All Rules</a>
+                        <a href="core-rules">Core Rules</a>
+                        <a href="inhuman-resources">Inhuman Resources</a>
+                        <a href="campaign">Campaign</a>
+                    </div>
+                </div>
+                <div class="app-menu__dropdown">
+                    <button class="app-menu__dropdown-toggle">Tools</button>
+                    <div class="app-menu__submenu">
+                        <a href="builder/index">Squad Builder</a>
+                        <a href="scenario/index">Scenarios</a>
+                    </div>
+                </div>
+                <a href="feedback">Feedback</a>
                 <a href="es/index">Castellano</a>
             </div>
         </div>
     </nav>
 
-    <div class="landing-content">
-<div class="hero" style="background-image: url(img/cover_cables.jpg);">
+    <main class="landing-content">
+<div class="hero" style="background-image: url(img/cover_cables.webp);">
 <h1 id="hardwired-28">Hardwired 28</h1>
 <p><em>Cablepunk skirmish wargame for 28 mm miniatures.</em></p>
 <p>Build your squad. Navigate the Complex. Stay connected.</p>
 <p><strong>Authorized for public distribution. No subscription adjustment.</strong></p>
-<p><a class="hero-cta" href="rulebook">Read the Rules</a></p>
+<p><a class="hero-cta" href="first-game">Play Your First Game</a> <a class="hero-cta hero-cta--secondary" href="rulebook">Read the Rules</a></p>
 </div>
 <h2 id="the-complex">The Complex</h2>
 <p>A vertical megastructure three kilometers tall. Cables hang from every surface. Wired connection is sacred. Wireless is heresy.</p>
 <p>The Departments control everything: Resource Allocation, Revenue Operations, Human Capital, Security &amp; Compliance. Below them, subscription debt passes from parent to child. Workers are born owing.</p>
-<p>You are not employees. You are contractors: deniable assets operating between factions, retrieving what was lost, silencing what was heard.</p>
+<p>You are not employees. You are contractors: deniable assets operating between factions. You retrieve what was lost and silence what was heard.</p>
 <blockquote>
 <p><em>Notice: The Complex assumes no liability for injuries, death, or loss of assets during field operations. Contractors without premium coverage assume all medical costs.</em></p>
 </blockquote>
@@ -212,12 +229,15 @@ Print reference cards for equipment, enemies, and tables.</p>
 </tr>
 </tbody>
 </table>
+<h2 id="feedback">Feedback</h2>
+<p>Played a game? <strong><a href="feedback">Share your feedback</a></strong>. Two minutes, no account needed. Found a technical bug? Open an issue on the <a href="https://github.com/LuisMars/hardwired28-pages/issues">public issue tracker</a>.</p>
 <h2 id="document-revision">Document Revision</h2>
-<p><strong>REF: HW28-0.7.2-beta</strong> | Public Release | Approved for External Distribution</p>
+<p><strong>REF: HW28-0.7.3-beta</strong> | Public Release | Approved for External Distribution</p>
 <p><em>This document has been reviewed by the Department of Revenue Operations. Unauthorized modifications will result in subscription adjustment.</em></p>
 <p><em>Classification: PUBLIC | Retention: PERMANENT</em></p>
+<p><em>Open Distribution Statute: licensed <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. The Hardwired 28 name and seal remain Company property.</em></p>
 <p><em><a href="es/">Versión en castellano</a></em> · <em>Created by LuisMars</em></p>
-    </div>
+    </main>
     
     <script>
         function toggleMenu() {

@@ -508,10 +508,17 @@ function parseDSL(text) {
       if (type === 'ring') {
         return { cmd: 'area', type, filled: false, side: parts[2], inner: +parts[3], outer: +parts[4], color: parts[5] || 'green', label };
       }
-      // rect, diag, circle
+      // positioned circle: `circle X Y R color`
+      if (type === 'circle' && !isNaN(+parts[2])) {
+        return { cmd, type, filled, cx: +parts[2], cy: +parts[3], depth: +parts[4], color: parts[5] || 'green', label };
+      }
+      // rect, diag, circle (center/side based)
       return { cmd, type, filled, side: parts[2], depth: +parts[3], color: parts[4] || 'blue', label };
     }
     if (cmd === 'obj') {
+      return { cmd, x: +parts[1], y: +parts[2], label };
+    }
+    if (cmd === 'objective') {
       return { cmd, x: +parts[1], y: +parts[2], label };
     }
     if (cmd === 'measure') {
@@ -564,7 +571,7 @@ function getSpawnPos(side) {
 }
 
 // Measurement line with dimension text (e.g., |<--3"-->|)
-function MeasureLine({ x1, y1, x2, y2, label, color }) {
+function MeasureLine({ x1, y1, x2, y2, label, color, hideLabel }) {
   const mx = (x1 + x2) / 2, my = (y1 + y2) / 2;
   const vertical = Math.abs(x2 - x1) < Math.abs(y2 - y1);
   const tick = 0.3;
@@ -583,7 +590,7 @@ function MeasureLine({ x1, y1, x2, y2, label, color }) {
           <line x1={x2} y1={y2-tick} x2={x2} y2={y2+tick} stroke={c} strokeWidth="0.06" />
         </React.Fragment>
       )}
-      <text x={mx} y={my + 0.25} textAnchor="middle" fontSize="0.7" fontWeight="bold" fill={c} stroke="white" strokeWidth="0.2" paintOrder="stroke">{label}</text>
+      {!hideLabel && <text x={mx} y={my + 0.25} textAnchor="middle" fontSize="0.7" fontWeight="bold" fill={c} stroke="white" strokeWidth="0.2" paintOrder="stroke">{label}</text>}
     </g>
   );
 }
@@ -618,6 +625,13 @@ function deoverlapLabels(labels) {
 function BoardMap({ layers }) {
   const allDirectives = layers.flatMap(dsl => parseDSL(dsl));
   if (allDirectives.length === 0) return null;
+
+  // Marker/objective points: a measurement label landing on one of these is
+  // suppressed (line stays) to keep crowded centerlines readable.
+  const markerPts = allDirectives
+    .filter(d => d.cmd === 'obj' || d.cmd === 'objective')
+    .map(d => ({ x: d.x, y: d.y }));
+  const labelCollides = (mx, my) => markerPts.some(p => Math.hypot(p.x - mx, p.y - my) < 1);
 
   const FS = 1.4;   // main font
   const SM = 0.9;   // small font (obj labels)
@@ -844,8 +858,8 @@ function BoardMap({ layers }) {
               const hatchMap = { yellow: 'url(#hatch-yellow)', green: 'url(#hatch-green)', red: 'url(#hatch-red)', blue: 'url(#hatch-blue)', orange: 'url(#hatch-orange)' };
               const hatch = hatchMap[d.color] || 'none';
               if (d.type === 'circle') {
-                const [cx, cy] = getCenter(d.side);
-                addCircleMeasure(d.side, d.depth, i);
+                const [cx, cy] = d.cx != null ? [d.cx, d.cy] : getCenter(d.side);
+                if (d.cx == null) addCircleMeasure(d.side, d.depth, i);
                 shapes.push(<circle key={`s${i}`} cx={cx} cy={cy} r={d.depth} fill={hatch} stroke={c.stroke} strokeWidth="0.12" strokeDasharray="0.4 0.25" />);
                 if (d.label) labelData.push({ x: cx, y: cy + d.depth - 1.2, text: d.label, fs: FS * 0.85, fill: c.stroke, key: `l${i}` });
               }
@@ -884,6 +898,12 @@ function BoardMap({ layers }) {
             if (d.cmd === 'obj') {
               shapes.push(<circle key={`s${i}`} cx={d.x} cy={d.y} r={0.6} fill="#FFD700" stroke="#000" strokeWidth="0.08" />);
               if (d.label) labels.push(<text key={`l${i}`} x={d.x} y={d.y} textAnchor="middle" dominantBaseline="central" fontSize={SM} fontWeight="bold" fill="#000">{d.label}</text>);
+            }
+
+            // --- Mission objective (distinct bullseye marker) ---
+            if (d.cmd === 'objective') {
+              shapes.push(<g key={`s${i}`}><circle cx={d.x} cy={d.y} r={0.95} fill="#FFD700" stroke="#000" strokeWidth="0.12" /><circle cx={d.x} cy={d.y} r={0.38} fill="#1e293b" /></g>);
+              if (d.label) labelData.push({ x: d.x, y: d.y + 1.5, text: d.label, fs: SM, fill: '#000', key: `l${i}` });
             }
 
             // --- Measure lines ---
@@ -938,9 +958,10 @@ function BoardMap({ layers }) {
           );
         })()}
 
-        {/* Measurement lines on top */}
+        {/* Measurement lines on top (label hidden where it collides with a marker/objective) */}
         {measurements.map(m => (
-          <MeasureLine key={m.key} x1={m.x1} y1={m.y1} x2={m.x2} y2={m.y2} label={m.label} color={mc} />
+          <MeasureLine key={m.key} x1={m.x1} y1={m.y1} x2={m.x2} y2={m.y2} label={m.label} color={mc}
+                       hideLabel={labelCollides((m.x1 + m.x2) / 2, (m.y1 + m.y2) / 2)} />
         ))}
       </svg>
     </div>
@@ -1186,6 +1207,7 @@ function PrintView({ results, data, loreText, gap }) {
             results.lootLayout?.item?.map || '',
             results.coworkerSetup?.item?.map || '',
             results.spawnLocation?.item?.map || '',
+            results.mission?.item?.map || '',
           ]} />
           <div className="print-map-info">
             <strong>{t('deployment')}:</strong> {deployDisplay.name}{deployDisplay.detail ? ` (${deployDisplay.detail})` : ''}<br />
@@ -1683,6 +1705,7 @@ function ScenarioGenerator() {
                   results.lootLayout?.item?.map || '',
                   results.coworkerSetup?.item?.map || '',
                   results.spawnLocation?.item?.map || '',
+                  results.mission?.item?.map || '',
                 ]} />
               </div>
 
@@ -1726,6 +1749,4 @@ function ScenarioGenerator() {
   );
 }
 
-// Mount
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<ScenarioGenerator />);
+ReactDOM.createRoot(document.getElementById('root')).render(<ScenarioGenerator />);

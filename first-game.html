@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Game: Hardwired 28 0.7.3-beta</title>
+    <meta property="og:title" content="First Game: Hardwired 28 0.7.3-beta">
+    <meta property="og:description" content="Corporate cablepunk skirmish wargame">
+    <meta property="og:image" content="https://hardwired28.luismars.com/img/social.png">
+    <meta property="og:url" content="https://hardwired28.luismars.com/first-game.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="description" content="Hardwired 28 is a cablepunk skirmish wargame: lead a corporate squad through a collapsing arcology where wired connection is sacred and wireless is heresy.">
+    <link rel="canonical" href="https://hardwired28.luismars.com/first-game.html">
+    <link rel="alternate" hreflang="en" href="https://hardwired28.luismars.com/first-game.html">
+    <link rel="alternate" hreflang="es" href="https://hardwired28.luismars.com/es/first-game.html">
+    <link rel="alternate" hreflang="x-default" href="https://hardwired28.luismars.com/first-game.html">
+    <meta name="twitter:title" content="First Game: Hardwired 28 0.7.3-beta">
+    <meta name="twitter:description" content="Hardwired 28 is a cablepunk skirmish wargame: lead a corporate squad through a collapsing arcology where wired connection is sacred and wireless is heresy.">
+    <meta name="twitter:image" content="https://hardwired28.luismars.com/img/social.png">
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+    <script data-goatcounter="https://hardwired28.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Work+Sans:wght@300;400;500;600&family=Montserrat:wght@600;700;800;900&family=PT+Serif:wght@400;700&family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style-base.css">
+    <link rel="stylesheet" href="style_landing.css">
+</head>
+<body class="has-app-menu landing-page page-first-game">
+    
+    <nav class="app-menu" data-theme="corporate" data-open="false" aria-label="Navigation">
+        <div class="app-menu__inner">
+            <a class="app-menu__brand" href="./">Hardwired 28</a>
+            <button class="app-menu__toggle" type="button" onclick="toggleMenu()" aria-label="Menu"></button>
+            <div class="app-menu__links">
+                <a href="first-game" class="app-menu__cta current">First Game</a>
+                <a href="rulebook">Rules</a>
+                <div class="app-menu__dropdown">
+                    <button class="app-menu__dropdown-toggle">Print</button>
+                    <div class="app-menu__submenu">
+                        <a href="quick-reference">Quick Reference</a>
+                        <a href="print">All Rules</a>
+                        <a href="core-rules">Core Rules</a>
+                        <a href="inhuman-resources">Inhuman Resources</a>
+                        <a href="campaign">Campaign</a>
+                    </div>
+                </div>
+                <div class="app-menu__dropdown">
+                    <button class="app-menu__dropdown-toggle">Tools</button>
+                    <div class="app-menu__submenu">
+                        <a href="builder/index">Squad Builder</a>
+                        <a href="scenario/index">Scenarios</a>
+                    </div>
+                </div>
+                <a href="feedback">Feedback</a>
+                <a href="es/first-game">Castellano</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="landing-content">
+<h1 id="your-first-game">Your First Game</h1>
+<p>Two squads fight through the dead levels of a collapsing arcology, where a wired connection is sacred and going wireless is heresy. This page teaches you one full game from nothing. It covers only what you need and links to the full rules for the rest. Grab a friend and some dice.</p>
+<h2 id="what-you-need">What You Need</h2>
+<ul class="fg-checklist">
+<li>10 squad miniatures or proxies (5 each, one squad per player)</li>
+<li>3 Coworker models</li>
+<li>4 Feral Crews models (3 Gunners and 1 Boss)</li>
+<li>1 objective marker (the <code>data-slate</code>) for the center</li>
+<li>4 <code>Loot Marker</code>s, in a line across the center (tokens or coins)</li>
+<li>Two each of d4, d6, d8, d10 and d12, and one d20 (for searching loot)</li>
+<li>A tape measure or ruler (inches)</li>
+<li>A bag or opaque cup, plus one token per model or group to draw from it</li>
+<li>A 2 foot by 2 foot table with plenty of terrain</li>
+</ul>
+
+<div class="fg-note fg-note--tip">
+<span class="fg-note__label">Print the Quick Reference</span>
+The <a href="qr">Quick Reference</a> fits the whole game (stats, actions, combat, the hostile table) onto two pages. Open it on a phone or print it (Ctrl+P / Cmd+P) and keep it at the table while you play.
+</div>
+
+<h2 id="the-game-in-60-seconds">The Game in 60 Seconds</h2>
+<div class="fg-note fg-note--tip">
+<span class="fg-note__label">Dice Tiers (<b>DT</b>)</span>
+Every attribute is a tier: <b>2d4, 2d6, 2d8, 2d10, 2d12</b>. You always roll two dice of that size and add them. A <code>+1 DT</code> bumps you up one size, a <code>-1 DT</code> drops you down one. In a contest, both sides roll and add: highest total wins. On a tie, the smaller dice win (a 2d6 beats a 2d8); on the same size, reroll. (Full breakdown: <a href="rulebook#core-mechanics">Core Mechanics</a>.)
+</div>
+
+<p>Players alternate pulling activation tokens from a bag. The side you draw activates one model: it takes a Move and an Action, in either order, moving up to its <code>Move</code> in inches. To attack, roll your <code>Combat</code> against the target's <code>Defense</code>: win, and you roll the weapon's damage (full rules in <a href="rulebook#attack-resolution">Attack Resolution</a>; a maxed damage die opens a <a href="rulebook#critical-hits">Critical Hit</a>).</p>
+<p>The only <code>Actions</code> you need today: <code>Attack</code>, <code>Move Again</code>, <code>Interact</code> (use a marker within 1"), <code>Search</code> (a <code>Loot Marker</code> within 1"), <code>Interrogate</code> (a Coworker within 1"), and <code>Disengage</code> (leave melee safely). See the <a href="rulebook">Rulebook</a> for the rest.</p>
+<h2 id="pick-your-squad">Pick Your Squad</h2>
+<p>Hand one squad to each player. Both cost 60 subs (12 per model) and are ready to field. Want to build your own next time? Use the <a href="builder/index">Squad Builder</a>. Every weapon and piece of armor lives in <a href="rulebook#weapons-armor">Weapons &amp; Armor</a>.</p>
+<div class="fg-cards">
+
+<div class="fg-card">
+<div class="fg-card__head">Compliance Team<small>Brawler: hits hard up close</small></div>
+<div class="fg-card__body">
+
+<div class="fg-unit"><div class="fg-unit__name">Boss <span class="fg-unit__cost">12 subs</span></div>
+<div class="fg-statline"><span><b>HP</b> 16</span><span><b>Move</b> 4"</span><span><b>Com</b> 2d8</span><span><b>Def</b> 2d6</span><span><b>Wit</b> 2d6</span></div>
+<div class="fg-unit__gear">Needle Gun (<code>d4 Toxic</code>, Ranged, +1 vs wounded), Shiv (<code>d4 Toxic</code>, Melee, +1 vs wounded), Flak Wrap (armor 1)</div></div>
+
+<div class="fg-unit"><div class="fg-unit__name">Brute <span class="fg-unit__cost">12 subs</span></div>
+<div class="fg-statline"><span><b>HP</b> 14</span><span><b>Move</b> 3"</span><span><b>Com</b> 2d8</span><span><b>Def</b> 2d6</span><span><b>Wit</b> 2d4</span></div>
+<div class="fg-unit__gear">Sword (<code>d6+1 Bladed</code>, Melee), Mesh Wrap (armor 1). Can wear Heavy armor</div></div>
+
+<div class="fg-unit"><div class="fg-unit__name">Zealot <span class="fg-unit__cost">12 subs</span></div>
+<div class="fg-statline"><span><b>HP</b> 12</span><span><b>Move</b> 5"</span><span><b>Com</b> 2d8</span><span><b>Def</b> 2d4</span><span><b>Wit</b> 2d6</span></div>
+<div class="fg-unit__gear">Injector (<code>d6 Toxic</code>, Melee), Knife (<code>d4 Bladed</code>, Melee). +1 DT vs 2+ enemies, melee only</div></div>
+
+<div class="fg-unit"><div class="fg-unit__name">Veteran <span class="fg-unit__cost">12 subs</span></div>
+<div class="fg-statline"><span><b>HP</b> 13</span><span><b>Move</b> 4"</span><span><b>Com</b> 2d6</span><span><b>Def</b> 2d6</span><span><b>Wit</b> 2d6</span></div>
+<div class="fg-unit__gear">Pistol (<code>d4 Projectile</code>, Ranged), Shiv (<code>d4 Toxic</code>, Melee, +1 vs wounded), Lining (armor 1). Tougher when hurt</div></div>
+
+<div class="fg-unit"><div class="fg-unit__name">Gunner <span class="fg-unit__cost">12 subs</span></div>
+<div class="fg-statline"><span><b>HP</b> 14</span><span><b>Move</b> 4"</span><span><b>Com</b> 2d8</span><span><b>Def</b> 2d6</span><span><b>Wit</b> 2d4</span></div>
+<div class="fg-unit__gear">Laser (<code>d6 Energy</code>, Ranged, +1 DT if it did not move), Knife (<code>d4 Bladed</code>, Melee), Medium armor</div></div>
+
+</div>
+</div>
+
+<div class="fg-card">
+<div class="fg-card__head">Recovery Crew<small>Skirmisher: speed, guns, and a sharp interrogator</small></div>
+<div class="fg-card__body">
+
+<div class="fg-unit"><div class="fg-unit__name">Boss <span class="fg-unit__cost">12 subs</span></div>
+<div class="fg-statline"><span><b>HP</b> 16</span><span><b>Move</b> 4"</span><span><b>Com</b> 2d8</span><span><b>Def</b> 2d6</span><span><b>Wit</b> 2d6</span></div>
+<div class="fg-unit__gear">Needle Gun (<code>d4 Toxic</code>, Ranged, +1 vs wounded), Shiv (<code>d4 Toxic</code>, Melee, +1 vs wounded), Flak Wrap (armor 1)</div></div>
+
+<div class="fg-unit"><div class="fg-unit__name">Scout <span class="fg-unit__cost">12 subs</span></div>
+<div class="fg-statline"><span><b>HP</b> 12</span><span><b>Move</b> 6"</span><span><b>Com</b> 2d6</span><span><b>Def</b> 2d4</span><span><b>Wit</b> 2d8</span></div>
+<div class="fg-unit__gear">Arc Pistol (<code>d4 Static</code>, Ranged, no fumbles), Light Vest (armor 1). Free <code>Disengage</code></div></div>
+
+<div class="fg-unit"><div class="fg-unit__name">Gunner <span class="fg-unit__cost">12 subs</span></div>
+<div class="fg-statline"><span><b>HP</b> 14</span><span><b>Move</b> 4"</span><span><b>Com</b> 2d8</span><span><b>Def</b> 2d6</span><span><b>Wit</b> 2d4</span></div>
+<div class="fg-unit__gear">Laser (<code>d6 Energy</code>, Ranged, +1 DT if it did not move), Knife (<code>d4 Bladed</code>, Melee), Medium armor</div></div>
+
+<div class="fg-unit"><div class="fg-unit__name">Agent <span class="fg-unit__cost">12 subs</span></div>
+<div class="fg-statline"><span><b>HP</b> 14</span><span><b>Move</b> 4"</span><span><b>Com</b> 2d4</span><span><b>Def</b> 2d6</span><span><b>Wit</b> 2d8</span></div>
+<div class="fg-unit__gear">Pistol (<code>d4 Projectile</code>, Ranged), Sword (<code>d6 Bladed</code>, Melee). Re-roll failed <code>Wits</code> tests</div></div>
+
+<div class="fg-unit"><div class="fg-unit__name">Veteran <span class="fg-unit__cost">12 subs</span></div>
+<div class="fg-statline"><span><b>HP</b> 13</span><span><b>Move</b> 4"</span><span><b>Com</b> 2d6</span><span><b>Def</b> 2d6</span><span><b>Wit</b> 2d6</span></div>
+<div class="fg-unit__gear">Pistol (<code>d4 Projectile</code>, Ranged), Shiv (<code>d4 Toxic</code>, Melee, +1 vs wounded), Lining (armor 1). Tougher when hurt</div></div>
+
+</div>
+</div>
+
+</div>
+
+<h2 id="the-mission-extraction">The Mission: Extraction</h2>
+<div class="fg-note">
+<span class="fg-note__label">Briefing</span>
+<i>A data-slate surfaced in a dead drop near Junction Null. Both crews got the tip. The data-slate holds Department records worth more than anyone here earns in a cycle.</i>
+</div>
+
+<p>The <code>data-slate</code> sits at the center of the board. A model within 1" spends an <code>Interact</code> to pick it up. While carrying it, that model moves at half <code>Move</code> (round down) and cannot <code>Disengage</code>; an <code>Engaged</code> model cannot pick it up. If the carrier goes <code>Out of Action</code> or <code>Flee</code>, the <code>data-slate</code> drops where it stood (or at the board edge if it fled off the table), and any model can grab it again with <code>Interact</code>. The Feral Crews ignore the <code>data-slate</code>. (<code>Engaged</code>, <code>Flee</code> and <code>Out of Action</code> are defined in the <a href="rulebook#melee-engagement">Rulebook</a>.)</p>
+<p><b>Victory:</b> carry the <code>data-slate</code> off your own deployment edge. If neither side extracts it by game end, the side holding it wins; if no one holds it, the side with the most surviving models wins (tie: the Defender). The winner gains +1 <code>Lead</code>, and whoever holds the <code>data-slate</code> at the win gains +1 <code>Merit</code>.</p>
+<h2 id="set-up-the-board">Set Up the Board</h2>
+<p>A full game sets up using the Campaign tables (deployment, loot, coworkers, hostile timing). For your first game, use this fixed, simple version. The randomized setup lives in the <a href="campaign">Campaign rules</a> and the <a href="scenario/index">Scenario generator</a>.</p>
+<ol class="fg-steps">
+<li><b>Lay terrain</b> across the 2 foot by 2 foot table (see the note below the map).</li>
+<li><b>Decide sides.</b> With no campaign record yet, flip a coin: one player is the <b>Aggressor</b>, the other the <b>Defender</b>.</li>
+<li><b>Boss roll-off.</b> Both players roll their Boss's <code>Wits</code>. The winner is First Player for the rest of setup.</li>
+<li><b>Place the markers.</b> The Defender puts the objective (the <code>data-slate</code>) at the center, lays 4 <code>Loot Marker</code>s in an even line across the board through the center, and places three Coworkers (Data Clerk) within 3" of the center.</li>
+<li><b>Deploy.</b> First Player picks a table edge; the other takes the opposite edge. Starting with the Second Player, alternate placing one model at a time within your own edge.</li>
+<li><b>First draw.</b> First Player draws the first activation token. Set the Feral Crews aside: their first wave arrives at the start of Round 2.</li>
+</ol>
+
+<figure class="fg-board">
+<svg viewBox="-0.5 -0.5 25 25" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:420px;display:block;margin:0 auto;background:#fff;border:1px solid #94a3b8;border-radius:6px"><defs><pattern id="hatch-green" patternUnits="userSpaceOnUse" width="0.7" height="0.7" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="0.7" stroke="rgba(60,140,60,0.25)" stroke-width="0.2"></line></pattern><pattern id="hatch-yellow" patternUnits="userSpaceOnUse" width="1.2" height="1.2"><circle cx="0.6" cy="0.6" r="0.15" fill="rgba(180,160,30,0.3)"></circle></pattern><pattern id="hatch-red" patternUnits="userSpaceOnUse" width="0.8" height="0.8" patternTransform="rotate(-45)"><line x1="0" y1="0" x2="0" y2="0.8" stroke="rgba(180,60,60,0.2)" stroke-width="0.2"></line></pattern><pattern id="hatch-blue" patternUnits="userSpaceOnUse" width="0.8" height="0.8" patternTransform="rotate(-45)"><line x1="0" y1="0" x2="0" y2="0.8" stroke="rgba(60,100,180,0.2)" stroke-width="0.2"></line></pattern><pattern id="hatch-orange" patternUnits="userSpaceOnUse" width="0.8" height="0.8" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="0.8" stroke="rgba(200,120,40,0.2)" stroke-width="0.2"></line></pattern></defs><line x1="2" y1="0" x2="2" y2="24" stroke="#e8e8e8" stroke-width="0.03"></line><line x1="0" y1="2" x2="24" y2="2" stroke="#e8e8e8" stroke-width="0.03"></line><line x1="4" y1="0" x2="4" y2="24" stroke="#e8e8e8" stroke-width="0.03"></line><line x1="0" y1="4" x2="24" y2="4" stroke="#e8e8e8" stroke-width="0.03"></line><line x1="6" y1="0" x2="6" y2="24" stroke="#bbb" stroke-width="0.06"></line><line x1="0" y1="6" x2="24" y2="6" stroke="#bbb" stroke-width="0.06"></line><line x1="8" y1="0" x2="8" y2="24" stroke="#e8e8e8" stroke-width="0.03"></line><line x1="0" y1="8" x2="24" y2="8" stroke="#e8e8e8" stroke-width="0.03"></line><line x1="10" y1="0" x2="10" y2="24" stroke="#e8e8e8" stroke-width="0.03"></line><line x1="0" y1="10" x2="24" y2="10" stroke="#e8e8e8" stroke-width="0.03"></line><line x1="12" y1="0" x2="12" y2="24" stroke="#bbb" stroke-width="0.06"></line><line x1="0" y1="12" x2="24" y2="12" stroke="#bbb" stroke-width="0.06"></line><line x1="14" y1="0" x2="14" y2="24" stroke="#e8e8e8" stroke-width="0.03"></line><line x1="0" y1="14" x2="24" y2="14" stroke="#e8e8e8" stroke-width="0.03"></line><line x1="16" y1="0" x2="16" y2="24" stroke="#e8e8e8" stroke-width="0.03"></line><line x1="0" y1="16" x2="24" y2="16" stroke="#e8e8e8" stroke-width="0.03"></line><line x1="18" y1="0" x2="18" y2="24" stroke="#bbb" stroke-width="0.06"></line><line x1="0" y1="18" x2="24" y2="18" stroke="#bbb" stroke-width="0.06"></line><line x1="20" y1="0" x2="20" y2="24" stroke="#e8e8e8" stroke-width="0.03"></line><line x1="0" y1="20" x2="24" y2="20" stroke="#e8e8e8" stroke-width="0.03"></line><line x1="22" y1="0" x2="22" y2="24" stroke="#e8e8e8" stroke-width="0.03"></line><line x1="0" y1="22" x2="24" y2="22" stroke="#e8e8e8" stroke-width="0.03"></line><text x="6" y="-0.15" text-anchor="middle" font-size="0.45" fill="#aaa">6&quot;</text><text x="-0.15" y="6.15" text-anchor="end" font-size="0.45" fill="#aaa">6&quot;</text><text x="12" y="-0.15" text-anchor="middle" font-size="0.45" fill="#aaa">12&quot;</text><text x="-0.15" y="12.15" text-anchor="end" font-size="0.45" fill="#aaa">12&quot;</text><text x="18" y="-0.15" text-anchor="middle" font-size="0.45" fill="#aaa">18&quot;</text><text x="-0.15" y="18.15" text-anchor="end" font-size="0.45" fill="#aaa">18&quot;</text><rect x="0" y="0" width="24" height="24" fill="none" stroke="#000" stroke-width="0.12"></rect><rect x="0" y="0" width="24" height="0.5" fill="rgba(60,100,180,0.25)" stroke="#000" stroke-width="0.08"></rect><rect x="0" y="23.5" width="24" height="0.5" fill="rgba(180,60,60,0.30)" stroke="#000" stroke-width="0.08"></rect><circle cx="4.8" cy="12" r="0.6" fill="#FFD700" stroke="#000" stroke-width="0.08"></circle><circle cx="9.6" cy="12" r="0.6" fill="#FFD700" stroke="#000" stroke-width="0.08"></circle><circle cx="14.4" cy="12" r="0.6" fill="#FFD700" stroke="#000" stroke-width="0.08"></circle><circle cx="19.2" cy="12" r="0.6" fill="#FFD700" stroke="#000" stroke-width="0.08"></circle><circle cx="12" cy="12" r="3" fill="url(#hatch-green)" stroke="rgba(60,140,60,0.6)" stroke-width="0.12" stroke-dasharray="0.4 0.25"></circle><line x1="0" y1="0" x2="0" y2="24" stroke="rgba(180,60,60,0.8)" stroke-width="0.25"></line><g><circle cx="12" cy="12" r="0.95" fill="#FFD700" stroke="#000" stroke-width="0.12"></circle><circle cx="12" cy="12" r="0.38" fill="#1e293b"></circle></g><text x="4.8" y="12" text-anchor="middle" dominant-baseline="central" font-size="0.9" font-weight="bold" fill="#000">1</text><text x="9.6" y="12" text-anchor="middle" dominant-baseline="central" font-size="0.9" font-weight="bold" fill="#000">2</text><text x="14.4" y="12" text-anchor="middle" dominant-baseline="central" font-size="0.9" font-weight="bold" fill="#000">3</text><text x="19.2" y="12" text-anchor="middle" dominant-baseline="central" font-size="0.9" font-weight="bold" fill="#000">4</text><text x="12" y="1.5" text-anchor="middle" dominant-baseline="central" font-size="1.0499999999999998" font-weight="bold" fill="rgba(60,100,180,0.7)" stroke="white" stroke-width="0.25" paint-order="stroke">Aggressor</text><text x="12" y="22.5" text-anchor="middle" dominant-baseline="central" font-size="1.0499999999999998" font-weight="bold" fill="rgba(180,60,60,0.7)" stroke="white" stroke-width="0.25" paint-order="stroke">Defender</text><text x="12" y="13.8" text-anchor="middle" dominant-baseline="central" font-size="1.19" font-weight="bold" fill="rgba(60,140,60,0.6)" stroke="white" stroke-width="0.25" paint-order="stroke">Coworker zone</text><g><line x1="0" y1="12" x2="4.8" y2="12" stroke="rgba(0,0,0,0.45)" stroke-width="0.06" stroke-dasharray="0.2 0.15"></line><line x1="0" y1="11.7" x2="0" y2="12.3" stroke="rgba(0,0,0,0.45)" stroke-width="0.06"></line><line x1="4.8" y1="11.7" x2="4.8" y2="12.3" stroke="rgba(0,0,0,0.45)" stroke-width="0.06"></line><text x="2.4" y="12.25" text-anchor="middle" font-size="0.7" font-weight="bold" fill="rgba(0,0,0,0.45)" stroke="white" stroke-width="0.2" paint-order="stroke">5&quot;</text></g><g><line x1="4.8" y1="12" x2="9.6" y2="12" stroke="rgba(0,0,0,0.45)" stroke-width="0.06" stroke-dasharray="0.2 0.15"></line><line x1="4.8" y1="11.7" x2="4.8" y2="12.3" stroke="rgba(0,0,0,0.45)" stroke-width="0.06"></line><line x1="9.6" y1="11.7" x2="9.6" y2="12.3" stroke="rgba(0,0,0,0.45)" stroke-width="0.06"></line><text x="7.199999999999999" y="12.25" text-anchor="middle" font-size="0.7" font-weight="bold" fill="rgba(0,0,0,0.45)" stroke="white" stroke-width="0.2" paint-order="stroke">5&quot;</text></g><g><line x1="9.6" y1="12" x2="14.4" y2="12" stroke="rgba(0,0,0,0.45)" stroke-width="0.06" stroke-dasharray="0.2 0.15"></line><line x1="9.6" y1="11.7" x2="9.6" y2="12.3" stroke="rgba(0,0,0,0.45)" stroke-width="0.06"></line><line x1="14.4" y1="11.7" x2="14.4" y2="12.3" stroke="rgba(0,0,0,0.45)" stroke-width="0.06"></line></g><g><line x1="14.4" y1="12" x2="19.2" y2="12" stroke="rgba(0,0,0,0.45)" stroke-width="0.06" stroke-dasharray="0.2 0.15"></line><line x1="14.4" y1="11.7" x2="14.4" y2="12.3" stroke="rgba(0,0,0,0.45)" stroke-width="0.06"></line><line x1="19.2" y1="11.7" x2="19.2" y2="12.3" stroke="rgba(0,0,0,0.45)" stroke-width="0.06"></line><text x="16.8" y="12.25" text-anchor="middle" font-size="0.7" font-weight="bold" fill="rgba(0,0,0,0.45)" stroke="white" stroke-width="0.2" paint-order="stroke">5&quot;</text></g><g><line x1="19.2" y1="12" x2="24" y2="12" stroke="rgba(0,0,0,0.45)" stroke-width="0.06" stroke-dasharray="0.2 0.15"></line><line x1="19.2" y1="11.7" x2="19.2" y2="12.3" stroke="rgba(0,0,0,0.45)" stroke-width="0.06"></line><line x1="24" y1="11.7" x2="24" y2="12.3" stroke="rgba(0,0,0,0.45)" stroke-width="0.06"></line><text x="21.6" y="12.25" text-anchor="middle" font-size="0.7" font-weight="bold" fill="rgba(0,0,0,0.45)" stroke="white" stroke-width="0.2" paint-order="stroke">5&quot;</text></g><g><line x1="12" y1="11.5" x2="9" y2="11.5" stroke="rgba(0,0,0,0.45)" stroke-width="0.06" stroke-dasharray="0.2 0.15"></line><line x1="12" y1="11.2" x2="12" y2="11.8" stroke="rgba(0,0,0,0.45)" stroke-width="0.06"></line><line x1="9" y1="11.2" x2="9" y2="11.8" stroke="rgba(0,0,0,0.45)" stroke-width="0.06"></line><text x="10.5" y="11.75" text-anchor="middle" font-size="0.7" font-weight="bold" fill="rgba(0,0,0,0.45)" stroke="white" stroke-width="0.2" paint-order="stroke">3&quot;</text></g></svg>
+<figcaption>Extraction. Deploy along the top (Aggressor) and bottom (Defender) edges. The data-slate objective (gold bullseye) sits at the center, inside the Coworkers' 3" zone. The four Loot Markers (1 to 4) run evenly across the centerline. The Feral Crews spawn on a random side edge (here, the left) in two waves.</figcaption>
+</figure>
+
+<p style="text-align:center"><a href="scenario/?gap=0&amp;m=1&amp;dep=1&amp;cs=6&amp;cm=1&amp;ht=2&amp;hf=2&amp;ll=5&amp;lm=1&amp;sp=1&amp;hu0=3&amp;hu1=6&amp;cu=4&amp;ls=1"><b>Open this exact mission in the Scenario generator</b></a></p>
+
+<div class="fg-note fg-note--tip">
+<span class="fg-note__label">Keep open lanes under 12"</span>
+Arrange terrain so no clear line of sight runs longer than 12" across open ground. That keeps models in cover and stops the game from collapsing into a shoot-out across an empty table. If you have a clear line of sight from one edge to the other, add more scenery in between.
+</div>
+
+<h2 id="the-coworker">The Coworker</h2>
+<p>Three terrified Department workers (<a href="rulebook#coworkers">Coworkers</a>: Data Clerks) huddle within 3" of the objective. They mostly wait it out: their group takes its own token draw and usually does nothing. They give you two things to do. A model within 1" of the <code>data-slate</code> spends an <code>Interact</code> to grab it. A model within 1" of a Coworker spends an <a href="rulebook#interrogate"><code>Interrogate</code></a>. A model takes one Action per activation, but your squad can do both across the game: these are not either/or.</p>
+<div class="fg-card fg-card--coworker" style="max-width:520px;margin:1.25rem 0">
+<div class="fg-card__head">Coworkers: Data Clerk <small>3 (one group), within 3" of center</small></div>
+<div class="fg-card__body">
+<div class="fg-statline"><span><b>HP</b> 10</span><span><b>Move</b> 5"</span><span><b>Com</b> 2d4</span><span><b>Def</b> 2d6</span><span><b>Wit</b> 2d8</span></div>
+<div class="fg-unit__gear">Stun Gun (<code>d4 Energy</code>, Ranged). A nervous civilian: mostly hides, fights only if cornered.</div>
+</div>
+</div>
+
+<p><b>How they act.</b> The Coworkers are one group with their own token. When you draw it, roll once and the whole group does the same thing.</p>
+<table>
+<thead>
+<tr>
+<th>d6</th>
+<th>No line of sight</th>
+<th>Has line of sight</th>
+<th>Engaged</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 to 4</td>
+<td>Wait</td>
+<td>Wait</td>
+<td>Wait</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Cooperate</td>
+<td>Cooperate</td>
+<td>Cooperate</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Patrol</td>
+<td>Patrol</td>
+<td>Flee</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>Wait</code>: do nothing.</li>
+<li><code>Cooperate</code>: next round, you <code>Interrogate</code> them at <code>+1 DT</code>.</li>
+<li><code>Patrol</code>: drift toward the nearest <code>Loot Marker</code>.</li>
+<li><code>Flee</code>: move toward the nearest board edge.</li>
+</ul>
+<div class="fg-choice">
+<div><h4>Grab the data-slate</h4>Spend an <code>Interact</code> on the objective and run it home: the fastest path to the win.</div>
+<div><h4>Interrogate</h4>Spend an <code>Interrogate</code> on a Coworker: roll your <code>Wits</code> (<code>+1 DT</code> if the Coworker is wounded) against their <code>Wits</code> 2d8. Succeed and the Coworker is removed from the board, secrets pulled loose. The Recovery Crew's high <code>Wits</code> makes it good at this; the Compliance Team would rather just grab and go.</div>
+</div>
+
+<p>You do not need the Coworker to win. But interrogating them is how a campaign begins: secrets become <code>Evidence</code>, and <code>Evidence</code> opens the arcology's worst doors. None of that is tracked in a one-off game. The <a href="campaign">Campaign rules</a> start from there.</p>
+<h2 id="loot">Loot</h2>
+<p>Four <code>Loot Marker</code>s run across the middle of the board, the <code>data-slate</code> among them. A model within 1" of one (and not <code>Engaged</code>) can spend a <code>Search</code>: roll <code>Wits</code> vs 2d6. Succeed, remove the marker, and roll a d20 on the Search table for what you find: subs, a random weapon, a grenade or consumable, or campaign <code>Evidence</code> and <code>Lead</code>s. In a one-off game the subs and campaign rewards are just bragging rights, but a grenade or consumable you can use on the spot. (Full table: <a href="rulebook#search">Search</a>.)</p>
+<h2 id="the-enemy-feral-crews">The Enemy: Feral Crews</h2>
+<p>Once-human workers gone feral: their skin stained green over generations of drinking the coolant that leaks from the cooling systems above (water is subscription-only). They are an uncontrolled third side, ignoring your objectives and attacking whoever is closest. They hit in <b>two waves</b>: three Gunners in Round 2, then their Boss in Round 4. (Full faction: <a href="rulebook#feral-crews">Feral Crews</a>.)</p>
+<div class="fg-cards">
+<div class="fg-card fg-card--enemy">
+<div class="fg-card__head">Gunner <small>Round 2 (Normal): 3 of them</small></div>
+<div class="fg-card__body">
+<div class="fg-statline"><span><b>HP</b> 10</span><span><b>Move</b> 4"</span><span><b>Com</b> 2d6</span><span><b>Def</b> 2d6</span><span><b>Wit</b> 2d4</span></div>
+<div class="fg-unit__gear">Slug Gun (<code>d6 Projectile</code>, Ranged)</div>
+</div>
+</div>
+<div class="fg-card fg-card--enemy">
+<div class="fg-card__head">Boss <small>Round 4 (Elite): 1, the scarred leader</small></div>
+<div class="fg-card__body">
+<div class="fg-statline"><span><b>HP</b> 14</span><span><b>Move</b> 4"</span><span><b>Com</b> 2d10</span><span><b>Def</b> 2d6</span><span><b>Wit</b> 2d6</span></div>
+<div class="fg-unit__gear">Crush Fist (<code>d10 Blunt</code>, Melee)</div>
+</div>
+</div>
+</div>
+
+<p><b>How they act.</b> Each wave arrives at the start of its round on a random board edge that neither player deployed on, as close to the center as that edge allows. A wave is one group with its own token in the bag: when you draw it, roll once on the table below and every model in the group does the same thing, acting on the closest target first. Remove a Crew model when it goes <code>Out of Action</code>.</p>
+<table>
+<thead>
+<tr>
+<th>d6</th>
+<th>No line of sight</th>
+<th>Has line of sight</th>
+<th>Engaged</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 to 4</td>
+<td>Patrol</td>
+<td>Attack</td>
+<td>Attack</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Patrol</td>
+<td>Mob Up</td>
+<td>Mob Up</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Regroup</td>
+<td>Attack</td>
+<td>Frenzy</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>Patrol</code>: move toward the nearest <code>Loot Marker</code> (or randomly if none in sight).</li>
+<li><code>Regroup</code>: move toward the nearest friendly model.</li>
+<li><code>Mob Up</code>: make a <code>Combat</code> attack at <code>+1 DT</code>.</li>
+<li><code>Frenzy</code>: attack twice.</li>
+</ul>
+<p>The full hostile rules and the other five factions are in the <a href="rulebook#spawning-hostiles">Rulebook</a>.</p>
+<h2 id="play-your-first-turn">Play Your First Turn</h2>
+<p><b>Each round, in order:</b></p>
+<ol class="fg-steps">
+<li><b>Corporate Blessings.</b> Roll a d8 three times and apply the results (<a href="rulebook#corporate-blessings">Rulebook</a>).</li>
+<li><b>Reinforcements.</b> If a Feral Crews wave is due (Round 2, then Round 4), place each one on a random unused edge and add its tokens.</li>
+<li><b>Fill the bag.</b> One token per model or group still in play.</li>
+<li><b>Draw and activate.</b> Pull tokens one at a time; the side you draw activates one model (a Move and an <a href="rulebook#actions">Action</a>, in either order). Hostile and Coworker groups act on their AI table (<a href="rulebook#spawning-hostiles">Spawning Hostiles</a>).</li>
+<li><b>End of round.</b> When the bag is empty, the round ends. From Round 5, roll a d6 to see if the game stops (Round 5: 3+, Round 6: 2+; Round 7 ends automatically).</li>
+</ol>
+
+<p>The example below jumps to <b>Round 2</b>, after the Feral Crews arrive (Round 1 is mostly maneuvering toward the center).</p>
+<div class="fg-note">
+<span class="fg-note__label">Your activation: Brute (Compliance Team)</span>
+<ol>
+<li><b>Move.</b> The Brute moves its full 3" toward the center, ending next to a Feral Crews Gunner.</li>
+<li><b>Attack.</b> Brute <code>Combat</code> 2d8 against the Gunner's <code>Defense</code> 2d6. You roll <b>11</b> (5 and 6); the Gunner rolls <b>8</b> (4 and 4). 11 beats 8: hit.</li>
+<li><b>Damage.</b> The Sword deals <code>d6+1</code>. You roll a 4, for <b>5</b>. The Gunner has no armor and 10 <code>Health</code>: it drops to 5, wounded.</li>
+</ol>
+</div>
+
+<div class="fg-note fg-note--enemy" style="border-left-color:#7f1d1d">
+<span class="fg-note__label">Hostile activation: Feral Crews</span>
+
+You draw a Feral Crews token. Roll the behavior (d6): you get a <b>2</b>, and with line of sight that means <code>Attack</code>. A second Gunner, a few inches back, fires its Slug Gun at the Brute. Gunner <code>Combat</code> 2d6 (<b>8</b>, from 4 and 4) against Brute <code>Defense</code> 2d6 (<b>7</b>, from 3 and 4). 8 beats 7: hit. The Slug Gun deals <code>d6</code>; you roll 3, and the Brute's armor 1 leaves <b>2</b> damage. The Brute drops to 12 <code>Health</code> and fights on.
+</div>
+
+<div class="fg-note fg-note--heresy">
+<span class="fg-note__label">Heresy</span>
+Tempted to call for a wireless uplink to speed this up? Don't. Wireless is heresy down here, and it draws things worse than the Crews. Stay wired.
+</div>
+
+<p><b>Who wins?</b> Play on until the game ends (somewhere in Rounds 5 to 7). The winner is whoever carries the <code>data-slate</code> off their own deployment edge, or holds it when time runs out (see <b>The Mission</b> above). String games together and each result feeds a campaign, which builds toward its own <a href="rulebook#campaign-victory">Campaign Victory</a>.</p>
+<h2 id="where-next">Where Next</h2>
+<p>You played your first game. <strong><a href="feedback">Tell us how it went</a></strong> (two minutes, no account). It genuinely shapes the game. Ready for more?</p>
+<div class="fg-cards fg-cards--2col">
+<div class="fg-card"><div class="fg-card__head">Full Rules</div><div class="fg-card__body">Criticals, <a href="rulebook#broadcast-powers">broadcast powers</a>, every action and weapon. <a href="rulebook">Read the rulebook</a></div></div>
+<div class="fg-card"><div class="fg-card__head">Quick Reference</div><div class="fg-card__body">The whole game on two pages, made to print. <a href="qr">Open the Quick Reference</a></div></div>
+<div class="fg-card"><div class="fg-card__head">Squad Builder</div><div class="fg-card__body">Spend your 60 subs your own way. <a href="builder/">Build a squad</a></div></div>
+<div class="fg-card"><div class="fg-card__head">Scenarios</div><div class="fg-card__body">Twelve missions and a generator. <a href="scenario/">Browse scenarios</a></div></div>
+</div>
+    </main>
+    
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('.app-menu');
+            if (!nav) return;
+            nav.dataset.open = nav.dataset.open === 'true' ? 'false' : 'true';
+        }
+    </script>
+</body>
+</html>

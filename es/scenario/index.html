@@ -21,6 +21,9 @@
     <meta name="twitter:title" content="Hardwired 28 - Generador de Escenario">
     <meta name="twitter:description" content="Genera una misión aleatoria de Hardwired 28: despliegue, objetivos, hostiles y botín para el juego de escaramuzas cablepunk.">
     <meta name="twitter:image" content="https://hardwired28.luismars.com/img/social.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Work+Sans:wght@300;400;500;600&family=Montserrat:wght@600;700;800;900&family=PT+Serif:wght@400;700&family=Ubuntu+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../style-base.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin></script>
@@ -47,16 +50,34 @@
             <a class="app-menu__brand" href="../">Hardwired 28</a>
             <button class="app-menu__toggle" type="button" onclick="toggleMenu()" aria-label="Menú"></button>
             <div class="app-menu__links">
-                <a href="../rulebook">Reglamento</a>
-                <a href="../print">Imprimir</a>
-                <a href="../quick-reference">Referencia Rápida</a>
-                <a href="../builder/">Creador de Plantillas</a>
-                <a href="./" class="current">Escenarios</a>
+                <a href="../first-game" class="app-menu__cta">Primera Partida</a>
+                <a href="../rulebook">Reglas</a>
+                <div class="app-menu__dropdown">
+                    <button class="app-menu__dropdown-toggle">Imprimir</button>
+                    <div class="app-menu__submenu">
+                        <a href="../quick-reference">Referencia Rápida</a>
+                        <a href="../print">Todas las Reglas</a>
+                        <a href="../core-rules">Reglas Básicas</a>
+                        <a href="../inhuman-resources">Recursos Inhumanos</a>
+                        <a href="../campaign">Campaña</a>
+                    </div>
+                </div>
+                <div class="app-menu__dropdown">
+                    <button class="app-menu__dropdown-toggle">Herramientas</button>
+                    <div class="app-menu__submenu">
+                        <a href="../builder/">Creador de Plantillas</a>
+                        <a href="./" class="current">Escenarios</a>
+                    </div>
+                </div>
+                <a href="../feedback">Comentarios</a>
                 <a href="../../scenario/">English</a>
             </div>
         </div>
     </nav>
     <div id="root"><div class="loading">Cargando Generador de Escenario...</div></div>
+    <footer style="text-align:center;padding:1.5rem 1rem;font-size:0.85rem;color:#64748b">
+        <a href="../feedback" style="color:#2563eb">Comentarios</a> &middot; <a href="https://github.com/LuisMars/hardwired28-pages/issues" target="_blank" rel="noopener" style="color:#2563eb">Informar de un error</a>
+    </footer>
     <script>
         function toggleMenu() {
             const nav = document.querySelector('.app-menu');
@@ -69,7 +90,16 @@
         window.SCENARIO_DATA = null;
         window.LOCALE = 'es';
 
-        const fetchJson = url => fetch(url).then(r => r.ok ? r.json() : null).catch(() => null);
+        // Retry only on network/connection errors (dev-server rebuilds reset connections),
+        // not on HTTP 404 (a missing locale file is an intentional fallback, not a failure).
+        const fetchJson = (url, tries = 4) => fetch(url).then(
+            r => r.ok ? r.json() : null,
+            err => {
+                if (tries > 1) return new Promise(res => setTimeout(res, 200)).then(() => fetchJson(url, tries - 1));
+                console.error('fetchJson gave up:', url, err);
+                return null;
+            }
+        ).catch(() => null);
 
         // Try ES data first, fall back to shared EN data
         function fetchLocaleJson(path) {

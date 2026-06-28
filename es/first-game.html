@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primera Partida: Hardwired 28 0.7.3-beta</title>
+    <meta property="og:title" content="Primera Partida: Hardwired 28 0.7.3-beta">
+    <meta property="og:description" content="Juego de escaramuzas cablepunk corporativo">
+    <meta property="og:image" content="https://hardwired28.luismars.com/img/social.png">
+    <meta property="og:url" content="https://hardwired28.luismars.com/es/first-game.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="description" content="Hardwired 28 es un juego de escaramuzas cablepunk: dirige una escuadra corporativa por una arcologia en ruinas donde la conexion por cable es sagrada y lo inalambrico es herejia.">
+    <link rel="canonical" href="https://hardwired28.luismars.com/es/first-game.html">
+    <link rel="alternate" hreflang="en" href="https://hardwired28.luismars.com/first-game.html">
+    <link rel="alternate" hreflang="es" href="https://hardwired28.luismars.com/es/first-game.html">
+    <link rel="alternate" hreflang="x-default" href="https://hardwired28.luismars.com/first-game.html">
+    <meta name="twitter:title" content="Primera Partida: Hardwired 28 0.7.3-beta">
+    <meta name="twitter:description" content="Hardwired 28 es un juego de escaramuzas cablepunk: dirige una escuadra corporativa por una arcologia en ruinas donde la conexion por cable es sagrada y lo inalambrico es herejia.">
+    <meta name="twitter:image" content="https://hardwired28.luismars.com/img/social.png">
+    <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+    <script data-goatcounter="https://hardwired28.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    <link rel="stylesheet" href="../normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Work+Sans:wght@300;400;500;600&family=Montserrat:wght@600;700;800;900&family=PT+Serif:wght@400;700&family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style-base.css">
+    <link rel="stylesheet" href="../style_landing.css">
+</head>
+<body class="has-app-menu landing-page page-first-game">
+    
+    <nav class="app-menu" data-theme="corporate" data-open="false" aria-label="Navigation">
+        <div class="app-menu__inner">
+            <a class="app-menu__brand" href="./">Hardwired 28</a>
+            <button class="app-menu__toggle" type="button" onclick="toggleMenu()" aria-label="Menú"></button>
+            <div class="app-menu__links">
+                <a href="first-game" class="app-menu__cta current">Primera Partida</a>
+                <a href="rulebook">Reglas</a>
+                <div class="app-menu__dropdown">
+                    <button class="app-menu__dropdown-toggle">Imprimir</button>
+                    <div class="app-menu__submenu">
+                        <a href="quick-reference">Referencia Rápida</a>
+                        <a href="print">Todas las Reglas</a>
+                        <a href="core-rules">Reglas Básicas</a>
+                        <a href="inhuman-resources">Recursos Inhumanos</a>
+                        <a href="campaign">Campaña</a>
+                    </div>
+                </div>
+                <div class="app-menu__dropdown">
+                    <button class="app-menu__dropdown-toggle">Herramientas</button>
+                    <div class="app-menu__submenu">
+                        <a href="builder/index">Creador de Plantillas</a>
+                        <a href="scenario/index">Escenarios</a>
+                    </div>
+                </div>
+                <a href="feedback">Comentarios</a>
+                <a href="../first-game">English</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="landing-content">
+<h1 id="tu-primera-partida">Tu Primera Partida</h1>
+<p>Dos escuadras combaten por los niveles muertos de una arcología que se derrumba, donde la conexión por cable es sagrada y la conexión inalámbrica es herejía. Esta página te enseña una partida completa desde cero. Cubre solo lo que necesitas y enlaza a las reglas completas para el resto. Busca un amigo y unos dados.</p>
+<h2 id="qué-necesitas">Qué necesitas</h2>
+<ul class="fg-checklist">
+<li>10 miniaturas de escuadra o sustitutos (5 cada una, una escuadra por jugador)</li>
+<li>3 miniaturas de Compañeros</li>
+<li>4 miniaturas de las Bandas (3 Tiradores y 1 Jefe)</li>
+<li>1 marcador de objetivo (la <code>tableta de datos</code>) para el centro</li>
+<li>4 <code>Marcadores de Botín</code>, en línea por el centro (fichas o monedas)</li>
+<li>Dos de cada: d4, d6, d8, d10 y d12, y un d20 (para buscar botín)</li>
+<li>Una cinta métrica o regla (pulgadas)</li>
+<li>Una bolsa o vaso opaco, y una ficha por miniatura o grupo para sacar de ella</li>
+<li>Una mesa de 60 por 60 centímetros con bastante escenografía</li>
+</ul>
+
+<div class="fg-note fg-note--tip">
+<span class="fg-note__label">Imprime la Referencia Rápida</span>
+La <a href="qr">Referencia Rápida</a> mete todo el juego (atributos, acciones, combate, la tabla de hostiles) en dos páginas. Ábrela en el móvil o imprímela (Ctrl+P / Cmd+P) y tenla a mano en la mesa mientras juegas.
+</div>
+
+<h2 id="el-juego-en-60-segundos">El juego en 60 segundos</h2>
+<div class="fg-note fg-note--tip">
+<span class="fg-note__label">Niveles de Dado (<b>ND</b>)</span>
+Cada atributo es un nivel: <b>2d4, 2d6, 2d8, 2d10, 2d12</b>. Siempre tiras dos dados de ese tamaño y sumas. Un <code>+1 ND</code> sube un tamaño, un <code>-1 ND</code> baja uno. En un enfrentamiento, ambos bandos tiran y suman: gana el total más alto. En empate gana el nivel inferior (un 2d6 gana a un 2d8); con el mismo tamaño, se repite. (Desglose completo: <a href="rulebook#mecánicas-básicas">Mecánicas Básicas</a>.)
+</div>
+
+<p>Los jugadores se turnan sacando fichas de activación de una bolsa. El bando que saques activa una miniatura: hace un Movimiento y una Acción, en el orden que quieras, moviéndose hasta su <code>Mov</code> en pulgadas. Para atacar, tira tu <code>Combate</code> contra la <code>Defensa</code> del objetivo: si ganas, tiras el daño del arma (reglas completas en <a href="rulebook#resolución-de-ataques">Resolución de Ataques</a>; un dado de daño al máximo abre un <a href="rulebook#críticos">Crítico</a>).</p>
+<p>Las únicas <code>Acciones</code> que necesitas hoy: <code>Atacar</code>, <code>Moverse de Nuevo</code>, <code>Interactuar</code> (usa un marcador a 1"), <code>Buscar</code> (un <code>Marcador de Botín</code> a 1"), <code>Interrogar</code> (un Compañero a 1"), y <code>Destrabarse</code> (abandona <code>Trabado</code> con seguridad). Consulta el <a href="rulebook">Reglamento</a> para el resto.</p>
+<h2 id="elige-tu-escuadra">Elige tu escuadra</h2>
+<p>Dale una escuadra a cada jugador. Ambas cuestan 60 subs (12 por miniatura) y están listas para jugar. ¿Quieres crear la tuya la próxima vez? Usa el <a href="builder/index">Creador de Plantillas</a>. Cada arma y armadura está en <a href="rulebook#armas-y-armadura">Armas y Armadura</a>.</p>
+<div class="fg-cards">
+
+<div class="fg-card">
+<div class="fg-card__head">Equipo de Cumplimiento<small>Asalto: golpea fuerte de cerca</small></div>
+<div class="fg-card__body">
+
+<div class="fg-unit"><div class="fg-unit__name">Jefe <span class="fg-unit__cost">12 subs</span></div>
+<div class="fg-statline"><span><b>Salud</b> 16</span><span><b>Mov</b> 4"</span><span><b>Com</b> 2d8</span><span><b>Def</b> 2d6</span><span><b>Ast</b> 2d6</span></div>
+<div class="fg-unit__gear">Aguja (<code>d4 Tóxico</code>, Disparo, +1 vs herido), Punzón (<code>d4 Tóxico</code>, CC, +1 vs herido), Blindaje Ligero (armadura 1)</div></div>
+
+<div class="fg-unit"><div class="fg-unit__name">Bruto <span class="fg-unit__cost">12 subs</span></div>
+<div class="fg-statline"><span><b>Salud</b> 14</span><span><b>Mov</b> 3"</span><span><b>Com</b> 2d8</span><span><b>Def</b> 2d6</span><span><b>Ast</b> 2d4</span></div>
+<div class="fg-unit__gear">Espada (<code>d6+1 Cortante</code>, CC), Malla Simple (armadura 1). Puede llevar armadura Pesada</div></div>
+
+<div class="fg-unit"><div class="fg-unit__name">Zelote <span class="fg-unit__cost">12 subs</span></div>
+<div class="fg-statline"><span><b>Salud</b> 12</span><span><b>Mov</b> 5"</span><span><b>Com</b> 2d8</span><span><b>Def</b> 2d4</span><span><b>Ast</b> 2d6</span></div>
+<div class="fg-unit__gear">Inyector (<code>d6 Tóxico</code>, CC), Cuchillo (<code>d4 Cortante</code>, CC). +1 ND vs 2+ enemigos, solo CC</div></div>
+
+<div class="fg-unit"><div class="fg-unit__name">Veterano <span class="fg-unit__cost">12 subs</span></div>
+<div class="fg-statline"><span><b>Salud</b> 13</span><span><b>Mov</b> 4"</span><span><b>Com</b> 2d6</span><span><b>Def</b> 2d6</span><span><b>Ast</b> 2d6</span></div>
+<div class="fg-unit__gear">Pistola (<code>d4 Proyectil</code>, Disparo), Punzón (<code>d4 Tóxico</code>, CC, +1 vs herido), Forro (armadura 1). Más duro al estar herido</div></div>
+
+<div class="fg-unit"><div class="fg-unit__name">Tirador <span class="fg-unit__cost">12 subs</span></div>
+<div class="fg-statline"><span><b>Salud</b> 14</span><span><b>Mov</b> 4"</span><span><b>Com</b> 2d8</span><span><b>Def</b> 2d6</span><span><b>Ast</b> 2d4</span></div>
+<div class="fg-unit__gear">Láser (<code>d6 Energía</code>, Disparo, +1 ND si no se movió), Cuchillo (<code>d4 Cortante</code>, CC), armadura Media</div></div>
+
+</div>
+</div>
+
+<div class="fg-card">
+<div class="fg-card__head">Equipo de Recuperación<small>Hostigador: velocidad, armas y un interrogador hábil</small></div>
+<div class="fg-card__body">
+
+<div class="fg-unit"><div class="fg-unit__name">Jefe <span class="fg-unit__cost">12 subs</span></div>
+<div class="fg-statline"><span><b>Salud</b> 16</span><span><b>Mov</b> 4"</span><span><b>Com</b> 2d8</span><span><b>Def</b> 2d6</span><span><b>Ast</b> 2d6</span></div>
+<div class="fg-unit__gear">Aguja (<code>d4 Tóxico</code>, Disparo, +1 vs herido), Punzón (<code>d4 Tóxico</code>, CC, +1 vs herido), Blindaje Ligero (armadura 1)</div></div>
+
+<div class="fg-unit"><div class="fg-unit__name">Explorador <span class="fg-unit__cost">12 subs</span></div>
+<div class="fg-statline"><span><b>Salud</b> 12</span><span><b>Mov</b> 6"</span><span><b>Com</b> 2d6</span><span><b>Def</b> 2d4</span><span><b>Ast</b> 2d8</span></div>
+<div class="fg-unit__gear">Pistola de Arco (<code>d4 Estático</code>, Disparo, sin pifias), Chaleco Ligero (armadura 1). <code>Destrabarse</code> gratis</div></div>
+
+<div class="fg-unit"><div class="fg-unit__name">Tirador <span class="fg-unit__cost">12 subs</span></div>
+<div class="fg-statline"><span><b>Salud</b> 14</span><span><b>Mov</b> 4"</span><span><b>Com</b> 2d8</span><span><b>Def</b> 2d6</span><span><b>Ast</b> 2d4</span></div>
+<div class="fg-unit__gear">Láser (<code>d6 Energía</code>, Disparo, +1 ND si no se movió), Cuchillo (<code>d4 Cortante</code>, CC), armadura Media</div></div>
+
+<div class="fg-unit"><div class="fg-unit__name">Agente <span class="fg-unit__cost">12 subs</span></div>
+<div class="fg-statline"><span><b>Salud</b> 14</span><span><b>Mov</b> 4"</span><span><b>Com</b> 2d4</span><span><b>Def</b> 2d6</span><span><b>Ast</b> 2d8</span></div>
+<div class="fg-unit__gear">Pistola (<code>d4 Proyectil</code>, Disparo), Espada (<code>d6 Cortante</code>, CC). Repite tiradas de <code>Astucia</code> fallidas</div></div>
+
+<div class="fg-unit"><div class="fg-unit__name">Veterano <span class="fg-unit__cost">12 subs</span></div>
+<div class="fg-statline"><span><b>Salud</b> 13</span><span><b>Mov</b> 4"</span><span><b>Com</b> 2d6</span><span><b>Def</b> 2d6</span><span><b>Ast</b> 2d6</span></div>
+<div class="fg-unit__gear">Pistola (<code>d4 Proyectil</code>, Disparo), Punzón (<code>d4 Tóxico</code>, CC, +1 vs herido), Forro (armadura 1). Más duro al estar herido</div></div>
+
+</div>
+</div>
+
+</div>
+
+<h2 id="la-misión-extracción">La misión: Extracción</h2>
+<div class="fg-note">
+<span class="fg-note__label">Informe</span>
+<i>Una tableta de datos apareció en un buzón muerto cerca de la Confluencia Nula. Ambas cuadrillas recibieron el soplo. La tableta de datos contiene registros departamentales que valen más de lo que cualquiera aquí gana en un ciclo.</i>
+</div>
+
+<p>La <code>tableta de datos</code> está en el centro del tablero. Una miniatura a 1" gasta un <code>Interactuar</code> para cogerla. Mientras la lleva, se mueve a la mitad de su <code>Mov</code> (redondea hacia abajo) y no puede <code>Destrabarse</code>; una miniatura <code>Trabada</code> no puede cogerla. Si el portador queda <code>Fuera de Combate</code> o entra en <code>Huida</code>, la <code>tableta de datos</code> cae donde estaba (o en el borde de la mesa si huyó fuera), y cualquier miniatura puede volver a cogerla con <code>Interactuar</code>. Las Bandas ignoran la <code>tableta de datos</code>. (<code>Trabado</code>, <code>Huida</code> y <code>Fuera de Combate</code> se definen en el <a href="rulebook#combate-cuerpo-a-cuerpo">Reglamento</a>.)</p>
+<p><b>Victoria:</b> saca la <code>tableta de datos</code> por tu propio borde de despliegue. Si ninguno la extrae al final, gana el bando que la tenga; si nadie la lleva, gana el bando con más miniaturas en pie (empate: el Defensor). El ganador recibe +1 <code>Pista</code>, y quien tenga la <code>tableta de datos</code> al ganar recibe +1 <code>Mérito</code>.</p>
+<h2 id="prepara-el-tablero">Prepara el tablero</h2>
+<p>Una partida completa decide su preparación tirando en las tablas de Campaña (despliegue, botín, compañeros, llegada de hostiles). Para tu primera partida, usa esta versión fija y sencilla. La preparación aleatoria está en las <a href="campaign">reglas de Campaña</a> y el <a href="scenario/index">Generador de Escenarios</a>.</p>
+<ol class="fg-steps">
+<li><b>Coloca escenografía</b> por la mesa de 60 por 60 centímetros (mira la nota bajo el mapa).</li>
+<li><b>Decide los bandos.</b> Sin historial de campaña, lanza una moneda: un jugador es el <b>Agresor</b> y el otro el <b>Defensor</b>.</li>
+<li><b>Duelo de Jefes.</b> Cada jugador tira la <code>Astucia</code> de su Jefe. El ganador es Primer Jugador durante el resto de la preparación.</li>
+<li><b>Coloca los marcadores.</b> El Defensor pone el objetivo (la <code>tableta de datos</code>) en el centro, coloca 4 <code>Marcadores de Botín</code> en línea recta cruzando el centro, y coloca tres Compañeros (Administrativo) a 3" del centro.</li>
+<li><b>Despliegue.</b> El Primer Jugador elige un borde; el otro toma el borde opuesto. Empezando por el Segundo Jugador, alterna colocando una miniatura cada vez sobre tu propio borde.</li>
+<li><b>Primera ficha.</b> El Primer Jugador roba la primera ficha de activación. Aparta las Bandas: su primera oleada llega al inicio de la Ronda 2.</li>
+</ol>
+
+<figure class="fg-board">
+<svg viewBox="-0.5 -0.5 25 25" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:420px;display:block;margin:0 auto;background:#fff;border:1px solid #94a3b8;border-radius:6px"><defs><pattern id="hatch-green" patternUnits="userSpaceOnUse" width="0.7" height="0.7" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="0.7" stroke="rgba(60,140,60,0.25)" stroke-width="0.2"></line></pattern><pattern id="hatch-yellow" patternUnits="userSpaceOnUse" width="1.2" height="1.2"><circle cx="0.6" cy="0.6" r="0.15" fill="rgba(180,160,30,0.3)"></circle></pattern><pattern id="hatch-red" patternUnits="userSpaceOnUse" width="0.8" height="0.8" patternTransform="rotate(-45)"><line x1="0" y1="0" x2="0" y2="0.8" stroke="rgba(180,60,60,0.2)" stroke-width="0.2"></line></pattern><pattern id="hatch-blue" patternUnits="userSpaceOnUse" width="0.8" height="0.8" patternTransform="rotate(-45)"><line x1="0" y1="0" x2="0" y2="0.8" stroke="rgba(60,100,180,0.2)" stroke-width="0.2"></line></pattern><pattern id="hatch-orange" patternUnits="userSpaceOnUse" width="0.8" height="0.8" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="0.8" stroke="rgba(200,120,40,0.2)" stroke-width="0.2"></line></pattern></defs><line x1="2" y1="0" x2="2" y2="24" stroke="#e8e8e8" stroke-width="0.03"></line><line x1="0" y1="2" x2="24" y2="2" stroke="#e8e8e8" stroke-width="0.03"></line><line x1="4" y1="0" x2="4" y2="24" stroke="#e8e8e8" stroke-width="0.03"></line><line x1="0" y1="4" x2="24" y2="4" stroke="#e8e8e8" stroke-width="0.03"></line><line x1="6" y1="0" x2="6" y2="24" stroke="#bbb" stroke-width="0.06"></line><line x1="0" y1="6" x2="24" y2="6" stroke="#bbb" stroke-width="0.06"></line><line x1="8" y1="0" x2="8" y2="24" stroke="#e8e8e8" stroke-width="0.03"></line><line x1="0" y1="8" x2="24" y2="8" stroke="#e8e8e8" stroke-width="0.03"></line><line x1="10" y1="0" x2="10" y2="24" stroke="#e8e8e8" stroke-width="0.03"></line><line x1="0" y1="10" x2="24" y2="10" stroke="#e8e8e8" stroke-width="0.03"></line><line x1="12" y1="0" x2="12" y2="24" stroke="#bbb" stroke-width="0.06"></line><line x1="0" y1="12" x2="24" y2="12" stroke="#bbb" stroke-width="0.06"></line><line x1="14" y1="0" x2="14" y2="24" stroke="#e8e8e8" stroke-width="0.03"></line><line x1="0" y1="14" x2="24" y2="14" stroke="#e8e8e8" stroke-width="0.03"></line><line x1="16" y1="0" x2="16" y2="24" stroke="#e8e8e8" stroke-width="0.03"></line><line x1="0" y1="16" x2="24" y2="16" stroke="#e8e8e8" stroke-width="0.03"></line><line x1="18" y1="0" x2="18" y2="24" stroke="#bbb" stroke-width="0.06"></line><line x1="0" y1="18" x2="24" y2="18" stroke="#bbb" stroke-width="0.06"></line><line x1="20" y1="0" x2="20" y2="24" stroke="#e8e8e8" stroke-width="0.03"></line><line x1="0" y1="20" x2="24" y2="20" stroke="#e8e8e8" stroke-width="0.03"></line><line x1="22" y1="0" x2="22" y2="24" stroke="#e8e8e8" stroke-width="0.03"></line><line x1="0" y1="22" x2="24" y2="22" stroke="#e8e8e8" stroke-width="0.03"></line><text x="6" y="-0.15" text-anchor="middle" font-size="0.45" fill="#aaa">6&quot;</text><text x="-0.15" y="6.15" text-anchor="end" font-size="0.45" fill="#aaa">6&quot;</text><text x="12" y="-0.15" text-anchor="middle" font-size="0.45" fill="#aaa">12&quot;</text><text x="-0.15" y="12.15" text-anchor="end" font-size="0.45" fill="#aaa">12&quot;</text><text x="18" y="-0.15" text-anchor="middle" font-size="0.45" fill="#aaa">18&quot;</text><text x="-0.15" y="18.15" text-anchor="end" font-size="0.45" fill="#aaa">18&quot;</text><rect x="0" y="0" width="24" height="24" fill="none" stroke="#000" stroke-width="0.12"></rect><rect x="0" y="0" width="24" height="0.5" fill="rgba(60,100,180,0.25)" stroke="#000" stroke-width="0.08"></rect><rect x="0" y="23.5" width="24" height="0.5" fill="rgba(180,60,60,0.30)" stroke="#000" stroke-width="0.08"></rect><circle cx="4.8" cy="12" r="0.6" fill="#FFD700" stroke="#000" stroke-width="0.08"></circle><circle cx="9.6" cy="12" r="0.6" fill="#FFD700" stroke="#000" stroke-width="0.08"></circle><circle cx="14.4" cy="12" r="0.6" fill="#FFD700" stroke="#000" stroke-width="0.08"></circle><circle cx="19.2" cy="12" r="0.6" fill="#FFD700" stroke="#000" stroke-width="0.08"></circle><circle cx="12" cy="12" r="3" fill="url(#hatch-green)" stroke="rgba(60,140,60,0.6)" stroke-width="0.12" stroke-dasharray="0.4 0.25"></circle><line x1="0" y1="0" x2="0" y2="24" stroke="rgba(180,60,60,0.8)" stroke-width="0.25"></line><g><circle cx="12" cy="12" r="0.95" fill="#FFD700" stroke="#000" stroke-width="0.12"></circle><circle cx="12" cy="12" r="0.38" fill="#1e293b"></circle></g><text x="4.8" y="12" text-anchor="middle" dominant-baseline="central" font-size="0.9" font-weight="bold" fill="#000">1</text><text x="9.6" y="12" text-anchor="middle" dominant-baseline="central" font-size="0.9" font-weight="bold" fill="#000">2</text><text x="14.4" y="12" text-anchor="middle" dominant-baseline="central" font-size="0.9" font-weight="bold" fill="#000">3</text><text x="19.2" y="12" text-anchor="middle" dominant-baseline="central" font-size="0.9" font-weight="bold" fill="#000">4</text><text x="12" y="1.5" text-anchor="middle" dominant-baseline="central" font-size="1.0499999999999998" font-weight="bold" fill="rgba(60,100,180,0.7)" stroke="white" stroke-width="0.25" paint-order="stroke">Agresor</text><text x="12" y="22.5" text-anchor="middle" dominant-baseline="central" font-size="1.0499999999999998" font-weight="bold" fill="rgba(180,60,60,0.7)" stroke="white" stroke-width="0.25" paint-order="stroke">Defensor</text><text x="12" y="13.8" text-anchor="middle" dominant-baseline="central" font-size="1.19" font-weight="bold" fill="rgba(60,140,60,0.6)" stroke="white" stroke-width="0.25" paint-order="stroke">Zona Compañeros</text><g><line x1="0" y1="12" x2="4.8" y2="12" stroke="rgba(0,0,0,0.45)" stroke-width="0.06" stroke-dasharray="0.2 0.15"></line><line x1="0" y1="11.7" x2="0" y2="12.3" stroke="rgba(0,0,0,0.45)" stroke-width="0.06"></line><line x1="4.8" y1="11.7" x2="4.8" y2="12.3" stroke="rgba(0,0,0,0.45)" stroke-width="0.06"></line><text x="2.4" y="12.25" text-anchor="middle" font-size="0.7" font-weight="bold" fill="rgba(0,0,0,0.45)" stroke="white" stroke-width="0.2" paint-order="stroke">5&quot;</text></g><g><line x1="4.8" y1="12" x2="9.6" y2="12" stroke="rgba(0,0,0,0.45)" stroke-width="0.06" stroke-dasharray="0.2 0.15"></line><line x1="4.8" y1="11.7" x2="4.8" y2="12.3" stroke="rgba(0,0,0,0.45)" stroke-width="0.06"></line><line x1="9.6" y1="11.7" x2="9.6" y2="12.3" stroke="rgba(0,0,0,0.45)" stroke-width="0.06"></line><text x="7.199999999999999" y="12.25" text-anchor="middle" font-size="0.7" font-weight="bold" fill="rgba(0,0,0,0.45)" stroke="white" stroke-width="0.2" paint-order="stroke">5&quot;</text></g><g><line x1="9.6" y1="12" x2="14.4" y2="12" stroke="rgba(0,0,0,0.45)" stroke-width="0.06" stroke-dasharray="0.2 0.15"></line><line x1="9.6" y1="11.7" x2="9.6" y2="12.3" stroke="rgba(0,0,0,0.45)" stroke-width="0.06"></line><line x1="14.4" y1="11.7" x2="14.4" y2="12.3" stroke="rgba(0,0,0,0.45)" stroke-width="0.06"></line></g><g><line x1="14.4" y1="12" x2="19.2" y2="12" stroke="rgba(0,0,0,0.45)" stroke-width="0.06" stroke-dasharray="0.2 0.15"></line><line x1="14.4" y1="11.7" x2="14.4" y2="12.3" stroke="rgba(0,0,0,0.45)" stroke-width="0.06"></line><line x1="19.2" y1="11.7" x2="19.2" y2="12.3" stroke="rgba(0,0,0,0.45)" stroke-width="0.06"></line><text x="16.8" y="12.25" text-anchor="middle" font-size="0.7" font-weight="bold" fill="rgba(0,0,0,0.45)" stroke="white" stroke-width="0.2" paint-order="stroke">5&quot;</text></g><g><line x1="19.2" y1="12" x2="24" y2="12" stroke="rgba(0,0,0,0.45)" stroke-width="0.06" stroke-dasharray="0.2 0.15"></line><line x1="19.2" y1="11.7" x2="19.2" y2="12.3" stroke="rgba(0,0,0,0.45)" stroke-width="0.06"></line><line x1="24" y1="11.7" x2="24" y2="12.3" stroke="rgba(0,0,0,0.45)" stroke-width="0.06"></line><text x="21.6" y="12.25" text-anchor="middle" font-size="0.7" font-weight="bold" fill="rgba(0,0,0,0.45)" stroke="white" stroke-width="0.2" paint-order="stroke">5&quot;</text></g><g><line x1="12" y1="11.5" x2="9" y2="11.5" stroke="rgba(0,0,0,0.45)" stroke-width="0.06" stroke-dasharray="0.2 0.15"></line><line x1="12" y1="11.2" x2="12" y2="11.8" stroke="rgba(0,0,0,0.45)" stroke-width="0.06"></line><line x1="9" y1="11.2" x2="9" y2="11.8" stroke="rgba(0,0,0,0.45)" stroke-width="0.06"></line><text x="10.5" y="11.75" text-anchor="middle" font-size="0.7" font-weight="bold" fill="rgba(0,0,0,0.45)" stroke="white" stroke-width="0.2" paint-order="stroke">3&quot;</text></g></svg>
+<figcaption>Extracción. Despliega en el borde superior (Agresor) e inferior (Defensor). El objetivo de la tableta de datos (diana dorada) está en el centro, dentro de la zona de 3" de los Compañeros. Los cuatro Marcadores de Botín (1 a 4) recorren la línea central. Las Bandas aparecen por un borde lateral al azar (aquí, el izquierdo) en dos oleadas.</figcaption>
+</figure>
+
+<p style="text-align:center"><a href="scenario/?gap=0&amp;m=1&amp;dep=1&amp;cs=6&amp;cm=1&amp;ht=2&amp;hf=2&amp;ll=5&amp;lm=1&amp;sp=1&amp;hu0=3&amp;hu1=6&amp;cu=4&amp;ls=1"><b>Abre esta misión exacta en el Generador de Escenarios</b></a></p>
+
+<div class="fg-note fg-note--tip">
+<span class="fg-note__label">Mantén los pasillos por debajo de 12"</span>
+Coloca la escenografía de forma que ninguna línea de visión despejada supere las 12" sobre terreno abierto. Así las miniaturas se mantienen a cubierto y la partida no se reduce a un tiroteo sobre una mesa vacía. Si tienes línea de visión limpia de un borde al otro, añade más escenografía en medio.
+</div>
+
+<h2 id="el-compañero">El Compañero</h2>
+<p>Tres trabajadores aterrorizados del Departamento (<a href="rulebook#compañeros">Compañeros</a>: Administrativos) se agrupan a 3" del objetivo. Sobre todo esperan: su grupo toma su propia ficha y normalmente no hace nada. Te dan dos cosas que hacer. Una miniatura a 1" de la <code>tableta de datos</code> gasta un <code>Interactuar</code> para cogerla. Una miniatura a 1" de un Compañero gasta un <a href="rulebook#interrogar"><code>Interrogar</code></a>. Cada miniatura hace una Acción por activación, pero tu escuadra puede hacer ambas a lo largo de la partida: no es lo uno o lo otro.</p>
+<div class="fg-card fg-card--coworker" style="max-width:520px;margin:1.25rem 0">
+<div class="fg-card__head">Compañeros: Administrativo <small>3 (un grupo), a 3" del centro</small></div>
+<div class="fg-card__body">
+<div class="fg-statline"><span><b>Salud</b> 10</span><span><b>Mov</b> 5"</span><span><b>Com</b> 2d4</span><span><b>Def</b> 2d6</span><span><b>Ast</b> 2d8</span></div>
+<div class="fg-unit__gear">Pistola Aturdidora (<code>d4 Energía</code>, Disparo). Un civil nervioso: sobre todo se esconde, solo lucha si lo acorralan.</div>
+</div>
+</div>
+
+<p><b>Cómo actúan.</b> Los Compañeros son un grupo con su propia ficha. Cuando la saques, tira una vez y todo el grupo hace lo mismo.</p>
+<table>
+<thead>
+<tr>
+<th>d6</th>
+<th>Sin línea de visión</th>
+<th>Con línea de visión</th>
+<th>Trabado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 a 4</td>
+<td>Esperar</td>
+<td>Esperar</td>
+<td>Esperar</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Cooperar</td>
+<td>Cooperar</td>
+<td>Cooperar</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Patrullar</td>
+<td>Patrullar</td>
+<td>Huir</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>Esperar</code>: no hace nada.</li>
+<li><code>Cooperar</code>: la próxima ronda, puedes <code>Interrogar</code>los a <code>+1 ND</code>.</li>
+<li><code>Patrullar</code>: se acerca al <code>Marcador de Botín</code> más cercano.</li>
+<li><code>Huir</code>: se mueve hacia el borde más cercano.</li>
+</ul>
+<div class="fg-choice">
+<div><h4>Coger la tableta de datos</h4>Gasta un <code>Interactuar</code> en el objetivo y sácalo por tu borde: el camino más rápido a la victoria.</div>
+<div><h4>Interrogar</h4>Gasta un <code>Interrogar</code> en un Compañero: tira tu <code>Astucia</code> (<code>+1 ND</code> si el Compañero está herido) contra su <code>Astucia</code> 2d8. Si tienes éxito, retiras al Compañero del tablero y le sacas los secretos. El Equipo de Recuperación, con mucha <code>Astucia</code>, es bueno en esto; el Equipo de Cumplimiento prefiere coger y marcharse.</div>
+</div>
+
+<p>No necesitas al Compañero para ganar. Pero interrogarlo es como empieza una campaña: los secretos se vuelven <code>Pruebas</code>, y las <code>Pruebas</code> abren las peores puertas de la arcología. Nada de eso se registra en una partida suelta. Las <a href="campaign">reglas de Campaña</a> continúan desde ahí.</p>
+<h2 id="botín">Botín</h2>
+<p>Cuatro <code>Marcadores de Botín</code> recorren el centro del tablero, con la <code>tableta de datos</code> entre ellos. Una miniatura a 1" de uno (y no <code>Trabada</code>) puede gastar un <code>Buscar</code>: tira <code>Astucia</code> vs 2d6. Si tienes éxito, retira el marcador y tira un d20 en la tabla de Búsqueda para ver qué encuentras: subs, un arma al azar, una granada o consumible, o <code>Pruebas</code> y <code>Pista</code>s de campaña. En una partida suelta los subs y las recompensas de campaña son solo para presumir, pero una granada o un consumible puedes usarlos al momento. (Tabla completa: <a href="rulebook#buscar">Buscar</a>.)</p>
+<h2 id="el-enemigo-bandas-salvajes">El enemigo: Bandas Salvajes</h2>
+<p>Trabajadores antes humanos, ahora vueltos salvajes: con la piel teñida de verde tras generaciones bebiendo el refrigerante que gotea de los sistemas de refrigeración de arriba (el agua es solo por suscripción). Son un tercer bando sin control: ignoran tus objetivos y atacan a quien tengan más cerca. Llegan en <b>dos oleadas</b>: tres Tiradores en la Ronda 2, y luego su Jefe en la Ronda 4. (Facción completa: <a href="rulebook#bandas-salvajes">Bandas Salvajes</a>.)</p>
+<div class="fg-cards">
+<div class="fg-card fg-card--enemy">
+<div class="fg-card__head">Tirador <small>Ronda 2 (Normal): 3 de ellos</small></div>
+<div class="fg-card__body">
+<div class="fg-statline"><span><b>Salud</b> 10</span><span><b>Mov</b> 4"</span><span><b>Com</b> 2d6</span><span><b>Def</b> 2d6</span><span><b>Ast</b> 2d4</span></div>
+<div class="fg-unit__gear">Escopeta (<code>d6 Proyectil</code>, Disparo)</div>
+</div>
+</div>
+<div class="fg-card fg-card--enemy">
+<div class="fg-card__head">Jefe <small>Ronda 4 (Elite): 1, el líder lleno de cicatrices</small></div>
+<div class="fg-card__body">
+<div class="fg-statline"><span><b>Salud</b> 14</span><span><b>Mov</b> 4"</span><span><b>Com</b> 2d10</span><span><b>Def</b> 2d6</span><span><b>Ast</b> 2d6</span></div>
+<div class="fg-unit__gear">Puño Demoledor (<code>d10 Contundente</code>, CC)</div>
+</div>
+</div>
+</div>
+
+<p><b>Cómo actúan.</b> Cada oleada llega al inicio de su ronda por un borde del tablero al azar en el que ningún jugador haya desplegado, lo más cerca del centro que permita ese borde. Una oleada es un grupo con su propia ficha en la bolsa: cuando la saques, tira una vez en la tabla de abajo y todas las miniaturas del grupo hacen lo mismo, empezando por el objetivo más cercano. Retira una miniatura de Banda cuando quede <code>Fuera de Combate</code>.</p>
+<table>
+<thead>
+<tr>
+<th>d6</th>
+<th>Sin línea de visión</th>
+<th>Con línea de visión</th>
+<th>Trabado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 a 4</td>
+<td>Patrullar</td>
+<td>Atacar</td>
+<td>Atacar</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Patrullar</td>
+<td>Jauría</td>
+<td>Jauría</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Reagrupar</td>
+<td>Atacar</td>
+<td>Frenesí</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>Patrullar</code>: se mueve hacia el <code>Marcador de Botín</code> más cercano (o al azar si no ve ninguno).</li>
+<li><code>Reagrupar</code>: se mueve hacia el aliado más cercano.</li>
+<li><code>Jauría</code>: haz un ataque de <code>Combate</code> a <code>+1 ND</code>.</li>
+<li><code>Frenesí</code>: ataca dos veces.</li>
+</ul>
+<p>Las reglas completas de hostiles y las otras cinco facciones están en el <a href="rulebook#desplegar-hostiles">Reglamento</a>.</p>
+<h2 id="juega-tu-primer-turno">Juega tu primer turno</h2>
+<p><b>Cada ronda, en orden:</b></p>
+<ol class="fg-steps">
+<li><b>Bendiciones Corporativas.</b> Tira un d8 tres veces y aplica los resultados (<a href="rulebook#bendiciones-corporativas">Reglamento</a>).</li>
+<li><b>Refuerzos.</b> Si toca una oleada de Bandas (Ronda 2 y luego Ronda 4), coloca cada uno en un borde lateral al azar y añade sus fichas.</li>
+<li><b>Llena la bolsa.</b> Una ficha por cada miniatura o grupo que siga en juego.</li>
+<li><b>Saca y activa.</b> Saca fichas de una en una; el bando que saques activa una miniatura (un Movimiento y una <a href="rulebook#acciones">Acción</a>, en cualquier orden). Los grupos hostiles y de Compañeros actúan según su tabla de IA (<a href="rulebook#desplegar-hostiles">Desplegar Hostiles</a>).</li>
+<li><b>Fin de ronda.</b> Cuando la bolsa queda vacía, la ronda termina. Desde la Ronda 5, tira un d6 para ver si la partida acaba (Ronda 5: 3+, Ronda 6: 2+; la Ronda 7 termina automáticamente).</li>
+</ol>
+
+<p>El ejemplo de abajo salta a la <b>Ronda 2</b>, cuando ya han llegado las Bandas (la Ronda 1 es sobre todo maniobrar hacia el centro).</p>
+<div class="fg-note">
+<span class="fg-note__label">Tu activación: Bruto (Equipo de Cumplimiento)</span>
+<ol>
+<li><b>Mover.</b> El Bruto se mueve sus 3" hacia el centro, terminando junto a un Tirador de las Bandas.</li>
+<li><b>Atacar.</b> <code>Combate</code> 2d8 del Bruto contra la <code>Defensa</code> 2d6 del Tirador. Sacas <b>11</b> (5 y 6); el Tirador saca <b>8</b> (4 y 4). 11 supera a 8: impacto.</li>
+<li><b>Daño.</b> La Espada hace <code>d6+1</code>. Sacas un 4, para <b>5</b>. El Tirador no tiene armadura y 10 de <code>Salud</code>: baja a 5, herido.</li>
+</ol>
+</div>
+
+<div class="fg-note fg-note--enemy" style="border-left-color:#7f1d1d">
+<span class="fg-note__label">Activación hostil: Bandas</span>
+
+Sacas una ficha de las Bandas. Tira el comportamiento (d6): sale un <b>2</b>, y con línea de visión eso significa <code>Atacar</code>. Un segundo Tirador, unas pulgadas atrás, dispara su Escopeta al Bruto. <code>Combate</code> 2d6 del Tirador (<b>8</b>, de 4 y 4) contra la <code>Defensa</code> 2d6 del Bruto (<b>7</b>, de 3 y 4). 8 supera a 7: impacto. La Escopeta hace <code>d6</code>; sacas 3, y la armadura 1 del Bruto deja <b>2</b> de daño. El Bruto baja a 12 de <code>Salud</code> y sigue luchando.
+</div>
+
+<div class="fg-note fg-note--heresy">
+<span class="fg-note__label">Herejía</span>
+¿Tentado de pedir un enlace inalámbrico para acelerar esto? No lo hagas. Lo inalámbrico es herejía aquí abajo, y atrae cosas peores que las Bandas. Mantente cableado.
+</div>
+
+<p><b>¿Quién gana?</b> Sigue jugando hasta que la partida acabe (entre las Rondas 5 y 7). Gana quien saque la <code>tableta de datos</code> por su propio borde de despliegue, o quien la tenga cuando se acabe el tiempo (mira <b>La Misión</b> arriba). Encadena partidas y cada resultado alimenta una campaña, que avanza hacia su propia <a href="rulebook#victoria-de-campaña">Victoria de Campaña</a>.</p>
+<h2 id="y-ahora-qué">¿Y ahora qué?</h2>
+<p>Has jugado tu primera partida. <strong><a href="feedback">Cuéntanos qué tal</a></strong> (dos minutos, sin cuenta). De verdad da forma al juego. ¿Listo para más?</p>
+<div class="fg-cards fg-cards--2col">
+<div class="fg-card"><div class="fg-card__head">Reglas Completas</div><div class="fg-card__body">Críticos, <a href="rulebook#poderes-de-emisión">Poderes de Emisión</a>, cada acción y arma. <a href="rulebook">Lee el reglamento</a></div></div>
+<div class="fg-card"><div class="fg-card__head">Referencia Rápida</div><div class="fg-card__body">Todo el juego en dos páginas, hecho para imprimir. <a href="qr">Abre la Referencia Rápida</a></div></div>
+<div class="fg-card"><div class="fg-card__head">Creador de Plantillas</div><div class="fg-card__body">Gasta tus 60 subs a tu manera. <a href="builder/">Crea una escuadra</a></div></div>
+<div class="fg-card"><div class="fg-card__head">Escenarios</div><div class="fg-card__body">Doce misiones y un generador. <a href="scenario/">Explora escenarios</a></div></div>
+</div>
+    </main>
+    
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('.app-menu');
+            if (!nav) return;
+            nav.dataset.open = nav.dataset.open === 'true' ? 'false' : 'true';
+        }
+    </script>
+</body>
+</html>
